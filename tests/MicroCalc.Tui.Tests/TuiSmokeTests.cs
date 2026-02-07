@@ -33,11 +33,12 @@ public sealed class TuiSmokeTests
     {
         var repoRoot = FindRepositoryRoot();
         var projectPath = Path.Combine(repoRoot, "src", "MicroCalc.Tui", "MicroCalc.Tui.csproj");
+        var configuration = ResolveCurrentTestConfiguration();
 
         var startInfo = new ProcessStartInfo
         {
             FileName = "dotnet",
-            Arguments = $"run --no-build --project \"{projectPath}\" -- --smoke",
+            Arguments = $"run --no-build --configuration {configuration} --project \"{projectPath}\" -- --smoke",
             WorkingDirectory = repoRoot,
             RedirectStandardOutput = true,
             RedirectStandardError = true,
@@ -57,6 +58,14 @@ public sealed class TuiSmokeTests
 
         Assert.Equal(0, process.ExitCode);
         Assert.Contains("SMOKE_OK", output + error, StringComparison.Ordinal);
+    }
+
+    private static string ResolveCurrentTestConfiguration()
+    {
+        var marker = $"{Path.DirectorySeparatorChar}Release{Path.DirectorySeparatorChar}";
+        return AppContext.BaseDirectory.Contains(marker, StringComparison.OrdinalIgnoreCase)
+            ? "Release"
+            : "Debug";
     }
 
     private static string FindRepositoryRoot()
