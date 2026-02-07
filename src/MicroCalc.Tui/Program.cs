@@ -2,6 +2,7 @@ using MicroCalc.Core.Engine;
 using MicroCalc.Core.IO;
 using MicroCalc.Core.Model;
 using MicroCalc.Tui.Help;
+using MicroCalc.Tui.Smoke;
 using Terminal.Gui;
 
 namespace MicroCalc.Tui;
@@ -14,8 +15,14 @@ internal static class Program
     private static Label _messageLine = null!;
     private static string _message = "Type '/' for commands.";
 
-    private static void Main()
+    private static void Main(string[] args)
     {
+        if (args.Any(a => string.Equals(a, "--smoke", StringComparison.OrdinalIgnoreCase)))
+        {
+            RunSmokeMode();
+            return;
+        }
+
         Application.Init();
         var top = Application.Top;
 
@@ -26,6 +33,24 @@ internal static class Program
         RefreshUi();
         Application.Run();
         Application.Shutdown();
+    }
+
+    private static void RunSmokeMode()
+    {
+        var result = TuiSmokeRunner.Run(AppContext.BaseDirectory);
+        if (result.Success)
+        {
+            Console.WriteLine("SMOKE_OK");
+            return;
+        }
+
+        Console.Error.WriteLine("SMOKE_FAIL");
+        foreach (var error in result.Errors)
+        {
+            Console.Error.WriteLine(error);
+        }
+
+        Environment.ExitCode = 1;
     }
 
     private static MenuBar BuildMenu()
