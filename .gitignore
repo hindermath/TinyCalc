@@ -4,3 +4,4 @@ obj/
 *.suo
 .DS_Store
 TestResults/
+.idea
