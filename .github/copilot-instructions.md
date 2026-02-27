@@ -22,7 +22,7 @@ dotnet run --no-build --configuration Release --project src/MicroCalc.Tui/MicroC
 dotnet run --project src/MicroCalc.Tui/MicroCalc.Tui.csproj
 ```
 
-CI runs on `main` and all `codex/**` branches using the Release configuration.
+CI runs on `main` and all `codex/**`, `claude/**`, `gemini/**`, `copilot/**` branches using the Release configuration.
 
 ## Architecture
 
@@ -67,7 +67,7 @@ Fixed grid: columns `A`–`G` (7 columns), 21 rows, 147 total cells. Cell input 
 - `TuiSmokeTests` — calls `TuiSmokeRunner.Run(...)` which exercises help loading and basic rendering without a Terminal.Gui window.
 
 ### Branching & PRs
-- Work branches: `codex/<short-topic>`
+- Work branches: `copilot/<short-topic>`
 - Add a PR description file: `docs/PR_TEXT_<TOPIC>.md`
 - Commits follow Conventional Commit prefixes: `feat:`, `fix:`, `test:`, `docs:`, `chore:`
 

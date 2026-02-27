@@ -40,7 +40,7 @@ dotnet run --no-build --configuration Release --project src/MicroCalc.Tui/MicroC
 ```
 
 ## Branching & PR Workflow
-- Create working branches as `codex/<short-topic>`.
+- Create working branches as `gemini/<short-topic>`.
 - Do not push directly to `main`; merge via pull request.
 
 ## Development Conventions

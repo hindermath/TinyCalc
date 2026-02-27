@@ -35,7 +35,7 @@ Use xUnit (`Microsoft.NET.Test.Sdk`, `xunit`, `coverlet.collector`). Name test f
 Recent history follows Conventional Commit-style prefixes (`docs:`, `test:`, `chore:`). Keep commits focused and imperative.
 
 For contributions:
-- Create a new branch named `codex/<short-topic>`.
+- Create a new branch named `codex/<short-topic>`, `claude/<short-topic>`, `gemini/<short-topic>`, or `copilot/<short-topic>` as appropriate.
 - Open one focused PR per topic.
 - Add/update a PR description file in `docs/` (for example, `docs/PR_TEXT_<TOPIC>.md`).
 - Complete the PR template: problem, solution, risks, and test plan.

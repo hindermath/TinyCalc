@@ -50,7 +50,7 @@ dotnet run --project src/MicroCalc.Tui/MicroCalc.Tui.csproj
 dotnet run --no-build --configuration Release --project src/MicroCalc.Tui/MicroCalc.Tui.csproj -- --smoke
 ```
 
-CI (`.github/workflows/ci.yml`) runs on `main` and all `codex/**` branches using Release configuration.
+CI (`.github/workflows/ci.yml`) runs on `main` and all `codex/**`, `claude/**`, `gemini/**`, `copilot/**` branches using Release configuration.
 
 ## Architecture: Core Layer
 
@@ -69,7 +69,7 @@ Save format is JSON (`.mcalc.json`); no legacy `.MCS` import.
 
 ## Branching and PR Conventions
 
-- All work branches use the prefix `codex/<short-topic>`.
+- All work branches use the prefix `claude/<short-topic>`.
 - One focused PR per topic; add a PR description file `docs/PR_TEXT_<TOPIC>.md`.
 - Tests must pass under `--configuration Release` (not just Debug).
 - When a test calls `dotnet run --no-build`, pass the build configuration explicitly.
