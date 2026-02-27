@@ -2,7 +2,12 @@ name: ci
 
 on:
   push:
-    branches: ["main", "codex/**"]
+    branches:
+      - main
+      - codex/**
+      - claude/**
+      - gemini/**
+      - copilot/**
   pull_request:
 
 jobs:
