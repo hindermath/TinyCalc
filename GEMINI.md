@@ -19,7 +19,8 @@ MicroCalc .NET 10 is a modern C# port of the classic Borland Turbo Pascal MicroC
 
 ### Building the Project
 ```bash
-dotnet build
+dotnet restore MicroCalc.sln
+dotnet build MicroCalc.sln --configuration Release --no-restore
 ```
 
 ### Running the Application
@@ -29,14 +30,18 @@ dotnet run --project src/MicroCalc.Tui/MicroCalc.Tui.csproj
 
 ### Running Tests
 ```bash
-dotnet test
+dotnet test MicroCalc.sln --configuration Release --no-build
 ```
 
 ### Running Smoke Tests
 Executes a non-interactive validation of the TUI components.
 ```bash
-dotnet run --project src/MicroCalc.Tui/MicroCalc.Tui.csproj -- --smoke
+dotnet run --no-build --configuration Release --project src/MicroCalc.Tui/MicroCalc.Tui.csproj -- --smoke
 ```
+
+## Branching & PR Workflow
+- Create working branches as `codex/<short-topic>`.
+- Do not push directly to `main`; merge via pull request.
 
 ## Development Conventions
 
