@@ -187,7 +187,7 @@ ParseIfExpression() → double
 |-----------|---------------|
 | No relational operator found after left_expr | `"IF: Bedingung muss einen Vergleichsoperator enthalten (=, <>, <, <=, >=, >)."` |
 | Fewer than 3 arguments (missing `,`) | `"IF erwartet 3 Argumente: Bedingung, Wahr-Wert, Falsch-Wert."` |
-| Branch evaluation produces non-numeric (internal error) | `"IF: Wahr- und Falsch-Wert müssen numerische Ausdrücke sein."` |
+| Branch evaluation produces non-numeric (internal error) | `"IF: Wahr- und Falsch-Wert müssen numerische Ausdrücke sein."` *(FR-008 — satisfied by design: `ParseExpression()` always returns `double`; text-only cells return `0.0` via `ResolveCellValue`, not an error type; this error state is architecturally unreachable through formula-string input and requires no runtime check or golden test)* |
 | Condition operand non-numeric | `"IF: Bedingung konnte nicht ausgewertet werden."` |
 
 ---
