@@ -25,8 +25,8 @@ no regressions.
 
 **Purpose**: Establish the correct implementation branch and confirm a clean baseline before any code changes.
 
-- [ ] T001 Create implementation branch `codex/extended-formula-library` from `main` (git checkout -b codex/extended-formula-library main)
-- [ ] T002 Run full test suite to confirm clean baseline: `dotnet test MicroCalc.sln --configuration Release` — all existing tests must be GREEN before any changes
+- [X] T001 Create implementation branch `codex/extended-formula-library` from `main` (git checkout -b codex/extended-formula-library main)
+- [X] T002 Run full test suite to confirm clean baseline: `dotnet test MicroCalc.sln --configuration Release` — all existing tests must be GREEN before any changes
 
 **Checkpoint**: Baseline confirmed — foundational refactors can begin.
 
@@ -39,11 +39,11 @@ Neither refactor adds visible functionality; both must leave all existing tests 
 
 **⚠️ CRITICAL**: No user story phase can begin until both T003 and T004 are complete and T005 confirms GREEN.
 
-- [ ] T003 Extract `private IReadOnlyList<double> CollectRangeValues(CellAddress from, CellAddress to)` from `SumRange`'s traversal loop, and refactor `SumRange` to delegate: `CollectRangeValues(from, to).Sum()` in `src/MicroCalc.Core/Formula/FormulaEvaluator.cs` (Research §Decision 2, Data Model §CollectRangeValues)
+- [X] T003 Extract `private IReadOnlyList<double> CollectRangeValues(CellAddress from, CellAddress to)` from `SumRange`'s traversal loop, and refactor `SumRange` to delegate: `CollectRangeValues(from, to).Sum()` in `src/MicroCalc.Core/Formula/FormulaEvaluator.cs` (Research §Decision 2, Data Model §CollectRangeValues)
 
-- [ ] T004 Add `private bool IsRangeOperatorStart()` lookahead helper and replace the unconditional `Match('>')` in `ParseIdentifierBasedFactor` with a guarded check `if (Current() == '>' && IsRangeOperatorStart())` in `src/MicroCalc.Core/Formula/FormulaEvaluator.cs` (Research §Decision 3, Data Model §IsRangeOperatorStart)
+- [X] T004 Add `private bool IsRangeOperatorStart()` lookahead helper and replace the unconditional `Match('>')` in `ParseIdentifierBasedFactor` with a guarded check `if (Current() == '>' && IsRangeOperatorStart())` in `src/MicroCalc.Core/Formula/FormulaEvaluator.cs` (Research §Decision 3, Data Model §IsRangeOperatorStart)
 
-- [ ] T005 Run full test suite (`dotnet test MicroCalc.sln --configuration Release`) to verify foundational refactors introduce no regressions — all existing tests must remain GREEN (Spec §FR-013)
+- [X] T005 Run full test suite (`dotnet test MicroCalc.sln --configuration Release`) to verify foundational refactors introduce no regressions — all existing tests must remain GREEN (Spec §FR-013)
 
 **Checkpoint**: Foundation ready — user story phases can now begin in priority order.
 
@@ -59,17 +59,17 @@ or sparse range with empty/text cells. (Spec §US1, §FR-001–FR-003)
 
 ### Tests for User Story 1 ⚠️ Write first — must FAIL before T009
 
-- [ ] T006 [US1] Add `[Theory]` golden test rows for MIN: happy path (MIN(A1>A5)=10), empty range (MIN of all-empty cells=0), single cell (MIN(A1)=cell value), rectangular range (MIN(A1>B2) with A1=1,A2=2,B1=3,B2=4 → 1), lowercase name (min(A1>A5)=10); add `[Fact]` cyclic reference test (set A1 as Constant with Contents "MIN(A1>A5)" — evaluating this formula calls ResolveCellValue(A1) recursively through CollectRangeValues, triggering the HashSet guard → EvaluationResult.Error containing "Zyklische Referenz") in `tests/MicroCalc.Core.Tests/FormulaGoldenTests.cs` — verify tests compile and FAIL (Spec §US1 Scenarios 1,4,5; §FR-009; §FR-010; Research §Decision 5)
+- [X] T006 [US1] Add `[Theory]` golden test rows for MIN: happy path (MIN(A1>A5)=10), empty range (MIN of all-empty cells=0), single cell (MIN(A1)=cell value), rectangular range (MIN(A1>B2) with A1=1,A2=2,B1=3,B2=4 → 1), lowercase name (min(A1>A5)=10); add `[Fact]` cyclic reference test (set A1 as Constant with Contents "MIN(A1>A5)" — evaluating this formula calls ResolveCellValue(A1) recursively through CollectRangeValues, triggering the HashSet guard → EvaluationResult.Error containing "Zyklische Referenz") in `tests/MicroCalc.Core.Tests/FormulaGoldenTests.cs` — verify tests compile and FAIL (Spec §US1 Scenarios 1,4,5; §FR-009; §FR-010; Research §Decision 5)
 
-- [ ] T007 [US1] Add `[Theory]` golden test rows for MAX: happy path (MAX(A1>A5)=50), empty range (MAX of all-empty=0), rectangular range (MAX(A1>B2)=4), lowercase name (max(A1>A5)=50) in `tests/MicroCalc.Core.Tests/FormulaGoldenTests.cs` — verify tests compile and FAIL (Spec §US1 Scenarios 2,4,5; §FR-009; Research §Decision 5)
+- [X] T007 [US1] Add `[Theory]` golden test rows for MAX: happy path (MAX(A1>A5)=50), empty range (MAX of all-empty=0), rectangular range (MAX(A1>B2)=4), lowercase name (max(A1>A5)=50) in `tests/MicroCalc.Core.Tests/FormulaGoldenTests.cs` — verify tests compile and FAIL (Spec §US1 Scenarios 2,4,5; §FR-009; Research §Decision 5)
 
-- [ ] T008 [US1] Add `[Theory]` golden test rows for AVERAGE: happy path (AVERAGE(A1>A5)=30), empty range (AVERAGE of all-empty=0), rectangular range (AVERAGE(A1>B2)=2.5), sparse range with empty cells (AVERAGE(A1>A3) with A1=10,A2 empty,A3=20 → 15), lowercase name (average(A1>A5)=30) in `tests/MicroCalc.Core.Tests/FormulaGoldenTests.cs` — verify tests compile and FAIL (Spec §US1 Scenarios 3,4,5; §FR-009; Research §Decision 5)
+- [X] T008 [US1] Add `[Theory]` golden test rows for AVERAGE: happy path (AVERAGE(A1>A5)=30), empty range (AVERAGE of all-empty=0), rectangular range (AVERAGE(A1>B2)=2.5), sparse range with empty cells (AVERAGE(A1>A3) with A1=10,A2 empty,A3=20 → 15), lowercase name (average(A1>A5)=30) in `tests/MicroCalc.Core.Tests/FormulaGoldenTests.cs` — verify tests compile and FAIL (Spec §US1 Scenarios 3,4,5; §FR-009; Research §Decision 5)
 
 ### Implementation for User Story 1
 
-- [ ] T009 [US1] Add `ParseRangeAggregateFunction(string name)` private method handling MIN (`values.DefaultIfEmpty(0).Min()`), MAX (`values.DefaultIfEmpty(0).Max()`), AVERAGE (`values.Count == 0 ? 0 : values.Sum() / values.Count`) using `CollectRangeValues`; extend `ParseIdentifierBasedFactor` dispatch to route `"MIN"`, `"MAX"`, `"AVERAGE"` to this method in `src/MicroCalc.Core/Formula/FormulaEvaluator.cs` (Research §Decision 4, Data Model §ParseRangeAggregateFunction)
+- [X] T009 [US1] Add `ParseRangeAggregateFunction(string name)` private method handling MIN (`values.DefaultIfEmpty(0).Min()`), MAX (`values.DefaultIfEmpty(0).Max()`), AVERAGE (`values.Count == 0 ? 0 : values.Sum() / values.Count`) using `CollectRangeValues`; extend `ParseIdentifierBasedFactor` dispatch to route `"MIN"`, `"MAX"`, `"AVERAGE"` to this method in `src/MicroCalc.Core/Formula/FormulaEvaluator.cs` (Research §Decision 4, Data Model §ParseRangeAggregateFunction)
 
-- [ ] T010 [US1] Run formula golden tests (`dotnet test tests/MicroCalc.Core.Tests/MicroCalc.Core.Tests.csproj --configuration Release --filter "FullyQualifiedName~FormulaGoldenTests"`) — all US1 tests must be GREEN; run full suite to confirm no regressions
+- [X] T010 [US1] Run formula golden tests (`dotnet test tests/MicroCalc.Core.Tests/MicroCalc.Core.Tests.csproj --configuration Release --filter "FullyQualifiedName~FormulaGoldenTests"`) — all US1 tests must be GREEN; run full suite to confirm no regressions
 
 **Checkpoint**: MIN, MAX, AVERAGE fully functional — MVP deliverable. Validate independently before proceeding.
 
@@ -85,13 +85,13 @@ on IF or ROUND.
 
 ### Tests for User Story 2 ⚠️ Write first — must FAIL before T012
 
-- [ ] T011 [US2] Add `[Theory]` golden test rows for COUNT: sparse range (COUNT(A1>A5)=3 with 3 values and 2 empty), all-empty range (COUNT=0), all-text range (COUNT=0), single numeric cell (COUNT(A1)=1), single empty cell (COUNT(A1)=0), lowercase name (count(A1>A5)=3) in `tests/MicroCalc.Core.Tests/FormulaGoldenTests.cs` — verify tests compile and FAIL (Spec §US2 Scenarios 1,2,3; §FR-009; Research §Decision 5)
+- [X] T011 [US2] Add `[Theory]` golden test rows for COUNT: sparse range (COUNT(A1>A5)=3 with 3 values and 2 empty), all-empty range (COUNT=0), all-text range (COUNT=0), single numeric cell (COUNT(A1)=1), single empty cell (COUNT(A1)=0), lowercase name (count(A1>A5)=3) in `tests/MicroCalc.Core.Tests/FormulaGoldenTests.cs` — verify tests compile and FAIL (Spec §US2 Scenarios 1,2,3; §FR-009; Research §Decision 5)
 
 ### Implementation for User Story 2
 
-- [ ] T012 [US2] Add `"COUNT"` case to `ParseRangeAggregateFunction` returning `values.Count` (count of cells included by `CollectRangeValues`, i.e., Constant or Calculated cells only); extend `ParseIdentifierBasedFactor` dispatch to route `"COUNT"` in `src/MicroCalc.Core/Formula/FormulaEvaluator.cs` (Research §Decision 5, Data Model §CellStatusFlags) (requires T009 complete — adds COUNT case to ParseRangeAggregateFunction created in T009)
+- [X] T012 [US2] Add `"COUNT"` case to `ParseRangeAggregateFunction` returning `values.Count` (count of cells included by `CollectRangeValues`, i.e., Constant or Calculated cells only); extend `ParseIdentifierBasedFactor` dispatch to route `"COUNT"` in `src/MicroCalc.Core/Formula/FormulaEvaluator.cs` (Research §Decision 5, Data Model §CellStatusFlags) (requires T009 complete — adds COUNT case to ParseRangeAggregateFunction created in T009)
 
-- [ ] T013 [US2] Run formula golden tests and full suite — all US2 tests must be GREEN, no regressions
+- [X] T013 [US2] Run formula golden tests and full suite — all US2 tests must be GREEN, no regressions
 
 **Checkpoint**: COUNT functional. US1 + US2 (full statistical toolkit) independently verifiable.
 
@@ -107,13 +107,13 @@ it is simpler (2-arg, no range or relational parsing). (Spec §US4, §FR-006, Re
 
 ### Tests for User Story 4 ⚠️ Write first — must FAIL before T015
 
-- [ ] T014 [US4] Add `[Theory]` golden test rows for ROUND: happy path (ROUND(3.14159,2)=3.14), away-from-zero positive (ROUND(2.5,0)=3), away-from-zero negative (ROUND(-2.5,0)=-3), non-integer decimals truncated (ROUND(3.14,1.7)=3.1), composed with AVERAGE (ROUND(AVERAGE(A1>A5),2)=3.00 for A1–A5=1,2,3,4,5), lowercase name (round(3.14159,2)=3.14); add `[Fact]` error test for negative decimals (ROUND(3.14,-1) → error message containing "Negative Nachkommastellen") in `tests/MicroCalc.Core.Tests/FormulaGoldenTests.cs` — verify tests compile and FAIL (Spec §US4 Scenarios 1,2,3a,3; §FR-009; Research §Decision 7)
+- [X] T014 [US4] Add `[Theory]` golden test rows for ROUND: happy path (ROUND(3.14159,2)=3.14), away-from-zero positive (ROUND(2.5,0)=3), away-from-zero negative (ROUND(-2.5,0)=-3), non-integer decimals truncated (ROUND(3.14,1.7)=3.1), composed with AVERAGE (ROUND(AVERAGE(A1>A5),2)=3.00 for A1–A5=1,2,3,4,5), lowercase name (round(3.14159,2)=3.14); add `[Fact]` error test for negative decimals (ROUND(3.14,-1) → error message containing "Negative Nachkommastellen") in `tests/MicroCalc.Core.Tests/FormulaGoldenTests.cs` — verify tests compile and FAIL (Spec §US4 Scenarios 1,2,3a,3; §FR-009; Research §Decision 7)
 
 ### Implementation for User Story 4
 
-- [ ] T015 [US4] Implement `ParseRoundExpression()`: consume `value_expr`, `Expect(',')`, consume `decimals_expr`, apply `(int)Math.Truncate(decimals)`, guard `decimals < 0` with `Error("ROUND: Negative Nachkommastellen sind nicht erlaubt.")`, return `Math.Round(value, decimals, MidpointRounding.AwayFromZero)`; extend `ParseIdentifierBasedFactor` dispatch to route `"ROUND"` in `src/MicroCalc.Core/Formula/FormulaEvaluator.cs` (Research §Decision 7, Data Model §ParseRoundExpression)
+- [X] T015 [US4] Implement `ParseRoundExpression()`: consume `value_expr`, `Expect(',')`, consume `decimals_expr`, apply `(int)Math.Truncate(decimals)`, guard `decimals < 0` with `Error("ROUND: Negative Nachkommastellen sind nicht erlaubt.")`, return `Math.Round(value, decimals, MidpointRounding.AwayFromZero)`; extend `ParseIdentifierBasedFactor` dispatch to route `"ROUND"` in `src/MicroCalc.Core/Formula/FormulaEvaluator.cs` (Research §Decision 7, Data Model §ParseRoundExpression)
 
-- [ ] T016 [US4] Run formula golden tests and full suite — all US4 tests must be GREEN, no regressions
+- [X] T016 [US4] Run formula golden tests and full suite — all US4 tests must be GREEN, no regressions
 
 **Checkpoint**: ROUND functional. US1 + US2 + US4 all independently verifiable.
 
@@ -129,19 +129,19 @@ error. (Spec §US3, §FR-005, §FR-007, §FR-008, Research §Decision 8)
 
 ### Tests for User Story 3 ⚠️ Write first — must FAIL before T018
 
-- [ ] T017 [US3] Add `[Theory]` golden test rows for IF: greater-than comparison (IF(A1>100,1,0)=1 with A1=150 and =0 with A1=50), equality (IF(A1=A2,10,20)), not-equal (IF(A1<>0,A1,0)), less-than (IF(A1<10,1,0)), range-sum condition (IF(A1>B5,1,0) where A1>B5 treats `>` as range-sum per existing semantics), nested function branches (IF(A1>0,MAX(A1>A3),MIN(A1>A3))), lowercase name (if(A1>100,1,0)=1 with A1=150); add `[Fact]` error tests for: no relational operator (IF(A1,1,0) → error), fewer than 3 args (IF(A1>0,1) → error); note: FR-008 (text-branch error "IF: Wahr- und Falsch-Wert müssen numerische Ausdrücke sein.") is satisfied by design — ParseExpression() always returns double and ResolveCellValue returns 0.0 for text cells; no additional runtime check or test is required in `tests/MicroCalc.Core.Tests/FormulaGoldenTests.cs` — verify tests compile and FAIL (Spec §US3 Scenarios 1,2,3,4; §Edge Cases; §FR-008; §FR-009; Research §Decision 3)
+- [X] T017 [US3] Add `[Theory]` golden test rows for IF: greater-than comparison (IF(A1>100,1,0)=1 with A1=150 and =0 with A1=50), equality (IF(A1=A2,10,20)), not-equal (IF(A1<>0,A1,0)), less-than (IF(A1<10,1,0)), range-sum condition (IF(A1>B5,1,0) where A1>B5 treats `>` as range-sum per existing semantics), nested function branches (IF(A1>0,MAX(A1>A3),MIN(A1>A3))), lowercase name (if(A1>100,1,0)=1 with A1=150); add `[Fact]` error tests for: no relational operator (IF(A1,1,0) → error), fewer than 3 args (IF(A1>0,1) → error); note: FR-008 (text-branch error "IF: Wahr- und Falsch-Wert müssen numerische Ausdrücke sein.") is satisfied by design — ParseExpression() always returns double and ResolveCellValue returns 0.0 for text cells; no additional runtime check or test is required in `tests/MicroCalc.Core.Tests/FormulaGoldenTests.cs` — verify tests compile and FAIL (Spec §US3 Scenarios 1,2,3,4; §Edge Cases; §FR-008; §FR-009; Research §Decision 3)
 
-- [ ] T017a [US3] Add `[Fact]` engine integration test in `tests/MicroCalc.Core.Tests/MicroCalcEngineTests.cs`: via `MicroCalcEngine`, set A1=150 via EditCell, enter formula `IF(A1>100, 1, 0)` in B1, call `Recalculate()`, assert B1.Value=1; then set A1=50 via EditCell, call `Recalculate()`, assert B1.Value=0 — verifies IF result tracks cell changes on every recalculate (Spec §SC-003) — verify test compiles and FAILS before T019
+- [X] T017a [US3] Add `[Fact]` engine integration test in `tests/MicroCalc.Core.Tests/MicroCalcEngineTests.cs`: via `MicroCalcEngine`, set A1=150 via EditCell, enter formula `IF(A1>100, 1, 0)` in B1, call `Recalculate()`, assert B1.Value=1; then set A1=50 via EditCell, call `Recalculate()`, assert B1.Value=0 — verifies IF result tracks cell changes on every recalculate (Spec §SC-003) — verify test compiles and FAILS before T019
 
 ### Implementation for User Story 3
 
-- [ ] T018 [US3] Implement `ParseRelationalOperator()`: scan for `<>`, `<=`, `>=`, `<`, `>`, `=` at current position (multi-char ops checked before single-char); return the matched operator string and advance `_position`; return `null` (do not throw) when no relational op is found — caller is responsible for the error in `src/MicroCalc.Core/Formula/FormulaEvaluator.cs` (Data Model §ParseIfExpression)
+- [X] T018 [US3] Implement `ParseRelationalOperator()`: scan for `<>`, `<=`, `>=`, `<`, `>`, `=` at current position (multi-char ops checked before single-char); return the matched operator string and advance `_position`; return `null` (do not throw) when no relational op is found — caller is responsible for the error in `src/MicroCalc.Core/Formula/FormulaEvaluator.cs` (Data Model §ParseIfExpression)
 
-- [ ] T019 [US3] Implement `ParseIfExpression()`: parse `left_expr` via `ParseExpression()`, call `ParseRelationalOperator()` (throw `"IF: Bedingung muss einen Vergleichsoperator enthalten (=, <>, <, <=, >=, >)."` if null), parse `right_expr`, `Expect(',')` (throw `"IF erwartet 3 Argumente: Bedingung, Wahr-Wert, Falsch-Wert."` on failure), parse `true_expr`, `Expect(',')`, parse `false_expr`, `Expect(')')`, evaluate relational condition, return winning branch in `src/MicroCalc.Core/Formula/FormulaEvaluator.cs` (Data Model §ParseIfExpression, Spec §FR-005, §FR-007)
+- [X] T019 [US3] Implement `ParseIfExpression()`: parse `left_expr` via `ParseExpression()`, call `ParseRelationalOperator()` (throw `"IF: Bedingung muss einen Vergleichsoperator enthalten (=, <>, <, <=, >=, >)."` if null), parse `right_expr`, `Expect(',')` (throw `"IF erwartet 3 Argumente: Bedingung, Wahr-Wert, Falsch-Wert."` on failure), parse `true_expr`, `Expect(',')`, parse `false_expr`, `Expect(')')`, evaluate relational condition, return winning branch in `src/MicroCalc.Core/Formula/FormulaEvaluator.cs` (Data Model §ParseIfExpression, Spec §FR-005, §FR-007)
 
-- [ ] T020 [US3] Extend `ParseIdentifierBasedFactor` dispatch to route `"IF"` to `ParseIfExpression()` in `src/MicroCalc.Core/Formula/FormulaEvaluator.cs`
+- [X] T020 [US3] Extend `ParseIdentifierBasedFactor` dispatch to route `"IF"` to `ParseIfExpression()` in `src/MicroCalc.Core/Formula/FormulaEvaluator.cs`
 
-- [ ] T021 [US3] Run formula golden tests and full suite — all US3 tests must be GREEN, no regressions; confirm `IF(A1>100,1,0)` and `IF(A1>B5,1,0)` both produce correct results (context-sensitive `>` disambiguation verified)
+- [X] T021 [US3] Run formula golden tests and full suite — all US3 tests must be GREEN, no regressions; confirm `IF(A1>100,1,0)` and `IF(A1>B5,1,0)` both produce correct results (context-sensitive `>` disambiguation verified)
 
 **Checkpoint**: All 6 new functions (MIN, MAX, AVERAGE, COUNT, ROUND, IF) fully functional.
 
@@ -151,13 +151,13 @@ error. (Spec §US3, §FR-005, §FR-007, §FR-008, Research §Decision 8)
 
 **Purpose**: Documentation and final validation sweep.
 
-- [ ] T022 [P] Add 6 new function entries to `docs/help/microcalc-help.md` following the format of existing entries: function name, syntax, description, and at least one example with expected output for MIN, MAX, AVERAGE, COUNT, IF, ROUND (Spec §SC-005)
+- [X] T022 [P] Add 6 new function entries to `docs/help/microcalc-help.md` following the format of existing entries: function name, syntax, description, and at least one example with expected output for MIN, MAX, AVERAGE, COUNT, IF, ROUND (Spec §SC-005)
 
-- [ ] T023 Run full test suite (`dotnet test MicroCalc.sln --configuration Release`) as final gate — all Core.Tests + Tui.Tests must be GREEN with no regressions (Spec §SC-006, §FR-013); note: the new functions add O(n) range traversal identical to the existing SumRange loop — the <100ms performance goal is met by analysis and requires no explicit benchmark (plan.md §Technical Context)
+- [X] T023 Run full test suite (`dotnet test MicroCalc.sln --configuration Release`) as final gate — all Core.Tests + Tui.Tests must be GREEN with no regressions (Spec §SC-006, §FR-013); note: the new functions add O(n) range traversal identical to the existing SumRange loop — the <100ms performance goal is met by analysis and requires no explicit benchmark (plan.md §Technical Context)
 
-- [ ] T024 [P] Create PR description document at `docs/PR_TEXT_EXTENDED-FORMULA-LIBRARY.md` summarising: the 6 new functions and their syntax, the CollectRangeValues refactor and IsRangeOperatorStart disambiguation, Constitution compliance (all 5 principles satisfied), and test coverage (FR-012, FR-013, SC-006, SC-007) — required before PR is opened (Constitution §IV, §Development Workflow)
+- [X] T024 [P] Create PR description document at `docs/PR_TEXT_EXTENDED-FORMULA-LIBRARY.md` summarising: the 6 new functions and their syntax, the CollectRangeValues refactor and IsRangeOperatorStart disambiguation, Constitution compliance (all 5 principles satisfied), and test coverage (FR-012, FR-013, SC-006, SC-007) — required before PR is opened (Constitution §IV, §Development Workflow)
 
-- [ ] T025 Run smoke verification: `dotnet run --no-build --configuration Release --project src/MicroCalc.Tui/MicroCalc.Tui.csproj -- --smoke` — must exit with code 0 (Constitution §III, §Development Workflow)
+- [X] T025 Run smoke verification: `dotnet run --no-build --configuration Release --project src/MicroCalc.Tui/MicroCalc.Tui.csproj -- --smoke` — must exit with code 0 (Constitution §III, §Development Workflow)
 
 **Checkpoint**: All success criteria (SC-001 through SC-007) met. PR description written. Smoke verified. Ready for PR.
 
