@@ -12,27 +12,27 @@ and a human reviewer to verify the Phase 2 Extended Formula Library without furt
 
 ## Plan Completeness
 
-- [ ] CHK001 — Does plan.md specify the exact implementation branch name (distinct from the speckit
+- [X] CHK001 — Does plan.md specify the exact implementation branch name (distinct from the speckit
   branch `001-project-context`) so that an agent starts work in the correct branch?
   [Completeness, Gap, Plan §Summary]
 
-- [ ] CHK002 — Does plan.md define the acceptance gate for "no regressions" — naming the exact
+- [X] CHK002 — Does plan.md define the acceptance gate for "no regressions" — naming the exact
   test suite (`dotnet test MicroCalc.sln --configuration Release`) and requiring it to pass before
   merge? [Completeness, Plan §Technical Context, Spec §FR-013]
 
-- [ ] CHK003 — Does plan.md enumerate every file that will change (FormulaEvaluator.cs,
+- [X] CHK003 — Does plan.md enumerate every file that will change (FormulaEvaluator.cs,
   FormulaGoldenTests.cs, microcalc-help.md) and explicitly confirm no other files are affected,
   so scope creep is detectable at PR review? [Completeness, Plan §Project Structure]
 
-- [ ] CHK004 — Does plan.md specify the estimated net lines of code (~150–200) with enough
+- [X] CHK004 — Does plan.md specify the estimated net lines of code (~150–200) with enough
   precision that a significantly larger diff would serve as a scope-creep signal for a PR
   reviewer? [Clarity, Plan §Technical Context]
 
-- [ ] CHK005 — Does plan.md distinguish which steps require human approval vs. autonomous agent
+- [X] CHK005 — Does plan.md distinguish which steps require human approval vs. autonomous agent
   execution — or does it assume the agent operates fully autonomously through all implementation
   phases? [Completeness, Gap]
 
-- [ ] CHK006 — Does plan.md confirm that the Constitution Check was re-evaluated post-design
+- [X] CHK006 — Does plan.md confirm that the Constitution Check was re-evaluated post-design
   (after all planning artifacts were written), not only as a pre-research gate?
   [Completeness, Plan §Constitution Check]
 
@@ -40,39 +40,39 @@ and a human reviewer to verify the Phase 2 Extended Formula Library without furt
 
 ## Research Decision Quality
 
-- [ ] CHK007 — Does research.md Decision 1 (extension point) explicitly confirm that
+- [X] CHK007 — Does research.md Decision 1 (extension point) explicitly confirm that
   `EvaluationResult`, `MicroCalcEngine`, `Cell`, and `SpreadsheetPrinter` require NO changes —
   so an agent does not inadvertently modify those types? [Completeness, Research §Decision 1,
   Spec §FR-035 (assumption)]
 
-- [ ] CHK008 — Does research.md Decision 2 (`CollectRangeValues`) specify what happens when
+- [X] CHK008 — Does research.md Decision 2 (`CollectRangeValues`) specify what happens when
   `ResolveCellValue` throws a cyclic-reference exception inside the collection loop — is the
   exception propagated upward, silently skipped, or excluded from the list?
   [Clarity, Research §Decision 2, Spec §FR-010]
 
-- [ ] CHK009 — Does research.md Decision 3 (`IsRangeOperatorStart`) specify the exact bounds
+- [X] CHK009 — Does research.md Decision 3 (`IsRangeOperatorStart`) specify the exact bounds
   check when `_position + 1` reaches `_text.Length - 1` — i.e., when the column letter is the
   last character with no room for a digit? [Completeness, Research §Decision 3]
 
-- [ ] CHK010 — Does research.md Decision 3 specify that the lookahead checks only valid MicroCalc
+- [X] CHK010 — Does research.md Decision 3 specify that the lookahead checks only valid MicroCalc
   column letters A–G (via `SpreadsheetSpec.IsColumnInRange`) rather than any letter A–Z, to
   avoid misidentifying non-column identifiers as range starts?
   [Clarity, Research §Decision 3, Spec §FR-005]
 
-- [ ] CHK011 — Does research.md Decision 4 (multi-arg dispatch) specify what happens when an
+- [X] CHK011 — Does research.md Decision 4 (multi-arg dispatch) specify what happens when an
   unrecognized function name is encountered — does it fall through to `ApplyFunction` (existing
   behavior) or error immediately at the dispatch level? [Completeness, Research §Decision 4]
 
-- [ ] CHK012 — Does research.md Decision 4 specify unambiguously whether `Expect('(')` is
+- [X] CHK012 — Does research.md Decision 4 specify unambiguously whether `Expect('(')` is
   consumed by the dispatch caller (in `ParseIdentifierBasedFactor`) or by each specialized parse
   method (`ParseIfExpression`, `ParseRoundExpression`, `ParseRangeAggregateFunction`)?
   [Clarity, Research §Decision 4]
 
-- [ ] CHK013 — Does research.md Decision 5 (aggregate behavior) specify the result when
+- [X] CHK013 — Does research.md Decision 5 (aggregate behavior) specify the result when
   MIN/MAX is applied to a range containing exactly one numeric cell — confirming the result is
   that cell's value (not 0)? [Completeness, Research §Decision 5, Spec §Edge Cases]
 
-- [ ] CHK014 — Does research.md Decision 8 (test-first order) link each implementation step to
+- [X] CHK014 — Does research.md Decision 8 (test-first order) link each implementation step to
   specific acceptance scenarios in spec.md, or does it leave test case selection open-ended for
   the implementing agent? [Completeness, Research §Decision 8, Spec §SC-007]
 
@@ -80,38 +80,38 @@ and a human reviewer to verify the Phase 2 Extended Formula Library without furt
 
 ## Data Model Completeness
 
-- [ ] CHK015 — Does data-model.md define the full signature of `ParseRelationalOperator()` —
+- [X] CHK015 — Does data-model.md define the full signature of `ParseRelationalOperator()` —
   including return type, behavior when no operator character is found (error vs. return null),
   and whether it consumes or peeks at the current character?
   [Completeness, Data Model §ParseIfExpression]
 
-- [ ] CHK016 — Does data-model.md trace the full parse path for `IF(A1>B5, 1, 0)` — where `>`
+- [X] CHK016 — Does data-model.md trace the full parse path for `IF(A1>B5, 1, 0)` — where `>`
   is between two cell refs (range-sum semantics) inside the IF condition — confirming the
   condition evaluation receives the range-sum result and that no parsing conflict arises?
   [Clarity, Data Model §ParseIfExpression, Spec §Edge Cases]
 
-- [ ] CHK017 — Does data-model.md enumerate all six relational operators (`=`, `<>`, `<`, `<=`,
+- [X] CHK017 — Does data-model.md enumerate all six relational operators (`=`, `<>`, `<`, `<=`,
   `>=`, `>`) with their evaluation semantics, rather than deferring entirely to FR-005?
   [Completeness, Data Model §ParseIfExpression, Spec §FR-005]
 
-- [ ] CHK018 — Does data-model.md explicitly model the single-value path for aggregate functions
+- [X] CHK018 — Does data-model.md explicitly model the single-value path for aggregate functions
   (e.g., `MIN(42)`, `COUNT(A1)`) — specifically how `ParseRangeAggregateFunction` handles an
   expression argument that is NOT a range? [Clarity, Data Model §ParseRangeAggregateFunction]
 
-- [ ] CHK019 — Does data-model.md specify the exact AVERAGE computation for an empty list —
+- [X] CHK019 — Does data-model.md specify the exact AVERAGE computation for an empty list —
   confirming `Count == 0 ? 0 : Sum / Count` rather than any alternative (e.g., LINQ `.Average()`
   which throws on empty sequences)? [Clarity, Data Model §CollectRangeValues, Spec §FR-003]
 
-- [ ] CHK020 — Does data-model.md specify which `CellStatusFlags` combination identifies
+- [X] CHK020 — Does data-model.md specify which `CellStatusFlags` combination identifies
   "successfully calculated" cells vs. "formula error" cells, resolving the ambiguity in
   FR-004 (COUNT)? [Clarity, Data Model §CellStatusFlags, Spec §FR-004]
 
-- [ ] CHK021 — Does data-model.md specify that `IsFormula = true` must be set inside the new
+- [X] CHK021 — Does data-model.md specify that `IsFormula = true` must be set inside the new
   parse methods (`ParseRangeAggregateFunction`, `ParseIfExpression`, `ParseRoundExpression`),
   consistent with how existing function paths set it?
   [Completeness, Data Model §IsRangeOperatorStart]
 
-- [ ] CHK022 — Does data-model.md confirm that no new instance variables are needed on the
+- [X] CHK022 — Does data-model.md confirm that no new instance variables are needed on the
   `Parser` class — or identify any new fields required beyond `_text`, `_sheet`,
   `_evaluationStack`, and `_position`? [Completeness, Data Model §Overview]
 
@@ -119,33 +119,33 @@ and a human reviewer to verify the Phase 2 Extended Formula Library without furt
 
 ## Grammar Contract Quality
 
-- [ ] CHK023 — Does the grammar contract specify whether whitespace is permitted between a
+- [X] CHK023 — Does the grammar contract specify whether whitespace is permitted between a
   function name and its opening `(` — e.g., is `MIN (A1>A5)` valid given that `SkipWhitespace()`
   is called before `Expect('(')`? [Clarity, Grammar §Whitespace]
 
-- [ ] CHK024 — Does the grammar contract address the inverted-range case (`MIN(B1>A5)` where
+- [X] CHK024 — Does the grammar contract address the inverted-range case (`MIN(B1>A5)` where
   column B > column A) and confirm it is handled by `Math.Min`/`Math.Max` column normalization
   in `CollectRangeValues`? [Completeness, Grammar §aggregate_call, Spec §US1 §Scenario 4]
 
-- [ ] CHK025 — Does the grammar contract specify whether nested IF expressions are valid —
+- [X] CHK025 — Does the grammar contract specify whether nested IF expressions are valid —
   e.g., `IF(IF(A1>0, 1, 0)=1, 10, 20)` — or explicitly declare them out of scope?
   [Completeness, Gap, Grammar §if_call]
 
-- [ ] CHK026 — Does the grammar contract define `<>` as two adjacent characters with no
+- [X] CHK026 — Does the grammar contract define `<>` as two adjacent characters with no
   intervening whitespace, and confirm that `< >` with a space is invalid?
   [Clarity, Grammar §relop]
 
-- [ ] CHK027 — Does the grammar contract specify whether function composition depth is
+- [X] CHK027 — Does the grammar contract specify whether function composition depth is
   unlimited (limited only by recursion) or subject to an explicit cap — e.g.,
   `ROUND(IF(A1>0, AVERAGE(A1>A5), MIN(A1>A5)), 2)`?
   [Completeness, Gap, Grammar §formula]
 
-- [ ] CHK028 — Does the grammar contract's Backward Compatibility section explicitly confirm
+- [X] CHK028 — Does the grammar contract's Backward Compatibility section explicitly confirm
   that `A1>B5` used as a standalone top-level expression (outside any function) is unchanged
   by the `IsRangeOperatorStart` guard? [Consistency, Grammar §Backward Compatibility,
   Spec §Assumptions]
 
-- [ ] CHK029 — Does the grammar contract's valid-examples table include a case where `>`
+- [X] CHK029 — Does the grammar contract's valid-examples table include a case where `>`
   appears both as a range operator (in one formula) and as a comparison operator (in another
   IF formula on the same sheet) — to illustrate deterministic disambiguation?
   [Coverage, Grammar §Valid Examples, Spec §Clarifications]
@@ -154,23 +154,23 @@ and a human reviewer to verify the Phase 2 Extended Formula Library without furt
 
 ## Quickstart & Documentation Quality
 
-- [ ] CHK030 — Does quickstart.md include at least one IF example for each of the six relational
+- [X] CHK030 — Does quickstart.md include at least one IF example for each of the six relational
   operators (`=`, `<>`, `<`, `<=`, `>=`, `>`), or are some operators undocumented?
   [Coverage, Quickstart §IF, Spec §FR-005]
 
-- [ ] CHK031 — Does quickstart.md explain the canonical workaround for numeric cell-to-cell
+- [X] CHK031 — Does quickstart.md explain the canonical workaround for numeric cell-to-cell
   comparison (`IF(A1-B1>0, 1, 0)`) with enough detail for a user to understand why
   `IF(A1>B1, ...)` has different (range-sum) semantics? [Clarity, Quickstart §IF, Spec §Edge Cases]
 
-- [ ] CHK032 — Does quickstart.md specify exactly where in `docs/help/microcalc-help.md` the
+- [X] CHK032 — Does quickstart.md specify exactly where in `docs/help/microcalc-help.md` the
   6 new function entries should be added — section, page, or relative position — to satisfy
   SC-005 unambiguously? [Completeness, Gap, Spec §SC-005]
 
-- [ ] CHK033 — Does quickstart.md include a COUNT example with a mix of constants, calculated
+- [X] CHK033 — Does quickstart.md include a COUNT example with a mix of constants, calculated
   formula cells, and text cells in the same range — to document inclusion/exclusion rules
   concretely? [Coverage, Quickstart §COUNT, Spec §FR-004]
 
-- [ ] CHK034 — Does quickstart.md specify that help documentation updates must follow the
+- [X] CHK034 — Does quickstart.md specify that help documentation updates must follow the
   same format as existing entries in `docs/help/microcalc-help.md` (e.g., syntax line, sample
   input, expected output) to satisfy SC-005's "usage example" requirement?
   [Completeness, Quickstart §Running Tests, Spec §SC-005, §SC-021]
@@ -179,26 +179,26 @@ and a human reviewer to verify the Phase 2 Extended Formula Library without furt
 
 ## Cross-Artifact Consistency
 
-- [ ] CHK035 — Are the German error message strings in data-model.md (e.g.,
+- [X] CHK035 — Are the German error message strings in data-model.md (e.g.,
   `"IF erwartet 3 Argumente: Bedingung, Wahr-Wert, Falsch-Wert."`) character-for-character
   identical to those in spec.md §Edge Cases — with no paraphrasing drift between artifacts?
   [Consistency, Data Model §ParseIfExpression, Spec §Edge Cases, Spec §FR-011]
 
-- [ ] CHK036 — Does the grammar contract's `relop` production match the relational operator
+- [X] CHK036 — Does the grammar contract's `relop` production match the relational operator
   list in spec.md FR-005 exactly (`=`, `<>`, `<`, `<=`, `>=`, `>`) — with no operators added
   or missing? [Consistency, Grammar §relop, Spec §FR-005]
 
-- [ ] CHK037 — Does the implementation priority order in research.md Decision 8
+- [X] CHK037 — Does the implementation priority order in research.md Decision 8
   (P1: MIN/MAX/AVERAGE → P2: COUNT → P3a: ROUND → P3b: IF) match the priority labels in
   spec.md User Stories (US1=P1, US2=P2, US3=P3, US4=P3)?
   [Consistency, Research §Decision 8, Spec §User Stories]
 
-- [ ] CHK038 — Does data-model.md's `CollectRangeValues` inclusion rule (`Constant` OR
+- [X] CHK038 — Does data-model.md's `CollectRangeValues` inclusion rule (`Constant` OR
   `Calculated` flags) match research.md Decision 5's aggregate behavior table (formula error
   cells excluded, empty cells excluded)?
   [Consistency, Data Model §CellStatusFlags, Research §Decision 5]
 
-- [ ] CHK039 — Do research.md Decision 3 and the grammar contract's disambiguation note agree
+- [X] CHK039 — Do research.md Decision 3 and the grammar contract's disambiguation note agree
   on the exact lookahead condition — both requiring a valid column letter (A–G) followed
   immediately by a digit? [Consistency, Research §Decision 3, Grammar §Disambiguation]
 
@@ -206,21 +206,21 @@ and a human reviewer to verify the Phase 2 Extended Formula Library without furt
 
 ## Implementation Risk Coverage
 
-- [ ] CHK040 — Does any planning artifact specify a regression-guard strategy for the
+- [X] CHK040 — Does any planning artifact specify a regression-guard strategy for the
   `SumRange` refactor — confirming that `CollectRangeValues().Sum()` produces results
   numerically identical to the current loop for all existing test inputs?
   [Risk, Gap, Research §Decision 2, Spec §FR-013]
 
-- [ ] CHK041 — Does any planning artifact address whether `SkipWhitespace()` between a parsed
+- [X] CHK041 — Does any planning artifact address whether `SkipWhitespace()` between a parsed
   cell address and `>` affects the position index used by `IsRangeOperatorStart()` — i.e.,
   does the guard read from `_position` (post-whitespace) or a pre-whitespace snapshot?
   [Risk, Research §Decision 3]
 
-- [ ] CHK042 — Does any planning artifact specify a strategy if the `CollectRangeValues`
+- [X] CHK042 — Does any planning artifact specify a strategy if the `CollectRangeValues`
   refactor introduces a regression — e.g., a feature flag, a parallel implementation, or
   a dedicated before/after test fixture? [Risk, Gap]
 
-- [ ] CHK043 — Does any planning artifact address function name collision risk — confirming
+- [X] CHK043 — Does any planning artifact address function name collision risk — confirming
   that none of the new names (MIN, MAX, AVERAGE, COUNT, IF, ROUND) conflict with column names
   (A–G are single letters) or any other valid identifier in the existing grammar?
   [Risk, Gap, Spec §FR-009]
@@ -229,12 +229,12 @@ and a human reviewer to verify the Phase 2 Extended Formula Library without furt
 
 ## Test Strategy in Planning Artifacts
 
-- [ ] CHK044 — Does research.md Decision 8 or any other planning artifact specify the minimum
+- [X] CHK044 — Does research.md Decision 8 or any other planning artifact specify the minimum
   number of `[Theory]` data rows per function — or does it defer entirely to the spec's
   "at least one happy path + one boundary case" without adding implementer-level precision?
   [Completeness, Research §Decision 8, Spec §FR-012, §SC-007]
 
-- [ ] CHK045 — Do the planning artifacts identify which spec acceptance scenarios require
+- [X] CHK045 — Do the planning artifacts identify which spec acceptance scenarios require
   dedicated golden test entries — e.g., inverted range `MIN(B1>A5)`, rectangular range
   AVERAGE, IF with range-sum condition `IF(A1>B5, 1, 0)` — rather than leaving test case
   selection entirely to the implementing agent?
