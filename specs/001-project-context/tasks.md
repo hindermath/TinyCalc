@@ -59,11 +59,11 @@ or sparse range with empty/text cells. (Spec §US1, §FR-001–FR-003)
 
 ### Tests for User Story 1 ⚠️ Write first — must FAIL before T009
 
-- [ ] T006 [US1] Add `[Theory]` golden test rows for MIN: happy path (MIN(A1>A5)=10), empty range (MIN of all-empty cells=0), single cell (MIN(A1)=cell value), rectangular range (MIN(A1>B2) with A1=1,A2=2,B1=3,B2=4 → 1) in `tests/MicroCalc.Core.Tests/FormulaGoldenTests.cs` — verify tests compile and FAIL (Spec §US1 Scenarios 1,4,5; Research §Decision 5)
+- [ ] T006 [US1] Add `[Theory]` golden test rows for MIN: happy path (MIN(A1>A5)=10), empty range (MIN of all-empty cells=0), single cell (MIN(A1)=cell value), rectangular range (MIN(A1>B2) with A1=1,A2=2,B1=3,B2=4 → 1), lowercase name (min(A1>A5)=10); add `[Fact]` cyclic reference test (set A1 as Constant with Contents "MIN(A1>A5)" — evaluating this formula calls ResolveCellValue(A1) recursively through CollectRangeValues, triggering the HashSet guard → EvaluationResult.Error containing "Zyklische Referenz") in `tests/MicroCalc.Core.Tests/FormulaGoldenTests.cs` — verify tests compile and FAIL (Spec §US1 Scenarios 1,4,5; §FR-009; §FR-010; Research §Decision 5)
 
-- [ ] T007 [US1] Add `[Theory]` golden test rows for MAX: happy path (MAX(A1>A5)=50), empty range (MAX of all-empty=0), rectangular range (MAX(A1>B2)=4) in `tests/MicroCalc.Core.Tests/FormulaGoldenTests.cs` — verify tests compile and FAIL (Spec §US1 Scenarios 2,4,5; Research §Decision 5)
+- [ ] T007 [US1] Add `[Theory]` golden test rows for MAX: happy path (MAX(A1>A5)=50), empty range (MAX of all-empty=0), rectangular range (MAX(A1>B2)=4), lowercase name (max(A1>A5)=50) in `tests/MicroCalc.Core.Tests/FormulaGoldenTests.cs` — verify tests compile and FAIL (Spec §US1 Scenarios 2,4,5; §FR-009; Research §Decision 5)
 
-- [ ] T008 [US1] Add `[Theory]` golden test rows for AVERAGE: happy path (AVERAGE(A1>A5)=30), empty range (AVERAGE of all-empty=0), rectangular range (AVERAGE(A1>B2)=2.5), sparse range with empty cells (AVERAGE(A1>A3) with A1=10,A2 empty,A3=20 → 15) in `tests/MicroCalc.Core.Tests/FormulaGoldenTests.cs` — verify tests compile and FAIL (Spec §US1 Scenarios 3,4,5; Research §Decision 5)
+- [ ] T008 [US1] Add `[Theory]` golden test rows for AVERAGE: happy path (AVERAGE(A1>A5)=30), empty range (AVERAGE of all-empty=0), rectangular range (AVERAGE(A1>B2)=2.5), sparse range with empty cells (AVERAGE(A1>A3) with A1=10,A2 empty,A3=20 → 15), lowercase name (average(A1>A5)=30) in `tests/MicroCalc.Core.Tests/FormulaGoldenTests.cs` — verify tests compile and FAIL (Spec §US1 Scenarios 3,4,5; §FR-009; Research §Decision 5)
 
 ### Implementation for User Story 1
 
@@ -85,11 +85,11 @@ on IF or ROUND.
 
 ### Tests for User Story 2 ⚠️ Write first — must FAIL before T012
 
-- [ ] T011 [US2] Add `[Theory]` golden test rows for COUNT: sparse range (COUNT(A1>A5)=3 with 3 values and 2 empty), all-empty range (COUNT=0), all-text range (COUNT=0), single numeric cell (COUNT(A1)=1), single empty cell (COUNT(A1)=0) in `tests/MicroCalc.Core.Tests/FormulaGoldenTests.cs` — verify tests compile and FAIL (Spec §US2 Scenarios 1,2,3; Research §Decision 5)
+- [ ] T011 [US2] Add `[Theory]` golden test rows for COUNT: sparse range (COUNT(A1>A5)=3 with 3 values and 2 empty), all-empty range (COUNT=0), all-text range (COUNT=0), single numeric cell (COUNT(A1)=1), single empty cell (COUNT(A1)=0), lowercase name (count(A1>A5)=3) in `tests/MicroCalc.Core.Tests/FormulaGoldenTests.cs` — verify tests compile and FAIL (Spec §US2 Scenarios 1,2,3; §FR-009; Research §Decision 5)
 
 ### Implementation for User Story 2
 
-- [ ] T012 [US2] Add `"COUNT"` case to `ParseRangeAggregateFunction` returning `values.Count` (count of cells included by `CollectRangeValues`, i.e., Constant or Calculated cells only); extend `ParseIdentifierBasedFactor` dispatch to route `"COUNT"` in `src/MicroCalc.Core/Formula/FormulaEvaluator.cs` (Research §Decision 5, Data Model §CellStatusFlags)
+- [ ] T012 [US2] Add `"COUNT"` case to `ParseRangeAggregateFunction` returning `values.Count` (count of cells included by `CollectRangeValues`, i.e., Constant or Calculated cells only); extend `ParseIdentifierBasedFactor` dispatch to route `"COUNT"` in `src/MicroCalc.Core/Formula/FormulaEvaluator.cs` (Research §Decision 5, Data Model §CellStatusFlags) (requires T009 complete — adds COUNT case to ParseRangeAggregateFunction created in T009)
 
 - [ ] T013 [US2] Run formula golden tests and full suite — all US2 tests must be GREEN, no regressions
 
@@ -107,7 +107,7 @@ it is simpler (2-arg, no range or relational parsing). (Spec §US4, §FR-006, Re
 
 ### Tests for User Story 4 ⚠️ Write first — must FAIL before T015
 
-- [ ] T014 [US4] Add `[Theory]` golden test rows for ROUND: happy path (ROUND(3.14159,2)=3.14), away-from-zero positive (ROUND(2.5,0)=3), away-from-zero negative (ROUND(-2.5,0)=-3), non-integer decimals truncated (ROUND(3.14,1.7)=3.1), composed with AVERAGE (ROUND(AVERAGE(A1>A5),2)=3.00 for A1–A5=1,2,3,4,5); add `[Fact]` error test for negative decimals (ROUND(3.14,-1) → error message containing "Negative Nachkommastellen") in `tests/MicroCalc.Core.Tests/FormulaGoldenTests.cs` — verify tests compile and FAIL (Spec §US4 Scenarios 1,2,3a,3; Research §Decision 7)
+- [ ] T014 [US4] Add `[Theory]` golden test rows for ROUND: happy path (ROUND(3.14159,2)=3.14), away-from-zero positive (ROUND(2.5,0)=3), away-from-zero negative (ROUND(-2.5,0)=-3), non-integer decimals truncated (ROUND(3.14,1.7)=3.1), composed with AVERAGE (ROUND(AVERAGE(A1>A5),2)=3.00 for A1–A5=1,2,3,4,5), lowercase name (round(3.14159,2)=3.14); add `[Fact]` error test for negative decimals (ROUND(3.14,-1) → error message containing "Negative Nachkommastellen") in `tests/MicroCalc.Core.Tests/FormulaGoldenTests.cs` — verify tests compile and FAIL (Spec §US4 Scenarios 1,2,3a,3; §FR-009; Research §Decision 7)
 
 ### Implementation for User Story 4
 
@@ -129,7 +129,9 @@ error. (Spec §US3, §FR-005, §FR-007, §FR-008, Research §Decision 8)
 
 ### Tests for User Story 3 ⚠️ Write first — must FAIL before T018
 
-- [ ] T017 [US3] Add `[Theory]` golden test rows for IF: greater-than comparison (IF(A1>100,1,0)=1 with A1=150 and =0 with A1=50), equality (IF(A1=A2,10,20)), not-equal (IF(A1<>0,A1,0)), less-than (IF(A1<10,1,0)), range-sum condition (IF(A1>B5,1,0) where A1>B5 treats `>` as range-sum per existing semantics), nested function branches (IF(A1>0,MAX(A1>A3),MIN(A1>A3))); add `[Fact]` error tests for: no relational operator (IF(A1,1,0) → error), fewer than 3 args (IF(A1>0,1) → error) in `tests/MicroCalc.Core.Tests/FormulaGoldenTests.cs` — verify tests compile and FAIL (Spec §US3 Scenarios 1,2,3,4; §Edge Cases; Research §Decision 3)
+- [ ] T017 [US3] Add `[Theory]` golden test rows for IF: greater-than comparison (IF(A1>100,1,0)=1 with A1=150 and =0 with A1=50), equality (IF(A1=A2,10,20)), not-equal (IF(A1<>0,A1,0)), less-than (IF(A1<10,1,0)), range-sum condition (IF(A1>B5,1,0) where A1>B5 treats `>` as range-sum per existing semantics), nested function branches (IF(A1>0,MAX(A1>A3),MIN(A1>A3))), lowercase name (if(A1>100,1,0)=1 with A1=150); add `[Fact]` error tests for: no relational operator (IF(A1,1,0) → error), fewer than 3 args (IF(A1>0,1) → error); note: FR-008 (text-branch error "IF: Wahr- und Falsch-Wert müssen numerische Ausdrücke sein.") is satisfied by design — ParseExpression() always returns double and ResolveCellValue returns 0.0 for text cells; no additional runtime check or test is required in `tests/MicroCalc.Core.Tests/FormulaGoldenTests.cs` — verify tests compile and FAIL (Spec §US3 Scenarios 1,2,3,4; §Edge Cases; §FR-008; §FR-009; Research §Decision 3)
+
+- [ ] T017a [US3] Add `[Fact]` engine integration test in `tests/MicroCalc.Core.Tests/MicroCalcEngineTests.cs`: via `MicroCalcEngine`, set A1=150 via EditCell, enter formula `IF(A1>100, 1, 0)` in B1, call `Recalculate()`, assert B1.Value=1; then set A1=50 via EditCell, call `Recalculate()`, assert B1.Value=0 — verifies IF result tracks cell changes on every recalculate (Spec §SC-003) — verify test compiles and FAILS before T019
 
 ### Implementation for User Story 3
 
@@ -149,11 +151,15 @@ error. (Spec §US3, §FR-005, §FR-007, §FR-008, Research §Decision 8)
 
 **Purpose**: Documentation and final validation sweep.
 
-- [ ] T022 [P] Add 6 new function entries to `docs/help/microcalc-help.md` following the format of existing entries: function name, syntax, description, and at least one example with expected output for MIN, MAX, AVERAGE, COUNT, IF, ROUND (Spec §SC-005, §SC-021)
+- [ ] T022 [P] Add 6 new function entries to `docs/help/microcalc-help.md` following the format of existing entries: function name, syntax, description, and at least one example with expected output for MIN, MAX, AVERAGE, COUNT, IF, ROUND (Spec §SC-005)
 
-- [ ] T023 Run full test suite (`dotnet test MicroCalc.sln --configuration Release`) as final gate — all Core.Tests + Tui.Tests must be GREEN with no regressions (Spec §SC-006, §FR-013)
+- [ ] T023 Run full test suite (`dotnet test MicroCalc.sln --configuration Release`) as final gate — all Core.Tests + Tui.Tests must be GREEN with no regressions (Spec §SC-006, §FR-013); note: the new functions add O(n) range traversal identical to the existing SumRange loop — the <100ms performance goal is met by analysis and requires no explicit benchmark (plan.md §Technical Context)
 
-**Checkpoint**: All success criteria (SC-001 through SC-007) met. Ready for PR.
+- [ ] T024 [P] Create PR description document at `docs/PR_TEXT_EXTENDED-FORMULA-LIBRARY.md` summarising: the 6 new functions and their syntax, the CollectRangeValues refactor and IsRangeOperatorStart disambiguation, Constitution compliance (all 5 principles satisfied), and test coverage (FR-012, FR-013, SC-006, SC-007) — required before PR is opened (Constitution §IV, §Development Workflow)
+
+- [ ] T025 Run smoke verification: `dotnet run --no-build --configuration Release --project src/MicroCalc.Tui/MicroCalc.Tui.csproj -- --smoke` — must exit with code 0 (Constitution §III, §Development Workflow)
+
+**Checkpoint**: All success criteria (SC-001 through SC-007) met. PR description written. Smoke verified. Ready for PR.
 
 ---
 
@@ -188,14 +194,17 @@ Phase 1 (Setup)
 
 ## Parallel Opportunities
 
-Only T022 (help doc, different file) is truly parallelizable with other Phase 7 work.
+T022 (help doc) and T024 (PR description doc) touch different files and are parallelizable
+with each other and with the T023/T025 gate tasks in Phase 7.
 All other tasks modify the same two files (`FormulaEvaluator.cs`, `FormulaGoldenTests.cs`)
 and must be sequential within those files.
 
 ```
-# Phase 7 — can overlap:
-T022: docs/help/microcalc-help.md  ← can start while T021 runs its final test sweep
-T023: Final full-suite gate         ← after T022 complete
+# Phase 7 — parallel opportunities:
+T022 [P]: docs/help/microcalc-help.md        ← can start while T021 test sweep runs
+T024 [P]: docs/PR_TEXT_EXTENDED-...md        ← can run concurrently with T022
+T023:     Final full-suite gate              ← after T022 complete
+T025:     Smoke verification                 ← after T023 GREEN
 ```
 
 ---
@@ -217,7 +226,7 @@ T023: Final full-suite gate         ← after T022 complete
 | After Phase 4 | COUNT | 4 of 6 ✅ |
 | After Phase 5 | ROUND | 5 of 6 ✅ |
 | After Phase 6 | IF | 6 of 6 ✅ |
-| After Phase 7 | Help doc, final gate | Feature complete ✅ |
+| After Phase 7 | Help doc, PR doc, smoke, final gate | Feature complete ✅ |
 
 ### Single-Agent Execution Order
 
@@ -226,11 +235,12 @@ T001 → T002 → T003 → T004 → T005
 → T006 → T007 → T008 → T009 → T010
 → T011 → T012 → T013
 → T014 → T015 → T016
-→ T017 → T018 → T019 → T020 → T021
-→ T022 → T023
+→ T017 → T017a → T018 → T019 → T020 → T021
+→ T022 ┐
+→ T024 ┘ (parallel) → T023 → T025
 ```
 
-Total: 23 tasks · 7 phases · 1 source file + 1 test file + 1 help doc
+Total: 26 tasks · 7 phases · 2 source files (FormulaEvaluator.cs, MicroCalcEngineTests.cs) + 1 test file (FormulaGoldenTests.cs) + 1 help doc + 1 PR doc
 
 ---
 
@@ -242,6 +252,8 @@ Total: 23 tasks · 7 phases · 1 source file + 1 test file + 1 help doc
 - Error messages are German throughout (Spec §FR-011), matching existing evaluator style.
 - `IsFormula = true` must be set in all new parse paths (data-model.md §Invariants Preserved).
 - Cyclic reference detection is inherited automatically via `ResolveCellValue` — no new
-  guard code required (data-model.md §Invariants Preserved, Spec §FR-010).
+  guard code required (data-model.md §Invariants Preserved, Spec §FR-010); golden test in T006 verifies this for new functions.
+- FR-008 (IF text-branch error) is satisfied by design: ParseExpression() always returns double;
+  no runtime text-branch check is needed (see T017 note, data-model.md §ParseIfExpression).
 - After Phase 6, open a PR to `main` with description at `docs/PR_TEXT_EXTENDED-FORMULA-LIBRARY.md`
-  (CLAUDE.md branching conventions).
+  created by T024 (CLAUDE.md branching conventions, Constitution §IV).
