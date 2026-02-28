@@ -186,8 +186,9 @@ public sealed class FormulaEvaluator
                 var from = ParseCellAddress();
                 IsFormula = true;
                 SkipWhitespace();
-                if (Match('>'))
+                if (!IsEnd() && Current() == '>' && IsRangeOperatorStart())
                 {
+                    _position++; // consume '>'
                     var to = ParseCellAddress();
                     return SumRange(from, to);
                 }
@@ -199,10 +200,182 @@ public sealed class FormulaEvaluator
             var functionName = ParseName();
             SkipWhitespace();
             Expect('(');
-            var argument = ParseExpression();
+            switch (functionName)
+            {
+                case "MIN":
+                case "MAX":
+                case "AVERAGE":
+                case "COUNT":
+                    return ParseRangeAggregateFunction(functionName);
+                case "IF":
+                    return ParseIfExpression();
+                case "ROUND":
+                    return ParseRoundExpression();
+                default:
+                    var argument = ParseExpression();
+                    SkipWhitespace();
+                    Expect(')');
+                    return ApplyFunction(functionName, argument);
+            }
+        }
+
+        private bool IsRangeOperatorStart()
+        {
+            // Precondition: Current() == '>'
+            // Returns true iff _text[_position+1] is a valid column letter (A–G)
+            // AND _text[_position+2] is a digit (0–9)
+            var p1 = _position + 1;
+            var p2 = _position + 2;
+            if (p2 >= _text.Length)
+            {
+                return false;
+            }
+
+            var col = char.ToUpperInvariant(_text[p1]);
+            return SpreadsheetSpec.IsColumnInRange(col) && char.IsDigit(_text[p2]);
+        }
+
+        private double ParseRangeAggregateFunction(string name)
+        {
+            // Precondition: '(' already consumed by caller.
+            // Expects: range_arg ')' where range_arg is cell_address '>' cell_address OR expression.
+            IsFormula = true;
+            SkipWhitespace();
+            var letter = char.ToUpperInvariant(Current());
+            if (!IsEnd() && char.IsLetter(Current()) && SpreadsheetSpec.IsColumnInRange(letter) && HasDigitAfterColumn())
+            {
+                var from = ParseCellAddress();
+                SkipWhitespace();
+                if (!IsEnd() && Current() == '>' && IsRangeOperatorStart())
+                {
+                    _position++; // consume '>'
+                    var to = ParseCellAddress();
+                    SkipWhitespace();
+                    Expect(')');
+                    var values = CollectRangeValues(from, to);
+                    return ApplyAggregate(name, values);
+                }
+
+                // Single cell reference — use CollectRangeValues so COUNT excludes empty/text cells
+                SkipWhitespace();
+                Expect(')');
+                var singleCellValues = CollectRangeValues(from, from);
+                return ApplyAggregate(name, singleCellValues);
+            }
+
+            // General expression (e.g., literal)
+            var exprValue = ParseExpression();
             SkipWhitespace();
             Expect(')');
-            return ApplyFunction(functionName, argument);
+            return ApplyAggregate(name, new[] { exprValue });
+        }
+
+        private static double ApplyAggregate(string name, IReadOnlyList<double> values)
+        {
+            return name switch
+            {
+                "MIN" => values.Count == 0 ? 0 : values.Min(),
+                "MAX" => values.Count == 0 ? 0 : values.Max(),
+                "AVERAGE" => values.Count == 0 ? 0 : values.Sum() / values.Count,
+                "COUNT" => values.Count,
+                _ => throw new FormulaParseException($"Unbekannte Aggregatfunktion '{name}'.", 1),
+            };
+        }
+
+        private double ParseRoundExpression()
+        {
+            // Precondition: '(' already consumed by caller.
+            IsFormula = true;
+            var value = ParseExpression();
+            SkipWhitespace();
+            Expect(',');
+            var decimalsRaw = ParseExpression();
+            var decimals = (int)Math.Truncate(decimalsRaw);
+            if (decimals < 0)
+            {
+                throw Error("ROUND: Negative Nachkommastellen sind nicht erlaubt.");
+            }
+
+            SkipWhitespace();
+            Expect(')');
+            return Math.Round(value, decimals, MidpointRounding.AwayFromZero);
+        }
+
+        private double ParseIfExpression()
+        {
+            // Precondition: '(' already consumed by caller.
+            IsFormula = true;
+            var left = ParseExpression();
+            SkipWhitespace();
+            var relOp = ParseRelationalOperator();
+            if (relOp is null)
+            {
+                throw Error("IF: Bedingung muss einen Vergleichsoperator enthalten (=, <>, <, <=, >=, >).");
+            }
+
+            var right = ParseExpression();
+            SkipWhitespace();
+            if (!Match(','))
+            {
+                throw Error("IF erwartet 3 Argumente: Bedingung, Wahr-Wert, Falsch-Wert.");
+            }
+
+            var trueExpr = ParseExpression();
+            SkipWhitespace();
+            if (!Match(','))
+            {
+                throw Error("IF erwartet 3 Argumente: Bedingung, Wahr-Wert, Falsch-Wert.");
+            }
+
+            var falseExpr = ParseExpression();
+            SkipWhitespace();
+            Expect(')');
+            var condition = EvaluateCondition(left, relOp, right);
+            return condition ? trueExpr : falseExpr;
+        }
+
+        private string? ParseRelationalOperator()
+        {
+            SkipWhitespace();
+            if (IsEnd())
+            {
+                return null;
+            }
+
+            // Check multi-character operators first
+            if (_position + 1 < _text.Length)
+            {
+                var two = _text.Substring(_position, 2);
+                if (two == "<>" || two == "<=" || two == ">=")
+                {
+                    _position += 2;
+                    return two;
+                }
+            }
+
+            // Single-character operators
+            var ch = Current();
+            if (ch == '<' || ch == '>' || ch == '=')
+            {
+                _position++;
+                return ch.ToString();
+            }
+
+            return null;
+        }
+
+        private static bool EvaluateCondition(double left, string relOp, double right)
+        {
+            return relOp switch
+            {
+                "=" => Math.Abs(left - right) < 1e-9,
+                "<>" => Math.Abs(left - right) >= 1e-9,
+                "<" => left < right,
+                "<=" => left <= right,
+                ">=" => left >= right,
+                ">" => left > right,
+                _ => throw new FormulaParseException($"Unbekannter Vergleichsoperator '{relOp}'.", 1),
+            };
         }
 
         private double ApplyFunction(string name, double argument)
@@ -248,21 +421,31 @@ public sealed class FormulaEvaluator
 
         private double SumRange(CellAddress from, CellAddress to)
         {
+            return CollectRangeValues(from, to).Sum();
+        }
+
+        private IReadOnlyList<double> CollectRangeValues(CellAddress from, CellAddress to)
+        {
             var startColumn = Math.Min(SpreadsheetSpec.ColumnToIndex(from.Column), SpreadsheetSpec.ColumnToIndex(to.Column));
             var endColumn = Math.Max(SpreadsheetSpec.ColumnToIndex(from.Column), SpreadsheetSpec.ColumnToIndex(to.Column));
             var startRow = Math.Min(from.Row, to.Row);
             var endRow = Math.Max(from.Row, to.Row);
 
-            var sum = 0.0;
+            var values = new List<double>();
             for (var row = startRow; row <= endRow; row++)
             {
                 for (var column = startColumn; column <= endColumn; column++)
                 {
-                    sum += ResolveCellValue(new CellAddress(SpreadsheetSpec.IndexToColumn(column), row));
+                    var address = new CellAddress(SpreadsheetSpec.IndexToColumn(column), row);
+                    var cell = _sheet.GetCell(address);
+                    if (cell.Status.HasFlag(CellStatusFlags.Constant) || cell.Status.HasFlag(CellStatusFlags.Calculated))
+                    {
+                        values.Add(ResolveCellValue(address));
+                    }
                 }
             }
 
-            return sum;
+            return values;
         }
 
         private double ResolveCellValue(CellAddress address)

@@ -59,6 +59,23 @@ public sealed class MicroCalcEngineTests
         Assert.Equal(120, engine.Sheet.GetCell('B', 1).Value);
     }
 
+    // T017a — IF integration test: result tracks cell changes on every Recalculate
+    [Fact]
+    public void If_ResultTracksRecalculate_WhenDependentCellChanges()
+    {
+        var engine = new MicroCalcEngine();
+        engine.EditCell(new CellAddress('A', 1), "150");
+        var editResult = engine.EditCell(new CellAddress('B', 1), "IF(A1>100, 1, 0)");
+        Assert.True(editResult.Success, editResult.Message);
+        Assert.Equal(1, engine.Sheet.GetCell('B', 1).Value);
+
+        engine.EditCell(new CellAddress('A', 1), "50");
+        var recalc = engine.Recalculate();
+
+        Assert.True(recalc.Success, string.Join("; ", recalc.Errors));
+        Assert.Equal(0, engine.Sheet.GetCell('B', 1).Value);
+    }
+
     [Fact]
     public void FormatRange_LocksNextColumnWhenWidthGreaterThanTen()
     {
