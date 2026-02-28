@@ -5,10 +5,9 @@ obj/
 .DS_Store
 TestResults/
 .idea
-.claude
-.codex
-.gemini
-.github
+.claude/
+.codex/
+.gemini/
 
 # Created by https://www.toptal.com/developers/gitignore/api/dotnetcore,csharp,visualstudiocode,visualstudio,jetbrains,jetbrains+iml,jetbrains+all
 # Edit at https://www.toptal.com/developers/gitignore?templates=dotnetcore,csharp,visualstudiocode,visualstudio,jetbrains,jetbrains+iml,jetbrains+all
