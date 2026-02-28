@@ -90,7 +90,7 @@ of the direct Pascal-to-C# translation.
 
 ## Technology Constraints
 
-- **Runtime**: .NET 10 / C# 12 — no downgrade without an explicit, recorded decision.
+- **Runtime**: .NET 10 / C# 14 — no downgrade without an explicit, recorded decision.
 - **UI Framework**: Terminal.Gui — no alternative TUI library may be introduced.
 - **Test Framework**: xUnit — all test projects MUST use xUnit; mixing frameworks is prohibited.
 - **Persistence**: JSON (`.mcalc.json`) is the sole supported save/load format.
