@@ -1,0 +1,54 @@
+{
+  "metadata": [
+    {
+      "src": [
+        {
+          "src": ".",
+          "files": [
+            "src/MicroCalc.Core/MicroCalc.Core.csproj",
+            "src/MicroCalc.Tui/MicroCalc.Tui.csproj"
+          ]
+        }
+      ],
+      "dest": "api"
+    }
+  ],
+  "build": {
+    "content": [
+      {
+        "files": [
+          "api/**.yml",
+          "api/index.md"
+        ]
+      },
+      {
+        "files": [
+          "README.md"
+        ]
+      },
+      {
+        "src": "docs",
+        "files": [
+          "**/*.md"
+        ],
+        "dest": "docs"
+      }
+    ],
+    "resource": [
+      {
+        "files": [
+          "docs/**/images/**"
+        ]
+      }
+    ],
+    "output": "_site",
+    "template": [
+      "default"
+    ],
+    "globalMetadata": {
+      "_appName": "MicroCalc",
+      "_appTitle": "MicroCalc Documentation",
+      "_enableSearch": true
+    }
+  }
+}
