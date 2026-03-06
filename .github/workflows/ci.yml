@@ -8,6 +8,7 @@ on:
       - claude/**
       - gemini/**
       - copilot/**
+      - pencode/**
   pull_request:
 
 jobs:
