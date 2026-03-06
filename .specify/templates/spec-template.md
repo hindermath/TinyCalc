@@ -95,6 +95,14 @@
 - **FR-006**: System MUST authenticate users via [NEEDS CLARIFICATION: auth method not specified - email/password, SSO, OAuth?]
 - **FR-007**: System MUST retain user data for [NEEDS CLARIFICATION: retention period not specified]
 
+### Documentation & Learning Requirements *(mandatory)*
+
+- **DLR-001**: User-facing and developer-facing docs MUST be provided in German first, then English.
+- **DLR-002**: Both language blocks MUST target CEFR B2 readability.
+- **DLR-003**: Affected public APIs MUST include complete XML documentation updates (`<summary>`,
+  `<param>`, `<returns>`, `<exception>` as applicable).
+- **DLR-004**: If API signatures or XML comments change, DocFX regeneration MUST be included in scope.
+
 ### Key Entities *(include if feature involves data)*
 
 - **[Entity 1]**: [What it represents, key attributes without implementation]

@@ -82,6 +82,15 @@ Governed by `.editorconfig`:
 - C# conventions: `PascalCase` for types/public members, `_camelCase` for private readonly fields.
 - Nullable reference types are enabled; do not suppress without reason.
 
+## Documentation & Language Rules
+
+- Documentation and didactic comments must be bilingual: German first, English second.
+- Write both language blocks at CEFR B2 readability so trainees can follow the codebase.
+- Public API changes must include complete XML docs (`<summary>`, `<param>`, `<returns>`,
+  `<exception>` where applicable).
+- Do not suppress CS1591 globally; missing public XML docs are treated as errors.
+- If API signatures or XML comments change, regenerate DocFX output in the same PR/commit.
+
 ## Help File Resolution
 
 `CALC.HLP` must be resolvable at runtime. It lives both at `src/MicroCalc.Tui/Resources/CALC.HLP` (bundled as a resource) and at the repo root (legacy reference). Path changes must preserve both locations.

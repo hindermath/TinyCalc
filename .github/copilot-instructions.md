@@ -16,6 +16,7 @@ dotnet test MicroCalc.sln --configuration Release --no-build
 dotnet test tests/MicroCalc.Core.Tests/MicroCalc.Core.Tests.csproj --configuration Release --filter "FullyQualifiedName~FormulaGoldenTests"
 
 # Smoke run (non-interactive, validates TUI without Terminal.Gui window)
+# Always pass --configuration explicitly with --no-build; CI uses Release
 dotnet run --no-build --configuration Release --project src/MicroCalc.Tui/MicroCalc.Tui.csproj -- --smoke
 
 # Start interactive TUI
@@ -26,7 +27,8 @@ CI runs on `main` and all `codex/**` branches using the Release configuration.
 
 ## Architecture
 
-Two projects, strict dependency direction: `MicroCalc.Core` has no UI dependency; `MicroCalc.Tui` references Core.
+Two production projects plus two test projects, strict dependency direction:
+`MicroCalc.Core` has no UI dependency; `MicroCalc.Tui` references Core.
 
 **`MicroCalc.Core`** – all spreadsheet logic:
 - `Engine/MicroCalcEngine` – single façade for all operations (`EditCell`, `Recalculate`, `FormatRange`, `Move`, `Clear`). Call `EditCell` to store a value; it triggers `Recalculate` automatically when `AutoCalc` is on.
@@ -43,13 +45,16 @@ Two projects, strict dependency direction: `MicroCalc.Core` has no UI dependency
 ### Formula syntax (non-obvious)
 - Range sum uses `>` as the operator: `A1>B5` means "sum A1 through B5", not a comparison.
 - No `SUM()` function — use the `A1>B5` syntax instead.
-- Supported functions: `ABS`, `SQRT`, `SQR`, `SIN`, `COS`, `ARCTAN`, `LN`, `LOG`, `EXP`, `FACT`.
+- Supported functions: `ABS`, `SQRT`, `SQR`, `SIN`, `COS`, `ARCTAN`, `LN`, `LOG`, `EXP`, `FACT`, `MIN`, `MAX`, `AVERAGE`, `COUNT`, `ROUND`, `IF`. Function names are case-insensitive.
+- `IF(condition,trueVal,falseVal)` — conditions use `>` as greater-than comparison inside `IF`. Outside `IF`, `A1>B5` is a range sum, not a comparison.
+- `ROUND(value,decimals)` — rounds to the given number of decimal places.
 - Error messages from the parser are in German (the codebase language for user-facing strings).
 
 ### `CellStatusFlags` is a `[Flags]` enum — check with `HasFlag`
 - `Text` = plain string cell
 - `Constant` = numeric or expression cell (stored value)
 - `Formula` = contains a cell reference or range (recalculated on `Recalculate`)
+- `Calculated` = formula has been evaluated and has a current value
 - `OverWritten` = cell is visually occupied by text overflow from the cell to its left
 - `Locked` = cell blocked because the preceding cell uses an expanded field width
 
@@ -70,6 +75,15 @@ Fixed grid: columns `A`–`G` (7 columns), 21 rows, 147 total cells. Cell input 
 - Work branches: `codex/<short-topic>`
 - Add a PR description file: `docs/PR_TEXT_<TOPIC>.md`
 - Commits follow Conventional Commit prefixes: `feat:`, `fix:`, `test:`, `docs:`, `chore:`
+
+### Documentation & language
+- All code comments and documentation must be **bilingual: German block first, English block second**, both at CEFR B2 readability.
+- Public APIs require complete XML docs (`<summary>`, `<param>`, `<returns>`, `<exception>` where applicable). Do not suppress CS1591 globally — missing XML docs are treated as build errors.
+- When API signatures or XML comments change, regenerate DocFX output in the same PR.
+
+### TDD expectation
+- For behavior changes, write tests first and make them fail (RED) before implementation.
+- Implement against failing tests, then verify GREEN in `Release` configuration.
 
 ### Code style (`.editorconfig`)
 - `*.cs`: 4-space indent; `*.csproj`, `*.sln`, `*.md`, `*.yml`, `*.json`: 2-space indent

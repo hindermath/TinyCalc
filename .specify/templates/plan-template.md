@@ -31,7 +31,12 @@
 
 *GATE: Must pass before Phase 0 research. Re-check after Phase 1 design.*
 
-[Gates determined based on constitution file]
+- [ ] Legacy behavioral fidelity preserved (`CALC.PAS`, `CALC.INC`, `CALC.HLP`) or explicit deviation documented.
+- [ ] Core/TUI layering preserved (`MicroCalc.Core` has no Terminal.Gui dependency).
+- [ ] Test-first plan defined (RED tests first, then implementation, then GREEN verification in Release CI).
+- [ ] Bilingual documentation plan defined (German block first, English block second, CEFR B2 target).
+- [ ] XML documentation impact identified for all affected public APIs, including DocFX regeneration when needed.
+- [ ] PR remains focused to one topic with `docs/PR_TEXT_<TOPIC>.md` planned.
 
 ## Project Structure
 

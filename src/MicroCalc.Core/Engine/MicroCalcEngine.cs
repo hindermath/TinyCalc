@@ -4,16 +4,36 @@ using MicroCalc.Core.Model;
 
 namespace MicroCalc.Core.Engine;
 
+/// <summary>
+/// DE: Zentrale Fassade fuer alle Spreadsheet-Operationen in MicroCalc.
+/// EN: Central facade for all spreadsheet operations in MicroCalc.
+/// </summary>
 public sealed class MicroCalcEngine
 {
     private readonly FormulaEvaluator _evaluator = new();
 
+    /// <summary>
+    /// DE: Das aktuell geladene Arbeitsblatt.
+    /// EN: The currently loaded worksheet.
+    /// </summary>
     public Spreadsheet Sheet { get; } = new();
 
+    /// <summary>
+    /// DE: Steuert, ob nach jeder Eingabe automatisch neu berechnet wird.
+    /// EN: Controls whether recalculation runs automatically after each edit.
+    /// </summary>
     public bool AutoCalc { get; private set; } = true;
 
+    /// <summary>
+    /// DE: Aktuelle Cursor-Position im Grid.
+    /// EN: Current cursor position in the grid.
+    /// </summary>
     public CellAddress CurrentCell { get; set; } = new('A', 1);
 
+    /// <summary>
+    /// DE: Setzt das Blatt auf den Ausgangszustand zurueck.
+    /// EN: Resets the worksheet to its initial state.
+    /// </summary>
     public void Clear()
     {
         Sheet.Reset();
@@ -21,16 +41,44 @@ public sealed class MicroCalcEngine
         AutoCalc = true;
     }
 
+    /// <summary>
+    /// DE: Aktiviert oder deaktiviert die automatische Neuberechnung.
+    /// EN: Enables or disables automatic recalculation.
+    /// </summary>
+    /// <param name="value">
+    /// DE: Gewuenschter AutoCalc-Status.
+    /// EN: Desired AutoCalc state.
+    /// </param>
     public void SetAutoCalc(bool value)
     {
         AutoCalc = value;
     }
 
+    /// <summary>
+    /// DE: Schaltet den AutoCalc-Status um.
+    /// EN: Toggles the AutoCalc state.
+    /// </summary>
     public void ToggleAutoCalc()
     {
         AutoCalc = !AutoCalc;
     }
 
+    /// <summary>
+    /// DE: Schreibt einen Zellinhalt und bewertet ihn als Text, Zahl oder Formel.
+    /// EN: Writes cell content and evaluates it as text, numeric value, or formula.
+    /// </summary>
+    /// <param name="address">
+    /// DE: Zieladresse der zu bearbeitenden Zelle.
+    /// EN: Target address of the cell to edit.
+    /// </param>
+    /// <param name="input">
+    /// DE: Benutzereingabe fuer die Zelle.
+    /// EN: User input for the cell.
+    /// </param>
+    /// <returns>
+    /// DE: Ergebnis mit Erfolg, Meldung und optionaler Fehlerposition.
+    /// EN: Result with success flag, message, and optional error position.
+    /// </returns>
     public EditResult EditCell(CellAddress address, string input)
     {
         var value = (input ?? string.Empty).TrimEnd();
@@ -83,6 +131,14 @@ public sealed class MicroCalcEngine
         return SaveTextCell(cell, address, value);
     }
 
+    /// <summary>
+    /// DE: Berechnet alle Formelzellen im Blatt neu.
+    /// EN: Recalculates all formula cells in the worksheet.
+    /// </summary>
+    /// <returns>
+    /// DE: Erfolg sowie eventuelle Fehlermeldungen pro Zelle.
+    /// EN: Success state and optional per-cell error messages.
+    /// </returns>
     public RecalculateResult Recalculate()
     {
         var errors = new List<string>();
@@ -109,6 +165,34 @@ public sealed class MicroCalcEngine
         return errors.Count == 0 ? RecalculateResult.Ok() : new RecalculateResult(false, errors);
     }
 
+    /// <summary>
+    /// DE: Wendet Dezimalstellen und Feldbreite auf einen Zellbereich in einer Spalte an.
+    /// EN: Applies decimals and field width to a row range in one column.
+    /// </summary>
+    /// <param name="column">
+    /// DE: Spalte (A-G), die formatiert wird.
+    /// EN: Column (A-G) to format.
+    /// </param>
+    /// <param name="fromRow">
+    /// DE: Startzeile des Bereichs.
+    /// EN: Start row of the range.
+    /// </param>
+    /// <param name="toRow">
+    /// DE: Endzeile des Bereichs.
+    /// EN: End row of the range.
+    /// </param>
+    /// <param name="decimals">
+    /// DE: Gewuenschte Nachkommastellen.
+    /// EN: Requested number of decimal places.
+    /// </param>
+    /// <param name="fieldWidth">
+    /// DE: Gewuenschte Feldbreite.
+    /// EN: Requested field width.
+    /// </param>
+    /// <exception cref="ArgumentOutOfRangeException">
+    /// DE: Wenn die Spalte ausserhalb von A-G liegt.
+    /// EN: Thrown when the column is outside A-G.
+    /// </exception>
     public void FormatRange(char column, int fromRow, int toRow, int decimals, int fieldWidth)
     {
         var normalizedColumn = char.ToUpperInvariant(column);
@@ -150,6 +234,22 @@ public sealed class MicroCalcEngine
         }
     }
 
+    /// <summary>
+    /// DE: Bewegt den Cursor in eine Richtung und ueberspringt gesperrte/verdeckte Zellen.
+    /// EN: Moves the cursor in one direction while skipping locked/overwritten cells.
+    /// </summary>
+    /// <param name="start">
+    /// DE: Startposition der Bewegung.
+    /// EN: Start position for movement.
+    /// </param>
+    /// <param name="direction">
+    /// DE: Bewegungsrichtung.
+    /// EN: Movement direction.
+    /// </param>
+    /// <returns>
+    /// DE: Erreichte Zielposition.
+    /// EN: Reached target position.
+    /// </returns>
     public CellAddress Move(CellAddress start, Direction direction)
     {
         var maxSteps = SpreadsheetSpec.RowCount * SpreadsheetSpec.ColumnCount;
@@ -175,6 +275,18 @@ public sealed class MicroCalcEngine
         return start;
     }
 
+    /// <summary>
+    /// DE: Liefert den sichtbaren Zelltyp-Text fuer die Statuszeile.
+    /// EN: Returns the visible cell-type text for the status line.
+    /// </summary>
+    /// <param name="address">
+    /// DE: Adresse der Zelle.
+    /// EN: Cell address.
+    /// </param>
+    /// <returns>
+    /// DE: Einer der Werte "Text", "Numeric" oder "Formula".
+    /// EN: One of "Text", "Numeric", or "Formula".
+    /// </returns>
     public string GetCellTypeText(CellAddress address)
     {
         var status = Sheet.GetCell(address).Status;
@@ -191,6 +303,14 @@ public sealed class MicroCalcEngine
         return "Text";
     }
 
+    /// <summary>
+    /// DE: Rendert das komplette Grid als Textdarstellung.
+    /// EN: Renders the full grid as a text representation.
+    /// </summary>
+    /// <returns>
+    /// DE: Mehrzeilige Ansicht des Tabelleninhalts.
+    /// EN: Multi-line view of the worksheet contents.
+    /// </returns>
     public string RenderGridText()
     {
         var lines = new List<string>();
@@ -218,6 +338,14 @@ public sealed class MicroCalcEngine
         return string.Join(Environment.NewLine, lines);
     }
 
+    /// <summary>
+    /// DE: Baut die kompakte Statuszeile fuer die aktuelle Cursor-Position.
+    /// EN: Builds the compact status line for the current cursor position.
+    /// </summary>
+    /// <returns>
+    /// DE: Status mit Zelle, Typ und AutoCalc-Zustand.
+    /// EN: Status including cell, type, and AutoCalc state.
+    /// </returns>
     public string GetStatusLine()
     {
         var cell = Sheet.GetCell(CurrentCell);

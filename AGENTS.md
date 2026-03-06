@@ -31,6 +31,13 @@ C# conventions in this repo:
 ## Testing Guidelines
 Use xUnit (`Microsoft.NET.Test.Sdk`, `xunit`, `coverlet.collector`). Name test files/classes with `*Tests` (for example, `MicroCalcEngineTests`, `TuiSmokeTests`). Add or update tests for every behavior change, especially formula evaluation and recalc flows. No hard coverage threshold is enforced, but regression-focused tests are expected before PR.
 
+## Documentation & Language Guidelines
+- Documentation and didactic comments must be bilingual: German block first, English block second.
+- Both language blocks should target CEFR B2 readability for trainees.
+- Public APIs must include complete XML documentation (`<summary>`, `<param>`, `<returns>`, `<exception>` where applicable).
+- Do not globally suppress CS1591; missing public XML docs must be fixed.
+- If API signatures or XML comments change, regenerate DocFX output in the same change.
+
 ## Commit & Pull Request Guidelines
 Recent history follows Conventional Commit-style prefixes (`docs:`, `test:`, `chore:`). Keep commits focused and imperative.
 

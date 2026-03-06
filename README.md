@@ -198,6 +198,16 @@ Wenn du dieses Repo als Blaupause fuer eine eigene Legacy-Portierung nutzen will
 5. Dokumentation als First-Class Artefakt
 - Plan, PR-Texte, Workflow-Notizen im Repo halten
 
+## Verbindliche Dokumentationsregeln (Constitution v1.1.0)
+
+- Dokumentation und didaktische Kommentare muessen zweisprachig sein:
+  zuerst Deutsch, danach Englisch.
+- Beide Sprachbloecke muessen auf CEFR-/GER-B2-Niveau formuliert sein.
+- Oeffentliche APIs muessen vollstaendige XML-Dokumentation pflegen
+  (`<summary>`, `<param>`, `<returns>`, `<exception>` wenn anwendbar).
+- Bei Aenderungen an API-Signaturen oder XML-Kommentaren muss die DocFX-Ausgabe
+  im selben Commit/PR aktualisiert werden.
+
 ## Relevante Dokumente im Repo
 
 - Portierungsplan: `PLAN_MICROCALC_CSHARP_DOTNET10.md`

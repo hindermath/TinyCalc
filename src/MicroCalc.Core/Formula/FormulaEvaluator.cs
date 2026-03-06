@@ -3,8 +3,28 @@ using MicroCalc.Core.Model;
 
 namespace MicroCalc.Core.Formula;
 
+/// <summary>
+/// DE: Wertet MicroCalc-Formelausdruecke gegen ein Arbeitsblatt aus.
+/// EN: Evaluates MicroCalc formula expressions against a worksheet.
+/// </summary>
 public sealed class FormulaEvaluator
 {
+    /// <summary>
+    /// DE: Parst und berechnet einen Ausdruck fuer das angegebene Blatt.
+    /// EN: Parses and computes one expression for the provided sheet.
+    /// </summary>
+    /// <param name="expression">
+    /// DE: Ausdruck aus Zellinhalt oder Benutzereingabe.
+    /// EN: Expression from cell content or user input.
+    /// </param>
+    /// <param name="sheet">
+    /// DE: Blattkontext fuer Zellreferenzen und Bereiche.
+    /// EN: Sheet context for cell references and ranges.
+    /// </param>
+    /// <returns>
+    /// DE: Bewertungsergebnis mit Wert oder Fehlerinformationen.
+    /// EN: Evaluation result with value or error details.
+    /// </returns>
     public EvaluationResult Evaluate(string expression, Spreadsheet sheet)
     {
         if (string.IsNullOrWhiteSpace(expression))

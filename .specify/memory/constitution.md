@@ -1,55 +1,66 @@
 <!--
 Sync Impact Report
 ==================
-Version change: N/A (raw template) → 1.0.0 (initial ratification)
+Version change: 1.0.0 → 1.1.0
 
-Modified principles: N/A — initial fill-in; no prior principles existed.
+Modified principles:
+  - I. Legacy Behavioral Fidelity → I. Didactic and Linguistic Clarity
+  - III. Test-First Quality Gates (NON-NEGOTIABLE) → III. Test-First Quality Gates (NON-NEGOTIABLE)
+    (materially expanded with explicit red-green expectations and trainee-facing traceability)
 
 Added sections:
-  - Core Principles (I–V)
-  - Technology Constraints
-  - Development Workflow
-  - Governance
+  - None
 
-Removed sections: N/A
+Removed sections:
+  - None
 
 Templates requiring updates:
-  ✅ .specify/templates/plan-template.md — Constitution Check gate is already a
-     generic placeholder ("Gates determined based on constitution file"); aligned
-     with MicroCalc principles — no structural change needed.
-  ✅ .specify/templates/spec-template.md — Generic; no MicroCalc-specific
-     mandatory sections added that would require template changes.
-  ✅ .specify/templates/tasks-template.md — Generic; task categories unchanged.
-  ✅ .specify/templates/agent-file-template.md — Generic; no agent-specific
-     (CLAUDE-only) language present; no update required.
-  ✅ .specify/templates/checklist-template.md — Generic; no update required.
-  ⚠  .specify/templates/commands/ — Directory contains no command files;
-     no updates possible or required.
+  ✅ .specify/templates/plan-template.md — Constitution Check replaced with explicit gates.
+  ✅ .specify/templates/spec-template.md — Added mandatory Documentation & Learning Requirements.
+  ✅ .specify/templates/tasks-template.md — Test tasks made mandatory and doc tasks expanded.
+  ⚠  .specify/templates/commands/ — Directory does not exist; no command template updates possible.
 
-Follow-up TODOs: None — all placeholders resolved.
+Runtime guidance docs requiring updates:
+  ✅ README.md — Added constitutional documentation and bilingual-language requirements.
+  ✅ AGENTS.md — Added bilingual documentation and XML/docfx compliance guidance.
+  ✅ CLAUDE.md — Added bilingual documentation and XML/docfx compliance guidance.
+  ✅ GEMINI.md — Added bilingual documentation and XML/docfx compliance guidance.
+  ✅ .github/copilot-instructions.md — Added bilingual documentation and XML/docfx compliance guidance.
+  ✅ specs/001-project-context/quickstart.md — Checked; no constitution-reference text to update.
+
+Follow-up TODOs:
+  - None.
 -->
 
 # MicroCalc Constitution
 
 ## Core Principles
 
-### I. Legacy Behavioral Fidelity
+### I. Didactic and Linguistic Clarity
 
-The port MUST preserve the behavioral contract of the original Borland MicroCalc Pascal
-implementation (`CALC.PAS`, `CALC.INC`, `CALC.HLP`). Formula semantics, the A–G × 1–21
-grid (147 cells), cell-type rules, navigation behavior, and help content MUST match the Pascal
-reference. Any intentional deviation MUST be documented and justified in the relevant PR
-description.
+The project is a learning artifact for German-speaking and international trainees. All
+user-facing and developer-facing documentation MUST be bilingual: German block first,
+English block second. Language in both blocks MUST target CEFR B2 level so non-native
+trainees can follow the full workflow. Code comments that explain decisions, trade-offs,
+and constraints MUST also be bilingual in the same order. Explanations MUST prioritize
+clarity over cleverness.
 
-**Rationale**: The primary purpose of this project is to demonstrate a faithful, agentic legacy
-port. Undocumented behavioral drift defeats that purpose and makes regression detection impossible.
+All public APIs MUST include complete XML documentation (`<summary>`, `<param>`,
+`<returns>`, and `<exception>` where applicable; `<remarks>` and `<example>` when
+instructionally useful). Missing XML documentation for public API members is treated as
+an error; CS1591 MUST NOT be globally suppressed. When API signatures or XML comments
+change, DocFX output MUST be regenerated in the same commit/PR.
+
+**Rationale**: This repository trains apprentices. Didactic value and language accessibility
+are part of functional correctness for the project purpose.
 
 ### II. Layer Separation (NON-NEGOTIABLE)
 
 `MicroCalc.Core` MUST have zero compile-time or runtime dependency on `MicroCalc.Tui` or any
 Terminal.Gui type. All spreadsheet operations MUST be orchestrated through `MicroCalcEngine`.
 UI code MUST NOT implement business logic; it MUST only call Core APIs and render the result.
-New UI-only concerns (dialogs, keybindings, rendering) MUST remain exclusively in `MicroCalc.Tui`.
+New UI-only concerns (dialogs, keybindings, rendering) MUST remain exclusively in
+`MicroCalc.Tui`.
 
 **Rationale**: Enforcing the Core/Tui boundary keeps domain logic independently testable and
 prevents the historical mistake of mixing UI and domain code that made the original Pascal
@@ -57,14 +68,15 @@ codebase harder to port.
 
 ### III. Test-First Quality Gates (NON-NEGOTIABLE)
 
-All new formula behaviors, engine operations, and bug fixes MUST be covered by xUnit tests before
-the implementing code is merged. Formula golden tests MUST serve as the primary regression harness.
-The full test suite MUST pass under `--configuration Release` in CI before any PR is merged.
-The smoke runner (`--smoke` flag on `MicroCalc.Tui`) MUST pass as a non-interactive verification
-gate. Tests MUST be written so they fail first, then pass after implementation.
+All new formula behaviors, engine operations, bug fixes, and documentation-driven API
+changes MUST follow a red-green workflow: tests are created first, fail first, and then
+pass after implementation. Core behavior MUST be covered by xUnit tests before merge.
+Formula golden tests remain the primary regression harness. The full suite MUST pass in
+`Release` configuration in CI, and the TUI smoke runner (`--smoke`) MUST pass as a
+non-interactive gate.
 
-**Rationale**: An untested port is an unreliable port. Regression coverage must be provable,
-not assumed.
+**Rationale**: An untested port is an unreliable port. Trainees must see a reproducible
+TDD flow, not post-hoc test additions.
 
 ### IV. Minimal, Focused PRs
 
@@ -94,6 +106,7 @@ of the direct Pascal-to-C# translation.
 - **UI Framework**: Terminal.Gui — no alternative TUI library may be introduced.
 - **Test Framework**: xUnit — all test projects MUST use xUnit; mixing frameworks is prohibited.
 - **Persistence**: JSON (`.mcalc.json`) is the sole supported save/load format.
+- **Documentation Generator**: DocFX CLI (`docfx`) MUST be used after API/XML documentation changes.
 - **CI Platform**: GitHub Actions (`.github/workflows/ci.yml`) — Release configuration only.
 - **Code style** (governed by `.editorconfig`):
   - UTF-8 encoding, LF line endings, final newline required, no trailing whitespace.
@@ -110,6 +123,8 @@ of the direct Pascal-to-C# translation.
   `src/MicroCalc.Tui/Resources/CALC.HLP` (bundled EmbeddedResource) and the repo root (legacy
   reference). Any path change MUST preserve both locations.
 - **PR documentation**: Every PR MUST include a corresponding `docs/PR_TEXT_<TOPIC>.md`.
+- **Documentation compliance review**: Every PR MUST include explicit review of bilingual
+  (DE then EN, CEFR B2) and XML documentation requirements.
 - **Incremental delivery**: Each `codex/*` branch MUST be independently buildable and testable
   before a PR is opened. No big-bang merges.
 - **Smoke verification**: After each merge to `main`, the smoke run
@@ -124,8 +139,14 @@ Amendments MUST follow this procedure:
 1. Open a `codex/constitution-<topic>` branch.
 2. Update `.specify/memory/constitution.md` with the proposed change, increment the version
    per the versioning policy below, and set `LAST_AMENDED_DATE` to the amendment date.
-3. Run the Sync Impact Report and update any affected templates listed therein.
+3. Run the Sync Impact Report and update any affected templates and runtime guidance files.
 4. Merge only after CI passes and the amendment is summarised in the PR description.
+
+Agent runtime guidance MUST remain aligned with this constitution in:
+- `AGENTS.md`
+- `CLAUDE.md`
+- `GEMINI.md`
+- `.github/copilot-instructions.md`
 
 **Versioning policy**:
 - MAJOR: Removal or redefinition of a principle that is backward-incompatible with existing code.
@@ -135,4 +156,4 @@ Amendments MUST follow this procedure:
 All PRs and agentic implementations MUST verify compliance with the Constitution Check gate in
 `plan-template.md` before Phase 0 research begins and again after Phase 1 design.
 
-**Version**: 1.0.0 | **Ratified**: 2026-02-28 | **Last Amended**: 2026-02-28
+**Version**: 1.1.0 | **Ratified**: 2026-02-28 | **Last Amended**: 2026-03-06

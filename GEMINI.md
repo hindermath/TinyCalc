@@ -59,6 +59,14 @@ dotnet run --no-build --configuration Release --project src/MicroCalc.Tui/MicroC
 - **Smoke Tests:** Any major UI refactoring should be verified via the `--smoke` flag.
 - **Coverage:** Aim for high coverage in the `Core` project, especially for the formula evaluator.
 
+### Documentation & Language
+- Provide documentation and didactic comments bilingually: German first, English second.
+- Keep both language blocks at CEFR B2 readability.
+- Maintain complete XML documentation for affected public APIs (`<summary>`, `<param>`,
+  `<returns>`, `<exception>` where applicable).
+- Do not suppress CS1591 globally.
+- If API signatures or XML comments change, regenerate DocFX output in the same change set.
+
 ## Legacy Reference
 The original Pascal files (`CALC.PAS`, `CALC.INC`) and the help file (`CALC.HLP`) are stored in the root directory. These are the source of truth for behavior and feature parity.
 

@@ -4,10 +4,42 @@ using MicroCalc.Tui.Help;
 
 namespace MicroCalc.Tui.Smoke;
 
+/// <summary>
+/// DE: Ergebnis eines nicht-interaktiven TUI-Smoke-Laufs.
+/// EN: Result of a non-interactive TUI smoke run.
+/// </summary>
+/// <param name="Success">
+/// DE: True, wenn alle Smoke-Pruefungen erfolgreich waren.
+/// EN: True when all smoke checks passed.
+/// </param>
+/// <param name="Errors">
+/// DE: Liste der fehlgeschlagenen Checks.
+/// EN: List of failed checks.
+/// </param>
 public sealed record TuiSmokeResult(bool Success, IReadOnlyList<string> Errors);
 
+/// <summary>
+/// DE: Fuehrt Basis-Smoke-Checks fuer Engine und Hilfedatei aus.
+/// EN: Executes baseline smoke checks for engine and help file.
+/// </summary>
 public static class TuiSmokeRunner
 {
+    /// <summary>
+    /// DE: Startet den Smoke-Lauf und liefert ein zusammengefasstes Ergebnis.
+    /// EN: Starts the smoke run and returns an aggregated result.
+    /// </summary>
+    /// <param name="baseDirectory">
+    /// DE: Basisverzeichnis fuer die Suche nach CALC.HLP.
+    /// EN: Base directory used to locate CALC.HLP.
+    /// </param>
+    /// <param name="helpPathOverride">
+    /// DE: Optionaler expliziter Pfad zur Hilfedatei.
+    /// EN: Optional explicit path to the help file.
+    /// </param>
+    /// <returns>
+    /// DE: Ergebnisobjekt mit Erfolgsstatus und Fehlerliste.
+    /// EN: Result object with success state and error list.
+    /// </returns>
     public static TuiSmokeResult Run(string baseDirectory, string? helpPathOverride = null)
     {
         var errors = new List<string>();
