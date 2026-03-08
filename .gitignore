@@ -842,3 +842,17 @@ modules.xml
 !/.codex/sessions/2026/03/06/rollout-2026-03-06T15-07-24-019cc379-79d6-7c21-885e-132b8a0c295f.jsonl
 !/.codex/sessions/2026/03/06/rollout-2026-03-06T16-28-16-019cc3c3-849e-75f0-827a-7146c6cab7e8.jsonl
 !/.codex/sessions/2026/03/06/rollout-2026-03-06T14-48-48-019cc368-74f6-74a0-8862-4d05874f55bf.jsonl
+
+# Agent auth/state files
+.codex/auth.json
+.codex/history.jsonl
+.codex/log/
+.codex/sessions/
+.codex/shell_snapshots/
+.codex/state_*.sqlite
+.codex/state_*.sqlite-shm
+.codex/state_*.sqlite-wal
+.claude/settings.local.json
+.junie/memory/
+.junie/.onboarding_migrated
+.opencode/node_modules/
