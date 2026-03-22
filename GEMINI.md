@@ -74,3 +74,9 @@ The original Pascal files (`CALC.PAS`, `CALC.INC`) and the help file (`CALC.HLP`
 - `PLAN_MICROCALC_CSHARP_DOTNET10.md`: Detailed migration strategy and feature mapping.
 - `CONTRIBUTING.md`: Guidelines for contributions.
 - `README.md`: General project overview and quick start.
+
+## Project Statistics
+
+- Maintain `docs/project-statistics.md` as the living statistics ledger for the repository.
+- Update the file after each completed Spec-Kit implementation phase, after each agent-driven repository change, or when a refresh is explicitly requested.
+- Each update must capture branch or phase, observable work window, production/test/documentation line counts, main work packages, and the conservative manual baseline of 80 manually created lines per workday across code, tests, and documentation. When effort is converted into months, use explicit assumptions such as 21.5 workdays per month and, if applicable, 30 vacation days per year under a TVoeD-style calendar.

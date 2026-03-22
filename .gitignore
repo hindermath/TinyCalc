@@ -5,6 +5,12 @@ obj/
 .DS_Store
 TestResults/
 .idea
+
+# Local AI agent state and secrets
+.claude/settings.local.json
+.codex/*
+!.codex/prompts/
+!.codex/prompts/**
 .codex/tmp/
 # Created by https://www.toptal.com/developers/gitignore/api/dotnetcore,csharp,visualstudiocode,visualstudio,jetbrains,jetbrains+iml,jetbrains+all
 # Edit at https://www.toptal.com/developers/gitignore?templates=dotnetcore,csharp,visualstudiocode,visualstudio,jetbrains,jetbrains+iml,jetbrains+all

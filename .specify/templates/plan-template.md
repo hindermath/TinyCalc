@@ -37,6 +37,7 @@
 - [ ] Bilingual documentation plan defined (German block first, English block second, CEFR B2 target).
 - [ ] XML documentation impact identified for all affected public APIs, including DocFX regeneration when needed.
 - [ ] PR remains focused to one topic with `docs/PR_TEXT_<TOPIC>.md` planned.
+- [ ] Statistical-documentation impact identified; plan update for `docs/project-statistics.md` when the feature phase or agent-delivered change lands.
 
 ## Project Structure
 

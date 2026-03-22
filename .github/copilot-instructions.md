@@ -90,3 +90,9 @@ Fixed grid: columns `A`–`G` (7 columns), 21 rows, 147 total cells. Cell input 
 - UTF-8, LF line endings, final newline, no trailing whitespace
 - `PascalCase` for types and public members; `_camelCase` for private readonly fields
 - Nullable reference types enabled — do not suppress without reason
+
+## Project Statistics
+
+- Maintain `docs/project-statistics.md` as the living statistics ledger for the repository.
+- Update the file after each completed Spec-Kit implementation phase, after each agent-driven repository change, or when a refresh is explicitly requested.
+- Each update must capture branch or phase, observable work window, production/test/documentation line counts, main work packages, and the conservative manual baseline of 80 manually created lines per workday across code, tests, and documentation. When effort is converted into months, use explicit assumptions such as 21.5 workdays per month and, if applicable, 30 vacation days per year under a TVoeD-style calendar.

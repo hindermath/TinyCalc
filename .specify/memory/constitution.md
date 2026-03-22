@@ -1,12 +1,15 @@
 <!--
 Sync Impact Report
 ==================
-Version change: 1.0.0 → 1.1.0
+Version change: 1.2.0 → 1.3.0
+
+Bump rationale:
+  - MINOR: Expanded the statistical documentation policy so manual-effort
+    estimates now include production code, test code, and documentation
+    together, and added explicit month and TVoeD calendar assumptions.
 
 Modified principles:
-  - I. Legacy Behavioral Fidelity → I. Didactic and Linguistic Clarity
-  - III. Test-First Quality Gates (NON-NEGOTIABLE) → III. Test-First Quality Gates (NON-NEGOTIABLE)
-    (materially expanded with explicit red-green expectations and trainee-facing traceability)
+  - None
 
 Added sections:
   - None
@@ -15,21 +18,20 @@ Removed sections:
   - None
 
 Templates requiring updates:
-  ✅ .specify/templates/plan-template.md — Constitution Check replaced with explicit gates.
-  ✅ .specify/templates/spec-template.md — Added mandatory Documentation & Learning Requirements.
-  ✅ .specify/templates/tasks-template.md — Test tasks made mandatory and doc tasks expanded.
+  ⚠  .specify/templates/plan-template.md — Pending review for propagated wording.
+  ✅ .specify/templates/spec-template.md — Reviewed; no change required.
+  ⚠  .specify/templates/tasks-template.md — Pending review for propagated wording.
   ⚠  .specify/templates/commands/ — Directory does not exist; no command template updates possible.
 
 Runtime guidance docs requiring updates:
-  ✅ README.md — Added constitutional documentation and bilingual-language requirements.
-  ✅ AGENTS.md — Added bilingual documentation and XML/docfx compliance guidance.
-  ✅ CLAUDE.md — Added bilingual documentation and XML/docfx compliance guidance.
-  ✅ GEMINI.md — Added bilingual documentation and XML/docfx compliance guidance.
-  ✅ .github/copilot-instructions.md — Added bilingual documentation and XML/docfx compliance guidance.
-  ✅ specs/001-project-context/quickstart.md — Checked; no constitution-reference text to update.
+  ✅ AGENTS.md — Updated statistics maintenance guidance.
+  ✅ CLAUDE.md — Updated statistics maintenance guidance.
+  ✅ GEMINI.md — Updated statistics maintenance guidance.
+  ✅ .github/copilot-instructions.md — Updated statistics maintenance guidance.
+  ✅ docs/project-statistics.md — Updated to the new effort model.
 
 Follow-up TODOs:
-  - None.
+  - Review plan/task templates if the constitution wording is propagated further.
 -->
 
 # MicroCalc Constitution
@@ -131,6 +133,34 @@ of the direct Pascal-to-C# translation.
   (`dotnet run --no-build --configuration Release --project src/MicroCalc.Tui/MicroCalc.Tui.csproj -- --smoke`)
   MUST exit cleanly.
 
+### Statistical Documentation
+
+`docs/project-statistics.md` is the mandatory, living statistical ledger for the
+repository. It MUST be updated whenever one of the following happens:
+
+1. A Spec-Kit implementation phase is completed or materially re-scoped.
+2. An agent-driven work package changes repository content (code, tests, specs,
+   plans, tasks, governance, or operational docs).
+3. A contributor explicitly requests a statistics refresh.
+
+Every update MUST record, at minimum:
+
+- branch or phase identifier and current status,
+- observable git-based work window (first and last date, commit days where possible),
+- current or change-based counts for production code, test code, and
+  documentation,
+- the main work packages or delivered artifacts,
+- whether the numbers come from committed history, the working tree, or both,
+- a conservative manual-effort baseline using **80 manually created lines per
+  workday** for an experienced developer across production code, test code, and
+  documentation,
+- when time spans are derived, the assumptions for monthly conversion
+  (21-22 workdays, typically 21.5) and, if used, TVoeD-style annual leave
+  assumptions such as 30 vacation days per year.
+
+Manual-effort estimates for a small team MAY be derived from that baseline, but
+the formula and assumptions MUST be stated explicitly.
+
 ## Governance
 
 This constitution supersedes all informal conventions and takes precedence over ad-hoc decisions.
@@ -148,6 +178,9 @@ Agent runtime guidance MUST remain aligned with this constitution in:
 - `GEMINI.md`
 - `.github/copilot-instructions.md`
 
+Use `docs/project-statistics.md` for the living project-statistics ledger and
+manual-effort baseline tracking.
+
 **Versioning policy**:
 - MAJOR: Removal or redefinition of a principle that is backward-incompatible with existing code.
 - MINOR: New principle or section added; materially expanded guidance.
@@ -156,4 +189,4 @@ Agent runtime guidance MUST remain aligned with this constitution in:
 All PRs and agentic implementations MUST verify compliance with the Constitution Check gate in
 `plan-template.md` before Phase 0 research begins and again after Phase 1 design.
 
-**Version**: 1.1.0 | **Ratified**: 2026-02-28 | **Last Amended**: 2026-03-06
+**Version**: 1.3.0 | **Ratified**: 2026-02-28 | **Last Amended**: 2026-03-22
