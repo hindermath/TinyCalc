@@ -30,6 +30,9 @@ fortgeschrieben.
   unter TVoeD-Annahme mit 30 Urlaubstagen pro Jahr ergeben sich
   `21.5 * 12 - 30 = 228` produktive Arbeitstage pro Jahr bzw.
   durchschnittlich 19.0 produktive Tage pro Kalendermonat.
+- TVoeD-Stundenbasis in dieser Datei:
+  `7.8 Stunden` bzw. `7 Stunden 48 Minuten` pro Arbeitstag fuer zusaetzliche
+  Stundenumrechnungen.
 - Abgeleitete Formeln in dieser Datei:
   Einzelentwickler `((Produktionscode + Testcode + Dokumentation) / 80)`;
   3er-Team `Einzelentwickler / 3 * 1.2` mit 20 % Koordinationsaufschlag.
@@ -72,9 +75,11 @@ fortgeschrieben.
 | Davon Governance/Agent-Dateien | 5 Dateien / 533 Zeilen |
 | Gesamtbasis fuer Handschaetzung (inkl. Dokumentation) | 9245 Zeilen |
 | Erfahrener Entwickler, konservative Untergrenze | 115.6 Arbeitstage |
+| Erfahrener Entwickler, konservative Untergrenze in Stunden | 901.7 Stunden (115.6 * 7.8) |
 | Erfahrener Entwickler, brutto | 5.4 Arbeitsmonate (21.5 Tage/Monat) |
 | Erfahrener Entwickler, TVoeD-Annahme | 6.1 Kalendermonate bzw. 0.5 Jahre |
 | Thorsten solo, erfahrungsadjustierte Untergrenze | 74.0 Arbeitstage |
+| Thorsten solo, erfahrungsadjustierte Untergrenze in Stunden | 577.2 Stunden (74.0 * 7.8) |
 | Thorsten solo, brutto | 3.4 Arbeitsmonate (21.5 Tage/Monat) |
 | Thorsten solo, TVoeD-Annahme | 3.9 Kalendermonate bzw. 0.3 Jahre |
 | Kleines Team (3 Personen, +20 % Koordination), Untergrenze | 46.2 Arbeitstage |
@@ -204,3 +209,4 @@ fortgeschrieben.
 | 2026-03-22 | Agent-Secret-Scan und Repo-Haertung | `scripts/scan-agent-secrets.sh` aus TinyPl0 nach TinyCalc uebernommen, `.gitignore` gegen lokale Agent-Artefakte gehaertet und verfolgte `.codex`-State-/Session-/Auth-Dateien aus dem Commit-Bereich entfernt, sodass nur projektbezogene Prompt-Dateien in `.codex/` verbleiben. |
 | 2026-03-22 | GitHub-Codex-Spec-Kit-Skills installiert | Die lokale Codex-Skill-Struktur `.agents/skills/` mit den neun `speckit-*`-Skills wurde aus TuiVision in TinyCalc uebernommen, damit die Spec-Kit-Kommandos auch in diesem Repository direkt als Skills verfuegbar sind. |
 | 2026-03-25 | Erfahrungsadjustierte Beschleunigungsrechnung erweitert | Die Statistik fuehrt jetzt zusaetzlich zur konservativen 80-Zeilen-Referenz eine explizite Thorsten-Solo-Referenz mit Legacy-Portierungsaufschlag; dieselbe Methodik wurde in `AGENTS.md`, `CLAUDE.md`, `GEMINI.md` und `.github/copilot-instructions.md` synchronisiert. |
+| 2026-03-25 | TVoeD-Stundenbasis ergänzt | Die Statistik weist zusaetzlich Stundenwerte auf Basis von `7,8 Stunden` bzw. `7 Stunden 48 Minuten` pro Arbeitstag aus; dieselbe Umrechnungsregel wurde in die gemeinsamen Agent-Dateien aufgenommen. |
