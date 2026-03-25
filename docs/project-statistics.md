@@ -1,6 +1,6 @@
 # Projektstatistik MicroCalc
 
-Stand: 2026-03-22
+Stand: 2026-03-25
 
 ## Zweck und Pflege
 
@@ -33,6 +33,29 @@ fortgeschrieben.
 - Abgeleitete Formeln in dieser Datei:
   Einzelentwickler `((Produktionscode + Testcode + Dokumentation) / 80)`;
   3er-Team `Einzelentwickler / 3 * 1.2` mit 20 % Koordinationsaufschlag.
+- Zusatzannahmen fuer die erfahrungsadjustierte Thorsten-Referenz:
+  - Allgemeiner Expertenaufschlag `* 1.25`, weil Thorsten seit Februar 1985
+    mehr als 40 Jahre Softwareentwicklungspraxis einbringt und seit 2001 mit
+    .NET/C# arbeitet.
+  - Legacy-Portierungsaufschlag `* 1.25`, weil MicroCalc als Pascal-basierte
+    Portierung zusaetzlich von 10 bis 15 Jahren Turbo-Pascal-Erfahrung
+    profitiert.
+  - Daraus ergibt sich fuer MicroCalc eine erfahrungsadjustierte Solo-Referenz
+    von `80 * 1.25 * 1.25 = 125` manuell erstellten Zeilen pro Arbeitstag.
+- Beschleunigungsfaktoren vergleichen Referenz-Arbeitstage mit sichtbaren
+  `Git-Aktivtagen`. Sie sind als repo-weiter Output-zu-Aktivtag-Indikator
+  formuliert und keine exakte Zeiterfassung.
+
+## Erfahrungsprofil und Beschleunigungsmodell
+
+- Referenzprofil fuer die erfahrungsadjustierte Zweitrechnung:
+  - mehr als 40 Jahre Softwareentwicklung seit Februar 1985
+  - langjaehrige .NET-/C#-Praxis seit 2001
+  - 10 bis 15 Jahre Turbo-Pascal-/Legacy-Portierungserfahrung
+- MicroCalc fuehrt deshalb neben der konservativen 80-Zeilen-Referenz eine
+  zweite Thorsten-Solo-Referenz mit `125 Zeilen/Arbeitstag`.
+- Die Beschleunigungsfaktoren messen die Verdichtung des sichtbaren Outputs
+  gegenueber einer klassischen Portierung mit identischem fachlichem Anspruch.
 
 ## Gesamtstand des Repositories
 
@@ -51,8 +74,13 @@ fortgeschrieben.
 | Erfahrener Entwickler, konservative Untergrenze | 115.6 Arbeitstage |
 | Erfahrener Entwickler, brutto | 5.4 Arbeitsmonate (21.5 Tage/Monat) |
 | Erfahrener Entwickler, TVoeD-Annahme | 6.1 Kalendermonate bzw. 0.5 Jahre |
+| Thorsten solo, erfahrungsadjustierte Untergrenze | 74.0 Arbeitstage |
+| Thorsten solo, brutto | 3.4 Arbeitsmonate (21.5 Tage/Monat) |
+| Thorsten solo, TVoeD-Annahme | 3.9 Kalendermonate bzw. 0.3 Jahre |
 | Kleines Team (3 Personen, +20 % Koordination), Untergrenze | 46.2 Arbeitstage |
 | Kleines Team (3 Personen, +20 % Koordination), TVoeD-Annahme | 2.4 Kalendermonate |
+| Repo-weiter Beschleunigungsfaktor vs. konservative Referenz | 16.5x (115.6 / 7 Git-Aktivtage) |
+| Repo-weiter Beschleunigungsfaktor vs. Thorsten-Referenz | 10.6x (74.0 / 7 Git-Aktivtage) |
 
 ## Branch-Ueberblick
 
@@ -152,6 +180,12 @@ fortgeschrieben.
 - Unter TVoeD-Annahme mit 30 Urlaubstagen pro Jahr entspricht das fuer einen
   erfahrenen Entwickler ca. 6.1 Kalendermonaten bzw. 0.5 Arbeitsjahren; fuer
   ein 3er-Team mit 20 % Koordinationsaufschlag ca. 2.4 Kalendermonaten.
+- Unter Einbezug von Thorstens Erfahrungsprofil sinkt die klassische
+  Solo-Referenz fuer MicroCalc auf ca. 74.0 Arbeitstage bzw.
+  3.9 TVoeD-Kalendermonate.
+- Gegen die sichtbaren 7 Git-Aktivtage ergibt sich damit ein repo-weiter
+  Beschleunigungsfaktor von ca. 16.5x gegen die konservative Referenz und
+  ca. 10.6x gegen die erfahrungsadjustierte Thorsten-Referenz.
 - Die Git-Historie zeigt eine deutliche Verdichtung: sehr hoher Doku- und
   Planungsanteil bei gleichzeitig schneller Code- und Testumsetzung.
 
@@ -169,3 +203,4 @@ fortgeschrieben.
 | 2026-03-22 | Governance-Synchronisierung zur Statistiklogik | Constitution sowie die gemeinsamen Agent-Hinweise (`AGENTS.md`, `CLAUDE.md`, `GEMINI.md`, `.github/copilot-instructions.md`) wurden auf die neue Statistiklogik synchronisiert: Handarbeits-Schaetzung umfasst nun Code, Tests und Dokumentation gemeinsam; Monats- und TVoeD-Annahmen muessen explizit genannt werden. |
 | 2026-03-22 | Agent-Secret-Scan und Repo-Haertung | `scripts/scan-agent-secrets.sh` aus TinyPl0 nach TinyCalc uebernommen, `.gitignore` gegen lokale Agent-Artefakte gehaertet und verfolgte `.codex`-State-/Session-/Auth-Dateien aus dem Commit-Bereich entfernt, sodass nur projektbezogene Prompt-Dateien in `.codex/` verbleiben. |
 | 2026-03-22 | GitHub-Codex-Spec-Kit-Skills installiert | Die lokale Codex-Skill-Struktur `.agents/skills/` mit den neun `speckit-*`-Skills wurde aus TuiVision in TinyCalc uebernommen, damit die Spec-Kit-Kommandos auch in diesem Repository direkt als Skills verfuegbar sind. |
+| 2026-03-25 | Erfahrungsadjustierte Beschleunigungsrechnung erweitert | Die Statistik fuehrt jetzt zusaetzlich zur konservativen 80-Zeilen-Referenz eine explizite Thorsten-Solo-Referenz mit Legacy-Portierungsaufschlag; dieselbe Methodik wurde in `AGENTS.md`, `CLAUDE.md`, `GEMINI.md` und `.github/copilot-instructions.md` synchronisiert. |
