@@ -1,6 +1,6 @@
 # Projektstatistik MicroCalc
 
-Stand: 2026-03-25
+Stand: 2026-03-27
 
 ## Zweck und Pflege
 
@@ -27,9 +27,10 @@ fortgeschrieben.
   Entwickler.
 - Umrechnung in Zeitraeume:
   durchschnittlich 21.5 Arbeitstage pro Monat (Mittel aus 21-22 Arbeitstagen);
-  unter TVoeD-Annahme mit 30 Urlaubstagen pro Jahr ergeben sich
-  `21.5 * 12 - 30 = 228` produktive Arbeitstage pro Jahr bzw.
-  durchschnittlich 19.0 produktive Tage pro Kalendermonat.
+  unter TVoeD-Annahme mit 30 Urlaubstagen pro Jahr bis einschliesslich 2026 und
+  31 Urlaubstagen pro Jahr ab 2027 (jeweils 5-Tage-Woche) ergeben sich
+  `21.5 * 12 - 30 = 228` produktive Arbeitstage pro Jahr fuer Zeitraeume bis
+  2026 bzw. `21.5 * 12 - 31 = 227` produktive Arbeitstage pro Jahr ab 2027.
 - TVoeD-Stundenbasis in dieser Datei:
   `7.8 Stunden` bzw. `7 Stunden 48 Minuten` pro Arbeitstag fuer zusaetzliche
   Stundenumrechnungen.
@@ -91,6 +92,7 @@ fortgeschrieben.
 
 | Branch/Ref | Letzte sichtbare Aktivitaet | Einordnung |
 |---|---|---|
+| `002-spec-kit-versioning` | 2026-03-27 | Arbeitsbranch fuer repo-weite Versionslogik auf Basis nummerierter Spec-Kit-Branches |
 | `main` | 2026-03-06 | Integrationsbranch |
 | `codex/spec-kit-init` | 2026-02-28 | Spec-Kit-/Governance-Bootstrap |
 | `origin/001-project-context` | 2026-02-28 | Spec-Kit-Featurephase fuer erweiterte Formelbibliothek |
@@ -175,6 +177,34 @@ fortgeschrieben.
   - 3.9 Arbeitstage fuer ein 3er-Team (+20 % Koordination), entsprechend ca.
     0.2 TVoeD-Kalendermonaten
 
+### 4. Branch `002-spec-kit-versioning`
+
+- Status: in Arbeit auf Feature-Branch `002-spec-kit-versioning`
+- Beobachtbarer Zeitraum: 2026-03-27 bis 2026-03-27
+- Commit-Bild: aktueller Working-Tree-Aenderungssatz vor dem ersten Branch-Commit
+- Grundlegende Arbeiten: nummerierte Spec-Kit-Branches als zulaessige
+  Arbeitsform ergaenzt, repo-weite Versionslogik in `Directory.Build.props`
+  eingefuehrt und die gemeinsame Agent-/Constitution-Governance darauf
+  synchronisiert
+- Git-/Arbeitsbaum-Aenderungsvolumen fuer den aktuellen Aenderungssatz:
+  - Produktionscode: 0 Zeilen
+  - Testcode: 0 Zeilen
+  - Dokumentation und Governance: 35 Zeilen netto
+  - Build-/Versionsmetadaten: 7 Zeilen in `Directory.Build.props`
+- Konservative Handarbeits-Basis fuer Code und Dokumentation:
+  - 42 Zeilen netto gesamt
+  - 0.5 Arbeitstage fuer einen erfahrenen Entwickler
+  - 3.9 Stunden auf TVoeD-Basis (`0.5 * 7.8`)
+  - 0.0 Arbeitsmonate brutto bzw. 0.0 TVoeD-Kalendermonate
+- Thorsten-Solo-Referenz:
+  - 0.3 Arbeitstage
+  - 2.3 Stunden auf TVoeD-Basis (`0.3 * 7.8`)
+  - 0.0 Arbeitsmonate brutto bzw. 0.0 TVoeD-Kalendermonate
+- Blended Repository Speedup gegen sichtbare 1 Git-Aktivtag fuer diesen
+  Aenderungssatz:
+  - 0.5x gegen die konservative 80-Zeilen-Referenz
+  - 0.3x gegen die Thorsten-Solo-Referenz mit 125 Zeilen pro Arbeitstag
+
 ## Einordnung der KI-/Spec-Kit-Wirkung
 
 - Die beobachtbare manuelle Gesamtbasis liegt bereits bei 9245 Zeilen
@@ -203,6 +233,8 @@ fortgeschrieben.
 
 | Datum | Ausloeser | Eintrag |
 |---|---|---|
+| 2026-03-27 | TVoeD-Urlaubsregel ab 2027 nachgezogen | Die Statistik- und Agentenmethodik wurde auf die neue Stichtagsregel umgestellt: 30 Urlaubstage pro Jahr gelten nur bis einschliesslich 2026, ab dem Kalenderjahr 2027 werden unter TVoeD-Annahme 31 Urlaubstage bei unveraenderter 5-Tage-Woche verwendet. |
+| 2026-03-27 | Branch `002-spec-kit-versioning` | Repo-weite Versionslogik fuer nummerierte Spec-Kit-Branches eingefuehrt: `Directory.Build.props` neu angelegt, die gemeinsame Agent-Governance und die Constitution auf `Minor = Spec-Kit-Feature-/Branch-Nummer als kanonische PR-Nummer` erweitert. |
 | 2026-03-21 | Erstanlage | Basisstatistik fuer `main`, `codex/spec-kit-init`, `001-project-context` und `codex/extended-formula-library` angelegt; Constitution, Templates und Agent-Dateien auf Pflegepflicht synchronisiert. |
 | 2026-03-22 | Methodik-Update fuer Handarbeits-Schaetzung | Die Statistik rechnet Handarbeit jetzt auf Basis von Produktionscode, Testcode und Dokumentation gemeinsam; zusaetzlich werden Monatswerte auf Basis von 21.5 Arbeitstagen pro Monat sowie TVoeD-Kalenderwerte mit 30 Urlaubstagen pro Jahr ausgewiesen. |
 | 2026-03-22 | Governance-Synchronisierung zur Statistiklogik | Constitution sowie die gemeinsamen Agent-Hinweise (`AGENTS.md`, `CLAUDE.md`, `GEMINI.md`, `.github/copilot-instructions.md`) wurden auf die neue Statistiklogik synchronisiert: Handarbeits-Schaetzung umfasst nun Code, Tests und Dokumentation gemeinsam; Monats- und TVoeD-Annahmen muessen explizit genannt werden. |

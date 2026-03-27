@@ -40,8 +40,9 @@ dotnet run --no-build --configuration Release --project src/MicroCalc.Tui/MicroC
 ```
 
 ## Branching & PR Workflow
-- Create working branches as `codex/<short-topic>`.
+- Create working branches either as `codex/<short-topic>` or, for Spec-Kit-driven work, as `NNN-short-description`.
 - Do not push directly to `main`; merge via pull request.
+- `Directory.Build.props` defines the repo-wide `Version`, `AssemblyVersion`, and `FileVersion` values with `Major.Minor.Patch.Build`; on numbered Spec-Kit branches, `Minor` is the numerically interpreted feature/branch number (`002` -> `2`), `Patch` is the branch commit count after the current commit, and `Build` only increases before `dotnet build` or `dotnet test`.
 
 ## Development Conventions
 
@@ -82,6 +83,6 @@ The original Pascal files (`CALC.PAS`, `CALC.INC`) and the help file (`CALC.HLP`
 - Maintain `docs/project-statistics.md` as the living statistics ledger for the repository.
 - Update the file after each completed Spec-Kit implementation phase, after each agent-driven repository change, or when a refresh is explicitly requested.
 - Each update must capture branch or phase, observable work window, production/test/documentation line counts, main work packages, the conservative manual baseline of 80 manually created lines per workday across code, tests, and documentation, and the repo-specific Thorsten-Solo comparison baseline of 125 lines per workday for this Pascal-derived port.
-- When effort is converted into months, use explicit assumptions such as 21.5 workdays per month and, if applicable, 30 vacation days per year under a TVoeD-style calendar.
+- When effort is converted into months, use explicit assumptions such as 21.5 workdays per month and, if applicable, 30 vacation days per year through calendar year 2026 and 31 vacation days per year from calendar year 2027 onward under a TVoeD-style 5-day-week calendar.
 - When reporting acceleration, compare both manual references against visible Git active days and label the result as a blended repository speedup rather than a stopwatch measurement.
 - When hour values are shown, convert the day-based estimates with the TVoeD working-day baseline of `7.8 hours` (`7h 48m`) per day.

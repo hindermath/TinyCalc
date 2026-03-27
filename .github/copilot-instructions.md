@@ -25,6 +25,13 @@ dotnet run --project src/MicroCalc.Tui/MicroCalc.Tui.csproj
 
 CI runs on `main` and all `codex/**` branches using the Release configuration.
 
+`Directory.Build.props` carries the repo-wide `Version`, `AssemblyVersion`, and `FileVersion` values for all projects using `Major.Minor.Patch.Build`:
+- `Minor` = current Spec-Kit feature/branch number, interpreted numerically as the canonical PR number for versioning (`002` -> `2`) and used immediately even before a GitHub PR exists
+- `Patch` = current commit count in that feature/PR branch (after committing the current change)
+- `Build` = manual build counter incremented before every `dotnet build` or `dotnet test`
+
+On numbered Spec-Kit branches, align those three version fields before pushing.
+
 ## Architecture
 
 Two production projects plus two test projects, strict dependency direction:
@@ -72,7 +79,7 @@ Fixed grid: columns `A`–`G` (7 columns), 21 rows, 147 total cells. Cell input 
 - `TuiSmokeTests` — calls `TuiSmokeRunner.Run(...)` which exercises help loading and basic rendering without a Terminal.Gui window.
 
 ### Branching & PRs
-- Work branches: `codex/<short-topic>`
+- Work branches: `codex/<short-topic>` or numbered Spec-Kit branches `NNN-short-description`
 - Add a PR description file: `docs/PR_TEXT_<TOPIC>.md`
 - Commits follow Conventional Commit prefixes: `feat:`, `fix:`, `test:`, `docs:`, `chore:`
 
