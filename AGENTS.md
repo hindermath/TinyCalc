@@ -42,11 +42,20 @@ Use xUnit (`Microsoft.NET.Test.Sdk`, `xunit`, `coverlet.collector`). Name test f
 Recent history follows Conventional Commit-style prefixes (`docs:`, `test:`, `chore:`). Keep commits focused and imperative.
 
 For contributions:
-- Create a new branch named `codex/<short-topic>`.
+- Create a new branch named either `codex/<short-topic>` or, for Spec-Kit-driven work, `NNN-short-description`.
 - Open one focused PR per topic.
 - Add/update a PR description file in `docs/` (for example, `docs/PR_TEXT_<TOPIC>.md`).
 - Complete the PR template: problem, solution, risks, and test plan.
 - Include screenshots/terminal captures when TUI behavior changes.
+
+## Build Versioning
+
+- Repo-wide assembly version fields live in `Directory.Build.props` and MUST keep `Version`, `AssemblyVersion`, and `FileVersion` aligned for all projects.
+- The scheme is `Major.Minor.Patch.Build`.
+- `Minor` = current Spec-Kit feature/branch number, interpreted numerically as the canonical PR number for versioning (`002` -> `2`) and used immediately even before a GitHub PR exists.
+- `Patch` = current commit count in that feature/PR branch after committing the current change.
+- `Build` = manual build counter incremented by the bot before every `dotnet build` or `dotnet test`.
+- Before any commit or push on a numbered Spec-Kit branch, the repo-wide version fields in `Directory.Build.props` MUST be aligned to this scheme.
 
 ## Project Statistics
 

@@ -69,10 +69,19 @@ Save format is JSON (`.mcalc.json`); no legacy `.MCS` import.
 
 ## Branching and PR Conventions
 
-- All work branches use the prefix `codex/<short-topic>`.
+- All work branches use either the agent branch form `codex/<short-topic>` or the numbered Spec-Kit form `NNN-short-description`.
 - One focused PR per topic; add a PR description file `docs/PR_TEXT_<TOPIC>.md`.
 - Tests must pass under `--configuration Release` (not just Debug).
 - When a test calls `dotnet run --no-build`, pass the build configuration explicitly.
+
+## Repo Version Scheme
+
+`Directory.Build.props` carries the repo-wide `Version`, `AssemblyVersion`, and `FileVersion` values for all projects using `Major.Minor.Patch.Build`:
+- `Minor` = current Spec-Kit feature/branch number, interpreted numerically as the canonical PR number for versioning (`002` -> `2`) and used immediately even before a GitHub PR exists
+- `Patch` = current commit count in that feature/PR branch (after committing the current change)
+- `Build` = manual build counter incremented before every `dotnet build` or `dotnet test`
+
+Align the three version fields in `Directory.Build.props` whenever a commit is created or the branch is updated on a numbered Spec-Kit branch, before pushing.
 
 ## Code Style
 

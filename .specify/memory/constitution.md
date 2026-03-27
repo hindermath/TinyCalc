@@ -1,12 +1,12 @@
 <!--
 Sync Impact Report
 ==================
-Version change: 1.2.0 → 1.3.0
+Version change: 1.3.0 → 1.4.0
 
 Bump rationale:
-  - MINOR: Expanded the statistical documentation policy so manual-effort
-    estimates now include production code, test code, and documentation
-    together, and added explicit month and TVoeD calendar assumptions.
+  - MINOR: Added numbered Spec-Kit branch support plus repo-wide assembly
+    version governance via `Directory.Build.props`, including the rule that the
+    feature/branch number becomes the canonical PR number for `Minor`.
 
 Modified principles:
   - None
@@ -82,10 +82,11 @@ TDD flow, not post-hoc test additions.
 
 ### IV. Minimal, Focused PRs
 
-Each PR MUST address exactly one topic on a `codex/<short-topic>` branch. Large changes MUST be
-decomposed into sequential, independently mergeable PRs. Every PR MUST include a description
-document at `docs/PR_TEXT_<TOPIC>.md`. Force-pushes to `main` are prohibited. CI MUST be green
-on the branch before a PR is opened.
+Each PR MUST address exactly one topic on either a `codex/<short-topic>` branch or a numbered
+Spec-Kit branch `NNN-short-description`. Large changes MUST be decomposed into sequential,
+independently mergeable PRs. Every PR MUST include a description document at
+`docs/PR_TEXT_<TOPIC>.md`. Force-pushes to `main` are prohibited. CI MUST be green on the branch
+before a PR is opened.
 
 **Rationale**: Small, reviewable PRs preserve the end-to-end agentic process narrative, allow CI
 to catch regressions at the finest granularity, and keep the project history legible.
@@ -110,6 +111,12 @@ of the direct Pascal-to-C# translation.
 - **Persistence**: JSON (`.mcalc.json`) is the sole supported save/load format.
 - **Documentation Generator**: DocFX CLI (`docfx`) MUST be used after API/XML documentation changes.
 - **CI Platform**: GitHub Actions (`.github/workflows/ci.yml`) — Release configuration only.
+- **Repo Versioning**: `Directory.Build.props` MUST keep repo-wide `Version`, `AssemblyVersion`,
+  and `FileVersion` aligned as `Major.Minor.Patch.Build`. On numbered Spec-Kit branches,
+  `Minor` = numerically interpreted feature/branch number as canonical PR number for versioning
+  (`002` -> `2`), `Patch` = commit count in that feature/PR branch after the current change is
+  committed, and `Build` = manual build counter incremented before every `dotnet build` or
+  `dotnet test`.
 - **Code style** (governed by `.editorconfig`):
   - UTF-8 encoding, LF line endings, final newline required, no trailing whitespace.
   - C# files: 4-space indentation. `*.csproj`, `*.sln`, `*.md`, `*.yml`, `*.json`: 2-space.
@@ -119,7 +126,8 @@ of the direct Pascal-to-C# translation.
 
 ## Development Workflow
 
-- **Branch naming**: All work branches MUST carry the prefix `codex/<short-topic>`.
+- **Branch naming**: All work branches MUST use either `codex/<short-topic>` or the numbered
+  Spec-Kit form `NNN-short-description`.
 - **CI alignment**: All `dotnet test` invocations MUST pass `--configuration Release`.
 - **Help file resolution**: `CALC.HLP` MUST remain resolvable at both
   `src/MicroCalc.Tui/Resources/CALC.HLP` (bundled EmbeddedResource) and the repo root (legacy
@@ -166,7 +174,8 @@ the formula and assumptions MUST be stated explicitly.
 This constitution supersedes all informal conventions and takes precedence over ad-hoc decisions.
 Amendments MUST follow this procedure:
 
-1. Open a `codex/constitution-<topic>` branch.
+1. Open either a `codex/constitution-<topic>` branch or a numbered Spec-Kit branch for the
+   governance work.
 2. Update `.specify/memory/constitution.md` with the proposed change, increment the version
    per the versioning policy below, and set `LAST_AMENDED_DATE` to the amendment date.
 3. Run the Sync Impact Report and update any affected templates and runtime guidance files.
@@ -189,4 +198,4 @@ manual-effort baseline tracking.
 All PRs and agentic implementations MUST verify compliance with the Constitution Check gate in
 `plan-template.md` before Phase 0 research begins and again after Phase 1 design.
 
-**Version**: 1.3.0 | **Ratified**: 2026-02-28 | **Last Amended**: 2026-03-22
+**Version**: 1.4.0 | **Ratified**: 2026-02-28 | **Last Amended**: 2026-03-27
