@@ -43,6 +43,7 @@ Recent history follows Conventional Commit-style prefixes (`docs:`, `test:`, `ch
 
 For contributions:
 - Create a new branch named either `codex/<short-topic>` or, for Spec-Kit-driven work, `NNN-short-description`.
+- When a dedicated feature branch has implemented the requirements of a Lastenheft, rename that file to `Lastenheft_<Thema>.<feature-branch>.md` so the delivered requirement scope stays traceable in the repository.
 - Open one focused PR per topic.
 - Add/update a PR description file in `docs/` (for example, `docs/PR_TEXT_<TOPIC>.md`).
 - Complete the PR template: problem, solution, risks, and test plan.

@@ -70,6 +70,7 @@ Save format is JSON (`.mcalc.json`); no legacy `.MCS` import.
 ## Branching and PR Conventions
 
 - All work branches use either the agent branch form `codex/<short-topic>` or the numbered Spec-Kit form `NNN-short-description`.
+- When a dedicated feature branch has implemented the requirements of a Lastenheft, rename that file to `Lastenheft_<topic>.<feature-branch>.md` so the delivered scope stays traceable.
 - One focused PR per topic; add a PR description file `docs/PR_TEXT_<TOPIC>.md`.
 - Tests must pass under `--configuration Release` (not just Debug).
 - When a test calls `dotnet run --no-build`, pass the build configuration explicitly.

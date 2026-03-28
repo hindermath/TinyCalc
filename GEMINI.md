@@ -42,6 +42,7 @@ dotnet run --no-build --configuration Release --project src/MicroCalc.Tui/MicroC
 ## Branching & PR Workflow
 - Create working branches either as `codex/<short-topic>` or, for Spec-Kit-driven work, as `NNN-short-description`.
 - Do not push directly to `main`; merge via pull request.
+- When a dedicated feature branch has implemented the requirements of a Lastenheft, rename that file to `Lastenheft_<Thema>.<feature-branch>.md` so the delivered requirement scope stays traceable in the repository.
 - `Directory.Build.props` defines the repo-wide `Version`, `AssemblyVersion`, and `FileVersion` values with `Major.Minor.Patch.Build`; on numbered Spec-Kit branches, `Minor` is the numerically interpreted feature/branch number (`002` -> `2`), `Patch` is the branch commit count after the current commit, and `Build` only increases before `dotnet build` or `dotnet test`.
 
 ## Development Conventions
