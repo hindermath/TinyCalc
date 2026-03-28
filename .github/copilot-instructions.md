@@ -73,6 +73,7 @@ Fixed grid: columns `A`–`G` (7 columns), 21 rows, 147 total cells. Cell input 
 
 ### Branching & PRs
 - Work branches: `codex/<short-topic>`
+- When a dedicated feature branch has implemented the requirements of a Lastenheft, rename that file to `Lastenheft_<topic>.<feature-branch>.md` so the delivered scope stays traceable.
 - Add a PR description file: `docs/PR_TEXT_<TOPIC>.md`
 - Commits follow Conventional Commit prefixes: `feat:`, `fix:`, `test:`, `docs:`, `chore:`
 

@@ -42,6 +42,7 @@ dotnet run --no-build --configuration Release --project src/MicroCalc.Tui/MicroC
 ## Branching & PR Workflow
 - Create working branches as `codex/<short-topic>`.
 - Do not push directly to `main`; merge via pull request.
+- When a dedicated feature branch has implemented the requirements of a Lastenheft, rename that file to `Lastenheft_<Thema>.<feature-branch>.md` so the delivered requirement scope stays traceable in the repository.
 
 ## Development Conventions
 
