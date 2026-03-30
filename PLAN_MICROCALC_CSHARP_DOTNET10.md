@@ -223,6 +223,12 @@ Tests (vor UI-Integration):
 - Fehlerbehandlung, Logging, Performance-Check.
 - Release-Readiness.
 
+## Phase 7: Dokumentations- und A11Y-Abschlusspruefung
+- Alle lernrelevanten Dokumente muessen fuer Auszubildende in Deutsch und Englisch auf CEFR-B2-Niveau nachvollziehbar vorliegen.
+- Fuer grosse normative Dokumente ist aus Uebersichtsgruenden eine synchron gepflegte englische Parallelfassung mit Suffix `.EN.md` zulaessig und empfohlen.
+- Erzeugte HTML-/API-Dokumentation muss nach `Programmierung #include<everyone>` fuer Braille-Zeile, Screenreader und Textbrowser nutzbar sein; WCAG 2.2 AA ist die praktische Baseline.
+- Nach jedem `docfx`-Neubau folgt ein textorientierter A11Y-Review, bevorzugt mit Playwright + `@axe-core/playwright` und `lynx`.
+
 ## 10. Git- und GitHub-Plan
 
 Repository-Setup:

@@ -219,3 +219,12 @@ Wenn du dieses Repo als Blaupause fuer eine eigene Legacy-Portierung nutzen will
 ---
 
 Dieses Repository soll bewusst nicht nur "Code" liefern, sondern einen nachvollziehbaren End-to-End-Prozess zeigen: von Legacy-Analyse ueber Architektur und Tests bis hin zu PR-getriebener, agentischer Umsetzung.
+
+## Inklusion und Barrierefreiheit / Inclusion and Accessibility
+
+- Folge dem Leitsatz `Programmierung #include<everyone>`: Lernmaterialien, Guides und erzeugte HTML-/API-Dokumentation muessen fuer Braille-Zeile, Screenreader und Textbrowser nutzbar bleiben.
+- Follow `Programmierung #include<everyone>`: learner-facing material, guides, and generated HTML/API documentation must stay usable on Braille displays, with screen readers, and in text browsers.
+- Fuer erzeugte HTML-Dokumentation gilt WCAG 2.2 Konformitaetsstufe AA als praktische Basis.
+- For generated HTML documentation, WCAG 2.2 conformance level AA is the practical baseline.
+- Nach jedem `docfx`-Neubau soll ein textorientierter A11y-Review folgen, bevorzugt mit Playwright + `@axe-core/playwright` und `lynx`.
+- After every `docfx` regeneration, a text-oriented accessibility review should follow, preferably with Playwright + `@axe-core/playwright` and `lynx`.

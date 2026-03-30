@@ -1,6 +1,6 @@
 # Projektstatistik MicroCalc
 
-Stand: 2026-03-27
+Stand: 2026-03-30 (aktualisiert mit finalem `## Gesamtstatistik`-Block, ASCII-/X/Y-Diagrammen und textorientierter A11Y-Statistikbaseline)
 
 ## Zweck und Pflege
 
@@ -19,6 +19,21 @@ fortgeschrieben.
 - Testcode: `tests/**/*.cs`
 - Dokumentation: Markdown-Dateien in Repository-Wurzel, `docs/`, `specs/`,
   `.github/` und `.specify/`.
+- Leitsatz fuer diese Datei und die zugehoerigen Lernmaterialien:
+  `Programmierung #include<everyone>`. Inhalte muessen fuer Braille-Zeile,
+  Screenreader und Textbrowser lesbar bleiben; ASCII-Diagramme und ihre
+  Kurztexte sind deshalb bewusst plain-text-freundlich aufgebaut.
+- Fuer erzeugte HTML-Dokumentation gilt WCAG 2.2 Konformitaetsstufe AA als
+  konkrete Pruefbasis; besonders wichtig sind Seitensprache,
+  Bypass-Mechanismen, sichtbarer Tastaturfokus, Non-Text-Contrast und
+  verstaendliche Landmark-Struktur.
+- Wenn sich DocFX-Inhalte, Navigationsstruktur oder API-Praesentation aendern,
+  werden repraesentative `_site/`-Seiten ueber einen textorientierten
+  Reviewpfad geprueft, bevorzugt mit lokalem Playwright-Accessibility-Snapshot
+  und `lynx` als zusaetzlichem Textbrowser-Gegencheck.
+- Jeder erfolgreiche `docfx`-Neubau gilt in diesem Repository erst dann als
+  vollstaendig, wenn im selben Arbeitsschritt auch der passende textorientierte
+  A11Y-Review dokumentiert oder ausgefuehrt wurde.
 - Die konservative Handarbeits-Basis in dieser Datei zaehlt Produktionscode,
   Testcode und Dokumentation gemeinsam als manuell zu erstellenden Umfang.
 - Die konservative Handarbeits-Basis folgt dem Beitrag
@@ -244,3 +259,158 @@ fortgeschrieben.
 | 2026-03-27 | Branch `002-spec-kit-versioning` | Repo-weite Versionslogik fuer nummerierte Spec-Kit-Branches eingefuehrt: `Directory.Build.props` neu angelegt, die gemeinsame Agent-Governance und die Constitution auf `Minor = Spec-Kit-Feature-/Branch-Nummer als kanonische PR-Nummer` erweitert. |
 | 2026-03-27 | Sortierung des Fortschreibungsprotokolls vereinheitlicht | Die Eintraege im Fortschreibungsprotokoll wurden auf strikt chronologische Reihenfolge gebracht: aeltester Eintrag oben, juengster und zuletzt eingetragener Eintrag unten. Dieselbe Regel wurde in der gemeinsamen Agent-Governance fuer dieses Repository festgeschrieben. |
 | 2026-03-28 | Lastenheft-Branch-Suffix-Regel in Agent-Guidance verankert | Die gemeinsamen Agent-Dateien (`AGENTS.md`, `CLAUDE.md`, `GEMINI.md`, `.github/copilot-instructions.md`) wurden um die Governance-Regel erweitert, dass ein Lastenheft nach Umsetzung durch einen dedizierten Feature-Branch auf `Lastenheft_<Thema>.<feature-branch>.md` umzubenennen ist, damit die Rueckverfolgbarkeit im Repository erhalten bleibt; Aenderungsumfang dieser Runde vor dieser Ledger-Fortschreibung: 0 Produktionscode-Zeilen, 0 Testcode-Zeilen, +4 Dokumentationszeilen netto im Arbeitsbaum, konservative Handarbeits-Untergrenze 0.1 Arbeitstage bzw. 0.4 Stunden auf TVoeD-Basis, Monatsannahme weiterhin 21.5 Arbeitstage pro Monat. |
+| 2026-03-30 | Inklusions-Leitsatz und DocFX-A11y-Baseline verankert | `README.md`, `AGENTS.md`, `CLAUDE.md`, `GEMINI.md` und `.github/copilot-instructions.md` wurden auf den Leitsatz `Programmierung #include<everyone>` nachgezogen: lernrelevante Doku und erzeugte HTML-/API-Dokumentation muessen fuer Braille-Zeile, Screenreader und Textbrowser nutzbar bleiben. Fuer DocFX-basierte HTML-Dokumentation ist WCAG 2.2 AA als praktische Baseline festgehalten; nach jedem DocFX-Neubau soll ein textorientierter A11y-Review mit Playwright/axe und `lynx` folgen. Diese Runde war reine Governance-/Doku-Arbeit mit `0` Produktionscode-Zeilen, `0` Testcode-Zeilen und ca. `+37` Dokumentationszeilen netto. Konservative Manualreferenz: 80 Zeilen/Tag = `0.5` Tage (ca. `4.1` Stunden); Thorsten-Solo-Referenz: 125 Zeilen/Tag = `0.3` Tage (ca. `2.6` Stunden); sichtbares Arbeitsfenster: 1 kurze Agentensitzung am 2026-03-30. |
+| 2026-03-30 | Abschlusspruefung fuer Bilingualitaet und A11Y in Planungsdokument verankert | Im zentralen Migrationsplan `PLAN_MICROCALC_CSHARP_DOTNET10.md` wurde ein ausdruecklicher Abschlussblock fuer Dokumentation und Barrierefreiheit ergaenzt: Lernrelevante Dokumente muessen in Deutsch und Englisch auf CEFR-B2-Niveau vorliegen; grosse normative Dokumente duerfen als synchron gepflegte `.EN.md`-Parallelfassung gefuehrt werden; fuer erzeugte HTML-Dokumentation gilt WCAG 2.2 AA als Baseline und nach jedem `docfx`-Neubau ist ein textorientierter A11Y-Review vorgesehen. Diese Runde war reine Dokumentationsarbeit mit `0` Produktionscode-Zeilen, `0` Testcode-Zeilen und ca. `+8` Dokumentationszeilen netto. Konservative Manualreferenz: 80 Zeilen/Tag = `0.1` Tage (ca. `0.8` Stunden); Thorsten-Solo-Referenz: 125 Zeilen/Tag = `0.1` Tage (ca. `0.5` Stunden); sichtbares Arbeitsfenster: 1 kurze Agentensitzung am 2026-03-30. |
+| 2026-03-30 | Parent-Guidance bewusst auf repo-uebergreifende Regeln begrenzt | In den lokalen Guidance-Dateien von `TinyCalc` ist jetzt ausdruecklich vermerkt, dass `/Users/thorstenhindermann/RiderProjects/AGENTS.md` nur gemeinsame Basisregeln fuer mehrere Repositories traegt. Repository-spezifische Build-, Test-, Workflow-, Architektur- und Feature-Vorgaben bleiben bewusst in `TinyCalc` selbst und sind dort die spezifischere Autoritaet. Diese Runde war reine Dokumentationsarbeit mit `0` Produktionscode-Zeilen, `0` Testcode-Zeilen und ca. `+10` Dokumentationszeilen netto. Konservative Manualreferenz: 80 Zeilen/Tag = `0.1` Tage (ca. `1.0` Stunden); Thorsten-Solo-Referenz: 125 Zeilen/Tag = `0.1` Tage (ca. `0.6` Stunden); sichtbares Arbeitsfenster: 1 kurze Agentensitzung am 2026-03-30. |
+| 2026-03-30 | Fehlende Shared-Baseline-Regeln aus `TuiVision` in `TinyCalc` nachgezogen | Die lokalen Guidance-Dateien (`AGENTS.md`, `CLAUDE.md`, `GEMINI.md`, `.github/copilot-instructions.md`) und diese Statistikdatei wurden nur bei den repo-uebergreifenden Restluecken nachgezogen: `.EN.md`-Option fuer grosse normative Dokumente, formale Abschlusspruefung fuer bilinguale CEFR-B2-Doku plus dokumentierten A11Y-Nachweis, textfirst-/ASCII-Regeln fuer Statistik und Doku, finaler `## Gesamtstatistik`-Block als Schlusssektion, CEFR-B2-Erklaertexte direkt an ASCII-Diagrammen sowie zusaetzliche ASCII-X/Y-Darstellung. MicroCalc-spezifische Architektur-, Feature-, Branch- und Build-Regeln blieben bewusst unveraendert. Diese Runde war reine Dokumentations-/Governance-Arbeit mit `0` Produktionscode-Zeilen, `0` Testcode-Zeilen und `+258 / -2` Dokumentationszeilen netto ueber die betroffenen Guidance- und Statistikdateien. Konservative Manualreferenz: 80 Zeilen/Tag = `3.2` Tage (ca. `25.2` Stunden); Thorsten-Solo-Referenz: 125 Zeilen/Tag = `2.1` Tage (ca. `16.1` Stunden); sichtbares Arbeitsfenster: 1 kurze Agentensitzung am 2026-03-30. |
+
+## Gesamtstatistik
+
+Basis dieses Schlussblocks sind die aktuell dokumentierten Snapshot- und
+Phasenwerte aus den Abschnitten `## Gesamtstand des Repositories` und
+`## Phasen und grundlegende Arbeiten` weiter oben.
+
+| Kennzahl | Verdichteter Gesamtblick |
+|---|---:|
+| Artefaktbasis gesamt | `9245` Zeilen |
+| Produktions- und Testcode zusammen | `3503` Zeilen (`37.9 %`) |
+| Dokumentationsanteil | `5742` Zeilen (`62.1 %`) |
+| Spec-Kit-Anteil innerhalb der Doku | `2139` Zeilen (`37.3 %`) |
+| Governance-/Agent-Anteil innerhalb der Doku | `533` Zeilen (`9.3 %`) |
+| Beobachtbarer Projektzeitraum | `2026-02-07` bis `2026-03-06` |
+| Git-Commits pro sichtbarem Aktivtag | `9.7` (`68 / 7`) |
+| Dokumentierte Gesamtzeilen pro sichtbarem Aktivtag | `1320.7` (`9245 / 7`) |
+| Dokumentierte Gesamtzeilen pro Commit | `136.0` (`9245 / 68`) |
+| Konservative Einzelentwickler-Untergrenze | `115.6` Arbeitstage / `901.7` Stunden |
+| Thorsten-Solo-Untergrenze | `74.0` Arbeitstage / `577.2` Stunden |
+| Kleines 3er-Team mit Koordinationsaufschlag | `46.2` Arbeitstage |
+| Repo-weiter Speedup gg. 80-Zeilen-Referenz | `16.5x` |
+| Repo-weiter Speedup gg. Thorsten-Referenz | `10.6x` |
+
+Kurzfazit:
+Der aktuell dokumentierte Snapshot ist klar dokumentationslastig: Rund
+`62.1 %` der sichtbaren Basis liegen in Markdown-, Governance- und
+Planungsartefakten, waehrend Produktions- und Testcode zusammen `37.9 %`
+ausmachen. Das passt zum beobachtbaren Verlauf von `TinyCalc`, in dem
+Portierung, Governance, Spezifikation und Nachweis sehr frueh stark
+mitgewachsen sind. Die Beschleunigungsfaktoren beschreiben dabei keine
+Stoppuhr, sondern die sichtbare Lieferdichte gegen konservative manuelle
+Referenzen.
+
+Short summary:
+The currently documented snapshot is clearly documentation-heavy. About
+`62.1 %` of the visible baseline sits in Markdown, governance, and planning
+artifacts, while production and test code together make up `37.9 %`. This
+matches the visible `TinyCalc` trajectory, where porting, governance,
+specification, and proof artifacts grew strongly from the start. The
+acceleration factors therefore describe visible delivery density, not a
+stopwatch measurement.
+
+### ASCII-Diagramme
+
+```text
+Artefaktmix nach aktuell dokumentiertem Snapshot (Zeilen)
+Produktion     | ##############                 | 2728 | 29.5 %
+Tests          | ####                           |  775 |  8.4 %
+Dokumentation  | ############################## | 5742 | 62.1 %
+```
+
+Dieses Diagramm zeigt, wie der aktuell dokumentierte Repository-Snapshot
+zwischen Produktionscode, Tests und Dokumentation verteilt ist. Laengere Balken
+bedeuten mehr Zeilen innerhalb derselben Vergleichsgruppe.
+
+This chart shows how the currently documented repository snapshot is split
+between production code, tests, and documentation. Longer bars mean more lines
+inside the same comparison group.
+
+```text
+Dokumentierte Phasenbasis nach Netto-Volumen (Zeilen)
+0 main   | ######################## | 7368
+1 init   | ###########              | 3456
+2 001    | ##########               | 2962
+3 harden | ###                      |  782
+4 002v   | #                        |   42
+```
+
+Dieses Diagramm zeigt die grob sichtbare Netto-Basis der dokumentierten
+Phasenpakete. So wird schnell lesbar, welche Phase besonders viel sichtbaren
+Umfang erzeugt hat.
+
+This chart shows the rough net size of the documented phase packages. It makes
+it easy to see which phase created especially large visible scope.
+
+```text
+Konservative Handarbeits-Referenz je dokumentierter Phase (Arbeitstage)
+0 main   | ######################## | 92.1 d
+1 init   | ###########              | 43.2 d
+2 001    | ##########               | 37.0 d
+3 harden | ###                      |  9.8 d
+4 002v   | #                        |  0.5 d
+```
+
+Hier werden dieselben Pakete als konservative manuelle Referenz in
+Arbeitstagen gezeigt. Damit wird sichtbar, wie gross derselbe Lieferumfang
+ohne agentische Unterstuetzung aus klassischer Sicht waere.
+
+Here the same packages are shown again as a conservative manual reference in
+workdays. This makes visible how large the same delivery would look without
+agentic support.
+
+```text
+Dokumentierte Beschleunigungsfaktoren durch agentische KI + Spec-Kit/SDD
+Repo 80  | ###########              | 16.5x
+Repo125  | #######                  | 10.6x
+0 main   | ###############          | 23.0x
+1 init   | ##############           | 21.6x
+2 001    | ######################## | 37.0x
+3 harden | ###                      |  4.9x
+4 002v   | #                        |  0.5x
+```
+
+Dieses Diagramm zeigt die dokumentierten Beschleunigungsfaktoren. Es misst
+nicht echte Uhrzeit, sondern die sichtbare Verdichtung des Lieferumfangs gegen
+gewaehlte manuelle Referenzen.
+
+This chart shows the documented acceleration factors. It does not measure real
+clock time. Instead, it compares visible delivery density against the selected
+manual references.
+
+```text
+Vergleich dokumentierter Gesamtaufwand / sichtbares KI-Lieferfenster
+Erfahren   | ############################## | 115.6 d
+Thorsten   | ###################            |  74.0 d
+KI sichtbar| ##                             |   7.0 d
+```
+
+Dieses Diagramm vergleicht die drei Gesamtperspektiven direkt: konservative
+Erfahrungsreferenz, Thorsten-Solo-Referenz und sichtbares KI-Lieferfenster.
+Der Abstand zwischen den Balken macht die dokumentierte Verdichtung gut lesbar.
+
+This chart compares the three overall perspectives directly: conservative
+experienced-developer reference, Thorsten solo reference, and the visible
+AI-assisted delivery window. The distance between the bars makes the documented
+delivery compression easy to read.
+
+```text
+ASCII-X/Y-Verlauf der dokumentierten Phasenbasis (Zeilen)
+8000 | *
+7000 | *
+6000 |
+5000 |
+4000 |   *
+3000 |   *   *
+2000 |
+1000 |           *
+   0 +---+---+---+---+--->
+      0   1   2   3   4
+```
+
+Die X-Achse zeigt die dokumentierten Phasen `0` bis `4`, die Y-Achse das grobe
+Netto-Volumen in Zeilen. Das Diagramm ist bewusst einfach gehalten und soll vor
+allem den starken Anfangssprung und den spaeteren Abfall des sichtbaren
+Phasenvolumens schnell erklaeren.
+
+The X-axis shows the documented phases `0` to `4`, while the Y-axis shows the
+rough net volume in lines. The chart is intentionally simple and is meant to
+explain quickly the strong early jump and the later decline in visible phase
+volume.
