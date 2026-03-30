@@ -99,7 +99,7 @@ The original Pascal files (`CALC.PAS`, `CALC.INC`) and the help file (`CALC.HLP`
 
 ## Inclusion & Accessibility
 
-- Follow `Programmierung #include<everyone>`: learner-facing guides, statistics, and generated HTML/API documentation must stay usable on Braille displays, with screen readers, and in text browsers.
+- Programmierung #include<everyone> — Diese Lernbeispiele richten sich an Azubis (Fachinformatiker AE/SI) mit Deutsch und Englisch als Arbeitssprachen sowie an sehbehinderte Lernende, die mit Braille-Displays, Screen-Readern oder Textbrowsern arbeiten. Barrierefreiheit ist kein Nice-to-have, sondern Pflichtanforderung.
 - Prefer semantic headings, lists, tables, and ASCII/text-first diagrams; do not encode essential meaning only through color, layout, or pointer-only affordances.
 - Treat WCAG 2.2 conformance level AA as the concrete review baseline for generated HTML documentation, especially for page language, bypass blocks, keyboard focus visibility, non-text contrast, and readable landmark structure.
 - If `docfx` output is regenerated, follow it with a text-oriented accessibility review, preferably with Playwright + `@axe-core/playwright` and a `lynx` cross-check.
@@ -108,5 +108,5 @@ The original Pascal files (`CALC.PAS`, `CALC.INC`) and the help file (`CALC.HLP`
 
 ## Shared Parent Guidance
 
-- Die gemeinsame Datei `/Users/thorstenhindermann/RiderProjects/AGENTS.md` speichert bewusst nur repo-uebergreifende Basisregeln.
-- Repository-spezifische Build-, Test-, Workflow-, Architektur- und Feature-Regeln bleiben in den lokalen Projektdateien; wenn beide Ebenen existieren, ist die repo-lokale Guidance die spezifischere Autoritaet.
+- Die gemeinsamen Dateien `/Users/thorstenhindermann/RiderProjects/AGENTS.md` und `/Users/thorstenhindermann/RiderProjects/GEMINI.md` speichern die repo-uebergreifenden Basisregeln.
+- Diese Projekt-Datei ist die spezifischere Autoritaet fuer projektspezifische Build-Befehle, Workflows, Architektur und Features.
