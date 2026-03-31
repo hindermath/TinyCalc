@@ -107,11 +107,11 @@ Governed by `.editorconfig`:
 `CALC.HLP` must be resolvable at runtime. It lives both at `src/MicroCalc.Tui/Resources/CALC.HLP` (bundled as a resource) and at the repo root (legacy reference). Path changes must preserve both locations.
 
 ## Active Technologies
-- C# 12 / .NET 10 + xUnit 2.x (tests); Terminal.Gui (TUI — untouched by this feature) (001-project-context)
+- C# 14 / .NET 10 + xUnit 2.x (tests); Terminal.Gui (TUI — untouched by this feature) (001-project-context)
 - N/A — JSON persistence format unchanged; new functions evaluated at runtime from (001-project-context)
 
 ## Recent Changes
-- 001-project-context: Added C# 12 / .NET 10 + xUnit 2.x (tests); Terminal.Gui (TUI — untouched by this feature)
+- 001-project-context: Added C# 14 / .NET 10 + xUnit 2.x (tests); Terminal.Gui (TUI — untouched by this feature)
 
 ## Project Statistics
 
