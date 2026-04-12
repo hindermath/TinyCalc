@@ -145,3 +145,4 @@ Governed by `.editorconfig`:
 
 - The shared parent file `/Users/thorstenhindermann/RiderProjects/AGENTS.md` intentionally stores only repo-spanning baseline rules.
 - Keep repository-specific build, test, workflow, architecture, and feature guidance in this repository's own files; when both layers exist, the repository-local files are the more specific authority.
+<!-- claude-init-done -->
