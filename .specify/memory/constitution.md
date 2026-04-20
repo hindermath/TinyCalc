@@ -1,37 +1,22 @@
 <!--
 Sync Impact Report
-==================
-Version change: 1.3.0 → 1.4.0
-
-Bump rationale:
-  - MINOR: Added numbered Spec-Kit branch support plus repo-wide assembly
-    version governance via `Directory.Build.props`, including the rule that the
-    feature/branch number becomes the canonical PR number for `Minor`.
-
-Modified principles:
+- Version change: 1.4.0 -> 1.5.0
+- Bump rationale:
+  - MINOR: Added workspace-baseline alignment guidance from the repository root `constitution.md` without removing repository-specific principles.
+- Modified principles:
   - None
-
-Added sections:
+- Added sections:
+  - Workspace Baseline Alignment / Observability & Continuous Measurement
+  - Workspace Baseline Alignment / Programmierung #include<everyone> — Inclusion & Accessibility By Default
+- Removed sections:
   - None
-
-Removed sections:
-  - None
-
-Templates requiring updates:
-  ⚠  .specify/templates/plan-template.md — Pending review for propagated wording.
-  ✅ .specify/templates/spec-template.md — Reviewed; no change required.
-  ⚠  .specify/templates/tasks-template.md — Pending review for propagated wording.
-  ⚠  .specify/templates/commands/ — Directory does not exist; no command template updates possible.
-
-Runtime guidance docs requiring updates:
-  ✅ AGENTS.md — Updated statistics maintenance guidance.
-  ✅ CLAUDE.md — Updated statistics maintenance guidance.
-  ✅ GEMINI.md — Updated statistics maintenance guidance.
-  ✅ .github/copilot-instructions.md — Updated statistics maintenance guidance.
-  ✅ docs/project-statistics.md — Updated to the new effort model.
-
-Follow-up TODOs:
-  - Review plan/task templates if the constitution wording is propagated further.
+- Templates requiring updates:
+  - .specify/templates/plan-template.md: pending review
+  - .specify/templates/spec-template.md: pending review
+  - .specify/templates/tasks-template.md: pending review
+  - .specify/templates/commands/constitution.md: pending review
+- Follow-up TODOs:
+  - Review template and runtime-guidance wording for repository-specific propagation where needed.
 -->
 
 # MicroCalc Constitution
@@ -172,6 +157,18 @@ Every update MUST record, at minimum:
 Manual-effort estimates for a small team MAY be derived from that baseline, but
 the formula and assumptions MUST be stated explicitly.
 
+## Workspace Baseline Alignment
+
+This Spec-Kit constitution inherits the binding workspace-family governance from `constitution.md` in the repository root. Project-specific rules remain in force; where both apply, the stricter rule wins.
+
+### A. Observability & Continuous Measurement
+
+Every repository MUST maintain `docs/project-statistics.md` as a living statistics ledger. The conservative manual reference is `80` lines/workday. Because this is a C#/.NET repository, the default Thorsten-Solo baseline is `125` lines/workday unless the repository documents and justifies a different project-specific value. The TVöD workday baseline is `7.8 h` (`7h 48m`). Shared statistics guidance MUST stay consistent across `AGENTS.md`, `CLAUDE.md`, `GEMINI.md`, and `.github/copilot-instructions.md`.
+
+### B. Programmierung #include<everyone> — Inclusion & Accessibility By Default
+
+`Programmierung #include<everyone>` is a binding repository-wide principle. All user-facing artefacts — including CLI output, documentation and Markdown, HTML and generated websites, graphical user interfaces, and generated templates or scaffolding — MUST follow WCAG 2.2 Level AA wherever the criteria are applicable. They MUST remain usable with keyboard-only interaction, screen readers, Braille displays, and text browsers. Accessibility review is part of completion, not post-processing.
+
 ## Governance
 
 This constitution supersedes all informal conventions and takes precedence over ad-hoc decisions.
@@ -201,4 +198,4 @@ manual-effort baseline tracking.
 All PRs and agentic implementations MUST verify compliance with the Constitution Check gate in
 `plan-template.md` before Phase 0 research begins and again after Phase 1 design.
 
-**Version**: 1.4.0 | **Ratified**: 2026-02-28 | **Last Amended**: 2026-03-27
+**Version**: 1.5.0 | **Ratified**: 2026-02-28 | **Last Amended**: 2026-04-20
