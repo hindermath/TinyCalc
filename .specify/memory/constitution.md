@@ -1,201 +1,327 @@
-<!--
-Sync Impact Report
-- Version change: 1.4.0 -> 1.5.0
-- Bump rationale:
-  - MINOR: Added workspace-baseline alignment guidance from the repository root `constitution.md` without removing repository-specific principles.
-- Modified principles:
-  - None
-- Added sections:
-  - Workspace Baseline Alignment / Observability & Continuous Measurement
-  - Workspace Baseline Alignment / Programmierung #include<everyone> — Inclusion & Accessibility By Default
-- Removed sections:
-  - None
-- Templates requiring updates:
-  - .specify/templates/plan-template.md: pending review
-  - .specify/templates/spec-template.md: pending review
-  - .specify/templates/tasks-template.md: pending review
-  - .specify/templates/commands/constitution.md: pending review
-- Follow-up TODOs:
-  - Review template and runtime-guidance wording for repository-specific propagation where needed.
--->
+# Constitution v1.5.1
 
-# MicroCalc Constitution
+# home-baseline Constitution
+
+## Beschreibung / Description
+
+Diese Verfassung definiert die verbindlichen Prinzipien und Standards für alle home-baseline Workspaces.
+
+*This constitution defines the non-negotiable principles and standards for all home-baseline workspaces.*
+
+Leitspruch: `Programmierung #include<everyone>`.
+
+*Guiding motto: `Programmierung #include<everyone>`.*
 
 ## Core Principles
 
-### I. Didactic and Linguistic Clarity
+### I. Security-First (NON-NEGOTIABLE)
 
-The project is a learning artifact for German-speaking and international trainees. All
-user-facing and developer-facing documentation MUST be bilingual: German block first,
-English block second. Language in both blocks MUST target CEFR B2 level so non-native
-trainees can follow the full workflow. Code comments that explain decisions, trade-offs,
-and constraints MUST also be bilingual in the same order. Explanations MUST prioritize
-clarity over cleverness.
+Every file tracked in any workspace repository MUST be safe to publish.
+The `.gitignore` in every workspace uses a **whitelist model**: everything is
+excluded by default (`/*`, `/.*`), and only explicitly listed safe entries are
+allowed.
 
-All public APIs MUST include complete XML documentation (`<summary>`, `<param>`,
-`<returns>`, and `<exception>` where applicable; `<remarks>` and `<example>` when
-instructionally useful). Missing XML documentation for public API members is treated as
-an error; CS1591 MUST NOT be globally suppressed. When API signatures or XML comments
-change, DocFX output MUST be regenerated in the same commit/PR.
+Non-negotiable rules:
+- Credential files (`.env*`, `*.key`, `*.pem`, `*secret*`, `.aws/`, `.ssh/`,
+  `.kube/`, `.docker/`, `.gnupg/`) MUST never be tracked.
+- The sensitive root-level content of AI agent state directories MUST never
+  be tracked: `.claude/` (history, sessions, cache), `.codex/` (auth, SQLite
+  DBs), `.gemini/` (oauth_creds.json, google_accounts.json), `.junie/`
+  (history, logs), `.opencode/`.
+- **Surgical subdirectory exception**: A specific subdirectory within an
+  otherwise-blocked agent directory MAY be tracked if and only if it contains
+  exclusively tool-definition files (no credentials, no session data). The
+  `.gitignore` MUST use the block-then-allow pattern:
+  ```
+  !.claude/
+  .claude/*
+  !.claude/commands/
+  ```
+  Currently allowed subdirectories: `.claude/commands/` and `.gemini/commands/`
+  (Spec-Kit command definitions only).
+- Every workspace MUST have a `pre-push` hook installed that blocks pushes
+  containing secret-like filenames or credential patterns (tokens matching
+  `ghp_*`, `sk-*`, `AKIA*`, `AIza*`, PEM private-key headers).
+- `scripts/scan-agent-secrets.sh --fail-on-high` MUST be run before pushing
+  any change that touches hook or scanner logic.
 
-**Rationale**: This repository trains apprentices. Didactic value and language accessibility
-are part of functional correctness for the project purpose.
+**Rationale**: Accidental secret exposure in a private repo is a critical security
+incident. Automated prevention at push time is the last reliable gate. The
+surgical subdirectory exception enables Spec-Kit tool definitions to be
+synchronized across devices without exposing any credentials.
 
-### II. Layer Separation (NON-NEGOTIABLE)
+### II. Cross-Platform Parity & Documentation
 
-`MicroCalc.Core` MUST have zero compile-time or runtime dependency on `MicroCalc.Tui` or any
-Terminal.Gui type. All spreadsheet operations MUST be orchestrated through `MicroCalcEngine`.
-UI code MUST NOT implement business logic; it MUST only call Core APIs and render the result.
-New UI-only concerns (dialogs, keybindings, rendering) MUST remain exclusively in
-`MicroCalc.Tui`.
+Every critical script MUST exist in two variants:
+- Bash (`.sh`) for macOS/Linux
+- PowerShell Core 7+ (`.ps1`) for Windows
 
-**Rationale**: Enforcing the Core/Tui boundary keeps domain logic independently testable and
-prevents the historical mistake of mixing UI and domain code that made the original Pascal
-codebase harder to port.
+Both variants MUST provide identical functionality and produce equivalent output.
+A new script is not considered complete until:
+1. Both variants exist and pass manual verification.
+2. A corresponding Unix man-page is provided for the Bash variant (stored in `docs/man/`).
+3. Complete bilingual comment-based help is provided for the PowerShell variant.
+4. PowerShell scripts MUST also be available as Cmdlets (Advanced Functions) using the `Verb-Noun` naming convention (e.g., `New-HBWorkspace`).
+5. Help switches (`-h`, `--help`) point to the man-page or internal help.
 
-### III. Test-First Quality Gates (NON-NEGOTIABLE)
+All files MUST be committed together in the same commit.
 
-All new formula behaviors, engine operations, bug fixes, and documentation-driven API
-changes MUST follow a red-green workflow: tests are created first, fail first, and then
-pass after implementation. Core behavior MUST be covered by xUnit tests before merge.
-Formula golden tests remain the primary regression harness. The full suite MUST pass in
-`Release` configuration in CI, and the TUI smoke runner (`--smoke`) MUST pass as a
-non-interactive gate.
+**Rationale**: The workspace is used on macOS and Windows. Bash-only or PowerShell-only scripts create a second-class experience. Professional documentation ensures maintainability and ease of use across platforms.
 
-**Rationale**: An untested port is an unreliable port. Trainees must see a reproducible
-TDD flow, not post-hoc test additions.
+### III. Bootstrap Automation
 
-### IV. Minimal, Focused PRs
+New workspaces MUST be created exclusively via the bootstrap scripts:
+- `bash ~/scripts/bootstrap-workspace.sh <WorkspaceName>` (macOS/Linux)
+- `pwsh ~/scripts/bootstrap-workspace.ps1 -WorkspaceName <Name>` (Windows)
 
-Each PR MUST address exactly one topic on either a `codex/<short-topic>` branch or a numbered
-Spec-Kit branch `NNN-short-description`. Large changes MUST be decomposed into sequential,
-independently mergeable PRs. Every PR MUST include a description document at
-`docs/PR_TEXT_<TOPIC>.md`. Force-pushes to `main` are prohibited. CI MUST be green on the branch
-before a PR is opened.
+Manual `git init` + `gh repo create` outside the bootstrap flow is prohibited
+for new workspaces. The bootstrap script is the single authoritative source of
+the correct workspace setup sequence.
 
-**Rationale**: Small, reviewable PRs preserve the end-to-end agentic process narrative, allow CI
-to catch regressions at the finest granularity, and keep the project history legible.
+Workspace removal MUST be performed exclusively via the teardown scripts:
+- `bash ~/scripts/teardown-workspace.sh <WorkspaceName>` (macOS/Linux)
+- `pwsh ~/scripts/teardown-workspace.ps1 -WorkspaceName <Name>` (Windows)
+- or the alias: `bash ~/scripts/bootstrap-workspace.sh --teardown <WorkspaceName>`
 
-### V. Simplicity & YAGNI
+Manual `rm -rf` without teardown is prohibited because it orphans remote
+repositories, `~/README.md` table entries, `~/.gitignore` entries, and
+`~/.gitconfig` `[includeIf]` blocks.
 
-No abstraction, pattern, or feature may be introduced without a clear, immediate requirement
-traceable to the Pascal reference (`CALC.PAS`/`CALC.INC`) or an explicit, documented project
-goal. Every deviation from the simplest possible implementation MUST be justified in the plan or
-PR. Legacy `.MCS` import is explicitly out of scope and MUST NOT be added. New projects or
-assemblies MUST NOT be created without written justification; the current four-project layout
-(`Core`, `Tui`, `Core.Tests`, `Tui.Tests`) is the approved baseline.
+`~/README.md` MUST be updated (automatically or manually) whenever a new
+workspace is added. The workspace table anchor `<!-- workspace-table-end -->`
+MUST be preserved.
 
-**Rationale**: Over-engineering a port produces maintenance burden and obscures the teaching value
-of the direct Pascal-to-C# translation.
+**Rationale**: Consistency across all workspaces — same `.gitignore` whitelist,
+same scripts, same hooks — can only be guaranteed by a single automated flow.
 
-## Technology Constraints
+### IV. Workspace Isolation
 
-- **Runtime**: .NET 10 / C# 14 — no downgrade without an explicit, recorded decision.
-- **UI Framework**: Terminal.Gui — no alternative TUI library may be introduced.
-- **Test Framework**: xUnit — all test projects MUST use xUnit; mixing frameworks is prohibited.
-- **Persistence**: JSON (`.mcalc.json`) is the sole supported save/load format.
-- **Documentation Generator**: DocFX CLI (`docfx`) MUST be used after API/XML documentation changes.
-- **CI Platform**: GitHub Actions (`.github/workflows/ci.yml`) — Release configuration only.
-- **Repo Versioning**: `Directory.Build.props` MUST keep repo-wide `Version`, `AssemblyVersion`,
-  and `FileVersion` aligned as `Major.Minor.Patch.Build`. On numbered Spec-Kit branches,
-  `Minor` = numerically interpreted feature/branch number as canonical PR number for versioning
-  (`002` -> `2`), `Patch` = commit count in that feature/PR branch after the current change is
-  committed, and `Build` = manual build counter incremented before every `dotnet build` or
-  `dotnet test`.
-- **Code style** (governed by `.editorconfig`):
-  - UTF-8 encoding, LF line endings, final newline required, no trailing whitespace.
-  - C# files: 4-space indentation. `*.csproj`, `*.sln`, `*.md`, `*.yml`, `*.json`: 2-space.
-  - `PascalCase` for types and public members; `_camelCase` for private readonly fields.
-  - Nullable reference types MUST be enabled project-wide; suppressions require written
-    justification inline with the suppression pragma.
+Each workspace directory under `~/` is an **independent Git repository**.
+Git submodules MUST NOT be used. Sub-repositories inside a workspace are
+detected by the bootstrap script and excluded via `.gitignore` entries.
 
-## Development Workflow
+The `home-baseline` repo tracks the following categories of files (all others
+are excluded by the whitelist `.gitignore`):
 
-- **Branch naming**: All work branches MUST use either `codex/<short-topic>` or the numbered
-  Spec-Kit form `NNN-short-description`.
-- **CI alignment**: All `dotnet test` invocations MUST pass `--configuration Release`.
-- **Help file resolution**: `CALC.HLP` MUST remain resolvable at both
-  `src/MicroCalc.Tui/Resources/CALC.HLP` (bundled EmbeddedResource) and the repo root (legacy
-  reference). Any path change MUST preserve both locations.
-- **PR documentation**: Every PR MUST include a corresponding `docs/PR_TEXT_<TOPIC>.md`.
-- **Documentation compliance review**: Every PR MUST include explicit review of bilingual
-  (DE then EN, CEFR B2) and XML documentation requirements.
-- **Incremental delivery**: Each `codex/*` branch MUST be independently buildable and testable
-  before a PR is opened. No big-bang merges.
-- **Smoke verification**: After each merge to `main`, the smoke run
-  (`dotnet run --no-build --configuration Release --project src/MicroCalc.Tui/MicroCalc.Tui.csproj -- --smoke`)
-  MUST exit cleanly.
+| Category | Tracked paths |
+|----------|--------------|
+| Infrastructure scripts | `scripts/` |
+| Documentation | `README.md`, `.gitignore`, `.gitconfig`, `docs/` |
+| AI agent guidance | `AGENTS.md`, `CLAUDE.md`, `GEMINI.md`, `.github/copilot-instructions.md` |
+| Spec-Kit tooling | `.specify/` (config, templates, memory/constitution), `.agents/skills/`, `.github/agents/`, `.github/prompts/` |
+| Agent Spec-Kit commands | `.claude/commands/`, `.gemini/commands/` |
 
-### Statistical Documentation
+Rules:
+- Changes to `home-baseline` scripts do NOT auto-propagate to child workspaces;
+  workspaces sync manually by re-running the relevant script or copying updates.
+- Each workspace owns its own `AGENTS.md`, `CLAUDE.md`, `GEMINI.md`, and
+  `.github/copilot-instructions.md`.
+- Adding a new tracked category MUST be accompanied by a constitution amendment
+  (PATCH or MINOR depending on scope).
 
-`docs/project-statistics.md` is the mandatory, living statistical ledger for the
-repository. It MUST be updated whenever one of the following happens:
+**Rationale**: Submodules create fragile cross-repo coupling. Independent repos
+give each workspace its own clean history and deployment lifecycle. Tracking
+AI agent guidance files and Spec-Kit tooling ensures consistent development
+environments across all devices.
 
-1. A Spec-Kit implementation phase is completed or materially re-scoped.
-2. An agent-driven work package changes repository content (code, tests, specs,
-   plans, tasks, governance, or operational docs).
-3. A contributor explicitly requests a statistics refresh.
+### V. Manual-First Verification
 
+`home-baseline` uses a blended verification model: manual verification remains
+mandatory for script changes, and lightweight automated CI/CD guardrails on
+GitHub MAY complement it. GitLab release automation is also maintained in this
+repository as reusable baseline logic and MUST be validated through real
+project pipelines before it is treated as production-ready. Verification MUST
+follow the safe-mode-first rule:
 
-Within the `## Fortschreibungsprotokoll` section, table rows MUST remain in strict chronological order: oldest entry first, newest and most recently added entry last, while rows with the same date keep their insertion order.
+- Bootstrap changes: always test with `--dry-run` (Bash) / `-WhatIf` (PowerShell)
+  before running for real.
+- Hook changes: reinstall with `bash scripts/install-hooks.sh` after every edit
+  under `scripts/hooks/`, then verify behaviour manually.
+- Scanner changes: run `bash scripts/scan-agent-secrets.sh --fail-on-high .`
+  and confirm expected exit codes before committing.
 
-Every update MUST record, at minimum:
+Automated test tooling MUST NOT be added to this repository unless a formal
+decision is made and documented in this constitution (Governance section).
 
-- branch or phase identifier and current status,
-- observable git-based work window (first and last date, commit days where possible),
-- current or change-based counts for production code, test code, and
-  documentation,
-- the main work packages or delivered artifacts,
-- whether the numbers come from committed history, the working tree, or both,
-- a conservative manual-effort baseline using **80 manually created lines per
-  workday** for an experienced developer across production code, test code, and
-  documentation,
-- when time spans are derived, the assumptions for monthly conversion
-  (21-22 workdays, typically 21.5) and, if used, TVoeD-style annual leave
-  assumptions such as 30 vacation days per year.
+**Rationale**: The scripts are low-churn infrastructure. Manual dry-runs and
+real pipeline validation catch the most relevant operational risks with less
+maintenance overhead than a broad scripted test framework.
 
-Manual-effort estimates for a small team MAY be derived from that baseline, but
-the formula and assumptions MUST be stated explicitly.
+### VI. Observability & Continuous Measurement
 
-## Workspace Baseline Alignment
+Every repository — including `home-baseline` and every Level-2 workspace — MUST maintain a living statistics ledger at `docs/project-statistics.md`.
 
-This Spec-Kit constitution inherits the binding workspace-family governance from `constitution.md` in the repository root. Project-specific rules remain in force; where both apply, the stricter rule wins.
+Mandatory content and update rules:
 
-### A. Observability & Continuous Measurement
+- **Fortschreibungsprotokoll**: chronological table (oldest entry first, newest last) recording cumulative lines, active days, and commit count at each milestone.
+- **Gesamtstatistik**: always the final top-level section; includes compact ASCII-only diagrams (artefakt mix, phase volume, speedup factors, manual-reference comparison).
+- **Update triggers**: after each completed Spec-Kit implementation phase, after each merged feature, or when explicitly requested.
+- **Reference baselines**:
+  - Manual reference: `80` lines/workday (conservative) — project-specific Thorsten-Solo baseline documented consistently in `AGENTS.md`, `CLAUDE.md`, `GEMINI.md`, and `.github/copilot-instructions.md`.
+  - Default C#/.NET Thorsten-Solo baseline: `125` lines/workday unless a repository documents and justifies a different project-specific value. `home-baseline` itself keeps `100` lines/workday as the scripting-infrastructure Thorsten-Solo reference.
+  - TVöD workday: `7.8 h` (`7h 48m`). Month: `21.5` workdays. Vacation: 30 days until end of 2026, 31 days from 2027 onwards.
+- **Acceleration factor** = blended repository speedup — delivery density against manual reference, **not** stopwatch time.
+- **Diagram format**: compact ASCII-only; each diagram followed by a CEFR-B2 bilingual explanation (DE + EN).
+- **Consistency rule**: When statistics methodology or shared guidance changes, `AGENTS.md`, `CLAUDE.md`, `GEMINI.md`, and `.github/copilot-instructions.md` MUST be updated together in the same commit. The same shared rules MUST also be propagated to the relevant project templates and `.specify/memory/constitution.md`.
 
-Every repository MUST maintain `docs/project-statistics.md` as a living statistics ledger. The conservative manual reference is `80` lines/workday. Because this is a C#/.NET repository, the default Thorsten-Solo baseline is `125` lines/workday unless the repository documents and justifies a different project-specific value. The TVöD workday baseline is `7.8 h` (`7h 48m`). Shared statistics guidance MUST stay consistent across `AGENTS.md`, `CLAUDE.md`, `GEMINI.md`, and `.github/copilot-instructions.md`.
+The bootstrap scripts (`bootstrap-project.sh` / `.ps1`) MUST create an initial `docs/project-statistics.md` stub at project creation time. `docs/` MUST be whitelisted in every project `.gitignore`.
 
-### B. Programmierung #include<everyone> — Inclusion & Accessibility By Default
+**Rationale**: Blended speedup metrics are educational for developers and apprentices. They make the productivity impact of AI-assisted workflows visible and comparable across projects. A living ledger that accumulates over the project lifetime is the only reliable source of this data.
 
-`Programmierung #include<everyone>` is a binding repository-wide principle. All user-facing artefacts — including CLI output, documentation and Markdown, HTML and generated websites, graphical user interfaces, and generated templates or scaffolding — MUST follow WCAG 2.2 Level AA wherever the criteria are applicable. They MUST remain usable with keyboard-only interaction, screen readers, Braille displays, and text browsers. Accessibility review is part of completion, not post-processing.
+### VII. Programmierung #include<everyone> — Inclusion & Accessibility By Default
 
-## Governance
+`Programmierung #include<everyone>` is a binding repository-wide principle, not a slogan.
+All user-facing artefacts MUST be designed and reviewed for inclusive use:
 
-This constitution supersedes all informal conventions and takes precedence over ad-hoc decisions.
-Amendments MUST follow this procedure:
+- CLI output
+- Documentation and Markdown
+- HTML and generated websites
+- Graphical user interfaces
+- Generated templates and scaffolding
 
-1. Open either a `codex/constitution-<topic>` branch or a numbered Spec-Kit branch for the
-   governance work.
-2. Update `.specify/memory/constitution.md` with the proposed change, increment the version
-   per the versioning policy below, and set `LAST_AMENDED_DATE` to the amendment date.
-3. Run the Sync Impact Report and update any affected templates and runtime guidance files.
-4. Merge only after CI passes and the amendment is summarised in the PR description.
+Mandatory rules:
+- WCAG 2.2 Level AA is the default accessibility baseline wherever the criteria are applicable.
+- User-facing artefacts MUST remain usable with keyboard-only interaction, screen readers, Braille displays, and text browsers.
+- Text-first fallbacks MUST be preferred for status reporting, diagrams, and operational guidance.
+- Accessibility review is part of completion, not post-processing.
 
-Agent runtime guidance MUST remain aligned with this constitution in:
-- `AGENTS.md`
+**Rationale**: Inclusive delivery improves quality for everyone, reduces retrofit work, and makes the repositories usable in real assistive-technology workflows from the start.
+
+### VIII. DE-First / EN-Second Bilingual Delivery
+
+German is the canonical first language for user-facing documentation and governance in this workspace family; English follows directly after it.
+
+Mandatory rules:
+- Headings MUST follow the `DE / EN` pattern unless the heading is a proper noun or tool name.
+- Learner-facing and user-facing documentation MUST be maintained bilingually at approximately CEFR-B2 readability.
+- Large normative documents MAY use a synchronized `.EN.md` companion file when inline bilingual maintenance would become unreadable.
+- Changes that materially affect user-facing guidance MUST update both language tracks in the same change.
+
+**Rationale**: DE-first / EN-second delivery reflects the actual audience while keeping the content usable for mixed-language teams, apprentices, and external review.
+
+### IX. Four-Agent Guidance Parity & Template Synchronization
+
+Shared AI-agent guidance in this workspace family is only valid when the four maintained agent surfaces stay aligned:
+
+- `AGENTS.md` for Codex/Codex-like agents
 - `CLAUDE.md`
 - `GEMINI.md`
 - `.github/copilot-instructions.md`
 
-Use `docs/project-statistics.md` for the living project-statistics ledger and
-manual-effort baseline tracking.
+Mandatory rules:
+- Shared operational rules MUST NOT be updated in only one of the four files.
+- Any intentional deviation MUST be documented explicitly in the same change.
+- The corresponding project templates and `.specify/memory/constitution.md` MUST be updated in the same change whenever a shared principle changes.
+- Runtime guidance references in governance text MUST name all four maintained agent surfaces.
 
-**Versioning policy**:
-- MAJOR: Removal or redefinition of a principle that is backward-incompatible with existing code.
-- MINOR: New principle or section added; materially expanded guidance.
-- PATCH: Clarifications, wording corrections, or non-semantic refinements.
+**Rationale**: Divergent agent instructions create silent process drift. Atomic parity keeps different AI tools aligned and makes future project bootstraps inherit the same governance baseline.
 
-All PRs and agentic implementations MUST verify compliance with the Constitution Check gate in
-`plan-template.md` before Phase 0 research begins and again after Phase 1 design.
+### X. Level-2 Project Environment Addenda
 
-**Version**: 1.5.0 | **Ratified**: 2026-02-28 | **Last Amended**: 2026-04-20
+Level-2 project constitutions MUST preserve the shared policy layer and add a
+project-local environment addendum instead of replacing the constitution with a
+generic copy.
+
+Mandatory rules:
+- Each Level-2 `constitution.md` MUST document the local runtime, build system,
+  test framework, documentation/A11Y toolchain, statistics baseline, and
+  repository-specific agent surfaces.
+- Project-specific addenda MUST enrich the shared constitution; they MUST NOT
+  weaken Security-First, A11Y, bilingual, statistics, or four-agent parity
+  requirements.
+- When a project-specific runtime or tooling baseline changes, the local
+  `constitution.md`, `.specify/memory/constitution.md`, and affected agent
+  guidance files MUST be reviewed together.
+- Level-0 and Level-1 constitutions define shared policy. Level-2 constitutions
+  define the same policy plus the concrete project environment.
+
+**Rationale**: A generic constitution is not sufficient for real project work.
+Agentic tools need the binding shared rules and the local build/test/runtime
+context in the same policy surface so generated plans do not drift away from
+the actual project environment.
+
+## Script & Code Conventions
+
+Coding style rules that apply to all scripts in this repository:
+
+- **Bash shebang & safety flags**: `#!/usr/bin/env bash` + `set -euo pipefail`
+- **PowerShell header**: `#Requires -Version 7` + `Set-StrictMode -Version Latest`
+  \+ `$ErrorActionPreference = 'Stop'`
+- **Indentation**: 2 spaces in Bash, 4 spaces in PowerShell
+- **Filenames**: kebab-case (e.g., `bootstrap-workspace.sh`)
+- **PowerShell parameters**: PascalCase (e.g., `-WorkspaceName`, `-WhatIf`)
+- **PowerShell naming**: Use the standard `Verb-Noun` pattern for functions and Cmdlets (e.g., `New-HBWorkspace`, `Set-HBSettings`).
+- **Bash variables**: lowercase_underscore (e.g., `repo_name`)
+- **Documentation**:
+  - Bash scripts MUST have a corresponding man-page in `docs/man/` (section 1).
+  - PowerShell scripts MUST include complete comment-based help (`.SYNOPSIS`, `.DESCRIPTION`, etc.).
+  - Both MUST be bilingual (DE / EN) or consistent with existing script headers.
+- **User-facing messages**: German primary (`Fehler:`, `Verzeichnis nicht gefunden`);
+  English is acceptable in code comments
+- **Visual output**: box-drawing characters (╔, ║, ╚, ✓, →) for structured console blocks
+- **End-of-options sentinel**: Bash scripts that accept positional arguments MUST support `--` to terminate option parsing, allowing names that start with `-` (e.g., `teardown-workspace.sh -- -myworkspace`)
+
+## Commit & Pull Request Standards
+
+- **Commit message format**: Conventional Commits — `chore:`, `docs:`, `feat:`, `fix:`
+  followed by a short imperative subject line
+- **Co-authored-by trailer**: Every commit MUST include:
+  ```
+  Co-authored-by: Copilot <223556219+Copilot@users.noreply.github.com>
+  ```
+- **PR description MUST include**:
+  - Which scripts or docs are affected
+  - Manual verification commands run (with `--dry-run` / `-WhatIf` output)
+  - Sample console output when user-visible output changes
+  - Explicit security risk statement for any change touching hook or scanner logic
+- **Lastenheft rename on feature completion**: When a feature's implementation is fully merged, the corresponding `Lastenheft_*.md` MUST be renamed via `bash scripts/rename-lastenheft.sh <LH-file> <branch-name>` (macOS/Linux) or `pwsh scripts/rename-lastenheft.ps1 -File <LH-file> -BranchName <branch-name>` (Windows). This stamps the feature branch name onto the filename and marks the Lastenheft as archived. The rename commit MUST be included in the final tasks.md as the last step of the Polish phase.
+
+## Governance
+
+This constitution supersedes all other practices documented in `AGENTS.md`,
+`CLAUDE.md`, `GEMINI.md`, and `.github/copilot-instructions.md` where they
+conflict. Those files provide runtime guidance for AI agents; this constitution
+defines non-negotiable structural rules.
+
+**Amendment procedure**:
+1. Propose the change in a PR; describe the principle being added, changed, or removed.
+2. Update `LAST_AMENDED_DATE` to the PR merge date.
+3. Increment `CONSTITUTION_VERSION` following semantic versioning:
+   - MAJOR: backward-incompatible principle removal or redefinition
+   - MINOR: new principle or section added / materially expanded guidance
+   - PATCH: clarifications, wording fixes, non-semantic refinements
+4. Propagate any principle changes to dependent templates
+   (`.specify/templates/plan-template.md`, `spec-template.md`, `tasks-template.md`,
+   relevant `scripts/templates/*`, and `.specify/memory/constitution.md`)
+   and AI agent guidance files, committing all changes atomically.
+5. All PRs and AI-assisted sessions MUST verify compliance with the current
+   version of this constitution before committing code or scripts.
+
+**Version policy**: Constitution version is independent of any software release
+version. It tracks the governance document's own evolution.
+
+**Compliance review**: Any change to `scripts/hooks/pre-push` or
+`scripts/scan-agent-secrets.*` MUST explicitly state in the PR which security
+rule (Principle I) it affects and include scanner output confirming no regressions.
+Any expansion of the surgical subdirectory exception (Principle I) MUST include
+a security justification confirming no credentials are present in the newly
+allowed path.
+
+**Runtime guidance**: Use `AGENTS.md` / `CLAUDE.md` / `GEMINI.md` /
+`.github/copilot-instructions.md` for per-agent operational guidance. This
+constitution is the authoritative policy layer above all agent-specific files.
+
+**Version**: 1.5.1 | **Ratified**: 2026-03-31 | **Last Amended**: 2026-04-22
+
+<!-- EN: constitution.md placeholder
+[DE-Zusammenfassung: constitution.md beschreibt die Prinzipien und Standards für alle home-baseline Workspaces.]
+-->
+
+## Level-2 Project Environment Addendum / Level-2-Projektumgebung
+
+- Projekt / Project: TinyCalc / MicroCalc .NET spreadsheet and Terminal.Gui TUI port.
+- Laufzeit und Sprache / Runtime and language: .NET 10 / C#, MicroCalc.Core engine, MicroCalc.Tui frontend, Pascal reference artefacts for behaviour parity.
+- Build und Tests / Build and tests: dotnet restore/build/test MicroCalc.sln; xUnit suites and non-interactive TUI smoke mode.
+- Doku und A11Y / Docs and A11Y: DocFX changes require text-oriented A11Y smoke review; documentation and didactic comments stay DE-first/EN-second at CEFR B2.
+- Statistik / Statistics: manual conservative baseline 80 lines/workday; Thorsten-Solo baseline 125 lines/workday for this Pascal-derived C#/.NET port.
+- Agentenflaechen / Agent surfaces: AGENTS.md, CLAUDE.md, GEMINI.md, .github/copilot-instructions.md, and Spec-Kit surfaces stay synchronized for shared rules.
