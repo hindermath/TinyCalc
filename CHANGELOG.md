@@ -1,5 +1,38 @@
 # Changelog
 
+## [0.2.1](https://github.com/hindermath/TinyCalc/compare/v0.2.0...v0.2.1) (2026-04-24)
+
+
+### Bug Fixes / Fehlerbehebungen
+
+* install ripgrep for windows secret scan ([6020d29](https://github.com/hindermath/TinyCalc/commit/6020d298b0b3a91054850c1e34287d86d5e66b96))
+* replace broken homogeneity workflow ([d00d201](https://github.com/hindermath/TinyCalc/commit/d00d20139d9790c34d524611a0d9a7f64dda35b3))
+* stabilize windows secret scan CI ([c100c24](https://github.com/hindermath/TinyCalc/commit/c100c2447d3c696ba5b1a9821cd23ff03da06b58))
+
+
+### Documentation / Dokumentation
+
+* add security evidence structure ([3766739](https://github.com/hindermath/TinyCalc/commit/376673926d82da0ab81282ab5cfdbd4ceddb82a6))
+* amend constitution to v1.6.0 ([6bf2ad5](https://github.com/hindermath/TinyCalc/commit/6bf2ad55d33f27323c0d1cb1909ba93d5e2b59fe))
+* initialize speckit assets and align constitutions ([4d52943](https://github.com/hindermath/TinyCalc/commit/4d529438ecd6f6d1790eab3c744447b6b608d9dd))
+* propagate constitution v1.10.0 guidance ([ee1f9e3](https://github.com/hindermath/TinyCalc/commit/ee1f9e3cb6fbdfbaf6c8c46d1ec8f229bbdd025c))
+* propagate constitution v1.11.0 guidance ([9e5ce12](https://github.com/hindermath/TinyCalc/commit/9e5ce1248ae8873dec975a6450e058a4a21b5693))
+* sync constitution and shared agent guidance ([887c727](https://github.com/hindermath/TinyCalc/commit/887c72732b197dbad66f8f2afd5c03fd5a21811c))
+* update constitution v1.5.1 ([a2cec0f](https://github.com/hindermath/TinyCalc/commit/a2cec0f1082aa2b140fababfc3d3324608d226f4))
+* update stats ([301a979](https://github.com/hindermath/TinyCalc/commit/301a979b553e73a9d1404e747c3f104a69794369))
+
+
+### Maintenance / Wartung
+
+* complete bilingual compliance markers ([7d1ab1c](https://github.com/hindermath/TinyCalc/commit/7d1ab1c3e869375f677ab0337f75e301ae506cf1))
+* complete bilingual heading coverage ([81f59a8](https://github.com/hindermath/TinyCalc/commit/81f59a8f90cbde904242328a2f274634a6739bde))
+* propagate security guidance from home-baseline v1.12.0 ([07e0e81](https://github.com/hindermath/TinyCalc/commit/07e0e8144f4ef597132ab4f3c5db4be3aa76bcfa))
+* reconcile local agent artifacts ([c587a01](https://github.com/hindermath/TinyCalc/commit/c587a017f11c6c40359cf2b4e92bebeec781a131))
+* sync constitution to v1.4.0 ([104219e](https://github.com/hindermath/TinyCalc/commit/104219e3e8f6ada8e4f25f2d36b2a47887e336b5))
+* update homogeneity stats ([1fd7078](https://github.com/hindermath/TinyCalc/commit/1fd7078a5470a2a071f89f205ce30c5ee626a299))
+* update homogeneity stats ([894f55a](https://github.com/hindermath/TinyCalc/commit/894f55a2977b7f123d4d7a2dd776023363a43065))
+* update stats ([8e20c4d](https://github.com/hindermath/TinyCalc/commit/8e20c4da8df6a58b4fc51f93b6ebe8940802cdf6))
+
 ## [0.2.0](https://github.com/hindermath/TinyCalc/compare/v0.1.0...v0.2.0) (2026-04-12)
 
 
