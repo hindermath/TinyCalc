@@ -8,7 +8,7 @@ MicroCalc is a modern C#/.NET 10 port of the historical Borland MicroCalc Pascal
 
 ## Solution Structure
 
-```
+```text
 MicroCalc.sln
 src/
   MicroCalc.Core/          # Domain logic — no UI dependencies
@@ -224,9 +224,18 @@ Governed by `.editorconfig`:
 
 *Every Level-2 project MUST maintain security documents based on templates in `.specify/templates/`: threat model (STRIDE+CAPEC), S-ADRs, arc42 Section 8 security concepts, security checklist, dependency audit, security quality scenarios (SHOULD), ASVS verification (web/API MUST), supply-chain evidence (release-capable MUST), Zero Trust applicability note (distributed systems SHOULD), and SAMM assessment (long-lived projects SHOULD). Project-specific instances live in `docs/security/`; S-ADRs in `docs/security/adr/`. See `constitution.md`, Principles XII–XVIII for authoritative requirements.*
 
+## Allgemeine Architekturdokumentation / General Architecture Documentation
+
+- Bei architekturrelevanten Änderungen MUSS iSAQB/arc42-Evidenz geprüft werden: Architekturziele, Kontextsicht, Bausteinsicht, Laufzeitsicht, Deployment-Sicht, Qualitätszenarien, ADRs, Architekturrisiken und technische Schulden.
+- Standardpfad: `docs/architecture/`; ADRs als einzelne Dateien in `docs/architecture/adr/`.
+- Verwende die installierten Templates `architecture-vision-template.md`, `context-view-template.md`, `building-block-view-template.md`, `runtime-view-template.md`, `deployment-view-template.md`, `quality-scenarios-template.md`, `architecture-decision-template.md` und `architecture-risks-template.md`, sofern anwendbar.
+- Nichtanwendbarkeit immer als `N/A` mit kurzer Begründung dokumentieren; keine stillschweigende Auslassung.
+
+*Architecture-relevant changes MUST check iSAQB/arc42 evidence: architecture goals, context view, building-block view, runtime view, deployment view, quality scenarios, ADRs, architecture risks, and technical debt. Default path: `docs/architecture/`; ADRs live in `docs/architecture/adr/`. Use the installed architecture templates where applicable. Record non-applicability as `N/A` with justification rather than omitting it silently.*
+
 ## Sicherheitsstandards & Anwendbarkeit / Security Standards & Applicability
 
-- Vor jeder Level-2-Aufgabe die anwendbaren Sicherheitsstandards aus `constitution.md`, Prinzipien XIV-XVIII bestimmen und explizit benennen.
+- Vor jeder Level-2-Aufgabe die anwendbaren Sicherheitsstandards aus `constitution.md`, Prinzipien XIV-XX bestimmen und explizit benennen.
 - `NIST SSDF` und `CWE Top 25` gelten immer für Level-2-Arbeit.
 - `OWASP ASVS` gilt für Web-, API-, HTTP- und authentifizierte Dienste; der gewählte ASVS-Level muss benannt werden.
 - `SBOM` gilt für releasefähige oder verteilbare Artefakte; `VEX`, wenn bekannte Schwachstellen in ausgelieferten oder geprüften Komponenten bewertet werden müssen.
@@ -235,7 +244,7 @@ Governed by `.editorconfig`:
 - `OWASP Cheat Sheet Series`, `OWASP Proactive Controls` und bei öffentlichen OSS-Repositories oder kritischen Abhängigkeiten `OpenSSF Scorecard` sind als ergänzende Referenzen zu berücksichtigen.
 - Nichtanwendbarkeit immer als `N/A` mit kurzer Begründung dokumentieren; keine stillschweigende Auslassung.
 
-*At the start of every Level-2 task, determine and name the applicable security standards from `constitution.md`, Principles XIV-XVIII. `NIST SSDF` and `CWE Top 25` always apply. `OWASP ASVS` applies to web/API/HTTP/auth-bearing services; `SBOM` applies to releasable or distributable artefacts; `VEX` applies when known vulnerabilities in shipped/evaluated components need a disposition statement. `SLSA` is the target model for CI/CD and published artefacts; `Zero Trust` must be explicitly evaluated for distributed, service-based, cloud, or remotely managed systems. `CAPEC`, `OWASP SAMM`, `OWASP Cheat Sheet Series`, `OWASP Proactive Controls`, and `OpenSSF Scorecard` are supporting references where relevant. Record non-applicability as `N/A` with justification rather than omitting it silently.*
+*At the start of every Level-2 task, determine and name the applicable security standards from `constitution.md`, Principles XIV-XX. `NIST SSDF` and `CWE Top 25` always apply. `OWASP ASVS` applies to web/API/HTTP/auth-bearing services; `SBOM` applies to releasable or distributable artefacts; `VEX` applies when known vulnerabilities in shipped/evaluated components need a disposition statement. `SLSA` is the target model for CI/CD and published artefacts; `Zero Trust` must be explicitly evaluated for distributed, service-based, cloud, or remotely managed systems. `CAPEC`, `OWASP SAMM`, `OWASP Cheat Sheet Series`, `OWASP Proactive Controls`, and `OpenSSF Scorecard` are supporting references where relevant. Record non-applicability as `N/A` with justification rather than omitting it silently.*
 
 ## Agentischer Security-Workflow / Agentic Security Workflow
 

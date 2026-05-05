@@ -1,16 +1,38 @@
 <!--
 Sync Impact Report
-Version change: 1.11.0 -> 1.12.0
+Version change: 1.12.0 -> 1.13.0
 Modified principles:
-- None (purely additive)
+- II. Cross-Platform Parity & Documentation (evidence templates and Bash/PowerShell discipline clarified)
+- VII. Programmierung #include<everyone> — Inclusion & Accessibility By Default (preset evidence paths, German orthography, and code-fence tagging clarified)
+- IX. Four-Agent Guidance Parity & Template Synchronization (generic preset surface model and checklist evidence clarified)
+- XIV. Secure Development Standards & Applicability Matrix (CRA applicability and general architecture evidence included)
 Added sections:
-- None
+- XX. General Software Architecture Governance (iSAQB/arc42)
 Removed sections:
 - None
 Templates requiring updates:
 - ✅ .specify/templates/plan-template.md
 - ✅ .specify/templates/spec-template.md
 - ✅ .specify/templates/tasks-template.md
+- ✅ .specify/templates/a11y-checklist-template.md
+- ✅ .specify/templates/a11y-evidence-template.md
+- ✅ .specify/templates/bilingual-content-check-template.md
+- ✅ .specify/templates/cli-a11y-review-template.md
+- ✅ .specify/templates/agent-parity-checklist-template.md
+- ✅ .specify/templates/man-page-template.md
+- ✅ .specify/templates/powershell-help-template.md
+- ✅ .specify/templates/script-parity-checklist-template.md
+- ✅ .specify/templates/architecture-vision-template.md
+- ✅ .specify/templates/context-view-template.md
+- ✅ .specify/templates/building-block-view-template.md
+- ✅ .specify/templates/runtime-view-template.md
+- ✅ .specify/templates/deployment-view-template.md
+- ✅ .specify/templates/quality-scenarios-template.md
+- ✅ .specify/templates/architecture-decision-template.md
+- ✅ .specify/templates/architecture-risks-template.md
+- ✅ .specify/templates/cra-applicability-template.md
+- ✅ .specify/templates/msl-applicability-template.md
+- ✅ .specify/templates/secure-coding-language-rules-template.md
 - ✅ .specify/templates/asvs-verification-template.md
 - ✅ .specify/templates/supply-chain-evidence-template.md
 - ✅ .specify/templates/zero-trust-applicability-template.md
@@ -26,7 +48,7 @@ Follow-up TODOs:
 - None
 -->
 
-# Constitution v1.12.0
+# Constitution v1.13.0
 
 # home-baseline Constitution
 
@@ -93,6 +115,19 @@ A new script is not considered complete until:
 5. Help switches (`-h`, `--help`) point to the man-page or internal help.
 
 All files MUST be committed together in the same commit.
+
+Additional script-shaped tooling evidence:
+- Script parity checklists SHOULD use `script-parity-checklist-template.md`.
+- Bash man-page skeletons SHOULD use `man-page-template.md` and live under
+  `docs/man/`.
+- PowerShell help skeletons SHOULD use `powershell-help-template.md`.
+- Bash scripts SHOULD use `set -euo pipefail` unless the script documents a
+  compatibility reason. PowerShell scripts MUST use
+  `Set-StrictMode -Version Latest`.
+- Bash scripts MUST NOT rely on Bash 4+ features unless the project documents
+  that requirement, because macOS still ships Bash 3.2 by default.
+- PowerShell scripts MUST handle an empty `$env:HOME` on Windows by falling
+  back to `$env:USERPROFILE` where a home directory is needed.
 
 **Rationale**: The workspace is used on macOS and Windows. Bash-only or PowerShell-only scripts create a second-class experience. Professional documentation ensures maintainability and ease of use across platforms.
 
@@ -212,6 +247,16 @@ Mandatory rules:
 - User-facing artefacts MUST remain usable with keyboard-only interaction, screen readers, Braille displays, and text browsers.
 - Text-first fallbacks MUST be preferred for status reporting, diagrams, and operational guidance.
 - Accessibility review is part of completion, not post-processing.
+- German learner-facing text MUST keep full orthographic correctness, including
+  umlauts (`ä`, `ö`, `ü`, `Ä`, `Ö`, `Ü`) and `ß`; ASCII fallbacks such as
+  `fuer` or `loeschen` are not acceptable in user-facing prose unless a file
+  format or legacy interface cannot encode Unicode.
+- Every Markdown code block in user-facing documentation MUST carry a language
+  tag such as `bash`, `powershell`, `csharp`, or `text`.
+- Accessibility evidence SHOULD live in `docs/accessibility/` and use the
+  installed templates `a11y-checklist-template.md`,
+  `bilingual-content-check-template.md`, `cli-a11y-review-template.md`, and
+  `a11y-evidence-template.md` where applicable.
 
 **Rationale**: Inclusive delivery improves quality for everyone, reduces retrofit work, and makes the repositories usable in real assistive-technology workflows from the start.
 
@@ -241,6 +286,12 @@ Mandatory rules:
 - Any intentional deviation MUST be documented explicitly in the same change.
 - The corresponding project templates and `.specify/memory/constitution.md` MUST be updated in the same change whenever a shared principle changes.
 - Runtime guidance references in governance text MUST name all four maintained agent surfaces.
+- Projects MAY declare additional maintained agent surfaces, such as
+  `.cursorrules`, `.windsurfrules`, `JUNIE.md`, `.github/agents/*`, or
+  repository-specific prompt/rule files. Once declared, those surfaces become
+  part of the same parity requirement.
+- Changes touching shared agent guidance SHOULD complete an
+  `agent-parity-checklist-template.md` record or equivalent review note.
 
 **Rationale**: Divergent agent instructions create silent process drift. Atomic parity keeps different AI tools aligned and makes future project bootstraps inherit the same governance baseline.
 
@@ -505,6 +556,8 @@ MUST use this matrix to determine which standards apply.
 | NIST Zero Trust (SP 800-207) | Project-type-dependent | Distributed, service-based, cloud, remote-managed, or multi-device systems | Explicit applicability decision with controls or justified N/A |
 | OWASP Cheat Sheet Series / Proactive Controls | SHOULD | All developer-facing projects | Use as day-to-day implementation guidance below the constitution |
 | OpenSSF Scorecard | Project-type-dependent | Public OSS repositories or high-impact external dependencies | Review repository/dependency security posture before adoption or release |
+| EU Cyber Resilience Act (CRA) applicability | MUST | All projects; full controls for CRA-scoped products with digital elements | Record applicability or `N/A`; CRA-scoped projects maintain vulnerability handling, SBOM, and conformity evidence |
+| iSAQB/arc42 general architecture | SHOULD | Architecturally significant changes or long-lived Level-2 systems | Record architecture goals, context, views, decisions, quality scenarios, risks, or justified `N/A` |
 
 Mandatory rules:
 - Every Level-2 feature specification, plan, task list, PR, and release note
@@ -524,6 +577,11 @@ Mandatory rules:
 - Level-1 workspaces SHOULD also prefer `docs/security/` for security-governance
   evidence. If a workspace uses another governance document or directory, the
   chosen location MUST be stated in its local security index.
+- General architecture evidence SHOULD live in `docs/architecture/`, with ADRs
+  in `docs/architecture/adr/`, whenever a feature materially affects system
+  structure, interfaces, deployment, quality attributes, or maintainability.
+- CRA applicability evidence SHOULD use `cra-applicability-template.md` or an
+  equivalent note in `docs/security/` or release governance documentation.
 
 **Rationale**: Secure-development standards are often partially remembered and
 selectively applied. A binding applicability matrix keeps teams, agents, and
@@ -722,6 +780,43 @@ software placed on the EU market. Recording CRA applicability and aligning
 practices proactively reduces legal and reputational risk and builds on the
 security work already required by Principles XII–XVIII.
 
+### XX. General Software Architecture Governance (iSAQB/arc42)
+
+Software architecture MUST be treated as an explicit design artefact whenever
+changes affect structure, interfaces, quality attributes, runtime behaviour,
+deployment, or long-term maintainability. Implementation work without visible
+architecture reasoning creates hidden coupling and unreviewed technical debt.
+
+Mandatory rules:
+- Architecturally significant decisions MUST be documented as Architecture
+  Decision Records (ADRs). Security-specific decisions remain S-ADRs under
+  Principle XIII.
+- Architecture work SHOULD follow lightweight iSAQB/CPSA-F method discipline
+  and arc42-compatible documentation where it supports review, maintenance,
+  onboarding, or later change decisions.
+- Quality attributes MUST be expressed as concrete scenarios, not only as
+  generic words such as `fast`, `maintainable`, or `scalable`.
+- System context, external interfaces, building blocks, runtime behaviour, and
+  deployment constraints MUST be documented when they materially affect the
+  design.
+- Architecture risks and technical debt MUST be recorded with owner, impact,
+  mitigation, and review trigger.
+- General architecture evidence SHOULD live in `docs/architecture/`; ADRs
+  SHOULD live in `docs/architecture/adr/`.
+- Evidence SHOULD use the installed templates:
+  `architecture-vision-template.md`, `context-view-template.md`,
+  `building-block-view-template.md`, `runtime-view-template.md`,
+  `deployment-view-template.md`, `quality-scenarios-template.md`,
+  `architecture-decision-template.md`, and
+  `architecture-risks-template.md`.
+- `N/A` decisions MUST include a short rationale. Silent omission is not
+  allowed for architecturally significant work.
+
+**Rationale**: Secure architecture covers threat resistance, but long-lived
+software also needs clear general architecture reasoning. iSAQB/CPSA-F and
+arc42 provide a lightweight vocabulary for documenting structure, quality,
+risks, and decisions without turning every feature into a large design phase.
+
 ## Level-2 Project Environment Registry / Level-2-Projektumgebungsregister
 
 This registry consolidates the constitution-relevant Level-2 project facts
@@ -812,7 +907,7 @@ allowed path.
 `.github/copilot-instructions.md` for per-agent operational guidance. This
 constitution is the authoritative policy layer above all agent-specific files.
 
-**Version**: 1.12.0 | **Ratified**: 2026-03-31 | **Last Amended**: 2026-04-24
+**Version**: 1.13.0 | **Ratified**: 2026-03-31 | **Last Amended**: 2026-05-05
 
 <!-- EN: constitution.md placeholder
 [DE-Zusammenfassung: constitution.md beschreibt die Prinzipien und Standards für alle home-baseline Workspaces.]

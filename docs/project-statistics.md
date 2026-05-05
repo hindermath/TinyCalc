@@ -1,6 +1,6 @@
 # Projektstatistik MicroCalc
 
-Stand: 2026-03-30 (aktualisiert mit finalem `## Gesamtstatistik`-Block, ASCII-/X/Y-Diagrammen und textorientierter A11Y-Statistikbaseline)
+Stand: 2026-05-05 (aktualisiert nach Integration der sechs Spec-Kit-Governance-Presets und Constitution v1.13.0)
 
 ## Zweck und Pflege
 
@@ -80,28 +80,28 @@ fortgeschrieben.
 
 | Kennzahl | Wert |
 |---|---:|
-| Beobachtbarer Projektzeitraum | 2026-02-07 bis 2026-03-06 |
+| Beobachtbarer Projektzeitraum | 2026-02-07 bis 2026-05-05 |
 | Git-Commits gesamt | 68 |
 | Autoren laut Git | 2 |
-| Git-Aktivtage | 7 |
+| Git-Aktivtage | 8 |
 | Produktionscode aktuell | 16 Dateien / 2728 Zeilen |
 | Testcode aktuell | 3 Dateien / 775 Zeilen |
-| Dokumentation aktuell | 54 Dateien / 5742 Zeilen |
-| Davon Spec-Kit-Artefakte | 11 Dateien / 2139 Zeilen |
-| Davon Governance/Agent-Dateien | 5 Dateien / 533 Zeilen |
-| Gesamtbasis fuer Handschaetzung (inkl. Dokumentation) | 9245 Zeilen |
-| Erfahrener Entwickler, konservative Untergrenze | 115.6 Arbeitstage |
-| Erfahrener Entwickler, konservative Untergrenze in Stunden | 901.7 Stunden (115.6 * 7.8) |
-| Erfahrener Entwickler, brutto | 5.4 Arbeitsmonate (21.5 Tage/Monat) |
-| Erfahrener Entwickler, TVoeD-Annahme | 6.1 Kalendermonate bzw. 0.5 Jahre |
-| Thorsten solo, erfahrungsadjustierte Untergrenze | 74.0 Arbeitstage |
-| Thorsten solo, erfahrungsadjustierte Untergrenze in Stunden | 577.2 Stunden (74.0 * 7.8) |
-| Thorsten solo, brutto | 3.4 Arbeitsmonate (21.5 Tage/Monat) |
-| Thorsten solo, TVoeD-Annahme | 3.9 Kalendermonate bzw. 0.3 Jahre |
-| Kleines Team (3 Personen, +20 % Koordination), Untergrenze | 46.2 Arbeitstage |
-| Kleines Team (3 Personen, +20 % Koordination), TVoeD-Annahme | 2.4 Kalendermonate |
-| Repo-weiter Beschleunigungsfaktor vs. konservative Referenz | 16.5x (115.6 / 7 Git-Aktivtage) |
-| Repo-weiter Beschleunigungsfaktor vs. Thorsten-Referenz | 10.6x (74.0 / 7 Git-Aktivtage) |
+| Dokumentation aktuell | 210 Dateien / 16779 Zeilen |
+| Davon Spec-Kit-Artefakte | 46 Template-Dateien / 7922 Zeilen in `.specify/` |
+| Davon Governance/Agent-Dateien | 5 Dateien / 1910 Zeilen |
+| Gesamtbasis fuer Handschaetzung (inkl. Dokumentation) | 20282 Zeilen |
+| Erfahrener Entwickler, konservative Untergrenze | 253.5 Arbeitstage |
+| Erfahrener Entwickler, konservative Untergrenze in Stunden | 1977.5 Stunden (253.5 * 7.8) |
+| Erfahrener Entwickler, brutto | 11.8 Arbeitsmonate (21.5 Tage/Monat) |
+| Erfahrener Entwickler, TVoeD-Annahme | 13.3 Kalendermonate bzw. 1.1 Jahre |
+| Thorsten solo, erfahrungsadjustierte Untergrenze | 162.3 Arbeitstage |
+| Thorsten solo, erfahrungsadjustierte Untergrenze in Stunden | 1265.6 Stunden (162.3 * 7.8) |
+| Thorsten solo, brutto | 7.5 Arbeitsmonate (21.5 Tage/Monat) |
+| Thorsten solo, TVoeD-Annahme | 8.5 Kalendermonate bzw. 0.7 Jahre |
+| Kleines Team (3 Personen, +20 % Koordination), Untergrenze | 101.4 Arbeitstage |
+| Kleines Team (3 Personen, +20 % Koordination), TVoeD-Annahme | 5.3 Kalendermonate |
+| Repo-weiter Beschleunigungsfaktor vs. konservative Referenz | 31.7x (253.5 / 8 Git-Aktivtage) |
+| Repo-weiter Beschleunigungsfaktor vs. Thorsten-Referenz | 20.3x (162.3 / 8 Git-Aktivtage) |
 
 ## Branch-Ueberblick
 
@@ -218,24 +218,51 @@ fortgeschrieben.
 - Blended Repository Speedup gegen sichtbare 1 Git-Aktivtag fuer diesen
   Aenderungssatz:
   - 0.5x gegen die konservative 80-Zeilen-Referenz
-  - 0.3x gegen die Thorsten-Solo-Referenz mit 125 Zeilen pro Arbeitstag
+- 0.3x gegen die Thorsten-Solo-Referenz mit 125 Zeilen pro Arbeitstag
+
+### 5. Agentische Governance-Runde nach Spec-Kit-Preset-Integration
+
+- Status: Arbeitsbaum-Aenderung am 2026-05-05
+- Beobachtbarer Zeitraum: 2026-05-05 bis 2026-05-05
+- Commit-Bild: aktueller Working-Tree-Aenderungssatz vor Commit
+- Grundlegende Arbeiten: Constitution v1.13.0, allgemeine iSAQB/arc42-
+  Architektur-Governance, A11Y-/Cross-Platform-/Agent-Parity-/CRA-
+  Evidenzpfade, fehlende Preset-Templates nach `.specify/templates/`
+  uebernommen und Agent-Guidance synchronisiert
+- Git-/Arbeitsbaum-Aenderungsvolumen fuer den aktuellen Aenderungssatz vor
+  dieser Statistik-Fortschreibung:
+  - Produktionscode: 0 Zeilen
+  - Testcode: 0 Zeilen
+  - Dokumentation und Governance: +1099 / -10 Zeilen netto ueber geaenderte
+    Governance-Dateien und 19 neue Spec-Kit-Template-Dateien
+- Konservative Handarbeits-Basis fuer Code und Dokumentation:
+  - 1089 Zeilen netto gesamt
+  - 13.6 Arbeitstage fuer einen erfahrenen Entwickler
+  - 106.2 Stunden auf TVoeD-Basis (`13.6 * 7.8`)
+- Thorsten-Solo-Referenz:
+  - 8.7 Arbeitstage
+  - 68.0 Stunden auf TVoeD-Basis (`8.7 * 7.8`)
+- Blended Repository Speedup gegen sichtbare 1 Agenten-Arbeitssitzung fuer
+  diesen Aenderungssatz:
+  - 13.6x gegen die konservative 80-Zeilen-Referenz
+  - 8.7x gegen die Thorsten-Solo-Referenz mit 125 Zeilen pro Arbeitstag
 
 ## Einordnung der KI-/Spec-Kit-Wirkung
 
-- Die beobachtbare manuelle Gesamtbasis liegt bereits bei 9245 Zeilen
+- Die beobachtbare manuelle Gesamtbasis liegt bereits bei 20282 Zeilen
   (Produktionscode + Tests + Dokumentation).
 - Selbst mit der konservativen Obergrenze von 80 manuell erstellten Zeilen pro
-  Arbeitstag ergibt sich bereits eine Untergrenze von 115.6
+  Arbeitstag ergibt sich bereits eine Untergrenze von 253.5
   Entwickler-Arbeitstagen.
 - Unter TVoeD-Annahme mit 30 Urlaubstagen pro Jahr entspricht das fuer einen
-  erfahrenen Entwickler ca. 6.1 Kalendermonaten bzw. 0.5 Arbeitsjahren; fuer
-  ein 3er-Team mit 20 % Koordinationsaufschlag ca. 2.4 Kalendermonaten.
+  erfahrenen Entwickler ca. 13.3 Kalendermonaten bzw. 1.1 Arbeitsjahren; fuer
+  ein 3er-Team mit 20 % Koordinationsaufschlag ca. 5.3 Kalendermonaten.
 - Unter Einbezug von Thorstens Erfahrungsprofil sinkt die klassische
-  Solo-Referenz fuer MicroCalc auf ca. 74.0 Arbeitstage bzw.
-  3.9 TVoeD-Kalendermonate.
-- Gegen die sichtbaren 7 Git-Aktivtage ergibt sich damit ein repo-weiter
-  Beschleunigungsfaktor von ca. 16.5x gegen die konservative Referenz und
-  ca. 10.6x gegen die erfahrungsadjustierte Thorsten-Referenz.
+  Solo-Referenz fuer MicroCalc auf ca. 162.3 Arbeitstage bzw.
+  8.5 TVoeD-Kalendermonate.
+- Gegen die sichtbaren 8 Git-Aktivtage ergibt sich damit ein repo-weiter
+  Beschleunigungsfaktor von ca. 31.7x gegen die konservative Referenz und
+  ca. 20.3x gegen die erfahrungsadjustierte Thorsten-Referenz.
 - Die Git-Historie zeigt eine deutliche Verdichtung: sehr hoher Doku- und
   Planungsanteil bei gleichzeitig schneller Code- und Testumsetzung.
 
@@ -263,6 +290,7 @@ fortgeschrieben.
 | 2026-03-30 | Abschlusspruefung fuer Bilingualitaet und A11Y in Planungsdokument verankert | Im zentralen Migrationsplan `PLAN_MICROCALC_CSHARP_DOTNET10.md` wurde ein ausdruecklicher Abschlussblock fuer Dokumentation und Barrierefreiheit ergaenzt: Lernrelevante Dokumente muessen in Deutsch und Englisch auf CEFR-B2-Niveau vorliegen; grosse normative Dokumente duerfen als synchron gepflegte `.EN.md`-Parallelfassung gefuehrt werden; fuer erzeugte HTML-Dokumentation gilt WCAG 2.2 AA als Baseline und nach jedem `docfx`-Neubau ist ein textorientierter A11Y-Review vorgesehen. Diese Runde war reine Dokumentationsarbeit mit `0` Produktionscode-Zeilen, `0` Testcode-Zeilen und ca. `+8` Dokumentationszeilen netto. Konservative Manualreferenz: 80 Zeilen/Tag = `0.1` Tage (ca. `0.8` Stunden); Thorsten-Solo-Referenz: 125 Zeilen/Tag = `0.1` Tage (ca. `0.5` Stunden); sichtbares Arbeitsfenster: 1 kurze Agentensitzung am 2026-03-30. |
 | 2026-03-30 | Parent-Guidance bewusst auf repo-uebergreifende Regeln begrenzt | In den lokalen Guidance-Dateien von `TinyCalc` ist jetzt ausdruecklich vermerkt, dass `/Users/thorstenhindermann/RiderProjects/AGENTS.md` nur gemeinsame Basisregeln fuer mehrere Repositories traegt. Repository-spezifische Build-, Test-, Workflow-, Architektur- und Feature-Vorgaben bleiben bewusst in `TinyCalc` selbst und sind dort die spezifischere Autoritaet. Diese Runde war reine Dokumentationsarbeit mit `0` Produktionscode-Zeilen, `0` Testcode-Zeilen und ca. `+10` Dokumentationszeilen netto. Konservative Manualreferenz: 80 Zeilen/Tag = `0.1` Tage (ca. `1.0` Stunden); Thorsten-Solo-Referenz: 125 Zeilen/Tag = `0.1` Tage (ca. `0.6` Stunden); sichtbares Arbeitsfenster: 1 kurze Agentensitzung am 2026-03-30. |
 | 2026-03-30 | Fehlende Shared-Baseline-Regeln aus `TuiVision` in `TinyCalc` nachgezogen | Die lokalen Guidance-Dateien (`AGENTS.md`, `CLAUDE.md`, `GEMINI.md`, `.github/copilot-instructions.md`) und diese Statistikdatei wurden nur bei den repo-uebergreifenden Restluecken nachgezogen: `.EN.md`-Option fuer grosse normative Dokumente, formale Abschlusspruefung fuer bilinguale CEFR-B2-Doku plus dokumentierten A11Y-Nachweis, textfirst-/ASCII-Regeln fuer Statistik und Doku, finaler `## Gesamtstatistik`-Block als Schlusssektion, CEFR-B2-Erklaertexte direkt an ASCII-Diagrammen sowie zusaetzliche ASCII-X/Y-Darstellung. MicroCalc-spezifische Architektur-, Feature-, Branch- und Build-Regeln blieben bewusst unveraendert. Diese Runde war reine Dokumentations-/Governance-Arbeit mit `0` Produktionscode-Zeilen, `0` Testcode-Zeilen und `+258 / -2` Dokumentationszeilen netto ueber die betroffenen Guidance- und Statistikdateien. Konservative Manualreferenz: 80 Zeilen/Tag = `3.2` Tage (ca. `25.2` Stunden); Thorsten-Solo-Referenz: 125 Zeilen/Tag = `2.1` Tage (ca. `16.1` Stunden); sichtbares Arbeitsfenster: 1 kurze Agentensitzung am 2026-03-30. |
+| 2026-05-05 | Constitution v1.13.0 nach sechs Spec-Kit-Governance-Presets | Die Verfassung wurde nach der Preset-Integration auf allgemeine iSAQB/arc42-Architektur-Governance erweitert; Plan-, Spec- und Tasks-Templates wurden um Architektur-, A11Y-, Cross-Platform-, Agent-Parity- und CRA-Evidenzpfade ergaenzt; 19 fehlende Preset-Templates wurden nach `.specify/templates/` uebernommen; die vier Agent-Dateien wurden synchronisiert. Diese Runde war reine Dokumentations-/Governance-Arbeit mit `0` Produktionscode-Zeilen, `0` Testcode-Zeilen und vor dieser Statistik-Fortschreibung `+1099 / -10` Dokumentationszeilen netto. Konservative Manualreferenz: 80 Zeilen/Tag = `13.6` Tage (ca. `106.2` Stunden); Thorsten-Solo-Referenz: 125 Zeilen/Tag = `8.7` Tage (ca. `68.0` Stunden); sichtbares Arbeitsfenster: 1 Agentensitzung am 2026-05-05. |
 
 ## Gesamtstatistik
 
@@ -272,25 +300,25 @@ Phasenwerte aus den Abschnitten `## Gesamtstand des Repositories` und
 
 | Kennzahl | Verdichteter Gesamtblick |
 |---|---:|
-| Artefaktbasis gesamt | `9245` Zeilen |
-| Produktions- und Testcode zusammen | `3503` Zeilen (`37.9 %`) |
-| Dokumentationsanteil | `5742` Zeilen (`62.1 %`) |
-| Spec-Kit-Anteil innerhalb der Doku | `2139` Zeilen (`37.3 %`) |
-| Governance-/Agent-Anteil innerhalb der Doku | `533` Zeilen (`9.3 %`) |
-| Beobachtbarer Projektzeitraum | `2026-02-07` bis `2026-03-06` |
-| Git-Commits pro sichtbarem Aktivtag | `9.7` (`68 / 7`) |
-| Dokumentierte Gesamtzeilen pro sichtbarem Aktivtag | `1320.7` (`9245 / 7`) |
-| Dokumentierte Gesamtzeilen pro Commit | `136.0` (`9245 / 68`) |
-| Konservative Einzelentwickler-Untergrenze | `115.6` Arbeitstage / `901.7` Stunden |
-| Thorsten-Solo-Untergrenze | `74.0` Arbeitstage / `577.2` Stunden |
-| Kleines 3er-Team mit Koordinationsaufschlag | `46.2` Arbeitstage |
-| Repo-weiter Speedup gg. 80-Zeilen-Referenz | `16.5x` |
-| Repo-weiter Speedup gg. Thorsten-Referenz | `10.6x` |
+| Artefaktbasis gesamt | `20282` Zeilen |
+| Produktions- und Testcode zusammen | `3503` Zeilen (`17.3 %`) |
+| Dokumentationsanteil | `16779` Zeilen (`82.7 %`) |
+| Spec-Kit-Anteil innerhalb der Doku | `7922` Zeilen (`47.2 %`) |
+| Governance-/Agent-Anteil innerhalb der Doku | `1910` Zeilen (`11.4 %`) |
+| Beobachtbarer Projektzeitraum | `2026-02-07` bis `2026-05-05` |
+| Git-Commits pro sichtbarem Aktivtag | `8.5` (`68 / 8`) |
+| Dokumentierte Gesamtzeilen pro sichtbarem Aktivtag | `2535.3` (`20282 / 8`) |
+| Dokumentierte Gesamtzeilen pro Commit | `298.3` (`20282 / 68`) |
+| Konservative Einzelentwickler-Untergrenze | `253.5` Arbeitstage / `1977.5` Stunden |
+| Thorsten-Solo-Untergrenze | `162.3` Arbeitstage / `1265.6` Stunden |
+| Kleines 3er-Team mit Koordinationsaufschlag | `101.4` Arbeitstage |
+| Repo-weiter Speedup gg. 80-Zeilen-Referenz | `31.7x` |
+| Repo-weiter Speedup gg. Thorsten-Referenz | `20.3x` |
 
 Kurzfazit:
 Der aktuell dokumentierte Snapshot ist klar dokumentationslastig: Rund
-`62.1 %` der sichtbaren Basis liegen in Markdown-, Governance- und
-Planungsartefakten, waehrend Produktions- und Testcode zusammen `37.9 %`
+`82.7 %` der sichtbaren Basis liegen in Markdown-, Governance- und
+Planungsartefakten, waehrend Produktions- und Testcode zusammen `17.3 %`
 ausmachen. Das passt zum beobachtbaren Verlauf von `TinyCalc`, in dem
 Portierung, Governance, Spezifikation und Nachweis sehr frueh stark
 mitgewachsen sind. Die Beschleunigungsfaktoren beschreiben dabei keine
@@ -299,8 +327,8 @@ Referenzen.
 
 Short summary:
 The currently documented snapshot is clearly documentation-heavy. About
-`62.1 %` of the visible baseline sits in Markdown, governance, and planning
-artifacts, while production and test code together make up `37.9 %`. This
+`82.7 %` of the visible baseline sits in Markdown, governance, and planning
+artifacts, while production and test code together make up `17.3 %`. This
 matches the visible `TinyCalc` trajectory, where porting, governance,
 specification, and proof artifacts grew strongly from the start. The
 acceleration factors therefore describe visible delivery density, not a
@@ -312,7 +340,7 @@ stopwatch measurement.
 Artefaktmix nach aktuell dokumentiertem Snapshot (Zeilen)
 Produktion     | ##############                 | 2728 | 29.5 %
 Tests          | ####                           |  775 |  8.4 %
-Dokumentation  | ############################## | 5742 | 62.1 %
+Dokumentation  | ############################## |16779 | 82.7 %
 ```
 
 Dieses Diagramm zeigt, wie der aktuell dokumentierte Repository-Snapshot
@@ -330,6 +358,7 @@ Dokumentierte Phasenbasis nach Netto-Volumen (Zeilen)
 2 001    | ##########               | 2962
 3 harden | ###                      |  782
 4 002v   | #                        |   42
+5 gov    | ####                     | 1089
 ```
 
 Dieses Diagramm zeigt die grob sichtbare Netto-Basis der dokumentierten
@@ -346,6 +375,7 @@ Konservative Handarbeits-Referenz je dokumentierter Phase (Arbeitstage)
 2 001    | ##########               | 37.0 d
 3 harden | ###                      |  9.8 d
 4 002v   | #                        |  0.5 d
+5 gov    | ####                     | 13.6 d
 ```
 
 Hier werden dieselben Pakete als konservative manuelle Referenz in
@@ -358,13 +388,14 @@ agentic support.
 
 ```text
 Dokumentierte Beschleunigungsfaktoren durch agentische KI + Spec-Kit/SDD
-Repo 80  | ###########              | 16.5x
-Repo125  | #######                  | 10.6x
+Repo 80  | #####################    | 31.7x
+Repo125  | ##############           | 20.3x
 0 main   | ###############          | 23.0x
 1 init   | ##############           | 21.6x
 2 001    | ######################## | 37.0x
 3 harden | ###                      |  4.9x
 4 002v   | #                        |  0.5x
+5 gov    | #########                | 13.6x
 ```
 
 Dieses Diagramm zeigt die dokumentierten Beschleunigungsfaktoren. Es misst
@@ -377,9 +408,9 @@ manual references.
 
 ```text
 Vergleich dokumentierter Gesamtaufwand / sichtbares KI-Lieferfenster
-Erfahren   | ############################## | 115.6 d
-Thorsten   | ###################            |  74.0 d
-KI sichtbar| ##                             |   7.0 d
+Erfahren   | ############################## | 253.5 d
+Thorsten   | ###################            | 162.3 d
+KI sichtbar| #                              |   8.0 d
 ```
 
 Dieses Diagramm vergleicht die drei Gesamtperspektiven direkt: konservative
@@ -400,17 +431,17 @@ ASCII-X/Y-Verlauf der dokumentierten Phasenbasis (Zeilen)
 4000 |   *
 3000 |   *   *
 2000 |
-1000 |           *
-   0 +---+---+---+---+--->
-      0   1   2   3   4
+1000 |           *   *
+   0 +---+---+---+---+---+--->
+      0   1   2   3   4   5
 ```
 
-Die X-Achse zeigt die dokumentierten Phasen `0` bis `4`, die Y-Achse das grobe
+Die X-Achse zeigt die dokumentierten Phasen `0` bis `5`, die Y-Achse das grobe
 Netto-Volumen in Zeilen. Das Diagramm ist bewusst einfach gehalten und soll vor
 allem den starken Anfangssprung und den spaeteren Abfall des sichtbaren
 Phasenvolumens schnell erklaeren.
 
-The X-axis shows the documented phases `0` to `4`, while the Y-axis shows the
+The X-axis shows the documented phases `0` to `5`, while the Y-axis shows the
 rough net volume in lines. The chart is intentionally simple and is meant to
 explain quickly the strong early jump and the later decline in visible phase
 volume.
