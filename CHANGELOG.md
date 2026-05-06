@@ -1,5 +1,18 @@
 # Changelog
 
+## [0.2.2](https://github.com/hindermath/TinyCalc/compare/v0.2.1...v0.2.2) (2026-05-06)
+
+
+### Documentation / Dokumentation
+
+* amend constitution for preset governance ([ec007ed](https://github.com/hindermath/TinyCalc/commit/ec007eda11c0e0c72c1124a4db8aa90c464d136a))
+* propagate spec-kit preset governance ([f6df40c](https://github.com/hindermath/TinyCalc/commit/f6df40cbd8ac38746543f0f43b61021910f3af84))
+
+
+### Maintenance / Wartung
+
+* configure spec-kit governance presets ([bb93e31](https://github.com/hindermath/TinyCalc/commit/bb93e3148b61bfa2ec522615b8fa71ff81db64d1))
+
 ## [0.2.1](https://github.com/hindermath/TinyCalc/compare/v0.2.0...v0.2.1) (2026-04-30)
 
 
