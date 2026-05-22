@@ -50,28 +50,26 @@
   boundaries, defense in depth, least privilege, fail-safe defaults, attack
   surface reduction, separation of concerns, secure configuration, supply-chain
   security). State how trust boundaries and layered security apply.
-- **General architecture governance**: If the feature affects structure,
-  interfaces, quality attributes, runtime behavior, deployment, or long-term
-  maintainability, state the iSAQB/arc42 evidence path from `constitution.md`,
-  Principle XX (`docs/architecture/`, ADRs, quality scenarios, risks), or mark
-  it `N/A` with rationale.
 - **Security documentation**: Identify which mandatory security documents apply
   (threat model, S-ADRs, arc42 Section 8 security concepts, security checklist,
   dependency audit, security quality scenarios). State whether `docs/security/`
   needs new or updated documents. Templates: `.specify/templates/`.
 - **Security standards applicability**: Determine which standards from
-  `constitution.md`, Principles XIV-XX apply. `NIST SSDF` and `CWE Top 25`
+  `constitution.md`, Principles XIV-XVIII apply. `NIST SSDF` and `CWE Top 25`
   always apply to Level-2; add `OWASP ASVS`, `SBOM`, `VEX`, `SLSA`, `CAPEC`,
-  `NIST Zero Trust`, `OWASP SAMM`, `OWASP Cheat Sheet Series` /
+  `AI-SBOM`, `NIST Zero Trust`, `OWASP SAMM`, `OWASP Cheat Sheet Series` /
   `OWASP Proactive Controls`, and `OpenSSF Scorecard` where relevant. Mark
   non-applicable standards as `N/A` with justification.
+- **AI-SBOM applicability**: State whether AI is used only as a development
+  tool, absent from the released/operated system, or present as a runtime or
+  product component. If AI runtime or product components are present, plan the
+  G7/BSI AI-SBOM evidence across metadata, system-level properties, models,
+  datasets, infrastructure, security properties, and key performance
+  indicators. If not, record the `N/A` rationale.
 - **Release / supply-chain evidence**: State whether the feature requires
-  ASVS verification notes, SBOM/VEX artefacts, provenance/SLSA evidence,
-  CAPEC references, Zero-Trust applicability notes, or SAMM follow-up items,
-  and where that evidence will live.
-- **CRA applicability**: State whether EU Cyber Resilience Act applicability is
-  unchanged, `N/A`, or needs an updated record in `docs/security/` or release
-  governance documentation.
+  ASVS verification notes, SBOM/VEX artefacts, AI-SBOM evidence,
+  provenance/SLSA evidence, CAPEC references, Zero-Trust applicability notes,
+  or SAMM follow-up items, and where that evidence will live.
 - **Default evidence files**: Prefer `docs/security/asvs-verification.md`,
   `docs/security/supply-chain-evidence.md`,
   `docs/security/zero-trust-applicability.md`, and
@@ -86,18 +84,12 @@
 - **Security-first**: Confirm no credential files, agent state, logs, history,
   or SQLite state are planned for tracking.
 - **Inclusion/A11Y**: Identify affected user-facing artefacts and the WCAG 2.2
-  Level AA or text-first review path. Use `docs/accessibility/` evidence where
-  the feature changes CLI output, documentation, HTML, UI, generated templates,
-  error messages, or changelogs.
+  Level AA or text-first review path.
 - **Bilingual delivery**: State how DE-first/EN-second requirements apply.
-- **Cross-platform scripts**: If script-shaped tooling is added or changed,
-  state the Bash/PowerShell parity, man-page, comment-based help, and Cmdlet
-  evidence path from `constitution.md`, Principle II, or mark it `N/A`.
 - **Statistics**: State whether `docs/project-statistics.md` needs an update
   and which manual/Thorsten-Solo baseline applies.
 - **Agent guidance parity**: State whether `AGENTS.md`, `CLAUDE.md`,
-  `GEMINI.md`, `.github/copilot-instructions.md`, or any other declared agent
-  surfaces are affected together.
+  `GEMINI.md`, and `.github/copilot-instructions.md` are affected together.
 
 ## Project Structure
 
