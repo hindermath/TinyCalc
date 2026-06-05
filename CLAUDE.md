@@ -101,6 +101,9 @@ Governed by `.editorconfig`:
   `<exception>` where applicable).
 - Do not suppress CS1591 globally; missing public XML docs are treated as errors.
 - If API signatures or XML comments change, regenerate DocFX output in the same PR/commit.
+- New or changed non-trivial logic must be reviewed for didactic inline-comment value when it affects learner understanding or maintainability.
+- Inline comments explain why a decision, trade-off, constraint, historical deviation, or proof boundary exists; do not add comments that merely restate obvious code.
+- Keep inline-comment intensity moderate: normally 1-3 lines before a non-trivial block, with German-first/English-second CEFR-B2 text for didactic explanation blocks.
 
 ## Help File Resolution
 

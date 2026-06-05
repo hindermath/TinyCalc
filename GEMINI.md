@@ -69,6 +69,9 @@ dotnet run --no-build --configuration Release --project src/MicroCalc.Tui/MicroC
   `<returns>`, `<exception>` where applicable).
 - Do not suppress CS1591 globally.
 - If API signatures or XML comments change, regenerate DocFX output in the same change set.
+- New or changed non-trivial logic must be reviewed for didactic inline-comment value when it affects learner understanding or maintainability.
+- Inline comments explain why a decision, trade-off, constraint, historical deviation, or proof boundary exists; do not add comments that merely restate obvious code.
+- Keep inline-comment intensity moderate: normally 1-3 lines before a non-trivial block, with German-first/English-second CEFR-B2 text for didactic explanation blocks.
 
 ## Legacy Reference
 The original Pascal files (`CALC.PAS`, `CALC.INC`) and the help file (`CALC.HLP`) are stored in the root directory. These are the source of truth for behavior and feature parity.

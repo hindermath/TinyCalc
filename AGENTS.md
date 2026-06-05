@@ -38,6 +38,9 @@ Use xUnit (`Microsoft.NET.Test.Sdk`, `xunit`, `coverlet.collector`). Name test f
 - Public APIs must include complete XML documentation (`<summary>`, `<param>`, `<returns>`, `<exception>` where applicable).
 - Do not globally suppress CS1591; missing public XML docs must be fixed.
 - If API signatures or XML comments change, regenerate DocFX output in the same change.
+- New or changed non-trivial logic must be reviewed for didactic inline-comment value when it affects learner understanding or maintainability.
+- Inline comments explain why a decision, trade-off, constraint, historical deviation, or proof boundary exists; do not add comments that merely restate obvious code.
+- Keep inline-comment intensity moderate: normally 1-3 lines before a non-trivial block, with German-first/English-second CEFR-B2 text for didactic explanation blocks.
 
 ## Commit & Pull Request Guidelines
 Recent history follows Conventional Commit-style prefixes (`docs:`, `test:`, `chore:`). Keep commits focused and imperative.

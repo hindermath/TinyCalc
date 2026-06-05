@@ -89,6 +89,9 @@ Fixed grid: columns `A`–`G` (7 columns), 21 rows, 147 total cells. Cell input 
 - Large normative documents such as `Pflichtenheft*.md` and `Lastenheft*.md` may use a synchronized English sidecar with suffix `.EN.md` instead of an oversized inline-bilingual file; the German version remains canonical unless explicitly marked otherwise.
 - Public APIs require complete XML docs (`<summary>`, `<param>`, `<returns>`, `<exception>` where applicable). Do not suppress CS1591 globally — missing XML docs are treated as build errors.
 - When API signatures or XML comments change, regenerate DocFX output in the same PR.
+- New or changed non-trivial logic must be reviewed for didactic inline-comment value when it affects learner understanding or maintainability.
+- Inline comments explain why a decision, trade-off, constraint, historical deviation, or proof boundary exists; do not add comments that merely restate obvious code.
+- Keep inline-comment intensity moderate: normally 1-3 lines before a non-trivial block, with German-first/English-second CEFR-B2 text for didactic explanation blocks.
 
 ### TDD expectation
 - For behavior changes, write tests first and make them fail (RED) before implementation.
