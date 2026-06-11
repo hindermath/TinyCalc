@@ -11,6 +11,8 @@ Before continuing, apply the Architecture Governance preset:
 - plan threat-model and ADR updates when boundaries, integrations, or flows
   change
 - surface Zero Trust and SAMM work explicitly when relevant
+- surface BSI C3A cloud autonomy work explicitly for cloud services and
+  provider-dependent deployments
 
 Before continuing, apply the iSAQB Architecture Governance preset:
 
@@ -71,9 +73,3 @@ Use this command to produce an implementation plan from an approved specificatio
 
 - No gate is left unresolved without rationale.
 - Test, coverage, dependency, and documentation impacts are planned before implementation.
-
-
-
-
-
-
