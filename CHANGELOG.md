@@ -1,5 +1,36 @@
 # Changelog
 
+## [0.3.0](https://github.com/hindermath/TinyCalc/compare/v0.2.1...v0.3.0) (2026-06-14)
+
+
+### Features / Neue Funktionen
+
+* update architecture governance preset to v0.3.0 ([699560c](https://github.com/hindermath/TinyCalc/commit/699560c1c209ac55bc7f48494c3d827af9d4bb96))
+
+
+### Bug Fixes / Fehlerbehebungen
+
+* relax homogeneity EN guidance detection ([f2365a9](https://github.com/hindermath/TinyCalc/commit/f2365a94781cb7c2e77bda95c089cf56bbd250b9))
+
+
+### Documentation / Dokumentation
+
+* add didactic inline comment hardening guidance ([4ad6349](https://github.com/hindermath/TinyCalc/commit/4ad63493a138ede2953358014572b29312c25975))
+* add GitHub and GitLab CLI-first guidance ([64974a0](https://github.com/hindermath/TinyCalc/commit/64974a022b3f029d9eda856bed0e3f147a3aca21))
+* add Spec-Kit model routing guidance ([47e8e39](https://github.com/hindermath/TinyCalc/commit/47e8e399a5e5bd485c5b1294b7bb322d215d5241))
+* amend constitution for preset governance ([ec007ed](https://github.com/hindermath/TinyCalc/commit/ec007eda11c0e0c72c1124a4db8aa90c464d136a))
+* propagate AI-SBOM governance ([01f623c](https://github.com/hindermath/TinyCalc/commit/01f623c524ec925287771c22126a4355eae64cb3))
+* propagate security-governance v0.4.0 ([26b59b6](https://github.com/hindermath/TinyCalc/commit/26b59b65500c2cc266f0e160175d38f615d76659))
+* propagate spec-kit preset governance ([f6df40c](https://github.com/hindermath/TinyCalc/commit/f6df40cbd8ac38746543f0f43b61021910f3af84))
+
+
+### Maintenance / Wartung
+
+* configure spec-kit governance presets ([bb93e31](https://github.com/hindermath/TinyCalc/commit/bb93e3148b61bfa2ec522615b8fa71ff81db64d1))
+* update agent parity governance to v0.2.0 ([7b4c257](https://github.com/hindermath/TinyCalc/commit/7b4c257ed108469f764128daabeff0682b8043dc))
+* update governance presets ([0e32eb4](https://github.com/hindermath/TinyCalc/commit/0e32eb468c266b8b18aafe1643f4de8e2fa62876))
+* update governance presets for audit evidence ([3ea3dde](https://github.com/hindermath/TinyCalc/commit/3ea3dde606312abb77cf609f4f6d530622810f63))
+
 ## [0.2.1](https://github.com/hindermath/TinyCalc/compare/v0.2.0...v0.2.1) (2026-04-30)
 
 
