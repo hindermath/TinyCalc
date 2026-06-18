@@ -26,7 +26,24 @@ jobs:
 
       - name: Install ripgrep (macOS)
         if: runner.os == 'macOS'
-        run: brew install ripgrep
+        env:
+          RIPGREP_VERSION: 15.1.0
+        run: |
+          set -euo pipefail
+          arch="$(uname -m)"
+          case "$arch" in
+            arm64) target="aarch64-apple-darwin" ;;
+            x86_64) target="x86_64-apple-darwin" ;;
+            *) echo "Unsupported macOS architecture: $arch" >&2; exit 1 ;;
+          esac
+          archive="ripgrep-${RIPGREP_VERSION}-${target}.tar.gz"
+          base_url="https://github.com/BurntSushi/ripgrep/releases/download/${RIPGREP_VERSION}"
+          curl -fsSLO "${base_url}/${archive}"
+          curl -fsSLO "${base_url}/${archive}.sha256"
+          shasum -a 256 -c "${archive}.sha256"
+          tar -xzf "${archive}"
+          sudo install -m 0755 "ripgrep-${RIPGREP_VERSION}-${target}/rg" /usr/local/bin/rg
+          rg --version
 
       - name: Install ripgrep (Windows)
         if: runner.os == 'Windows'
