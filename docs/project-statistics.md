@@ -1,6 +1,6 @@
 # Projektstatistik MicroCalc
 
-Stand: 2026-06-18 (aktualisiert nach Claude-Code-Review-Gate-Fix fuer Release-Please-PRs)
+Stand: 2026-06-19 (aktualisiert nach Lastenheft-Abarbeitungsreihenfolge)
 
 ## Zweck und Pflege
 
@@ -86,22 +86,22 @@ fortgeschrieben.
 | Git-Aktivtage | 8 |
 | Produktionscode aktuell | 16 Dateien / 2728 Zeilen |
 | Testcode aktuell | 3 Dateien / 775 Zeilen |
-| Dokumentation aktuell | 210 Dateien / 16779 Zeilen |
+| Dokumentation aktuell | 212 Dateien / 16876 Zeilen |
 | Davon Spec-Kit-Artefakte | 46 Template-Dateien / 7922 Zeilen in `.specify/` |
 | Davon Governance/Agent-Dateien | 5 Dateien / 1910 Zeilen |
-| Gesamtbasis fuer Handschaetzung (inkl. Dokumentation) | 20282 Zeilen |
-| Erfahrener Entwickler, konservative Untergrenze | 253.5 Arbeitstage |
-| Erfahrener Entwickler, konservative Untergrenze in Stunden | 1977.5 Stunden (253.5 * 7.8) |
+| Gesamtbasis fuer Handschaetzung (inkl. Dokumentation) | 20379 Zeilen |
+| Erfahrener Entwickler, konservative Untergrenze | 254.7 Arbeitstage |
+| Erfahrener Entwickler, konservative Untergrenze in Stunden | 1987.0 Stunden (254.7 * 7.8) |
 | Erfahrener Entwickler, brutto | 11.8 Arbeitsmonate (21.5 Tage/Monat) |
-| Erfahrener Entwickler, TVoeD-Annahme | 13.3 Kalendermonate bzw. 1.1 Jahre |
-| Thorsten solo, erfahrungsadjustierte Untergrenze | 162.3 Arbeitstage |
-| Thorsten solo, erfahrungsadjustierte Untergrenze in Stunden | 1265.6 Stunden (162.3 * 7.8) |
-| Thorsten solo, brutto | 7.5 Arbeitsmonate (21.5 Tage/Monat) |
-| Thorsten solo, TVoeD-Annahme | 8.5 Kalendermonate bzw. 0.7 Jahre |
-| Kleines Team (3 Personen, +20 % Koordination), Untergrenze | 101.4 Arbeitstage |
-| Kleines Team (3 Personen, +20 % Koordination), TVoeD-Annahme | 5.3 Kalendermonate |
-| Repo-weiter Beschleunigungsfaktor vs. konservative Referenz | 31.7x (253.5 / 8 Git-Aktivtage) |
-| Repo-weiter Beschleunigungsfaktor vs. Thorsten-Referenz | 20.3x (162.3 / 8 Git-Aktivtage) |
+| Erfahrener Entwickler, TVoeD-Annahme | 13.4 Kalendermonate bzw. 1.1 Jahre |
+| Thorsten solo, erfahrungsadjustierte Untergrenze | 163.0 Arbeitstage |
+| Thorsten solo, erfahrungsadjustierte Untergrenze in Stunden | 1271.6 Stunden (163.0 * 7.8) |
+| Thorsten solo, brutto | 7.6 Arbeitsmonate (21.5 Tage/Monat) |
+| Thorsten solo, TVoeD-Annahme | 8.6 Kalendermonate bzw. 0.7 Jahre |
+| Kleines Team (3 Personen, +20 % Koordination), Untergrenze | 101.9 Arbeitstage |
+| Kleines Team (3 Personen, +20 % Koordination), TVoeD-Annahme | 5.4 Kalendermonate |
+| Repo-weiter Beschleunigungsfaktor vs. konservative Referenz | 31.8x (254.7 / 8 Git-Aktivtage) |
+| Repo-weiter Beschleunigungsfaktor vs. Thorsten-Referenz | 20.4x (163.0 / 8 Git-Aktivtage) |
 
 ## Branch-Ueberblick
 
@@ -249,20 +249,20 @@ fortgeschrieben.
 
 ## Einordnung der KI-/Spec-Kit-Wirkung
 
-- Die beobachtbare manuelle Gesamtbasis liegt bereits bei 20282 Zeilen
+- Die beobachtbare manuelle Gesamtbasis liegt bereits bei 20379 Zeilen
   (Produktionscode + Tests + Dokumentation).
 - Selbst mit der konservativen Obergrenze von 80 manuell erstellten Zeilen pro
-  Arbeitstag ergibt sich bereits eine Untergrenze von 253.5
+  Arbeitstag ergibt sich bereits eine Untergrenze von 254.7
   Entwickler-Arbeitstagen.
 - Unter TVoeD-Annahme mit 30 Urlaubstagen pro Jahr entspricht das fuer einen
-  erfahrenen Entwickler ca. 13.3 Kalendermonaten bzw. 1.1 Arbeitsjahren; fuer
-  ein 3er-Team mit 20 % Koordinationsaufschlag ca. 5.3 Kalendermonaten.
+  erfahrenen Entwickler ca. 13.4 Kalendermonaten bzw. 1.1 Arbeitsjahren; fuer
+  ein 3er-Team mit 20 % Koordinationsaufschlag ca. 5.4 Kalendermonaten.
 - Unter Einbezug von Thorstens Erfahrungsprofil sinkt die klassische
-  Solo-Referenz fuer MicroCalc auf ca. 162.3 Arbeitstage bzw.
-  8.5 TVoeD-Kalendermonate.
+  Solo-Referenz fuer MicroCalc auf ca. 163.0 Arbeitstage bzw.
+  8.6 TVoeD-Kalendermonate.
 - Gegen die sichtbaren 8 Git-Aktivtage ergibt sich damit ein repo-weiter
-  Beschleunigungsfaktor von ca. 31.7x gegen die konservative Referenz und
-  ca. 20.3x gegen die erfahrungsadjustierte Thorsten-Referenz.
+  Beschleunigungsfaktor von ca. 31.8x gegen die konservative Referenz und
+  ca. 20.4x gegen die erfahrungsadjustierte Thorsten-Referenz.
 - Die Git-Historie zeigt eine deutliche Verdichtung: sehr hoher Doku- und
   Planungsanteil bei gleichzeitig schneller Code- und Testumsetzung.
 
@@ -293,6 +293,7 @@ fortgeschrieben.
 | 2026-05-05 | Constitution v1.13.0 nach sechs Spec-Kit-Governance-Presets | Die Verfassung wurde nach der Preset-Integration auf allgemeine iSAQB/arc42-Architektur-Governance erweitert; Plan-, Spec- und Tasks-Templates wurden um Architektur-, A11Y-, Cross-Platform-, Agent-Parity- und CRA-Evidenzpfade ergaenzt; 19 fehlende Preset-Templates wurden nach `.specify/templates/` uebernommen; die vier Agent-Dateien wurden synchronisiert. Diese Runde war reine Dokumentations-/Governance-Arbeit mit `0` Produktionscode-Zeilen, `0` Testcode-Zeilen und vor dieser Statistik-Fortschreibung `+1099 / -10` Dokumentationszeilen netto. Konservative Manualreferenz: 80 Zeilen/Tag = `13.6` Tage (ca. `106.2` Stunden); Thorsten-Solo-Referenz: 125 Zeilen/Tag = `8.7` Tage (ca. `68.0` Stunden); sichtbares Arbeitsfenster: 1 Agentensitzung am 2026-05-05. |
 | 2026-06-05 | Didaktische Inline-Code-Kommentar-Haertung vorbereitet | `Lastenheft_Didactic-Inline-Code-Comment-Hardening.md` wurde als Specify-ready Intake fuer eine moderate Inline-Kommentar-Haertung angelegt. Der Lauf soll Engine-, Formula-, Recalc-, Textoverflow-, TUI- und Test-Helfer-Flows pruefen, ohne Runtime-Verhalten, Tabellenkalkulationsfunktionen oder TUI-Migration zu veraendern. `AGENTS.md`, `CLAUDE.md`, `GEMINI.md` und `.github/copilot-instructions.md` halten nun fest, dass neue oder geaenderte nicht-triviale Logik auf didaktischen Kommentarbedarf geprueft wird und Kommentare Warum, Trade-off, Randbedingung, historische Abweichung oder Proof-Grenze erklaeren muessen. Validierung: Doku-/Guidance-Suchcheck und `git diff --check`; keine Build-/Test-/DocFX-Ausfuehrung, weil nur Lastenheft, Guidance und Statistik geaendert wurden. |
 | 2026-06-18 | Claude-Code-Review-Gate fuer Release-Please-PRs korrigiert | Die PR-Runs fuer Release-Please-PR `#20` standen zunaechst auf `action_required`; nach manuellem Re-run liefen `ci`, Gitleaks, Agent Secret Scan und Homogeneity Check erfolgreich. Der verbleibende Claude-Code-Review-Fehler entstand, weil der Workflow vom `github-actions[bot]` ausgeloest wurde und die Action Bot-Akteure ohne explizite Freigabe blockiert. `.github/workflows/claude-code-review.yml` erlaubt jetzt gezielt nur `github-actions[bot]` ueber `allowed_bots`, statt alle Bots per Wildcard freizugeben. Die danach sichtbaren Node-20-Deprecation-Annotationen wurden durch die Umstellung aller sechs Checkout-Schritte auf den offiziell verfuegbaren `actions/checkout@v6` und des .NET-Setup-Schritts auf `actions/setup-dotnet@v5` nachgezogen. Der macOS-Homogeneity-Job installiert `ripgrep` nun aus dem offiziellen Release-Archiv mit SHA-256-Pruefung statt ueber Homebrew, damit die Homebrew-Tap-Trust-Annotation aus der Runner-Umgebung nicht mehr entsteht. Diese Runde war reine CI-/Workflow-Konfiguration mit `0` Produktionscode-Zeilen, `0` Testcode-Zeilen, `0` Dokumentationszeilen vor dieser Statistik-Fortschreibung und `+19` Workflow-YAML-Zeilen netto; die Checkout- und Setup-Aktualisierungen sind versionsbezogene YAML-Ersetzungen ohne Netto-Zeilenzuwachs. Konservative Manualreferenz: 80 Zeilen/Tag = `0.2` Tage (ca. `1.9` Stunden); Thorsten-Solo-Referenz: 125 Zeilen/Tag = `0.2` Tage (ca. `1.2` Stunden); sichtbares Arbeitsfenster: 1 kurze Agentensitzung am 2026-06-18. |
+| 2026-06-19 | Lastenheft-Abarbeitungsreihenfolge vorbereitet | Alle sechs vorbereiteten Lastenhefte wurden in eine spaetere Spec-Kit-Abarbeitungsreihenfolge gebracht: Constitution/Governance, Terminal.Gui-Migration, MicroCalc-zu-TinyCalc-Rename, TUI-A11Y, didaktische Inline-Kommentar-Haertung und abschliessende Secure-Development-Haertung. Die sichtbare Reihenfolge liegt in `docs/Lastenheft_Abarbeitungsreihenfolge.md`; `docs/WORKFLOW_NOTES.md` verweist darauf. Diese Runde startet keinen Spec-Kit-Lauf, erzeugt keine Branches, keine Specs, keine Tasks und keine Implementierung. Aenderungsumfang vor dieser Statistik-Fortschreibung: `0` Produktionscode-Zeilen, `0` Testcode-Zeilen und `+97` Dokumentationszeilen netto. Konservative Manualreferenz: 80 Zeilen/Tag = `1.2` Tage (ca. `9.5` Stunden); Thorsten-Solo-Referenz: 125 Zeilen/Tag = `0.8` Tage (ca. `6.1` Stunden); sichtbares Arbeitsfenster: 1 kurze Agentensitzung am 2026-06-19. |
 
 ## Gesamtstatistik
 
@@ -302,25 +303,25 @@ Phasenwerte aus den Abschnitten `## Gesamtstand des Repositories` und
 
 | Kennzahl | Verdichteter Gesamtblick |
 |---|---:|
-| Artefaktbasis gesamt | `20282` Zeilen |
-| Produktions- und Testcode zusammen | `3503` Zeilen (`17.3 %`) |
-| Dokumentationsanteil | `16779` Zeilen (`82.7 %`) |
-| Spec-Kit-Anteil innerhalb der Doku | `7922` Zeilen (`47.2 %`) |
-| Governance-/Agent-Anteil innerhalb der Doku | `1910` Zeilen (`11.4 %`) |
+| Artefaktbasis gesamt | `20379` Zeilen |
+| Produktions- und Testcode zusammen | `3503` Zeilen (`17.2 %`) |
+| Dokumentationsanteil | `16876` Zeilen (`82.8 %`) |
+| Spec-Kit-Anteil innerhalb der Doku | `7922` Zeilen (`46.9 %`) |
+| Governance-/Agent-Anteil innerhalb der Doku | `1910` Zeilen (`11.3 %`) |
 | Beobachtbarer Projektzeitraum | `2026-02-07` bis `2026-05-05` |
 | Git-Commits pro sichtbarem Aktivtag | `8.5` (`68 / 8`) |
-| Dokumentierte Gesamtzeilen pro sichtbarem Aktivtag | `2535.3` (`20282 / 8`) |
-| Dokumentierte Gesamtzeilen pro Commit | `298.3` (`20282 / 68`) |
-| Konservative Einzelentwickler-Untergrenze | `253.5` Arbeitstage / `1977.5` Stunden |
-| Thorsten-Solo-Untergrenze | `162.3` Arbeitstage / `1265.6` Stunden |
-| Kleines 3er-Team mit Koordinationsaufschlag | `101.4` Arbeitstage |
-| Repo-weiter Speedup gg. 80-Zeilen-Referenz | `31.7x` |
-| Repo-weiter Speedup gg. Thorsten-Referenz | `20.3x` |
+| Dokumentierte Gesamtzeilen pro sichtbarem Aktivtag | `2547.4` (`20379 / 8`) |
+| Dokumentierte Gesamtzeilen pro Commit | `299.7` (`20379 / 68`) |
+| Konservative Einzelentwickler-Untergrenze | `254.7` Arbeitstage / `1987.0` Stunden |
+| Thorsten-Solo-Untergrenze | `163.0` Arbeitstage / `1271.6` Stunden |
+| Kleines 3er-Team mit Koordinationsaufschlag | `101.9` Arbeitstage |
+| Repo-weiter Speedup gg. 80-Zeilen-Referenz | `31.8x` |
+| Repo-weiter Speedup gg. Thorsten-Referenz | `20.4x` |
 
 Kurzfazit:
 Der aktuell dokumentierte Snapshot ist klar dokumentationslastig: Rund
-`82.7 %` der sichtbaren Basis liegen in Markdown-, Governance- und
-Planungsartefakten, waehrend Produktions- und Testcode zusammen `17.3 %`
+`82.8 %` der sichtbaren Basis liegen in Markdown-, Governance- und
+Planungsartefakten, waehrend Produktions- und Testcode zusammen `17.2 %`
 ausmachen. Das passt zum beobachtbaren Verlauf von `TinyCalc`, in dem
 Portierung, Governance, Spezifikation und Nachweis sehr frueh stark
 mitgewachsen sind. Die Beschleunigungsfaktoren beschreiben dabei keine
@@ -329,8 +330,8 @@ Referenzen.
 
 Short summary:
 The currently documented snapshot is clearly documentation-heavy. About
-`82.7 %` of the visible baseline sits in Markdown, governance, and planning
-artifacts, while production and test code together make up `17.3 %`. This
+`82.8 %` of the visible baseline sits in Markdown, governance, and planning
+artifacts, while production and test code together make up `17.2 %`. This
 matches the visible `TinyCalc` trajectory, where porting, governance,
 specification, and proof artifacts grew strongly from the start. The
 acceleration factors therefore describe visible delivery density, not a
@@ -340,9 +341,9 @@ stopwatch measurement.
 
 ```text
 Artefaktmix nach aktuell dokumentiertem Snapshot (Zeilen)
-Produktion     | ##############                 | 2728 | 29.5 %
-Tests          | ####                           |  775 |  8.4 %
-Dokumentation  | ############################## |16779 | 82.7 %
+Produktion     | #####                          | 2728 | 13.4 %
+Tests          | #                              |  775 |  3.8 %
+Dokumentation  | ############################## |16876 | 82.8 %
 ```
 
 Dieses Diagramm zeigt, wie der aktuell dokumentierte Repository-Snapshot
@@ -390,8 +391,8 @@ agentic support.
 
 ```text
 Dokumentierte Beschleunigungsfaktoren durch agentische KI + Spec-Kit/SDD
-Repo 80  | #####################    | 31.7x
-Repo125  | ##############           | 20.3x
+Repo 80  | #####################    | 31.8x
+Repo125  | ##############           | 20.4x
 0 main   | ###############          | 23.0x
 1 init   | ##############           | 21.6x
 2 001    | ######################## | 37.0x
@@ -410,8 +411,8 @@ manual references.
 
 ```text
 Vergleich dokumentierter Gesamtaufwand / sichtbares KI-Lieferfenster
-Erfahren   | ############################## | 253.5 d
-Thorsten   | ###################            | 162.3 d
+Erfahren   | ############################## | 254.7 d
+Thorsten   | ###################            | 163.0 d
 KI sichtbar| #                              |   8.0 d
 ```
 
