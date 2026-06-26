@@ -32,4 +32,5 @@ Diese Tabelle wird aus `Lastenheft*.md` im Repository-Root erzeugt. Sie ist eine
 | 4 | `Lastenheft_A11Y_TUI.md` | UI/A11Y/Dokumentation | aktiv / active |
 | 5 | `Lastenheft_Didactic-Inline-Code-Comment-Hardening.md` | UI/A11Y/Dokumentation | aktiv / active |
 | 6 | `Lastenheft_Secure-Development-Hardening.md` | Secure-Development-Hardening | aktiv / active |
+| 7 | `Lastenheft_Sandbox-gestuetzte-Secure-Development-Haertung.md` | Secure-Development-Hardening | aktiv / active |
 <!-- secure-development-hardening-order:end -->
