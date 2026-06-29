@@ -29,8 +29,9 @@ Diese Tabelle wird aus `Lastenheft*.md` im Repository-Root erzeugt. Sie ist eine
 | 1 | `Lastenheft_Constitution_Change.md` | Governance/Baseline | aktiv / active |
 | 2 | `Lastenheft_Rename_MicroCalc_TinyCalc.md` | Migration/Tooling | aktiv / active |
 | 3 | `Lastenheft_TerminalGui_Migration.md` | Migration/Tooling | aktiv / active |
-| 4 | `Lastenheft_A11Y_TUI.md` | UI/A11Y/Dokumentation | aktiv / active |
-| 5 | `Lastenheft_Didactic-Inline-Code-Comment-Hardening.md` | UI/A11Y/Dokumentation | aktiv / active |
-| 6 | `Lastenheft_Secure-Development-Hardening.md` | Secure-Development-Hardening | aktiv / active |
-| 7 | `Lastenheft_Sandbox-gestuetzte-Secure-Development-Haertung.md` | Secure-Development-Hardening | aktiv / active |
+| 4 | `Lastenheft_Sandbox-gestuetzte-Secure-Development-Haertung.md` | Kernlogik/Runtime | aktiv / active |
+| 5 | `Lastenheft_A11Y_TUI.md` | UI/A11Y/Dokumentation | aktiv / active |
+| 6 | `Lastenheft_Didactic-Inline-Code-Comment-Hardening.md` | UI/A11Y/Dokumentation | aktiv / active |
+| 7 | `Lastenheft_RL-SE-Checklist-Selbstpruefung.md` | RL-SE-/Checklist-Selbstpruefung | aktiv / active |
+| 8 | `Lastenheft_Secure-Development-Hardening.md` | Secure-Development-Hardening | aktiv / active |
 <!-- secure-development-hardening-order:end -->
