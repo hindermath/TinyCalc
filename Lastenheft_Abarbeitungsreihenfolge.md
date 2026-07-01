@@ -33,5 +33,6 @@ Diese Tabelle wird aus `Lastenheft*.md` im Repository-Root erzeugt. Sie ist eine
 | 5 | `Lastenheft_A11Y_TUI.md` | UI/A11Y/Dokumentation | aktiv / active |
 | 6 | `Lastenheft_Didactic-Inline-Code-Comment-Hardening.md` | UI/A11Y/Dokumentation | aktiv / active |
 | 7 | `Lastenheft_RL-SE-Checklist-Selbstpruefung.md` | RL-SE-/Checklist-Selbstpruefung | aktiv / active |
-| 8 | `Lastenheft_Secure-Development-Hardening.md` | Secure-Development-Hardening | aktiv / active |
+| 8 | `Lastenheft_GSDB-Spec-Kit-Intensivpruefung.md` | GSDB-Spec-Kit-Intensivpruefung | aktiv / active |
+| 9 | `Lastenheft_Secure-Development-Hardening.md` | Secure-Development-Hardening | aktiv / active |
 <!-- secure-development-hardening-order:end -->
