@@ -1,5 +1,54 @@
 # Changelog
 
+## [0.3.0](https://github.com/hindermath/TinyCalc/compare/v0.2.1...v0.3.0) (2026-07-10)
+
+
+### Features / Neue Funktionen
+
+* update architecture governance preset to v0.3.0 ([699560c](https://github.com/hindermath/TinyCalc/commit/699560c1c209ac55bc7f48494c3d827af9d4bb96))
+
+
+### Bug Fixes / Fehlerbehebungen
+
+* relax homogeneity EN guidance detection ([f2365a9](https://github.com/hindermath/TinyCalc/commit/f2365a94781cb7c2e77bda95c089cf56bbd250b9))
+
+
+### Documentation / Dokumentation
+
+* add didactic inline comment hardening guidance ([4ad6349](https://github.com/hindermath/TinyCalc/commit/4ad63493a138ede2953358014572b29312c25975))
+* add generic secure development guide ([82c5746](https://github.com/hindermath/TinyCalc/commit/82c574660c76b7ecb93e36194fbf496c3b52c567))
+* add GitHub and GitLab CLI-first guidance ([64974a0](https://github.com/hindermath/TinyCalc/commit/64974a022b3f029d9eda856bed0e3f147a3aca21))
+* add GSDB preflight intake ([bb1ec92](https://github.com/hindermath/TinyCalc/commit/bb1ec92e98bdd1aae8308941a1707df9885308e5))
+* add Lastenheft processing order ([c08ab94](https://github.com/hindermath/TinyCalc/commit/c08ab943022667ea400f2bd34de2b27cbf5941a9))
+* add sandbox hardening intake ([71fede9](https://github.com/hindermath/TinyCalc/commit/71fede9d0ff00901d15b8c1dda2dad182856012f))
+* add secure development hardening intake ([b648158](https://github.com/hindermath/TinyCalc/commit/b648158543f9d95034a346b7bc38da463b81ce3c))
+* add Spec-Kit model routing guidance ([47e8e39](https://github.com/hindermath/TinyCalc/commit/47e8e399a5e5bd485c5b1294b7bb322d215d5241))
+* amend constitution for preset governance ([ec007ed](https://github.com/hindermath/TinyCalc/commit/ec007eda11c0e0c72c1124a4db8aa90c464d136a))
+* clarify memory-safe language examples ([3708e4c](https://github.com/hindermath/TinyCalc/commit/3708e4c65dfa62bee71ba4074e7cf860c939a8ce))
+* prepare RL-SE checklist self-assessment ([8fa506c](https://github.com/hindermath/TinyCalc/commit/8fa506c4604eafc07d102afd1cec13fa604fdda6))
+* prepare RL-SE checklist self-assessment ([761a83a](https://github.com/hindermath/TinyCalc/commit/761a83ae15de6983fe4dc3e0d12a7197cd72b7d9))
+* prepare RL-SE checklist self-assessment ([a63ab3b](https://github.com/hindermath/TinyCalc/commit/a63ab3b9a9e00cc04c8ab8816df5eeb2cb75bc9d))
+* prepare secure development hardening ([506f135](https://github.com/hindermath/TinyCalc/commit/506f1350ceefa5b23a3b0d5d569f166627b70043))
+* prepare secure development hardening ([6602c7c](https://github.com/hindermath/TinyCalc/commit/6602c7c16a452dcf1ece3b3f4c5ede0fb006057c))
+* prepare secure development hardening ([f5bc1b9](https://github.com/hindermath/TinyCalc/commit/f5bc1b9bc2d565d181eeffd20d4a96ff8544f47a))
+* prepare spec kit intake guidance ([1254ed7](https://github.com/hindermath/TinyCalc/commit/1254ed790ffee6684fa7d718b9823a1624f57029))
+* propagate AI-SBOM governance ([01f623c](https://github.com/hindermath/TinyCalc/commit/01f623c524ec925287771c22126a4355eae64cb3))
+* propagate security-governance v0.4.0 ([26b59b6](https://github.com/hindermath/TinyCalc/commit/26b59b65500c2cc266f0e160175d38f615d76659))
+* propagate spec-kit preset governance ([f6df40c](https://github.com/hindermath/TinyCalc/commit/f6df40cbd8ac38746543f0f43b61021910f3af84))
+* record GSDB self-assessment ([ccdeb95](https://github.com/hindermath/TinyCalc/commit/ccdeb9546c6f849b85208d9c9c7eaa6433728360))
+* reference secure development guide in constitution ([1d31957](https://github.com/hindermath/TinyCalc/commit/1d3195784a1d9ecf3fe8628ba04fd6b95ff98d28))
+* update secure development baseline to 3.0.0 ([fa5132c](https://github.com/hindermath/TinyCalc/commit/fa5132ca00bc331fdf085756444db76b3695b141))
+
+
+### Maintenance / Wartung
+
+* configure spec-kit governance presets ([bb93e31](https://github.com/hindermath/TinyCalc/commit/bb93e3148b61bfa2ec522615b8fa71ff81db64d1))
+* **security:** add gitleaks.toml allowlist for secure-development teaching docs ([4539811](https://github.com/hindermath/TinyCalc/commit/45398115b0bd86970f8fac2e226154c608c97641))
+* update agent parity governance to v0.2.0 ([7b4c257](https://github.com/hindermath/TinyCalc/commit/7b4c257ed108469f764128daabeff0682b8043dc))
+* update governance presets ([0e32eb4](https://github.com/hindermath/TinyCalc/commit/0e32eb468c266b8b18aafe1643f4de8e2fa62876))
+* update governance presets for audit evidence ([3ea3dde](https://github.com/hindermath/TinyCalc/commit/3ea3dde606312abb77cf609f4f6d530622810f63))
+* update spec-kit integrations ([667320c](https://github.com/hindermath/TinyCalc/commit/667320cc34abb9c4e82098d68cc466a28a876bc6))
+
 ## [0.2.1](https://github.com/hindermath/TinyCalc/compare/v0.2.0...v0.2.1) (2026-04-30)
 
 
