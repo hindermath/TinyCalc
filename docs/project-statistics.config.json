@@ -1,0 +1,58 @@
+{
+  "$schema": "../scripts/config/project-statistics.schema.json",
+  "schemaVersion": 1,
+  "methodologyVersion": 2,
+  "repositoryName": "TinyCalc",
+  "timeZone": "Europe/Berlin",
+  "activityWindowWeeks": 52,
+  "references": {
+    "conservativeLinesPerDay": 80,
+    "thorstenLinesPerDay": 125
+  },
+  "phases": [
+    {
+      "slot": 0,
+      "id": "main",
+      "labelDe": "main",
+      "labelEn": "main",
+      "netLines": 7368
+    },
+    {
+      "slot": 1,
+      "id": "init",
+      "labelDe": "Initialisierung",
+      "labelEn": "Initialization",
+      "netLines": 3456
+    },
+    {
+      "slot": 2,
+      "id": "001",
+      "labelDe": "001",
+      "labelEn": "001",
+      "netLines": 2962
+    },
+    {
+      "slot": 3,
+      "id": "harden",
+      "labelDe": "Haertung",
+      "labelEn": "Hardening",
+      "netLines": 782
+    },
+    {
+      "slot": 4,
+      "id": "002v",
+      "labelDe": "002 Versionierung",
+      "labelEn": "002 versioning",
+      "netLines": 42
+    },
+    {
+      "slot": 5,
+      "id": "gov",
+      "labelDe": "Governance",
+      "labelEn": "Governance",
+      "netLines": 1089
+    }
+  ],
+  "excludedPaths": [],
+  "categoryOverrides": []
+}
