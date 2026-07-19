@@ -295,8 +295,7 @@ fortgeschrieben.
 | 2026-06-18 | Claude-Code-Review-Gate fuer Release-Please-PRs korrigiert | Die PR-Runs fuer Release-Please-PR `#20` standen zunaechst auf `action_required`; nach manuellem Re-run liefen `ci`, Gitleaks, Agent Secret Scan und Homogeneity Check erfolgreich. Der verbleibende Claude-Code-Review-Fehler entstand, weil der Workflow vom `github-actions[bot]` ausgeloest wurde und die Action Bot-Akteure ohne explizite Freigabe blockiert. `.github/workflows/claude-code-review.yml` erlaubt jetzt gezielt nur `github-actions[bot]` ueber `allowed_bots`, statt alle Bots per Wildcard freizugeben. Die danach sichtbaren Node-20-Deprecation-Annotationen wurden durch die Umstellung aller sechs Checkout-Schritte auf den offiziell verfuegbaren `actions/checkout@v6` und des .NET-Setup-Schritts auf `actions/setup-dotnet@v5` nachgezogen. Der macOS-Homogeneity-Job installiert `ripgrep` nun aus dem offiziellen Release-Archiv mit SHA-256-Pruefung statt ueber Homebrew, damit die Homebrew-Tap-Trust-Annotation aus der Runner-Umgebung nicht mehr entsteht. Diese Runde war reine CI-/Workflow-Konfiguration mit `0` Produktionscode-Zeilen, `0` Testcode-Zeilen, `0` Dokumentationszeilen vor dieser Statistik-Fortschreibung und `+19` Workflow-YAML-Zeilen netto; die Checkout- und Setup-Aktualisierungen sind versionsbezogene YAML-Ersetzungen ohne Netto-Zeilenzuwachs. Konservative Manualreferenz: 80 Zeilen/Tag = `0.2` Tage (ca. `1.9` Stunden); Thorsten-Solo-Referenz: 125 Zeilen/Tag = `0.2` Tage (ca. `1.2` Stunden); sichtbares Arbeitsfenster: 1 kurze Agentensitzung am 2026-06-18. |
 | 2026-06-19 | Lastenheft-Abarbeitungsreihenfolge vorbereitet | Alle sechs vorbereiteten Lastenhefte wurden in eine spaetere Spec-Kit-Abarbeitungsreihenfolge gebracht: Constitution/Governance, Terminal.Gui-Migration, MicroCalc-zu-TinyCalc-Rename, TUI-A11Y, didaktische Inline-Kommentar-Haertung und abschliessende Secure-Development-Haertung. Die sichtbare Reihenfolge liegt in `docs/Lastenheft_Abarbeitungsreihenfolge.md`; `docs/WORKFLOW_NOTES.md` verweist darauf. Diese Runde startet keinen Spec-Kit-Lauf, erzeugt keine Branches, keine Specs, keine Tasks und keine Implementierung. Aenderungsumfang vor dieser Statistik-Fortschreibung: `0` Produktionscode-Zeilen, `0` Testcode-Zeilen und `+97` Dokumentationszeilen netto. Konservative Manualreferenz: 80 Zeilen/Tag = `1.2` Tage (ca. `9.5` Stunden); Thorsten-Solo-Referenz: 125 Zeilen/Tag = `0.8` Tage (ca. `6.1` Stunden); sichtbares Arbeitsfenster: 1 kurze Agentensitzung am 2026-06-19. |
 
-## Gesamtstatistik
-
+## Statistikprofil-1-Archiv / Statistics Profile 1 Archive
 Basis dieses Schlussblocks sind die aktuell dokumentierten Snapshot- und
 Phasenwerte aus den Abschnitten `## Gesamtstand des Repositories` und
 `## Phasen und grundlegende Arbeiten` weiter oben.
@@ -448,3 +447,189 @@ The X-axis shows the documented phases `0` to `5`, while the Y-axis shows the
 rough net volume in lines. The chart is intentionally simple and is meant to
 explain quickly the strong early jump and the later decline in visible phase
 volume.
+
+## Gesamtstatistik / Overall Statistics
+
+<!-- project-statistics-v2:begin -->
+
+Profil 2 verwendet Git-getrackte Textdateien und sichtbare Git-Aktivitaet. Die Werte beschreiben Lieferdichte, keine persoenliche Arbeitszeit.
+
+*Profile 2 uses Git-tracked text files and visible Git activity. The values describe delivery density, not personal working time.*
+
+| Kennzahl / Metric | Wert / Value |
+|---|---:|
+| Textbasis / Text base | 96179 lines |
+| Textdateien / Text files | 567 |
+| Beobachtbarer Zeitraum / Observable period | 2025-07-27..2026-07-19 |
+| Aktivtage / Active days | 53 |
+| Relevante Commits / Relevant commits | 150 |
+| Zeilen je Aktivtag / Lines per active day | 1814.7 |
+| Peak-Tag im Fenster / Peak day in window | 2026-06-17 / 27058 |
+| Peak-Woche im Fenster / Peak week in window | 2026-06-14 / 32513 |
+| Laengste Serie / Longest streak | 5 days |
+| Speedup vs. 80 lines/day | 22.7x |
+| Speedup vs. 125 lines/day | 14.5x |
+| Methodik / Methodology | v2; source `b8a2c28869ff` |
+
+### Artefaktmix / Artifact Mix
+
+```text
+Produktiv / Production          [#...................]   2.9% | 2748
+Tests                           [#...................]   1.6% | 1545
+Dokumentation / Documentation   [#################...]  83.8% | 80622
+Skripte / Scripts               [##..................]   8.3% | 7937
+Konfiguration / Configuration   [#...................]   0.4% | 428
+Daten und Medien / Data and media [....................]   0.0% | 0
+Sonstiger Text / Other text     [#...................]   3.0% | 2899
+```
+
+Die Balken teilen die aktuelle getrackte Textbasis in stabile Kategorien. Prozent und Zeilenwert sind die genaue, textorientierte Aussage.
+
+*The bars split the current tracked text base into stable categories. Percentages and line counts provide the exact text-first result.*
+
+### Tagesaktivitaet / Daily Activity
+
+```text
+Wochen / Weeks 01..26 | 2025-07-27..2026-01-24
+So/Su  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Mo/Mo  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Di/Tu  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Mi/We  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Do/Th  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Fr/Fr  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+Sa/Sa  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+```
+
+```text
+Wochen / Weeks 27..52 | 2026-01-25..2026-07-25
+So/Su  0 0 1 0 0 1 3 0 4 0 0 2 0 0 0 0 0 0 1 0 4 0 0 0 1 4
+Mo/Mo  0 0 1 0 0 0 0 0 0 2 0 1 4 0 4 0 0 0 0 0 0 0 3 1 4 -
+Di/Tu  0 0 0 0 0 0 0 0 0 3 0 0 0 0 3 0 0 3 0 0 0 0 2 0 3 -
+Mi/We  0 0 0 0 0 0 0 0 1 0 0 0 3 0 2 0 0 0 2 0 4 0 2 0 0 -
+Do/Th  0 0 0 0 0 0 0 0 0 0 0 0 0 4 0 0 0 1 0 4 1 0 0 0 1 -
+Fr/Fr  0 0 0 0 4 4 0 0 2 4 0 2 4 0 0 0 4 2 2 0 3 2 3 4 4 -
+Sa/Sa  0 4 0 0 4 0 0 0 2 0 0 0 0 0 0 0 0 0 0 0 4 0 4 4 0 -
+```
+
+DE: 0 = keine Aenderung; 1 = 1..79; 2 = 80..399; 3 = 400..1599; 4 = 1600+ geaenderte Textzeilen; - = noch nicht abgelaufen.
+
+*EN: 0 = no change; 1 = 1..79; 2 = 80..399; 3 = 400..1599; 4 = 1600+ changed text lines; - = not elapsed.*
+
+### Wochenvolumen / Weekly Volume
+
+```text
+Wochen / Weeks 01..26 | 2025-07-27..2026-01-24
+Keine Aktivitaet / No activity
+```
+
+```text
+Wochen / Weeks 27..52 | 2026-01-25..2026-07-25
+   cap 50000 | . . . . . . . . . . . . . . . . . . . . . . . . . .
+       41667 | . . . . . . . . . . . . . . . . . . . . . . . . . .
+       33333 | . . . . . . . . . . . . . . . . . . . . . . . . . .
+       25000 | . . . . . . . . . . . . . . . . . . . . # . . . . .
+       16667 | . . . . . . . . . . . . . . . . . . . . # . . . . .
+        8333 | . . . . # . . . . . . . # . # . . . . . # . . # . #
+           0 +-----------------------------------------------------
+```
+
+Das Wochenvolumen zeigt Additionen plus Loeschungen. Es ist Aenderungsaktivitaet, nicht die aktuelle Groesse des Repositories.
+
+*Weekly volume shows additions plus deletions. It represents change activity, not the current repository size.*
+
+### Kumulative Entwicklung / Cumulative Development
+
+```text
+Wochen / Weeks 01..26 | 2025-07-27..2026-01-24
+Keine Aktivitaet / No activity
+```
+
+```text
+Wochen / Weeks 27..52 | 2026-01-25..2026-07-25
+  cap 200000 | . . . . . . . . . . . . . . . . . . . . . . . . . .
+      166667 | . . . . . . . . . . . . . . . . . . . . . . . . . .
+      133333 | . . . . . . . . . . . . . . . . . . . . . . . . . #
+      100000 | . . . . . . . . . . . . . . . . . . . . . . # # # #
+       66667 | . . . . . . . . . . . . . . . . . . . # # # # # # #
+       33333 | . . . . . . . . . # # # # # # # # # # # # # # # # #
+           0 +-----------------------------------------------------
+```
+
+Die kumulative Kurve summiert nur das Brutto-Aenderungsvolumen im Fenster. Sie darf nicht als aktuelle Codebasis gelesen werden.
+
+*The cumulative curve sums gross change volume within the window only. It must not be read as the current code base.*
+
+### Phasenvolumen / Phase Volume
+
+```text
+Slots 0..5
+   cap 10000 | . . . . . .
+        8333 | . . . . . .
+        6667 | # . . . . .
+        5000 | # . . . . .
+        3333 | # # . . . .
+        1667 | # # # . . .
+           0 +-------------
+             00 01 02 03 04 05
+```
+
+| Slot | Phase | Nettozeilen / Net lines |
+|---:|---|---:|
+| 0 | main / main | 7368 |
+| 1 | Initialisierung / Initialization | 3456 |
+| 2 | 001 / 001 | 2962 |
+| 3 | Haertung / Hardening | 782 |
+| 4 | 002 Versionierung / 002 versioning | 42 |
+| 5 | Governance / Governance | 1089 |
+
+Die festen Slots halten den Phasenvergleich auch bei fehlenden oder spaeter ergaenzten Werten stabil.
+
+*Stable slots keep the phase comparison consistent when values are missing or added later.*
+
+### Beschleunigungsfaktoren / Acceleration Factors
+
+```text
+Scale: 0..50x
+80 lines/day       [#########...........] 22.7x
+125 lines/day      [######..............] 14.5x
+```
+
+Die Faktoren vergleichen sichtbare Lieferdichte mit den dokumentierten manuellen Referenzen. Sie messen keine Arbeitszeit.
+
+*The factors compare visible delivery density with documented manual references. They do not measure working time.*
+
+### Durchsatzvergleich / Throughput Comparison
+
+```text
+Scale: 0..2000 lines/day
+Experienced manual [#...................] 80
+Thorsten solo      [#...................] 125
+Visible repository [##################..] 1814.7
+```
+
+Die gemeinsame Skala vergleicht Referenzen und sichtbare Lieferdichte. Sie schreibt die Git-Aktivitaet keiner Person oder KI pauschal zu.
+
+*The common scale compares references with visible delivery density. It does not attribute Git activity to a person or AI by default.*
+
+### Textalternative / Text Alternative
+
+DE: Das Fenster beginnt am 2025-07-27 und endet am 2026-07-19. Es enthaelt 53 aktive und 305 inaktive vergangene Tage. Peak-Tag: 2026-06-17 / 27058. Peak-Woche: 2026-06-14 / 32513. Laengste Serie: 5 Tage (2026-07-10..2026-07-14).
+
+*EN: The window starts on 2025-07-27 and ends on 2026-07-19. It contains 53 active and 305 inactive elapsed days. Peak day: 2026-06-17 / 27058. Peak week: 2026-06-14 / 32513. Longest streak: 5 days (2026-07-10..2026-07-14).*
+
+| Monat / Month | Geaenderte Textzeilen / Changed text lines |
+|---|---:|
+| 2025-08 | 0 |
+| 2025-09 | 0 |
+| 2025-10 | 0 |
+| 2025-11 | 0 |
+| 2025-12 | 0 |
+| 2026-01 | 0 |
+| 2026-02 | 17964 |
+| 2026-03 | 14288 |
+| 2026-04 | 17917 |
+| 2026-05 | 13420 |
+| 2026-06 | 37318 |
+| 2026-07 | 39054 |
+
+<!-- project-statistics-v2:end -->
