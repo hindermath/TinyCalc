@@ -27,7 +27,7 @@ Dieses Lastenheft beschreibt einen spaeteren Spec-Kit-Lauf, der prueft, wie dies
 - `docs/secure-development/checklisten/CL_12_Agentische-KI-Sandbox.md`.
 - `docs/secure-development/mitgeltende-dokumente/Leitlinie_Sichere-Entwicklungs-Sandbox.md`.
 - Vorhandenes `Lastenheft_Secure-Development-Hardening.md` dieses Repositories.
-- Die sieben Governance-Presets: `security-governance`, `architecture-governance`, `isaqb-architecture-governance`, `a11y-governance`, `cross-platform-governance`, `agent-parity-governance`.
+- Die acht Governance-Presets: `security-governance`, `architecture-governance`, `isaqb-architecture-governance`, `a11y-governance`, `cross-platform-governance`, `agent-parity-governance`.
 - Sandbox-Kontext `container-images/absdd-image-sandbox`.
 
 ## Scope
@@ -77,7 +77,7 @@ Beruecksichtige:
 - CL_12 Agentische KI in Sandbox-Umgebungen.
 - Leitlinie_Sichere-Entwicklungs-Sandbox.md.
 - Lastenheft_Secure-Development-Hardening.md dieses Repositories.
-- Alle sieben Governance-Presets mit auditfaehigen Applicable/N/A/Open-Entscheidungen.
+- Alle acht Governance-Presets mit auditfaehigen Applicable/N/A/Open-Entscheidungen.
 - Projektkontext: .NET 10 / C# spreadsheet and Terminal.Gui TUI port; Pascal reference artefacts for behaviour parity.
 - Build/Test-Baseline: dotnet restore/build/test MicroCalc.sln; xUnit suites; non-interactive TUI smoke mode.
 - Dokumentations- und A11Y-Basis: DocFX changes require text-oriented A11Y smoke review; documentation and didactic comments stay DE-first/EN-second at CEFR B2.
