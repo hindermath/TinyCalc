@@ -458,25 +458,25 @@ Profil 2 verwendet Git-getrackte Textdateien und sichtbare Git-Aktivitaet. Die W
 
 | Kennzahl / Metric | Wert / Value |
 |---|---:|
-| Textbasis / Text base | 96085 lines |
+| Textbasis / Text base | 96088 lines |
 | Textdateien / Text files | 566 |
 | Beobachtbarer Zeitraum / Observable period | 2025-07-27..2026-07-19 |
 | Aktivtage / Active days | 53 |
-| Relevante Commits / Relevant commits | 145 |
-| Zeilen je Aktivtag / Lines per active day | 1812.9 |
+| Relevante Commits / Relevant commits | 146 |
+| Zeilen je Aktivtag / Lines per active day | 1813.0 |
 | Peak-Tag im Fenster / Peak day in window | 2026-06-17 / 27058 |
 | Peak-Woche im Fenster / Peak week in window | 2026-06-14 / 32513 |
 | Laengste Serie / Longest streak | 5 days |
 | Speedup vs. 80 lines/day | 22.7x |
 | Speedup vs. 125 lines/day | 14.5x |
-| Methodik / Methodology | v2; source `828872501bcd` |
+| Methodik / Methodology | v2; source `7fb895dd0390` |
 
 ### Artefaktmix / Artifact Mix
 
 ```text
 Produktiv / Production          [#...................]   2.9% | 2748
 Tests                           [#...................]   1.6% | 1545
-Dokumentation / Documentation   [#################...]  83.8% | 80557
+Dokumentation / Documentation   [#################...]  83.8% | 80560
 Skripte / Scripts               [##..................]   8.2% | 7908
 Konfiguration / Configuration   [#...................]   0.4% | 428
 Daten und Medien / Data and media [....................]   0.0% | 0
@@ -604,7 +604,7 @@ Die Faktoren vergleichen sichtbare Lieferdichte mit den dokumentierten manuellen
 Scale: 0..2000 lines/day
 Experienced manual [#...................] 80
 Thorsten solo      [#...................] 125
-Visible repository [##################..] 1812.9
+Visible repository [##################..] 1813.0
 ```
 
 Die gemeinsame Skala vergleicht Referenzen und sichtbare Lieferdichte. Sie schreibt die Git-Aktivitaet keiner Person oder KI pauschal zu.
@@ -630,6 +630,6 @@ DE: Das Fenster beginnt am 2025-07-27 und endet am 2026-07-19. Es enthaelt 53 ak
 | 2026-04 | 17917 |
 | 2026-05 | 13420 |
 | 2026-06 | 37318 |
-| 2026-07 | 38830 |
+| 2026-07 | 38849 |
 
 <!-- project-statistics-v2:end -->
