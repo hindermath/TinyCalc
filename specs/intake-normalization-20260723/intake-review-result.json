@@ -1,0 +1,98 @@
+{
+  "schemaVersion": "1.0",
+  "reviewId": "f98dbf0a-64d7-4226-abec-b536fef88595",
+  "mode": "Series",
+  "status": "Ready",
+  "policy": "tinycalc-active-lastenhefte-v1",
+  "reviewedAt": "2026-07-23T14:32:39Z",
+  "repository": {
+    "root": ".",
+    "head": "e04f82d5669b8dab8e41f761fe9c6ed777118138"
+  },
+  "targets": [
+    {
+      "path": "Lastenheft_Constitution_Change.md",
+      "role": "Primary",
+      "normalizedSha256": "a46ff154633ff2979379847a36fa9a6e157ceca249a4fff283fe452425431d59",
+      "gitBlob": "N/A"
+    },
+    {
+      "path": "Lastenheft_Rename_MicroCalc_TinyCalc.md",
+      "role": "OrderedMember",
+      "normalizedSha256": "be54c723dfbd2803eea86a8c3f02e2eaedc52d1c07328a4221fe0d1785094a45",
+      "gitBlob": "N/A"
+    },
+    {
+      "path": "Lastenheft_TerminalGui_Migration.md",
+      "role": "OrderedMember",
+      "normalizedSha256": "3450414273d371c025e6f9303f9add3e0abf5da2754c7be5953c09b96a579bb1",
+      "gitBlob": "N/A"
+    },
+    {
+      "path": "Lastenheft_Sandbox-gestuetzte-Secure-Development-Haertung.md",
+      "role": "OrderedMember",
+      "normalizedSha256": "8b57678f9270217b1ac3b5c4558ff4eb9fa2ef3b67d071f1c3aa28250295b29d",
+      "gitBlob": "N/A"
+    },
+    {
+      "path": "Lastenheft_A11Y_TUI.md",
+      "role": "OrderedMember",
+      "normalizedSha256": "6be69742f6fe1b103115098418bf61a02b7c8af22296927015806404a11f568f",
+      "gitBlob": "N/A"
+    },
+    {
+      "path": "Lastenheft_Didactic-Inline-Code-Comment-Hardening.md",
+      "role": "OrderedMember",
+      "normalizedSha256": "5b1c0862e152a690197e642d007e3e9db4aa3fc5f18d8fe2f0d36b3fa5dbaa7b",
+      "gitBlob": "N/A"
+    },
+    {
+      "path": "Lastenheft_RL-SE-Checklist-Selbstpruefung.md",
+      "role": "OrderedMember",
+      "normalizedSha256": "9b327114465b18d8201ab6a9f975d1475bb1bfdfaa1f5f3570f7439e11b22071",
+      "gitBlob": "N/A"
+    },
+    {
+      "path": "Lastenheft_GSDB-Spec-Kit-Intensivpruefung.md",
+      "role": "OrderedMember",
+      "normalizedSha256": "6afdafc02e890e420351d7de2eafb68ce096b640f4a5bb2f0372aade623d86d0",
+      "gitBlob": "N/A"
+    },
+    {
+      "path": "Lastenheft_Secure-Development-Hardening.md",
+      "role": "OrderedMember",
+      "normalizedSha256": "27171d868caa130feacbad1059d1b0bb909bf64cfb51e507980ea93bed6d9fba",
+      "gitBlob": "N/A"
+    }
+  ],
+  "findings": [],
+  "questions": [],
+  "acceptedRisks": [],
+  "operatorExceptions": [],
+  "coverage": {
+    "individual": [
+      "Lastenheft_Constitution_Change.md",
+      "Lastenheft_Rename_MicroCalc_TinyCalc.md",
+      "Lastenheft_TerminalGui_Migration.md",
+      "Lastenheft_Sandbox-gestuetzte-Secure-Development-Haertung.md",
+      "Lastenheft_A11Y_TUI.md",
+      "Lastenheft_Didactic-Inline-Code-Comment-Hardening.md",
+      "Lastenheft_RL-SE-Checklist-Selbstpruefung.md",
+      "Lastenheft_GSDB-Spec-Kit-Intensivpruefung.md",
+      "Lastenheft_Secure-Development-Hardening.md"
+    ],
+    "series": [
+      "All 9 active paths and their exact order",
+      "Repository ordering, predecessor gates, overlap, terminology, authority, and no-auto-start boundaries",
+      "Excluded archive and overview classifications from target-manifest.json"
+    ],
+    "workers": []
+  },
+  "summary": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+  },
+  "supersedes": "N/A"
+}
