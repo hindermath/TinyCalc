@@ -32,19 +32,3 @@ ausdrueckliche Benutzerfreigabe.
 *This review starts no later command. Historical features and non-executable
 series maps remain unchanged. Every later run still requires current explicit
 user authorization.*
-## Schema-1.1-Graphbindung / Schema 1.1 graph binding
-
-- Neuer Review / New review: `d4ae2c72-34a1-4c98-9f27-87a8030dc5f5`
-- Ersetzt / Supersedes: `f98dbf0a-64d7-4226-abec-b536fef88595`
-- Gebundene Ziele / Bound targets: 9
-- Wurzeln / Roots: 1
-- Abhaengigkeitskanten / Dependency edges: 8
-- Request-Bindung / Request binding: repository-relativer Pfad und normalisierter SHA-256
-
-Die Reihenfolge und der azyklische Request-Graph wurden gegen die
-repository-eigenen Reihenfolge- und Lernreihendokumente neu geprueft. Der
-Review startet keinen nachgelagerten Spec-Kit-Lauf.
-
-*The order and acyclic request graph were revalidated against the repository's
-own ordering and learning-series documents. This review starts no downstream
-Spec Kit command.*
