@@ -1,6 +1,6 @@
 {
-  "schemaVersion": "1.1",
-  "reviewId": "d4ae2c72-34a1-4c98-9f27-87a8030dc5f5",
+  "schemaVersion": "1.0",
+  "reviewId": "f98dbf0a-64d7-4226-abec-b536fef88595",
   "mode": "Series",
   "policy": "tinycalc-active-lastenhefte-v1",
   "targets": [
@@ -53,51 +53,7 @@
       "Lastenheft_GSDB-Spec-Kit-Intensivpruefung.md",
       "Lastenheft_Secure-Development-Hardening.md"
     ],
-    "roots": [
-      "Lastenheft_Constitution_Change.md"
-    ],
-    "dependencies": [
-      {
-        "from": "Lastenheft_Constitution_Change.md",
-        "to": "Lastenheft_Rename_MicroCalc_TinyCalc.md",
-        "kind": "Precedes"
-      },
-      {
-        "from": "Lastenheft_Rename_MicroCalc_TinyCalc.md",
-        "to": "Lastenheft_TerminalGui_Migration.md",
-        "kind": "Precedes"
-      },
-      {
-        "from": "Lastenheft_TerminalGui_Migration.md",
-        "to": "Lastenheft_Sandbox-gestuetzte-Secure-Development-Haertung.md",
-        "kind": "Precedes"
-      },
-      {
-        "from": "Lastenheft_Sandbox-gestuetzte-Secure-Development-Haertung.md",
-        "to": "Lastenheft_A11Y_TUI.md",
-        "kind": "Precedes"
-      },
-      {
-        "from": "Lastenheft_A11Y_TUI.md",
-        "to": "Lastenheft_Didactic-Inline-Code-Comment-Hardening.md",
-        "kind": "Precedes"
-      },
-      {
-        "from": "Lastenheft_Didactic-Inline-Code-Comment-Hardening.md",
-        "to": "Lastenheft_RL-SE-Checklist-Selbstpruefung.md",
-        "kind": "Precedes"
-      },
-      {
-        "from": "Lastenheft_RL-SE-Checklist-Selbstpruefung.md",
-        "to": "Lastenheft_GSDB-Spec-Kit-Intensivpruefung.md",
-        "kind": "Precedes"
-      },
-      {
-        "from": "Lastenheft_GSDB-Spec-Kit-Intensivpruefung.md",
-        "to": "Lastenheft_Secure-Development-Hardening.md",
-        "kind": "Precedes"
-      }
-    ]
+    "dependencies": []
   },
   "campaign": {
     "manifestPath": "N/A",

@@ -1,13 +1,13 @@
 {
-  "schemaVersion": "1.1",
-  "reviewId": "d4ae2c72-34a1-4c98-9f27-87a8030dc5f5",
+  "schemaVersion": "1.0",
+  "reviewId": "f98dbf0a-64d7-4226-abec-b536fef88595",
   "mode": "Series",
   "status": "Ready",
   "policy": "tinycalc-active-lastenhefte-v1",
-  "reviewedAt": "2026-07-23T17:47:13Z",
+  "reviewedAt": "2026-07-23T14:32:39Z",
   "repository": {
     "root": ".",
-    "head": "8a0d50b870cd9ba7d8d9344e47b26e652d712134"
+    "head": "e04f82d5669b8dab8e41f761fe9c6ed777118138"
   },
   "targets": [
     {
@@ -94,9 +94,5 @@
     "medium": 0,
     "low": 0
   },
-  "supersedes": "f98dbf0a-64d7-4226-abec-b536fef88595",
-  "requestEvidence": {
-    "path": "specs/intake-normalization-20260723/intake-review-request.json",
-    "normalizedSha256": "ce87301de2ae1ce7606fc6e9bdec67f9f81746074791e9d60937ff60115362a8"
-  }
+  "supersedes": "N/A"
 }
