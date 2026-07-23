@@ -1,0 +1,63 @@
+{
+  "schemaVersion": "1.0",
+  "reviewId": "f98dbf0a-64d7-4226-abec-b536fef88595",
+  "mode": "Series",
+  "policy": "tinycalc-active-lastenhefte-v1",
+  "targets": [
+    {
+      "path": "Lastenheft_Constitution_Change.md",
+      "role": "Primary"
+    },
+    {
+      "path": "Lastenheft_Rename_MicroCalc_TinyCalc.md",
+      "role": "OrderedMember"
+    },
+    {
+      "path": "Lastenheft_TerminalGui_Migration.md",
+      "role": "OrderedMember"
+    },
+    {
+      "path": "Lastenheft_Sandbox-gestuetzte-Secure-Development-Haertung.md",
+      "role": "OrderedMember"
+    },
+    {
+      "path": "Lastenheft_A11Y_TUI.md",
+      "role": "OrderedMember"
+    },
+    {
+      "path": "Lastenheft_Didactic-Inline-Code-Comment-Hardening.md",
+      "role": "OrderedMember"
+    },
+    {
+      "path": "Lastenheft_RL-SE-Checklist-Selbstpruefung.md",
+      "role": "OrderedMember"
+    },
+    {
+      "path": "Lastenheft_GSDB-Spec-Kit-Intensivpruefung.md",
+      "role": "OrderedMember"
+    },
+    {
+      "path": "Lastenheft_Secure-Development-Hardening.md",
+      "role": "OrderedMember"
+    }
+  ],
+  "series": {
+    "orderedTargetPaths": [
+      "Lastenheft_Constitution_Change.md",
+      "Lastenheft_Rename_MicroCalc_TinyCalc.md",
+      "Lastenheft_TerminalGui_Migration.md",
+      "Lastenheft_Sandbox-gestuetzte-Secure-Development-Haertung.md",
+      "Lastenheft_A11Y_TUI.md",
+      "Lastenheft_Didactic-Inline-Code-Comment-Hardening.md",
+      "Lastenheft_RL-SE-Checklist-Selbstpruefung.md",
+      "Lastenheft_GSDB-Spec-Kit-Intensivpruefung.md",
+      "Lastenheft_Secure-Development-Hardening.md"
+    ],
+    "dependencies": []
+  },
+  "campaign": {
+    "manifestPath": "N/A",
+    "workers": [],
+    "operatorExceptions": []
+  }
+}
