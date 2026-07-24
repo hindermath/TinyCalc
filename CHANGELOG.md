@@ -1,5 +1,72 @@
 # Changelog
 
+## [0.4.0](https://github.com/hindermath/TinyCalc/compare/v0.3.0...v0.4.0) (2026-07-24)
+
+
+### Features / Neue Funktionen
+
+* add ASCII statistics profile 2 toolchain ([49cf4c6](https://github.com/hindermath/TinyCalc/commit/49cf4c6b81469794bcd4da732b65ae86fa7d2671))
+
+
+### Bug Fixes / Fehlerbehebungen
+
+* address statistics review and guidance drift ([ea37b26](https://github.com/hindermath/TinyCalc/commit/ea37b2677a989ebf0daf9711f28a882fb0949978))
+* align statistics entry points across platforms ([a9eb226](https://github.com/hindermath/TinyCalc/commit/a9eb2261a38a701ae4a5bd0c57b2f45f7e687c36))
+* align statistics profile window and portability ([8288725](https://github.com/hindermath/TinyCalc/commit/828872501bcd94650ce0d936dcf88493f5230b3d))
+* apply v0.2.1 fleet review follow-up ([305279a](https://github.com/hindermath/TinyCalc/commit/305279a54762fc334754a699fad10954e2b6e706))
+* close Homogeneity runtime package ([e1ea303](https://github.com/hindermath/TinyCalc/commit/e1ea303b7f87a8f5bdce6d8a648c80099d77d951))
+* complete homogeneity statistics parity ([80aaa10](https://github.com/hindermath/TinyCalc/commit/80aaa10c18ec83cdd21061b6516540ef62735e0e))
+* complete literal workspace handling ([f768613](https://github.com/hindermath/TinyCalc/commit/f7686134e7b46bee19bdb634df96d18f95dfc615))
+* harden statistics paths and ASCII output ([b8a2c28](https://github.com/hindermath/TinyCalc/commit/b8a2c28869ffe389c3871c5de7541d5508ec791a))
+* make statistics file handling literal and portable ([7fb895d](https://github.com/hindermath/TinyCalc/commit/7fb895dd0390fc95417b72c3997121a8283772a8))
+* normalize empty statistics entry count ([bafc7aa](https://github.com/hindermath/TinyCalc/commit/bafc7aad0d8375fb617ef05c8c0383eaf5eff6c9))
+
+
+### Documentation / Dokumentation
+
+* migrate statistics ledger to ASCII profile 2 ([d4947d4](https://github.com/hindermath/TinyCalc/commit/d4947d4f8763f6e489f1ad670af3056d1253c947))
+* normalize active Spec Kit intakes ([04092a4](https://github.com/hindermath/TinyCalc/commit/04092a4a1421f37d4ed1aa884b102562840be4b2))
+* refresh project statistics ([7dfab59](https://github.com/hindermath/TinyCalc/commit/7dfab593dc3624fa168d6144587433c16eaecf54))
+* refresh project statistics ([f81aa1e](https://github.com/hindermath/TinyCalc/commit/f81aa1e7ae4397293f0fae27960c8f23b3a6b10b))
+* refresh project statistics ([1dc36fc](https://github.com/hindermath/TinyCalc/commit/1dc36fc1f661b6e0512ec6555fab5fbf2d713b30))
+* refresh project statistics ([b678e2b](https://github.com/hindermath/TinyCalc/commit/b678e2bce38f4d7103028fd7c635091eeb6716ae))
+* refresh project statistics ([33b38b2](https://github.com/hindermath/TinyCalc/commit/33b38b2522dfeb560ada16d05fd38155ffb9a65f))
+* refresh project statistics ([7c8a9f5](https://github.com/hindermath/TinyCalc/commit/7c8a9f573a7b1c712d0bf15ade14d38101e5324f))
+* refresh project statistics ([4f6716f](https://github.com/hindermath/TinyCalc/commit/4f6716f96de58d687fbbafc96ddaaa3e737829b9))
+* refresh project statistics for intake authoring rollout ([91e0e9a](https://github.com/hindermath/TinyCalc/commit/91e0e9ad222fc4f1a8665a88028ec65f8876ced8))
+* refresh statistics after count normalization ([ecf076e](https://github.com/hindermath/TinyCalc/commit/ecf076e557fda9f489daa1aaa8fd18b1143665e5))
+* refresh statistics after entry-point alignment ([1c062f6](https://github.com/hindermath/TinyCalc/commit/1c062f662a5e32fe48f10601afb1adb92611a965))
+* refresh statistics after guidance sync ([c63f66b](https://github.com/hindermath/TinyCalc/commit/c63f66bf25faaca71a43a086b9e05e59735dc979))
+* refresh statistics after parity fixes ([28a3e01](https://github.com/hindermath/TinyCalc/commit/28a3e01427873d08621deece4ed208e941ca7afa))
+* refresh statistics after path hardening ([aac6227](https://github.com/hindermath/TinyCalc/commit/aac6227adeb60e489b5c2e9efaed54871c8ebf52))
+* refresh statistics after path hardening ([f12cef5](https://github.com/hindermath/TinyCalc/commit/f12cef5abcae356de375d2ecfb7b5159ae688bc8))
+* refresh statistics after review fixes ([1f53f53](https://github.com/hindermath/TinyCalc/commit/1f53f53f50a0b0d29b61b8d703740bc55adc6e1c))
+* refresh statistics after review follow-up ([75727d5](https://github.com/hindermath/TinyCalc/commit/75727d5357e532103216ad57219748e8c2d43ec8))
+* refresh statistics after window alignment ([633734f](https://github.com/hindermath/TinyCalc/commit/633734f2c10cbfe2bad5b24057097b7981a89b63))
+* render intake review rollout statistics ([873a9a2](https://github.com/hindermath/TinyCalc/commit/873a9a23c24ab18a9c728138076d60f711e3305b))
+* render project statistics ([af797b6](https://github.com/hindermath/TinyCalc/commit/af797b69ace159b34e20d4e70192b793c6d1ce56))
+* roll out autonomous preset documentation releases ([5917394](https://github.com/hindermath/TinyCalc/commit/591739473276fc7537856ba0473c33d6c5a5841e))
+* synchronize active Level-2 environment registry ([4ca2bba](https://github.com/hindermath/TinyCalc/commit/4ca2bba479d02e9762d8f4be9c7853c98440f0c3))
+* synchronize all five agent guidance surfaces ([e3c7d4b](https://github.com/hindermath/TinyCalc/commit/e3c7d4b43974a3d67cb02bd8c26b9064b52d2088))
+
+
+### Maintenance / Wartung
+
+* adopt standard eight governance presets ([acb1c2d](https://github.com/hindermath/TinyCalc/commit/acb1c2dc85fd6690feed14d5553cb78c1fa08111))
+* adopt standard seven governance presets ([bcb80da](https://github.com/hindermath/TinyCalc/commit/bcb80da9cf311365368cf27293df918d564e5989))
+* harden agentic toolchain maintenance ([8096ebe](https://github.com/hindermath/TinyCalc/commit/8096ebed702df8713aca34e4478f1a04a005673a))
+* harden agentic toolchain maintenance ([3e615d8](https://github.com/hindermath/TinyCalc/commit/3e615d8f33e590398d23793502f4b7bcb5641f11))
+* harden intake review series evidence ([418f26c](https://github.com/hindermath/TinyCalc/commit/418f26c3ac8d421512065582366071ccbad94438))
+* install intake authoring governance preset ([503e283](https://github.com/hindermath/TinyCalc/commit/503e28330b8cab6885cdf051a9a95095c14fc4a4))
+* install optional intake review governance ([ad034da](https://github.com/hindermath/TinyCalc/commit/ad034da4552e3e7d824966ede24721eb1a6f071f))
+* migrate to Antigravity CLI ([548b8e9](https://github.com/hindermath/TinyCalc/commit/548b8e90394da40c8831a18860efda78a8dae16f))
+* roll out autonomous preset documentation releases ([6c15396](https://github.com/hindermath/TinyCalc/commit/6c15396c82fa0dd2fc37a2b5fd94bab4704c1407))
+* sync agentic maintenance package ([aebda72](https://github.com/hindermath/TinyCalc/commit/aebda72c30737bd18effe9b46a52489665d917c4))
+* **toolchain:** propagate PSScriptAnalyzer baseline ([2a7535a](https://github.com/hindermath/TinyCalc/commit/2a7535a65dc8ba7f90d033dfc8d6f83aa65736c6))
+* **toolchain:** sync agentic maintenance baseline ([c6f1769](https://github.com/hindermath/TinyCalc/commit/c6f1769e96e4982500c4de0d1058f1d7c73ccae6))
+* update intake authoring governance to v0.1.1 ([f9ea6d5](https://github.com/hindermath/TinyCalc/commit/f9ea6d5c8d6fd6c5536db3b0c88109a4c296057f))
+* update intake authoring preset to v0.2.0 ([9f23de2](https://github.com/hindermath/TinyCalc/commit/9f23de2b073c486568ec6c7f5152276986d8bdc5))
+
 ## [0.3.0](https://github.com/hindermath/TinyCalc/compare/v0.2.1...v0.3.0) (2026-07-10)
 
 
