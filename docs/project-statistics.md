@@ -463,14 +463,14 @@ Profil 2 verwendet Git-getrackte Textdateien und sichtbare Git-Aktivitaet. Die W
 | Textdateien / Text files | 775 |
 | Beobachtbarer Zeitraum / Observable period | 2025-07-27..2026-07-25 |
 | Aktivtage / Active days | 59 |
-| Relevante Commits / Relevant commits | 163 |
+| Relevante Commits / Relevant commits | 164 |
 | Zeilen je Aktivtag / Lines per active day | 1871.1 |
 | Peak-Tag im Fenster / Peak day in window | 2026-06-17 / 27058 |
-| Peak-Woche im Fenster / Peak week in window | 2026-07-19 / 33142 |
+| Peak-Woche im Fenster / Peak week in window | 2026-07-19 / 33160 |
 | Laengste Serie / Longest streak | 7 days |
 | Speedup vs. 80 lines/day | 23.4x |
 | Speedup vs. 125 lines/day | 15.0x |
-| Methodik / Methodology | v2; source `e0f55786ed0c` |
+| Methodik / Methodology | v2; source `ca02d0d01edc` |
 
 ### Artefaktmix / Artifact Mix
 
@@ -614,9 +614,9 @@ Die gemeinsame Skala vergleicht Referenzen und sichtbare Lieferdichte. Sie schre
 
 ### Textalternative / Text Alternative
 
-DE: Das Fenster beginnt am 2025-07-27 und endet am 2026-07-25. Es enthaelt 59 aktive und 305 inaktive vergangene Tage. Peak-Tag: 2026-06-17 / 27058. Peak-Woche: 2026-07-19 / 33142. Laengste Serie: 7 Tage (2026-07-19..2026-07-25).
+DE: Das Fenster beginnt am 2025-07-27 und endet am 2026-07-25. Es enthaelt 59 aktive und 305 inaktive vergangene Tage. Peak-Tag: 2026-06-17 / 27058. Peak-Woche: 2026-07-19 / 33160. Laengste Serie: 7 Tage (2026-07-19..2026-07-25).
 
-*EN: The window starts on 2025-07-27 and ends on 2026-07-25. It contains 59 active and 305 inactive elapsed days. Peak day: 2026-06-17 / 27058. Peak week: 2026-07-19 / 33142. Longest streak: 7 days (2026-07-19..2026-07-25).*
+*EN: The window starts on 2025-07-27 and ends on 2026-07-25. It contains 59 active and 305 inactive elapsed days. Peak day: 2026-06-17 / 27058. Peak week: 2026-07-19 / 33160. Longest streak: 7 days (2026-07-19..2026-07-25).*
 
 | Monat / Month | Geaenderte Textzeilen / Changed text lines |
 |---|---:|
@@ -631,6 +631,6 @@ DE: Das Fenster beginnt am 2025-07-27 und endet am 2026-07-25. Es enthaelt 59 ak
 | 2026-04 | 17917 |
 | 2026-05 | 13420 |
 | 2026-06 | 37318 |
-| 2026-07 | 56057 |
+| 2026-07 | 56075 |
 
 <!-- project-statistics-v2:end -->
