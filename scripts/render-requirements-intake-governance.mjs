@@ -20,7 +20,7 @@ const seriesReceiptId = "a786e7fb-cbaa-41f8-bde0-676736babe06";
 const seriesOperationId = "adca6d7c-da1d-4550-9308-9a7d77fe077c";
 const reviewId = "a62d8561-abaa-41ff-bf6d-c807f7df75a2";
 const createdAt = "2026-07-26T21:00:00Z";
-const reviewHead = "REVIEW_HEAD_TO_BE_PINNED";
+const reviewHead = "86a057428a92298fc52f4fa0b9858bdcca50d241";
 
 const members = [
   ["constitution-change", "Lastenheft_Constitution_Change.md", "Eligible", "b00956e5-e42b-48c4-b63d-ee748cad27f3", "4936d97b-6206-433e-b76c-a570c1842695"],
