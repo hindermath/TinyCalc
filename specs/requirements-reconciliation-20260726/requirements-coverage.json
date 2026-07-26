@@ -1,0 +1,230 @@
+{
+  "schemaVersion": "1.0",
+  "documentType": "RequirementsReconciliation",
+  "repository": "hindermath/TinyCalc",
+  "reviewedAt": "2026-07-26",
+  "sources": [
+    {
+      "sourceId": "TC-CONSTITUTION",
+      "path": "Lastenheft_Constitution_Change.md",
+      "normalizedSha256": "a46ff154633ff2979379847a36fa9a6e157ceca249a4fff283fe452425431d59",
+      "role": "ActiveIntakeCandidate"
+    },
+    {
+      "sourceId": "TC-TERMINALGUI",
+      "path": "Lastenheft_TerminalGui_Migration.md",
+      "normalizedSha256": "3450414273d371c025e6f9303f9add3e0abf5da2754c7be5953c09b96a579bb1",
+      "role": "ActiveIntakeCandidate"
+    },
+    {
+      "sourceId": "TC-RENAME",
+      "path": "Lastenheft_Rename_MicroCalc_TinyCalc.md",
+      "normalizedSha256": "be54c723dfbd2803eea86a8c3f02e2eaedc52d1c07328a4221fe0d1785094a45",
+      "role": "ActiveIntakeCandidate"
+    },
+    {
+      "sourceId": "TC-A11Y",
+      "path": "Lastenheft_A11Y_TUI.md",
+      "normalizedSha256": "6be69742f6fe1b103115098418bf61a02b7c8af22296927015806404a11f568f",
+      "role": "ActiveIntakeCandidate"
+    },
+    {
+      "sourceId": "TC-COMMENTS",
+      "path": "Lastenheft_Didactic-Inline-Code-Comment-Hardening.md",
+      "normalizedSha256": "5b1c0862e152a690197e642d007e3e9db4aa3fc5f18d8fe2f0d36b3fa5dbaa7b",
+      "role": "ActiveIntakeCandidate"
+    },
+    {
+      "sourceId": "TC-SECURITY",
+      "path": "Lastenheft_Secure-Development-Hardening.md",
+      "normalizedSha256": "27171d868caa130feacbad1059d1b0bb909bf64cfb51e507980ea93bed6d9fba",
+      "role": "ActiveIntakeCandidate"
+    },
+    {
+      "sourceId": "TC-SANDBOX",
+      "path": "Lastenheft_Sandbox-gestuetzte-Secure-Development-Haertung.md",
+      "normalizedSha256": "8b57678f9270217b1ac3b5c4558ff4eb9fa2ef3b67d071f1c3aa28250295b29d",
+      "role": "ActiveIntakeCandidate"
+    },
+    {
+      "sourceId": "TC-RLSE",
+      "path": "Lastenheft_RL-SE-Checklist-Selbstpruefung.md",
+      "normalizedSha256": "9b327114465b18d8201ab6a9f975d1475bb1bfdfaa1f5f3570f7439e11b22071",
+      "role": "ActiveIntakeCandidate"
+    },
+    {
+      "sourceId": "TC-GSDB",
+      "path": "Lastenheft_GSDB-Spec-Kit-Intensivpruefung.md",
+      "normalizedSha256": "6afdafc02e890e420351d7de2eafb68ce096b640f4a5bb2f0372aade623d86d0",
+      "role": "ActiveIntakeCandidate"
+    },
+    {
+      "sourceId": "TC-BASELINE",
+      "path": "PLAN_MICROCALC_CSHARP_DOTNET10.md",
+      "normalizedSha256": "f49dc38460ca5baa06c06ebe0fc887c20e8ffd1ae6d74eecefd22ed6b6a244e4",
+      "role": "HistoricalProductBaseline"
+    },
+    {
+      "sourceId": "TC-ORDER-CURATED",
+      "path": "docs/Lastenheft_Abarbeitungsreihenfolge.md",
+      "normalizedSha256": "34e08ee5433ee81abef9dc303259a8cb8c3e891c6fe4674feb6f7555ee185d3a",
+      "role": "CuratedOrder"
+    },
+    {
+      "sourceId": "TC-ORDER-GENERATED",
+      "path": "Lastenheft_Abarbeitungsreihenfolge.md",
+      "normalizedSha256": "db5cbad8a5216d99931b733cf9f7a7d538d2621ac2000512f8e0dfa601de87f7",
+      "role": "GeneratedOrder"
+    }
+  ],
+  "summary": {
+    "total": 9,
+    "AlreadySatisfied": 0,
+    "PartiallySatisfied": 2,
+    "Open": 7,
+    "DeferredOptional": 0,
+    "Blocked": 0,
+    "N/A": 0
+  },
+  "requirements": [
+    {
+      "requirementId": "TC-RQ-001",
+      "sourceId": "TC-CONSTITUTION",
+      "sourcePath": "Lastenheft_Constitution_Change.md",
+      "sourceNormalizedSha256": "a46ff154633ff2979379847a36fa9a6e157ceca249a4fff283fe452425431d59",
+      "statement": "Bilingual, documentation, TDD, and learner guidance exists, but the intake has not received a dedicated closure decision.",
+      "status": "PartiallySatisfied",
+      "evidencePaths": [
+        "constitution.md",
+        ".specify/memory/constitution.md",
+        "AGENTS.md"
+      ],
+      "proposedOwnerGroup": "Governance",
+      "residualRisk": "Existing evidence may not cover every acceptance criterion in the intake.",
+      "reevaluationTrigger": "Before executing or archiving Lastenheft_Constitution_Change.md"
+    },
+    {
+      "requirementId": "TC-RQ-002",
+      "sourceId": "TC-TERMINALGUI",
+      "sourcePath": "Lastenheft_TerminalGui_Migration.md",
+      "sourceNormalizedSha256": "3450414273d371c025e6f9303f9add3e0abf5da2754c7be5953c09b96a579bb1",
+      "statement": "The product still references Terminal.Gui 1.19.0, so the 2.x migration is not complete.",
+      "status": "Open",
+      "evidencePaths": [
+        "src/MicroCalc.Tui/MicroCalc.Tui.csproj",
+        "tests/MicroCalc.Tui.Tests"
+      ],
+      "proposedOwnerGroup": "TUI",
+      "residualRisk": "The accepted product or governance outcome remains unverified.",
+      "reevaluationTrigger": "Before executing or archiving Lastenheft_TerminalGui_Migration.md"
+    },
+    {
+      "requirementId": "TC-RQ-003",
+      "sourceId": "TC-RENAME",
+      "sourcePath": "Lastenheft_Rename_MicroCalc_TinyCalc.md",
+      "sourceNormalizedSha256": "be54c723dfbd2803eea86a8c3f02e2eaedc52d1c07328a4221fe0d1785094a45",
+      "statement": "Repository branding is TinyCalc, while solution, projects, namespaces, and active code still use MicroCalc.",
+      "status": "Open",
+      "evidencePaths": [
+        "MicroCalc.sln",
+        "src/MicroCalc.Core",
+        "src/MicroCalc.Tui"
+      ],
+      "proposedOwnerGroup": "Product",
+      "residualRisk": "The accepted product or governance outcome remains unverified.",
+      "reevaluationTrigger": "Before executing or archiving Lastenheft_Rename_MicroCalc_TinyCalc.md"
+    },
+    {
+      "requirementId": "TC-RQ-004",
+      "sourceId": "TC-A11Y",
+      "sourcePath": "Lastenheft_A11Y_TUI.md",
+      "sourceNormalizedSha256": "6be69742f6fe1b103115098418bf61a02b7c8af22296927015806404a11f568f",
+      "statement": "A11Y foundations and tests exist, but the intake depends partly on the open Terminal.Gui migration and retains unclosed TUI criteria.",
+      "status": "PartiallySatisfied",
+      "evidencePaths": [
+        "src/MicroCalc.Tui",
+        "tests/MicroCalc.Tui.Tests",
+        "tests/web-a11y"
+      ],
+      "proposedOwnerGroup": "A11Y",
+      "residualRisk": "Existing evidence may not cover every acceptance criterion in the intake.",
+      "reevaluationTrigger": "Before executing or archiving Lastenheft_A11Y_TUI.md"
+    },
+    {
+      "requirementId": "TC-RQ-005",
+      "sourceId": "TC-COMMENTS",
+      "sourcePath": "Lastenheft_Didactic-Inline-Code-Comment-Hardening.md",
+      "sourceNormalizedSha256": "5b1c0862e152a690197e642d007e3e9db4aa3fc5f18d8fe2f0d36b3fa5dbaa7b",
+      "statement": "The standing rule exists, but the selective repository-wide review run has not been completed.",
+      "status": "Open",
+      "evidencePaths": [
+        "src",
+        "tests",
+        "AGENTS.md"
+      ],
+      "proposedOwnerGroup": "Maintainability",
+      "residualRisk": "The accepted product or governance outcome remains unverified.",
+      "reevaluationTrigger": "Before executing or archiving Lastenheft_Didactic-Inline-Code-Comment-Hardening.md"
+    },
+    {
+      "requirementId": "TC-RQ-006",
+      "sourceId": "TC-SECURITY",
+      "sourcePath": "Lastenheft_Secure-Development-Hardening.md",
+      "sourceNormalizedSha256": "27171d868caa130feacbad1059d1b0bb909bf64cfb51e507980ea93bed6d9fba",
+      "statement": "Security governance exists, but the requested project-wide closure run remains open.",
+      "status": "Open",
+      "evidencePaths": [
+        "docs/security",
+        ".github/workflows"
+      ],
+      "proposedOwnerGroup": "Security",
+      "residualRisk": "The accepted product or governance outcome remains unverified.",
+      "reevaluationTrigger": "Before executing or archiving Lastenheft_Secure-Development-Hardening.md"
+    },
+    {
+      "requirementId": "TC-RQ-007",
+      "sourceId": "TC-SANDBOX",
+      "sourcePath": "Lastenheft_Sandbox-gestuetzte-Secure-Development-Haertung.md",
+      "sourceNormalizedSha256": "8b57678f9270217b1ac3b5c4558ff4eb9fa2ef3b67d071f1c3aa28250295b29d",
+      "statement": "No completed TinyCalc sandbox field evidence or closure record exists.",
+      "status": "Open",
+      "evidencePaths": [
+        "docs/security",
+        ".specify/presets"
+      ],
+      "proposedOwnerGroup": "Security",
+      "residualRisk": "The accepted product or governance outcome remains unverified.",
+      "reevaluationTrigger": "Before executing or archiving Lastenheft_Sandbox-gestuetzte-Secure-Development-Haertung.md"
+    },
+    {
+      "requirementId": "TC-RQ-008",
+      "sourceId": "TC-RLSE",
+      "sourcePath": "Lastenheft_RL-SE-Checklist-Selbstpruefung.md",
+      "sourceNormalizedSha256": "9b327114465b18d8201ab6a9f975d1475bb1bfdfaa1f5f3570f7439e11b22071",
+      "statement": "The self-review intake exists, but no dedicated result closes it.",
+      "status": "Open",
+      "evidencePaths": [
+        "docs/security/gsdb-self-assessment.md",
+        ".specify/templates"
+      ],
+      "proposedOwnerGroup": "Governance",
+      "residualRisk": "The accepted product or governance outcome remains unverified.",
+      "reevaluationTrigger": "Before executing or archiving Lastenheft_RL-SE-Checklist-Selbstpruefung.md"
+    },
+    {
+      "requirementId": "TC-RQ-009",
+      "sourceId": "TC-GSDB",
+      "sourcePath": "Lastenheft_GSDB-Spec-Kit-Intensivpruefung.md",
+      "sourceNormalizedSha256": "6afdafc02e890e420351d7de2eafb68ce096b640f4a5bb2f0372aade623d86d0",
+      "statement": "The intensive review is explicitly documented as a later manual run.",
+      "status": "Open",
+      "evidencePaths": [
+        "docs/security/gsdb-self-assessment.md",
+        ".specify/templates"
+      ],
+      "proposedOwnerGroup": "Governance",
+      "residualRisk": "The accepted product or governance outcome remains unverified.",
+      "reevaluationTrigger": "Before executing or archiving Lastenheft_GSDB-Spec-Kit-Intensivpruefung.md"
+    }
+  ]
+}
