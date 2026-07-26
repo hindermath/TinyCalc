@@ -392,3 +392,13 @@ shell commands, and other important information, read the current plan
 
 *Profile 2 is governed by the JSON configuration and generated marker block. Use ASCII `0..4`, `-`, and `#`/`.`, exact values, German-first bilingual CEFR-B2 alternatives, and a 100-character chart limit. Methodology v2 excludes the ledger, `STATS.md`, and binaries. This repository uses manual references of `80` and `125` lines per workday. Speedup describes delivery density, not stopwatch or personal performance. This contract supersedes older visualization rules while retaining historical entries and archived Profile 1 charts.*
 <!-- statistics-profile-2-guidance:end -->
+
+<!-- requirements-intake-governance:begin -->
+## Requirements- und Intake-Governance / Requirements and Intake Governance
+
+- `Pflichtenheft.md` ist der schlanke Einstieg; verbindliche Reihenfolge und Zustände stehen im Serienmanifest unter `requirements/intakes/series/`.
+- Neue oder aktualisierte Lastenhefte gehören nach `requirements/intakes/active/`; abgeschlossene, ersetzte und optionale Intakes werden getrennt archiviert.
+- Nur `Eligible` bezeichnet den bevorzugten nächsten Intake. Der Zustand erteilt keine Ausführungs-, Remote- oder Merge-Berechtigung.
+
+*`Pflichtenheft.md` is the slim entry point; binding order and states live in the series manifest. Active, completed, superseded, and optional intakes remain separated. `Eligible` only identifies the preferred next intake and grants no execution, remote, or merge authority.*
+<!-- requirements-intake-governance:end -->

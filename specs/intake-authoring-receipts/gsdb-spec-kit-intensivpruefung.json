@@ -1,25 +1,44 @@
 {
-  "schemaVersion": "1.1",
-  "receiptId": "7ed22ca9-e6ec-42b9-a9bd-824fa073be40",
+  "schemaVersion": "2.0",
+  "documentType": "IntakeReceipt",
+  "receiptId": "704cea09-a869-49a5-baf9-70f24aa8d67b",
+  "intakeId": "7ed22ca9-e6ec-42b9-a9bd-824fa073be40",
   "generator": {
     "preset": "intake-authoring-governance",
-    "version": "0.1.1"
+    "version": "0.2.1"
   },
-  "createdAt": "2026-07-23T14:32:39Z",
+  "createdAt": "2026-07-26T21:00:00Z",
+  "operation": {
+    "operationId": "9352f182-123b-43b1-8959-aea8e8da9612",
+    "type": "Update",
+    "authorityEvidence": "User-approved TinyCalc requirements and intake consolidation plan"
+  },
   "status": "ReadyForReview",
   "target": {
-    "path": "Lastenheft_GSDB-Spec-Kit-Intensivpruefung.md",
-    "normalizedSha256": "6afdafc02e890e420351d7de2eafb68ce096b640f4a5bb2f0372aade623d86d0"
+    "path": "requirements/intakes/active/Lastenheft_GSDB-Spec-Kit-Intensivpruefung.md",
+    "normalizedSha256": "efd35926e427cc80bdcb098aebc25ad506e2a6e4aadb73627a2317854d0b1aa7"
   },
   "sources": [
     {
+      "sourceId": "SRC001",
       "order": 1,
-      "kind": "Pasted",
-      "label": "Legacy target before Intake Creator adoption",
-      "location": "SnapshotOnly",
-      "path": "N/A",
-      "normalizedSha256": "274de85ce9bb45e087dca1d428c9fd995314169dca061325a99a8af6d3b1c8dd",
-      "gitBlob": "08aaf40b65680d8f80017e27a88f4bf500df52a2"
+      "kind": "File",
+      "label": "Archived predecessor intake",
+      "location": "Repository",
+      "path": "requirements/intakes/history/pre-intake-split-20260726/Lastenheft_GSDB-Spec-Kit-Intensivpruefung.md",
+      "requestedUrl": "N/A",
+      "finalUrl": "N/A",
+      "retrievedAt": "N/A",
+      "httpStatus": "N/A",
+      "contentType": "N/A",
+      "contentLength": "N/A",
+      "etag": "N/A",
+      "lastModified": "N/A",
+      "redirectChain": [],
+      "rawSha256": "N/A",
+      "normalizedSha256": "6afdafc02e890e420351d7de2eafb68ce096b640f4a5bb2f0372aade623d86d0",
+      "gitBlob": "N/A",
+      "proofBoundary": "Repository predecessor and normalized SHA-256"
     }
   ],
   "profile": "level2-lastenheft",
@@ -28,30 +47,16 @@
     {
       "id": "IAD001",
       "status": "Answered",
-      "question": "Welcher Zielpfad bleibt verbindlich?",
-      "answer": "Lastenheft_GSDB-Spec-Kit-Intensivpruefung.md",
-      "evidence": "Die aktive Repository-Abarbeitungsreihenfolge benennt diesen Pfad."
+      "question": "Welcher Zielpfad ist nach der Konsolidierung verbindlich?",
+      "answer": "requirements/intakes/active/Lastenheft_GSDB-Spec-Kit-Intensivpruefung.md",
+      "evidence": "specs/requirements-reconciliation-20260726/migration-proposal.json"
     },
     {
       "id": "IAD002",
       "status": "Answered",
-      "question": "Darf der bestehende Alt-Intake aktualisiert werden?",
-      "answer": "Ja, als diff-arme LegacyAdoption.",
-      "evidence": "Der aktuelle Nutzerauftrag autorisiert Creator-Normalisierung und Review der aktiven Level-2-Intakes."
-    },
-    {
-      "id": "IAD003",
-      "status": "Answered",
-      "question": "Welcher fachliche Umfang bleibt erhalten?",
-      "answer": "Der bestehende fachliche Scope bleibt unveraendert; ergaenzt werden nur Creator-Vertrag und nachgewiesene Konsistenzkorrekturen.",
-      "evidence": "Genehmigter scope-neutraler Flottenplan."
-    },
-    {
-      "id": "IAD004",
-      "status": "Answered",
-      "question": "Welche Delivery Authority gilt fuer spaetere autonome Laeufe?",
-      "answer": "LocalImplementation.",
-      "evidence": "Dieser Authoring-Lauf erteilt keine Remote-Autoritaet."
+      "question": "Welche Delivery Authority gilt?",
+      "answer": "LocalImplementation",
+      "evidence": "The migration grants no feature-delivery authority."
     }
   ],
   "openDecisionIds": [],
@@ -63,19 +68,28 @@
     "autonomousInvocation": "$speckit-autonomous"
   },
   "deliveryAuthority": "LocalImplementation",
-  "authorityEvidence": "Default: Dieser Authoring-Lauf erteilt keine Remote-Schreib- oder Lieferautoritaet fuer spaetere Feature-Laeufe.",
+  "authorityEvidence": "Default: this migration grants no remote feature-delivery authority.",
   "promptState": "Enabled",
-  "nextAction": "$speckit-intake-review Lastenheft_GSDB-Spec-Kit-Intensivpruefung.md",
-  "provenanceMode": "LegacyAdoption",
+  "provenanceMode": "Supersession",
   "supersedes": {
-    "receiptPath": "N/A",
-    "targetNormalizedSha256": "N/A"
+    "receiptPath": "specs/intake-authoring-receipts/history/gsdb-spec-kit-intensivpruefung.schema-1.1.json",
+    "targetNormalizedSha256": "6afdafc02e890e420351d7de2eafb68ce096b640f4a5bb2f0372aade623d86d0",
+    "archiveTargetPath": "requirements/intakes/history/pre-intake-split-20260726/Lastenheft_GSDB-Spec-Kit-Intensivpruefung.md",
+    "archiveReceiptPath": "specs/intake-authoring-receipts/history/gsdb-spec-kit-intensivpruefung.schema-1.1.json"
   },
   "legacyAdoption": {
-    "evidenceType": "GitBlob",
-    "priorTargetNormalizedSha256": "274de85ce9bb45e087dca1d428c9fd995314169dca061325a99a8af6d3b1c8dd",
-    "priorGitBlob": "08aaf40b65680d8f80017e27a88f4bf500df52a2"
+    "evidenceType": "N/A",
+    "priorTargetNormalizedSha256": "N/A",
+    "priorGitBlob": "N/A"
   },
   "updateAuthorized": true,
-  "updateAuthorityEvidence": "Aktueller Nutzerauftrag: Creator-Normalisierung und Review der aktiven C#-Level-2- und cc65-Intakes."
+  "updateAuthorityEvidence": "User-approved migration preserves predecessor evidence.",
+  "series": {
+    "seriesId": "5b4523b4-d946-4091-9cbc-11825af94332",
+    "manifestPath": "requirements/intakes/series/tinycalc-delivery/manifest.json",
+    "order": 9,
+    "role": "OrderedMember",
+    "supersedesIntakeIds": []
+  },
+  "nextAction": "$speckit-intake-review requirements/intakes/active/Lastenheft_GSDB-Spec-Kit-Intensivpruefung.md"
 }

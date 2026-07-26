@@ -10,6 +10,20 @@ const outputRoot = "specs/requirements-reconciliation-20260726";
 const normalize = (value) => value.replace(/^\uFEFF/, "").replace(/\r\n?/g, "\n");
 const hash = (value) => crypto.createHash("sha256").update(normalize(value)).digest("hex");
 const hashFile = (relativePath) => hash(fs.readFileSync(path.join(root, relativePath), "utf8"));
+const migratedSourcePaths = new Map([
+  ["PLAN_MICROCALC_CSHARP_DOTNET10.md", "requirements/baseline/PLAN_MICROCALC_CSHARP_DOTNET10.pre-intake-split.2026-07-26.md"],
+  ["docs/Lastenheft_Abarbeitungsreihenfolge.md", "requirements/intakes/history/pre-intake-split-20260726/Lastenheft_Abarbeitungsreihenfolge.docs.md"],
+  ["Lastenheft_Abarbeitungsreihenfolge.md", "requirements/intakes/history/pre-intake-split-20260726/Lastenheft_Abarbeitungsreihenfolge.root.md"],
+]);
+const sourceFile = (relativePath) => {
+  if (migratedSourcePaths.has(relativePath)) return migratedSourcePaths.get(relativePath);
+  if (fs.existsSync(path.join(root, relativePath))) return relativePath;
+  if (relativePath.startsWith("Lastenheft_") && relativePath !== "Lastenheft_Abarbeitungsreihenfolge.md") {
+    return `requirements/intakes/history/pre-intake-split-20260726/${relativePath}`;
+  }
+  return relativePath;
+};
+const hashSource = (relativePath) => hashFile(sourceFile(relativePath));
 const json = (value) => `${JSON.stringify(value, null, 2)}\n`;
 
 const intakes = [
@@ -91,7 +105,7 @@ const requirements = intakes.map((intake, index) => ({
   requirementId: `TC-RQ-${String(index + 1).padStart(3, "0")}`,
   sourceId: intake.id,
   sourcePath: intake.path,
-  sourceNormalizedSha256: hashFile(intake.path),
+  sourceNormalizedSha256: hashSource(intake.path),
   statement: intake.rationale,
   status: intake.status,
   evidencePaths: intake.evidence,
@@ -106,25 +120,25 @@ const sources = [
   ...intakes.map((intake) => ({
     sourceId: intake.id,
     path: intake.path,
-    normalizedSha256: hashFile(intake.path),
+    normalizedSha256: hashSource(intake.path),
     role: "ActiveIntakeCandidate",
   })),
   {
     sourceId: "TC-BASELINE",
     path: "PLAN_MICROCALC_CSHARP_DOTNET10.md",
-    normalizedSha256: hashFile("PLAN_MICROCALC_CSHARP_DOTNET10.md"),
+    normalizedSha256: hashSource("PLAN_MICROCALC_CSHARP_DOTNET10.md"),
     role: "HistoricalProductBaseline",
   },
   {
     sourceId: "TC-ORDER-CURATED",
     path: "docs/Lastenheft_Abarbeitungsreihenfolge.md",
-    normalizedSha256: hashFile("docs/Lastenheft_Abarbeitungsreihenfolge.md"),
+    normalizedSha256: hashSource("docs/Lastenheft_Abarbeitungsreihenfolge.md"),
     role: "CuratedOrder",
   },
   {
     sourceId: "TC-ORDER-GENERATED",
     path: "Lastenheft_Abarbeitungsreihenfolge.md",
-    normalizedSha256: hashFile("Lastenheft_Abarbeitungsreihenfolge.md"),
+    normalizedSha256: hashSource("Lastenheft_Abarbeitungsreihenfolge.md"),
     role: "GeneratedOrder",
   },
 ];

@@ -1,0 +1,27 @@
+{
+  "schemaVersion": "1.0",
+  "documentType": "IntakeSeriesOperation",
+  "operationId": "adca6d7c-da1d-4550-9308-9a7d77fe077c",
+  "seriesId": "5b4523b4-d946-4091-9cbc-11825af94332",
+  "type": "Create",
+  "status": "Published",
+  "authorityEvidence": "User-approved TinyCalc requirements and intake consolidation plan",
+  "proposalNormalizedSha256": "9392555f5fa8d4555f1e8e3dd2abc3248104b8697727a67f4aec159f431a1221",
+  "preparedPaths": [
+    "requirements/intakes/series/tinycalc-delivery/manifest.json",
+    "requirements/intakes/series/tinycalc-delivery/receipt.json",
+    "requirements/intakes/series/tinycalc-delivery/order.md"
+  ],
+  "validation": {
+    "bash": "Pass",
+    "powerShell": "Pass"
+  },
+  "publication": {
+    "status": "Published",
+    "publishedPaths": [
+      "requirements/intakes/series/tinycalc-delivery/manifest.json",
+      "requirements/intakes/series/tinycalc-delivery/receipt.json",
+      "requirements/intakes/series/tinycalc-delivery/order.md"
+    ]
+  }
+}

@@ -1,0 +1,11 @@
+{
+  "schemaVersion": "1.0",
+  "repository": "hindermath/TinyCalc",
+  "canonicalIndex": "Pflichtenheft.md",
+  "baselineCount": 1,
+  "activeIntakeCount": 9,
+  "archiveIntakeCount": 0,
+  "preferredNext": "requirements/intakes/active/Lastenheft_Constitution_Change.md",
+  "seriesManifest": "requirements/intakes/series/tinycalc-delivery/manifest.json",
+  "featureMustRemainAbsent": true
+}
