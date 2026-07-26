@@ -1,0 +1,85 @@
+{
+  "schemaVersion": "1.0",
+  "documentType": "RequirementsIntakeMigrationProposal",
+  "repository": "hindermath/TinyCalc",
+  "canonicalIndex": "Pflichtenheft.md",
+  "baselineMoves": [
+    {
+      "from": "PLAN_MICROCALC_CSHARP_DOTNET10.md",
+      "to": "requirements/baseline/PLAN_MICROCALC_CSHARP_DOTNET10.pre-intake-split.2026-07-26.md",
+      "mode": "ByteIdentical"
+    }
+  ],
+  "activeIntakes": [
+    {
+      "sourcePath": "Lastenheft_Constitution_Change.md",
+      "targetPath": "requirements/intakes/active/Lastenheft_Constitution_Change.md",
+      "mode": "SupersedingCopy"
+    },
+    {
+      "sourcePath": "Lastenheft_TerminalGui_Migration.md",
+      "targetPath": "requirements/intakes/active/Lastenheft_TerminalGui_Migration.md",
+      "mode": "SupersedingCopy"
+    },
+    {
+      "sourcePath": "Lastenheft_Rename_MicroCalc_TinyCalc.md",
+      "targetPath": "requirements/intakes/active/Lastenheft_Rename_MicroCalc_TinyCalc.md",
+      "mode": "SupersedingCopy"
+    },
+    {
+      "sourcePath": "Lastenheft_A11Y_TUI.md",
+      "targetPath": "requirements/intakes/active/Lastenheft_A11Y_TUI.md",
+      "mode": "SupersedingCopy"
+    },
+    {
+      "sourcePath": "Lastenheft_Didactic-Inline-Code-Comment-Hardening.md",
+      "targetPath": "requirements/intakes/active/Lastenheft_Didactic-Inline-Code-Comment-Hardening.md",
+      "mode": "SupersedingCopy"
+    },
+    {
+      "sourcePath": "Lastenheft_Secure-Development-Hardening.md",
+      "targetPath": "requirements/intakes/active/Lastenheft_Secure-Development-Hardening.md",
+      "mode": "SupersedingCopy"
+    },
+    {
+      "sourcePath": "Lastenheft_Sandbox-gestuetzte-Secure-Development-Haertung.md",
+      "targetPath": "requirements/intakes/active/Lastenheft_Sandbox-gestuetzte-Secure-Development-Haertung.md",
+      "mode": "SupersedingCopy"
+    },
+    {
+      "sourcePath": "Lastenheft_RL-SE-Checklist-Selbstpruefung.md",
+      "targetPath": "requirements/intakes/active/Lastenheft_RL-SE-Checklist-Selbstpruefung.md",
+      "mode": "SupersedingCopy"
+    },
+    {
+      "sourcePath": "Lastenheft_GSDB-Spec-Kit-Intensivpruefung.md",
+      "targetPath": "requirements/intakes/active/Lastenheft_GSDB-Spec-Kit-Intensivpruefung.md",
+      "mode": "SupersedingCopy"
+    }
+  ],
+  "archivedIntakes": [],
+  "backlogIntakes": [],
+  "canonicalSeries": {
+    "path": "requirements/intakes/series/tinycalc-delivery/manifest.json",
+    "preferredNext": "Lastenheft_Constitution_Change.md",
+    "orderedProductChain": [
+      "Lastenheft_Constitution_Change.md",
+      "Lastenheft_TerminalGui_Migration.md",
+      "Lastenheft_Rename_MicroCalc_TinyCalc.md",
+      "Lastenheft_A11Y_TUI.md",
+      "Lastenheft_Didactic-Inline-Code-Comment-Hardening.md",
+      "Lastenheft_Secure-Development-Hardening.md"
+    ],
+    "independentGovernanceRoots": [
+      "Lastenheft_Sandbox-gestuetzte-Secure-Development-Haertung.md",
+      "Lastenheft_RL-SE-Checklist-Selbstpruefung.md",
+      "Lastenheft_GSDB-Spec-Kit-Intensivpruefung.md"
+    ]
+  },
+  "constraints": [
+    "No Spec Kit feature is started.",
+    "No product, API, dependency, or runtime behavior changes.",
+    "Historical specs and hash-bound evidence remain unchanged.",
+    "Both predecessor order documents remain preserved in migration history."
+  ]
+}
