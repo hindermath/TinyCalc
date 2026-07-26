@@ -9,7 +9,8 @@
 ## Lastenheft Queue
 
 - The visible processing order for prepared requirements documents is recorded in
-  `docs/Lastenheft_Abarbeitungsreihenfolge.md`.
+  `Lastenheft_Abarbeitungsreihenfolge.md`; binding machine-readable state lives
+  in `requirements/intakes/series/tinycalc-delivery/manifest.json`.
 - Treat that file as preparation for later Spec Kit runs. It does not start a
   branch, specification, plan, task list, test change, or implementation by
   itself.

@@ -1,0 +1,102 @@
+{
+  "schemaVersion": "1.1",
+  "reviewId": "a62d8561-abaa-41ff-bf6d-c807f7df75a2",
+  "mode": "Series",
+  "status": "Ready",
+  "policy": "tinycalc-delivery-v1",
+  "reviewedAt": "2026-07-26T21:00:00Z",
+  "repository": {
+    "root": ".",
+    "head": "86a057428a92298fc52f4fa0b9858bdcca50d241"
+  },
+  "targets": [
+    {
+      "path": "requirements/intakes/active/Lastenheft_Constitution_Change.md",
+      "role": "Primary",
+      "normalizedSha256": "dce77a3f0c5aee07cd6c033c27d3cfdf5c991208e8dd8eeba02e49505193d37f",
+      "gitBlob": "N/A"
+    },
+    {
+      "path": "requirements/intakes/active/Lastenheft_TerminalGui_Migration.md",
+      "role": "OrderedMember",
+      "normalizedSha256": "fd59040e8bb736b0944e74ab855b72a3a8b843487ae64509926d4a9e79c68160",
+      "gitBlob": "N/A"
+    },
+    {
+      "path": "requirements/intakes/active/Lastenheft_Rename_MicroCalc_TinyCalc.md",
+      "role": "OrderedMember",
+      "normalizedSha256": "951950e7ca8c726d9d92756b2e87e405af91668e6010aef3751e643278b46990",
+      "gitBlob": "N/A"
+    },
+    {
+      "path": "requirements/intakes/active/Lastenheft_A11Y_TUI.md",
+      "role": "OrderedMember",
+      "normalizedSha256": "715af76d7875650acd3a39ed15c46e28d19a6dd1ad3bff29b6be6fb7987db7bc",
+      "gitBlob": "N/A"
+    },
+    {
+      "path": "requirements/intakes/active/Lastenheft_Didactic-Inline-Code-Comment-Hardening.md",
+      "role": "OrderedMember",
+      "normalizedSha256": "1cc552828fbfff244d9665e0d9f06e632b4dac4575d35d763213968fea2e646e",
+      "gitBlob": "N/A"
+    },
+    {
+      "path": "requirements/intakes/active/Lastenheft_Secure-Development-Hardening.md",
+      "role": "OrderedMember",
+      "normalizedSha256": "d3e7688032d657270e186d6ca4e91fed0873bd5f753e26c173e4546ac138a39b",
+      "gitBlob": "N/A"
+    },
+    {
+      "path": "requirements/intakes/active/Lastenheft_Sandbox-gestuetzte-Secure-Development-Haertung.md",
+      "role": "OrderedMember",
+      "normalizedSha256": "3669d72d727ceeff5510dde789f9c9c1ddf815bad9c55d5377378959f102f2a2",
+      "gitBlob": "N/A"
+    },
+    {
+      "path": "requirements/intakes/active/Lastenheft_RL-SE-Checklist-Selbstpruefung.md",
+      "role": "OrderedMember",
+      "normalizedSha256": "a0b1b4d778848e6a96304eb3bdea3c62c46e73f732c901c5b81fd893421fbaeb",
+      "gitBlob": "N/A"
+    },
+    {
+      "path": "requirements/intakes/active/Lastenheft_GSDB-Spec-Kit-Intensivpruefung.md",
+      "role": "OrderedMember",
+      "normalizedSha256": "efd35926e427cc80bdcb098aebc25ad506e2a6e4aadb73627a2317854d0b1aa7",
+      "gitBlob": "N/A"
+    }
+  ],
+  "findings": [],
+  "questions": [],
+  "acceptedRisks": [],
+  "operatorExceptions": [],
+  "coverage": {
+    "individual": [
+      "requirements/intakes/active/Lastenheft_Constitution_Change.md",
+      "requirements/intakes/active/Lastenheft_TerminalGui_Migration.md",
+      "requirements/intakes/active/Lastenheft_Rename_MicroCalc_TinyCalc.md",
+      "requirements/intakes/active/Lastenheft_A11Y_TUI.md",
+      "requirements/intakes/active/Lastenheft_Didactic-Inline-Code-Comment-Hardening.md",
+      "requirements/intakes/active/Lastenheft_Secure-Development-Hardening.md",
+      "requirements/intakes/active/Lastenheft_Sandbox-gestuetzte-Secure-Development-Haertung.md",
+      "requirements/intakes/active/Lastenheft_RL-SE-Checklist-Selbstpruefung.md",
+      "requirements/intakes/active/Lastenheft_GSDB-Spec-Kit-Intensivpruefung.md"
+    ],
+    "series": [
+      "Nine active intake hashes, lifecycle states, roots, and five product-chain gates",
+      "Independent sandbox, RL-SE, and GSDB roots without invented product dependencies",
+      "Historical baseline and predecessor receipts preserved"
+    ],
+    "workers": []
+  },
+  "summary": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+  },
+  "supersedes": "d4ae2c72-34a1-4c98-9f27-87a8030dc5f5",
+  "requestEvidence": {
+    "path": "requirements/intakes/series/tinycalc-delivery/intake-review-request.json",
+    "normalizedSha256": "625a088eac95572926fd3869f14599f7269362f207a18fedc43d0113728bc6aa"
+  }
+}

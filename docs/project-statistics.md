@@ -295,6 +295,7 @@ fortgeschrieben.
 | 2026-06-18 | Claude-Code-Review-Gate fuer Release-Please-PRs korrigiert | Die PR-Runs fuer Release-Please-PR `#20` standen zunaechst auf `action_required`; nach manuellem Re-run liefen `ci`, Gitleaks, Agent Secret Scan und Homogeneity Check erfolgreich. Der verbleibende Claude-Code-Review-Fehler entstand, weil der Workflow vom `github-actions[bot]` ausgeloest wurde und die Action Bot-Akteure ohne explizite Freigabe blockiert. `.github/workflows/claude-code-review.yml` erlaubt jetzt gezielt nur `github-actions[bot]` ueber `allowed_bots`, statt alle Bots per Wildcard freizugeben. Die danach sichtbaren Node-20-Deprecation-Annotationen wurden durch die Umstellung aller sechs Checkout-Schritte auf den offiziell verfuegbaren `actions/checkout@v6` und des .NET-Setup-Schritts auf `actions/setup-dotnet@v5` nachgezogen. Der macOS-Homogeneity-Job installiert `ripgrep` nun aus dem offiziellen Release-Archiv mit SHA-256-Pruefung statt ueber Homebrew, damit die Homebrew-Tap-Trust-Annotation aus der Runner-Umgebung nicht mehr entsteht. Diese Runde war reine CI-/Workflow-Konfiguration mit `0` Produktionscode-Zeilen, `0` Testcode-Zeilen, `0` Dokumentationszeilen vor dieser Statistik-Fortschreibung und `+19` Workflow-YAML-Zeilen netto; die Checkout- und Setup-Aktualisierungen sind versionsbezogene YAML-Ersetzungen ohne Netto-Zeilenzuwachs. Konservative Manualreferenz: 80 Zeilen/Tag = `0.2` Tage (ca. `1.9` Stunden); Thorsten-Solo-Referenz: 125 Zeilen/Tag = `0.2` Tage (ca. `1.2` Stunden); sichtbares Arbeitsfenster: 1 kurze Agentensitzung am 2026-06-18. |
 | 2026-06-19 | Lastenheft-Abarbeitungsreihenfolge vorbereitet | Alle sechs vorbereiteten Lastenhefte wurden in eine spaetere Spec-Kit-Abarbeitungsreihenfolge gebracht: Constitution/Governance, Terminal.Gui-Migration, MicroCalc-zu-TinyCalc-Rename, TUI-A11Y, didaktische Inline-Kommentar-Haertung und abschliessende Secure-Development-Haertung. Die sichtbare Reihenfolge liegt in `docs/Lastenheft_Abarbeitungsreihenfolge.md`; `docs/WORKFLOW_NOTES.md` verweist darauf. Diese Runde startet keinen Spec-Kit-Lauf, erzeugt keine Branches, keine Specs, keine Tasks und keine Implementierung. Aenderungsumfang vor dieser Statistik-Fortschreibung: `0` Produktionscode-Zeilen, `0` Testcode-Zeilen und `+97` Dokumentationszeilen netto. Konservative Manualreferenz: 80 Zeilen/Tag = `1.2` Tage (ca. `9.5` Stunden); Thorsten-Solo-Referenz: 125 Zeilen/Tag = `0.8` Tage (ca. `6.1` Stunden); sichtbares Arbeitsfenster: 1 kurze Agentensitzung am 2026-06-19. |
 | 2026-07-23 | Intake Authoring und Review | Neun aktive Lastenhefte als hashgebundene Legacy-Intakes normalisiert; Einzel- und Serienreview `Ready` mit null offenen Findings, Fragen oder Risiken; keine Produktcode- oder Laufzeitänderung. |
+| 2026-07-26 | Requirements- und Intake-Struktur konsolidiert | Der historische Produktplan und alle neun Vorgänger-Lastenhefte bleiben hashgebunden erhalten. Ein schlanker `Pflichtenheft.md`-Index, eine aktive Intake-Ablage, eine kanonische Serie, supersedierende Receipts und config-gesteuerte Bash-/PowerShell-/CI-Validatoren ersetzen konkurrierende Reihenfolgen. Constitution ist genau der eine `Eligible` Intake; kein Spec-Kit-Feature und keine Produkt-, API-, Abhängigkeits- oder Laufzeitänderung wurden gestartet. |
 
 ## Statistikprofil-1-Archiv / Statistics Profile 1 Archive
 Basis dieses Schlussblocks sind die aktuell dokumentierten Snapshot- und
@@ -459,29 +460,29 @@ Profil 2 verwendet Git-getrackte Textdateien und sichtbare Git-Aktivitaet. Die W
 
 | Kennzahl / Metric | Wert / Value |
 |---|---:|
-| Textbasis / Text base | 111758 lines |
-| Textdateien / Text files | 792 |
+| Textbasis / Text base | 115338 lines |
+| Textdateien / Text files | 830 |
 | Beobachtbarer Zeitraum / Observable period | 2025-08-03..2026-07-26 |
 | Aktivtage / Active days | 60 |
-| Relevante Commits / Relevant commits | 170 |
-| Zeilen je Aktivtag / Lines per active day | 1862.6 |
+| Relevante Commits / Relevant commits | 172 |
+| Zeilen je Aktivtag / Lines per active day | 1922.3 |
 | Peak-Tag im Fenster / Peak day in window | 2026-06-17 / 27058 |
 | Peak-Woche im Fenster / Peak week in window | 2026-07-19 / 33769 |
 | Laengste Serie / Longest streak | 8 days |
-| Speedup vs. 80 lines/day | 23.3x |
-| Speedup vs. 125 lines/day | 14.9x |
-| Methodik / Methodology | v2; source `7931970f3ceb` |
+| Speedup vs. 80 lines/day | 24.0x |
+| Speedup vs. 125 lines/day | 15.4x |
+| Methodik / Methodology | v2; source `feb5794491c8` |
 
 ### Artefaktmix / Artifact Mix
 
 ```text
-Produktiv / Production          [#...................]   2.5% | 2748
-Tests                           [#...................]   1.5% | 1644
-Dokumentation / Documentation   [#################...]  82.8% | 92548
-Skripte / Scripts               [##..................]   9.0% | 10016
-Konfiguration / Configuration   [#...................]   1.7% | 1903
+Produktiv / Production          [#...................]   2.4% | 2748
+Tests                           [#...................]   1.5% | 1721
+Dokumentation / Documentation   [################....]  81.7% | 94201
+Skripte / Scripts               [##..................]   9.2% | 10585
+Konfiguration / Configuration   [#...................]   2.8% | 3184
 Daten und Medien / Data and media [....................]   0.0% | 0
-Sonstiger Text / Other text     [#...................]   2.6% | 2899
+Sonstiger Text / Other text     [#...................]   2.5% | 2899
 ```
 
 Die Balken teilen die aktuelle getrackte Textbasis in stabile Kategorien. Prozent und Zeilenwert sind die genaue, textorientierte Aussage.
@@ -503,7 +504,7 @@ Sa/Sa  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
 
 ```text
 Wochen / Weeks 27..52 | 2026-02-01..2026-08-01
-So/Su  0 1 0 0 1 3 0 4 0 0 2 0 0 0 0 0 0 1 0 4 0 0 0 1 4 3
+So/Su  0 1 0 0 1 3 0 4 0 0 2 0 0 0 0 0 0 1 0 4 0 0 0 1 4 4
 Mo/Mo  0 1 0 0 0 0 0 0 2 0 1 4 0 4 0 0 0 0 0 0 0 3 1 4 4 -
 Di/Tu  0 0 0 0 0 0 0 0 3 0 0 0 0 3 0 0 3 0 0 0 0 2 0 3 4 -
 Mi/We  0 0 0 0 0 0 0 1 0 0 0 3 0 2 0 0 0 2 0 4 0 2 0 0 2 -
@@ -591,8 +592,8 @@ Die festen Slots halten den Phasenvergleich auch bei fehlenden oder spaeter erga
 
 ```text
 Scale: 0..50x
-80 lines/day       [#########...........] 23.3x
-125 lines/day      [######..............] 14.9x
+80 lines/day       [##########..........] 24.0x
+125 lines/day      [######..............] 15.4x
 ```
 
 Die Faktoren vergleichen sichtbare Lieferdichte mit den dokumentierten manuellen Referenzen. Sie messen keine Arbeitszeit.
@@ -605,7 +606,7 @@ Die Faktoren vergleichen sichtbare Lieferdichte mit den dokumentierten manuellen
 Scale: 0..2000 lines/day
 Experienced manual [#...................] 80
 Thorsten solo      [#...................] 125
-Visible repository [###################.] 1862.6
+Visible repository [###################.] 1922.3
 ```
 
 Die gemeinsame Skala vergleicht Referenzen und sichtbare Lieferdichte. Sie schreibt die Git-Aktivitaet keiner Person oder KI pauschal zu.
@@ -631,6 +632,6 @@ DE: Das Fenster beginnt am 2025-08-03 und endet am 2026-07-26. Es enthaelt 60 ak
 | 2026-04 | 17917 |
 | 2026-05 | 13420 |
 | 2026-06 | 37318 |
-| 2026-07 | 57861 |
+| 2026-07 | 62281 |
 
 <!-- project-statistics-v2:end -->

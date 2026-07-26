@@ -123,7 +123,7 @@ Die Portierung wurde in klaren, reproduzierbaren Schritten durchgefuehrt:
 
 2. Zielarchitektur definieren
 - Trennung Core vs. UI vs. Tests
-- Plan in `PLAN_MICROCALC_CSHARP_DOTNET10.md`
+- Plan in `requirements/baseline/PLAN_MICROCALC_CSHARP_DOTNET10.pre-intake-split.2026-07-26.md`
 
 3. Initialer Port
 - Core-Domain + Evaluator + Persistenz
@@ -230,7 +230,9 @@ Wenn du dieses Repo als Blaupause fuer eine eigene Legacy-Portierung nutzen will
 
 ## Relevante Dokumente im Repo
 
-- Portierungsplan: `PLAN_MICROCALC_CSHARP_DOTNET10.md`
+- Kanonischer Anforderungsindex: `Pflichtenheft.md`
+- Historischer Portierungsplan:
+  `requirements/baseline/PLAN_MICROCALC_CSHARP_DOTNET10.pre-intake-split.2026-07-26.md`
 - Initialer PR-Text: `docs/PR_TEXT_INITIAL_PORT.md`
 - PR-Workflow-Notiz: `docs/WORKFLOW_NOTES.md`
 - Beispiel PR-Text fuer Workflow-Notiz: `docs/PR_TEXT_PR_PROCESS_NOTE.md`
