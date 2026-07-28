@@ -15,12 +15,25 @@ export function validate(options = {}) {
   const read = (relativePath) => fs.readFileSync(resolve(relativePath), "utf8");
   const parse = (relativePath) => JSON.parse(read(relativePath));
   const config = parse("requirements/intake-governance-config.json");
-  const manifestPath = options.manifestPath ?? config.seriesManifest;
+  const manifestPath = options.manifestPath ??
+    config.collections?.seriesManifest ?? config.seriesManifest;
   const coveragePath = options.coveragePath ??
     "specs/requirements-reconciliation-20260726/requirements-coverage.json";
   const errors = [];
   const manifest = parse(manifestPath);
   const coverage = parse(coveragePath);
+  const expectedActiveCount = config.schemaVersion === "1.0"
+    ? config.activeIntakeCount
+    : (manifest.orderedTargets ?? []).length;
+  const expectedArchiveCount = config.schemaVersion === "1.0"
+    ? config.archiveIntakeCount
+    : 0;
+  const activeCollection = config.collections?.active ?? "requirements/intakes/active";
+  const archiveCollection = config.collections?.archive ?? "requirements/intakes/archive";
+  const canonicalIndex = config.artifactNaming?.canonicalIndex ?? config.canonicalIndex;
+  const preferredNext = config.schemaVersion === "1.0"
+    ? config.preferredNext
+    : "requirements/intakes/active/Lastenheft_Constitution_Change.md";
   const baselinePath =
     "requirements/baseline/PLAN_MICROCALC_CSHARP_DOTNET10.pre-intake-split.2026-07-26.md";
   const recordedBaseline = coverage.sources?.find((source) => source.sourceId === "TC-BASELINE");
@@ -31,9 +44,9 @@ export function validate(options = {}) {
 
   const requirements = coverage.requirements ?? [];
   const requirementIds = requirements.map((item) => item.requirementId);
-  if (requirementIds.length !== config.activeIntakeCount ||
+  if (requirementIds.length !== expectedActiveCount ||
       new Set(requirementIds).size !== requirementIds.length) {
-    errors.push(`coverage must contain exactly ${config.activeIntakeCount} unique requirement IDs`);
+    errors.push(`coverage must contain exactly ${expectedActiveCount} unique requirement IDs`);
   }
   for (const item of requirements) {
     if (["Open", "PartiallySatisfied"].includes(item.status) &&
@@ -45,14 +58,14 @@ export function validate(options = {}) {
   const listMarkdown = (relativePath) => fs.existsSync(resolve(relativePath))
     ? fs.readdirSync(resolve(relativePath)).filter((name) => name.endsWith(".md")).sort()
     : [];
-  const active = listMarkdown("requirements/intakes/active");
-  const archived = listMarkdown("requirements/intakes/archive");
+  const active = listMarkdown(activeCollection);
+  const archived = listMarkdown(archiveCollection);
   const rootLastenhefte = fs.readdirSync(root).filter((name) => /^Lastenheft.*\.md$/.test(name));
-  if (active.length !== config.activeIntakeCount) {
-    errors.push(`expected ${config.activeIntakeCount} active intakes, found ${active.length}`);
+  if (active.length !== expectedActiveCount) {
+    errors.push(`expected ${expectedActiveCount} active intakes, found ${active.length}`);
   }
-  if (archived.length !== config.archiveIntakeCount) {
-    errors.push(`expected ${config.archiveIntakeCount} archived intakes, found ${archived.length}`);
+  if (archived.length !== expectedArchiveCount) {
+    errors.push(`expected ${expectedArchiveCount} archived intakes, found ${archived.length}`);
   }
   if (rootLastenhefte.join(",") !== "Lastenheft_Abarbeitungsreihenfolge.md") {
     errors.push("only the generated processing-order view may remain as root Lastenheft");
@@ -60,11 +73,11 @@ export function validate(options = {}) {
 
   const targets = manifest.orderedTargets ?? [];
   const targetPaths = targets.map((target) => target.path);
-  if (targetPaths.length !== config.activeIntakeCount ||
+  if (targetPaths.length !== expectedActiveCount ||
       new Set(targetPaths).size !== targetPaths.length) {
-    errors.push(`series must contain exactly ${config.activeIntakeCount} unique active targets`);
+    errors.push(`series must contain exactly ${expectedActiveCount} unique active targets`);
   }
-  const expectedActive = active.map((name) => `requirements/intakes/active/${name}`).sort();
+  const expectedActive = active.map((name) => `${activeCollection}/${name}`).sort();
   if (JSON.stringify([...targetPaths].sort()) !== JSON.stringify(expectedActive)) {
     errors.push("active intake directory and series targets differ");
   }
@@ -80,7 +93,7 @@ export function validate(options = {}) {
   }
 
   const eligible = targets.filter((target) => target.status === "Eligible");
-  if (eligible.length !== 1 || eligible[0].path !== config.preferredNext) {
+  if (eligible.length !== 1 || eligible[0].path !== preferredNext) {
     errors.push("configured preferred intake must be the single explicitly Eligible target");
   }
 
@@ -114,20 +127,20 @@ export function validate(options = {}) {
   if (visited !== targetPaths.length) errors.push("series dependencies contain a cycle");
 
   const order = read("Lastenheft_Abarbeitungsreihenfolge.md");
-  const index = read(config.canonicalIndex);
+  const index = read(canonicalIndex);
   for (const target of targetPaths) {
     if (!order.includes(target)) errors.push(`processing order omits active target: ${target}`);
   }
   if (!index.includes(manifestPath)) errors.push("Pflichtenheft index omits canonical manifest");
   if (/\[[ xX-]\]/.test(index)) errors.push("slim Pflichtenheft must not contain progress checkboxes");
-  if (config.featureMustRemainAbsent && fs.existsSync(resolve(".specify/feature.json"))) {
+  if ((config.featureMustRemainAbsent ?? true) && fs.existsSync(resolve(".specify/feature.json"))) {
     errors.push("requirements migration must not start a Spec Kit feature");
   }
 
   const activeReceipts = fs.readdirSync(resolve("specs/intake-authoring-receipts"))
     .filter((name) => name.endsWith(".json"));
-  if (activeReceipts.length !== config.activeIntakeCount) {
-    errors.push(`expected ${config.activeIntakeCount} active receipts, found ${activeReceipts.length}`);
+  if (activeReceipts.length !== expectedActiveCount) {
+    errors.push(`expected ${expectedActiveCount} active receipts, found ${activeReceipts.length}`);
   }
   const receiptTargets = activeReceipts.map((name) =>
     parse(`specs/intake-authoring-receipts/${name}`).target?.path).sort();
