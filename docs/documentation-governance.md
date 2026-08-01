@@ -80,8 +80,9 @@ Voraussetzungen, Reihenfolge, tiefe Referenzen und nächste Aktion nennen.
 
 Große Dokumente werden nach Aufgabe und Zielgruppe getrennt, wenn eine
 gemeinsame Datei Orientierung oder Sprachpflege erschwert. In diesem Fall
-bleibt Deutsch der primäre Einstieg und eine `.en.md`-Datei bietet einen
-inhaltlich gleichwertigen englischen Pfad. Beide Dateien verlinken gegenseitig.
+bleibt Deutsch der primäre Einstieg und eine nach Repository-Regel benannte
+englische Partnerdatei, zum Beispiel `.EN.md`, bietet einen inhaltlich
+gleichwertigen Pfad. Beide Dateien verlinken gegenseitig.
 Kurze Dokumente dürfen Deutsch zuerst und Englisch danach enthalten.
 
 *Progressive disclosure keeps purpose, prerequisites, safety boundaries, and
