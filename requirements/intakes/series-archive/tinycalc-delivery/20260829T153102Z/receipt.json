@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "documentType": "IntakeSeriesReceipt",
+  "receiptId": "a786e7fb-cbaa-41f8-bde0-676736babe06",
+  "seriesId": "5b4523b4-d946-4091-9cbc-11825af94332",
+  "generator": {
+    "preset": "intake-sequencing-governance",
+    "version": "0.1.1"
+  },
+  "createdAt": "2026-07-26T21:00:00Z",
+  "operation": {
+    "operationId": "adca6d7c-da1d-4550-9308-9a7d77fe077c",
+    "type": "Create",
+    "authorityEvidence": "User-approved TinyCalc requirements and intake consolidation plan"
+  },
+  "status": "Ready",
+  "manifest": {
+    "path": "requirements/intakes/series/tinycalc-delivery/manifest.json",
+    "normalizedSha256": "616dae5365f2413b2904acd28c158a118eacfdd2ad53a7c9dfe7281a6c74adcb"
+  },
+  "supersedes": {
+    "receiptPath": "N/A",
+    "receiptNormalizedSha256": "N/A",
+    "manifestArchivePath": "N/A",
+    "manifestArchiveSha256": "N/A"
+  },
+  "tombstone": {
+    "path": "N/A",
+    "normalizedSha256": "N/A"
+  },
+  "nextAction": "$speckit-intake-series-status"
+}

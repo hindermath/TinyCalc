@@ -59,6 +59,12 @@
       "role": "ActiveIntakeCandidate"
     },
     {
+      "sourceId": "TC-PL0-CELLS",
+      "path": "requirements/intakes/active/Lastenheft_PL0-Zellfunktionen_V1.md",
+      "normalizedSha256": "5214bbddc484f5297a914edfbfd0265975fc6f15e74a7f6d711b05317913f25b",
+      "role": "ActiveIntakeCandidate"
+    },
+    {
       "sourceId": "TC-BASELINE",
       "path": "PLAN_MICROCALC_CSHARP_DOTNET10.md",
       "normalizedSha256": "f49dc38460ca5baa06c06ebe0fc887c20e8ffd1ae6d74eecefd22ed6b6a244e4",
@@ -225,6 +231,21 @@
       "proposedOwnerGroup": "Governance",
       "residualRisk": "The accepted product or governance outcome remains unverified.",
       "reevaluationTrigger": "Before executing or archiving Lastenheft_GSDB-Spec-Kit-Intensivpruefung.md"
+    },
+    {
+      "requirementId": "TC-RQ-010",
+      "sourceId": "TC-PL0-CELLS",
+      "sourcePath": "requirements/intakes/active/Lastenheft_PL0-Zellfunktionen_V1.md",
+      "sourceNormalizedSha256": "5214bbddc484f5297a914edfbfd0265975fc6f15e74a7f6d711b05317913f25b",
+      "statement": "Compiled PL/0 cell functions, the strict TinyCalc profile, and the step debugger are approved for version 1 but remain blocked by the TinyPl0 completion and NuGet delivery gate.",
+      "status": "Open",
+      "evidencePaths": [
+        "requirements/intakes/active/Lastenheft_PL0-Zellfunktionen_V1.md",
+        "requirements/intakes/series/tinycalc-delivery/manifest.json"
+      ],
+      "proposedOwnerGroup": "Formula Engine",
+      "residualRisk": "Implementation before verified TinyPl0 package delivery would bypass the approved supply-chain and contract gate.",
+      "reevaluationTrigger": "After the TinyPl0 intake is complete and both stable packages are available in the same version on NuGet.org"
     }
   ]
 }

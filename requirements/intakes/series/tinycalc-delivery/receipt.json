@@ -1,28 +1,28 @@
 {
   "schemaVersion": "1.0",
   "documentType": "IntakeSeriesReceipt",
-  "receiptId": "a786e7fb-cbaa-41f8-bde0-676736babe06",
+  "receiptId": "0d458d79-2908-40cf-b6dd-41f3fb9e17b6",
   "seriesId": "5b4523b4-d946-4091-9cbc-11825af94332",
   "generator": {
     "preset": "intake-sequencing-governance",
-    "version": "0.1.1"
+    "version": "0.2.3"
   },
-  "createdAt": "2026-07-26T21:00:00Z",
+  "createdAt": "2026-08-29T15:31:02Z",
   "operation": {
-    "operationId": "adca6d7c-da1d-4550-9308-9a7d77fe077c",
-    "type": "Create",
-    "authorityEvidence": "User-approved TinyCalc requirements and intake consolidation plan"
+    "operationId": "5e57604c-de91-49f0-823d-92e612ae25fe",
+    "type": "Update",
+    "authorityEvidence": "User approved IAD001 including TinyCalc rank 7 and approved the binding IAD002 delivery gate."
   },
   "status": "Ready",
   "manifest": {
     "path": "requirements/intakes/series/tinycalc-delivery/manifest.json",
-    "normalizedSha256": "616dae5365f2413b2904acd28c158a118eacfdd2ad53a7c9dfe7281a6c74adcb"
+    "normalizedSha256": "c9d5235a900c0046fc5a906582ddbc360d759d19d8dd859362faf431a4d969a6"
   },
   "supersedes": {
-    "receiptPath": "N/A",
-    "receiptNormalizedSha256": "N/A",
-    "manifestArchivePath": "N/A",
-    "manifestArchiveSha256": "N/A"
+    "receiptPath": "requirements/intakes/series-archive/tinycalc-delivery/20260829T153102Z/receipt.json",
+    "receiptNormalizedSha256": "3aa1e3b5140cb16fa1a0138943d82f366f39e8115cefd3bbf03b0fb9bfbf3deb",
+    "manifestArchivePath": "requirements/intakes/series-archive/tinycalc-delivery/20260829T153102Z/manifest.json",
+    "manifestArchiveSha256": "616dae5365f2413b2904acd28c158a118eacfdd2ad53a7c9dfe7281a6c74adcb"
   },
   "tombstone": {
     "path": "N/A",

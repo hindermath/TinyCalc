@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.1",
-  "reviewId": "a62d8561-abaa-41ff-bf6d-c807f7df75a2",
+  "reviewId": "2c338c63-9f64-47c1-ba50-a95c7ea3fce1",
   "mode": "Series",
   "policy": "tinycalc-delivery-v1",
   "targets": [
@@ -29,6 +29,10 @@
       "role": "OrderedMember"
     },
     {
+      "path": "requirements/intakes/active/Lastenheft_PL0-Zellfunktionen_V1.md",
+      "role": "OrderedMember"
+    },
+    {
       "path": "requirements/intakes/active/Lastenheft_Sandbox-gestuetzte-Secure-Development-Haertung.md",
       "role": "OrderedMember"
     },
@@ -49,6 +53,7 @@
       "requirements/intakes/active/Lastenheft_A11Y_TUI.md",
       "requirements/intakes/active/Lastenheft_Didactic-Inline-Code-Comment-Hardening.md",
       "requirements/intakes/active/Lastenheft_Secure-Development-Hardening.md",
+      "requirements/intakes/active/Lastenheft_PL0-Zellfunktionen_V1.md",
       "requirements/intakes/active/Lastenheft_Sandbox-gestuetzte-Secure-Development-Haertung.md",
       "requirements/intakes/active/Lastenheft_RL-SE-Checklist-Selbstpruefung.md",
       "requirements/intakes/active/Lastenheft_GSDB-Spec-Kit-Intensivpruefung.md"
@@ -83,6 +88,11 @@
       {
         "from": "requirements/intakes/active/Lastenheft_Didactic-Inline-Code-Comment-Hardening.md",
         "to": "requirements/intakes/active/Lastenheft_Secure-Development-Hardening.md",
+        "kind": "HardCompletionGate"
+      },
+      {
+        "from": "requirements/intakes/active/Lastenheft_Secure-Development-Hardening.md",
+        "to": "requirements/intakes/active/Lastenheft_PL0-Zellfunktionen_V1.md",
         "kind": "HardCompletionGate"
       }
     ]
