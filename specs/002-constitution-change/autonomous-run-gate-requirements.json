@@ -1,0 +1,50 @@
+{
+  "schemaVersion": "1.0",
+  "gates": [
+    {
+      "gateId": "SPEC-GATE-001",
+      "applicability": "Applicable",
+      "requiredScope": "Prove the current binding intake, review result, review request, and series manifest against their accepted normalized SHA-256 values.",
+      "requiredCommandTokens": ["shasum", "-a", "256"],
+      "requiredRunnerOrPlatformTokens": ["macOS"],
+      "rationale": "",
+      "reevaluationTrigger": "Before every semantic phase and remote delivery decision."
+    },
+    {
+      "gateId": "SPEC-GATE-002",
+      "applicability": "Applicable",
+      "requiredScope": "Prove exactly sixteen uniquely classified intake reconciliation rows and no unresolved blocking clarification.",
+      "requiredCommandTokens": ["rg", "IR-"],
+      "requiredRunnerOrPlatformTokens": ["macOS"],
+      "rationale": "",
+      "reevaluationTrigger": "After any specification change and during Analyze."
+    },
+    {
+      "gateId": "SPEC-GATE-003",
+      "applicability": "Applicable",
+      "requiredScope": "Prove bilingual text-first governance quality, requirements completeness, and absence of unresolved clarification markers.",
+      "requiredCommandTokens": ["rg", "NEEDS CLARIFICATION"],
+      "requiredRunnerOrPlatformTokens": ["macOS"],
+      "rationale": "",
+      "reevaluationTrigger": "After any learner-facing text change."
+    },
+    {
+      "gateId": "SPEC-GATE-004",
+      "applicability": "Applicable",
+      "requiredScope": "Prove the complete repository test suite for the exact reviewed head; local delivery evidence separately proves build, smoke, agent-surface homogeneity, security scan, delivery-set integrity, and the successor-intake boundary.",
+      "requiredCommandTokens": ["dotnet", "test"],
+      "requiredRunnerOrPlatformTokens": ["ubuntu"],
+      "rationale": "",
+      "reevaluationTrigger": "Before commit, push, and merge."
+    },
+    {
+      "gateId": "SPEC-GATE-005",
+      "applicability": "N/A",
+      "requiredScope": "No autonomous runner, delivery, result, or gate schema semantics are changed by this feature.",
+      "requiredCommandTokens": [],
+      "requiredRunnerOrPlatformTokens": [],
+      "rationale": "The feature consumes the installed autonomous schemas without modifying them.",
+      "reevaluationTrigger": "Re-evaluate if implementation changes autonomous scripts, templates, validators, or schema semantics."
+    }
+  ]
+}

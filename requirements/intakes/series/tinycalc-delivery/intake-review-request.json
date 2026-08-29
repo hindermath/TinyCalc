@@ -5,7 +5,7 @@
   "policy": "tinycalc-delivery-v1",
   "targets": [
     {
-      "path": "requirements/intakes/active/Lastenheft_Constitution_Change.md",
+      "path": "requirements/intakes/active/Lastenheft_Constitution_Change.002-constitution-change.md",
       "role": "Primary"
     },
     {
@@ -47,7 +47,7 @@
   ],
   "series": {
     "orderedTargetPaths": [
-      "requirements/intakes/active/Lastenheft_Constitution_Change.md",
+      "requirements/intakes/active/Lastenheft_Constitution_Change.002-constitution-change.md",
       "requirements/intakes/active/Lastenheft_TerminalGui_Migration.md",
       "requirements/intakes/active/Lastenheft_Rename_MicroCalc_TinyCalc.md",
       "requirements/intakes/active/Lastenheft_A11Y_TUI.md",
@@ -59,14 +59,14 @@
       "requirements/intakes/active/Lastenheft_GSDB-Spec-Kit-Intensivpruefung.md"
     ],
     "roots": [
-      "requirements/intakes/active/Lastenheft_Constitution_Change.md",
+      "requirements/intakes/active/Lastenheft_Constitution_Change.002-constitution-change.md",
       "requirements/intakes/active/Lastenheft_Sandbox-gestuetzte-Secure-Development-Haertung.md",
       "requirements/intakes/active/Lastenheft_RL-SE-Checklist-Selbstpruefung.md",
       "requirements/intakes/active/Lastenheft_GSDB-Spec-Kit-Intensivpruefung.md"
     ],
     "dependencies": [
       {
-        "from": "requirements/intakes/active/Lastenheft_Constitution_Change.md",
+        "from": "requirements/intakes/active/Lastenheft_Constitution_Change.002-constitution-change.md",
         "to": "requirements/intakes/active/Lastenheft_TerminalGui_Migration.md",
         "kind": "HardCompletionGate"
       },

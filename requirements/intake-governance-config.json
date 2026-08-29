@@ -21,5 +21,6 @@
     "history": "requirements/intakes/history",
     "seriesManifest": "requirements/intakes/series/tinycalc-delivery/manifest.json"
   },
+  "featureMustRemainAbsent": false,
   "legacyArtifactNames": []
 }

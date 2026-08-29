@@ -152,6 +152,20 @@
   re-evaluation trigger.
   `FollowUp` also requires owner, risk, due date, re-evaluation trigger,
   evidence, and scope rationale.
+- **CR-014 – Didaktische und sprachliche Klarheit / Pedagogical and linguistic
+  clarity**: Learner-facing and user-facing text MUST be German first and
+  English second at CEFR B2. Status, dependencies, decisions, and next actions
+  MUST remain complete in text and meet WCAG 2.2 Level AA where applicable.
+- **CR-015**: Every affected public API MUST receive `<summary>` and all
+  technically applicable `<param>`, `<returns>`, and `<exception>` elements.
+  Local variables MUST remain outside XML documentation, and CS1591 MUST NOT be
+  globally suppressed. New or changed non-trivial logic MUST be reviewed for
+  moderate bilingual why-comments.
+- **CR-016**: Each feature or bug fix MUST require observable red, green, and
+  regression/refactor evidence. Governance-only or text-only work MAY mark TDD
+  and changed-code coverage `N/A` only with a rationale and re-evaluation
+  trigger. Changed product code MUST use a 70% coverage minimum and an 80%
+  target.
 
 ### Key Entities *(include if feature involves data)*
 
