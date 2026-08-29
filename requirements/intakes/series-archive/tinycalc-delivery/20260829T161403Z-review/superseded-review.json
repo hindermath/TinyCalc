@@ -1,0 +1,27 @@
+{
+  "schemaVersion": "1.0",
+  "documentType": "SupersededIntakeReviewEvidence",
+  "seriesId": "5b4523b4-d946-4091-9cbc-11825af94332",
+  "supersededReviewId": "a62d8561-abaa-41ff-bf6d-c807f7df75a2",
+  "supersededStatus": "Ready",
+  "supersededReviewedAt": "2026-07-26T21:00:00Z",
+  "supersededTargetCount": 9,
+  "supersedingReviewId": "b9edc458-8339-4e8e-8f4f-3cabc2f96112",
+  "supersededAt": "2026-08-29T16:14:03Z",
+  "sourceRevision": "c7a9cbf50d732e0e521e6f8ae9ba1cc56612bf22",
+  "artifacts": [
+    {
+      "path": "requirements/intakes/series/tinycalc-delivery/intake-review-request.json",
+      "normalizedSha256": "625a088eac95572926fd3869f14599f7269362f207a18fedc43d0113728bc6aa"
+    },
+    {
+      "path": "requirements/intakes/series/tinycalc-delivery/intake-review-result.json",
+      "normalizedSha256": "0a18d45488fa26f629a32300b7155b13ddf0e9bd0a5991b82b2d79f2ac06f454"
+    },
+    {
+      "path": "requirements/intakes/series/tinycalc-delivery/intake-review-report.md",
+      "normalizedSha256": "2bba17a985c19955df50d0d3a8163b4ba29f8a2353932e08ad22290a814a4303"
+    }
+  ],
+  "proofBoundary": "The superseded artifacts are recoverable from sourceRevision and verified by normalized SHA-256. This evidence does not grant execution or publication authority."
+}

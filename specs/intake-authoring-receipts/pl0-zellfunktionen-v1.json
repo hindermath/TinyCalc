@@ -1,0 +1,116 @@
+{
+  "schemaVersion": "2.0",
+  "documentType": "IntakeReceipt",
+  "receiptId": "1895dbae-6b5a-42f0-a1c0-3fa49ad39fca",
+  "intakeId": "7474c2ca-2efe-4d05-a359-9af278333007",
+  "generator": {
+    "preset": "intake-authoring-governance",
+    "version": "0.3.1"
+  },
+  "createdAt": "2026-08-29T15:31:02Z",
+  "operation": {
+    "operationId": "289b40fa-6023-4655-9e03-0699050569e8",
+    "type": "Create",
+    "authorityEvidence": "User approved the two-intake proposal IAD001 and binding delivery gate IAD002, then explicitly authorized the bounded IR001 learner-readability repair through speckit-intake-repair."
+  },
+  "status": "ReadyForReview",
+  "target": {
+    "path": "requirements/intakes/active/Lastenheft_PL0-Zellfunktionen_V1.md",
+    "normalizedSha256": "2333b3f24bdc0bc64d0af49fe2e7ba7d5bea70aca5881b64d2731cd46274c94d"
+  },
+  "sources": [
+    {
+      "sourceId": "SRC001",
+      "order": 1,
+      "kind": "Inline",
+      "label": "Approved cross-repository PL/0 version-1 split proposal",
+      "location": "SnapshotOnly",
+      "path": "N/A",
+      "requestedUrl": "N/A",
+      "finalUrl": "N/A",
+      "retrievedAt": "N/A",
+      "httpStatus": "N/A",
+      "contentType": "N/A",
+      "contentLength": "N/A",
+      "etag": "N/A",
+      "lastModified": "N/A",
+      "redirectChain": [],
+      "rawSha256": "N/A",
+      "normalizedSha256": "f36a20d34be1c682821321dd0b1a0c8d2a5c44b6ffbfaf54c77daa027868a10d",
+      "gitBlob": "N/A",
+      "proofBoundary": "SnapshotOnly"
+    },
+    {
+      "sourceId": "SRC002",
+      "order": 2,
+      "kind": "Inline",
+      "label": "Approved two-stage fail-closed TinyPl0 delivery gate",
+      "location": "SnapshotOnly",
+      "path": "N/A",
+      "requestedUrl": "N/A",
+      "finalUrl": "N/A",
+      "retrievedAt": "N/A",
+      "httpStatus": "N/A",
+      "contentType": "N/A",
+      "contentLength": "N/A",
+      "etag": "N/A",
+      "lastModified": "N/A",
+      "redirectChain": [],
+      "rawSha256": "N/A",
+      "normalizedSha256": "076e87743a8f1ea0ba8a764b71462e30199e0e677b89c6a76412ece983775888",
+      "gitBlob": "N/A",
+      "proofBoundary": "SnapshotOnly"
+    }
+  ],
+  "profile": "level2-lastenheft",
+  "languagePolicy": "GermanFirstEnglishSecond",
+  "decisions": [
+    {
+      "id": "IAD001",
+      "status": "Answered",
+      "question": "Are the two intake targets, positions, and dependencies approved?",
+      "answer": "Approved exactly as proposal tinycalc-pl0-v1-split-v1 with SHA-256 f36a20d34be1c682821321dd0b1a0c8d2a5c44b6ffbfaf54c77daa027868a10d.",
+      "evidence": "Current user answer: both approved."
+    },
+    {
+      "id": "IAD002",
+      "status": "Answered",
+      "question": "Is the binding two-stage gate including the ban on local ProjectReference fallback approved?",
+      "answer": "Approved; TinyCalc implementation must stop until delivery evidence and technical package preflight both pass.",
+      "evidence": "Current user answer: both approved."
+    }
+  ],
+  "openDecisionIds": [],
+  "questionCount": 2,
+  "agentSurface": {
+    "specifyCanonicalId": "speckit.specify",
+    "specifyInvocation": "$speckit-specify Nutze requirements/intakes/active/Lastenheft_PL0-Zellfunktionen_V1.md als verbindliches Intake. Prüfe zuerst beide Stufen des TinyPl0-Liefergates und dokumentiere fehlende Evidenz als Blocker. Erstelle oder aktualisiere ausschließlich die passende Feature-Spezifikation. Bewahre Scope, Nicht-Ziele, Reihenfolge, strenges PL/0-Profil, NuGet-Vertrag, Security-, A11Y-, Dokumentations- und Evidenzgrenzen. Implementiere nichts; committe und pushe nicht; erstelle oder merge keinen Pull Request und starte kein weiteres Feature.",
+    "autonomousCanonicalId": "speckit.autonomous",
+    "autonomousInvocation": "$speckit-autonomous Führe genau einen vollständigen autonomen Spec-Kit-Lauf mit requirements/intakes/active/Lastenheft_PL0-Zellfunktionen_V1.md als verbindlichem Intake aus. Delivery Mode: LocalImplementation. Prüfe vor jeder Änderung das zweistufige TinyPl0-Liefergate und stoppe fail-closed, wenn Release-, NuGet-, SBOM-/VEX-/SLSA-, Locked-Restore- oder Contract-Test-Evidenz fehlt. Bewahre Scope, Reihenfolge, strenges PL/0-Profil, Security-, A11Y-, Dokumentations- und Evidenzgrenzen. Nutze keine lokale ProjectReference als Fallback. Nicht pushen, keinen Pull Request erstellen oder mergen, keine Pakete veröffentlichen, keinen Bypass nutzen, keine Secrets offenlegen und kein Folgefeature starten."
+  },
+  "deliveryAuthority": "LocalImplementation",
+  "authorityEvidence": "Default local authority only; no commit, remote, provider, package-publication, PR, merge, or bypass authority was granted.",
+  "promptState": "Enabled",
+  "provenanceMode": "New",
+  "supersedes": {
+    "receiptPath": "N/A",
+    "targetNormalizedSha256": "N/A",
+    "archiveTargetPath": "N/A",
+    "archiveReceiptPath": "N/A"
+  },
+  "legacyAdoption": {
+    "evidenceType": "N/A",
+    "priorTargetNormalizedSha256": "N/A",
+    "priorGitBlob": "N/A"
+  },
+  "updateAuthorized": false,
+  "updateAuthorityEvidence": "N/A",
+  "series": {
+    "seriesId": "5b4523b4-d946-4091-9cbc-11825af94332",
+    "manifestPath": "requirements/intakes/series/tinycalc-delivery/manifest.json",
+    "order": 7,
+    "role": "OrderedMember",
+    "supersedesIntakeIds": []
+  },
+  "nextAction": "$speckit-intake-review requirements/intakes/active/Lastenheft_PL0-Zellfunktionen_V1.md"
+}
