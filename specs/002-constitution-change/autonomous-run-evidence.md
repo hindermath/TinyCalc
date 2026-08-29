@@ -652,3 +652,14 @@ Kandidaten-Vorgänger ist `72d5766daca7206e90b9998ca77bb769b9d9218a`.
 *The second read-only pass also succeeded. Exactly 31 validator-approved paths
 were staged, the cached whitespace check was clean, and no unstaged or unrelated
 path remained. The candidate predecessor is the recorded full commit ID.*
+
+Der erste Feature-Commit ist
+`1870af18ea3af37f1c4322b6e4d4ff5354731823`. Er enthält genau die 31
+validierten Pfade und den verpflichtenden Co-author-Trailer. Der folgende
+Polish-Commit wird auf Patch 2 ausgerichtet und enthält nur Version, Run-State-
+Pfad und den inhaltsgleichen branchgestempelten Intake.
+
+*The first feature commit is the recorded full object ID. It contains exactly
+the 31 validated paths and the mandatory co-author trailer. The following
+polish commit is aligned to patch 2 and is limited to version, run-state path,
+and the content-identical branch-stamped intake.*

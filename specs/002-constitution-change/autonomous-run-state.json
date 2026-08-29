@@ -5,12 +5,12 @@
   "branch": "002-constitution-change",
   "deliveryMode": "MergeAndSync",
   "authorityRevalidationRequired": true,
-  "stage": "Validate",
+  "stage": "Publish",
   "status": "Active",
-  "checkpointCommit": "72d5766daca7206e90b9998ca77bb769b9d9218a",
+  "checkpointCommit": "1870af18ea3af37f1c4322b6e4d4ff5354731823",
   "acceptedArtifacts": [
     {
-      "path": "requirements/intakes/active/Lastenheft_Constitution_Change.md",
+      "path": "requirements/intakes/active/Lastenheft_Constitution_Change.002-constitution-change.md",
       "sha256": "dce77a3f0c5aee07cd6c033c27d3cfdf5c991208e8dd8eeba02e49505193d37f"
     },
     {
@@ -39,7 +39,7 @@
     },
     {
       "path": "specs/002-constitution-change/tasks.md",
-      "sha256": "b5fa5ee246c2bcf721bc3bb3e6f3f207fd1d6688dbc268564f15340526335a93"
+      "sha256": "1495cbfcdf92d8a2eb73e96c8676c0326aa1920df7023da81453b70de461ef02"
     },
     {
       "path": "specs/002-constitution-change/autonomous-run-gate-requirements.json",
@@ -48,8 +48,8 @@
   ],
   "tasks": {
     "path": "specs/002-constitution-change/tasks.md",
-    "sha256": "b5fa5ee246c2bcf721bc3bb3e6f3f207fd1d6688dbc268564f15340526335a93",
-    "completed": 43,
+    "sha256": "1495cbfcdf92d8a2eb73e96c8676c0326aa1920df7023da81453b70de461ef02",
+    "completed": 44,
     "total": 71
   },
   "routing": {
@@ -182,12 +182,12 @@
       }
     ]
   },
-  "lastPassingGate": "Validated and staged exact first commit candidate",
-  "nextExactAction": "Execute T044 first feature commit, then the final versioned intake-rename commit.",
+  "lastPassingGate": "First feature commit completed; final rename candidate prepared",
+  "nextExactAction": "Execute the final versioned intake-rename commit, then T045 push-boundary revalidation.",
   "lastOperation": {
-    "kind": "DeliverySetValidation",
+    "kind": "FeatureCommit",
     "state": "Completed",
-    "summary": "Exact candidate passed with delivery-set SHA-256 0c3a43d3e14dab57d3021f6c229ab99c43c68c8712b2ea981cf48ad8c689da26."
+    "summary": "First feature commit 1870af18ea3af37f1c4322b6e4d4ff5354731823 completed; rename candidate prepared."
   },
   "stop": {
     "reason": "N/A",
