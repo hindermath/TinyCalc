@@ -465,25 +465,25 @@ Profil 2 verwendet Git-getrackte Textdateien und sichtbare Git-Aktivitaet. Die W
 
 | Kennzahl / Metric | Wert / Value |
 |---|---:|
-| Textbasis / Text base | 141023 lines |
+| Textbasis / Text base | 141057 lines |
 | Textdateien / Text files | 995 |
 | Beobachtbarer Zeitraum / Observable period | 2025-09-07..2026-08-30 |
 | Aktivtage / Active days | 72 |
-| Relevante Commits / Relevant commits | 199 |
-| Zeilen je Aktivtag / Lines per active day | 1958.7 |
+| Relevante Commits / Relevant commits | 200 |
+| Zeilen je Aktivtag / Lines per active day | 1959.1 |
 | Peak-Tag im Fenster / Peak day in window | 2026-06-17 / 27058 |
 | Peak-Woche im Fenster / Peak week in window | 2026-07-19 / 33711 |
 | Laengste Serie / Longest streak | 8 days |
 | Speedup vs. 80 lines/day | 24.5x |
 | Speedup vs. 125 lines/day | 15.7x |
-| Methodik / Methodology | v2; source `65113bc92c41` |
+| Methodik / Methodology | v2; source `72155764f089` |
 
 ### Artefaktmix / Artifact Mix
 
 ```text
 Produktiv / Production          [#...................]   1.9% | 2748
 Tests                           [#...................]   4.0% | 5706
-Dokumentation / Documentation   [###############.....]  73.6% | 103790
+Dokumentation / Documentation   [###############.....]  73.6% | 103824
 Skripte / Scripts               [###.................]  15.6% | 21988
 Konfiguration / Configuration   [#...................]   2.8% | 3892
 Daten und Medien / Data and media [....................]   0.0% | 0
@@ -624,7 +624,7 @@ Die Faktoren vergleichen sichtbare Lieferdichte mit den dokumentierten manuellen
 Scale: 0..2000 lines/day
 Experienced manual [#...................] 80
 Thorsten solo      [#...................] 125
-Visible repository [####################] 1958.7
+Visible repository [####################] 1959.1
 ```
 
 Die gemeinsame Skala vergleicht Referenzen und sichtbare Lieferdichte. Sie schreibt die Git-Aktivitaet keiner Person oder KI pauschal zu.
@@ -650,6 +650,6 @@ DE: Das Fenster beginnt am 2025-09-07 und endet am 2026-08-30. Es enthaelt 72 ak
 | 2026-05 | 13420 |
 | 2026-06 | 37318 |
 | 2026-07 | 76222 |
-| 2026-08 | 16759 |
+| 2026-08 | 16899 |
 
 <!-- project-statistics-v2:end -->
