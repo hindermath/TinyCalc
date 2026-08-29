@@ -11,9 +11,9 @@
   },
   "targets": [
     {
-      "path": "requirements/intakes/active/Lastenheft_Constitution_Change.md",
+      "path": "requirements/intakes/active/Lastenheft_Constitution_Change.002-constitution-change.md",
       "role": "Primary",
-      "normalizedSha256": "dce77a3f0c5aee07cd6c033c27d3cfdf5c991208e8dd8eeba02e49505193d37f",
+      "normalizedSha256": "04c4e1ba93d626463829a07f33b5591a6417b6aeaf89e805b637ab1bf5c26a0a",
       "gitBlob": "N/A"
     },
     {
@@ -77,7 +77,7 @@
   "operatorExceptions": [],
   "coverage": {
     "individual": [
-      "requirements/intakes/active/Lastenheft_Constitution_Change.md",
+      "requirements/intakes/active/Lastenheft_Constitution_Change.002-constitution-change.md",
       "requirements/intakes/active/Lastenheft_TerminalGui_Migration.md",
       "requirements/intakes/active/Lastenheft_Rename_MicroCalc_TinyCalc.md",
       "requirements/intakes/active/Lastenheft_A11Y_TUI.md",
@@ -105,6 +105,6 @@
   "supersedes": "b9edc458-8339-4e8e-8f4f-3cabc2f96112",
   "requestEvidence": {
     "path": "requirements/intakes/series/tinycalc-delivery/intake-review-request.json",
-    "normalizedSha256": "1836955690f990ea66339c0374dde0f01fcffdb9b019ef875e6cd753c75f35b9"
+    "normalizedSha256": "7020241199793ab1d94575a7d1f804b27fd916c7cde8597adb22ee654876d042"
   }
 }

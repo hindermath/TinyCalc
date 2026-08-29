@@ -3,7 +3,7 @@
 **Feature-Branch / Feature Branch**: `002-constitution-change`
 **Erstellt / Created**: 2026-08-29
 **Status / Status**: Bereit für die Klärungsphase / Ready for clarification
-**Verbindliche Eingabe / Binding Input**: `requirements/intakes/active/Lastenheft_Constitution_Change.md`
+**Verbindliche Eingabe / Binding Input**: `requirements/intakes/active/Lastenheft_Constitution_Change.002-constitution-change.md`
 **Feature-Verzeichnis / Feature Directory**: `specs/002-constitution-change`
 
 ## Ziel und Nutzen / Goal and Value

@@ -101,11 +101,11 @@ hash.*
 
 | Pfad / Path | SHA-256 | Status |
 |---|---|---|
-| `requirements/intakes/active/Lastenheft_Constitution_Change.md` | `dce77a3f0c5aee07cd6c033c27d3cfdf5c991208e8dd8eeba02e49505193d37f` | Pass |
-| `requirements/intakes/series/tinycalc-delivery/intake-review-result.json` | `271790e2f3b79e640726b8c05e70fbb0e6cf605077a20496f48b61f7ff2c5647` | Pass |
-| `requirements/intakes/series/tinycalc-delivery/intake-review-request.json` | `1836955690f990ea66339c0374dde0f01fcffdb9b019ef875e6cd753c75f35b9` | Pass |
-| `requirements/intakes/series/tinycalc-delivery/manifest.json` | `c9d5235a900c0046fc5a906582ddbc360d759d19d8dd859362faf431a4d969a6` | Pass |
-| `specs/002-constitution-change/spec.md` | `35390de687ab0312e336b40247332e07a894f1f70a4e0c0af56fe080e29dc8f0` | Pass; whitespace-only Delivery-Remediation / delivery remediation |
+| `requirements/intakes/active/Lastenheft_Constitution_Change.002-constitution-change.md` | `04c4e1ba93d626463829a07f33b5591a6417b6aeaf89e805b637ab1bf5c26a0a` | Pass; exact enabled-prompt self-paths / exakte Selbstpfade der aktivierten Prompts |
+| `requirements/intakes/series/tinycalc-delivery/intake-review-result.json` | `6f33209dedb2c51525f4443e44e1877466bb096bc030a748484936b96299559b` | Pass; branch-stamped active-intake propagation / propagation of the branch-stamped active intake |
+| `requirements/intakes/series/tinycalc-delivery/intake-review-request.json` | `7020241199793ab1d94575a7d1f804b27fd916c7cde8597adb22ee654876d042` | Pass; branch-stamped active-intake propagation / propagation of the branch-stamped active intake |
+| `requirements/intakes/series/tinycalc-delivery/manifest.json` | `ef266cf99627d10a17282db966826fff26a0705ec1afca355eeb7c7079a25e72` | Pass; branch-stamped active-intake propagation / propagation of the branch-stamped active intake |
+| `specs/002-constitution-change/spec.md` | `1f8196fab5ff0a2d0aba6fd59b58d6fbb24edca48dadc80f68437273f016ca65` | Pass; path-only Delivery-Remediation / delivery remediation |
 | `specs/002-constitution-change/checklists/requirements.md` | `19e6a79a937f8a921602398813468aaf32e35a58f6325f6fbb83f1b014dea2ca` | Pass; whitespace-only Delivery-Remediation / delivery remediation |
 
 `rg -n '^\| IR-[0-9]{3} \|' specs/002-constitution-change/spec.md` ergab
@@ -656,10 +656,15 @@ path remained. The candidate predecessor is the recorded full commit ID.*
 Der erste Feature-Commit ist
 `1870af18ea3af37f1c4322b6e4d4ff5354731823`. Er enthält genau die 31
 validierten Pfade und den verpflichtenden Co-author-Trailer. Der folgende
-Polish-Commit wird auf Patch 2 ausgerichtet und enthält nur Version, Run-State-
-Pfad und den inhaltsgleichen branchgestempelten Intake.
+Polish-Commit wurde auf Patch 2 ausgerichtet und enthielt nur Version,
+Run-State-Pfad und die zunächst inhaltsgleiche branchgestempelte Intake-Datei.
+Die anschließende CI-Remediation änderte ausschließlich drei Selbstpfade der
+aktivierten Prompts und regenerierte die davon abhängige aktive
+Intake-Governance; Scope und Authority blieben unverändert.
 
 *The first feature commit is the recorded full object ID. It contains exactly
 the 31 validated paths and the mandatory co-author trailer. The following
-polish commit is aligned to patch 2 and is limited to version, run-state path,
-and the content-identical branch-stamped intake.*
+polish commit was aligned to patch 2 and initially contained only version,
+run-state path, and the content-identical branch-stamped intake. The following
+CI remediation changes only the three enabled-prompt self-paths and regenerates
+their derived active intake governance; scope and authority remain unchanged.*

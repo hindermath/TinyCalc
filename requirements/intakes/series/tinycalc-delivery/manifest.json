@@ -7,9 +7,9 @@
   "status": "Active",
   "orderedTargets": [
     {
-      "path": "requirements/intakes/active/Lastenheft_Constitution_Change.md",
+      "path": "requirements/intakes/active/Lastenheft_Constitution_Change.002-constitution-change.md",
       "role": "Primary",
-      "normalizedSha256": "dce77a3f0c5aee07cd6c033c27d3cfdf5c991208e8dd8eeba02e49505193d37f",
+      "normalizedSha256": "04c4e1ba93d626463829a07f33b5591a6417b6aeaf89e805b637ab1bf5c26a0a",
       "status": "Eligible"
     },
     {
@@ -68,14 +68,14 @@
     }
   ],
   "roots": [
-    "requirements/intakes/active/Lastenheft_Constitution_Change.md",
+    "requirements/intakes/active/Lastenheft_Constitution_Change.002-constitution-change.md",
     "requirements/intakes/active/Lastenheft_Sandbox-gestuetzte-Secure-Development-Haertung.md",
     "requirements/intakes/active/Lastenheft_RL-SE-Checklist-Selbstpruefung.md",
     "requirements/intakes/active/Lastenheft_GSDB-Spec-Kit-Intensivpruefung.md"
   ],
   "dependencies": [
     {
-      "from": "requirements/intakes/active/Lastenheft_Constitution_Change.md",
+      "from": "requirements/intakes/active/Lastenheft_Constitution_Change.002-constitution-change.md",
       "to": "requirements/intakes/active/Lastenheft_TerminalGui_Migration.md",
       "kind": "HardCompletionGate",
       "binding": true

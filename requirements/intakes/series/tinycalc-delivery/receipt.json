@@ -16,7 +16,7 @@
   "status": "Ready",
   "manifest": {
     "path": "requirements/intakes/series/tinycalc-delivery/manifest.json",
-    "normalizedSha256": "c9d5235a900c0046fc5a906582ddbc360d759d19d8dd859362faf431a4d969a6"
+    "normalizedSha256": "ef266cf99627d10a17282db966826fff26a0705ec1afca355eeb7c7079a25e72"
   },
   "supersedes": {
     "receiptPath": "requirements/intakes/series-archive/tinycalc-delivery/20260829T153102Z/receipt.json",

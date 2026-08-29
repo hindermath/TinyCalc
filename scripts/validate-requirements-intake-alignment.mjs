@@ -33,7 +33,7 @@ export function validate(options = {}) {
   const canonicalIndex = config.artifactNaming?.canonicalIndex ?? config.canonicalIndex;
   const preferredNext = config.schemaVersion === "1.0"
     ? config.preferredNext
-    : "requirements/intakes/active/Lastenheft_Constitution_Change.md";
+    : "requirements/intakes/active/Lastenheft_Constitution_Change.002-constitution-change.md";
   const baselinePath =
     "requirements/baseline/PLAN_MICROCALC_CSHARP_DOTNET10.pre-intake-split.2026-07-26.md";
   const recordedBaseline = coverage.sources?.find((source) => source.sourceId === "TC-BASELINE");

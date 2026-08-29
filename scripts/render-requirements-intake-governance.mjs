@@ -25,7 +25,7 @@ const reviewedAt = "2026-08-29T16:19:38Z";
 const reviewHead = "c7a9cbf50d732e0e521e6f8ae9ba1cc56612bf22";
 
 const members = [
-  ["constitution-change", "Lastenheft_Constitution_Change.md", "Eligible", "b00956e5-e42b-48c4-b63d-ee748cad27f3", "4936d97b-6206-433e-b76c-a570c1842695"],
+  ["constitution-change", "Lastenheft_Constitution_Change.002-constitution-change.md", "Eligible", "b00956e5-e42b-48c4-b63d-ee748cad27f3", "4936d97b-6206-433e-b76c-a570c1842695"],
   ["terminalgui-migration", "Lastenheft_TerminalGui_Migration.md", "Blocked", "098464e1-cbf6-4812-8b42-c88a55d3c192", "9d791f78-d8ad-4076-aab6-acd550bcc331"],
   ["rename-microcalc-tinycalc", "Lastenheft_Rename_MicroCalc_TinyCalc.md", "Blocked", "b4e6471a-404f-4dc4-a4ea-51659bbb093d", "313385fe-d32f-4236-a6b1-b35630aa375c"],
   ["a11y-tui", "Lastenheft_A11Y_TUI.md", "Blocked", "f36ec0dd-33e3-4f34-aaf8-e264f41057ff", "418ea177-4ff8-4a61-8806-08fc7be4a85e"],
@@ -44,7 +44,9 @@ const members = [
   order: index + 1,
   role: index === 0 ? "Primary" : "OrderedMember",
   path: `requirements/intakes/active/${fileName}`,
-  priorTarget: `requirements/intakes/history/pre-intake-split-20260726/${fileName}`,
+  priorTarget: `requirements/intakes/history/pre-intake-split-20260726/${
+    slug === "constitution-change" ? "Lastenheft_Constitution_Change.md" : fileName
+  }`,
   priorReceipt: `specs/intake-authoring-receipts/history/${slug}.schema-1.1.json`,
   customReceipt: slug === "pl0-zellfunktionen-v1",
 }));

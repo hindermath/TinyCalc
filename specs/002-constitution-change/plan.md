@@ -1,7 +1,7 @@
 # Implementierungsplan: Constitution-Abgleich / Implementation Plan: Constitution Alignment
 
 **Branch / Branch**: `002-constitution-change` | **Datum / Date**: 2026-08-29 | **Spezifikation / Specification**: [spec.md](spec.md)
-**Verbindliche Eingabe / Binding input**: `requirements/intakes/active/Lastenheft_Constitution_Change.md`
+**Verbindliche Eingabe / Binding input**: `requirements/intakes/active/Lastenheft_Constitution_Change.002-constitution-change.md`
 **Autonomer Lauf / Autonomous run**: `d42bfa06-0a67-492e-968d-80309788b383`
 **Liefermodus / Delivery mode**: `MergeAndSync`; jede spätere Git-, Remote-,
 Review-, Bypass- oder Merge-Aktion benötigt an ihrer Grenze erneut passende
@@ -47,11 +47,11 @@ phase. Any mismatch stops work and requires revalidation.*
 
 | Artefakt / Artefact | Akzeptierter SHA-256 / Accepted SHA-256 |
 |---|---|
-| `requirements/intakes/active/Lastenheft_Constitution_Change.md` | `dce77a3f0c5aee07cd6c033c27d3cfdf5c991208e8dd8eeba02e49505193d37f` |
-| `requirements/intakes/series/tinycalc-delivery/intake-review-result.json` | `271790e2f3b79e640726b8c05e70fbb0e6cf605077a20496f48b61f7ff2c5647` |
-| `requirements/intakes/series/tinycalc-delivery/intake-review-request.json` | `1836955690f990ea66339c0374dde0f01fcffdb9b019ef875e6cd753c75f35b9` |
-| `requirements/intakes/series/tinycalc-delivery/manifest.json` | `c9d5235a900c0046fc5a906582ddbc360d759d19d8dd859362faf431a4d969a6` |
-| `specs/002-constitution-change/spec.md` | `35390de687ab0312e336b40247332e07a894f1f70a4e0c0af56fe080e29dc8f0` |
+| `requirements/intakes/active/Lastenheft_Constitution_Change.002-constitution-change.md` | `04c4e1ba93d626463829a07f33b5591a6417b6aeaf89e805b637ab1bf5c26a0a` |
+| `requirements/intakes/series/tinycalc-delivery/intake-review-result.json` | `6f33209dedb2c51525f4443e44e1877466bb096bc030a748484936b96299559b` |
+| `requirements/intakes/series/tinycalc-delivery/intake-review-request.json` | `7020241199793ab1d94575a7d1f804b27fd916c7cde8597adb22ee654876d042` |
+| `requirements/intakes/series/tinycalc-delivery/manifest.json` | `ef266cf99627d10a17282db966826fff26a0705ec1afca355eeb7c7079a25e72` |
+| `specs/002-constitution-change/spec.md` | `1f8196fab5ff0a2d0aba6fd59b58d6fbb24edca48dadc80f68437273f016ca65` |
 | `specs/002-constitution-change/checklists/requirements.md` | `19e6a79a937f8a921602398813468aaf32e35a58f6325f6fbb83f1b014dea2ca` |
 
 Die Spezifikation enthält genau 16 Intake-Zeilen. Nur `IR-004`, `IR-012`,
@@ -451,7 +451,7 @@ implementation. The build counter is incremented immediately before every
 
 | Gate | Befehl oder Prüfung / Command or check | Erfolg / Success | Evidenzpfad / Evidence path |
 |---|---|---|---|
-| Eingabehashes / Input hashes | `shasum -a 256 requirements/intakes/active/Lastenheft_Constitution_Change.md requirements/intakes/series/tinycalc-delivery/intake-review-result.json requirements/intakes/series/tinycalc-delivery/intake-review-request.json requirements/intakes/series/tinycalc-delivery/manifest.json specs/002-constitution-change/spec.md specs/002-constitution-change/checklists/requirements.md` | Alle sechs Werte entsprechen der Tabelle. / All six match. | `specs/002-constitution-change/autonomous-run-evidence.md` |
+| Eingabehashes / Input hashes | `shasum -a 256 requirements/intakes/active/Lastenheft_Constitution_Change.002-constitution-change.md requirements/intakes/series/tinycalc-delivery/intake-review-result.json requirements/intakes/series/tinycalc-delivery/intake-review-request.json requirements/intakes/series/tinycalc-delivery/manifest.json specs/002-constitution-change/spec.md specs/002-constitution-change/checklists/requirements.md` | Alle sechs Werte entsprechen der Tabelle. / All six match. | `specs/002-constitution-change/autonomous-run-evidence.md` |
 | Intake-Klassifikation / Intake classification | `rg -n '^\| IR-[0-9]{3} \|' specs/002-constitution-change/spec.md` und `rg -n '\[NEEDS[ ]CLARIFICATION:|\| .*\| Open \|' specs/002-constitution-change/spec.md specs/002-constitution-change/checklists/requirements.md` | Genau 16 eindeutige Zeilen, vier `Applicable`, keine ungeklärte Markierung. / Exactly 16 unique rows, four applicable, no unresolved marker. | `specs/002-constitution-change/checklists/requirements.md` |
 | Constitution-Spiegel / Constitution mirror | `cmp -s constitution.md .specify/memory/constitution.md` | Exitcode 0 und Security-First bleibt Prinzip I. / Exit 0 and Security-First remains Principle I. | `specs/002-constitution-change/autonomous-run-evidence.md` |
 | Regelvollständigkeit / Rule completeness | `rg -n 'Didaktische und sprachliche Klarheit|Pedagogical and Linguistic Clarity|Rot.*Grün.*Aufräumen|red.*green.*refactor|CS1591' constitution.md .specify/memory/constitution.md AGENTS.md CLAUDE.md GEMINI.md .github/copilot-instructions.md .github/agents/copilot-instructions.md scripts/templates/AGENTS.md.tmpl scripts/templates/CLAUDE.md.tmpl scripts/templates/GEMINI.md.tmpl scripts/templates/copilot-instructions.tmpl .specify/templates/constitution-template.md .specify/templates/plan-template.md .specify/templates/spec-template.md .specify/templates/tasks-template.md` | Jede der fünf Agentenflächen, vier Projektvorlagen und vier Constitution-abhängigen Spec-Kit-Vorlagen enthält die für ihre Rolle vollständige didaktische, sprachliche, XML-/CS1591- und TDD-Semantik. Fehlende Einzeldatei oder Semantik ist ein Fehler. / Every agent surface, project template, and constitution-dependent Spec Kit template carries the complete role-appropriate pedagogical, language, XML/CS1591, and TDD semantics. A missing file or semantic element fails the gate. | `docs/PR_TEXT_CONSTITUTION_CHANGE.md` |
@@ -524,7 +524,7 @@ and resume requires drift, scope, hash, routing, and authority revalidation.*
 | Ein Text-Feature wird fälschlich als TDD-Pass ausgegeben. / Text work is misreported as a TDD pass. | Aktuelle Umsetzung begründet `N/A`; zukünftige Verhaltensänderungen brauchen beobachtbare Rot-/Grün-/Aufräum-Evidenz. / Current work is N/A; future behaviour work needs observable evidence. |
 | Build-Zähler oder Statistikdatei wird parallel überschrieben. / Build counter or statistics is overwritten concurrently. | Version, Agentenflächen, Evidence und Statistik sind serialisierte Writer. / Treat shared mutable files as serialized writers. |
 | Gespeicherte Delivery Authority wird als aktuelle Erlaubnis verstanden. / Stored delivery authority is treated as current permission. | Vor jeder Git-/Remote-/Bypass-Grenze aktuelle Autorität und exakten Head prüfen. / Re-check authority and exact head at every delivery boundary. |
-| Ein späterer Intake wird zu früh gestartet. / A later intake starts early. | Das bindende Lastenheft wird nur inhaltsgleich branchgestempelt; Review, Request und Manifest bleiben unverändert. Kein Next-/Update-/Start-Befehl gehört zu diesem Feature. / Only the content-identical branch-stamped intake rename is allowed; no successor command runs. |
+| Ein späterer Intake wird zu früh gestartet. / A later intake starts early. | Beim branchgestempelten Lastenheft werden nur die drei Selbstpfade der aktivierten Prompts angepasst und die davon abhängige aktive Intake-Governance neu gerendert. Scope und Authority bleiben unverändert; kein Next-/Update-/Start-Befehl gehört zu diesem Feature. / Only the three enabled-prompt self-paths and their derived active intake governance are refreshed; scope and authority remain unchanged and no successor command runs. |
 
 ## Komplexitätsnachverfolgung / Complexity Tracking
 

@@ -25,7 +25,7 @@ intakes, historical evidence, and executable intake series.*
 
 ## Nächster Intake / Next Intake
 
-`requirements/intakes/active/Lastenheft_Constitution_Change.md` ist der
+`requirements/intakes/active/Lastenheft_Constitution_Change.002-constitution-change.md` ist der
 bevorzugte nächste Intake. Diese Festlegung startet keinen Spec-Kit-Lauf und
 erteilt keine Remote- oder Merge-Berechtigung.
 

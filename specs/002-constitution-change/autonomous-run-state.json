@@ -11,23 +11,23 @@
   "acceptedArtifacts": [
     {
       "path": "requirements/intakes/active/Lastenheft_Constitution_Change.002-constitution-change.md",
-      "sha256": "dce77a3f0c5aee07cd6c033c27d3cfdf5c991208e8dd8eeba02e49505193d37f"
+      "sha256": "04c4e1ba93d626463829a07f33b5591a6417b6aeaf89e805b637ab1bf5c26a0a"
     },
     {
       "path": "requirements/intakes/series/tinycalc-delivery/intake-review-result.json",
-      "sha256": "271790e2f3b79e640726b8c05e70fbb0e6cf605077a20496f48b61f7ff2c5647"
+      "sha256": "6f33209dedb2c51525f4443e44e1877466bb096bc030a748484936b96299559b"
     },
     {
       "path": "requirements/intakes/series/tinycalc-delivery/intake-review-request.json",
-      "sha256": "1836955690f990ea66339c0374dde0f01fcffdb9b019ef875e6cd753c75f35b9"
+      "sha256": "7020241199793ab1d94575a7d1f804b27fd916c7cde8597adb22ee654876d042"
     },
     {
       "path": "requirements/intakes/series/tinycalc-delivery/manifest.json",
-      "sha256": "c9d5235a900c0046fc5a906582ddbc360d759d19d8dd859362faf431a4d969a6"
+      "sha256": "ef266cf99627d10a17282db966826fff26a0705ec1afca355eeb7c7079a25e72"
     },
     {
       "path": "specs/002-constitution-change/spec.md",
-      "sha256": "35390de687ab0312e336b40247332e07a894f1f70a4e0c0af56fe080e29dc8f0"
+      "sha256": "1f8196fab5ff0a2d0aba6fd59b58d6fbb24edca48dadc80f68437273f016ca65"
     },
     {
       "path": "specs/002-constitution-change/checklists/requirements.md",
@@ -35,11 +35,11 @@
     },
     {
       "path": "specs/002-constitution-change/plan.md",
-      "sha256": "d293164136765a24a9b14cd9c2325be208fafdf9ee251c77151a22d6ba750a1f"
+      "sha256": "7e83c8336760fcc85a185b395f8a465c98c5768dc27cdff28d86ce69ca0b97d8"
     },
     {
       "path": "specs/002-constitution-change/tasks.md",
-      "sha256": "1495cbfcdf92d8a2eb73e96c8676c0326aa1920df7023da81453b70de461ef02"
+      "sha256": "5e03a604811ffe852233bd71e2f995da76dcdd4392459df930d8ecb86980a638"
     },
     {
       "path": "specs/002-constitution-change/autonomous-run-gate-requirements.json",
@@ -48,7 +48,7 @@
   ],
   "tasks": {
     "path": "specs/002-constitution-change/tasks.md",
-    "sha256": "1495cbfcdf92d8a2eb73e96c8676c0326aa1920df7023da81453b70de461ef02",
+    "sha256": "5e03a604811ffe852233bd71e2f995da76dcdd4392459df930d8ecb86980a638",
     "completed": 44,
     "total": 71
   },

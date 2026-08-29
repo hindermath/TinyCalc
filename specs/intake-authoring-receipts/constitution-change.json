@@ -15,8 +15,8 @@
   },
   "status": "ReadyForReview",
   "target": {
-    "path": "requirements/intakes/active/Lastenheft_Constitution_Change.md",
-    "normalizedSha256": "dce77a3f0c5aee07cd6c033c27d3cfdf5c991208e8dd8eeba02e49505193d37f"
+    "path": "requirements/intakes/active/Lastenheft_Constitution_Change.002-constitution-change.md",
+    "normalizedSha256": "04c4e1ba93d626463829a07f33b5591a6417b6aeaf89e805b637ab1bf5c26a0a"
   },
   "sources": [
     {
@@ -48,7 +48,7 @@
       "id": "IAD001",
       "status": "Answered",
       "question": "Welcher Zielpfad ist nach der Konsolidierung verbindlich?",
-      "answer": "requirements/intakes/active/Lastenheft_Constitution_Change.md",
+      "answer": "requirements/intakes/active/Lastenheft_Constitution_Change.002-constitution-change.md",
       "evidence": "specs/requirements-reconciliation-20260726/migration-proposal.json"
     },
     {
@@ -91,5 +91,5 @@
     "role": "Primary",
     "supersedesIntakeIds": []
   },
-  "nextAction": "$speckit-intake-review requirements/intakes/active/Lastenheft_Constitution_Change.md"
+  "nextAction": "$speckit-intake-review requirements/intakes/active/Lastenheft_Constitution_Change.002-constitution-change.md"
 }
