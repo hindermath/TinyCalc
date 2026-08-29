@@ -9,8 +9,8 @@ lives in the series manifest.*
 
 | Rang | Intake | Zustand | Abhängigkeit |
 |---:|---|---|---|
-| 1 | `requirements/intakes/active/Lastenheft_Constitution_Change.002-constitution-change.md` | `Eligible` | keine |
-| 2 | `requirements/intakes/active/Lastenheft_TerminalGui_Migration.md` | `Blocked` | Constitution |
+| 1 | `requirements/intakes/active/Lastenheft_Constitution_Change.002-constitution-change.md` | `Completed` | keine |
+| 2 | `requirements/intakes/active/Lastenheft_TerminalGui_Migration.md` | `Eligible` | Constitution abgeschlossen |
 | 3 | `requirements/intakes/active/Lastenheft_Rename_MicroCalc_TinyCalc.md` | `Blocked` | Terminal.Gui |
 | 4 | `requirements/intakes/active/Lastenheft_A11Y_TUI.md` | `Blocked` | Rename |
 | 5 | `requirements/intakes/active/Lastenheft_Didactic-Inline-Code-Comment-Hardening.md` | `Blocked` | A11Y |

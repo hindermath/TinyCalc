@@ -1,28 +1,28 @@
 {
   "schemaVersion": "1.0",
   "documentType": "IntakeSeriesReceipt",
-  "receiptId": "0d458d79-2908-40cf-b6dd-41f3fb9e17b6",
+  "receiptId": "d6666733-1254-4bb9-8b31-389a30d79733",
   "seriesId": "5b4523b4-d946-4091-9cbc-11825af94332",
   "generator": {
     "preset": "intake-sequencing-governance",
     "version": "0.2.3"
   },
-  "createdAt": "2026-08-29T15:31:02Z",
+  "createdAt": "2026-08-29T23:33:07Z",
   "operation": {
-    "operationId": "5e57604c-de91-49f0-823d-92e612ae25fe",
+    "operationId": "6a5e02a3-1cd2-4453-b383-99637d1ace81",
     "type": "Update",
-    "authorityEvidence": "User approved IAD001 including TinyCalc rank 7 and approved the binding IAD002 delivery gate."
+    "authorityEvidence": "Thorsten explicitly authorized serial autonomous Spec Kit runs after completed Feature 002 and approved MergeAndSync with narrow Admin-Bypass authority."
   },
   "status": "Ready",
   "manifest": {
     "path": "requirements/intakes/series/tinycalc-delivery/manifest.json",
-    "normalizedSha256": "ef266cf99627d10a17282db966826fff26a0705ec1afca355eeb7c7079a25e72"
+    "normalizedSha256": "eef3cfd5b9e43395ab9ee59848bb183f1429a3104e5ce4a0980393987a530be2"
   },
   "supersedes": {
-    "receiptPath": "requirements/intakes/series-archive/tinycalc-delivery/20260829T153102Z/receipt.json",
-    "receiptNormalizedSha256": "3aa1e3b5140cb16fa1a0138943d82f366f39e8115cefd3bbf03b0fb9bfbf3deb",
-    "manifestArchivePath": "requirements/intakes/series-archive/tinycalc-delivery/20260829T153102Z/manifest.json",
-    "manifestArchiveSha256": "616dae5365f2413b2904acd28c158a118eacfdd2ad53a7c9dfe7281a6c74adcb"
+    "receiptPath": "requirements/intakes/series-archive/tinycalc-delivery/20260829T233307Z/receipt.json",
+    "receiptNormalizedSha256": "f6f39b14983dfd1b8e55bb57c59f2d191b305d69e05891df02bc55eabf012604",
+    "manifestArchivePath": "requirements/intakes/series-archive/tinycalc-delivery/20260829T233307Z/manifest.json",
+    "manifestArchiveSha256": "ef266cf99627d10a17282db966826fff26a0705ec1afca355eeb7c7079a25e72"
   },
   "tombstone": {
     "path": "N/A",

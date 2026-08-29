@@ -16,17 +16,17 @@ const json = (value) => `${JSON.stringify(value, null, 2)}\n`;
 const config = readJson("requirements/intake-governance-config.json");
 const seriesRoot = "requirements/intakes/series/tinycalc-delivery";
 const seriesId = "5b4523b4-d946-4091-9cbc-11825af94332";
-const seriesReceiptId = "0d458d79-2908-40cf-b6dd-41f3fb9e17b6";
-const seriesOperationId = "5e57604c-de91-49f0-823d-92e612ae25fe";
+const seriesReceiptId = "d6666733-1254-4bb9-8b31-389a30d79733";
+const seriesOperationId = "6a5e02a3-1cd2-4453-b383-99637d1ace81";
 const reviewId = "2c338c63-9f64-47c1-ba50-a95c7ea3fce1";
 const createdAt = "2026-07-26T21:00:00Z";
-const seriesUpdatedAt = "2026-08-29T15:31:02Z";
+const seriesUpdatedAt = "2026-08-29T23:33:07Z";
 const reviewedAt = "2026-08-29T16:19:38Z";
 const reviewHead = "c7a9cbf50d732e0e521e6f8ae9ba1cc56612bf22";
 
 const members = [
-  ["constitution-change", "Lastenheft_Constitution_Change.002-constitution-change.md", "Eligible", "b00956e5-e42b-48c4-b63d-ee748cad27f3", "4936d97b-6206-433e-b76c-a570c1842695"],
-  ["terminalgui-migration", "Lastenheft_TerminalGui_Migration.md", "Blocked", "098464e1-cbf6-4812-8b42-c88a55d3c192", "9d791f78-d8ad-4076-aab6-acd550bcc331"],
+  ["constitution-change", "Lastenheft_Constitution_Change.002-constitution-change.md", "Completed", "b00956e5-e42b-48c4-b63d-ee748cad27f3", "4936d97b-6206-433e-b76c-a570c1842695"],
+  ["terminalgui-migration", "Lastenheft_TerminalGui_Migration.md", "Eligible", "098464e1-cbf6-4812-8b42-c88a55d3c192", "9d791f78-d8ad-4076-aab6-acd550bcc331"],
   ["rename-microcalc-tinycalc", "Lastenheft_Rename_MicroCalc_TinyCalc.md", "Blocked", "b4e6471a-404f-4dc4-a4ea-51659bbb093d", "313385fe-d32f-4236-a6b1-b35630aa375c"],
   ["a11y-tui", "Lastenheft_A11Y_TUI.md", "Blocked", "f36ec0dd-33e3-4f34-aaf8-e264f41057ff", "418ea177-4ff8-4a61-8806-08fc7be4a85e"],
   ["didactic-inline-code-comment-hardening", "Lastenheft_Didactic-Inline-Code-Comment-Hardening.md", "Blocked", "fb3cd161-2086-4cb0-8a8e-a72d1db26500", "a6780a05-df3a-401a-ad1f-796cd3656f1a"],
@@ -201,15 +201,15 @@ const seriesReceipt = {
   operation: {
     operationId: seriesOperationId,
     type: "Update",
-    authorityEvidence: "User approved IAD001 including TinyCalc rank 7 and approved the binding IAD002 delivery gate.",
+    authorityEvidence: "Thorsten explicitly authorized serial autonomous Spec Kit runs after completed Feature 002 and approved MergeAndSync with narrow Admin-Bypass authority.",
   },
   status: "Ready",
   manifest: {path: manifestPath, normalizedSha256: manifestHash},
   supersedes: {
-    receiptPath: "requirements/intakes/series-archive/tinycalc-delivery/20260829T153102Z/receipt.json",
-    receiptNormalizedSha256: "3aa1e3b5140cb16fa1a0138943d82f366f39e8115cefd3bbf03b0fb9bfbf3deb",
-    manifestArchivePath: "requirements/intakes/series-archive/tinycalc-delivery/20260829T153102Z/manifest.json",
-    manifestArchiveSha256: "616dae5365f2413b2904acd28c158a118eacfdd2ad53a7c9dfe7281a6c74adcb",
+    receiptPath: "requirements/intakes/series-archive/tinycalc-delivery/20260829T233307Z/receipt.json",
+    receiptNormalizedSha256: "f6f39b14983dfd1b8e55bb57c59f2d191b305d69e05891df02bc55eabf012604",
+    manifestArchivePath: "requirements/intakes/series-archive/tinycalc-delivery/20260829T233307Z/manifest.json",
+    manifestArchiveSha256: "ef266cf99627d10a17282db966826fff26a0705ec1afca355eeb7c7079a25e72",
   },
   tombstone: {path: "N/A", normalizedSha256: "N/A"},
   nextAction: "$speckit-intake-series-status",
@@ -221,30 +221,30 @@ const operation = {
   seriesId,
   type: "Update",
   status: "Published",
-  authorityEvidence: "User approved IAD001 including TinyCalc rank 7 and approved the binding IAD002 delivery gate.",
-  proposalNormalizedSha256: "f36a20d34be1c682821321dd0b1a0c8d2a5c44b6ffbfaf54c77daa027868a10d",
+  authorityEvidence: "Thorsten explicitly authorized serial autonomous Spec Kit runs after completed Feature 002 and approved MergeAndSync with narrow Admin-Bypass authority.",
+  proposalNormalizedSha256: manifestHash,
   preparedPaths: [
-    "requirements/intakes/active/Lastenheft_PL0-Zellfunktionen_V1.md",
-    "specs/intake-authoring-receipts/pl0-zellfunktionen-v1.json",
     manifestPath,
     `${seriesRoot}/receipt.json`,
+    `${seriesRoot}/operation.json`,
     `${seriesRoot}/order.md`,
-    "requirements/intakes/series-archive/tinycalc-delivery/20260829T153102Z/manifest.json",
-    "requirements/intakes/series-archive/tinycalc-delivery/20260829T153102Z/receipt.json",
+    "requirements/intakes/series-archive/tinycalc-delivery/20260829T233307Z/manifest.json",
+    "requirements/intakes/series-archive/tinycalc-delivery/20260829T233307Z/receipt.json",
     "Lastenheft_Abarbeitungsreihenfolge.md",
+    "Pflichtenheft.md",
   ],
   validation: {bash: "Pass", powerShell: "Pass"},
   publication: {
     status: "Published",
     publishedPaths: [
-      "requirements/intakes/active/Lastenheft_PL0-Zellfunktionen_V1.md",
-      "specs/intake-authoring-receipts/pl0-zellfunktionen-v1.json",
       manifestPath,
       `${seriesRoot}/receipt.json`,
+      `${seriesRoot}/operation.json`,
       `${seriesRoot}/order.md`,
-      "requirements/intakes/series-archive/tinycalc-delivery/20260829T153102Z/manifest.json",
-      "requirements/intakes/series-archive/tinycalc-delivery/20260829T153102Z/receipt.json",
+      "requirements/intakes/series-archive/tinycalc-delivery/20260829T233307Z/manifest.json",
+      "requirements/intakes/series-archive/tinycalc-delivery/20260829T233307Z/receipt.json",
       "Lastenheft_Abarbeitungsreihenfolge.md",
+      "Pflichtenheft.md",
     ],
   },
 };

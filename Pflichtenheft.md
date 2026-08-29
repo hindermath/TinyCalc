@@ -25,9 +25,9 @@ intakes, historical evidence, and executable intake series.*
 
 ## Nächster Intake / Next Intake
 
-`requirements/intakes/active/Lastenheft_Constitution_Change.002-constitution-change.md` ist der
+`requirements/intakes/active/Lastenheft_TerminalGui_Migration.md` ist der
 bevorzugte nächste Intake. Diese Festlegung startet keinen Spec-Kit-Lauf und
 erteilt keine Remote- oder Merge-Berechtigung.
 
-*The constitution intake is the preferred next intake. This declaration starts
+*The Terminal.Gui migration intake is the preferred next intake. This declaration starts
 no Spec Kit run and grants no remote or merge authority.*
