@@ -668,3 +668,13 @@ polish commit was aligned to patch 2 and initially contained only version,
 run-state path, and the content-identical branch-stamped intake. The following
 CI remediation changes only the three enabled-prompt self-paths and regenerates
 their derived active intake governance; scope and authority remain unchanged.*
+
+Das Statistikprofil schließt nun zusätzlich `Directory.Build.props` und seine
+eigene Konfigurationsdatei aus. Damit beeinflussen rein mechanische
+Versionsfortschreibungen und Statistik-Metadaten die fachliche Lieferdichte
+nicht mehr und erzeugen keinen selbstreferenziellen Render-Zyklus.
+
+*The statistics profile now also excludes `Directory.Build.props` and its own
+configuration file. Purely mechanical version increments and statistics
+metadata therefore no longer distort delivery density or create a
+self-referential render cycle.*
