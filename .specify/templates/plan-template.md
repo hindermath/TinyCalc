@@ -96,6 +96,20 @@
 - **Learner baseline**: State how CEFR B2, first-use explanations of technical
   terms, no assumed Spec Kit experience, and first-training-year comprehension
   for IT specialist apprentices and the two IT management occupations apply.
+- **Didaktische und sprachliche Klarheit / Pedagogical and linguistic clarity**:
+  Confirm learner-facing and user-facing text is
+  German first, English second, CEFR B2, and text-first under WCAG 2.2 Level AA
+  wherever applicable. Record the manual review evidence path.
+- **Public XML documentation**: Identify every affected public API and require
+  `<summary>` plus each technically applicable `<param>`, `<returns>`, and
+  `<exception>`. Exclude local variables and prohibit global CS1591 suppression.
+- **Didactic why-comments**: Decide whether new or changed non-trivial logic
+  benefits from moderate bilingual comments that explain decisions,
+  trade-offs, constraints, or historical deviations.
+- **TDD evidence**: For each feature or bug fix, plan an observable red test,
+  the smallest green implementation, and regression/refactor evidence. A
+  text-only `N/A` needs rationale and a re-evaluation trigger. Changed product
+  code uses a 70% coverage minimum and an 80% target.
 - **Statistics**: State whether `docs/project-statistics.md` needs an update
   and which manual/Thorsten-Solo baseline applies.
 - **Agent guidance parity**: State whether `AGENTS.md`, `CLAUDE.md`,

@@ -8,7 +8,9 @@ description: "Task list template for feature implementation"
 **Input**: Design documents from `/specs/[###-feature-name]/`
 **Prerequisites**: plan.md (required), spec.md (required for user stories), research.md, data-model.md, contracts/
 
-**Tests**: The examples below include test tasks. Tests are OPTIONAL - only include them if explicitly requested in the feature specification.
+**Tests**: Behaviour changes require test-first tasks. Tests are optional only
+for a justified governance-only or text-only `N/A` scope with a re-evaluation
+trigger.
 
 **Organization**: Tasks are grouped by user story to enable independent implementation and testing of each story.
 
@@ -18,12 +20,51 @@ description: "Task list template for feature implementation"
 - **[Story]**: Which user story this task belongs to (e.g., US1, US2, US3)
 - Include exact file paths in descriptions
 
+### Didaktische und sprachliche Klarheit / Pedagogical and Linguistic Clarity
+
+- Learner-facing and user-facing text tasks MUST name the DE-first/EN-second,
+  CEFR B2, text-first, and applicable WCAG 2.2 Level AA review evidence.
+- Public-API tasks MUST name the affected signature and all applicable
+  `<summary>`, `<param>`, `<returns>`, and `<exception>` checks. Local variables
+  are excluded, and no task may suppress CS1591 globally.
+- New or changed non-trivial logic MUST be reviewed for moderate bilingual
+  why-comments. Behaviour work MUST plan red, green, and regression/refactor
+  evidence; text-only `N/A` needs a rationale and re-evaluation trigger.
+
 ## Path Conventions
 
 - **Single project**: `src/`, `tests/` at repository root
 - **Web app**: `backend/src/`, `frontend/src/`
 - **Mobile**: `api/src/`, `ios/src/` or `android/src/`
 - Paths shown below assume single project - adjust based on plan.md structure
+
+### Verbindlicher TDD-Nachweis / Mandatory TDD Evidence
+
+Für jede neue Funktion oder Fehlerkorrektur MUSS die erzeugte Aufgabenliste in
+dieser Reihenfolge konkrete, voneinander abhängige Aufgaben nennen:
+
+1. **Rot / Red**: exakte Testdatei, Testname, ausführbarer Befehl und der
+   erwartete beobachtbare Fehler. Der Test muss kompilieren und aus dem
+   beabsichtigten fachlichen Grund fehlschlagen.
+2. **Grün / Green**: exakte Implementierungsdatei und kleinste Änderung, die
+   den roten Test bestehen lässt; diese Aufgabe hängt von der roten Aufgabe ab.
+3. **Aufräumen / Refactor**: exakter Regressionsbefehl, Aufräumgrenze und
+   dokumentierte grüne Evidenz nach der Bereinigung.
+4. **Coverage**: Bei geändertem Produktcode ein ausführbarer Coverage-Befehl
+   mit mindestens 70 Prozent als Gate und 80 Prozent als Ziel.
+
+Reine Governance- oder Textarbeit darf diesen Ablauf nur mit einer konkreten
+`N/A`-Begründung, einem Wiedervorlage-Trigger und dem Nachweis unveränderter
+Produkt- und Testpfade ersetzen. Aufgaben werden erst nach der jeweiligen
+Evidenz als abgeschlossen markiert.
+
+*For every feature or bug fix, generated tasks name an exact red test file,
+test name, command, and expected observable failure; an exact green
+implementation file and minimal change; and a final regression/refactor
+command with cleanup evidence. Changed product code adds an executable coverage
+gate with a 70% minimum and an 80% target. Governance-only or text-only work
+may replace this flow only with a concrete `N/A` rationale, a re-evaluation
+trigger, and proof that product and test paths remain unchanged.*
 
 <!--
   ============================================================================

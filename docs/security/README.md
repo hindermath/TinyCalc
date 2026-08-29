@@ -3,6 +3,15 @@
 **Repository**: TinyCalc (Level-2)
 **Constitution-Referenz / Constitution Reference**: Principle XII (A.8.28), Principle XIII (A.8.27), Principle XIV-XVIII
 
+**Feature-002-Status / Feature 002 Status**: Lokale Security-Prüfung am
+2026-08-30 bestanden; Details in
+[`security-checklist.md`](security-checklist.md). Keine andere
+Security-Evidenz wurde durch die text-only Governance-Änderung ausgelöst.
+
+*The local Feature 002 security review passed on 2026-08-30. See
+[`security-checklist.md`](security-checklist.md). The text-only governance
+change triggered no other security evidence update.*
+
 ## Zweck / Purpose
 
 Dieses Verzeichnis enthält die projektspezifische Sicherheitsdokumentation
@@ -18,7 +27,7 @@ populated here with project-specific content.*
 | Dokument / Document | Template-Quelle / Template Source | Status |
 |---|---|---|
 | [threat-model.md](threat-model.md) | `threat-model-template.md` | Stub |
-| [security-checklist.md](security-checklist.md) | `security-checklist-template.md` | Stub |
+| [security-checklist.md](security-checklist.md) | `security-checklist-template.md` | Feature 002 local Pass (2026-08-30) |
 | [arc42-security.md](arc42-security.md) | `arc42-security-template.md` | Stub |
 | [dependency-audit.md](dependency-audit.md) | `dependency-audit-template.md` | Stub |
 | [security-quality-scenarios.md](security-quality-scenarios.md) | `security-quality-scenarios-template.md` | Stub |

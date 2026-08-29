@@ -51,6 +51,14 @@
       "labelDe": "Governance",
       "labelEn": "Governance",
       "netLines": 1089
+    },
+    {
+      "slot": 6,
+      "id": "002c",
+      "labelDe": "002 Constitution",
+      "labelEn": "002 constitution",
+      "netLines": 3104,
+      "activeDays": 1
     }
   ],
   "excludedPaths": [],

@@ -51,6 +51,34 @@ terms at first use, assume no prior Spec Kit experience, provide text-first
 dependency/state/decision information, and apply WCAG 2.2 Level AA wherever
 the criteria are applicable.
 
+## Didaktische und sprachliche Klarheit / Pedagogical and Linguistic Clarity
+
+Lern- und nutzerseitige Texte stehen auf Deutsch zuerst und Englisch danach
+und zielen auf CEFR B2. Status, Abhängigkeiten, Entscheidungen und nächste
+Schritte bleiben text-first und soweit anwendbar nach WCAG 2.2 Level AA
+zugänglich.
+
+Öffentliche APIs erhalten vollständige XML-Dokumentation mit `<summary>` und
+allen fachlich anwendbaren `<param>`, `<returns>` und `<exception>`-Elementen;
+lokale Variablen sind keine XML-Dokumentationsziele. Eine aktive CS1591-
+Schranke darf nicht global unterdrückt werden. Nicht triviale Logik nutzt in
+moderater Dichte zweisprachige Warum-Kommentare.
+
+Funktionen und Fehlerkorrekturen belegen Rot → Grün → Aufräumen. Reine
+Governance-/Textarbeit darf TDD und Changed-Code-Coverage nur mit Begründung und
+Wiedervorlage `N/A` setzen. Bei geändertem Produktcode gelten mindestens 70
+Prozent Coverage und das Ziel 80 Prozent.
+
+*Learner-facing and user-facing text is German first and English second at
+CEFR B2. Status, dependencies, decisions, and next actions remain text-first
+and accessible under WCAG 2.2 Level AA where applicable. Public APIs receive
+complete XML documentation with `<summary>` and every applicable `<param>`,
+`<returns>`, and `<exception>`; local variables are not XML documentation
+targets, and CS1591 is not globally suppressed. Non-trivial logic uses moderate
+bilingual why-comments. Features and bug fixes provide red-green-refactor
+evidence. Text-only work needs a justified, re-evaluated `N/A`; changed product
+code has a 70% coverage minimum and an 80% target.*
+
 ## Governance
 <!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
 

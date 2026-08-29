@@ -1,30 +1,33 @@
 <!--
 Sync Impact Report
-Version change: 1.15.0 -> 1.16.0
+Version change: 1.16.0 -> 1.17.0
 Modified principles:
-- VII. Inclusion & Accessibility By Default (bind first-year learner audiences and text-first dependency evidence)
-- VIII. DE-First / EN-Second Bilingual Delivery (explain first-use terms and require no prior Spec Kit experience)
+- None; Security-First remains Principle I and the shared Home Baseline remains unchanged
 Added sections:
-- None
+- Didaktische und sprachliche Klarheit / Pedagogical and Linguistic Clarity (TinyCalc Level-2 addendum only)
 Removed sections:
 - None
 Templates requiring updates:
 - ✅ .specify/templates/constitution-template.md
 - ✅ .specify/templates/plan-template.md
 - ✅ .specify/templates/spec-template.md
-- ✅ .specify/templates/supply-chain-evidence-template.md
 - ✅ .specify/templates/tasks-template.md
+- ✅ scripts/templates/AGENTS.md.tmpl
+- ✅ scripts/templates/CLAUDE.md.tmpl
+- ✅ scripts/templates/GEMINI.md.tmpl
+- ✅ scripts/templates/copilot-instructions.tmpl
 Runtime guidance requiring updates:
 - ✅ AGENTS.md
 - ✅ CLAUDE.md
 - ✅ GEMINI.md
 - ✅ .github/copilot-instructions.md
+- ✅ .github/agents/copilot-instructions.md
 - ✅ .specify/memory/constitution.md (mirror)
 Follow-up TODOs:
 - None
 -->
 
-# Constitution v1.16.0
+# Constitution v1.17.0
 
 # home-baseline Constitution
 
@@ -808,14 +811,14 @@ workspace family consists of:
 
 | Preset | Version | Priority | Scope |
 |---|---:|---:|---|
-| `security-governance` | `v0.6.1` | `10` | secure development, MSL, language-specific secure coding, SSDF, ASVS, SBOM/VEX/SLSA, AI-SBOM, CRA/regulatory applicability |
-| `architecture-governance` | `v0.5.1` | `20` | secure architecture, STRIDE/CAPEC, Zero Trust, SAMM, S-ADR, BSI C3A cloud autonomy, BSI C5 cloud assurance |
-| `isaqb-architecture-governance` | `v0.2.1` | `30` | general iSAQB/arc42 architecture governance |
-| `a11y-governance` | `v0.4.1` | `40` | WCAG 2.2 AA, bilingual DE/EN, CEFR B2, inclusive artefacts, didactic inline-code-comment review |
-| `cross-platform-governance` | `v0.2.1` | `50` | Bash/PowerShell parity, macOS/Linux/Windows script governance |
-| `agent-parity-governance` | `v0.4.0` | `60` | synchronized agent guidance, fleet-completion evidence, and agent-neutral Spec-Kit model routing |
-| `autonomous-run-governance` | `v0.3.0` | `70` | permission-bounded, evidence-first governance with resumable, validated closeout |
-| `parallel-autonomous-run-governance` | `v0.2.1` | `80` | isolated bounded campaigns, mixed runner profiles, cooperative stop/resume, provider-gated resumable consolidation, and declared post-merge closeout |
+| `security-governance` | `v0.6.2` | `10` | secure development, MSL, language-specific secure coding, SSDF, ASVS, SBOM/VEX/SLSA, AI-SBOM, CRA/regulatory applicability |
+| `architecture-governance` | `v0.5.2` | `20` | secure architecture, STRIDE/CAPEC, Zero Trust, SAMM, S-ADR, BSI C3A cloud autonomy, BSI C5 cloud assurance |
+| `isaqb-architecture-governance` | `v0.2.2` | `30` | general iSAQB/arc42 architecture governance |
+| `a11y-governance` | `v0.4.3` | `40` | WCAG 2.2 AA, bilingual DE/EN, CEFR B2, inclusive artefacts, didactic inline-code-comment review |
+| `cross-platform-governance` | `v0.2.2` | `50` | Bash/PowerShell parity, macOS/Linux/Windows script governance |
+| `agent-parity-governance` | `v0.4.2` | `60` | synchronized agent guidance, fleet-completion evidence, and agent-neutral Spec-Kit model routing |
+| `autonomous-run-governance` | `v0.4.1` | `70` | permission-bounded, evidence-first governance with resumable, validated closeout |
+| `parallel-autonomous-run-governance` | `v0.2.6` | `80` | isolated bounded campaigns, mixed runner profiles, cooperative stop/resume, provider-gated resumable consolidation, and declared post-merge closeout |
 
 `autonomous-run-governance` is installed as part of the mandatory eight-preset
 governance matrix. Installation does not authorize an autonomous run.
@@ -892,7 +895,7 @@ Community/catalog coordination is tracked in `github/spec-kit#2362`.
 `.github/copilot-instructions.md` for per-agent operational guidance. This
 constitution is the authoritative policy layer above all agent-specific files.
 
-**Version**: 1.16.0 | **Ratified**: 2026-03-31 | **Last Amended**: 2026-07-25
+**Version**: 1.17.0 | **Ratified**: 2026-03-31 | **Last Amended**: 2026-08-30
 
 <!-- EN: constitution.md placeholder
 [DE-Zusammenfassung: constitution.md beschreibt die Prinzipien und Standards für alle home-baseline Workspaces.]
@@ -906,6 +909,45 @@ constitution is the authoritative policy layer above all agent-specific files.
 - Doku und A11Y / Docs and A11Y: DocFX changes require text-oriented A11Y smoke review; documentation and didactic comments stay DE-first/EN-second at CEFR B2.
 - Statistik / Statistics: manual conservative baseline 80 lines/workday; Thorsten-Solo baseline 125 lines/workday for this Pascal-derived C#/.NET port.
 - Agentenflaechen / Agent surfaces: AGENTS.md, CLAUDE.md, GEMINI.md, .github/copilot-instructions.md, and Spec-Kit surfaces stay synchronized for shared rules.
+
+## Didaktische und sprachliche Klarheit / Pedagogical and Linguistic Clarity
+
+Lern- und nutzerseitige Texte stehen auf Deutsch zuerst und Englisch danach.
+Beide Sprachblöcke zielen auf CEFR B2. Status, Abhängigkeiten, Entscheidungen
+und nächste Schritte bleiben textuell vollständig und soweit anwendbar nach
+WCAG 2.2 Level AA für Braillezeilen, Screenreader und Textbrowser nutzbar.
+
+Öffentliche C#-Typen und -Mitglieder erhalten vollständige XML-Dokumentation:
+`<summary>` sowie fachlich anwendbare `<param>`, `<returns>` und `<exception>`.
+Lokale Variablen besitzen keine XML-Dokumentationsfläche. CS1591 bleibt eine
+Build-Schranke und darf nicht global unterdrückt werden. Neue oder geänderte
+nicht triviale Logik erhält in moderater Dichte zweisprachige Warum-Kommentare,
+die Entscheidungen, Abwägungen, Grenzen oder historische Abweichungen erklären.
+
+Jede künftige Funktion und Fehlerkorrektur folgt sichtbar Rot → Grün →
+Aufräumen: zuerst ein kompilierbarer und beobachtbar fehlschlagender Test, dann
+die kleinste grüne Implementierung, danach Regression und Aufräumen. Reine
+Governance- oder Textarbeit darf TDD und Changed-Code-Coverage nur mit
+Begründung und Wiedervorlage als `N/A` markieren. Sobald Produktcode betroffen
+ist, gelten mindestens 70 Prozent Coverage und das Ziel von 80 Prozent.
+
+*Learner-facing and user-facing text is German first and English second. Both
+language blocks target CEFR B2. Status, dependencies, decisions, and next
+actions remain complete in text and, where applicable, meet WCAG 2.2 Level AA
+for Braille displays, screen readers, and text browsers.*
+
+*Public C# types and members receive complete XML documentation: `<summary>`
+and every technically applicable `<param>`, `<returns>`, and `<exception>`.
+Local variables have no XML documentation surface. CS1591 remains a build gate
+and must not be suppressed globally. New or changed non-trivial logic uses a
+moderate amount of bilingual why-comments that explain decisions, trade-offs,
+constraints, or historical deviations.*
+
+*Every future feature and bug fix visibly follows red → green → refactor: a
+compiling and observably failing test first, the smallest green implementation
+next, then regression and cleanup. Governance-only or text-only work may mark
+TDD and changed-code coverage `N/A` only with a rationale and re-evaluation
+trigger. If product code changes, coverage has a 70% minimum and an 80% target.*
 
 <!-- statistics-profile-2-governance:begin -->
 ## Statistikprofil 2 / Statistics Profile 2
