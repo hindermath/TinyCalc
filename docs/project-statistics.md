@@ -247,6 +247,43 @@ fortgeschrieben.
   - 13.6x gegen die konservative 80-Zeilen-Referenz
   - 8.7x gegen die Thorsten-Solo-Referenz mit 125 Zeilen pro Arbeitstag
 
+### 7. Feature 003 Terminal.Gui-v2-Migration
+
+- Status: lokale Implementierung und Evidenz bis einschliesslich T054
+  abgeschlossen; Plattformnachweise und die exakte PR-Head-Lieferung stehen
+  noch aus.
+- Beobachtbares Arbeitsfenster: 2026-08-30 10:50 bis 15:55 Uhr
+  (`Europe/Berlin`), ein sichtbarer lokaler Aktivtag.
+- Arbeitspakete: Spezifikation, Plan und Tasks; Migration der TUI auf
+  Terminal.Gui 2.4.17; reale PTY-Nachweise; Build-, Test-, Smoke- und
+  Coverage-Nachweise; Architektur-, Security-, A11Y-, SBOM- und PR-Dokumente.
+- Aenderungsvolumen vor dem Statistik-Selbstnachweis; das Statistik-Ledger,
+  seine Konfiguration und `Directory.Build.props` sind ausgeschlossen:
+  - Produktionscode: `+142 / -102 = 40` Zeilen netto
+  - Testcode: `+0 / -0 = 0` Zeilen netto
+  - Dokumentation und Evidenz: `+9219 / -279 = 8940` Zeilen netto
+  - Gesamt: `+9361 / -381 = 8980` Zeilen netto
+- Konservative Referenz mit 80 Zeilen pro Arbeitstag:
+  - `112.3` Arbeitstage
+  - `875.6` Stunden bei `7.8` Stunden bzw. 7 Stunden 48 Minuten pro Tag
+  - `5.2` Monate bei 21.5 Arbeitstagen pro Monat
+- Thorsten-Solo-Referenz mit 125 Zeilen pro Arbeitstag:
+  - `71.8` Arbeitstage
+  - `560.4` Stunden bei `7.8` Stunden pro Tag
+  - `3.3` Monate bei 21.5 Arbeitstagen pro Monat
+- Gegen einen sichtbaren Aktivtag entspricht dies einer gemischten
+  Repository-Lieferdichte von `112.3x` bzw. `71.8x`. Diese Faktoren sind
+  keine Stoppuhrmessung und schreiben die Leistung keiner einzelnen Person
+  oder KI zu.
+
+*The local implementation and evidence are complete through T054; platform
+and exact-PR-head proof are still pending. The 8,980 net lines contain 40
+production, zero test, and 8,940 documentation/evidence lines. At 7.8 hours
+per workday, they correspond to 112.3 conservative manual days (875.6 hours,
+5.2 months) or 71.8 Thorsten-solo days (560.4 hours, 3.3 months). The 112.3x
+and 71.8x values describe blended repository delivery density, not stopwatch
+time.*
+
 ## Einordnung der KI-/Spec-Kit-Wirkung
 
 - Die beobachtbare manuelle Gesamtbasis liegt bereits bei 20379 Zeilen
@@ -302,6 +339,7 @@ fortgeschrieben.
 | 2026-08-29 | MergeAndSync-Lieferung fuer PL/0-Intake vorbereitet | Fuer den fokussierten PR wurde eine bilinguale Beschreibung mit Problem, Loesung, Risiken und Testplan angelegt. Sie dokumentiert ausdruecklich, dass dieser Liefergegenstand nur Intake- und Governance-Artefakte umfasst, keine PL/0-Implementierung oder NuGet-Veroeffentlichung startet und die bestehende `LocalImplementation`-Grenze nicht erweitert. Zusaetzlicher Aenderungsumfang vor dieser Ledger-Fortschreibung: `0` Produktionscode-Zeilen, `0` Testcode-Zeilen und `+59` Dokumentationszeilen. Konservative Manualreferenz: 80 Zeilen/Tag = `0.7` Tage (ca. `5.8` Stunden); Thorsten-Solo-Referenz: 125 Zeilen/Tag = `0.5` Tage (ca. `3.7` Stunden); sichtbares Arbeitsfenster: dieselbe Agentensitzung am 2026-08-29. Der Nutzer hat Commit, Push und `MergeAndSync` mit Admin-Bypass fuer diesen PR ausdruecklich autorisiert. |
 | 2026-08-30 | Feature 002 Constitution-Abgleich lokal implementiert / Feature 002 constitution alignment implemented locally | Arbeitsfenster: eine geroutete Agentensitzung und ein sichtbarer lokaler Aktivtag am 2026-08-30. Arbeitspakete: Eingangsgates, bytegleiche Constitution-Spiegel, fuenf Agentenflaechen, acht Vorlagen, vollstaendige oeffentliche XML-Inventur, Release-Build, Security-/A11Y-Nachweis, PR-Text und lokale Tests. Beobachteter Nettoumfang vor dem Statistik-Selbstnachweis: `0` Produktionscode-Zeilen, `0` Testcode-Zeilen und `+3185 / -81 = 3104` Dokumentations-/Governancezeilen; `.specify/runtime/` und das Statistik-Ledger selbst sind ausgeschlossen. Konservative Referenz 80 Zeilen/Arbeitstag: `38.8` Tage, `302.6` Stunden bei 7.8 Stunden/Tag und `1.8` Monate bei 21.5 Arbeitstagen/Monat. Thorsten-Solo-Referenz 125 Zeilen/Arbeitstag: `24.8` Tage, `193.7` Stunden und `1.2` Monate. Gegen einen sichtbaren Aktivtag entspricht dies einem blended repository speedup bzw. einer Lieferdichte von `38.8x` und `24.8x`, nicht einer Stoppuhrmessung. Validierung: Hash-/State-/Regelmatrizen, 76/76 XML-API-Zeilen, Restore, Build mit 0 Warnungen/Fehlern, 79/79 xUnit-Tests, `SMOKE_OK`, keine bekannte verwundbare Abhaengigkeit, kein High-Secret-Fund und Homogenitaet 100. *Work window: one routed session and one visible local active day on 2026-08-30. The 3,104 net documentation/governance lines imply 38.8 conservative manual days (302.6 hours, 1.8 months) or 24.8 Thorsten-solo days (193.7 hours, 1.2 months). The 38.8x and 24.8x values describe blended repository delivery density, not stopwatch time.* |
 | 2026-08-30 | TinyCalc-Serie nach Feature 002 fortgeschrieben und CI-Negativtest entkoppelt | Der abgeschlossene Constitution-Intake wurde auf `Completed` gesetzt und TerminalGui-Migration als einziges naechstes Ziel auf `Eligible` angehoben; Reihenfolge, vier Wurzeln und sechs Abhaengigkeiten blieben erhalten. Manifest und Receipt des Vorgaengers wurden byteidentisch archiviert, der Nachfolger wahrt die Supersession-Lineage. Ein zunaechst plattformuebergreifend fehlgeschlagener Governance-Negativtest setzte noch starr den ersten Serieneintrag statt des tatsaechlich `Eligible` Ziels auf `Pending`; die Fixture sucht dieses Ziel nun statusbasiert und bleibt damit bei kuenftigen Serienfortschreibungen stabil. Arbeitsfenster: eine Agentensitzung und ein sichtbarer Aktivtag am 2026-08-30. Aenderungsumfang vor diesem Statistik-Selbstnachweis: `0` Produktionscode-Zeilen, `+3 / -1 = 2` Testcode-Zeilen und `+245 / -51 = 194` Dokumentations-, Governance- und Automationszeilen einschliesslich unveraenderbarer Archivevidenz. Konservative Manualreferenz: 80 Zeilen/Tag = `2.5` Tage (ca. `19.1` Stunden); Thorsten-Solo-Referenz: 125 Zeilen/Tag = `1.6` Tage (ca. `12.2` Stunden); gegen einen sichtbaren Aktivtag entspricht dies einem blended repository speedup von `2.5x` bzw. `1.6x`, nicht einer Stoppuhrmessung. Validierung: vollstaendiges PowerShell-Alignment, acht status- und hashbezogene Negativ-Fixtures, Serien- und Receipt-Gates sowie die vorhandenen CI-Build-, Test-, Secret- und Homogenitaetspruefungen. *The completed Constitution intake is now `Completed`, TerminalGui migration is the sole `Eligible` target, and the negative fixture now locates that target by status. The 196 net test and governance lines correspond to 2.5 conservative manual days or 1.6 Thorsten-solo days; these are blended delivery-density comparisons, not stopwatch measurements.* |
+| 2026-08-30 | Feature 003 Terminal.Gui-v2-Migration lokal dokumentiert / Feature 003 Terminal.Gui v2 migration documented locally | Arbeitsfenster: 2026-08-30 10:50 bis 15:55 Uhr (`Europe/Berlin`), ein sichtbarer Aktivtag. Die lokale Migration, reale PTY-Nachweise, Coverage sowie Architektur-, Security-, A11Y-, SBOM- und PR-Evidenz sind bis T054 abgeschlossen; Plattform- und Exact-Head-Nachweise bleiben Delivery-Gates. Umfang vor dem Statistik-Selbstnachweis: `+142 / -102 = 40` Produktionscode-Zeilen, `0` Testcode-Zeilen und `+9219 / -279 = 8940` Dokumentations-/Evidenzzeilen, insgesamt `8980` Zeilen netto. Bei `7.8` Stunden/Tag entsprechen sie `112.3` konservativen Arbeitstagen (`875.6` Stunden, `5.2` Monate) oder `71.8` Thorsten-Solo-Tagen (`560.4` Stunden, `3.3` Monate). Gegen einen Aktivtag sind `112.3x` und `71.8x` gemischte Lieferdichte, keine Stoppuhrmessung. *The 8,980 net lines comprise 40 production, zero test, and 8,940 documentation/evidence lines. Platform and exact-head proof remain pending delivery gates; the stated factors describe blended delivery density.* |
 
 ## Statistikprofil-1-Archiv / Statistics Profile 1 Archive
 Basis dieses Schlussblocks sind die aktuell dokumentierten Snapshot- und
@@ -466,29 +504,29 @@ Profil 2 verwendet Git-getrackte Textdateien und sichtbare Git-Aktivitaet. Die W
 
 | Kennzahl / Metric | Wert / Value |
 |---|---:|
-| Textbasis / Text base | 141253 lines |
+| Textbasis / Text base | 142435 lines |
 | Textdateien / Text files | 998 |
 | Beobachtbarer Zeitraum / Observable period | 2025-09-07..2026-08-30 |
 | Aktivtage / Active days | 72 |
 | Relevante Commits / Relevant commits | 203 |
-| Zeilen je Aktivtag / Lines per active day | 1961.8 |
+| Zeilen je Aktivtag / Lines per active day | 1978.3 |
 | Peak-Tag im Fenster / Peak day in window | 2026-06-17 / 27058 |
 | Peak-Woche im Fenster / Peak week in window | 2026-07-19 / 33711 |
 | Laengste Serie / Longest streak | 8 days |
-| Speedup vs. 80 lines/day | 24.5x |
-| Speedup vs. 125 lines/day | 15.7x |
+| Speedup vs. 80 lines/day | 24.7x |
+| Speedup vs. 125 lines/day | 15.8x |
 | Methodik / Methodology | v2; source `968824d33c9e` |
 
 ### Artefaktmix / Artifact Mix
 
 ```text
-Produktiv / Production          [#...................]   1.9% | 2748
+Produktiv / Production          [#...................]   2.0% | 2788
 Tests                           [#...................]   4.0% | 5708
-Dokumentation / Documentation   [###############.....]  73.5% | 103867
-Skripte / Scripts               [###.................]  15.6% | 21988
-Konfiguration / Configuration   [#...................]   2.9% | 4043
+Dokumentation / Documentation   [###############.....]  73.7% | 105009
+Skripte / Scripts               [###.................]  15.4% | 21988
+Konfiguration / Configuration   [#...................]   2.8% | 4043
 Daten und Medien / Data and media [....................]   0.0% | 0
-Sonstiger Text / Other text     [#...................]   2.1% | 2899
+Sonstiger Text / Other text     [#...................]   2.0% | 2899
 ```
 
 Die Balken teilen die aktuelle getrackte Textbasis in stabile Kategorien. Prozent und Zeilenwert sind die genaue, textorientierte Aussage.
@@ -582,15 +620,15 @@ Die kumulative Kurve summiert nur das Brutto-Aenderungsvolumen im Fenster. Sie d
 ### Phasenvolumen / Phase Volume
 
 ```text
-Slots 0..6
-   cap 10000 | . . . . . . .
-        8333 | . . . . . . .
-        6667 | # . . . . . .
-        5000 | # . . . . . .
-        3333 | # # . . . . .
-        1667 | # # # . . . #
-           0 +---------------
-             00 01 02 03 04 05 06
+Slots 0..7
+   cap 10000 | . . . . . . . .
+        8333 | . . . . . . . #
+        6667 | # . . . . . . #
+        5000 | # . . . . . . #
+        3333 | # # . . . . . #
+        1667 | # # # . . . # #
+           0 +-----------------
+             00 01 02 03 04 05 06 07
 ```
 
 | Slot | Phase | Nettozeilen / Net lines |
@@ -602,6 +640,7 @@ Slots 0..6
 | 4 | 002 Versionierung / 002 versioning | 42 |
 | 5 | Governance / Governance | 1089 |
 | 6 | 002 Constitution / 002 constitution | 3104 |
+| 7 | 003 Terminal.Gui / 003 Terminal.Gui | 8980 |
 
 Die festen Slots halten den Phasenvergleich auch bei fehlenden oder spaeter ergaenzten Werten stabil.
 
@@ -611,8 +650,8 @@ Die festen Slots halten den Phasenvergleich auch bei fehlenden oder spaeter erga
 
 ```text
 Scale: 0..50x
-80 lines/day       [##########..........] 24.5x
-125 lines/day      [######..............] 15.7x
+80 lines/day       [##########..........] 24.7x
+125 lines/day      [######..............] 15.8x
 ```
 
 Die Faktoren vergleichen sichtbare Lieferdichte mit den dokumentierten manuellen Referenzen. Sie messen keine Arbeitszeit.
@@ -625,7 +664,7 @@ Die Faktoren vergleichen sichtbare Lieferdichte mit den dokumentierten manuellen
 Scale: 0..2000 lines/day
 Experienced manual [#...................] 80
 Thorsten solo      [#...................] 125
-Visible repository [####################] 1961.8
+Visible repository [####################] 1978.3
 ```
 
 Die gemeinsame Skala vergleicht Referenzen und sichtbare Lieferdichte. Sie schreibt die Git-Aktivitaet keiner Person oder KI pauschal zu.

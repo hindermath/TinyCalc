@@ -59,6 +59,14 @@
       "labelEn": "002 constitution",
       "netLines": 3104,
       "activeDays": 1
+    },
+    {
+      "slot": 7,
+      "id": "003t",
+      "labelDe": "003 Terminal.Gui",
+      "labelEn": "003 Terminal.Gui",
+      "netLines": 8980,
+      "activeDays": 1
     }
   ],
   "excludedPaths": [

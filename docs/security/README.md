@@ -1,55 +1,70 @@
-# Sicherheitsdokumentation / Security Documentation
+# Sicherheitsdokumentation: TinyCalc
 
-**Repository**: TinyCalc (Level-2)
-**Constitution-Referenz / Constitution Reference**: Principle XII (A.8.28), Principle XIII (A.8.27), Principle XIV-XVIII
+## Deutscher Index
 
-**Feature-002-Status / Feature 002 Status**: Lokale Security-Prüfung am
-2026-08-30 bestanden; Details in
-[`security-checklist.md`](security-checklist.md). Keine andere
-Security-Evidenz wurde durch die text-only Governance-Änderung ausgelöst.
+Repository: TinyCalc, Level 2
 
-*The local Feature 002 security review passed on 2026-08-30. See
-[`security-checklist.md`](security-checklist.md). The text-only governance
-change triggered no other security evidence update.*
+Stand: 2026-08-30
 
-## Zweck / Purpose
+Constitution: Principles XII–XVIII
 
-Dieses Verzeichnis enthält die projektspezifische Sicherheitsdokumentation
-fuer TinyCalc. Die Templates stammen aus `.specify/templates/` und
-werden hier mit projektspezifischen Inhalten befuellt.
+Die Sicherheitsdokumentation für Feature 003 ist lokal abgeschlossen. Der
+Status ist keine Mergefreigabe: Linux, Windows, Provider-Review, Provenance und
+Exact Head bleiben bis zu den späteren Delivery-Gates `Pending`.
 
-*This directory contains project-specific security documentation for
-TinyCalc. Templates originate from `.specify/templates/` and are
-populated here with project-specific content.*
+Die Dokumente sind Deutsch zuerst und Englisch danach aufgebaut. Tabellen,
+ASCII-Diagramme und lineare Textalternativen bleiben in Textbrowsern, mit
+Screenreadern und auf Braillezeilen verständlich.
 
-## Dokumente / Documents
+### Pflichtartefakte
 
-| Dokument / Document | Template-Quelle / Template Source | Status |
+| Dokument | Feature-003-Status | Hauptinhalt oder begründete N/A-Entscheidung |
 |---|---|---|
-| [threat-model.md](threat-model.md) | `threat-model-template.md` | Stub |
-| [security-checklist.md](security-checklist.md) | `security-checklist-template.md` | Feature 002 local Pass (2026-08-30) |
-| [arc42-security.md](arc42-security.md) | `arc42-security-template.md` | Stub |
-| [dependency-audit.md](dependency-audit.md) | `dependency-audit-template.md` | Stub |
-| [security-quality-scenarios.md](security-quality-scenarios.md) | `security-quality-scenarios-template.md` | Stub |
-| [asvs-verification.md](asvs-verification.md) | `asvs-verification-template.md` | Stub |
-| [supply-chain-evidence.md](supply-chain-evidence.md) | `supply-chain-evidence-template.md` | Stub |
-| [zero-trust-applicability.md](zero-trust-applicability.md) | `zero-trust-applicability-template.md` | Stub |
-| [samm-assessment.md](samm-assessment.md) | `samm-assessment-template.md` | Stub |
+| [Bedrohungsmodell](threat-model.md) | lokal abgeschlossen; Plattform/Exact Head Pending | STRIDE, CIA, CAPEC-153/-538, vier Trust Boundaries und Residualrisiken |
+| [Sicherheits-Checkliste](security-checklist.md) | lokal Pass | NIST SSDF, CWE Top 25, C#/.NET, Inputs, Lifecycle, Fehler und Dependencies |
+| [arc42 Section 8](arc42-security.md) | abgeschlossen | Lifecycle, Trust Boundaries, Fehler, Logging, Abhängigkeiten, Deployment und N/A-Register |
+| [Abhängigkeits-Audit](dependency-audit.md) | lokal Pass; Exact Head Pending | 1 direkte + 23 transitive Pakete, 0 bekannte Schwachstellen, 0 offene Lizenzen |
+| [Security-Qualitätsszenarien](security-quality-scenarios.md) | lokal Pass; Provider Pending | manipulierte Taste, Paketmanipulation und sichere Beendigung |
+| [ASVS-Anwendbarkeit](asvs-verification.md) | geprüft N/A | keine Web-/API-/Auth-Fläche; Trigger in arc42 Abschnitt 11 |
+| [Supply-Chain-Evidenz](supply-chain-evidence.md) | lokal Pass; Provenance/Exact Head Pending | SPDX-SBOM, VEX, AI-SBOM, SLSA v1.2 und OpenSSF-Review |
+| [Zero-Trust-Anwendbarkeit](zero-trust-applicability.md) | geprüft N/A | lokaler Einprozessbetrieb; Trigger in arc42 Abschnitt 11 |
+| [SAMM-Review](samm-assessment.md) | reviewed, unchanged | migrationsbezogener Prozessreview ohne Nebenprojekt |
+| [S-ADR-003](adr/003-terminalgui-lifecycle-supply-chain.md) | akzeptiert | creator-owned Lifecycle und fail-closed Lieferkette |
+| [SPDX-2.3-SBOM](sbom/tinycalc-terminalgui.spdx.json) | gültig lokal; Exact Head Pending | Syft 1.51.0, alle 24 ausgelieferten NuGet-Pakete enthalten |
 
-## Anwendungshinweise / Usage Notes
+### Ergänzende Artefakte
 
-- ADRs werden im Verzeichnis `docs/security/adr/` als einzelne Dateien abgelegt.
-- Die Templates in `.specify/templates/` sind die kanonische Quelle.
-- Default-Evidenzort fuer neue Standards: `docs/security/`.
-- Falls dieses Repo einen gleichwertigen Governance-Pfad statt `docs/security/`
-  nutzt, muss diese Abweichung hier dokumentiert und verlinkt werden.
+| Dokument | Status | Zweck |
+|---|---|---|
+| [S-ADR-Index](adr/README.md) | aktuell | Index der Security Architecture Decision Records |
+| [GSDB-Selbsteinschätzung](gsdb-self-assessment.md) | bestehender Preflight | sichere Entwicklungsrichtlinie und Preset-Voraussetzungen |
+| [Feature-Architektur](../architecture/terminalgui-migration.md) | abgeschlossen | Kontext-, Baustein-, Laufzeit-, Deployment-, Qualitäts- und Risikosichten |
+| [Feature-Evidenz](../../specs/003-terminalgui-migration/evidence/) | lokal fortgeschrieben | Befehle, Hashes, Tests, PTY, Coverage, Pakete und Checkpoints |
 
-*ADRs are stored as individual files in `docs/security/adr/`.
-The templates in `.specify/templates/` are the canonical source.
-The default evidence location for newly added standards is `docs/security/`.
-If this repository uses an equivalent governance path instead, that deviation
-must be documented and linked here.*
+### Gültigkeits- und Review-Regeln
 
-<!-- EN: docs/security/README.md
-[DE-Zusammenfassung: Index der projektspezifischen Sicherheitsdokumentation fuer TinyCalc.]
--->
+- Ein neuer Trust Boundary, eine neue Datei-/Netzwerk-/Auth-Fläche oder eine
+  zweite App-Instanz öffnet Architektur, Threat Model, Checkliste und S-ADR.
+- Ein Restore, Paket-, Quellen-, Advisory- oder Lizenzwechsel öffnet Dependency
+  Audit, SBOM und Supply-Chain-Evidenz.
+- Ein Produkt-, Workflow- oder Commitwechsel öffnet Build, Tests, Smoke,
+  Coverage, Plattform- und Exact-Head-Belege.
+- Admin-Bypass darf nur eine formale Merge-Policy betreffen und ersetzt kein
+  fachliches, Security-, A11Y-, Plattform-, Review- oder Exact-Head-Gate.
+
+## English index
+
+The Feature 003 security documentation is locally complete. This is not merge
+approval: Linux, Windows, provider review, provenance, and exact-head evidence
+remain pending until the later delivery gates.
+
+The mandatory table above indexes the threat model, secure-coding checklist,
+arc42 Section 8, dependency audit, measurable security scenarios, ASVS and
+Zero Trust applicability decisions, supply-chain evidence, SAMM review, the
+focused security ADR, and the SPDX SBOM. Each document is German first and
+English second, with text-first diagrams and linear alternatives.
+
+Any new trust boundary, input or I/O surface, application instance, package,
+source, advisory, license, product/workflow change, or commit invalidates the
+matching evidence. Admin bypass can address only a formal merge policy and
+cannot replace technical or review gates.

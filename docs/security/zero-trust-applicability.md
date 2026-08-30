@@ -1,17 +1,34 @@
-# Zero-Trust-Anwendbarkeit / Zero Trust Applicability: TinyCalc
+# Zero-Trust-Anwendbarkeit: TinyCalc Feature 003
 
-**Projekt / Project**: TinyCalc (Level-2)
-**Datum / Date**: 2026-04-24
-**Status**: Stub — mit projektspezifischen Inhalten zu befuellen / Stub — to be populated
-**Template-Quelle / Template Source**: `.specify/templates/zero-trust-applicability-template.md`
+## Deutscher Prüfblock
 
-<!--
-  Dieses Dokument ist ein Stub. Die vollstaendige Struktur findet sich im
-  Template unter .specify/templates/zero-trust-applicability-template.md. Bei der Befuellung das Template als Vorlage
-  verwenden.
+| Feld | Wert |
+|---|---|
+| Datum | 2026-08-30 |
+| Feature | 003, Terminal.Gui-v2-Migration |
+| Status | N/A, geprüft und begründet |
+| Owner | Feature 003 |
+| Reviewer | Security-/PR-Review am Exact Head |
+| Kanonische Entscheidung | `docs/security/arc42-security.md`, Abschnitt 11 |
 
-  This document is a stub. The complete structure can be found in the
-  template at .specify/templates/zero-trust-applicability-template.md. Use the template as a guide when populating.
--->
+NIST SP 800-207 Zero Trust ist für Feature 003 nicht anwendbar. TinyCalc bleibt
+ein lokaler Einprozessbetrieb ohne verteilten Dienst, Cloudgrenze,
+Remoteverwaltung, Dienstidentität oder Netzwerkzugriff. Least Privilege und
+sichere Defaults gelten dennoch innerhalb des lokalen Prozesses.
 
-[Zu befuellen / To be populated — see template]
+Eine Netzwerk-, Cloud-, Service-, Remote- oder Identitätsgrenze setzt den
+Status auf `Open` und verlangt eine neue Architektur-, Trust-Boundary- und
+Zero-Trust-Bewertung. T057/T067 muss am Exact Head bestätigen, dass der finale
+Diff keinen solchen Trigger einführt.
+
+## English review block
+
+NIST SP 800-207 Zero Trust is not applicable to Feature 003 because TinyCalc
+remains one local process without a distributed service, cloud boundary,
+remote management, service identity, or network access. Least privilege and
+fail-safe defaults still apply inside the local process.
+
+Any network, cloud, service, remote, or identity boundary changes the status
+to open and requires new architecture, trust-boundary, and Zero Trust review.
+The canonical rationale and trigger remain in
+`docs/security/arc42-security.md`, Section 11.
