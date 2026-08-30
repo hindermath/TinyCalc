@@ -10,13 +10,13 @@
       "path": "requirements/intakes/active/Lastenheft_Constitution_Change.002-constitution-change.md",
       "role": "Primary",
       "normalizedSha256": "04c4e1ba93d626463829a07f33b5591a6417b6aeaf89e805b637ab1bf5c26a0a",
-      "status": "Completed"
+      "status": "Eligible"
     },
     {
       "path": "requirements/intakes/active/Lastenheft_TerminalGui_Migration.md",
       "role": "OrderedMember",
       "normalizedSha256": "fd59040e8bb736b0944e74ab855b72a3a8b843487ae64509926d4a9e79c68160",
-      "status": "Eligible"
+      "status": "Blocked"
     },
     {
       "path": "requirements/intakes/active/Lastenheft_Rename_MicroCalc_TinyCalc.md",

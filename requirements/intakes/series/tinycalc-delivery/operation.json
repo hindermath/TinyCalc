@@ -1,21 +1,21 @@
 {
   "schemaVersion": "1.0",
   "documentType": "IntakeSeriesOperation",
-  "operationId": "5e57604c-de91-49f0-823d-92e612ae25fe",
+  "operationId": "6a5e02a3-1cd2-4453-b383-99637d1ace81",
   "seriesId": "5b4523b4-d946-4091-9cbc-11825af94332",
   "type": "Update",
   "status": "Published",
-  "authorityEvidence": "User approved IAD001 including TinyCalc rank 7 and approved the binding IAD002 delivery gate.",
-  "proposalNormalizedSha256": "f36a20d34be1c682821321dd0b1a0c8d2a5c44b6ffbfaf54c77daa027868a10d",
+  "authorityEvidence": "Thorsten explicitly authorized serial autonomous Spec Kit runs after completed Feature 002 and approved MergeAndSync with narrow Admin-Bypass authority.",
+  "proposalNormalizedSha256": "eef3cfd5b9e43395ab9ee59848bb183f1429a3104e5ce4a0980393987a530be2",
   "preparedPaths": [
-    "requirements/intakes/active/Lastenheft_PL0-Zellfunktionen_V1.md",
-    "specs/intake-authoring-receipts/pl0-zellfunktionen-v1.json",
     "requirements/intakes/series/tinycalc-delivery/manifest.json",
     "requirements/intakes/series/tinycalc-delivery/receipt.json",
+    "requirements/intakes/series/tinycalc-delivery/operation.json",
     "requirements/intakes/series/tinycalc-delivery/order.md",
-    "requirements/intakes/series-archive/tinycalc-delivery/20260829T153102Z/manifest.json",
-    "requirements/intakes/series-archive/tinycalc-delivery/20260829T153102Z/receipt.json",
-    "Lastenheft_Abarbeitungsreihenfolge.md"
+    "requirements/intakes/series-archive/tinycalc-delivery/20260829T233307Z/manifest.json",
+    "requirements/intakes/series-archive/tinycalc-delivery/20260829T233307Z/receipt.json",
+    "Lastenheft_Abarbeitungsreihenfolge.md",
+    "Pflichtenheft.md"
   ],
   "validation": {
     "bash": "Pass",
@@ -24,14 +24,14 @@
   "publication": {
     "status": "Published",
     "publishedPaths": [
-      "requirements/intakes/active/Lastenheft_PL0-Zellfunktionen_V1.md",
-      "specs/intake-authoring-receipts/pl0-zellfunktionen-v1.json",
       "requirements/intakes/series/tinycalc-delivery/manifest.json",
       "requirements/intakes/series/tinycalc-delivery/receipt.json",
+      "requirements/intakes/series/tinycalc-delivery/operation.json",
       "requirements/intakes/series/tinycalc-delivery/order.md",
-      "requirements/intakes/series-archive/tinycalc-delivery/20260829T153102Z/manifest.json",
-      "requirements/intakes/series-archive/tinycalc-delivery/20260829T153102Z/receipt.json",
-      "Lastenheft_Abarbeitungsreihenfolge.md"
+      "requirements/intakes/series-archive/tinycalc-delivery/20260829T233307Z/manifest.json",
+      "requirements/intakes/series-archive/tinycalc-delivery/20260829T233307Z/receipt.json",
+      "Lastenheft_Abarbeitungsreihenfolge.md",
+      "Pflichtenheft.md"
     ]
   }
 }

@@ -301,6 +301,7 @@ fortgeschrieben.
 | 2026-08-29 | Lernverstaendlichkeitsbefund `IR001` repariert und Serie erneut geprueft | Der ausdrueckliche `speckit-intake-repair`-Aufruf autorisierte ausschließlich die Reparatur des mittleren Befunds im PL/0-Zellfunktionen-Intake. Ein neuer deutsch-englischer CEFR-B2-Begriffsabschnitt erklaert PL/0/P-Code/VM, Integer- und Cache-Grenzen, Debuggerzustand, NuGet-Vertrag sowie Security- und Supply-Chain-Begriffe vor ihrer fachlichen Verwendung. Scope, Nicht-Ziele, Anforderungen, Abnahmeschwellen, Reihenfolge, Gates, Security-/A11Y-Entscheidungen und Delivery Authority blieben unveraendert. Der vollstaendige Nachreview supersediert das Remediation-Ergebnis und ist fuer zehn Ziele, vier Wurzeln und sechs interne Hard Gates `Ready`, ohne verbleibende Findings, akzeptierte Risiken oder offene Fragen. Zusaetzlicher Aenderungsumfang gegenueber dem Remediation-Review vor dieser Ledger-Fortschreibung: `0` Produktionscode-Zeilen, `0` Testcode-Zeilen und `+106 / -28` Dokumentations-, Governance- und Automationszeilen. Konservative Manualreferenz: 80 Zeilen/Tag = `1.3` Tage (ca. `10.3` Stunden); Thorsten-Solo-Referenz: 125 Zeilen/Tag = `0.8` Tage (ca. `6.6` Stunden); bei einem sichtbaren Aktivtag entspricht dies einem blended repository speedup von `1.3x` bzw. `0.8x`. Sichtbares Arbeitsfenster: dieselbe Agentensitzung am 2026-08-29. Validierung: Zielhash vor der Reparatur, Schema-2.0-Konfiguration, Gesamt-Alignment und Review-Resultat jeweils in Bash und PowerShell, vollständige Serien-Neupruefung, Renderer-Drift, Request-Bindung und `git diff --check`; kein `dotnet build`/`dotnet test`, weil keine Produkt-, Test-, API- oder Laufzeitaenderung erfolgte. |
 | 2026-08-29 | MergeAndSync-Lieferung fuer PL/0-Intake vorbereitet | Fuer den fokussierten PR wurde eine bilinguale Beschreibung mit Problem, Loesung, Risiken und Testplan angelegt. Sie dokumentiert ausdruecklich, dass dieser Liefergegenstand nur Intake- und Governance-Artefakte umfasst, keine PL/0-Implementierung oder NuGet-Veroeffentlichung startet und die bestehende `LocalImplementation`-Grenze nicht erweitert. Zusaetzlicher Aenderungsumfang vor dieser Ledger-Fortschreibung: `0` Produktionscode-Zeilen, `0` Testcode-Zeilen und `+59` Dokumentationszeilen. Konservative Manualreferenz: 80 Zeilen/Tag = `0.7` Tage (ca. `5.8` Stunden); Thorsten-Solo-Referenz: 125 Zeilen/Tag = `0.5` Tage (ca. `3.7` Stunden); sichtbares Arbeitsfenster: dieselbe Agentensitzung am 2026-08-29. Der Nutzer hat Commit, Push und `MergeAndSync` mit Admin-Bypass fuer diesen PR ausdruecklich autorisiert. |
 | 2026-08-30 | Feature 002 Constitution-Abgleich lokal implementiert / Feature 002 constitution alignment implemented locally | Arbeitsfenster: eine geroutete Agentensitzung und ein sichtbarer lokaler Aktivtag am 2026-08-30. Arbeitspakete: Eingangsgates, bytegleiche Constitution-Spiegel, fuenf Agentenflaechen, acht Vorlagen, vollstaendige oeffentliche XML-Inventur, Release-Build, Security-/A11Y-Nachweis, PR-Text und lokale Tests. Beobachteter Nettoumfang vor dem Statistik-Selbstnachweis: `0` Produktionscode-Zeilen, `0` Testcode-Zeilen und `+3185 / -81 = 3104` Dokumentations-/Governancezeilen; `.specify/runtime/` und das Statistik-Ledger selbst sind ausgeschlossen. Konservative Referenz 80 Zeilen/Arbeitstag: `38.8` Tage, `302.6` Stunden bei 7.8 Stunden/Tag und `1.8` Monate bei 21.5 Arbeitstagen/Monat. Thorsten-Solo-Referenz 125 Zeilen/Arbeitstag: `24.8` Tage, `193.7` Stunden und `1.2` Monate. Gegen einen sichtbaren Aktivtag entspricht dies einem blended repository speedup bzw. einer Lieferdichte von `38.8x` und `24.8x`, nicht einer Stoppuhrmessung. Validierung: Hash-/State-/Regelmatrizen, 76/76 XML-API-Zeilen, Restore, Build mit 0 Warnungen/Fehlern, 79/79 xUnit-Tests, `SMOKE_OK`, keine bekannte verwundbare Abhaengigkeit, kein High-Secret-Fund und Homogenitaet 100. *Work window: one routed session and one visible local active day on 2026-08-30. The 3,104 net documentation/governance lines imply 38.8 conservative manual days (302.6 hours, 1.8 months) or 24.8 Thorsten-solo days (193.7 hours, 1.2 months). The 38.8x and 24.8x values describe blended repository delivery density, not stopwatch time.* |
+| 2026-08-30 | TinyCalc-Serie nach Feature 002 fortgeschrieben und CI-Negativtest entkoppelt | Der abgeschlossene Constitution-Intake wurde auf `Completed` gesetzt und TerminalGui-Migration als einziges naechstes Ziel auf `Eligible` angehoben; Reihenfolge, vier Wurzeln und sechs Abhaengigkeiten blieben erhalten. Manifest und Receipt des Vorgaengers wurden byteidentisch archiviert, der Nachfolger wahrt die Supersession-Lineage. Ein zunaechst plattformuebergreifend fehlgeschlagener Governance-Negativtest setzte noch starr den ersten Serieneintrag statt des tatsaechlich `Eligible` Ziels auf `Pending`; die Fixture sucht dieses Ziel nun statusbasiert und bleibt damit bei kuenftigen Serienfortschreibungen stabil. Arbeitsfenster: eine Agentensitzung und ein sichtbarer Aktivtag am 2026-08-30. Aenderungsumfang vor diesem Statistik-Selbstnachweis: `0` Produktionscode-Zeilen, `+3 / -1 = 2` Testcode-Zeilen und `+245 / -51 = 194` Dokumentations-, Governance- und Automationszeilen einschliesslich unveraenderbarer Archivevidenz. Konservative Manualreferenz: 80 Zeilen/Tag = `2.5` Tage (ca. `19.1` Stunden); Thorsten-Solo-Referenz: 125 Zeilen/Tag = `1.6` Tage (ca. `12.2` Stunden); gegen einen sichtbaren Aktivtag entspricht dies einem blended repository speedup von `2.5x` bzw. `1.6x`, nicht einer Stoppuhrmessung. Validierung: vollstaendiges PowerShell-Alignment, acht status- und hashbezogene Negativ-Fixtures, Serien- und Receipt-Gates sowie die vorhandenen CI-Build-, Test-, Secret- und Homogenitaetspruefungen. *The completed Constitution intake is now `Completed`, TerminalGui migration is the sole `Eligible` target, and the negative fixture now locates that target by status. The 196 net test and governance lines correspond to 2.5 conservative manual days or 1.6 Thorsten-solo days; these are blended delivery-density comparisons, not stopwatch measurements.* |
 
 ## Statistikprofil-1-Archiv / Statistics Profile 1 Archive
 Basis dieses Schlussblocks sind die aktuell dokumentierten Snapshot- und
@@ -465,27 +466,27 @@ Profil 2 verwendet Git-getrackte Textdateien und sichtbare Git-Aktivitaet. Die W
 
 | Kennzahl / Metric | Wert / Value |
 |---|---:|
-| Textbasis / Text base | 141057 lines |
-| Textdateien / Text files | 995 |
+| Textbasis / Text base | 141253 lines |
+| Textdateien / Text files | 998 |
 | Beobachtbarer Zeitraum / Observable period | 2025-09-07..2026-08-30 |
 | Aktivtage / Active days | 72 |
-| Relevante Commits / Relevant commits | 200 |
-| Zeilen je Aktivtag / Lines per active day | 1959.1 |
+| Relevante Commits / Relevant commits | 203 |
+| Zeilen je Aktivtag / Lines per active day | 1961.8 |
 | Peak-Tag im Fenster / Peak day in window | 2026-06-17 / 27058 |
 | Peak-Woche im Fenster / Peak week in window | 2026-07-19 / 33711 |
 | Laengste Serie / Longest streak | 8 days |
 | Speedup vs. 80 lines/day | 24.5x |
 | Speedup vs. 125 lines/day | 15.7x |
-| Methodik / Methodology | v2; source `72155764f089` |
+| Methodik / Methodology | v2; source `968824d33c9e` |
 
 ### Artefaktmix / Artifact Mix
 
 ```text
 Produktiv / Production          [#...................]   1.9% | 2748
-Tests                           [#...................]   4.0% | 5706
-Dokumentation / Documentation   [###############.....]  73.6% | 103824
+Tests                           [#...................]   4.0% | 5708
+Dokumentation / Documentation   [###############.....]  73.5% | 103867
 Skripte / Scripts               [###.................]  15.6% | 21988
-Konfiguration / Configuration   [#...................]   2.8% | 3892
+Konfiguration / Configuration   [#...................]   2.9% | 4043
 Daten und Medien / Data and media [....................]   0.0% | 0
 Sonstiger Text / Other text     [#...................]   2.1% | 2899
 ```
@@ -624,7 +625,7 @@ Die Faktoren vergleichen sichtbare Lieferdichte mit den dokumentierten manuellen
 Scale: 0..2000 lines/day
 Experienced manual [#...................] 80
 Thorsten solo      [#...................] 125
-Visible repository [####################] 1959.1
+Visible repository [####################] 1961.8
 ```
 
 Die gemeinsame Skala vergleicht Referenzen und sichtbare Lieferdichte. Sie schreibt die Git-Aktivitaet keiner Person oder KI pauschal zu.
@@ -650,6 +651,6 @@ DE: Das Fenster beginnt am 2025-09-07 und endet am 2026-08-30. Es enthaelt 72 ak
 | 2026-05 | 13420 |
 | 2026-06 | 37318 |
 | 2026-07 | 76222 |
-| 2026-08 | 16899 |
+| 2026-08 | 17199 |
 
 <!-- project-statistics-v2:end -->
