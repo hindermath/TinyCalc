@@ -3,14 +3,21 @@ using MicroCalc.Core.IO;
 using MicroCalc.Core.Model;
 using MicroCalc.Tui.Help;
 using MicroCalc.Tui.Smoke;
-using Terminal.Gui;
+using Terminal.Gui.App;
+using Terminal.Gui.Input;
+using Terminal.Gui.ViewBase;
+using Terminal.Gui.Views;
 
 namespace MicroCalc.Tui;
 
 internal static class Program
 {
     private static readonly MicroCalcEngine Engine = new();
+    // Terminal.Gui v2 behält TextView für Kompatibilität; EditorView würde eine neue Abhängigkeit einführen.
+    // Terminal.Gui v2 keeps TextView for compatibility; EditorView would add a new dependency.
+#pragma warning disable CS0618
     private static TextView _gridView = null!;
+#pragma warning restore CS0618
     private static Label _statusLine = null!;
     private static Label _messageLine = null!;
     private static string _message = "Type '/' for commands.";
@@ -23,16 +30,12 @@ internal static class Program
             return;
         }
 
-        Application.Init();
-        var top = Application.Top;
-
-        var menu = BuildMenu();
-        var window = BuildWindow();
-        top.Add(menu, window);
-
+        // Der Erzeuger besitzt App und Root; alle Dialoge verwenden dieselbe laufende Instanz.
+        // The creator owns app and root; every dialog reuses the same running instance.
+        using IApplication app = Application.Create().Init();
+        using Window root = BuildWindow(app);
         RefreshUi();
-        Application.Run();
-        Application.Shutdown();
+        app.Run(root);
     }
 
     private static void RunSmokeMode()
@@ -53,42 +56,48 @@ internal static class Program
         Environment.ExitCode = 1;
     }
 
-    private static MenuBar BuildMenu()
+    private static MenuBar BuildMenu(IApplication app)
     {
         return new MenuBar(
         [
             new MenuBarItem("_File", [
-                new MenuItem("_Load", string.Empty, () => ExecuteSafe(LoadSheet)),
-                new MenuItem("_Save", string.Empty, () => ExecuteSafe(SaveSheet)),
-                new MenuItem("_Print", string.Empty, () => ExecuteSafe(PrintSheet)),
-                new MenuItem("_Quit", string.Empty, () => Application.RequestStop()),
+                new MenuItem("_Load", string.Empty, () => ExecuteSafe(() => LoadSheet(app))),
+                new MenuItem("_Save", string.Empty, () => ExecuteSafe(() => SaveSheet(app))),
+                new MenuItem("_Print", string.Empty, () => ExecuteSafe(() => PrintSheet(app))),
+                new MenuItem("_Quit", string.Empty, app.RequestStop),
             ]),
             new MenuBarItem("_Sheet", [
                 new MenuItem("_Recalculate", string.Empty, () => ExecuteSafe(RecalculateSheet)),
-                new MenuItem("_Format", string.Empty, () => ExecuteSafe(FormatRange)),
+                new MenuItem("_Format", string.Empty, () => ExecuteSafe(() => FormatRange(app))),
                 new MenuItem("_AutoCalc", string.Empty, () => ExecuteSafe(ToggleAutoCalc)),
-                new MenuItem("_Clear", string.Empty, () => ExecuteSafe(ClearSheet)),
+                new MenuItem("_Clear", string.Empty, () => ExecuteSafe(() => ClearSheet(app))),
             ]),
             new MenuBarItem("_Help", [
-                new MenuItem("_Help", string.Empty, () => ExecuteSafe(ShowHelp)),
+                new MenuItem("_Help", string.Empty, () => ExecuteSafe(() => ShowHelp(app))),
             ]),
         ]);
     }
 
-    private static Window BuildWindow()
+    private static Window BuildWindow(IApplication app)
     {
-        var window = new Window("MicroCalc .NET 10")
+        var window = new Window
         {
+            Title = "MicroCalc .NET 10",
             X = 0,
-            Y = 1,
+            Y = 0,
             Width = Dim.Fill(),
             Height = Dim.Fill(),
         };
 
+        var menu = BuildMenu(app);
+
+        // Diese Migration bewahrt den bestehenden Nur-Lese-Textvertrag ohne zusätzliches Editor-Paket.
+        // This migration preserves the existing read-only text contract without an extra editor package.
+#pragma warning disable CS0618
         _gridView = new TextView
         {
             X = 0,
-            Y = 0,
+            Y = 1,
             Width = Dim.Fill(),
             Height = Dim.Fill(2),
             ReadOnly = true,
@@ -96,89 +105,92 @@ internal static class Program
             Multiline = true,
             CanFocus = false,
         };
+#pragma warning restore CS0618
 
-        _statusLine = new Label(string.Empty)
+        _statusLine = new Label
         {
+            Text = string.Empty,
             X = 0,
             Y = Pos.Bottom(_gridView),
             Width = Dim.Fill(),
             Height = 1,
         };
 
-        _messageLine = new Label(string.Empty)
+        _messageLine = new Label
         {
+            Text = string.Empty,
             X = 0,
             Y = Pos.Bottom(_statusLine),
             Width = Dim.Fill(),
             Height = 1,
         };
 
-        window.Add(_gridView, _statusLine, _messageLine);
-        window.KeyPress += args => HandleKey(args);
+        window.Add(menu, _gridView, _statusLine, _messageLine);
+        window.KeyDown += (_, key) => HandleKey(app, key);
         return window;
     }
 
-    private static void HandleKey(View.KeyEventEventArgs args)
+    private static void HandleKey(IApplication app, Key key)
     {
-        var key = args.KeyEvent.Key;
-
-        if (key == Key.CursorUp || key == (Key.CtrlMask | Key.E))
+        // Nur erkannte historische Eingaben werden behandelt; unbekannte Tasten erhalten keine neue Tabellenwirkung.
+        // Only recognized historical inputs are handled; unknown keys gain no new spreadsheet effect.
+        if (key == Key.CursorUp || key == Key.E.WithCtrl)
         {
             Engine.CurrentCell = Engine.Move(Engine.CurrentCell, Direction.Up);
-            args.Handled = true;
+            key.Handled = true;
             RefreshUi();
             return;
         }
 
-        if (key == Key.CursorDown || key == (Key.CtrlMask | Key.X) || key == (Key.CtrlMask | Key.J))
+        if (key == Key.CursorDown || key == Key.X.WithCtrl || key == Key.J.WithCtrl)
         {
             Engine.CurrentCell = Engine.Move(Engine.CurrentCell, Direction.Down);
-            args.Handled = true;
+            key.Handled = true;
             RefreshUi();
             return;
         }
 
-        if (key == Key.CursorRight || key == (Key.CtrlMask | Key.D) || key == (Key.CtrlMask | Key.M) || key == Key.Enter)
+        if (key == Key.CursorRight || key == Key.D.WithCtrl || key == Key.M.WithCtrl || key == Key.Enter)
         {
             Engine.CurrentCell = Engine.Move(Engine.CurrentCell, Direction.Right);
-            args.Handled = true;
+            key.Handled = true;
             RefreshUi();
             return;
         }
 
-        if (key == Key.CursorLeft || key == (Key.CtrlMask | Key.S) || key == (Key.CtrlMask | Key.A))
+        if (key == Key.CursorLeft || key == Key.S.WithCtrl || key == Key.A.WithCtrl)
         {
             Engine.CurrentCell = Engine.Move(Engine.CurrentCell, Direction.Left);
-            args.Handled = true;
+            key.Handled = true;
             RefreshUi();
             return;
         }
 
-        if (key == (Key.CtrlMask | Key.Q))
+        if (key == Key.Q.WithCtrl)
         {
-            Application.RequestStop();
-            args.Handled = true;
+            app.RequestStop();
+            key.Handled = true;
             return;
         }
 
-        if (args.KeyEvent.KeyValue == '/')
+        if (key == new Key('/'))
         {
-            ExecuteSafe(OpenCommandPalette);
-            args.Handled = true;
+            ExecuteSafe(() => OpenCommandPalette(app));
+            key.Handled = true;
             return;
         }
 
         if (key == Key.Esc)
         {
-            ExecuteSafe(() => OpenEditor(useCurrentContents: true, initialText: null));
-            args.Handled = true;
+            ExecuteSafe(() => OpenEditor(app, useCurrentContents: true, initialText: null));
+            key.Handled = true;
             return;
         }
 
-        if (IsPrintableAscii(args.KeyEvent.KeyValue))
+        if (key.TryGetPrintableRune(out var rune) && IsPrintableAscii(rune.Value))
         {
-            ExecuteSafe(() => OpenEditor(useCurrentContents: false, initialText: ((char)args.KeyEvent.KeyValue).ToString()));
-            args.Handled = true;
+            ExecuteSafe(() => OpenEditor(app, useCurrentContents: false, initialText: rune.ToString()));
+            key.Handled = true;
             return;
         }
     }
@@ -208,11 +220,11 @@ internal static class Program
         _messageLine.Text = _message;
     }
 
-    private static void OpenEditor(bool useCurrentContents, string? initialText)
+    private static void OpenEditor(IApplication app, bool useCurrentContents, string? initialText)
     {
         var currentCell = Engine.Sheet.GetCell(Engine.CurrentCell);
         var seed = useCurrentContents ? currentCell.Contents : (initialText ?? string.Empty);
-        var input = PromptText($"Edit {Engine.CurrentCell}", "Value:", seed);
+        var input = PromptText(app, $"Edit {Engine.CurrentCell}", "Value:", seed);
 
         if (input is null)
         {
@@ -229,9 +241,10 @@ internal static class Program
         RefreshUi();
     }
 
-    private static void OpenCommandPalette()
+    private static void OpenCommandPalette(IApplication app)
     {
         var choice = MessageBox.Query(
+            app,
             "Commands",
             "Select command",
             "Load",
@@ -248,40 +261,40 @@ internal static class Program
         switch (choice)
         {
             case 0:
-                LoadSheet();
+                LoadSheet(app);
                 break;
             case 1:
-                SaveSheet();
+                SaveSheet(app);
                 break;
             case 2:
                 RecalculateSheet();
                 break;
             case 3:
-                PrintSheet();
+                PrintSheet(app);
                 break;
             case 4:
-                FormatRange();
+                FormatRange(app);
                 break;
             case 5:
                 ToggleAutoCalc();
                 break;
             case 6:
-                ShowHelp();
+                ShowHelp(app);
                 break;
             case 7:
-                ClearSheet();
+                ClearSheet(app);
                 break;
             case 8:
-                Application.RequestStop();
+                app.RequestStop();
                 break;
         }
 
         RefreshUi();
     }
 
-    private static void LoadSheet()
+    private static void LoadSheet(IApplication app)
     {
-        var path = PromptText("Load", "Datei:", "sheet.mcalc.json");
+        var path = PromptText(app, "Load", "Datei:", "sheet.mcalc.json");
         if (string.IsNullOrWhiteSpace(path))
         {
             _message = "Load abgebrochen.";
@@ -292,9 +305,9 @@ internal static class Program
         _message = $"Geladen: {path}";
     }
 
-    private static void SaveSheet()
+    private static void SaveSheet(IApplication app)
     {
-        var path = PromptText("Save", "Datei:", "sheet.mcalc.json");
+        var path = PromptText(app, "Save", "Datei:", "sheet.mcalc.json");
         if (string.IsNullOrWhiteSpace(path))
         {
             _message = "Save abgebrochen.";
@@ -305,16 +318,16 @@ internal static class Program
         _message = $"Gespeichert: {path}";
     }
 
-    private static void PrintSheet()
+    private static void PrintSheet(IApplication app)
     {
-        var path = PromptText("Print", "Datei:", "sheet.lst");
+        var path = PromptText(app, "Print", "Datei:", "sheet.lst");
         if (string.IsNullOrWhiteSpace(path))
         {
             _message = "Print abgebrochen.";
             return;
         }
 
-        var marginText = PromptText("Print", "Left Margin:", "0");
+        var marginText = PromptText(app, "Print", "Left Margin:", "0");
         if (marginText is null)
         {
             _message = "Print abgebrochen.";
@@ -344,9 +357,9 @@ internal static class Program
         _message = $"AutoCalc: {(Engine.AutoCalc ? "ON" : "OFF")}";
     }
 
-    private static void ClearSheet()
+    private static void ClearSheet(IApplication app)
     {
-        var answer = MessageBox.Query("Clear", "Clear worksheet?", "Yes", "No");
+        var answer = MessageBox.Query(app, "Clear", "Clear worksheet?", "Yes", "No");
         if (answer != 0)
         {
             _message = "Clear abgebrochen.";
@@ -357,30 +370,30 @@ internal static class Program
         _message = "Worksheet geleert.";
     }
 
-    private static void FormatRange()
+    private static void FormatRange(IApplication app)
     {
-        var decimalsText = PromptText("Format", "Decimals (-1..11):", "2");
+        var decimalsText = PromptText(app, "Format", "Decimals (-1..11):", "2");
         if (decimalsText is null)
         {
             _message = "Format abgebrochen.";
             return;
         }
 
-        var widthText = PromptText("Format", "Field Width (1..20):", "10");
+        var widthText = PromptText(app, "Format", "Field Width (1..20):", "10");
         if (widthText is null)
         {
             _message = "Format abgebrochen.";
             return;
         }
 
-        var fromText = PromptText("Format", "From Row:", Engine.CurrentCell.Row.ToString());
+        var fromText = PromptText(app, "Format", "From Row:", Engine.CurrentCell.Row.ToString());
         if (fromText is null)
         {
             _message = "Format abgebrochen.";
             return;
         }
 
-        var toText = PromptText("Format", "To Row:", Engine.CurrentCell.Row.ToString());
+        var toText = PromptText(app, "Format", "To Row:", Engine.CurrentCell.Row.ToString());
         if (toText is null)
         {
             _message = "Format abgebrochen.";
@@ -401,14 +414,22 @@ internal static class Program
         return int.TryParse(value, out var parsed) ? parsed : fallback;
     }
 
-    private static void ShowHelp()
+    private static void ShowHelp(IApplication app)
     {
         var helpPath = Path.Combine(AppContext.BaseDirectory, "CALC.HLP");
         var help = HelpDocument.Load(helpPath);
 
         var page = 0;
-        var dialog = new Dialog("Help", 90, 28);
+        using var dialog = new Dialog
+        {
+            Title = "Help",
+            Width = 90,
+            Height = 28,
+        };
 
+        // Die Hilfe bleibt absichtlich eine einfache Nur-Lese-Ansicht innerhalb des genehmigten Paketumfangs.
+        // Help intentionally remains a simple read-only view within the approved package scope.
+#pragma warning disable CS0618
         var textView = new TextView
         {
             X = 0,
@@ -421,9 +442,11 @@ internal static class Program
             Text = help[page],
             CanFocus = false,
         };
+#pragma warning restore CS0618
 
-        var footer = new Label(string.Empty)
+        var footer = new Label
         {
+            Text = string.Empty,
             X = 0,
             Y = Pos.Bottom(textView),
             Width = Dim.Fill(),
@@ -438,43 +461,51 @@ internal static class Program
             footer.Text = $"Page {page + 1}/{help.Count}  (P/N oder Buttons)";
         }
 
-        var prevButton = new Button("Prev", is_default: false);
-        prevButton.Clicked += () =>
+        var prevButton = new Button { Text = "Prev", IsDefault = false };
+        prevButton.Accepting += (_, args) =>
         {
             if (page > 0)
             {
                 page--;
                 UpdatePage();
             }
+
+            args.Handled = true;
         };
 
-        var nextButton = new Button("Next", is_default: false);
-        nextButton.Clicked += () =>
+        var nextButton = new Button { Text = "Next", IsDefault = false };
+        nextButton.Accepting += (_, args) =>
         {
             if (page < help.Count - 1)
             {
                 page++;
                 UpdatePage();
             }
+
+            args.Handled = true;
         };
 
-        var closeButton = new Button("Close", is_default: true);
-        closeButton.Clicked += () => Application.RequestStop();
+        var closeButton = new Button { Text = "Close", IsDefault = true };
+        closeButton.Accepting += (_, args) =>
+        {
+            app.RequestStop();
+            args.Handled = true;
+        };
 
         dialog.AddButton(prevButton);
         dialog.AddButton(nextButton);
         dialog.AddButton(closeButton);
 
-        dialog.KeyPress += args =>
+        dialog.KeyDown += (_, key) =>
         {
-            if (args.KeyEvent.Key == Key.Esc)
+            if (key == Key.Esc)
             {
-                Application.RequestStop();
-                args.Handled = true;
+                app.RequestStop();
+                key.Handled = true;
                 return;
             }
 
-            if (args.KeyEvent.KeyValue == 'p' || args.KeyEvent.KeyValue == 'P')
+            if (key == new Key('p') || key == new Key('P'))
             {
                 if (page > 0)
                 {
@@ -482,11 +513,11 @@ internal static class Program
                     UpdatePage();
                 }
 
-                args.Handled = true;
+                key.Handled = true;
                 return;
             }
 
-            if (args.KeyEvent.KeyValue == 'n' || args.KeyEvent.KeyValue == 'N')
+            if (key == new Key('n') || key == new Key('N'))
             {
                 if (page < help.Count - 1)
                 {
@@ -494,28 +525,35 @@ internal static class Program
                     UpdatePage();
                 }
 
-                args.Handled = true;
+                key.Handled = true;
             }
         };
 
         UpdatePage();
-        Application.Run(dialog);
+        app.Run(dialog);
         _message = "Help geschlossen.";
     }
 
-    private static string? PromptText(string title, string label, string initial)
+    private static string? PromptText(IApplication app, string title, string label, string initial)
     {
-        var dialog = new Dialog(title, 70, 8);
-
-        var prompt = new Label(label)
+        using var dialog = new Dialog
         {
+            Title = title,
+            Width = 70,
+            Height = 8,
+        };
+
+        var prompt = new Label
+        {
+            Text = label,
             X = 1,
             Y = 1,
             Width = 20,
         };
 
-        var textField = new TextField(initial)
+        var textField = new TextField
         {
+            Text = initial,
             X = Pos.Right(prompt) + 1,
             Y = 1,
             Width = Dim.Fill(2),
@@ -523,25 +561,27 @@ internal static class Program
 
         string? result = null;
 
-        var ok = new Button("OK", is_default: true);
-        ok.Clicked += () =>
+        var ok = new Button { Text = "OK", IsDefault = true };
+        ok.Accepting += (_, args) =>
         {
             result = textField.Text.ToString();
-            Application.RequestStop();
+            app.RequestStop();
+            args.Handled = true;
         };
 
-        var cancel = new Button("Cancel", is_default: false);
-        cancel.Clicked += () =>
+        var cancel = new Button { Text = "Cancel", IsDefault = false };
+        cancel.Accepting += (_, args) =>
         {
             result = null;
-            Application.RequestStop();
+            app.RequestStop();
+            args.Handled = true;
         };
 
         dialog.Add(prompt, textField);
         dialog.AddButton(ok);
         dialog.AddButton(cancel);
 
-        Application.Run(dialog);
+        app.Run(dialog);
         return result;
     }
 }

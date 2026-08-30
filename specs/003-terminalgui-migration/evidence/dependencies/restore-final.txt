@@ -1,0 +1,63 @@
+RESTORE phase=final-product-state
+platform=Darwin
+completedUtc=2026-08-30T13:13:41Z
+command=dotnet restore MicroCalc.sln
+result=PASS
+exitCode=0
+projectsRestored=4
+buildOrTestInvocations=0
+sdk=10.0.400
+runtime=10.0.11
+rid=osx-arm64
+targetFramework=net10.0
+projectAssets=src/MicroCalc.Tui/obj/project.assets.json
+projectAssetsSha256=134471c5b72428e98534bdf4cf81b0f52fbd4cb69e2c51ca86e1a85d53be7e42
+projectFileSha256=4ec7597b21443a7ba10204df46ad2e4148397cbceea4c533413f65a36e3b484c
+
+SOURCE_SET
+nuget.org=https://api.nuget.org/v3/index.json enabled=true
+sdkLibraryPacks=local-dotnet-sdk-source enabled=true
+authenticatedVendorSource=enabled-but-redacted-and-not-used-by-resolved-graph
+packageMetadataProvenance=24-of-24 packages from nuget.org
+unexpectedPackageSource=none
+
+DIRECT_PACKAGES
+Terminal.Gui/2.4.17 requested=2.4.17 resolved=2.4.17 source=nuget.org
+
+TRANSITIVE_PACKAGES
+ColorHelper/1.8.1 source=nuget.org
+JetBrains.Annotations/2026.2.0 source=nuget.org
+Markdig/1.3.2 source=nuget.org
+Microsoft.Extensions.Configuration/10.0.7 source=nuget.org
+Microsoft.Extensions.Configuration.Abstractions/10.0.7 source=nuget.org
+Microsoft.Extensions.Configuration.Binder/10.0.7 source=nuget.org
+Microsoft.Extensions.Configuration.FileExtensions/10.0.7 source=nuget.org
+Microsoft.Extensions.Configuration.Json/10.0.7 source=nuget.org
+Microsoft.Extensions.DependencyInjection.Abstractions/10.0.9 source=nuget.org
+Microsoft.Extensions.FileProviders.Abstractions/10.0.7 source=nuget.org
+Microsoft.Extensions.FileProviders.Physical/10.0.7 source=nuget.org
+Microsoft.Extensions.FileSystemGlobbing/10.0.7 source=nuget.org
+Microsoft.Extensions.Logging.Abstractions/10.0.7 source=nuget.org
+Microsoft.Extensions.Options/10.0.9 source=nuget.org
+Microsoft.Extensions.Primitives/10.0.9 source=nuget.org
+Onigwrap/1.0.11 source=nuget.org
+System.IO.Abstractions/22.1.1 source=nuget.org
+TestableIO.System.IO.Abstractions/22.1.1 source=nuget.org
+TestableIO.System.IO.Abstractions.Wrappers/22.1.1 source=nuget.org
+Testably.Abstractions.FileSystem.Interface/10.1.0 source=nuget.org
+TextMateSharp/2.0.4 source=nuget.org
+TextMateSharp.Grammars/2.0.4 source=nuget.org
+Wcwidth/4.0.1 source=nuget.org
+
+DE: Der Restore des fertigen Produktstands war reproduzierbar. Terminal.Gui
+2.4.17 blieb die einzige direkte TUI-Abhaengigkeit. Die lokale NuGet-Metadatei
+jeder direkten und transitiven Paketversion bindet deren Herkunft an
+NuGet.org. Die weitere aktivierte, authentifizierte Anbieterquelle ist in
+getrackter Evidenz absichtlich redigiert und wurde von keinem Paket dieses
+aufgeloesten Graphen verwendet.
+
+EN: The final product restore was reproducible. Terminal.Gui 2.4.17 remained
+the only direct TUI dependency. Local NuGet metadata binds every direct and
+transitive package version to NuGet.org. The other enabled authenticated vendor
+source is intentionally redacted from tracked evidence and supplied no package
+in this resolved graph.

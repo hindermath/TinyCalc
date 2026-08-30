@@ -1,0 +1,19 @@
+SOURCE_CONTRACT phase=red
+platform=Darwin
+shell=pwsh -NoProfile -Command -
+project=src/MicroCalc.Tui/MicroCalc.Tui.csproj
+source=src/MicroCalc.Tui/Program.cs
+matrixExpected=13
+matrixMissing=0
+ctrlMask=8
+altMask=0
+FAIL PACKAGE expected=2.4.17 actual=1.19.0
+FAIL V1 Application.Top count=1
+FAIL V1 static Application.Init count=1
+FAIL V1 parameterless Application.Run count=1
+FAIL V1 Application.Shutdown count=1
+FAIL V1 CtrlMask count=8
+FAIL V2 symbol missing=Application.Create
+FAIL V2 symbol missing=IApplication
+FAIL V2 symbol missing=.WithCtrl
+exitCode=1

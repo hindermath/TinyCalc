@@ -18,7 +18,7 @@ in the format `ADR-NNN-title.md`.*
 
 | ADR | Titel / Title | Status | Datum / Date |
 |---|---|---|---|
-| — | Noch keine ADRs erstellt / No ADRs created yet | — | — |
+| [S-ADR-003](003-terminalgui-lifecycle-supply-chain.md) | Creator-owned Terminal.Gui-Lifecycle und fail-closed Lieferkette / Creator-owned Terminal.Gui lifecycle and fail-closed supply chain | Akzeptiert / Accepted | 2026-08-30 |
 
 <!-- EN: docs/security/adr/README.md
 [DE-Zusammenfassung: Index der Security Architecture Decision Records fuer TinyCalc.]

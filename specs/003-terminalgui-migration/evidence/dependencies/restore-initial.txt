@@ -1,0 +1,30 @@
+RESTORE phase=initial
+platform=Darwin
+startedLocal=2026-08-30T13:32:51+02:00
+command=dotnet restore MicroCalc.sln --verbosity normal
+lastOutput=ValidateSolutionConfiguration: Debug|Any CPU
+terminalGui2417CachedBeforeRestore=false
+result=BLOCKED
+reason=No package progress after more than five minutes; the managed terminal sandbox cannot reach the configured package source and Terminal.Gui 2.4.17 is not cached.
+exitCode=interrupted-at-safe-boundary
+buildOrTestInvocations=0
+
+RESUME phase=initial
+platform=Darwin
+completedUtc=2026-08-30T11:39:36.710799000Z
+command=dotnet restore MicroCalc.sln
+executionBoundary=primary-agent-workspace-after-managed-runner-network-block
+result=PASS
+exitCode=0
+targetFramework=net10.0
+resolvedPackage=Terminal.Gui/2.4.17
+projectAssets=src/MicroCalc.Tui/obj/project.assets.json
+projectAssetsSha256=ca64bc06c3fe3df8f889adc172b66a1b5683a7806deff9f9431a445eb4cba11e
+buildOrTestInvocations=0
+
+DE: Der erste Versuch wurde an der sicheren Sandbox-Grenze beendet. Der
+Hauptagent führte denselben Restore-Befehl mit aktueller Nutzerautorität im
+Workspace aus; Paket und Ziel-Framework sind jetzt eindeutig aufgelöst.
+EN: The first attempt stopped at the safe sandbox boundary. With current user
+authority, the primary agent ran the same restore command in the workspace;
+the package and target framework are now resolved unambiguously.

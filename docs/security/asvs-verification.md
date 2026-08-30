@@ -1,17 +1,32 @@
-# ASVS-Verifikation / ASVS Verification: TinyCalc
+# ASVS-Anwendbarkeit: TinyCalc Feature 003
 
-**Projekt / Project**: TinyCalc (Level-2)
-**Datum / Date**: 2026-04-24
-**Status**: Stub — mit projektspezifischen Inhalten zu befuellen / Stub — to be populated
-**Template-Quelle / Template Source**: `.specify/templates/asvs-verification-template.md`
+## Deutscher Prüfblock
 
-<!--
-  Dieses Dokument ist ein Stub. Die vollstaendige Struktur findet sich im
-  Template unter .specify/templates/asvs-verification-template.md. Bei der Befuellung das Template als Vorlage
-  verwenden.
+| Feld | Wert |
+|---|---|
+| Datum | 2026-08-30 |
+| Feature | 003, Terminal.Gui-v2-Migration |
+| Status | N/A, geprüft und begründet |
+| Owner | Feature 003 |
+| Reviewer | Security-/PR-Review am Exact Head |
+| Kanonische Entscheidung | `docs/security/arc42-security.md`, Abschnitt 11 |
 
-  This document is a stub. The complete structure can be found in the
-  template at .specify/templates/asvs-verification-template.md. Use the template as a guide when populating.
--->
+OWASP ASVS ist für Feature 003 nicht anwendbar. TinyCalc bleibt eine lokale
+Terminalanwendung ohne Web-, HTTP-, API-, Authentifizierungs-, Session-, CORS-
+oder Browserfläche. Es wird deshalb kein ASVS-Level erfunden und keine
+Web-Verifikation als bestanden behauptet.
 
-[Zu befuellen / To be populated — see template]
+Eine Web-, HTTP-, API-, Authentifizierungs- oder Sessionfläche setzt den Status
+auf `Open`. Dann müssen ASVS-Level, Scope, Owner, Prüfschritte und Evidenz vor
+der Implementierung festgelegt werden. Der Exact-Head-Review in T057/T067 muss
+bestätigen, dass kein solcher Trigger im finalen Diff entstanden ist.
+
+## English review block
+
+OWASP ASVS is not applicable to Feature 003 because TinyCalc remains a local
+terminal application without a web, HTTP, API, authentication, session, CORS,
+or browser surface. No ASVS level or web verification result is invented.
+
+Any such new surface changes the status to open and requires an explicit ASVS
+level, scope, owner, checks, and evidence before implementation. The canonical
+rationale and trigger remain in `docs/security/arc42-security.md`, Section 11.

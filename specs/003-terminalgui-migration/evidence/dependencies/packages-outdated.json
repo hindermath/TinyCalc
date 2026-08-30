@@ -1,0 +1,292 @@
+{
+  "version": 1,
+  "parameters": "--outdated --include-transitive",
+  "sources": [
+    "https://api.nuget.org/v3/index.json"
+  ],
+  "projects": [
+    {
+      "path": "/Users/thorstenhindermann/RiderProjects/TinyCalc/src/MicroCalc.Core/MicroCalc.Core.csproj"
+    },
+    {
+      "path": "/Users/thorstenhindermann/RiderProjects/TinyCalc/src/MicroCalc.Tui/MicroCalc.Tui.csproj",
+      "frameworks": [
+        {
+          "framework": "net10.0",
+          "transitivePackages": [
+            {
+              "id": "Microsoft.Extensions.Configuration",
+              "resolvedVersion": "10.0.7",
+              "latestVersion": "10.0.11"
+            },
+            {
+              "id": "Microsoft.Extensions.Configuration.Abstractions",
+              "resolvedVersion": "10.0.7",
+              "latestVersion": "10.0.11"
+            },
+            {
+              "id": "Microsoft.Extensions.Configuration.Binder",
+              "resolvedVersion": "10.0.7",
+              "latestVersion": "10.0.11"
+            },
+            {
+              "id": "Microsoft.Extensions.Configuration.FileExtensions",
+              "resolvedVersion": "10.0.7",
+              "latestVersion": "10.0.11"
+            },
+            {
+              "id": "Microsoft.Extensions.Configuration.Json",
+              "resolvedVersion": "10.0.7",
+              "latestVersion": "10.0.11"
+            },
+            {
+              "id": "Microsoft.Extensions.DependencyInjection.Abstractions",
+              "resolvedVersion": "10.0.9",
+              "latestVersion": "10.0.11"
+            },
+            {
+              "id": "Microsoft.Extensions.FileProviders.Abstractions",
+              "resolvedVersion": "10.0.7",
+              "latestVersion": "10.0.11"
+            },
+            {
+              "id": "Microsoft.Extensions.FileProviders.Physical",
+              "resolvedVersion": "10.0.7",
+              "latestVersion": "10.0.11"
+            },
+            {
+              "id": "Microsoft.Extensions.FileSystemGlobbing",
+              "resolvedVersion": "10.0.7",
+              "latestVersion": "10.0.11"
+            },
+            {
+              "id": "Microsoft.Extensions.Logging.Abstractions",
+              "resolvedVersion": "10.0.7",
+              "latestVersion": "10.0.11"
+            },
+            {
+              "id": "Microsoft.Extensions.Options",
+              "resolvedVersion": "10.0.9",
+              "latestVersion": "10.0.11"
+            },
+            {
+              "id": "Microsoft.Extensions.Primitives",
+              "resolvedVersion": "10.0.9",
+              "latestVersion": "10.0.11"
+            },
+            {
+              "id": "System.IO.Abstractions",
+              "resolvedVersion": "22.1.1",
+              "latestVersion": "22.2.0"
+            },
+            {
+              "id": "TestableIO.System.IO.Abstractions",
+              "resolvedVersion": "22.1.1",
+              "latestVersion": "22.2.0"
+            },
+            {
+              "id": "TestableIO.System.IO.Abstractions.Wrappers",
+              "resolvedVersion": "22.1.1",
+              "latestVersion": "22.2.0"
+            },
+            {
+              "id": "Testably.Abstractions.FileSystem.Interface",
+              "resolvedVersion": "10.1.0",
+              "latestVersion": "10.3.0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/Users/thorstenhindermann/RiderProjects/TinyCalc/tests/MicroCalc.Core.Tests/MicroCalc.Core.Tests.csproj",
+      "frameworks": [
+        {
+          "framework": "net10.0",
+          "topLevelPackages": [
+            {
+              "id": "coverlet.collector",
+              "requestedVersion": "8.0.0",
+              "resolvedVersion": "8.0.0",
+              "latestVersion": "10.0.1"
+            },
+            {
+              "id": "Microsoft.NET.Test.Sdk",
+              "requestedVersion": "18.3.0",
+              "resolvedVersion": "18.3.0",
+              "latestVersion": "18.9.0"
+            },
+            {
+              "id": "xunit.runner.visualstudio",
+              "requestedVersion": "3.1.5",
+              "resolvedVersion": "3.1.5",
+              "latestVersion": "4.0.0"
+            }
+          ],
+          "transitivePackages": [
+            {
+              "id": "Microsoft.CodeCoverage",
+              "resolvedVersion": "18.3.0",
+              "latestVersion": "18.9.0"
+            },
+            {
+              "id": "Microsoft.TestPlatform.ObjectModel",
+              "resolvedVersion": "18.3.0",
+              "latestVersion": "18.9.0"
+            },
+            {
+              "id": "Microsoft.TestPlatform.TestHost",
+              "resolvedVersion": "18.3.0",
+              "latestVersion": "18.9.0"
+            },
+            {
+              "id": "Newtonsoft.Json",
+              "resolvedVersion": "13.0.3",
+              "latestVersion": "13.0.4"
+            },
+            {
+              "id": "xunit.analyzers",
+              "resolvedVersion": "1.18.0",
+              "latestVersion": "2.0.0"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "path": "/Users/thorstenhindermann/RiderProjects/TinyCalc/tests/MicroCalc.Tui.Tests/MicroCalc.Tui.Tests.csproj",
+      "frameworks": [
+        {
+          "framework": "net10.0",
+          "topLevelPackages": [
+            {
+              "id": "coverlet.collector",
+              "requestedVersion": "8.0.0",
+              "resolvedVersion": "8.0.0",
+              "latestVersion": "10.0.1"
+            },
+            {
+              "id": "Microsoft.NET.Test.Sdk",
+              "requestedVersion": "18.3.0",
+              "resolvedVersion": "18.3.0",
+              "latestVersion": "18.9.0"
+            },
+            {
+              "id": "xunit.runner.visualstudio",
+              "requestedVersion": "3.1.5",
+              "resolvedVersion": "3.1.5",
+              "latestVersion": "4.0.0"
+            }
+          ],
+          "transitivePackages": [
+            {
+              "id": "Microsoft.CodeCoverage",
+              "resolvedVersion": "18.3.0",
+              "latestVersion": "18.9.0"
+            },
+            {
+              "id": "Microsoft.Extensions.Configuration",
+              "resolvedVersion": "10.0.7",
+              "latestVersion": "10.0.11"
+            },
+            {
+              "id": "Microsoft.Extensions.Configuration.Abstractions",
+              "resolvedVersion": "10.0.7",
+              "latestVersion": "10.0.11"
+            },
+            {
+              "id": "Microsoft.Extensions.Configuration.Binder",
+              "resolvedVersion": "10.0.7",
+              "latestVersion": "10.0.11"
+            },
+            {
+              "id": "Microsoft.Extensions.Configuration.FileExtensions",
+              "resolvedVersion": "10.0.7",
+              "latestVersion": "10.0.11"
+            },
+            {
+              "id": "Microsoft.Extensions.Configuration.Json",
+              "resolvedVersion": "10.0.7",
+              "latestVersion": "10.0.11"
+            },
+            {
+              "id": "Microsoft.Extensions.DependencyInjection.Abstractions",
+              "resolvedVersion": "10.0.9",
+              "latestVersion": "10.0.11"
+            },
+            {
+              "id": "Microsoft.Extensions.FileProviders.Abstractions",
+              "resolvedVersion": "10.0.7",
+              "latestVersion": "10.0.11"
+            },
+            {
+              "id": "Microsoft.Extensions.FileProviders.Physical",
+              "resolvedVersion": "10.0.7",
+              "latestVersion": "10.0.11"
+            },
+            {
+              "id": "Microsoft.Extensions.FileSystemGlobbing",
+              "resolvedVersion": "10.0.7",
+              "latestVersion": "10.0.11"
+            },
+            {
+              "id": "Microsoft.Extensions.Logging.Abstractions",
+              "resolvedVersion": "10.0.7",
+              "latestVersion": "10.0.11"
+            },
+            {
+              "id": "Microsoft.Extensions.Options",
+              "resolvedVersion": "10.0.9",
+              "latestVersion": "10.0.11"
+            },
+            {
+              "id": "Microsoft.Extensions.Primitives",
+              "resolvedVersion": "10.0.9",
+              "latestVersion": "10.0.11"
+            },
+            {
+              "id": "Microsoft.TestPlatform.ObjectModel",
+              "resolvedVersion": "18.3.0",
+              "latestVersion": "18.9.0"
+            },
+            {
+              "id": "Microsoft.TestPlatform.TestHost",
+              "resolvedVersion": "18.3.0",
+              "latestVersion": "18.9.0"
+            },
+            {
+              "id": "Newtonsoft.Json",
+              "resolvedVersion": "13.0.3",
+              "latestVersion": "13.0.4"
+            },
+            {
+              "id": "System.IO.Abstractions",
+              "resolvedVersion": "22.1.1",
+              "latestVersion": "22.2.0"
+            },
+            {
+              "id": "TestableIO.System.IO.Abstractions",
+              "resolvedVersion": "22.1.1",
+              "latestVersion": "22.2.0"
+            },
+            {
+              "id": "TestableIO.System.IO.Abstractions.Wrappers",
+              "resolvedVersion": "22.1.1",
+              "latestVersion": "22.2.0"
+            },
+            {
+              "id": "Testably.Abstractions.FileSystem.Interface",
+              "resolvedVersion": "10.1.0",
+              "latestVersion": "10.3.0"
+            },
+            {
+              "id": "xunit.analyzers",
+              "resolvedVersion": "1.18.0",
+              "latestVersion": "2.0.0"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "parameters": "--vulnerable --include-transitive",
+  "sources": [
+    "https://api.nuget.org/v3/index.json"
+  ],
+  "projects": [
+    {
+      "path": "/Users/thorstenhindermann/RiderProjects/TinyCalc/src/MicroCalc.Core/MicroCalc.Core.csproj"
+    },
+    {
+      "path": "/Users/thorstenhindermann/RiderProjects/TinyCalc/src/MicroCalc.Tui/MicroCalc.Tui.csproj"
+    },
+    {
+      "path": "/Users/thorstenhindermann/RiderProjects/TinyCalc/tests/MicroCalc.Core.Tests/MicroCalc.Core.Tests.csproj"
+    },
+    {
+      "path": "/Users/thorstenhindermann/RiderProjects/TinyCalc/tests/MicroCalc.Tui.Tests/MicroCalc.Tui.Tests.csproj"
+    }
+  ]
+}

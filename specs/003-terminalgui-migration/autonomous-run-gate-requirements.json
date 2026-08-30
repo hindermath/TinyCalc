@@ -1,0 +1,437 @@
+{
+  "schemaVersion": "1.0",
+  "gates": [
+    {
+      "gateId": "TG-GATE-001",
+      "applicability": "Applicable",
+      "requiredScope": "Prove the active run, branch, accepted intake, specification, checklist, and series-review hashes before each semantic phase.",
+      "requiredCommandTokens": ["validate-autonomous-run-state.ps1", "003-terminalgui-migration"],
+      "requiredRunnerOrPlatformTokens": ["macOS"],
+      "rationale": "",
+      "reevaluationTrigger": "Before every semantic phase and any delivery action."
+    },
+    {
+      "gateId": "TG-GATE-002",
+      "applicability": "Applicable",
+      "requiredScope": "Prove that the complete materialized plan-template stack and every required planning artifact exist without unresolved placeholders.",
+      "requiredCommandTokens": ["rg", "NEEDS CLARIFICATION"],
+      "requiredRunnerOrPlatformTokens": ["macOS"],
+      "rationale": "",
+      "reevaluationTrigger": "After any plan or preset change."
+    },
+    {
+      "gateId": "TG-GATE-003",
+      "applicability": "Applicable",
+      "requiredScope": "Prove from the current authoritative NuGet source that Terminal.Gui 2.4.17 is the stable selection, includes net10.0, is pinned only in MicroCalc.Tui, and restores from the evidenced enabled source.",
+      "requiredCommandTokens": ["dotnet", "nuget", "list", "source", "restore", "Terminal.Gui", "2.4.17", "net10.0"],
+      "requiredRunnerOrPlatformTokens": ["macOS"],
+      "rationale": "",
+      "reevaluationTrigger": "After any project or package-source change."
+    },
+    {
+      "gateId": "TG-GATE-004",
+      "applicability": "Applicable",
+      "requiredScope": "Prove the shipped direct and transitive package graph with machine-readable .NET 10 output, zero known vulnerabilities, and complete licence evidence for every shipped package including authoritative source, compatibility, and disposition, with zero unresolved unknown or incompatible licences.",
+      "requiredCommandTokens": ["dotnet", "package", "list", "--include-transitive", "--vulnerable", "--format", "json", "licence", "source", "compatibility", "disposition"],
+      "requiredRunnerOrPlatformTokens": ["macOS"],
+      "rationale": "",
+      "reevaluationTrigger": "After every restore, lock/source change, or new advisory."
+    },
+    {
+      "gateId": "TG-GATE-005",
+      "applicability": "Applicable",
+      "requiredScope": "Prove removal of static Terminal.Gui v1 lifecycle calls and adoption of one owned IApplication create-init-run-stop-dispose lifecycle.",
+      "requiredCommandTokens": ["rg", "Application.Create", "IApplication", "Application.Top"],
+      "requiredRunnerOrPlatformTokens": ["macOS"],
+      "rationale": "",
+      "reevaluationTrigger": "After every Program.cs change."
+    },
+    {
+      "gateId": "TG-GATE-006",
+      "applicability": "Applicable",
+      "requiredScope": "Prove migration of all eight legacy CtrlMask expressions and preservation of exactly thirteen binding navigation and quit inputs.",
+      "requiredCommandTokens": ["rg", "CtrlMask", "WithCtrl", "13-key"],
+      "requiredRunnerOrPlatformTokens": ["macOS"],
+      "rationale": "",
+      "reevaluationTrigger": "After any keyboard or event-handling change."
+    },
+    {
+      "gateId": "TG-GATE-007",
+      "applicability": "Applicable",
+      "requiredScope": "Prove the solution Release build with restored dependencies and aligned repository version.",
+      "requiredCommandTokens": ["dotnet", "build", "MicroCalc.sln", "--configuration", "Release", "--no-restore"],
+      "requiredRunnerOrPlatformTokens": ["macOS"],
+      "rationale": "",
+      "reevaluationTrigger": "After every source, project, generated-file, or version change."
+    },
+    {
+      "gateId": "TG-GATE-008",
+      "applicability": "Applicable",
+      "requiredScope": "Prove the complete existing xUnit suite without changing existing test-source files.",
+      "requiredCommandTokens": ["dotnet", "test", "MicroCalc.sln", "--configuration", "Release", "--no-build"],
+      "requiredRunnerOrPlatformTokens": ["macOS"],
+      "rationale": "",
+      "reevaluationTrigger": "After every product or dependency change."
+    },
+    {
+      "gateId": "TG-GATE-009",
+      "applicability": "Applicable",
+      "requiredScope": "Prove headless smoke completion within thirty seconds with exit code zero and exact token SMOKE_OK.",
+      "requiredCommandTokens": ["dotnet", "run", "--smoke", "SMOKE_OK"],
+      "requiredRunnerOrPlatformTokens": ["macOS"],
+      "rationale": "",
+      "reevaluationTrigger": "After every TUI startup, lifecycle, or smoke change."
+    },
+    {
+      "gateId": "TG-GATE-010",
+      "applicability": "Applicable",
+      "requiredScope": "Prove Red-Green-Refactor evidence including source-contract red, dependency-only compile red, and a first required green whole-solution build only after minimum complete Terminal.Gui v2 compile compatibility for lifecycle, dialogs, buttons, events, and keyboard APIs.",
+      "requiredCommandTokens": ["red-green-refactor", "dependency-only", "vertical-slice", "lifecycle", "dialogs", "buttons", "events", "keyboard"],
+      "requiredRunnerOrPlatformTokens": ["macOS"],
+      "rationale": "",
+      "reevaluationTrigger": "When the implementation sequence or representative slice changes."
+    },
+    {
+      "gateId": "TG-GATE-011",
+      "applicability": "Applicable",
+      "requiredScope": "Prove merged out-of-process coverage for tests, smoke, and manual TUI with changed executable code at least 70 percent and target 80 percent.",
+      "requiredCommandTokens": ["dotnet-coverage", "merge", "cobertura", "70", "80"],
+      "requiredRunnerOrPlatformTokens": ["macOS"],
+      "rationale": "",
+      "reevaluationTrigger": "After every executable Program.cs change or coverage-tool change."
+    },
+    {
+      "gateId": "TG-GATE-012",
+      "applicability": "Applicable",
+      "requiredScope": "Prove two manual macOS sessions on their literal first attempt: twelve navigation inputs plus dialogs, focus order, and menu quit; then Ctrl+Q as the thirteenth binding input and second quit path, with terminal restoration after both; any failed first attempt fails SC-006 and cannot be relabelled as a first successful run.",
+      "requiredCommandTokens": ["manual-tui", "first-attempt", "12-navigation", "menu-quit", "13th-input", "Ctrl+Q", "two-sessions"],
+      "requiredRunnerOrPlatformTokens": ["macOS"],
+      "rationale": "",
+      "reevaluationTrigger": "After any interactive UI, event, focus, dialog, or lifecycle change."
+    },
+    {
+      "gateId": "TG-GATE-013",
+      "applicability": "Applicable",
+      "requiredScope": "Prove WCAG 2.2 AA keyboard, no-trap, focus-order, focus-visible, and non-colour-only behaviour with text-first evidence.",
+      "requiredCommandTokens": ["WCAG", "2.2", "2.1.1", "2.1.2", "2.4.3", "2.4.7"],
+      "requiredRunnerOrPlatformTokens": ["macOS"],
+      "rationale": "",
+      "reevaluationTrigger": "After any user-facing interaction or presentation change."
+    },
+    {
+      "gateId": "TG-GATE-014",
+      "applicability": "Applicable",
+      "requiredScope": "Prove new learner-facing documentation is German first, English second, CEFR B2, semantic, and text-first.",
+      "requiredCommandTokens": ["bilingual", "DE-first", "EN-second", "CEFR-B2"],
+      "requiredRunnerOrPlatformTokens": ["macOS"],
+      "rationale": "",
+      "reevaluationTrigger": "After every learner-facing documentation change."
+    },
+    {
+      "gateId": "TG-GATE-015",
+      "applicability": "Applicable",
+      "requiredScope": "Prove product changes are limited to MicroCalc.Tui, the sole authorised workflow change is exactly .github/workflows/ci.yml, and only authorised evidence/version files change while MicroCalc.Core, existing test sources, scripts, agent surfaces, and every other workflow remain unchanged.",
+      "requiredCommandTokens": ["git", "diff", "--exit-code", "--name-status", ".github/workflows/ci.yml", "src/MicroCalc.Core", "tests"],
+      "requiredRunnerOrPlatformTokens": ["macOS"],
+      "rationale": "",
+      "reevaluationTrigger": "Before every commit and delivery-set validation."
+    },
+    {
+      "gateId": "TG-GATE-016",
+      "applicability": "Applicable",
+      "requiredScope": "Prove STRIDE and CIA review of keyboard and package trust boundaries with CAPEC-153 and CAPEC-538 and documented residual risk.",
+      "requiredCommandTokens": ["STRIDE", "CAPEC-153", "CAPEC-538", "threat-model"],
+      "requiredRunnerOrPlatformTokens": ["macOS"],
+      "rationale": "",
+      "reevaluationTrigger": "After any trust-boundary, dependency, I/O, or lifecycle change."
+    },
+    {
+      "gateId": "TG-GATE-017",
+      "applicability": "Applicable",
+      "requiredScope": "Prove NIST SSDF, CWE Top 25, and C# secure-coding review for input, resources, errors, dependencies, and file or network non-expansion, with the security README completed and indexing every mandatory security artefact.",
+      "requiredCommandTokens": ["NIST-SSDF", "CWE-Top-25", "security-checklist", "docs/security/README.md", "Completed"],
+      "requiredRunnerOrPlatformTokens": ["macOS"],
+      "rationale": "",
+      "reevaluationTrigger": "After every implementation or dependency change."
+    },
+    {
+      "gateId": "TG-GATE-018",
+      "applicability": "Applicable",
+      "requiredScope": "Prove security quality scenarios and OWASP SAMM review are updated or explicitly reviewed unchanged for the exact delivery head.",
+      "requiredCommandTokens": ["security-quality-scenarios", "samm-assessment", "reviewed-unchanged"],
+      "requiredRunnerOrPlatformTokens": ["macOS"],
+      "rationale": "",
+      "reevaluationTrigger": "After a security finding, architecture change, or process-control change."
+    },
+    {
+      "gateId": "TG-GATE-019",
+      "applicability": "Applicable",
+      "requiredScope": "Prove a valid SPDX JSON SBOM generated by Syft from the exact Release TUI drop and bound to the delivery commit.",
+      "requiredCommandTokens": ["syft", "spdx-json", "tinycalc-terminalgui.spdx.json", "jq"],
+      "requiredRunnerOrPlatformTokens": ["macOS"],
+      "rationale": "",
+      "reevaluationTrigger": "After every package, Release output, or delivery-commit change."
+    },
+    {
+      "gateId": "TG-GATE-020",
+      "applicability": "Applicable",
+      "requiredScope": "Prove the actual SLSA v1.2 provenance posture from immutable workflow, job, command, head SHA, and artefact evidence without overstating the level.",
+      "requiredCommandTokens": ["gh", "run", "view", "headSha", "SLSA"],
+      "requiredRunnerOrPlatformTokens": ["GitHub"],
+      "rationale": "",
+      "reevaluationTrigger": "After workflow, build, artefact, or commit changes."
+    },
+    {
+      "gateId": "TG-GATE-021",
+      "applicability": "Applicable",
+      "requiredScope": "Prove dated OpenSSF Scorecard posture review for Terminal.Gui upstream and the public TinyCalc repository.",
+      "requiredCommandTokens": ["OpenSSF", "Scorecard", "tui-cs/Terminal.Gui", "hindermath/TinyCalc"],
+      "requiredRunnerOrPlatformTokens": ["GitHub"],
+      "rationale": "",
+      "reevaluationTrigger": "After package selection, repository visibility, or material upstream posture changes."
+    },
+    {
+      "gateId": "TG-GATE-022",
+      "applicability": "N/A",
+      "requiredScope": "Record the VEX applicability decision in docs/security/supply-chain-evidence.md; VEX may classify a false positive or evaluated non-shipped component but must never authorise shipping a known-vulnerable direct or transitive dependency, which blocks delivery until an explicitly authorised update or replacement is complete.",
+      "requiredCommandTokens": [],
+      "requiredRunnerOrPlatformTokens": [],
+      "rationale": "No finding currently requires VEX classification; the fail-closed vulnerability audit remains mandatory and the N/A disposition must remain in the named supply-chain evidence.",
+      "reevaluationTrigger": "Any potential false positive or evaluated non-shipped finding makes VEX Applicable for classification; any known vulnerability in a shipped component blocks delivery and cannot be accepted by VEX."
+    },
+    {
+      "gateId": "TG-GATE-023",
+      "applicability": "N/A",
+      "requiredScope": "Assess OWASP ASVS applicability and verification level and record the N/A disposition in docs/security/arc42-security.md.",
+      "requiredCommandTokens": [],
+      "requiredRunnerOrPlatformTokens": [],
+      "rationale": "The feature is a local TUI with no Web, API, HTTP, authentication, or multi-user service.",
+      "reevaluationTrigger": "Any Web, API, HTTP, authentication, or remotely reachable service scope."
+    },
+    {
+      "gateId": "TG-GATE-024",
+      "applicability": "N/A",
+      "requiredScope": "Assess AI-SBOM applicability for released or operated product components and record the N/A disposition in docs/security/supply-chain-evidence.md.",
+      "requiredCommandTokens": [],
+      "requiredRunnerOrPlatformTokens": [],
+      "rationale": "AI is development tooling only and no model, dataset, inference service, or AI runtime ships or operates with TinyCalc.",
+      "reevaluationTrigger": "Any AI model, dataset, inference infrastructure, service, or runtime becomes a product component."
+    },
+    {
+      "gateId": "TG-GATE-025",
+      "applicability": "N/A",
+      "requiredScope": "Assess NIST SP 800-207 Zero Trust applicability and record the N/A disposition in docs/security/arc42-security.md.",
+      "requiredCommandTokens": [],
+      "requiredRunnerOrPlatformTokens": [],
+      "rationale": "TinyCalc remains a local single-process application without service, remote-management, cloud, or distributed trust boundaries.",
+      "reevaluationTrigger": "Any distributed, cloud, remote-management, or service-based architecture."
+    },
+    {
+      "gateId": "TG-GATE-026",
+      "applicability": "N/A",
+      "requiredScope": "Assess BSI C3A applicability and record the N/A disposition in docs/security/arc42-security.md.",
+      "requiredCommandTokens": [],
+      "requiredRunnerOrPlatformTokens": [],
+      "rationale": "No cloud-provider selection or cloud architecture is introduced.",
+      "reevaluationTrigger": "Any cloud architecture, provider choice, or managed-service dependency."
+    },
+    {
+      "gateId": "TG-GATE-027",
+      "applicability": "N/A",
+      "requiredScope": "Assess BSI C5 applicability and record the N/A disposition in docs/security/arc42-security.md.",
+      "requiredCommandTokens": [],
+      "requiredRunnerOrPlatformTokens": [],
+      "rationale": "No cloud service, hosted product, or provider control scope is introduced.",
+      "reevaluationTrigger": "Any hosted or managed cloud service enters delivery or operation."
+    },
+    {
+      "gateId": "TG-GATE-028",
+      "applicability": "N/A",
+      "requiredScope": "Assess NIS2, CRA, EU AI Act, and DORA feature-specific obligations and record the N/A disposition in docs/security/arc42-security.md.",
+      "requiredCommandTokens": [],
+      "requiredRunnerOrPlatformTokens": [],
+      "rationale": "This dependency migration adds no regulated operator, market, AI product, financial service, or new distribution context.",
+      "reevaluationTrigger": "A changed product distribution, operator, market, AI, or financial-sector context."
+    },
+    {
+      "gateId": "TG-GATE-029",
+      "applicability": "Applicable",
+      "requiredScope": "Create exactly one focused security ADR at docs/security/adr/003-terminalgui-lifecycle-supply-chain.md covering lifecycle ownership and fail-closed decisions for known shipped vulnerabilities and dependency licence compliance, and index it from the completed docs/security/README.md.",
+      "requiredCommandTokens": ["docs/security/adr/003-terminalgui-lifecycle-supply-chain.md", "lifecycle-ownership", "fail-closed", "licence", "docs/security/README.md"],
+      "requiredRunnerOrPlatformTokens": ["macOS"],
+      "rationale": "",
+      "reevaluationTrigger": "After any lifecycle ownership, dependency graph, vulnerability, licence, or delivery decision change."
+    },
+    {
+      "gateId": "TG-GATE-030",
+      "applicability": "Applicable",
+      "requiredScope": "Fully update docs/security/arc42-security.md for the Feature 003 lifecycle, trust boundaries, input, dependencies, errors, logging, and deployment context, including named evidence locations for every N/A security assessment.",
+      "requiredCommandTokens": ["docs/security/arc42-security.md", "lifecycle", "trust-boundaries", "input", "dependencies", "errors", "logging", "deployment"],
+      "requiredRunnerOrPlatformTokens": ["macOS"],
+      "rationale": "",
+      "reevaluationTrigger": "After any lifecycle, trust-boundary, input, dependency, error, logging, deployment, or security-applicability change."
+    },
+    {
+      "gateId": "TG-GATE-031",
+      "applicability": "N/A",
+      "requiredScope": "Assess cross-platform script or cmdlet parity requirements.",
+      "requiredCommandTokens": [],
+      "requiredRunnerOrPlatformTokens": [],
+      "rationale": "No repository script, cmdlet, or automation wrapper is created or changed in the accepted scope.",
+      "reevaluationTrigger": "The first script, cmdlet, or automation-wrapper change."
+    },
+    {
+      "gateId": "TG-GATE-032",
+      "applicability": "N/A",
+      "requiredScope": "Assess shared AI-agent guidance and agent-surface parity requirements.",
+      "requiredCommandTokens": [],
+      "requiredRunnerOrPlatformTokens": [],
+      "rationale": "No shared guidance, routing, template, or agent instruction file changes in this feature.",
+      "reevaluationTrigger": "Any change to AGENTS, CLAUDE, GEMINI, Copilot instructions, shared routing, or workflow guidance."
+    },
+    {
+      "gateId": "TG-GATE-033",
+      "applicability": "N/A",
+      "requiredScope": "Assess parallel autonomous campaign governance.",
+      "requiredCommandTokens": [],
+      "requiredRunnerOrPlatformTokens": [],
+      "rationale": "This is one serial autonomous feature run and no parallel campaign was authorised.",
+      "reevaluationTrigger": "Explicit authority for a parallel autonomous campaign."
+    },
+    {
+      "gateId": "TG-GATE-034",
+      "applicability": "N/A",
+      "requiredScope": "Assess public XML documentation and DocFX regeneration plus text-oriented accessibility smoke.",
+      "requiredCommandTokens": [],
+      "requiredRunnerOrPlatformTokens": [],
+      "rationale": "The planned Program changes are internal and no public API, XML comment, DocFX content, navigation, or API presentation changes.",
+      "reevaluationTrigger": "Any public API/XML-comment change or DocFX content, navigation, configuration, or generated-site change."
+    },
+    {
+      "gateId": "TG-GATE-035",
+      "applicability": "Applicable",
+      "requiredScope": "Prove Version, AssemblyVersion, and FileVersion are equal and follow Major.3.Patch.Build with feature commit count and serialized pre-build/test counter increments.",
+      "requiredCommandTokens": ["Directory.Build.props", "AssemblyVersion", "FileVersion", "git", "rev-list", "--count"],
+      "requiredRunnerOrPlatformTokens": ["macOS"],
+      "rationale": "",
+      "reevaluationTrigger": "Before every build, test, commit, and push."
+    },
+    {
+      "gateId": "TG-GATE-036",
+      "applicability": "Applicable",
+      "requiredScope": "Prove project statistics and configuration are refreshed with Feature 003 work window, production/test/documentation counts, 80 and 125 line baselines, 7.8 hours, and accessible ASCII trends.",
+      "requiredCommandTokens": ["project-statistics", "80", "125", "7.8", "Gesamtstatistik"],
+      "requiredRunnerOrPlatformTokens": ["macOS"],
+      "rationale": "",
+      "reevaluationTrigger": "After implementation or any later agent-driven repository change in this delivery."
+    },
+    {
+      "gateId": "TG-GATE-037",
+      "applicability": "Applicable",
+      "requiredScope": "Prove .github/workflows/ci.yml executes restore, Release build, complete Release tests, and smoke with exit code zero and exact token SMOKE_OK on ubuntu-latest for the exact pull-request head.",
+      "requiredCommandTokens": [".github/workflows/ci.yml", "dotnet restore MicroCalc.sln", "dotnet build MicroCalc.sln --configuration Release --no-restore", "dotnet test MicroCalc.sln --configuration Release --no-build", "--smoke", "SMOKE_OK"],
+      "requiredRunnerOrPlatformTokens": ["ubuntu-latest"],
+      "rationale": "",
+      "reevaluationTrigger": "After every product, dependency, workflow, or head-commit change."
+    },
+    {
+      "gateId": "TG-GATE-038",
+      "applicability": "Applicable",
+      "requiredScope": "Prove .github/workflows/ci.yml executes restore, Release build, complete Release tests, and smoke with exit code zero and exact token SMOKE_OK on windows-latest for the exact pull-request head; a job name without commands is insufficient.",
+      "requiredCommandTokens": [".github/workflows/ci.yml", "dotnet restore MicroCalc.sln", "dotnet build MicroCalc.sln --configuration Release --no-restore", "dotnet test MicroCalc.sln --configuration Release --no-build", "--smoke", "SMOKE_OK"],
+      "requiredRunnerOrPlatformTokens": ["windows-latest"],
+      "rationale": "",
+      "reevaluationTrigger": "After every product, dependency, .github/workflows/ci.yml, or head-commit change."
+    },
+    {
+      "gateId": "TG-GATE-039",
+      "applicability": "Applicable",
+      "requiredScope": "Prove the exact intended delivery set includes only the authorised paths, including exactly .github/workflows/ci.yml as the sole workflow exception, and excludes unrelated, Core, existing-test-source, generated-site, script, agent, other-workflow, and successor-feature changes.",
+      "requiredCommandTokens": ["validate-autonomous-delivery-set.ps1", "-Intended", ".github/workflows/ci.yml", "git", "diff", "--check"],
+      "requiredRunnerOrPlatformTokens": ["macOS"],
+      "rationale": "",
+      "reevaluationTrigger": "Before every commit, push, PR update, and merge."
+    },
+    {
+      "gateId": "TG-GATE-040",
+      "applicability": "Applicable",
+      "requiredScope": "Prove schema-2.0 PreMerge evidence with one Primary row per gate for the reviewed product PR head and PostMerge evidence that binds its accepted hash and actual product merge commit; prepare every tracked closeout artefact before the single closeout PR merge, then keep post-closeout provider verification read-only in runtime evidence with no tracked write or third commit or pull request; prove autonomous-run-state.json remains untracked, locally ignored, and outside every delivery set.",
+      "requiredCommandTokens": ["validate-autonomous-gate-evidence.ps1", "PreMerge", "PostMerge", "Primary", "closeout-provider-evidence.json", "no-tracked-write", "git ls-files --error-unmatch", "git check-ignore -v"],
+      "requiredRunnerOrPlatformTokens": ["macOS"],
+      "rationale": "",
+      "reevaluationTrigger": "After any gate, evidence, head, merge, or lifecycle-stage change."
+    },
+    {
+      "gateId": "TG-GATE-041",
+      "applicability": "Applicable",
+      "requiredScope": "Prove PR review convergence with required checks passing, no unresolved review thread, no changes-requested decision, and unchanged reviewed head.",
+      "requiredCommandTokens": ["gh", "pr", "checks", "reviewDecision", "mergeStateStatus"],
+      "requiredRunnerOrPlatformTokens": ["GitHub"],
+      "rationale": "",
+      "reevaluationTrigger": "After every PR commit, review, check rerun, or base-branch update."
+    },
+    {
+      "gateId": "TG-GATE-042",
+      "applicability": "Applicable",
+      "requiredScope": "Prove authorised MergeAndSync completion through the focused PR with the repository-approved merge mode.",
+      "requiredCommandTokens": ["gh", "pr", "merge", "MergeAndSync"],
+      "requiredRunnerOrPlatformTokens": ["GitHub"],
+      "rationale": "",
+      "reevaluationTrigger": "Immediately before merge and after any authority, policy, or PR-state change."
+    },
+    {
+      "gateId": "TG-GATE-043",
+      "applicability": "Applicable",
+      "requiredScope": "Prove local main is fast-forward synchronized to the exact remote merge commit before PostMerge Primary evidence.",
+      "requiredCommandTokens": ["git", "switch", "main", "pull", "--ff-only", "rev-parse", "HEAD"],
+      "requiredRunnerOrPlatformTokens": ["macOS"],
+      "rationale": "",
+      "reevaluationTrigger": "After merge, remote-main movement, or local-main movement."
+    },
+    {
+      "gateId": "TG-GATE-044",
+      "applicability": "Applicable",
+      "requiredScope": "Prove branch-qualified Lastenheft rename and explicitly authorised intake-series follow-up only after passing PostMerge Primary evidence.",
+      "requiredCommandTokens": ["Lastenheft_TerminalGui_Migration.003-terminalgui-migration.md", "speckit-intake-series-update", "PostMerge"],
+      "requiredRunnerOrPlatformTokens": ["macOS"],
+      "rationale": "",
+      "reevaluationTrigger": "After merge and before any intake or series mutation."
+    },
+    {
+      "gateId": "TG-GATE-045",
+      "applicability": "Applicable",
+      "requiredScope": "Prove the intake-series status read-only after closeout, prove no next feature or successor implementation was started, and prove closeout merge and synchronization facts were verified read-only in runtime/provider evidence without changing any tracked file or creating a third commit or pull request; the operational autonomous run state remains untracked and outside the delivery set.",
+      "requiredCommandTokens": ["speckit-intake-series-status", "no-next-feature", "closeout-provider-evidence.json", "delivery.md", "autonomous-run-state.json", "untracked", "no-third-commit-or-PR"],
+      "requiredRunnerOrPlatformTokens": ["macOS"],
+      "rationale": "",
+      "reevaluationTrigger": "At final autonomous closeout and before declaring Completed."
+    },
+    {
+      "gateId": "TG-GATE-046",
+      "applicability": "N/A",
+      "requiredScope": "Assess new Dependabot, Renovate, Dependency-Track, or equivalent automation scope and record the N/A disposition in docs/security/supply-chain-evidence.md.",
+      "requiredCommandTokens": [],
+      "requiredRunnerOrPlatformTokens": [],
+      "rationale": "The accepted migration does not authorise a new dependency-automation service or repository-wide update policy.",
+      "reevaluationTrigger": "A dedicated supply-chain automation feature, hosting approval, or repository-wide dependency policy."
+    },
+    {
+      "gateId": "TG-GATE-047",
+      "applicability": "Applicable",
+      "requiredScope": "Prove Thorsten's current narrow Admin-Bypass authority for the concrete pull request and repository policy, recording authorizer, scope, rationale, and residual risk, and prove that no technical, security, accessibility, platform, review, or exact-head gate is replaced.",
+      "requiredCommandTokens": ["authorityEvidence", "Admin-Bypass", "operation.json", "receipt.json", "concrete-PR", "repository-policy", "residual-risk"],
+      "requiredRunnerOrPlatformTokens": ["GitHub"],
+      "rationale": "",
+      "reevaluationTrigger": "Immediately before any bypass-capable merge attempt and after any PR, policy, review, gate, head, or authority change."
+    },
+    {
+      "gateId": "TG-GATE-048",
+      "applicability": "Applicable",
+      "requiredScope": "Prove every commit-producing task, including provider-generated product and closeout merge commits, creates or preserves exactly this constitution trailer and verifies the actual commit immediately before proceeding: Co-authored-by: Copilot <223556219+Copilot@users.noreply.github.com>",
+      "requiredCommandTokens": ["git log -1 --format=%B", "gh pr merge", "--subject", "--body", "gh pr view", "gh api", "Co-authored-by: Copilot <223556219+Copilot@users.noreply.github.com>"],
+      "requiredRunnerOrPlatformTokens": ["Git"],
+      "rationale": "",
+      "reevaluationTrigger": "Immediately after every local or provider commit-producing or commit-amending task and before the next push, pull request, synchronization, or final completion step."
+    }
+  ]
+}

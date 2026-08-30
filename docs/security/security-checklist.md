@@ -1,129 +1,185 @@
-# Sicherheits-Checkliste / Security Checklist: TinyCalc Feature 002
+# Sicherheits-Checkliste: TinyCalc Feature 003
 
-**Projekt / Project**: TinyCalc (Level-2)
+## Deutscher Prüfblock
 
-**Feature**: `002-constitution-change`
+### Laufnachweis
 
-**Phase**: Lokale Implementierung und Validierung T001–T038 / Local implementation and validation T001–T038
+| Feld | Wert |
+|---|---|
+| Projekt und Sprache | TinyCalc, Level 2, C# / .NET 10 |
+| Feature | 003, Terminal.Gui-v2-Migration |
+| Phase | Implementierung |
+| Branch | `003-terminalgui-migration` |
+| Baseline | `886a13f8866e79fe6c13e6e1227217294aabdee8` plus geprüfter Arbeitsbaum; Exact Head folgt |
+| Datum | 2026-08-30 |
+| Owner | autorisierter autonomer Feature-003-Lauf |
+| Reviewer | technische Exact-Head- und PR-Prüfung vor Merge |
+| Entscheidung | lokal bestanden; Plattform-, SBOM- und Exact-Head-Gates bleiben offen |
 
-**Datum / Date**: 2026-08-30
+Anwendbar sind ISO 27001/27002 A.8.28, NIST SSDF, CWE Top 25, Microsoft
+Secure Coding für C#/.NET, OWASP Proactive Controls sowie die Architektur- und
+Supply-Chain-Regeln der Constitution. C# ist eine speichersichere Sprache;
+dies ersetzt keine Prüfung von APIs, Eingaben, Fehlern, Ressourcen und
+Abhängigkeiten.
 
-**Status**: Pass für den lokalen Feature-Scope / Pass for the local feature scope
+Diese Checkliste ist interne Audit- und Zertifizierungsvorbereitung. Sie
+ersetzt keine externe Auditierung, Rechtsberatung oder formale Zertifizierung.
 
-**Evidence Owner**: Repository-Maintainer
+### Scope und Sicherheitsgrenzen
 
-**Reviewer**: Codex, gerouteter Implementierungsprüfer / routed implementation reviewer
+Feature 003 ändert nur `MicroCalc.Tui`: Terminal.Gui wird exakt auf 2.4.17
+gesetzt, und `Program` nutzt den expliziten v2-Lifecycle sowie die v2-
+Tastencodes. `MicroCalc.Core`, Testquellen, Formelverhalten, Dateiformat und
+`CALC.HLP` bleiben unverändert. Es entstehen keine neue Datei-, Netzwerk-,
+SQL-, Shell-, Deserialisierungs-, Authentifizierungs- oder Kryptografiefläche.
 
-**Template-Quelle / Template Source**: `.specify/templates/security-checklist-template.md`
+Explizite Vertrauensgrenzen sind Tastatur, bestehendes Core-/Datei-I/O,
+NuGet-Lieferkette sowie Git/CI/Exact Head. Der vollständige STRIDE-/CAPEC-
+Nachweis steht in `docs/security/threat-model.md`.
 
-## Umfang und Sicherheitsgrenze / Scope and Security Boundary
+### Pflichtstandards und Review-Linsen
 
-Feature 002 ändert Governance, Agenten-Guidance, Vorlagen und lokale Evidenz.
-Es ändert keinen C#-Produktcode, keine Tests, keine Abhängigkeit, keine
-Trust Boundary (Vertrauensgrenze), keine Authentifizierung, keine Datenbank,
-keine Kryptografie, kein Datei-/Netzwerkverhalten und keine Deployment-Fläche.
-NIST SSDF und CWE Top 25 bleiben trotzdem verbindliche Review-Linsen.
+| Standard oder Profil | Status | Owner | Reviewer | Evidenz | Restrisiko oder Trigger |
+|---|---|---|---|---|---|
+| NIST SSDF | Pass im lokalen Scope | Feature 003 | PR-Reviewer | Plan, Tasks, Red/Green, Regression, Dependency Audit | Provider- und Exact-Head-Belege offen |
+| CWE Top 25 | Pass im lokalen Scope | Feature 003 | Security-Reviewer | geschlossene Eingaben, sichere Fehler, kein Injection-/Pfad-/Deserialisierungs-Neuscope | neue Input- oder I/O-Fläche öffnet Prüfung |
+| Microsoft Secure Coding C#/.NET | Pass | Feature 003 | C#-Reviewer | eine App, strukturierte Freigabe, Nullable/Build 0 Warnungen | neue API oder Fehlerfläche öffnet Prüfung |
+| STRIDE/CAPEC | Pass, Exact Head offen | Feature 003 | Security-Reviewer | Threat Model mit CAPEC-153/-538 | neue Trust Boundary blockiert zur Neuplanung |
+| WCAG 2.2 AA | Pass lokal | Feature 003 | A11Y-Reviewer | 13 Tasten, Fokus, zwei Quit-Pfade, textuelle Statusanzeige | neue UI-Information oder Fokusänderung |
+| SBOM/SLSA/OpenSSF | Pending bis Lieferung | Delivery | PR-Reviewer | Dependency Audit und Supply-Chain-Plan | T052/T067 müssen Exact Head binden |
 
-*Feature 002 changes governance, agent guidance, templates, and local evidence.
-It changes no C# product code, tests, dependency, trust boundary,
-authentication, database, cryptography, file/network behaviour, or deployment
-surface. NIST SSDF and the CWE Top 25 remain mandatory review lenses.*
+Keiner der verpflichtenden Standards wird als `N/A` behandelt.
 
-## Paketprüfung T022 / Package Review T022
+### Eingabeverarbeitung
 
-| Prüfung / Check | Ergebnis / Result | Disposition |
+| Prüfschritt | Status | Nachweis | Restrisiko |
+|---|---|---|---|
+| Tastencodes an TB-1 auf bekannte Aktionen begrenzt | Pass | 13er-Quellvertrag, reale PTY-Sitzungen | Terminaltreiber kann plattformspezifisch abweichen |
+| Keine dynamische Codeausführung aus Eingaben | Pass | keine Nutzung von `eval`, Shell, Reflection-Dispatch oder `Invoke-Expression` im Produktpfad | neue Command-/Script-Funktion würde neu prüfen |
+| Unbekannte Taste erzeugt keine privilegierte Aktion | Pass | geschlossene Handler und sichere Standardbehandlung | neue Taste braucht Vertrags- und A11Y-Update |
+| Kein neuer Freitext an SQL, Shell, URL oder HTML | N/A, begründet | Feature besitzt keine solche Senke | Trigger ist eine neue Senke |
+| Bestehendes Core-/Datei-I/O unverändert | Pass | `git diff --exit-code -- tests src/MicroCalc.Core CALC.HLP` Exit 0 | Exact-Head-Wiederholung offen |
+
+### Lifecycle, Ressourcen und Fehler
+
+| Prüfschritt | Status | Nachweis | Restrisiko |
+|---|---|---|---|
+| genau eine `IApplication` | Pass | Architektur, S-ADR und Quellvertrag | zweite App würde S-ADR neu öffnen |
+| Root und Dialoge creator-owned | Pass | lokale `using`-Scopes und dokumentierter Lauf | neuer Dialog muss Muster einhalten |
+| Freigabe auf Fehlerpfaden | Pass | strukturierte Freigabe von Dialog, Root und App | Provider-Terminalzustand noch offen |
+| Menü-Quit und `Ctrl+Q` stoppen dieselbe Sitzung sicher | Pass | zwei getrennte reale PTY-Sitzungen, Exit 0 | Linux/Windows T066 |
+| Smoke initialisiert kein Terminal | Pass | Exit 0, exakt `SMOKE_OK` | Startup-Änderung löst neuen Smoke aus |
+| Endnutzerfehler enthalten keinen Stacktrace oder Secret | Pass | Disclosure-Regel und Evidenz-Secret-Scan; authentifizierte Quelle nicht getrackt | neue Diagnoseausgabe neu prüfen |
+| Interner Fehler fällt in sicheren Zustand | Pass | Dispose und von null verschiedener Fehler-Exit; keine technische Gate-Umgehung | alternative Providerfehler in CI prüfen |
+
+### C#/.NET-Sprachprofil
+
+| Regel | Status | Begründung oder Evidenz |
 |---|---|---|
-| `dotnet list MicroCalc.sln package --outdated --include-transitive` | Exitcode 0; Updates sind verfügbar / updates are available | Erfasst, keine Änderung in Feature 002 / recorded, no change in Feature 002 |
-| `dotnet list MicroCalc.sln package --vulnerable --include-transitive` | Exitcode 0; keine bekannten verwundbaren Pakete in allen vier Projekten / no known vulnerable packages in all four projects | Pass |
-| Kritische-CVE-Schranke / Critical-CVE gate | Kein kritischer Fund / no critical finding | Pass; jeder künftige kritische Fund blockiert Delivery |
-| Projekt-/Paketdateien / Project and package files | Unverändert / unchanged | Pass |
+| Nullable- und Compilerregeln aktiv | Pass | Release-Build: 0 Warnungen, 0 Fehler |
+| öffentliche API vollständig dokumentiert | Pass für Änderung | Feature fügt keine öffentliche API hinzu oder ändert sie |
+| SQL nur parametrisiert | N/A | kein SQL oder Datenbankzugriff im Feature |
+| XSS-Encoding, Anti-Forgery, CORS, HTTPS | N/A | keine Web-, HTTP- oder API-Fläche |
+| sichere Deserialisierung | N/A für Änderung | bestehendes JSON-/Datei-I/O unverändert; keine neue Deserialisierung |
+| sichere Kryptografie und Key Management | N/A | keine Krypto-, Secret- oder geschützte Persistenzänderung |
+| Dependency Injection für Security-Services | N/A | keine Security-Services; eine lokale Composition Root bleibt erhalten |
+| sichere Endnutzerfehler | Pass | keine Stacktraces, Quellzugangsdaten oder internen Verbindungen |
+| Ressourcenfreigabe | Pass | `IDisposable`/`using` für App, Root und Dialoge |
 
-Verfügbare Updates: `Terminal.Gui` 1.19.0 → 2.4.17,
-`coverlet.collector` 8.0.0 → 10.0.1, `Microsoft.NET.Test.Sdk` 18.3.0 →
-18.9.0, `xunit.runner.visualstudio` 3.1.5 → 4.0.0 sowie neuere transitive
-Test-, CodeDom-, Management-, Newtonsoft.Json- und Analyzer-Pakete. Diese
-Versionssprünge benötigen einen getrennten Funktions-/Migrationsauftrag und
-gehören nicht in die text-only Governance-Änderung.
+### Abhängigkeiten und Supply Chain
 
-*Available direct and transitive updates are recorded. Major-version changes,
-especially Terminal.Gui and the test stack, require a separate migration and
-regression scope.*
+| Kontrolle | Status | Evidenz | Blockregel |
+|---|---|---|---|
+| verifizierte Registry | Pass | 24/24 ausgelieferte Pakete aus NuGet.org | andere Quelle oder Drift blockiert |
+| direkter/transitiver Graph | Pass | 1 direkt, 23 transitiv in `packages-all.json` | unvollständiger Graph blockiert |
+| bekannte Schwachstellen | Pass: 0 | `packages-vulnerable.json` | jeder bekannte ausgelieferte Fund blockiert bis autorisiertem Fix |
+| Lizenzen | Pass | 23 MIT, 1 BSD-2-Clause; 0 unbekannt/unvereinbar | offener oder unvereinbarer Fall blockiert |
+| VEX | N/A aktuell | kein Fund und kein Fehlalarm | nur Fehlalarm/nicht ausgelieferte Komponente; nie Fundakzeptanz |
+| Lockfile | offen außerhalb Scope | kein `packages.lock.json` | separates Intake oder Autorität erforderlich |
+| Update-Automation | offen außerhalb Scope | kein Dependabot/Renovate/Dependency-Track | keine stille Scope-Erweiterung |
+| SBOM/Provenance | Pending | T052/T067 | muss unveränderten PR-Head binden |
 
-## NIST-SSDF-Zuordnung / NIST SSDF Mapping
+### NIST-SSDF-Zuordnung
 
-| Gruppe / Group | Feature-002-Nachweis / Feature 002 evidence | Status |
+| Gruppe | Umsetzung in Feature 003 | Status |
 |---|---|---|
-| PO – Prepare the Organization | Verbindliche Constitution, Agentenparität, Owner/Reviewer und exakte Tasks / binding constitution, agent parity, owner/reviewer, exact tasks | Pass |
-| PS – Protect the Software | `.codex/`, Runtime, Secrets, Logs und Credentials sind aus dem Delivery-Satz ausgeschlossen; Secret-Scan T031 ohne High-Fund / sensitive paths excluded; T031 secret scan has no high finding | Pass |
-| PW – Produce Well-Secured Software | C#-MSL, Principle XII, CS1591, Build, TDD-Trigger und öffentliche API-Inventur / C# MSL, secure coding, XML gate, build, TDD trigger, API inventory | Pass |
-| RV – Respond to Vulnerabilities | Read-only Vulnerability-Scan, kritische-CVE-Schranke und getrennte Remediation-Grenze / vulnerability scan, critical gate, separate remediation boundary | Pass |
+| PO – Prepare the Organization | bindendes Intake, Owner/Reviewer, Security-Standards, enge Delivery-Autorität | Pass |
+| PS – Protect the Software | NuGet.org, keine Secrets in Evidenz, Exact-Head-Plan, enger Admin-Bypass | lokal Pass; Remote offen |
+| PW – Produce Well-Secured Software | C#-Profil, Red/Green, eine App, sichere Freigabe, Build/Test/Smoke/Coverage | Pass lokal |
+| RV – Respond to Vulnerabilities | maschinenlesbarer Scan, fail-closed Blocker, VEX-Grenze, Recheck-Trigger | Pass lokal |
 
-## CWE Top 25 und OWASP-Hilfen / CWE Top 25 and OWASP Guidance
+### CWE-Top-25-Fokus
 
-Die CWE-Top-25-Linse wurde für Eingabevalidierung, Pfad-/Dateizugriff,
-Injection, Authentifizierung/Autorisierung, Fehleroffenlegung, Ressourcen- und
-Speichersicherheit geprüft. Weil keine ausführbare Logik geändert wird, entsteht
-kein neuer CWE-Pfad. Die OWASP Cheat Sheet Series und OWASP Proactive Controls
-dienen ergänzend für Validierung, Fehlerbehandlung, sichere Konfiguration und
-Abhängigkeiten; die strengeren C#/.NET- und Repository-Regeln gehen vor.
+- CWE-20 Improper Input Validation: geschlossene Tastenzuordnung und
+  CAPEC-153-Nachweis.
+- CWE-400 Uncontrolled Resource Consumption: eine App, creator-owned Dialoge,
+  sichere Stop-Pfade und Terminalrestauration.
+- CWE-200 Exposure of Sensitive Information: keine Stacktraces oder
+  authentifizierten Paketquellen in Endnutzerausgabe/getrackter Evidenz.
+- CWE-494 Download of Code Without Integrity Check und CWE-829 Inclusion of
+  Functionality from Untrusted Control Sphere: NuGet.org-Bindung, exakte
+  Version, Graph-, Advisory-, Lizenz-, SBOM- und Provenance-Gates.
+- Injection-, Auth-, SQL-, Pfadtraversal- und unsichere
+  Deserialisierungswege entstehen nicht neu; jeder entsprechende Scope-Trigger
+  setzt diese Aussage auf offen.
 
-*The CWE Top 25 review covered input validation, path/file access, injection,
-authentication/authorization, error disclosure, resource handling, and memory
-safety. No executable logic changes, so no new CWE path is introduced. OWASP
-Cheat Sheets and Proactive Controls support the review; stricter repository and
-.NET rules prevail.*
+### Audit-Matrix und Freigabe
 
-## Sprach- und Codeprüfung / Language and Code Review
+| Kategorie | Pass | Offen | N/A, begründet |
+|---|---:|---:|---:|
+| Pflichtstandards | 5 | 1 | 0 |
+| Eingaben und Scope | 4 | 0 | 1 |
+| Lifecycle und Fehler | 7 | 0 | 0 |
+| C#/.NET-Profil | 4 | 0 | 5 |
+| Supply Chain | 4 | 2 | 2 |
 
-| Bereich / Area | Status | Begründung und Wiedervorlage / Rationale and re-evaluation |
-|---|---|---|
-| C# als Memory-Safe Language | `Applicable`, Pass | C# ist auf der MSL-Liste; MSL ersetzt sichere APIs nicht / C# is allowed; MSL does not replace secure APIs |
-| Parametrisierte Queries / SQL | `N/A` | Keine Datenbank- oder Query-Änderung; Wiedervorlage bei Persistence-/SQL-Scope / no database change |
-| XSS, Output-Encoding, CSRF, CORS, Session | `N/A` | Keine Web-/HTTP-/Auth-Fläche; Wiedervorlage bei Web/API / no web or auth surface |
-| Deserialisierung | `N/A` für Änderung / for change | JSON-Code unverändert; Wiedervorlage bei IO-/Model-Änderung / JSON code unchanged |
-| Kryptografie und Secrets | `N/A` für Code / for code | Keine Krypto-/Secret-Verarbeitung geändert; Secret-Scan bleibt anwendbar / no crypto change; secret scan still applies |
-| Datei- und Netzwerk-I/O | `N/A` für Änderung / for change | Keine IO- oder Netzwerklogik geändert; Wiedervorlage bei Pfad-/Transportänderung / no I/O change |
-| Fehlerbehandlung und Logging | `N/A` für Änderung / for change | Keine Fehler- oder Logging-Fläche geändert; keine neue interne Offenlegung / no error/logging change |
-| Öffentliche XML-Dokumentation | `Applicable`, Pass | 76/76 öffentliche Quelltext-API-Zeilen mit Pass oder elementbezogenem `N/A`; Build 0 Warnungen/0 Fehler / complete inventory and build |
-| TDD und Changed-Code-Coverage | `N/A` | Reine Textarbeit; Wiedervorlage bei jeder Verhaltensänderung mit 70-%-Minimum/80-%-Ziel / text-only; recheck on behaviour change |
+Lokale Freigabe: **Pass für den aktuellen Arbeitsbaum.** Keine vollständige
+Delivery-Freigabe: Linux, Windows, SBOM/Provenance, Provider-Review und Exact
+Head bleiben verbindlich offen. Owner ist Feature 003; Reviewer ist der spätere
+Security-/PR-Reviewer. Neue Trust Boundary, Abhängigkeit, Datei-/Netzwerk-
+Fläche, Deserialisierung, Authentifizierung oder privilegierte Operation
+blockiert zur Neuplanung.
 
-## Architektur- und Standardanwendbarkeit / Architecture and Standards Applicability
+## English review block
 
-| Standard oder Evidenz / Standard or evidence | Status | Begründung und Wiedervorlage / Rationale and re-evaluation |
-|---|---|---|
-| OWASP ASVS | `N/A` | Kein Web/API/HTTP/Auth; Wiedervorlage bei entsprechendem Dienst / no web/API/auth |
-| SBOM, VEX, SLSA | `N/A` | Keine Abhängigkeit, Pipeline oder ausgelieferte Komponente ändert sich; Wiedervorlage bei Paket-, CVE-, Release- oder CI-Trigger / no dependency, pipeline, or shipped-component change |
-| AI-SBOM | `N/A` | KI ist nur Entwicklungswerkzeug; Wiedervorlage bei Produktmodell, Datensatz oder Inferenzdienst / development tooling only |
-| STRIDE, CIA, CAPEC | `N/A` | Keine Trust Boundary oder Datenflussänderung; Wiedervorlage bei externem Input, Privileg, IO oder Integration / no boundary or flow change |
-| S-ADR, arc42 Security | `N/A` | Keine Architekturentscheidung; Wiedervorlage bei Struktur-/Deployment-Änderung / no architecture decision |
-| Security-Qualitätsszenarien | `N/A` | Kein neues Sicherheitsverhalten; Wiedervorlage bei Qualitätszieländerung / no new security behaviour |
-| Zero Trust | `N/A` | Kein verteilter oder remote verwalteter Dienst / no distributed or remote service |
-| OWASP SAMM | `N/A` | Kein Security-Prozess-/Reifegradwechsel; Wiedervorlage bei Prozessänderung / no process change |
-| BSI C3A/C5 | `N/A` | Kein Cloud-Service oder Provider-Scope / no cloud/provider scope |
-| NIS2, CRA, EU AI Act, DORA | `N/A` | Private Governance-Arbeit ohne Markt-, Produkt-KI-, Finanz-ICT- oder regulierten Dienst / private governance-only work |
-| OpenSSF Scorecard | `N/A` | Keine neue Abhängigkeit oder Release-/Adoptionsbewertung / no adoption or release trigger |
+### Scope and mandatory criteria
 
-Die folgenden Bestandsdokumente bleiben deshalb byte-unverändert:
-`threat-model.md`, `dependency-audit.md`, `arc42-security.md`,
-`security-quality-scenarios.md`, `adr/`, `asvs-verification.md`,
-`supply-chain-evidence.md`, `zero-trust-applicability.md` und
-`samm-assessment.md`.
+This checklist covers TinyCalc Feature 003 on branch
+`003-terminalgui-migration`. It applies ISO A.8.28, NIST SSDF, the CWE Top 25,
+Microsoft secure coding guidance for C#/.NET, STRIDE/CAPEC, WCAG 2.2 AA, and
+supply-chain controls. C# is memory-safe, but that does not replace secure API,
+input, error, resource, or dependency review.
 
-*The listed security documents remain byte-unchanged because none of their
-documented triggers occurred.*
+The feature changes only the TUI package and Terminal.Gui v2 integration. Core,
+tests, formulas, file format, and `CALC.HLP` remain unchanged. No new file,
+network, SQL, shell, deserialisation, authentication, or cryptography surface
+is introduced.
 
-## Restrisiken und nächste Grenze / Residual Risks and Next Boundary
+### Review result
 
-- Veraltete Pakete sind bekannt, aber laut aktuellem Scan nicht verwundbar.
-  Owner: Repository-Maintainer. Folgeschritt: getrennt autorisierte
-  Abhängigkeits-/Terminal.Gui-Migration. Trigger: Sicherheitsfund, geplantes
-  Upgrade oder Release-Auftrag.
-- Spätere Remote-Gates bleiben ausstehend und werden nicht vorweggenommen. Der
-  lokale Secret-Scan T031 ist Pass.
-- Jede unerwartete Änderung an `src/`, `tests/`, Paket-, Workflow-, Skript- oder
-  Architekturpfaden setzt die Anwendbarkeit erneut auf Prüfung.
+Keyboard input maps to the closed existing action set and cannot execute
+dynamic code. One creator-owned application, root, and dialog scopes provide
+safe normal and error cleanup. Both quit paths and smoke pass. User-facing
+errors expose no stack trace, secret, or authenticated package-source detail.
 
-*Outdated packages remain a tracked residual risk without a known
-vulnerability. A separately authorized dependency migration owns that work.
-The local secret scan passes; later remote gates remain pending and are not
-claimed in advance.*
+The shipped dependency graph contains one direct and 23 transitive NuGet.org
+packages. It has zero known vulnerabilities and zero unknown or incompatible
+licenses. A known shipped vulnerability or unresolved license blocks delivery.
+VEX cannot authorize such a finding. Lockfile and update automation remain
+separate, explicitly open governance scope.
+
+The local checklist passes. It is not full delivery approval: Linux, Windows,
+SBOM/provenance, provider review, and exact-head evidence remain mandatory.
+The owner is Feature 003 and the reviewer is the final security/pull-request
+reviewer. Any new trust boundary, dependency, file or network path,
+deserialisation, authentication, or privileged operation requires replanning.
+
+## Evidenz / Evidence
+
+- `docs/architecture/terminalgui-migration.md`
+- `docs/security/arc42-security.md`
+- `docs/security/threat-model.md`
+- `docs/security/dependency-audit.md`
+- `docs/security/adr/003-terminalgui-lifecycle-supply-chain.md`
+- `specs/003-terminalgui-migration/evidence/regression.md`
+- `specs/003-terminalgui-migration/evidence/coverage-summary.md`

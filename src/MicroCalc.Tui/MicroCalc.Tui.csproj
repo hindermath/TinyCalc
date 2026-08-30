@@ -1,13 +1,13 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <ItemGroup>
     <ProjectReference Include="..\MicroCalc.Core\MicroCalc.Core.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Terminal.Gui" Version="1.19.0" />
+    <PackageReference Include="Terminal.Gui" Version="2.4.17" />
   </ItemGroup>
-  
+
   <ItemGroup>
     <Content Include="Resources/CALC.HLP">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
