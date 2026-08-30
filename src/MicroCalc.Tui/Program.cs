@@ -105,6 +105,7 @@ internal static class Program
             Multiline = true,
             CanFocus = false,
         };
+        _gridView.SetScheme(GridColorScheme.Create());
 #pragma warning restore CS0618
 
         _statusLine = new Label
@@ -580,8 +581,20 @@ internal static class Program
         dialog.Add(prompt, textField);
         dialog.AddButton(ok);
         dialog.AddButton(cancel);
+        SetPromptButtonDefaults(dialog, ok, cancel);
 
         app.Run(dialog);
         return result;
+    }
+
+    internal static void SetPromptButtonDefaults(Dialog dialog, Button ok, Button cancel)
+    {
+        // AddButton macht den zuletzt hinzugefuegten Button automatisch zum Default. Die sichtbare
+        // Reihenfolge bleibt OK/Cancel; Buttonrolle und Enter-Ziel werden danach auf OK zurueckgesetzt.
+        // AddButton automatically makes the last added button the default. The visible order remains
+        // OK/Cancel; afterwards both the button role and Enter target are reset to OK.
+        ok.IsDefault = true;
+        cancel.IsDefault = false;
+        dialog.DefaultAcceptView = ok;
     }
 }
