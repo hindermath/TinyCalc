@@ -33,7 +33,7 @@ export function validate(options = {}) {
   const canonicalIndex = config.artifactNaming?.canonicalIndex ?? config.canonicalIndex;
   const preferredNext = config.schemaVersion === "1.0"
     ? config.preferredNext
-    : "requirements/intakes/active/Lastenheft_TerminalGui_Migration.md";
+    : null;
   const baselinePath =
     "requirements/baseline/PLAN_MICROCALC_CSHARP_DOTNET10.pre-intake-split.2026-07-26.md";
   const recordedBaseline = coverage.sources?.find((source) => source.sourceId === "TC-BASELINE");
@@ -93,7 +93,9 @@ export function validate(options = {}) {
   }
 
   const eligible = targets.filter((target) => target.status === "Eligible");
-  if (eligible.length !== 1 || eligible[0].path !== preferredNext) {
+  // Schema 2 führt den Lifecycle im kanonischen Manifest; nur Schema 1 besitzt noch einen separaten bevorzugten Pfad.
+  // Schema 2 keeps lifecycle state in the canonical manifest; only schema 1 still has a separate preferred path.
+  if (eligible.length !== 1 || (preferredNext && eligible[0].path !== preferredNext)) {
     errors.push("configured preferred intake must be the single explicitly Eligible target");
   }
 

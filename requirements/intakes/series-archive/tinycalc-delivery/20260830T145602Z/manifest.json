@@ -13,16 +13,16 @@
       "status": "Completed"
     },
     {
-      "path": "requirements/intakes/active/Lastenheft_TerminalGui_Migration.003-terminalgui-migration.md",
+      "path": "requirements/intakes/active/Lastenheft_TerminalGui_Migration.md",
       "role": "OrderedMember",
-      "normalizedSha256": "01db3bd8f2dc375fe1400a91580ce1a906dfc446c12fb8ad011419fe50fee94d",
-      "status": "Completed"
+      "normalizedSha256": "fd59040e8bb736b0944e74ab855b72a3a8b843487ae64509926d4a9e79c68160",
+      "status": "Eligible"
     },
     {
       "path": "requirements/intakes/active/Lastenheft_Rename_MicroCalc_TinyCalc.md",
       "role": "OrderedMember",
       "normalizedSha256": "951950e7ca8c726d9d92756b2e87e405af91668e6010aef3751e643278b46990",
-      "status": "Eligible"
+      "status": "Blocked"
     },
     {
       "path": "requirements/intakes/active/Lastenheft_A11Y_TUI.md",
@@ -76,12 +76,12 @@
   "dependencies": [
     {
       "from": "requirements/intakes/active/Lastenheft_Constitution_Change.002-constitution-change.md",
-      "to": "requirements/intakes/active/Lastenheft_TerminalGui_Migration.003-terminalgui-migration.md",
+      "to": "requirements/intakes/active/Lastenheft_TerminalGui_Migration.md",
       "kind": "HardCompletionGate",
       "binding": true
     },
     {
-      "from": "requirements/intakes/active/Lastenheft_TerminalGui_Migration.003-terminalgui-migration.md",
+      "from": "requirements/intakes/active/Lastenheft_TerminalGui_Migration.md",
       "to": "requirements/intakes/active/Lastenheft_Rename_MicroCalc_TinyCalc.md",
       "kind": "HardCompletionGate",
       "binding": true

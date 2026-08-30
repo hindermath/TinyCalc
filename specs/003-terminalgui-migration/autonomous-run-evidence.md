@@ -568,3 +568,394 @@ untracked delivery files were supplied individually, no unrelated untracked
 path exists, the index stayed empty, the pre-commit branch diff is empty,
 whitespace validation passes, every forbidden area is unchanged, and the CI
 workflow is the sole workflow delta.*
+
+### Produkt-Commit und Push / Product Commit and Push
+
+T063 erzeugte den fokussierten Commit
+`c07012af6cf26840104c71ad76fa997e0ab5b4e1`. Er enthält exakt die 67 zuvor
+validierten Pfade, `git rev-list --count main..HEAD` ist `1`, alle drei
+Versionsfelder sind `1.3.1.13`, und die vorgeschriebene Co-author-Zeile steht
+genau einmal in der tatsächlichen Commitnachricht. / *T063 created the focused
+commit shown above. It contains exactly the 67 validated paths, has feature
+commit count one, aligns all version fields to 1.3.1.13, and contains the
+required co-author trailer exactly once.*
+
+T064 revalidierte am 2026-08-30 um 16:24 Uhr CEST den aktiven Stopstatus,
+GitHub-Konto `hindermath`, Remote `https://github.com/hindermath/TinyCalc.git`,
+Commitbaum, Trailer und leeren Delivery-Validator. Der Branch wurde ohne
+Force-Push veröffentlicht. `git ls-remote` lieferte für
+`refs/heads/003-terminalgui-migration` exakt
+`c07012af6cf26840104c71ad76fa997e0ab5b4e1`. Es existierte zu diesem Zeitpunkt
+noch kein Pull Request. / *T064 revalidated authority and the exact clean
+commit, pushed without force, and proved that the remote branch head equals
+the local exact head. No pull request existed at that point.*
+
+### Fokussierter Produkt-PR / Focused Product Pull Request
+
+T065 eröffnete mit der authentifizierten `gh`-CLI genau einen Pull Request:
+
+| Feld / Field | Wert / Value |
+|---|---|
+| PR | `#60` |
+| URL | `https://github.com/hindermath/TinyCalc/pull/60` |
+| Titel / Title | `feat: migrate Terminal.Gui to 2.x` |
+| Base | `main` |
+| Head | `003-terminalgui-migration` |
+| `headRefOid` | `c07012af6cf26840104c71ad76fa997e0ab5b4e1` |
+| Zustand bei Anlage / Initial state | `OPEN`; Checks und Review noch `Pending` |
+
+Der Provider-Body entspricht
+`docs/PR_TEXT_TERMINALGUI_MIGRATION.md`. Die Abfrage fand genau einen offenen
+PR für den Branch. Zu diesem Zeitpunkt wurden weder ein Check als bestanden
+vorweggenommen noch ein Review, Merge oder Sync behauptet. / *The provider body
+matches the prepared PR text, exactly one open pull request exists for the
+branch, and its head equals the verified product commit. Checks, review,
+merge, and synchronization remain pending.*
+
+### Exact-Head-Reparatur nach Homogeneity-Befund / Exact-head Repair after Homogeneity Finding
+
+Der erste vollständige PR-Checklauf meldete ausschließlich einen Drift des
+generierten ASCII-Statistikprofils. Produktjobs, Security-Scans,
+PSScriptAnalyzer, Maintenance TUI und Claude Review waren nicht die Ursache.
+Der vorhandene Renderer wurde ohne Skriptänderung auf dem getrackten
+Produkt-Head ausgeführt; `-CheckOnly` meldete danach `CURRENT`. Weil
+`docs/project-statistics.md` und `Directory.Build.props` vom Statistik-
+Historienmodell ausgeschlossen sind, bleibt der Generator-Quellstand nach dem
+engen Reparaturcommit stabil auf `c07012af6cf2`. / *The first complete PR
+check found only generated statistics drift. The existing renderer was run
+without a script change and then reported CURRENT. The statistics ledger and
+version file are excluded from the history model, so the generated source
+revision remains stable after the focused repair commit.*
+
+Der zweite, themengleiche Commit
+`6d8612ec8ff5b969890c093fcf228af4a3d0e137` enthielt ausschließlich
+`docs/project-statistics.md` und `Directory.Build.props`. Sein Block war jedoch
+aus dem laufenden Evidenz-Workspace erzeugt und zählte 43 noch uncommittete
+Zeilen mit; der Provider meldete deshalb erneut Drift. Dieser Head und seine
+T066-/T067-Belege sind ausdrücklich ungültig. / *The second same-topic commit
+changed only the statistics ledger and version file, but its block had been
+rendered from the active evidence workspace and counted 43 uncommitted lines.
+The provider therefore reported drift again; that head and its platform and
+PreMerge evidence are invalid.*
+
+Der finale Reparaturblock wurde danach aus einem sauberen, detached Worktree
+des tatsächlichen Provider-Heads erzeugt. Commit
+`d0a5bd435488d9c57a905f883e6c90a919b0c134` enthält wiederum nur die zwei
+ausgeschlossenen Statistik-/Versionspfade, richtet ohne lokalen Build/Test auf
+`1.3.3.13` aus und besitzt den vorgeschriebenen Trailer genau einmal. Ein
+zweiter sauberer detached Worktree bestätigte vor dem normalen Push
+`CURRENT`, Quelle `c07012af6cf2`, 150.578 Textzeilen. Es gab keinen Force-Push.
+
+*The final block was generated from a clean detached worktree at the actual
+provider head. Commit d0a5bd4 changes only the two excluded statistics/version
+paths, aligns 1.3.3.13 without a local build or test, and has the exact trailer
+once. Another clean detached worktree reported CURRENT before the normal,
+non-force push.*
+
+Der endgültige Pull-Request-Run `33317549562` bestand auf diesem Head.
+Ubuntu-Job `99273646336` und Windows-Job `99273646446` führten alle vier
+exakten Produktbefehle erfolgreich aus, bestanden 79/79 Tests und gaben jeweils
+exakt einmal `SMOKE_OK` aus. Die aktuelle Bindung steht ausschließlich in
+`evidence/platform-ci.md`. / *Final replacement run 33317549562 passes on the
+current head. Both immutable platform jobs reran the exact commands, passed all
+79 tests, and emitted exactly one SMOKE_OK. Platform evidence now binds only
+the final head.*
+
+### PreMerge und Review-Konvergenz / PreMerge and Review Convergence
+
+T067 erzeugte für den unveränderten PR-Head
+`d0a5bd435488d9c57a905f883e6c90a919b0c134` den Schema-2.0-Snapshot
+`1a017fa4-3530-441d-85bd-32d65b0487de`. Er enthält exakt 48 Primary-Zeilen
+und zwei zusätzliche historische Trailerbelege. Der Validator bestand; der
+normalisierte SHA-256 lautet
+`83b7cd2fdcea4e9417cd4d3d8eb4bfd6419129a0835a9b9b5a511cd824a14acf`.
+
+T068 konvergierte PR `#60` am 2026-08-30 auf demselben Head:
+
+| Prüfung / Check | Ergebnis / Result |
+|---|---|
+| `gh pr checks --watch` | alle 17 gemeldeten Check-Runs `SUCCESS`, einschließlich Linux, Windows, Security, Homogeneity, Maintenance, PSScriptAnalyzer und Claude Review |
+| Review-Threads per GraphQL | `0` Threads, daher `0` offen und `0` veraltet |
+| Formale Reviews per GraphQL | `0` Changes Requested; GitHub `reviewDecision=REVIEW_REQUIRED` |
+| Unabhängiger inhaltlicher Reviewer | Workflow `Claude Code Review`, Run `33317549564`, Job `99273646238`, `SUCCESS`, zehn Review-Turns und keine gepufferten Inline-Befunde |
+| Exact Head | `headRefOid=d0a5bd435488d9c57a905f883e6c90a919b0c134`, unverändert |
+| Providerzustand | `mergeStateStatus=BLOCKED` ausschließlich durch Ruleset `main` (`13146993`): ein Approval plus Code-Owner-Review |
+
+Der unabhängige Review ist damit vorhanden und befundfrei. Der Claude-Job
+besitzt absichtlich nur Leserechte und kann keinen formalen GitHub-Approval-
+Datensatz schreiben. Die verbleibende `REVIEW_REQUIRED`-Anzeige ist daher eine
+konkrete formale Repository-Policy-Blockade und kein fehlender inhaltlicher
+Review. Sie darf nur nach T069 unter Thorstens enger Autorität überbrückt
+werden; kein Fach-, Security-, A11Y-, Plattform-, Thread-, Changes-Requested-
+oder Exact-Head-Gate wird dadurch ersetzt.
+
+*T067 produced and validated the schema-2.0 PreMerge snapshot for the unchanged
+head. T068 then converged all 17 reported checks, zero review threads, zero
+Changes Requested, and an independent successful Claude code-review job with no
+inline findings. GitHub still reports REVIEW_REQUIRED solely because the
+read-only reviewer cannot create the approval record required by ruleset
+13146993. This is a formal policy block, not missing substantive review, and may
+only be bypassed after the narrow T069 authority revalidation.*
+
+### Enge Merge-Bypass-Revalidierung / Narrow Merge-bypass Revalidation
+
+T069 revalidierte am 2026-08-30 um 16:48 Uhr CEST unmittelbar vor der
+Mergeaktion folgende konkrete Bindung für `TG-GATE-047`:
+
+| Feld / Field | Bindung / Binding |
+|---|---|
+| Autorisierer / Authorizer | Thorsten Hindermann |
+| Autorität / Authority | Operation `6a5e02a3-1cd2-4453-b383-99637d1ace81`, `Published`; Receipt `d6666733-1254-4bb9-8b31-389a30d79733`, `Ready`; ausdrücklich `MergeAndSync` mit engem Admin-Bypass |
+| Konkreter Gegenstand / Concrete target | `hindermath/TinyCalc`, PR `#60`, Head `d0a5bd435488d9c57a905f883e6c90a919b0c134`, Base `main` |
+| Konkrete Policy / Concrete policy | aktives Ruleset `main` (`13146993`), ein Approval plus Code-Owner-Review; `current_user_can_bypass=always` |
+| Grund / Rationale | GitHub meldet trotz grünem unabhängigem Claude-Review, null Threads und null Changes Requested ausschließlich `REVIEW_REQUIRED`; der Owner kann den eigenen PR nicht formal genehmigen |
+| Restrisiko / Residual risk | GitHub besitzt keinen formalen Approval-Datensatz. Das wird durch den immutable, erfolgreichen, befundfreien unabhängigen Review-Job transparent begrenzt, aber nicht als formales Approval ausgegeben |
+
+Der Admin-Bypass wird ausschließlich für diese formale Merge-Berechtigung
+verwendet. Er ersetzt kein Fach-, Security-, A11Y-, Linux-, Windows-,
+Exact-Head-, Review-Inhalts-, Thread- oder Changes-Requested-Gate. Bei Head-
+Drift, neuem Befund oder fehlgeschlagenem Check erlischt diese Freigabe vor dem
+Merge.
+
+*T069 revalidated Thorsten's current authority, the exact repository, pull
+request, head and active ruleset immediately before merge. The narrow admin
+bypass is authorized only for the formal approval/code-owner record that the
+owner cannot create on the owner's own pull request. It does not replace any
+technical, security, accessibility, platform, exact-head or substantive review
+gate, and head drift or a new finding revokes it before merge.*
+
+### Produktmerge, Synchronisation und PostMerge / Product Merge, Synchronization, and PostMerge
+
+PR `#60` wurde am `2026-08-30T14:49:19Z` mit dem unveränderten geprüften Head
+gemerged. Der tatsächliche Provider-Merge-Commit ist
+`43e47d9a31b6c3bc79d58d834f95bf8dfecb5595`. Seine unmittelbar per `gh api`
+gelesene Nachricht enthält die vorgeschriebene Co-author-Zeile exakt einmal.
+Lokales `main` und `origin/main` wurden ausschließlich per Fast-Forward auf
+genau diesen Commit synchronisiert.
+
+Der danach kausal erzeugte Schema-2.0-PostMerge-Snapshot
+`1fae8503-6a70-45fd-8353-11326bc37b67` bindet:
+
+- Reviewed Head `d0a5bd435488d9c57a905f883e6c90a919b0c134`;
+- akzeptierten PreMerge-SHA-256
+  `83b7cd2fdcea4e9417cd4d3d8eb4bfd6419129a0835a9b9b5a511cd824a14acf`;
+- Merge-Commit `43e47d9a31b6c3bc79d58d834f95bf8dfecb5595`;
+- leere `changedPaths`;
+- exakt 48 Primary- und zwei Supplemental-Zeilen.
+
+`validate-autonomous-gate-evidence.ps1` bestand mit Exitcode 0. Der
+normalisierte PostMerge-SHA-256 lautet
+`a06005a939644b199de57fd01f4252ab75461afd5960e3381d29757305702377`.
+Erst ab dieser bestandenen Grenze darf der separate kausale Intake-Closeout
+beginnen.
+
+*PR 60 was merged at the unchanged reviewed head. The actual provider merge
+commit contains the required trailer exactly once, and local and remote main
+were synchronized to it by fast-forward only. The causal schema-2.0 PostMerge
+snapshot binds the accepted PreMerge hash, actual merge commit, empty changed
+paths, 48 Primary entries, and two Supplemental entries. The validator passed,
+so the separate intake closeout may now begin.*
+
+### Closeout-Autorität / Closeout Authority
+
+T073 revalidierte am 2026-08-30 um 16:52 Uhr CEST den aktiven Run-State ohne
+Stopanforderung, den bestandenen PostMerge-Hash
+`a06005a939644b199de57fd01f4252ab75461afd5960e3381d29757305702377` und
+exakt synchrones lokales/remote `main` auf
+`43e47d9a31b6c3bc79d58d834f95bf8dfecb5595`.
+
+Thorstens aktuelle Anweisung zu weiteren seriellen autonomen Spec-Kit-Läufen
+mit `MergeAndSync` sowie Operation
+`6a5e02a3-1cd2-4453-b383-99637d1ace81` und Receipt
+`d6666733-1254-4bb9-8b31-389a30d79733` autorisieren für diesen kausalen
+Closeout genau:
+
+1. den branchgestempelten Rename von
+   `Lastenheft_TerminalGui_Migration.md` für Feature 003;
+2. genau eine Mutation der Serie `tinycalc-delivery`, die Feature 003 als
+   geliefert fortschreibt und ihre Vorgängerlinie erhält;
+3. genau einen vorbenannten Closeout-Branch und genau einen Closeout-PR mit
+   `MergeAndSync` unter derselben engen Bypass-Grenze.
+
+Nicht autorisiert sind eine andere Serie, Feature 004, ein weiterer Intake,
+ein dritter Commit-/PR-Pfad oder sonstige Produktänderungen.
+
+*T073 revalidated the active non-stopped run, the passing PostMerge hash, and
+exact synchronized main. Thorsten's current serial autonomous-run instruction,
+together with the published operation and ready receipt, authorizes exactly one
+Feature 003 Lastenheft rename, one causal tinycalc-delivery series mutation, and
+one pre-named Closeout branch and pull request. No other series, next feature,
+intake, product change, or third commit/PR path is authorized.*
+
+### Vorläufiger Closeout-Commit / Provisional Closeout Commit
+
+T074 erzeugte ausschließlich den vorbenannten Branch
+`codex/003-terminalgui-migration-closeout` vom synchronisierten Produkt-Merge-
+Commit. Das auf macOS exakt ausgeführte Bash-Skript benannte nur
+`Lastenheft_TerminalGui_Migration.md` nach
+`Lastenheft_TerminalGui_Migration.003-terminalgui-migration.md` um.
+
+Der vorläufige Commit `f65276eb6f6225880553eb51c187e17016a682f6`
+enthält ausschließlich dieses Rename-Paar. `git commit --amend --no-edit`
+wurde unmittelbar ausgeführt; die vorgeschriebene Co-author-Zeile steht laut
+tatsächlicher Commitnachricht exakt einmal. Es gibt weder eine Skript- noch
+eine Feature-004-Änderung und keinen zweiten Closeout-Commit.
+
+*T074 created only the pre-named closeout branch from synchronized main. The
+exact Bash command renamed only the Feature 003 Lastenheft. The provisional
+commit contains that rename pair alone and was immediately amended; its actual
+message contains the required co-author trailer exactly once. No script,
+Feature 004, or second closeout commit exists.*
+
+### Kausale Serienmutation / Causal Series Mutation
+
+T075 führte unter der T073-Autorität genau den Skill
+`speckit-intake-series-update` für `tinycalc-delivery` aus. Der akzeptierte
+Vorgänger wurde zuerst am unveränderten Produkt-Merge-Commit mit PowerShell-
+und Bash-Validatoren erfolgreich geprüft. Seine Manifest- und Receipt-Dateien
+liegen byteidentisch unter
+`requirements/intakes/series-archive/tinycalc-delivery/20260830T145602Z/`.
+
+Die exakten Unterschiede sind:
+
+- Ziel 2 verwendet den branchgestempelten Pfad und wechselt von `Eligible` zu
+  `Completed`;
+- Ziel 3 `Lastenheft_Rename_MicroCalc_TinyCalc.md` wechselt von `Blocked` zu
+  `Eligible`;
+- genau die beiden Kanten mit dem alten Terminal.Gui-Pfad verwenden nun den
+  branchgestempelten Pfad;
+- Reihenfolge, zehn Ziele, vier Wurzeln, sechs Kanten und Evidence-Pfade bleiben
+  unverändert;
+- die Zustandskardinalität ist jetzt zwei `Completed`, ein `Eligible`, vier
+  `Blocked` und drei `Pending`;
+- kein Intake-Inhalt, keine andere Serie und kein Feature 004 wurde geändert.
+
+Successor-Operation `f02706bb-83bd-4c66-946f-d2080cfac62f` ist `Published`;
+Receipt `51757b18-f1fb-4742-b562-a6ac61728d47` ist `Ready`; Manifest-SHA-256
+ist `fd56a58477bbde71d0c41e4c5e3d25b1da95ccfa6197b103a197004200db5ffc`.
+PowerShell und Bash bestanden jeweils Manifest- und Receipt-Validierung. Die
+einzige sichere Folgeaktion ist `$speckit-intake-series-status`.
+
+*T075 used the intake-series-update skill exactly once for tinycalc-delivery.
+The accepted predecessor passed both validator surfaces at the immutable product
+merge commit and is archived byte-identically. Only the completed Feature 003
+path and lifecycle, the directly unlocked rename intake, its two incident edges,
+the derived order view, and successor operation/receipt changed. Cardinalities,
+archive proof, validation results, and the exact next action are recorded above.*
+
+### Read-only-Serienstatus / Read-only Series Status
+
+T076 führte `speckit-intake-series-status` ohne Schreibzugriff aus. Die
+Schema-2.0-Requirements-Governance ist auf PowerShell und Bash `Aligned` und
+löst den kanonischen Serienpfad sowie den bevorzugten Kandidaten
+`Lastenheft_Rename_MicroCalc_TinyCalc.md` gleich auf. Manifest- und Receipt-
+Validator bestanden ebenfalls auf beiden Flächen.
+
+| Feld / Field | Status |
+|---|---|
+| Serienidentität / Series identity | `5b4523b4-d946-4091-9cbc-11825af94332`, `Active` |
+| Ziele, Wurzeln, Kanten / Targets, roots, edges | `10`, `4`, `6` |
+| Deklariert bevorzugt / Declared eligible | genau `requirements/intakes/active/Lastenheft_Rename_MicroCalc_TinyCalc.md` |
+| Weitere strukturell freie Wurzeln / Other structurally free roots | drei `Pending`-Wurzeln; keine automatische Ausführungsautorität |
+| Blocker | vier lineare Nachfolger bleiben durch Rename, A11Y, Kommentarhärtung beziehungsweise Security blockiert |
+| Receipt-Linie / Receipt lineage | `51757b18-f1fb-4742-b562-a6ac61728d47` verweist auf die byteidentische Vorgängerarchivierung `20260830T145602Z` |
+| Tombstone | `N/A`, weil die Serie aktiv bleibt |
+| Manifest/Order-Abgleich | jeder der zehn aufgelösten Zielpfade steht exakt einmal in `order.md` |
+| Drift | keiner; alle Vorher-/Nachher-Hashes und `git status --porcelain` waren identisch |
+
+`no-next-feature` ist ausdrücklich belegt: aktueller Branch ist nur
+`codex/003-terminalgui-migration-closeout`, `.specify/feature.json` verweist
+weiterhin auf `specs/003-terminalgui-migration`, und der Commit-Diff gegen
+`main` enthält nur das Feature-003-Lastenheft-Rename. Weder der nun bevorzugte
+Rename-Intake noch Feature 004 wurde spezifiziert oder ausgeführt. Der Status
+erteilt keine Folgeautorität.
+
+*T076 inspected the active series read-only. Requirements governance, manifest,
+receipt, lineage, blockers, resolved paths, and the human order view are aligned
+on both validator surfaces. Before/after hashes and Git status are identical.
+No next feature was started: the repository remains on the Feature 003 closeout
+branch and feature metadata still points to Feature 003. Status does not grant
+authority to execute the newly eligible intake.*
+
+### Terminale getrackte Closeout-Grenze / Terminal Tracked Closeout Boundary
+
+Alle bis zum einzigen Closeout-Head kausal bekannten Fakten sind vor dessen
+finalem T078-Amend getrackt vorbereitet: Produkt-PR und dessen Trailer,
+Fast-Forward-Sync, PreMerge-/PostMerge-Bindung, enge Bypass-Revalidierung,
+branchgestempeltes Lastenheft, Serien-Supersession, Archivlinie, beide
+Validatorflächen und `no-next-feature`.
+
+Der Closeout-Head ist definitionsgemäß genau der eine durch T078 per
+`git commit --amend --no-edit` abgeschlossene Commit auf
+`codex/003-terminalgui-migration-closeout`. Sein exakter SHA kann ohne
+Selbstreferenz nicht in denselben Commit geschrieben werden. Er wird daher
+unmittelbar nach dem Amend read-only ermittelt und zusammen mit PR, Checks,
+Reviews, tatsächlichem Provider-Merge-Commit, sofortiger Trailerprüfung und
+Fast-Forward-Sync ausschließlich in
+`.specify/runtime/autonomous-routing/38ad4c1d-bf85-4053-b585-eb490176b727/closeout-provider-evidence.json`
+gebunden.
+
+Nach dem T078-Amend sind keine getrackten Writes mehr zulässig. Insbesondere
+werden `delivery.md`, `autonomous-run-evidence.md`, `tasks.md`, die Serie und
+die Statistik nach dem Closeout-Merge nicht mehr geändert. Der ignorierte
+lokale Run-State und die ignorierte Runtime-/Provider-Evidenz bleiben außerhalb
+jedes Delivery-Sets. Erwartete Provider-Verifikation: genau ein Closeout-PR,
+grüne Checks am unveränderten Closeout-Head, unabhängiger befundfreier Review,
+null offene Threads und Changes Requested, MergeAndSync, exakter Provider-
+Trailer genau einmal und identisches lokales/remote `main`.
+
+*All facts known before the single closeout head are prepared as tracked
+evidence. The closeout head is the one commit completed by the T078 amend. Its
+exact SHA cannot be embedded in itself, so it will be bound read-only with all
+later provider facts in the ignored runtime evidence file. No tracked write is
+allowed after that amend; provider merge, trailer, checks, reviews, and sync are
+verified read-only only.*
+
+### Statistikabschluss T077 / T077 Statistics Closeout
+
+Die Closeout-Phase `003x` bilanziert vor dem Statistik-Selbstnachweis `0`
+Produktions-, `0` Test- und `669` Dokumentations-/Evidenzzeilen netto. Das
+entspricht `8.4` konservativen Arbeitstagen beziehungsweise `65.2` Stunden und
+`0.4` Monaten sowie `5.4` Thorsten-Solo-Tagen beziehungsweise `41.7` Stunden
+und `0.2` Monaten. Gegen einen sichtbaren Aktivtag sind `8.4x` und `5.4x`
+gemischte Repository-Lieferdichte, keine Stoppuhrmessung.
+
+Die exakt benannten terminalen Closeout-Proof-Dateien werden in `003x` manuell
+gezählt und sind eng aus der automatischen History-/Snapshot-Selbstreferenz
+ausgeschlossen. Dadurch bleibt der vorgeschriebene einzige Closeout-Commit
+möglich, ohne seinen erst nach dem Commit bekannten SHA in den eigenen
+Statistikblock schreiben zu müssen. Das Renderer-Skript und der Workflow blieben
+unverändert. Der Renderer aktualisierte den Block in einem isolierten sauberen
+Worktree mit demselben finalen Inhalt; anschließend meldete der exakte lokale
+`-CheckOnly -Json`-Aufruf `CURRENT`, Quelle `c07012af6cf2`, 149.480
+automatisch gezählte Textzeilen und 72 Git-Aktivitätstage.
+
+*Phase 003x manually records 669 net closeout documentation/evidence lines and
+the two required manual baselines. The exact terminal proof files are narrowly
+excluded from automatic snapshot/history self-reference so one closeout commit
+does not have to contain its own future SHA. Neither renderer nor workflow was
+changed. Rendering used an isolated clean worktree with the same final content,
+and the real workspace check then reported CURRENT.*
+
+### Finaler Closeout-Diff vor T078-Amend / Final Closeout Diff before T078 Amend
+
+Der abschließende Pfadsatz besteht ausschließlich aus dem branchgestempelten
+Feature-003-Lastenheft, vier aktiven `tinycalc-delivery`-Serienartefakten, zwei
+byteidentischen Vorgängerarchiven, zwei Statistikdateien, `tasks.md`, dieser
+Run-Evidenz sowie `evidence/delivery.md` und `evidence/platform-ci.md`.
+
+Der Exact-Path-Delivery-Validator, `git diff --name-status main`,
+`git diff --check main`, die verbotenen Pfadprüfungen und der Statistik-
+`-CheckOnly`-Aufruf müssen unmittelbar vor dem Amend bestehen. Core, TUI-
+Produktcode, Tests, Hilfe, Skripte, Agentenflächen, Workflows, DocFX, Feature
+004, FakeDriver und jede andere Intake-Serie bleiben diff-frei. Nur dieser
+validierte Satz wird exakt gestagt und in den vorhandenen Rename-Commit
+amendiert; danach folgen ausschließlich read-only Provider- und Runtime-
+Nachweise.
+
+*The final closeout path set is limited to the branch-stamped Feature 003
+intake, four active series artefacts, two byte-identical predecessor archives,
+two statistics files, tasks, run evidence, delivery evidence, and platform
+evidence. Exact-path, whitespace, forbidden-scope, and statistics checks must
+pass immediately before the single amend. Product, tests, scripts, agents,
+workflows, DocFX, Feature 004, and every other series remain unchanged.*

@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "documentType": "IntakeSeriesReceipt",
+  "receiptId": "d6666733-1254-4bb9-8b31-389a30d79733",
+  "seriesId": "5b4523b4-d946-4091-9cbc-11825af94332",
+  "generator": {
+    "preset": "intake-sequencing-governance",
+    "version": "0.2.3"
+  },
+  "createdAt": "2026-08-29T23:33:07Z",
+  "operation": {
+    "operationId": "6a5e02a3-1cd2-4453-b383-99637d1ace81",
+    "type": "Update",
+    "authorityEvidence": "Thorsten explicitly authorized serial autonomous Spec Kit runs after completed Feature 002 and approved MergeAndSync with narrow Admin-Bypass authority."
+  },
+  "status": "Ready",
+  "manifest": {
+    "path": "requirements/intakes/series/tinycalc-delivery/manifest.json",
+    "normalizedSha256": "eef3cfd5b9e43395ab9ee59848bb183f1429a3104e5ce4a0980393987a530be2"
+  },
+  "supersedes": {
+    "receiptPath": "requirements/intakes/series-archive/tinycalc-delivery/20260829T233307Z/receipt.json",
+    "receiptNormalizedSha256": "f6f39b14983dfd1b8e55bb57c59f2d191b305d69e05891df02bc55eabf012604",
+    "manifestArchivePath": "requirements/intakes/series-archive/tinycalc-delivery/20260829T233307Z/manifest.json",
+    "manifestArchiveSha256": "ef266cf99627d10a17282db966826fff26a0705ec1afca355eeb7c7079a25e72"
+  },
+  "tombstone": {
+    "path": "N/A",
+    "normalizedSha256": "N/A"
+  },
+  "nextAction": "$speckit-intake-series-status"
+}

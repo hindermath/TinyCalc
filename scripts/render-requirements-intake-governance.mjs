@@ -16,18 +16,22 @@ const json = (value) => `${JSON.stringify(value, null, 2)}\n`;
 const config = readJson("requirements/intake-governance-config.json");
 const seriesRoot = "requirements/intakes/series/tinycalc-delivery";
 const seriesId = "5b4523b4-d946-4091-9cbc-11825af94332";
-const seriesReceiptId = "d6666733-1254-4bb9-8b31-389a30d79733";
-const seriesOperationId = "6a5e02a3-1cd2-4453-b383-99637d1ace81";
+const seriesReceiptId = "51757b18-f1fb-4742-b562-a6ac61728d47";
+const seriesOperationId = "f02706bb-83bd-4c66-946f-d2080cfac62f";
 const reviewId = "2c338c63-9f64-47c1-ba50-a95c7ea3fce1";
 const createdAt = "2026-07-26T21:00:00Z";
-const seriesUpdatedAt = "2026-08-29T23:33:07Z";
+const seriesUpdatedAt = "2026-08-30T14:56:02Z";
 const reviewedAt = "2026-08-29T16:19:38Z";
 const reviewHead = "c7a9cbf50d732e0e521e6f8ae9ba1cc56612bf22";
+const seriesArchiveRoot = "requirements/intakes/series-archive/tinycalc-delivery/20260830T145602Z";
+const seriesAuthorityEvidence = "Thorsten explicitly authorized continued serial autonomous Spec Kit runs through 2026-08-31 05:00 Europe/Berlin with MergeAndSync and narrow Admin-Bypass authority; Feature 003 task T073 limits this closeout to one branch-qualified Lastenheft rename, one tinycalc-delivery series mutation, and one causal closeout pull request.";
 
+// Der optionale Vorgängername hält die historische Quelle stabil, wenn der aktive Intake nach der Lieferung branchgestempelt wird.
+// The optional predecessor name keeps the historical source stable when delivery adds the branch stamp to the active intake.
 const members = [
   ["constitution-change", "Lastenheft_Constitution_Change.002-constitution-change.md", "Completed", "b00956e5-e42b-48c4-b63d-ee748cad27f3", "4936d97b-6206-433e-b76c-a570c1842695"],
-  ["terminalgui-migration", "Lastenheft_TerminalGui_Migration.md", "Eligible", "098464e1-cbf6-4812-8b42-c88a55d3c192", "9d791f78-d8ad-4076-aab6-acd550bcc331"],
-  ["rename-microcalc-tinycalc", "Lastenheft_Rename_MicroCalc_TinyCalc.md", "Blocked", "b4e6471a-404f-4dc4-a4ea-51659bbb093d", "313385fe-d32f-4236-a6b1-b35630aa375c"],
+  ["terminalgui-migration", "Lastenheft_TerminalGui_Migration.003-terminalgui-migration.md", "Completed", "098464e1-cbf6-4812-8b42-c88a55d3c192", "9d791f78-d8ad-4076-aab6-acd550bcc331", "Lastenheft_TerminalGui_Migration.md"],
+  ["rename-microcalc-tinycalc", "Lastenheft_Rename_MicroCalc_TinyCalc.md", "Eligible", "b4e6471a-404f-4dc4-a4ea-51659bbb093d", "313385fe-d32f-4236-a6b1-b35630aa375c"],
   ["a11y-tui", "Lastenheft_A11Y_TUI.md", "Blocked", "f36ec0dd-33e3-4f34-aaf8-e264f41057ff", "418ea177-4ff8-4a61-8806-08fc7be4a85e"],
   ["didactic-inline-code-comment-hardening", "Lastenheft_Didactic-Inline-Code-Comment-Hardening.md", "Blocked", "fb3cd161-2086-4cb0-8a8e-a72d1db26500", "a6780a05-df3a-401a-ad1f-796cd3656f1a"],
   ["secure-development-hardening", "Lastenheft_Secure-Development-Hardening.md", "Blocked", "fc7fc58f-180b-43f5-86e6-94d5feb93377", "ad3da51c-6f14-4617-8472-3a13b4b19673"],
@@ -35,7 +39,7 @@ const members = [
   ["sandbox-gestuetzte-secure-development-haertung", "Lastenheft_Sandbox-gestuetzte-Secure-Development-Haertung.md", "Pending", "dcbee93b-bb9f-49f5-b363-fbe082f7dc1e", "aeb455e1-e871-475f-9c6e-29f8b201c9fd"],
   ["rl-se-checklist-selbstpruefung", "Lastenheft_RL-SE-Checklist-Selbstpruefung.md", "Pending", "2093b09a-e0bf-4b03-9df9-b81594d23d2d", "999ece6f-b454-4150-afeb-ce544b76c29d"],
   ["gsdb-spec-kit-intensivpruefung", "Lastenheft_GSDB-Spec-Kit-Intensivpruefung.md", "Pending", "704cea09-a869-49a5-baf9-70f24aa8d67b", "9352f182-123b-43b1-8959-aea8e8da9612"],
-].map(([slug, fileName, status, receiptId, operationId], index) => ({
+].map(([slug, fileName, status, receiptId, operationId, priorFileName], index) => ({
   slug,
   fileName,
   status,
@@ -45,7 +49,7 @@ const members = [
   role: index === 0 ? "Primary" : "OrderedMember",
   path: `requirements/intakes/active/${fileName}`,
   priorTarget: `requirements/intakes/history/pre-intake-split-20260726/${
-    slug === "constitution-change" ? "Lastenheft_Constitution_Change.md" : fileName
+    slug === "constitution-change" ? "Lastenheft_Constitution_Change.md" : (priorFileName ?? fileName)
   }`,
   priorReceipt: `specs/intake-authoring-receipts/history/${slug}.schema-1.1.json`,
   customReceipt: slug === "pl0-zellfunktionen-v1",
@@ -201,15 +205,15 @@ const seriesReceipt = {
   operation: {
     operationId: seriesOperationId,
     type: "Update",
-    authorityEvidence: "Thorsten explicitly authorized serial autonomous Spec Kit runs after completed Feature 002 and approved MergeAndSync with narrow Admin-Bypass authority.",
+    authorityEvidence: seriesAuthorityEvidence,
   },
   status: "Ready",
   manifest: {path: manifestPath, normalizedSha256: manifestHash},
   supersedes: {
-    receiptPath: "requirements/intakes/series-archive/tinycalc-delivery/20260829T233307Z/receipt.json",
-    receiptNormalizedSha256: "f6f39b14983dfd1b8e55bb57c59f2d191b305d69e05891df02bc55eabf012604",
-    manifestArchivePath: "requirements/intakes/series-archive/tinycalc-delivery/20260829T233307Z/manifest.json",
-    manifestArchiveSha256: "ef266cf99627d10a17282db966826fff26a0705ec1afca355eeb7c7079a25e72",
+    receiptPath: `${seriesArchiveRoot}/receipt.json`,
+    receiptNormalizedSha256: "e24fc005f00c639dee63b75a977e4092aa28971900e7bf4c58355bb1cf6ab1be",
+    manifestArchivePath: `${seriesArchiveRoot}/manifest.json`,
+    manifestArchiveSha256: "eef3cfd5b9e43395ab9ee59848bb183f1429a3104e5ce4a0980393987a530be2",
   },
   tombstone: {path: "N/A", normalizedSha256: "N/A"},
   nextAction: "$speckit-intake-series-status",
@@ -221,17 +225,15 @@ const operation = {
   seriesId,
   type: "Update",
   status: "Published",
-  authorityEvidence: "Thorsten explicitly authorized serial autonomous Spec Kit runs after completed Feature 002 and approved MergeAndSync with narrow Admin-Bypass authority.",
+  authorityEvidence: seriesAuthorityEvidence,
   proposalNormalizedSha256: manifestHash,
   preparedPaths: [
     manifestPath,
     `${seriesRoot}/receipt.json`,
     `${seriesRoot}/operation.json`,
     `${seriesRoot}/order.md`,
-    "requirements/intakes/series-archive/tinycalc-delivery/20260829T233307Z/manifest.json",
-    "requirements/intakes/series-archive/tinycalc-delivery/20260829T233307Z/receipt.json",
-    "Lastenheft_Abarbeitungsreihenfolge.md",
-    "Pflichtenheft.md",
+    `${seriesArchiveRoot}/manifest.json`,
+    `${seriesArchiveRoot}/receipt.json`,
   ],
   validation: {bash: "Pass", powerShell: "Pass"},
   publication: {
@@ -241,10 +243,8 @@ const operation = {
       `${seriesRoot}/receipt.json`,
       `${seriesRoot}/operation.json`,
       `${seriesRoot}/order.md`,
-      "requirements/intakes/series-archive/tinycalc-delivery/20260829T233307Z/manifest.json",
-      "requirements/intakes/series-archive/tinycalc-delivery/20260829T233307Z/receipt.json",
-      "Lastenheft_Abarbeitungsreihenfolge.md",
-      "Pflichtenheft.md",
+      `${seriesArchiveRoot}/manifest.json`,
+      `${seriesArchiveRoot}/receipt.json`,
     ],
   },
 };
@@ -353,11 +353,45 @@ change. IR001 is resolved and no finding remains.*
 *No risk was accepted and no question remains open. Local implementation
 authority grants neither remote actions nor NuGet publication.*
 `;
-const order = normalize(read("Lastenheft_Abarbeitungsreihenfolge.md"));
+const rootOrderPath = "Lastenheft_Abarbeitungsreihenfolge.md";
+const orderDependencies = [
+  "keine",
+  "Constitution abgeschlossen",
+  "Terminal.Gui abgeschlossen",
+  "Rename",
+  "A11Y",
+  "Kommentarhärtung",
+  "Security und TinyPl0-NuGet-Liefergate",
+  "unabhängige Wurzel",
+  "unabhängige Wurzel",
+  "unabhängige Wurzel",
+];
+// Beide Reihenfolgenansichten entstehen aus denselben Mitgliedern wie das Manifest, damit Pfad und Lifecycle nicht auseinanderlaufen.
+// Both order views come from the same members as the manifest so their paths and lifecycle states cannot drift apart.
+const orderRows = members.map((member, index) =>
+  `| ${member.order} | \`${member.path}\` | \`${member.status}\` | ${orderDependencies[index]} |`
+).join("\n");
+const order = `# TinyCalc Intake-Reihenfolge / Intake Order
+
+Diese Ansicht wird aus der kanonischen Intake-Serie abgeleitet. Verbindliche
+Maschinendaten stehen in
+\`requirements/intakes/series/tinycalc-delivery/manifest.json\`.
+
+*This view is derived from the canonical intake series. Binding machine data
+lives in the series manifest.*
+
+| Rang | Intake | Zustand | Abhängigkeit |
+|---:|---|---|---|
+${orderRows}
+
+Nur der explizite Zustand \`Eligible\` bezeichnet die bevorzugte nächste
+Ausführung. \`Pending\` erteilt keine automatische Ausführungsberechtigung.
+`;
 const outputs = [
   [manifestPath, json(manifest)],
   [`${seriesRoot}/receipt.json`, json(seriesReceipt)],
   [`${seriesRoot}/operation.json`, json(operation)],
+  [rootOrderPath, order],
   [`${seriesRoot}/order.md`, order],
   [requestPath, json(request)],
   [`${seriesRoot}/intake-review-result.json`, json(result)],

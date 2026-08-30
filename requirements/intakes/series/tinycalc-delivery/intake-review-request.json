@@ -9,7 +9,7 @@
       "role": "Primary"
     },
     {
-      "path": "requirements/intakes/active/Lastenheft_TerminalGui_Migration.md",
+      "path": "requirements/intakes/active/Lastenheft_TerminalGui_Migration.003-terminalgui-migration.md",
       "role": "OrderedMember"
     },
     {
@@ -48,7 +48,7 @@
   "series": {
     "orderedTargetPaths": [
       "requirements/intakes/active/Lastenheft_Constitution_Change.002-constitution-change.md",
-      "requirements/intakes/active/Lastenheft_TerminalGui_Migration.md",
+      "requirements/intakes/active/Lastenheft_TerminalGui_Migration.003-terminalgui-migration.md",
       "requirements/intakes/active/Lastenheft_Rename_MicroCalc_TinyCalc.md",
       "requirements/intakes/active/Lastenheft_A11Y_TUI.md",
       "requirements/intakes/active/Lastenheft_Didactic-Inline-Code-Comment-Hardening.md",
@@ -67,11 +67,11 @@
     "dependencies": [
       {
         "from": "requirements/intakes/active/Lastenheft_Constitution_Change.002-constitution-change.md",
-        "to": "requirements/intakes/active/Lastenheft_TerminalGui_Migration.md",
+        "to": "requirements/intakes/active/Lastenheft_TerminalGui_Migration.003-terminalgui-migration.md",
         "kind": "HardCompletionGate"
       },
       {
-        "from": "requirements/intakes/active/Lastenheft_TerminalGui_Migration.md",
+        "from": "requirements/intakes/active/Lastenheft_TerminalGui_Migration.003-terminalgui-migration.md",
         "to": "requirements/intakes/active/Lastenheft_Rename_MicroCalc_TinyCalc.md",
         "kind": "HardCompletionGate"
       },

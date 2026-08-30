@@ -1,21 +1,19 @@
 {
   "schemaVersion": "1.0",
   "documentType": "IntakeSeriesOperation",
-  "operationId": "6a5e02a3-1cd2-4453-b383-99637d1ace81",
+  "operationId": "f02706bb-83bd-4c66-946f-d2080cfac62f",
   "seriesId": "5b4523b4-d946-4091-9cbc-11825af94332",
   "type": "Update",
   "status": "Published",
-  "authorityEvidence": "Thorsten explicitly authorized serial autonomous Spec Kit runs after completed Feature 002 and approved MergeAndSync with narrow Admin-Bypass authority.",
-  "proposalNormalizedSha256": "eef3cfd5b9e43395ab9ee59848bb183f1429a3104e5ce4a0980393987a530be2",
+  "authorityEvidence": "Thorsten explicitly authorized continued serial autonomous Spec Kit runs through 2026-08-31 05:00 Europe/Berlin with MergeAndSync and narrow Admin-Bypass authority; Feature 003 task T073 limits this closeout to one branch-qualified Lastenheft rename, one tinycalc-delivery series mutation, and one causal closeout pull request.",
+  "proposalNormalizedSha256": "60aa9ea242b8081135e2ac1bfcf1bd50929e60bf9a9ebefe5ee0047bfeb6bd8d",
   "preparedPaths": [
     "requirements/intakes/series/tinycalc-delivery/manifest.json",
     "requirements/intakes/series/tinycalc-delivery/receipt.json",
     "requirements/intakes/series/tinycalc-delivery/operation.json",
     "requirements/intakes/series/tinycalc-delivery/order.md",
-    "requirements/intakes/series-archive/tinycalc-delivery/20260829T233307Z/manifest.json",
-    "requirements/intakes/series-archive/tinycalc-delivery/20260829T233307Z/receipt.json",
-    "Lastenheft_Abarbeitungsreihenfolge.md",
-    "Pflichtenheft.md"
+    "requirements/intakes/series-archive/tinycalc-delivery/20260830T145602Z/manifest.json",
+    "requirements/intakes/series-archive/tinycalc-delivery/20260830T145602Z/receipt.json"
   ],
   "validation": {
     "bash": "Pass",
@@ -28,10 +26,8 @@
       "requirements/intakes/series/tinycalc-delivery/receipt.json",
       "requirements/intakes/series/tinycalc-delivery/operation.json",
       "requirements/intakes/series/tinycalc-delivery/order.md",
-      "requirements/intakes/series-archive/tinycalc-delivery/20260829T233307Z/manifest.json",
-      "requirements/intakes/series-archive/tinycalc-delivery/20260829T233307Z/receipt.json",
-      "Lastenheft_Abarbeitungsreihenfolge.md",
-      "Pflichtenheft.md"
+      "requirements/intakes/series-archive/tinycalc-delivery/20260830T145602Z/manifest.json",
+      "requirements/intakes/series-archive/tinycalc-delivery/20260830T145602Z/receipt.json"
     ]
   }
 }

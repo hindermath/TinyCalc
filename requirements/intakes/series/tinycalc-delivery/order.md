@@ -10,8 +10,8 @@ lives in the series manifest.*
 | Rang | Intake | Zustand | Abhängigkeit |
 |---:|---|---|---|
 | 1 | `requirements/intakes/active/Lastenheft_Constitution_Change.002-constitution-change.md` | `Completed` | keine |
-| 2 | `requirements/intakes/active/Lastenheft_TerminalGui_Migration.md` | `Eligible` | Constitution abgeschlossen |
-| 3 | `requirements/intakes/active/Lastenheft_Rename_MicroCalc_TinyCalc.md` | `Blocked` | Terminal.Gui |
+| 2 | `requirements/intakes/active/Lastenheft_TerminalGui_Migration.003-terminalgui-migration.md` | `Completed` | Constitution abgeschlossen |
+| 3 | `requirements/intakes/active/Lastenheft_Rename_MicroCalc_TinyCalc.md` | `Eligible` | Terminal.Gui abgeschlossen |
 | 4 | `requirements/intakes/active/Lastenheft_A11Y_TUI.md` | `Blocked` | Rename |
 | 5 | `requirements/intakes/active/Lastenheft_Didactic-Inline-Code-Comment-Hardening.md` | `Blocked` | A11Y |
 | 6 | `requirements/intakes/active/Lastenheft_Secure-Development-Hardening.md` | `Blocked` | Kommentarhärtung |

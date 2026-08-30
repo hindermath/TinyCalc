@@ -167,7 +167,7 @@ Der spaetere Lauf muss mindestens klassifizieren:
 ## Kopierbarer `/speckit-specify`-Prompt / Copyable `/speckit-specify` Prompt
 
 ```text
-Ersetzter Alt-Prompt: speckit-specify Nutze requirements/intakes/active/Lastenheft_TerminalGui_Migration.md als verbindliche Eingabedatei. Erstelle die Feature-Spezifikation fuer einen Terminal.Gui-Migrations- und Kompatibilitaetslauf im Repository TinyCalc.
+Ersetzter Alt-Prompt: speckit-specify Nutze requirements/intakes/active/Lastenheft_TerminalGui_Migration.003-terminalgui-migration.md als verbindliche Eingabedatei. Erstelle die Feature-Spezifikation fuer einen Terminal.Gui-Migrations- und Kompatibilitaetslauf im Repository TinyCalc.
 
 Ziel: Pruefe das Lastenheft gegen den aktuellen Repository-Stand und erstelle eine belastbare Spec-Kit-Spezifikation, die fuer Auszubildende, Entwickler*innen, Reviewer und KI-Agenten nachvollziehbar ist.
 
@@ -197,13 +197,13 @@ pull-request, merge, bypass, secret, or provider authority.*
 
 <!-- spec-kit-command-id: speckit.specify -->
 ```text
-$speckit-specify Use requirements/intakes/active/Lastenheft_TerminalGui_Migration.md as the binding intake. Preserve its scope, non-goals, ordering, governance, evidence, and acceptance criteria. Create or update only the matching feature specification. Do not implement, commit, push, create a pull request, merge, or start another feature.
+$speckit-specify Use requirements/intakes/active/Lastenheft_TerminalGui_Migration.003-terminalgui-migration.md as the binding intake. Preserve its scope, non-goals, ordering, governance, evidence, and acceptance criteria. Create or update only the matching feature specification. Do not implement, commit, push, create a pull request, merge, or start another feature.
 ```
 
 ### Autonomous
 
 <!-- spec-kit-command-id: speckit.autonomous -->
 ```text
-$speckit-autonomous Execute one complete autonomous Spec Kit run using requirements/intakes/active/Lastenheft_TerminalGui_Migration.md as the binding intake. Delivery mode: LocalImplementation. Preserve all scope, ordering, security, accessibility, evidence, and acceptance boundaries. Do not push, create or merge a pull request, use bypass authority, expose secrets, or start a follow-up feature.
+$speckit-autonomous Execute one complete autonomous Spec Kit run using requirements/intakes/active/Lastenheft_TerminalGui_Migration.003-terminalgui-migration.md as the binding intake. Delivery mode: LocalImplementation. Preserve all scope, ordering, security, accessibility, evidence, and acceptance boundaries. Do not push, create or merge a pull request, use bypass authority, expose secrets, or start a follow-up feature.
 ```
 <!-- intake-authoring:end -->
