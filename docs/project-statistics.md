@@ -329,6 +329,87 @@ blended repository delivery density, not stopwatch time. The exact terminal
 closeout proof files are counted manually in phase 003x but excluded from the
 automatic snapshot/history to avoid a one-commit SHA self-reference.*
 
+### 9. Tabellen-Grid-Kontrast / Spreadsheet Grid Contrast
+
+- Status: lokal implementiert und durch den vollstaendigen Release-Testlauf
+  bestaetigt.
+- Beobachtbares Arbeitsfenster: eine kurze Agentensitzung am 2026-08-30.
+- Arbeitspakete: explizite Terminal.Gui-Farben fuer `Normal`, `ReadOnly` und
+  `Disabled`; kontrastreiche Rollen fuer `Focus` und `Active`; zwei
+  Regressionstests fuer beide Zustandsgruppen.
+- Aenderungsvolumen vor dem Statistik-Selbstnachweis; Statistik-Ledger,
+  Konfiguration und `Directory.Build.props` sind ausgeschlossen:
+  - Produktionscode: `30` Zeilen netto
+  - Testcode: `30` Zeilen netto
+  - Dokumentation: `0` Zeilen
+  - Gesamt: `60` Zeilen netto
+- Konservative Referenz mit 80 Zeilen pro Arbeitstag: `0.8` Arbeitstage,
+  `5.9` Stunden und `0.0` Monate bei 21.5 Arbeitstagen pro Monat.
+- Thorsten-Solo-Referenz mit 125 Zeilen pro Arbeitstag: `0.5` Arbeitstage,
+  `3.7` Stunden und `0.0` Monate.
+- Gegen einen sichtbaren Aktivtag sind `0.8x` und `0.5x` gemischte
+  Repository-Lieferdichte und keine Stoppuhrmessung.
+
+*The spreadsheet grid contrast fix explicitly defines readable Terminal.Gui
+roles for normal, read-only, disabled, focused, and active states. The change
+contains 30 net production and 30 net test lines. This corresponds to 0.8
+conservative manual workdays (5.9 hours) or 0.5 Thorsten-solo workdays (3.7
+hours); these values describe blended repository delivery density, not
+stopwatch time.*
+
+### 10. OK als Default im Werte-Dialog / OK as the Value Dialog Default
+
+- Status: lokal implementiert und durch den vollstaendigen Release-Testlauf
+  bestaetigt.
+- Beobachtbares Arbeitsfenster: eine kurze Agentensitzung am 2026-08-30.
+- Arbeitspakete: Terminal.Gui-Buttonrolle und `DefaultAcceptView` nach dem
+  Hinzufuegen beider Dialogbuttons explizit auf `OK` zurueckgesetzt;
+  Regressionstest fuer Enter-Binding, Accept-Weiterleitung und genau einen
+  Default-Button; realer PTY-Nachweis mit Werteingabe und Enter.
+- Aenderungsvolumen vor dem Statistik-Selbstnachweis; Statistik-Ledger,
+  Konfiguration und `Directory.Build.props` sind ausgeschlossen:
+  - Produktionscode: `12` Zeilen netto
+  - Testcode: `37` Zeilen netto
+  - Dokumentation: `0` Zeilen
+  - Gesamt: `49` Zeilen netto
+- Konservative Referenz mit 80 Zeilen pro Arbeitstag: `0.6` Arbeitstage,
+  `4.8` Stunden und `0.0` Monate bei 21.5 Arbeitstagen pro Monat.
+- Thorsten-Solo-Referenz mit 125 Zeilen pro Arbeitstag: `0.4` Arbeitstage,
+  `3.1` Stunden und `0.0` Monate.
+- Gegen einen sichtbaren Aktivtag sind `0.6x` und `0.4x` gemischte
+  Repository-Lieferdichte und keine Stoppuhrmessung.
+
+*The value dialog now restores `OK` as its sole default and default accept view
+after Terminal.Gui has added both buttons. The change contains 12 net
+production and 37 net test lines. This corresponds to 0.6 conservative manual
+workdays (4.8 hours) or 0.4 Thorsten-solo workdays (3.1 hours); these values
+describe blended repository delivery density, not stopwatch time.*
+
+### 11. Gemeinsame TUI-Fix-Lieferung / Combined TUI Fix Delivery
+
+- Status: bilinguale PR-Beschreibung fuer MergeAndSync vorbereitet.
+- Beobachtbares Arbeitsfenster: dieselbe Agentensitzung am 2026-08-30.
+- Arbeitspakete: Problem, Loesung, Risiken und Testplan fuer Grid-Kontrast und
+  Enter-Weiterleitung nachvollziehbar auf Deutsch und Englisch dokumentiert.
+- Aenderungsvolumen vor dem Statistik-Selbstnachweis; Statistik-Ledger und
+  Konfiguration sind ausgeschlossen:
+  - Produktionscode: `0` Zeilen
+  - Testcode: `0` Zeilen
+  - Dokumentation: `68` Zeilen netto
+  - Gesamt: `68` Zeilen netto
+- Konservative Referenz mit 80 Zeilen pro Arbeitstag: `0.9` Arbeitstage,
+  `6.6` Stunden und `0.0` Monate bei 21.5 Arbeitstagen pro Monat.
+- Thorsten-Solo-Referenz mit 125 Zeilen pro Arbeitstag: `0.5` Arbeitstage,
+  `4.2` Stunden und `0.0` Monate.
+- Gegen einen sichtbaren Aktivtag sind `0.9x` und `0.5x` gemischte
+  Repository-Lieferdichte und keine Stoppuhrmessung.
+
+*The bilingual delivery description records the problem, solution, risks, and
+test plan for both TUI fixes. Its 68 net documentation lines correspond to 0.9
+conservative manual workdays (6.6 hours) or 0.5 Thorsten-solo workdays (4.2
+hours); these values describe blended repository delivery density, not
+stopwatch time.*
+
 ## Einordnung der KI-/Spec-Kit-Wirkung
 
 - Die beobachtbare manuelle Gesamtbasis liegt bereits bei 20379 Zeilen
@@ -386,6 +467,9 @@ automatic snapshot/history to avoid a one-commit SHA self-reference.*
 | 2026-08-30 | TinyCalc-Serie nach Feature 002 fortgeschrieben und CI-Negativtest entkoppelt | Der abgeschlossene Constitution-Intake wurde auf `Completed` gesetzt und TerminalGui-Migration als einziges naechstes Ziel auf `Eligible` angehoben; Reihenfolge, vier Wurzeln und sechs Abhaengigkeiten blieben erhalten. Manifest und Receipt des Vorgaengers wurden byteidentisch archiviert, der Nachfolger wahrt die Supersession-Lineage. Ein zunaechst plattformuebergreifend fehlgeschlagener Governance-Negativtest setzte noch starr den ersten Serieneintrag statt des tatsaechlich `Eligible` Ziels auf `Pending`; die Fixture sucht dieses Ziel nun statusbasiert und bleibt damit bei kuenftigen Serienfortschreibungen stabil. Arbeitsfenster: eine Agentensitzung und ein sichtbarer Aktivtag am 2026-08-30. Aenderungsumfang vor diesem Statistik-Selbstnachweis: `0` Produktionscode-Zeilen, `+3 / -1 = 2` Testcode-Zeilen und `+245 / -51 = 194` Dokumentations-, Governance- und Automationszeilen einschliesslich unveraenderbarer Archivevidenz. Konservative Manualreferenz: 80 Zeilen/Tag = `2.5` Tage (ca. `19.1` Stunden); Thorsten-Solo-Referenz: 125 Zeilen/Tag = `1.6` Tage (ca. `12.2` Stunden); gegen einen sichtbaren Aktivtag entspricht dies einem blended repository speedup von `2.5x` bzw. `1.6x`, nicht einer Stoppuhrmessung. Validierung: vollstaendiges PowerShell-Alignment, acht status- und hashbezogene Negativ-Fixtures, Serien- und Receipt-Gates sowie die vorhandenen CI-Build-, Test-, Secret- und Homogenitaetspruefungen. *The completed Constitution intake is now `Completed`, TerminalGui migration is the sole `Eligible` target, and the negative fixture now locates that target by status. The 196 net test and governance lines correspond to 2.5 conservative manual days or 1.6 Thorsten-solo days; these are blended delivery-density comparisons, not stopwatch measurements.* |
 | 2026-08-30 | Feature 003 Terminal.Gui-v2-Migration lokal dokumentiert / Feature 003 Terminal.Gui v2 migration documented locally | Arbeitsfenster: 2026-08-30 10:50 bis 15:55 Uhr (`Europe/Berlin`), ein sichtbarer Aktivtag. Die lokale Migration, reale PTY-Nachweise, Coverage sowie Architektur-, Security-, A11Y-, SBOM- und PR-Evidenz sind bis T054 abgeschlossen; Plattform- und Exact-Head-Nachweise bleiben Delivery-Gates. Umfang vor dem Statistik-Selbstnachweis: `+142 / -102 = 40` Produktionscode-Zeilen, `0` Testcode-Zeilen und `+9219 / -279 = 8940` Dokumentations-/Evidenzzeilen, insgesamt `8980` Zeilen netto. Bei `7.8` Stunden/Tag entsprechen sie `112.3` konservativen Arbeitstagen (`875.6` Stunden, `5.2` Monate) oder `71.8` Thorsten-Solo-Tagen (`560.4` Stunden, `3.3` Monate). Gegen einen Aktivtag sind `112.3x` und `71.8x` gemischte Lieferdichte, keine Stoppuhrmessung. *The 8,980 net lines comprise 40 production, zero test, and 8,940 documentation/evidence lines. Platform and exact-head proof remain pending delivery gates; the stated factors describe blended delivery density.* |
 | 2026-08-30 | Feature 003 Produktlieferung und kausaler Closeout vorbereitet / Feature 003 product delivery and causal closeout prepared | Arbeitsfenster: 2026-08-30 16:46 bis 17:01 Uhr (`Europe/Berlin`), ein sichtbarer Aktivtag. Produkt-PR `#60` wurde nach Linux-/Windows-CI, unabhängigem befundfreiem Review, null Threads und Exact-Head-Gates gemerged; der Provider-Trailer wurde sofort geprueft und `main` per Fast-Forward synchronisiert. Der PostMerge-Snapshot bestand; das Lastenheft ist branchgestempelt, die Serie mit byteidentischer Vorgängerlinie kausal fortgeschrieben und read-only ohne Drift geprueft. Umfang vor dem Statistik-Selbstnachweis: `0` Produktionscode-Zeilen, `0` Testcode-Zeilen und `669` Dokumentations-/Evidenzzeilen netto. Konservative Referenz: `8.4` Tage bzw. `65.2` Stunden und `0.4` Monate; Thorsten-Solo-Referenz: `5.4` Tage bzw. `41.7` Stunden und `0.2` Monate. Gegen einen sichtbaren Aktivtag sind `8.4x` und `5.4x` gemischte Lieferdichte, keine Stoppuhrmessung. Der einzige Closeout-PR und seine Providerfakten folgen read-only ohne weiteren getrackten Write. *The product PR is merged and synchronized, PostMerge passed, and the causal intake closeout is prepared. The 669 net documentation/evidence lines imply 8.4 conservative or 5.4 Thorsten-solo days; later provider facts remain read-only.* |
+| 2026-08-30 | Tabellen-Grid-Kontrast korrigiert / Spreadsheet grid contrast corrected | Arbeitsfenster: eine kurze Agentensitzung am 2026-08-30. Arbeitspakete: explizite Terminal.Gui-Palette fuer normale und schreibgeschuetzte Grid-Darstellung, kontrastreiche Hervorhebungsrollen sowie zwei Regressionstests. Umfang vor dem Statistik-Selbstnachweis: `30` Produktionscode-Zeilen, `30` Testcode-Zeilen und `0` Dokumentationszeilen, insgesamt `60` Nettozeilen; Versionsmetadaten und Statistikdateien sind ausgeschlossen. Konservative Referenz: `0.8` Arbeitstage bzw. `5.9` Stunden; Thorsten-Solo-Referenz: `0.5` Arbeitstage bzw. `3.7` Stunden. Gegen einen sichtbaren Aktivtag sind `0.8x` und `0.5x` gemischte Lieferdichte, keine Stoppuhrmessung. Validierung: Release-Build innerhalb von `dotnet test`, 76/76 Core-Tests und 5/5 TUI-Tests; keine neue Abhaengigkeit. *The grid now uses explicit high-contrast normal/read-only and highlighted roles. The 60 net production and test lines correspond to 0.8 conservative or 0.5 Thorsten-solo workdays; all 81 tests pass and no dependency was added.* |
+| 2026-08-30 | OK und Enter im Werte-Dialog wiederhergestellt / OK and Enter restored in the value dialog | Arbeitsfenster: eine kurze Agentensitzung am 2026-08-30. Terminal.Gui setzt beim Hinzufuegen den jeweils letzten Dialogbutton als Default; nach unveraendert sichtbarer Reihenfolge `OK`, `Cancel` werden deshalb die Buttonrolle und `DefaultAcceptView` explizit auf `OK` gesetzt. Umfang vor dem Statistik-Selbstnachweis: `12` Produktionscode-Zeilen, `37` Testcode-Zeilen und `0` Dokumentationszeilen, insgesamt `49` Nettozeilen; Versionsmetadaten und Statistikdateien sind ausgeschlossen. Konservative Referenz: `0.6` Arbeitstage bzw. `4.8` Stunden; Thorsten-Solo-Referenz: `0.4` Arbeitstage bzw. `3.1` Stunden. Validierung: Release-Build innerhalb von `dotnet test`, 76/76 Core-Tests und 6/6 TUI-Tests sowie realer PTY-Lauf mit Werteingabe und Enter; keine neue Abhaengigkeit. *The value dialog now restores OK as its sole default and default accept view after both buttons are added. The 49 net production and test lines correspond to 0.6 conservative or 0.4 Thorsten-solo workdays; all 82 tests and a real Enter-key PTY path pass, with no dependency added.* |
+| 2026-08-30 | Gemeinsame TUI-Fix-Lieferung vorbereitet / Combined TUI fix delivery prepared | Arbeitsfenster: dieselbe Agentensitzung am 2026-08-30. Eine bilinguale PR-Beschreibung dokumentiert Problem, Loesung, Risiken und Testplan fuer Grid-Kontrast sowie `OK`-/Enter-Weiterleitung. Umfang vor dem Statistik-Selbstnachweis: `0` Produktionscode-Zeilen, `0` Testcode-Zeilen und `68` Dokumentationszeilen netto. Konservative Referenz: `0.9` Arbeitstage bzw. `6.6` Stunden; Thorsten-Solo-Referenz: `0.5` Arbeitstage bzw. `4.2` Stunden. Der Nutzer hat Commit, Push und DeliveryMode `MergeAndSync` mit Admin-Bypass ausdruecklich autorisiert; materielle Gates bleiben verbindlich. *The 68 net documentation lines provide the bilingual PR problem, solution, risks, and test plan. They correspond to 0.9 conservative or 0.5 Thorsten-solo workdays; material gates remain mandatory.* |
 
 ## Statistikprofil-1-Archiv / Statistics Profile 1 Archive
 Basis dieses Schlussblocks sind die aktuell dokumentierten Snapshot- und
@@ -550,12 +634,12 @@ Profil 2 verwendet Git-getrackte Textdateien und sichtbare Git-Aktivitaet. Die W
 
 | Kennzahl / Metric | Wert / Value |
 |---|---:|
-| Textbasis / Text base | 148390 lines |
+| Textbasis / Text base | 148403 lines |
 | Textdateien / Text files | 1034 |
 | Beobachtbarer Zeitraum / Observable period | 2025-09-07..2026-08-30 |
 | Aktivtage / Active days | 72 |
 | Relevante Commits / Relevant commits | 202 |
-| Zeilen je Aktivtag / Lines per active day | 2061.0 |
+| Zeilen je Aktivtag / Lines per active day | 2061.2 |
 | Peak-Tag im Fenster / Peak day in window | 2026-06-17 / 27058 |
 | Peak-Woche im Fenster / Peak week in window | 2026-07-19 / 33630 |
 | Laengste Serie / Longest streak | 8 days |
@@ -566,7 +650,7 @@ Profil 2 verwendet Git-getrackte Textdateien und sichtbare Git-Aktivitaet. Die W
 ### Artefaktmix / Artifact Mix
 
 ```text
-Produktiv / Production          [#...................]   1.9% | 2788
+Produktiv / Production          [#...................]   1.9% | 2801
 Tests                           [#...................]   4.4% | 6575
 Dokumentation / Documentation   [###############.....]  73.8% | 109551
 Skripte / Scripts               [###.................]  14.4% | 21441
@@ -666,15 +750,15 @@ Die kumulative Kurve summiert nur das Brutto-Aenderungsvolumen im Fenster. Sie d
 ### Phasenvolumen / Phase Volume
 
 ```text
-Slots 0..8
-   cap 10000 | . . . . . . . . .
-        8333 | . . . . . . . # .
-        6667 | # . . . . . . # .
-        5000 | # . . . . . . # .
-        3333 | # # . . . . . # .
-        1667 | # # # . . . # # .
-           0 +-------------------
-             00 01 02 03 04 05 06 07 08
+Slots 0..11
+   cap 10000 | . . . . . . . . . . . .
+        8333 | . . . . . . . # . . . .
+        6667 | # . . . . . . # . . . .
+        5000 | # . . . . . . # . . . .
+        3333 | # # . . . . . # . . . .
+        1667 | # # # . . . # # . . . .
+           0 +-------------------------
+             00 01 02 03 04 05 06 07 08 09 10 11
 ```
 
 | Slot | Phase | Nettozeilen / Net lines |
@@ -688,6 +772,9 @@ Slots 0..8
 | 6 | 002 Constitution / 002 constitution | 3104 |
 | 7 | 003 Terminal.Gui / 003 Terminal.Gui | 8980 |
 | 8 | 003 Closeout / 003 closeout | 705 |
+| 9 | Grid-Kontrast / Grid contrast | 60 |
+| 10 | Dialog-Default / Dialog default | 49 |
+| 11 | TUI-Fix-Lieferung / TUI fix delivery | 68 |
 
 Die festen Slots halten den Phasenvergleich auch bei fehlenden oder spaeter ergaenzten Werten stabil.
 
@@ -711,7 +798,7 @@ Die Faktoren vergleichen sichtbare Lieferdichte mit den dokumentierten manuellen
 Scale: 0..5000 lines/day
 Experienced manual [#...................] 80
 Thorsten solo      [#...................] 125
-Visible repository [########............] 2061.0
+Visible repository [########............] 2061.2
 ```
 
 Die gemeinsame Skala vergleicht Referenzen und sichtbare Lieferdichte. Sie schreibt die Git-Aktivitaet keiner Person oder KI pauschal zu.

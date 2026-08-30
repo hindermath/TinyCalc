@@ -75,6 +75,30 @@
       "labelEn": "003 closeout",
       "netLines": 705,
       "activeDays": 1
+    },
+    {
+      "slot": 9,
+      "id": "grid",
+      "labelDe": "Grid-Kontrast",
+      "labelEn": "Grid contrast",
+      "netLines": 60,
+      "activeDays": 1
+    },
+    {
+      "slot": 10,
+      "id": "dialog",
+      "labelDe": "Dialog-Default",
+      "labelEn": "Dialog default",
+      "netLines": 49,
+      "activeDays": 1
+    },
+    {
+      "slot": 11,
+      "id": "tui-delivery",
+      "labelDe": "TUI-Fix-Lieferung",
+      "labelEn": "TUI fix delivery",
+      "netLines": 68,
+      "activeDays": 1
     }
   ],
   "excludedPaths": [
