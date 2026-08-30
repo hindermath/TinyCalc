@@ -15,8 +15,8 @@
   },
   "status": "ReadyForReview",
   "target": {
-    "path": "requirements/intakes/active/Lastenheft_TerminalGui_Migration.md",
-    "normalizedSha256": "fd59040e8bb736b0944e74ab855b72a3a8b843487ae64509926d4a9e79c68160"
+    "path": "requirements/intakes/active/Lastenheft_TerminalGui_Migration.003-terminalgui-migration.md",
+    "normalizedSha256": "01db3bd8f2dc375fe1400a91580ce1a906dfc446c12fb8ad011419fe50fee94d"
   },
   "sources": [
     {
@@ -48,7 +48,7 @@
       "id": "IAD001",
       "status": "Answered",
       "question": "Welcher Zielpfad ist nach der Konsolidierung verbindlich?",
-      "answer": "requirements/intakes/active/Lastenheft_TerminalGui_Migration.md",
+      "answer": "requirements/intakes/active/Lastenheft_TerminalGui_Migration.003-terminalgui-migration.md",
       "evidence": "specs/requirements-reconciliation-20260726/migration-proposal.json"
     },
     {
@@ -91,5 +91,5 @@
     "role": "OrderedMember",
     "supersedesIntakeIds": []
   },
-  "nextAction": "$speckit-intake-review requirements/intakes/active/Lastenheft_TerminalGui_Migration.md"
+  "nextAction": "$speckit-intake-review requirements/intakes/active/Lastenheft_TerminalGui_Migration.003-terminalgui-migration.md"
 }

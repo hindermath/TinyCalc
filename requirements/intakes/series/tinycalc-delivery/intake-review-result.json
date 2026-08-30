@@ -17,9 +17,9 @@
       "gitBlob": "N/A"
     },
     {
-      "path": "requirements/intakes/active/Lastenheft_TerminalGui_Migration.md",
+      "path": "requirements/intakes/active/Lastenheft_TerminalGui_Migration.003-terminalgui-migration.md",
       "role": "OrderedMember",
-      "normalizedSha256": "fd59040e8bb736b0944e74ab855b72a3a8b843487ae64509926d4a9e79c68160",
+      "normalizedSha256": "01db3bd8f2dc375fe1400a91580ce1a906dfc446c12fb8ad011419fe50fee94d",
       "gitBlob": "N/A"
     },
     {
@@ -78,7 +78,7 @@
   "coverage": {
     "individual": [
       "requirements/intakes/active/Lastenheft_Constitution_Change.002-constitution-change.md",
-      "requirements/intakes/active/Lastenheft_TerminalGui_Migration.md",
+      "requirements/intakes/active/Lastenheft_TerminalGui_Migration.003-terminalgui-migration.md",
       "requirements/intakes/active/Lastenheft_Rename_MicroCalc_TinyCalc.md",
       "requirements/intakes/active/Lastenheft_A11Y_TUI.md",
       "requirements/intakes/active/Lastenheft_Didactic-Inline-Code-Comment-Hardening.md",
@@ -105,6 +105,6 @@
   "supersedes": "b9edc458-8339-4e8e-8f4f-3cabc2f96112",
   "requestEvidence": {
     "path": "requirements/intakes/series/tinycalc-delivery/intake-review-request.json",
-    "normalizedSha256": "7020241199793ab1d94575a7d1f804b27fd916c7cde8597adb22ee654876d042"
+    "normalizedSha256": "f7d4cea5d69ca4142d345a84d7f4f15fd0fa73003ad8741c2cad666ab3e83958"
   }
 }

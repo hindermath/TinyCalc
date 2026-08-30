@@ -67,11 +67,35 @@
       "labelEn": "003 Terminal.Gui",
       "netLines": 8980,
       "activeDays": 1
+    },
+    {
+      "slot": 8,
+      "id": "003x",
+      "labelDe": "003 Closeout",
+      "labelEn": "003 closeout",
+      "netLines": 705,
+      "activeDays": 1
     }
   ],
   "excludedPaths": [
     "Directory.Build.props",
-    "docs/project-statistics.config.json"
+    "Lastenheft_Abarbeitungsreihenfolge.md",
+    "docs/project-statistics.config.json",
+    "requirements/intakes/active/*Lastenheft_TerminalGui_Migration*",
+    "requirements/intakes/series/tinycalc-delivery/intake-review-request.json",
+    "requirements/intakes/series/tinycalc-delivery/intake-review-result.json",
+    "requirements/intakes/series/tinycalc-delivery/manifest.json",
+    "requirements/intakes/series/tinycalc-delivery/operation.json",
+    "requirements/intakes/series/tinycalc-delivery/order.md",
+    "requirements/intakes/series/tinycalc-delivery/receipt.json",
+    "requirements/intakes/series-archive/tinycalc-delivery/20260830T145602Z/*",
+    "scripts/render-requirements-intake-governance.mjs",
+    "scripts/validate-requirements-intake-alignment.mjs",
+    "specs/intake-authoring-receipts/terminalgui-migration.json",
+    "specs/003-terminalgui-migration/autonomous-run-evidence.md",
+    "specs/003-terminalgui-migration/tasks.md",
+    "specs/003-terminalgui-migration/evidence/delivery.md",
+    "specs/003-terminalgui-migration/evidence/platform-ci.md"
   ],
   "categoryOverrides": []
 }
