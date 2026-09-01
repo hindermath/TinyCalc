@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "documentType": "IntakeSeriesReceipt",
+  "receiptId": "f348d5e6-a47b-46ac-81f7-cca1adaea235",
+  "seriesId": "5b4523b4-d946-4091-9cbc-11825af94332",
+  "generator": {
+    "preset": "intake-sequencing-governance",
+    "version": "0.2.3"
+  },
+  "createdAt": "2026-08-31T22:17:02Z",
+  "operation": {
+    "operationId": "caa91395-702c-43e5-af48-9de5e36c31d8",
+    "type": "Update",
+    "authorityEvidence": "Thorsten instructed on 2026-09-01 Europe/Berlin to create only Lastenhefte and intake files, roll back any implementation start, and improve the intake plan. No implementation, commit, push, pull request, merge, or bypass authority is granted."
+  },
+  "status": "Ready",
+  "manifest": {
+    "path": "requirements/intakes/series/tinycalc-delivery/manifest.json",
+    "normalizedSha256": "f6764be50bd8a04a963ae7ec3a495e4faf2753edd328fa9089b94dde03d8239f"
+  },
+  "supersedes": {
+    "receiptPath": "requirements/intakes/series-archive/tinycalc-delivery/20260831T221702Z/receipt.json",
+    "receiptNormalizedSha256": "6990eebc2aa5a8f6bbbc1bae4bcd69da7dc029ea860c18ab29e40cf457567942",
+    "manifestArchivePath": "requirements/intakes/series-archive/tinycalc-delivery/20260831T221702Z/manifest.json",
+    "manifestArchiveSha256": "60aa9ea242b8081135e2ac1bfcf1bd50929e60bf9a9ebefe5ee0047bfeb6bd8d"
+  },
+  "tombstone": {
+    "path": "N/A",
+    "normalizedSha256": "N/A"
+  },
+  "nextAction": "$speckit-intake-series-status"
+}

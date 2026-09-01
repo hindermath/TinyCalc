@@ -1,0 +1,42 @@
+{
+  "schemaVersion": "1.0",
+  "documentType": "IntakeOperation",
+  "operationId": "32428ec7-e89a-4ceb-aa70-8749e49f6595",
+  "type": "Update",
+  "status": "Completed",
+  "createdAt": "2026-09-01T07:17:52Z",
+  "authorityEvidence": "The user explicitly requested implementation of the approved intake-only consolidation plan. No product implementation, commit, push, pull request, merge, bypass, provider, or follow-up-feature authority is granted.",
+  "proposalPath": "specs/intake-authoring-operations/32428ec7-e89a-4ceb-aa70-8749e49f6595/proposal.json",
+  "proposalNormalizedSha256": "b68eb5a5926163169c7d957c85f2a5a15ba3db51c89e87bb66cc4d0d0c8f4995",
+  "approval": {
+    "approved": true,
+    "approvedBy": "Thorsten Hindermann",
+    "approvedAt": "2026-09-01T07:17:52Z",
+    "evidence": "Explicit user request: Implement the approved intake-only plan."
+  },
+  "stagingDirectory": "specs/intake-authoring-operations/32428ec7-e89a-4ceb-aa70-8749e49f6595/staging",
+  "intendedTargets": [
+    "requirements/intakes/active/Lastenheft_Formelkopie-und-Tabellenoperationen_V1.md",
+    "specs/intake-authoring-receipts/formelkopie-und-tabellenoperationen-v1.json",
+    "requirements/intakes/archive/formelkopie-und-tabellenoperationen-v1/20260901T071752Z/Lastenheft_Formelkopie-und-Tabellenoperationen_V1.md",
+    "specs/intake-authoring-receipts/history/formelkopie-und-tabellenoperationen-v1.20260901T071752Z.json"
+  ],
+  "validatedTargets": [
+    "requirements/intakes/active/Lastenheft_Formelkopie-und-Tabellenoperationen_V1.md",
+    "specs/intake-authoring-receipts/formelkopie-und-tabellenoperationen-v1.json",
+    "requirements/intakes/archive/formelkopie-und-tabellenoperationen-v1/20260901T071752Z/Lastenheft_Formelkopie-und-Tabellenoperationen_V1.md",
+    "specs/intake-authoring-receipts/history/formelkopie-und-tabellenoperationen-v1.20260901T071752Z.json"
+  ],
+  "publishedTargets": [
+    "requirements/intakes/active/Lastenheft_Formelkopie-und-Tabellenoperationen_V1.md",
+    "specs/intake-authoring-receipts/formelkopie-und-tabellenoperationen-v1.json",
+    "requirements/intakes/archive/formelkopie-und-tabellenoperationen-v1/20260901T071752Z/Lastenheft_Formelkopie-und-Tabellenoperationen_V1.md",
+    "specs/intake-authoring-receipts/history/formelkopie-und-tabellenoperationen-v1.20260901T071752Z.json"
+  ],
+  "rollbackBoundary": "The byte-identical prior target and receipt are archived; no product implementation or unrelated intake content is changed.",
+  "failure": {
+    "class": "N/A",
+    "message": "N/A"
+  },
+  "nextAction": "$speckit-intake-review requirements/intakes/active/Lastenheft_Formelkopie-und-Tabellenoperationen_V1.md"
+}

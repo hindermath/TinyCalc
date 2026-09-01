@@ -87,7 +87,7 @@
   "series": {
     "seriesId": "5b4523b4-d946-4091-9cbc-11825af94332",
     "manifestPath": "requirements/intakes/series/tinycalc-delivery/manifest.json",
-    "order": 5,
+    "order": 6,
     "role": "OrderedMember",
     "supersedesIntakeIds": []
   },

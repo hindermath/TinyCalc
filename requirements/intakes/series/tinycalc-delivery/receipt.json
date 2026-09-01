@@ -1,28 +1,28 @@
 {
   "schemaVersion": "1.0",
   "documentType": "IntakeSeriesReceipt",
-  "receiptId": "51757b18-f1fb-4742-b562-a6ac61728d47",
+  "receiptId": "711d1d7c-6a7b-43f7-ac21-dd256c8043e2",
   "seriesId": "5b4523b4-d946-4091-9cbc-11825af94332",
   "generator": {
     "preset": "intake-sequencing-governance",
     "version": "0.2.3"
   },
-  "createdAt": "2026-08-30T14:56:02Z",
+  "createdAt": "2026-09-01T07:17:52Z",
   "operation": {
-    "operationId": "f02706bb-83bd-4c66-946f-d2080cfac62f",
+    "operationId": "37a3b85b-bd5b-4dbf-b8fa-d796292f3bda",
     "type": "Update",
-    "authorityEvidence": "Thorsten explicitly authorized continued serial autonomous Spec Kit runs through 2026-08-31 05:00 Europe/Berlin with MergeAndSync and narrow Admin-Bypass authority; Feature 003 task T073 limits this closeout to one branch-qualified Lastenheft rename, one tinycalc-delivery series mutation, and one causal closeout pull request."
+    "authorityEvidence": "The user explicitly requested implementation of the approved intake-only consolidation plan. No product implementation, commit, push, pull request, merge, bypass, provider, or follow-up-feature authority is granted."
   },
   "status": "Ready",
   "manifest": {
     "path": "requirements/intakes/series/tinycalc-delivery/manifest.json",
-    "normalizedSha256": "60aa9ea242b8081135e2ac1bfcf1bd50929e60bf9a9ebefe5ee0047bfeb6bd8d"
+    "normalizedSha256": "fb9fa46d7f7fa411c4795931b9462c569a5c21e8cdf7e21a7b023d5e68e028c1"
   },
   "supersedes": {
-    "receiptPath": "requirements/intakes/series-archive/tinycalc-delivery/20260830T145602Z/receipt.json",
-    "receiptNormalizedSha256": "e24fc005f00c639dee63b75a977e4092aa28971900e7bf4c58355bb1cf6ab1be",
-    "manifestArchivePath": "requirements/intakes/series-archive/tinycalc-delivery/20260830T145602Z/manifest.json",
-    "manifestArchiveSha256": "eef3cfd5b9e43395ab9ee59848bb183f1429a3104e5ce4a0980393987a530be2"
+    "receiptPath": "requirements/intakes/series-archive/tinycalc-delivery/20260901T071752Z/receipt.json",
+    "receiptNormalizedSha256": "5b37b4598163d274a3aff9dfac6ce3607ce5fb0a977da1ac2582b067caaa0b4b",
+    "manifestArchivePath": "requirements/intakes/series-archive/tinycalc-delivery/20260901T071752Z/manifest.json",
+    "manifestArchiveSha256": "f6764be50bd8a04a963ae7ec3a495e4faf2753edd328fa9089b94dde03d8239f"
   },
   "tombstone": {
     "path": "N/A",

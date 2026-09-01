@@ -1,0 +1,36 @@
+{
+  "schemaVersion": "1.0",
+  "documentType": "IntakeOperation",
+  "operationId": "fc038bcb-d385-45dd-adf1-3e12c34abc93",
+  "type": "Update",
+  "status": "Completed",
+  "createdAt": "2026-08-31T22:15:00Z",
+  "authorityEvidence": "User explicitly requested version-neutral PL/0 dependency wording and limited execution to Lastenheft and intake artifacts only.",
+  "proposalPath": "specs/intake-authoring-operations/fc038bcb-d385-45dd-adf1-3e12c34abc93/proposal.json",
+  "proposalNormalizedSha256": "6b5b8257a84e1f50ec31a443ecfd58700f9839e4f5de230ceb1ed2bd1167a14d",
+  "approval": {
+    "approved": true,
+    "approvedBy": "Thorsten Hindermann",
+    "approvedAt": "2026-08-31T22:15:00Z",
+    "evidence": "Explicit user request to make the plan and PL/0 intake version-neutral."
+  },
+  "stagingDirectory": "specs/intake-authoring-operations/fc038bcb-d385-45dd-adf1-3e12c34abc93/staging",
+  "intendedTargets": [
+    "requirements/intakes/active/Lastenheft_PL0-Zellfunktionen_V1.md",
+    "specs/intake-authoring-receipts/pl0-zellfunktionen-v1.json"
+  ],
+  "validatedTargets": [
+    "requirements/intakes/active/Lastenheft_PL0-Zellfunktionen_V1.md",
+    "specs/intake-authoring-receipts/pl0-zellfunktionen-v1.json"
+  ],
+  "publishedTargets": [
+    "requirements/intakes/active/Lastenheft_PL0-Zellfunktionen_V1.md",
+    "specs/intake-authoring-receipts/pl0-zellfunktionen-v1.json"
+  ],
+  "rollbackBoundary": "The byte-identical prior target and receipt are archived; no product implementation or unrelated intake is changed.",
+  "failure": {
+    "class": "N/A",
+    "message": "N/A"
+  },
+  "nextAction": "$speckit-intake-review requirements/intakes/active/Lastenheft_PL0-Zellfunktionen_V1.md"
+}

@@ -1,0 +1,42 @@
+{
+  "schemaVersion": "1.0",
+  "documentType": "IntakeOperation",
+  "operationId": "85e5cd04-bf99-47b1-bad9-04a6469873dc",
+  "type": "Update",
+  "status": "Completed",
+  "createdAt": "2026-09-01T07:17:52Z",
+  "authorityEvidence": "The user explicitly requested implementation of the approved intake-only consolidation plan. No product implementation, commit, push, pull request, merge, bypass, provider, or follow-up-feature authority is granted.",
+  "proposalPath": "specs/intake-authoring-operations/85e5cd04-bf99-47b1-bad9-04a6469873dc/proposal.json",
+  "proposalNormalizedSha256": "fa8302ef55f0d322b7088c2c0817b0f89312cd700f294c7a92491b74b85dab32",
+  "approval": {
+    "approved": true,
+    "approvedBy": "Thorsten Hindermann",
+    "approvedAt": "2026-09-01T07:17:52Z",
+    "evidence": "Explicit user request: Implement the approved intake-only plan."
+  },
+  "stagingDirectory": "specs/intake-authoring-operations/85e5cd04-bf99-47b1-bad9-04a6469873dc/staging",
+  "intendedTargets": [
+    "requirements/intakes/active/Lastenheft_Rename_MicroCalc_TinyCalc.md",
+    "specs/intake-authoring-receipts/rename-microcalc-tinycalc.json",
+    "requirements/intakes/archive/rename-microcalc-tinycalc/20260901T071752Z/Lastenheft_Rename_MicroCalc_TinyCalc.md",
+    "specs/intake-authoring-receipts/history/rename-microcalc-tinycalc.20260901T071752Z.json"
+  ],
+  "validatedTargets": [
+    "requirements/intakes/active/Lastenheft_Rename_MicroCalc_TinyCalc.md",
+    "specs/intake-authoring-receipts/rename-microcalc-tinycalc.json",
+    "requirements/intakes/archive/rename-microcalc-tinycalc/20260901T071752Z/Lastenheft_Rename_MicroCalc_TinyCalc.md",
+    "specs/intake-authoring-receipts/history/rename-microcalc-tinycalc.20260901T071752Z.json"
+  ],
+  "publishedTargets": [
+    "requirements/intakes/active/Lastenheft_Rename_MicroCalc_TinyCalc.md",
+    "specs/intake-authoring-receipts/rename-microcalc-tinycalc.json",
+    "requirements/intakes/archive/rename-microcalc-tinycalc/20260901T071752Z/Lastenheft_Rename_MicroCalc_TinyCalc.md",
+    "specs/intake-authoring-receipts/history/rename-microcalc-tinycalc.20260901T071752Z.json"
+  ],
+  "rollbackBoundary": "The byte-identical prior target and receipt are archived; no product implementation or unrelated intake content is changed.",
+  "failure": {
+    "class": "N/A",
+    "message": "N/A"
+  },
+  "nextAction": "$speckit-intake-review requirements/intakes/active/Lastenheft_Rename_MicroCalc_TinyCalc.md"
+}

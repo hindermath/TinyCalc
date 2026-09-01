@@ -1,0 +1,10 @@
+{
+  "schemaVersion": "1.0",
+  "proposalId": "8101e4ff-6a53-4aca-9da0-cb7e5c5baf5d",
+  "type": "Update",
+  "target": "requirements/intakes/active/Lastenheft_Legacy-Kompatibilitaet_V1.md",
+  "change": "Add current and target state, complete legacy source disposition, compiler-authentic standard and 8087 fixtures, and evidence-backed BCD exclusion.",
+  "scopePreserved": true,
+  "approved": true,
+  "authorityEvidence": "The user explicitly approved compiler-authentic fixtures, research-first BCD treatment, the resulting BCD non-goal, and implementation of the intake-only plan."
+}

@@ -1,13 +1,13 @@
 {
   "schemaVersion": "1.1",
-  "reviewId": "2c338c63-9f64-47c1-ba50-a95c7ea3fce1",
+  "reviewId": "c00e3d93-58fe-4d36-b1a4-94090cca1137",
   "mode": "Series",
   "status": "Ready",
   "policy": "tinycalc-delivery-v1",
-  "reviewedAt": "2026-08-29T16:19:38Z",
+  "reviewedAt": "2026-09-01T07:48:26Z",
   "repository": {
     "root": ".",
-    "head": "c7a9cbf50d732e0e521e6f8ae9ba1cc56612bf22"
+    "head": "4f1b612f54690e49ba3cb02269d469ec2b309f2c"
   },
   "targets": [
     {
@@ -23,15 +23,21 @@
       "gitBlob": "N/A"
     },
     {
-      "path": "requirements/intakes/active/Lastenheft_Rename_MicroCalc_TinyCalc.md",
+      "path": "requirements/intakes/active/Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md",
       "role": "OrderedMember",
-      "normalizedSha256": "951950e7ca8c726d9d92756b2e87e405af91668e6010aef3751e643278b46990",
+      "normalizedSha256": "f7b72c2abbd55d197cbc3cee5050f189868656ae0cff8b8745fa430535632d40",
       "gitBlob": "N/A"
     },
     {
       "path": "requirements/intakes/active/Lastenheft_A11Y_TUI.md",
       "role": "OrderedMember",
-      "normalizedSha256": "715af76d7875650acd3a39ed15c46e28d19a6dd1ad3bff29b6be6fb7987db7bc",
+      "normalizedSha256": "820e10c7229720fbda87360b9ee1abf6ac907aa2b27a1d9dc42bfa7b110a2a01",
+      "gitBlob": "N/A"
+    },
+    {
+      "path": "requirements/intakes/active/Lastenheft_Rename_MicroCalc_TinyCalc.md",
+      "role": "OrderedMember",
+      "normalizedSha256": "49642f8486493627b6ebc30454423e33fdad748ed6d434943a78aa79e6440f1c",
       "gitBlob": "N/A"
     },
     {
@@ -49,7 +55,19 @@
     {
       "path": "requirements/intakes/active/Lastenheft_PL0-Zellfunktionen_V1.md",
       "role": "OrderedMember",
-      "normalizedSha256": "2333b3f24bdc0bc64d0af49fe2e7ba7d5bea70aca5881b64d2731cd46274c94d",
+      "normalizedSha256": "bbec90bb96a7b40f7f995df2a3ec1095a9d25acde1b98f85773315c91d8cdc90",
+      "gitBlob": "N/A"
+    },
+    {
+      "path": "requirements/intakes/active/Lastenheft_Legacy-Kompatibilitaet_V1.md",
+      "role": "OrderedMember",
+      "normalizedSha256": "2e6a8036d18e7d3ed7360623f841a31411d245c5acf1441f0fe9d5877fc475b1",
+      "gitBlob": "N/A"
+    },
+    {
+      "path": "requirements/intakes/active/Lastenheft_Formelkopie-und-Tabellenoperationen_V1.md",
+      "role": "OrderedMember",
+      "normalizedSha256": "3bf64c36fde0c6e109f3e331d2595a06232deb275b3a8eb65a5136e0fd27aec8",
       "gitBlob": "N/A"
     },
     {
@@ -79,20 +97,25 @@
     "individual": [
       "requirements/intakes/active/Lastenheft_Constitution_Change.002-constitution-change.md",
       "requirements/intakes/active/Lastenheft_TerminalGui_Migration.003-terminalgui-migration.md",
-      "requirements/intakes/active/Lastenheft_Rename_MicroCalc_TinyCalc.md",
+      "requirements/intakes/active/Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md",
       "requirements/intakes/active/Lastenheft_A11Y_TUI.md",
+      "requirements/intakes/active/Lastenheft_Rename_MicroCalc_TinyCalc.md",
       "requirements/intakes/active/Lastenheft_Didactic-Inline-Code-Comment-Hardening.md",
       "requirements/intakes/active/Lastenheft_Secure-Development-Hardening.md",
       "requirements/intakes/active/Lastenheft_PL0-Zellfunktionen_V1.md",
+      "requirements/intakes/active/Lastenheft_Legacy-Kompatibilitaet_V1.md",
+      "requirements/intakes/active/Lastenheft_Formelkopie-und-Tabellenoperationen_V1.md",
       "requirements/intakes/active/Lastenheft_Sandbox-gestuetzte-Secure-Development-Haertung.md",
       "requirements/intakes/active/Lastenheft_RL-SE-Checklist-Selbstpruefung.md",
       "requirements/intakes/active/Lastenheft_GSDB-Spec-Kit-Intensivpruefung.md"
     ],
     "series": [
-      "Ten active intake hashes, lifecycle states, four roots, and six internal product-chain gates",
-      "PL/0 cell functions follow secure-development hardening and enforce the external TinyPl0 completion and NuGet package gate",
-      "Independent sandbox, RL-SE, and GSDB roots without invented product dependencies",
-      "Historical baseline and predecessor receipts preserved"
+      "Thirteen current target hashes, lifecycle states, four roots, and nine binding product-chain gates",
+      "Complete current-product contract before accessibility acceptance and rename release-closeout",
+      "Version-neutral repository-pin preflight without automatic dependency upgrades",
+      "PL/0 followed by evidenced MCS legacy compatibility and separate structural spreadsheet extensions",
+      "NIST SSDF and CWE Top 25 always; STRIDE/CAPEC, SBOM/VEX/SLSA, WCAG 2.2 AA, and explicit N/A dispositions as applicable",
+      "Byte-identical predecessor targets, receipts, series evidence, and superseded review evidence retained"
     ],
     "workers": []
   },
@@ -102,9 +125,9 @@
     "medium": 0,
     "low": 0
   },
-  "supersedes": "b9edc458-8339-4e8e-8f4f-3cabc2f96112",
+  "supersedes": "2c338c63-9f64-47c1-ba50-a95c7ea3fce1",
   "requestEvidence": {
     "path": "requirements/intakes/series/tinycalc-delivery/intake-review-request.json",
-    "normalizedSha256": "f7d4cea5d69ca4142d345a84d7f4f15fd0fa73003ad8741c2cad666ab3e83958"
+    "normalizedSha256": "c3b98052b996906507960936281eea71986cd1e7d5df208226598a45b8b83e62"
   }
 }

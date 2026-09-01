@@ -1,0 +1,10 @@
+{
+  "schemaVersion": "1.0",
+  "proposalId": "c48ca8b2-d150-4b37-b629-0dc1e0f82fb8",
+  "type": "Update",
+  "target": "requirements/intakes/active/Lastenheft_A11Y_TUI.md",
+  "change": "Replace stale migration and fixed-version assumptions with current-state A11Y requirements after functional acceptance and impact-triggered PTY, VoiceOver, and DocFX evidence.",
+  "scopePreserved": true,
+  "approved": true,
+  "authorityEvidence": "The user explicitly requested implementation of the approved intake-only consolidation plan."
+}

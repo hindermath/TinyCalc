@@ -1,0 +1,10 @@
+{
+  "schemaVersion": "1.0",
+  "proposalId": "17a8a146-6e67-43b6-a2ee-da7ca2a94d53",
+  "type": "Update",
+  "target": "requirements/intakes/active/Lastenheft_Rename_MicroCalc_TinyCalc.md",
+  "change": "Replace stale fixed counts and migration ordering with an execution-time live inventory, historical allowlist, JSON compatibility, and full release-closeout regression after A11Y.",
+  "scopePreserved": true,
+  "approved": true,
+  "authorityEvidence": "The user explicitly requested implementation of the approved intake-only consolidation plan."
+}

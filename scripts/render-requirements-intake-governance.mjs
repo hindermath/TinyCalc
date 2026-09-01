@@ -16,26 +16,30 @@ const json = (value) => `${JSON.stringify(value, null, 2)}\n`;
 const config = readJson("requirements/intake-governance-config.json");
 const seriesRoot = "requirements/intakes/series/tinycalc-delivery";
 const seriesId = "5b4523b4-d946-4091-9cbc-11825af94332";
-const seriesReceiptId = "51757b18-f1fb-4742-b562-a6ac61728d47";
-const seriesOperationId = "f02706bb-83bd-4c66-946f-d2080cfac62f";
-const reviewId = "2c338c63-9f64-47c1-ba50-a95c7ea3fce1";
+const seriesReceiptId = "711d1d7c-6a7b-43f7-ac21-dd256c8043e2";
+const seriesOperationId = "37a3b85b-bd5b-4dbf-b8fa-d796292f3bda";
+const reviewId = "c00e3d93-58fe-4d36-b1a4-94090cca1137";
 const createdAt = "2026-07-26T21:00:00Z";
-const seriesUpdatedAt = "2026-08-30T14:56:02Z";
-const reviewedAt = "2026-08-29T16:19:38Z";
-const reviewHead = "c7a9cbf50d732e0e521e6f8ae9ba1cc56612bf22";
-const seriesArchiveRoot = "requirements/intakes/series-archive/tinycalc-delivery/20260830T145602Z";
-const seriesAuthorityEvidence = "Thorsten explicitly authorized continued serial autonomous Spec Kit runs through 2026-08-31 05:00 Europe/Berlin with MergeAndSync and narrow Admin-Bypass authority; Feature 003 task T073 limits this closeout to one branch-qualified Lastenheft rename, one tinycalc-delivery series mutation, and one causal closeout pull request.";
+const seriesUpdatedAt = "2026-09-01T07:17:52Z";
+const reviewedAt = "2026-09-01T07:48:26Z";
+const reviewHead = "4f1b612f54690e49ba3cb02269d469ec2b309f2c";
+const seriesArchiveRoot = "requirements/intakes/series-archive/tinycalc-delivery/20260901T071752Z";
+const reviewArchiveRoot = "requirements/intakes/series-archive/tinycalc-delivery/20260901T071752Z-review";
+const seriesAuthorityEvidence = "The user explicitly requested implementation of the approved intake-only consolidation plan. No product implementation, commit, push, pull request, merge, bypass, provider, or follow-up-feature authority is granted.";
 
 // Der optionale Vorgängername hält die historische Quelle stabil, wenn der aktive Intake nach der Lieferung branchgestempelt wird.
 // The optional predecessor name keeps the historical source stable when delivery adds the branch stamp to the active intake.
 const members = [
   ["constitution-change", "Lastenheft_Constitution_Change.002-constitution-change.md", "Completed", "b00956e5-e42b-48c4-b63d-ee748cad27f3", "4936d97b-6206-433e-b76c-a570c1842695"],
   ["terminalgui-migration", "Lastenheft_TerminalGui_Migration.003-terminalgui-migration.md", "Completed", "098464e1-cbf6-4812-8b42-c88a55d3c192", "9d791f78-d8ad-4076-aab6-acd550bcc331", "Lastenheft_TerminalGui_Migration.md"],
-  ["rename-microcalc-tinycalc", "Lastenheft_Rename_MicroCalc_TinyCalc.md", "Eligible", "b4e6471a-404f-4dc4-a4ea-51659bbb093d", "313385fe-d32f-4236-a6b1-b35630aa375c"],
-  ["a11y-tui", "Lastenheft_A11Y_TUI.md", "Blocked", "f36ec0dd-33e3-4f34-aaf8-e264f41057ff", "418ea177-4ff8-4a61-8806-08fc7be4a85e"],
+  ["tui-funktionsabnahme-und-regressionsvertrag", "Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md", "Eligible", "fa3e818c-350d-497c-8216-31230ae57c67", "d4d23f7a-37a6-435c-be84-e6397fa37c48"],
+  ["a11y-tui", "Lastenheft_A11Y_TUI.md", "Blocked", "d8b0496b-b2f4-4c34-bece-bd08bc420604", "e7b56721-0a8a-4a3c-870d-7dbe36039a04"],
+  ["rename-microcalc-tinycalc", "Lastenheft_Rename_MicroCalc_TinyCalc.md", "Blocked", "cbb11a6e-0b5c-4b47-a49c-37648ba16cb6", "85e5cd04-bf99-47b1-bad9-04a6469873dc"],
   ["didactic-inline-code-comment-hardening", "Lastenheft_Didactic-Inline-Code-Comment-Hardening.md", "Blocked", "fb3cd161-2086-4cb0-8a8e-a72d1db26500", "a6780a05-df3a-401a-ad1f-796cd3656f1a"],
   ["secure-development-hardening", "Lastenheft_Secure-Development-Hardening.md", "Blocked", "fc7fc58f-180b-43f5-86e6-94d5feb93377", "ad3da51c-6f14-4617-8472-3a13b4b19673"],
-  ["pl0-zellfunktionen-v1", "Lastenheft_PL0-Zellfunktionen_V1.md", "Blocked", "1895dbae-6b5a-42f0-a1c0-3fa49ad39fca", "289b40fa-6023-4655-9e03-0699050569e8"],
+  ["pl0-zellfunktionen-v1", "Lastenheft_PL0-Zellfunktionen_V1.md", "Blocked", "3833866f-3334-4ea9-a92d-0c5748af17da", "d4dc7910-16c8-4ddb-9743-2ac553a5ffcb"],
+  ["legacy-kompatibilitaet-v1", "Lastenheft_Legacy-Kompatibilitaet_V1.md", "Blocked", "dc355aa6-c523-414c-a472-542967ba62ed", "97c7ee77-1286-4642-92fc-c64982ac18a5"],
+  ["formelkopie-und-tabellenoperationen-v1", "Lastenheft_Formelkopie-und-Tabellenoperationen_V1.md", "Blocked", "8d8ca7c4-b610-4aab-9f6c-b9a738961a87", "32428ec7-e89a-4ceb-aa70-8749e49f6595"],
   ["sandbox-gestuetzte-secure-development-haertung", "Lastenheft_Sandbox-gestuetzte-Secure-Development-Haertung.md", "Pending", "dcbee93b-bb9f-49f5-b363-fbe082f7dc1e", "aeb455e1-e871-475f-9c6e-29f8b201c9fd"],
   ["rl-se-checklist-selbstpruefung", "Lastenheft_RL-SE-Checklist-Selbstpruefung.md", "Pending", "2093b09a-e0bf-4b03-9df9-b81594d23d2d", "999ece6f-b454-4150-afeb-ce544b76c29d"],
   ["gsdb-spec-kit-intensivpruefung", "Lastenheft_GSDB-Spec-Kit-Intensivpruefung.md", "Pending", "704cea09-a869-49a5-baf9-70f24aa8d67b", "9352f182-123b-43b1-8959-aea8e8da9612"],
@@ -52,7 +56,14 @@ const members = [
     slug === "constitution-change" ? "Lastenheft_Constitution_Change.md" : (priorFileName ?? fileName)
   }`,
   priorReceipt: `specs/intake-authoring-receipts/history/${slug}.schema-1.1.json`,
-  customReceipt: slug === "pl0-zellfunktionen-v1",
+  customReceipt: new Set([
+    "tui-funktionsabnahme-und-regressionsvertrag",
+    "a11y-tui",
+    "rename-microcalc-tinycalc",
+    "pl0-zellfunktionen-v1",
+    "legacy-kompatibilitaet-v1",
+    "formelkopie-und-tabellenoperationen-v1",
+  ]).has(slug),
 }));
 
 const targets = members.map((member) => member.path);
@@ -63,6 +74,9 @@ const dependencyPairs = [
   [3, 4],
   [4, 5],
   [5, 6],
+  [6, 7],
+  [7, 8],
+  [8, 9],
 ];
 const dependencies = dependencyPairs.map(([from, to]) => ({
   from: targets[from],
@@ -211,9 +225,9 @@ const seriesReceipt = {
   manifest: {path: manifestPath, normalizedSha256: manifestHash},
   supersedes: {
     receiptPath: `${seriesArchiveRoot}/receipt.json`,
-    receiptNormalizedSha256: "e24fc005f00c639dee63b75a977e4092aa28971900e7bf4c58355bb1cf6ab1be",
+    receiptNormalizedSha256: "5b37b4598163d274a3aff9dfac6ce3607ce5fb0a977da1ac2582b067caaa0b4b",
     manifestArchivePath: `${seriesArchiveRoot}/manifest.json`,
-    manifestArchiveSha256: "eef3cfd5b9e43395ab9ee59848bb183f1429a3104e5ce4a0980393987a530be2",
+    manifestArchiveSha256: "f6764be50bd8a04a963ae7ec3a495e4faf2753edd328fa9089b94dde03d8239f",
   },
   tombstone: {path: "N/A", normalizedSha256: "N/A"},
   nextAction: "$speckit-intake-series-status",
@@ -232,8 +246,14 @@ const operation = {
     `${seriesRoot}/receipt.json`,
     `${seriesRoot}/operation.json`,
     `${seriesRoot}/order.md`,
+    "Lastenheft_Abarbeitungsreihenfolge.md",
+    "Pflichtenheft.md",
     `${seriesArchiveRoot}/manifest.json`,
     `${seriesArchiveRoot}/receipt.json`,
+    `${reviewArchiveRoot}/intake-review-request.json`,
+    `${reviewArchiveRoot}/intake-review-result.json`,
+    `${reviewArchiveRoot}/intake-review-report.md`,
+    `${reviewArchiveRoot}/superseded-review.json`,
   ],
   validation: {bash: "Pass", powerShell: "Pass"},
   publication: {
@@ -243,8 +263,14 @@ const operation = {
       `${seriesRoot}/receipt.json`,
       `${seriesRoot}/operation.json`,
       `${seriesRoot}/order.md`,
+      "Lastenheft_Abarbeitungsreihenfolge.md",
+      "Pflichtenheft.md",
       `${seriesArchiveRoot}/manifest.json`,
       `${seriesArchiveRoot}/receipt.json`,
+      `${reviewArchiveRoot}/intake-review-request.json`,
+      `${reviewArchiveRoot}/intake-review-result.json`,
+      `${reviewArchiveRoot}/intake-review-report.md`,
+      `${reviewArchiveRoot}/superseded-review.json`,
     ],
   },
 };
@@ -283,85 +309,128 @@ const result = {
   coverage: {
     individual: targets,
     series: [
-      "Ten active intake hashes, lifecycle states, four roots, and six internal product-chain gates",
-      "PL/0 cell functions follow secure-development hardening and enforce the external TinyPl0 completion and NuGet package gate",
-      "Independent sandbox, RL-SE, and GSDB roots without invented product dependencies",
-      "Historical baseline and predecessor receipts preserved",
+      "Thirteen current target hashes, lifecycle states, four roots, and nine binding product-chain gates",
+      "Complete current-product contract before accessibility acceptance and rename release-closeout",
+      "Version-neutral repository-pin preflight without automatic dependency upgrades",
+      "PL/0 followed by evidenced MCS legacy compatibility and separate structural spreadsheet extensions",
+      "NIST SSDF and CWE Top 25 always; STRIDE/CAPEC, SBOM/VEX/SLSA, WCAG 2.2 AA, and explicit N/A dispositions as applicable",
+      "Byte-identical predecessor targets, receipts, series evidence, and superseded review evidence retained",
     ],
     workers: [],
   },
   summary: {critical: 0, high: 0, medium: 0, low: 0},
-  supersedes: "b9edc458-8339-4e8e-8f4f-3cabc2f96112",
+  supersedes: "2c338c63-9f64-47c1-ba50-a95c7ea3fce1",
   requestEvidence: {path: requestPath, normalizedSha256: digest(json(request))},
 };
-const report = `# Intake Review: TinyCalc Delivery Series
+const report = `# Intake-Review: TinyCalc Delivery Series
 
 ## Identität / Identity
 
-- Review-ID: \`${reviewId}\`
+- Review-ID: \`c00e3d93-58fe-4d36-b1a4-94090cca1137\`
 - Modus: \`Series\`
 - Policy: \`tinycalc-delivery-v1\`
 - Ergebnis: \`Ready\`
-- Umfang: 10 Ziele, 4 Wurzeln und 6 interne verbindliche Abhängigkeiten
+- Umfang: 13 Ziele, 4 Wurzeln und 9 verbindliche interne Abhängigkeiten
 - Worker: keine
-- Vorgängerreview: \`b9edc458-8339-4e8e-8f4f-3cabc2f96112\`
+- Vorgängerreview: \`2c338c63-9f64-47c1-ba50-a95c7ea3fce1\`
 
-*The complete re-review covers all ten current targets, four roots, and six
-binding internal dependencies. It explicitly supersedes the remediation
-review.*
+*The complete re-review covers all thirteen current targets, four roots, and
+nine binding internal dependencies. It explicitly supersedes the stale
+ten-target review.*
 
 ## Ergebnis / Result
 
-Die Schema-2.0-Governance, Zielhashes, Reihenfolge, DAG-Wurzeln, internen
-Kanten und Authority-Grenzen sind konsistent. Das neue PL/0-Ziel steht nach
-der Secure-Development-Härtung. Sein externer Handoff prüft verbindlich den
-erfolgreichen TinyPl0-Abschluss und die verfügbare NuGet-Paketversion; eine
-lokale ProjectReference ist als Fallback verboten.
+Die Intake-Serie ist für die nachgelagerte Spec-Kit-Bearbeitung bereit. Alle
+13 Zielpfade und Hashes, die vier Wurzeln, die neun harten Kanten, die
+Lebenszykluszustände und die Authority-Grenzen sind konsistent. Die Kette
+lautet jetzt verbindlich:
 
-Finding \`IR001\` ist behoben. Ein neuer Begriffsabschnitt erklärt PL/0,
-P-Code und VM, Ganzzahl- und Cache-Grenzen, Debuggerzustand, NuGet-Vertrag,
-fail-closed/Defense in Depth sowie SBOM/VEX, Provenance/SLSA, STRIDE/CAPEC und
-OpenSSF Scorecard/OWASP SAMM deutsch zuerst und englisch danach auf
-CEFR-B2-Niveau. Scope, Anforderungen, Abnahmeschwellen, Reihenfolge, Gates und
-Delivery Authority blieben unverändert.
+\`Terminal.Gui-Migration -> vollständige Funktionsabnahme -> A11Y -> Rename ->
+didaktische Kommentare -> Secure Development -> PL/0 -> Legacy-Kompatibilität
+-> Formelkopie und Tabellenoperationen\`.
 
-*Schema 2.0 governance, target hashes, order, DAG roots, internal edges, and
-authority boundaries are consistent. IR001 is resolved through bilingual
-CEFR-B2 first-use explanations without changing the approved functional or
-authority boundaries.*
+Die drei unabhängigen Governance-Wurzeln für Sandbox-Härtung, RL-SE-Prüfung
+und GSDB-Prüfung bleiben ohne erfundene Produktabhängigkeiten erhalten.
 
-## Reparaturnachweis / Repair Evidence
+*The series is ready for downstream Spec Kit processing. Target identities,
+hashes, roots, hard gates, lifecycle states, and authority boundaries agree.
+The independent governance roots remain independent.*
 
-- Geändertes Ziel:
-  \`requirements/intakes/active/Lastenheft_PL0-Zellfunktionen_V1.md\`
-- Autorisierung: ausdrücklicher Aufruf von \`speckit-intake-repair\` für das
-  aktuelle Ergebnis \`b9edc458-8339-4e8e-8f4f-3cabc2f96112\`
-- Behobenes Finding: \`IR001\` / \`Medium\` / \`LearnerReadability\`
-- Verbleibende Findings: keine
+## Vollständiger Produktvertrag / Complete Product Contract
 
-*The explicit repair invocation authorized only the learner terminology
-change. IR001 is resolved and no finding remains.*
+Der neue Funktionsvertrag erfasst alle heute über TUI, README und migrierte
+Hilfe angebotenen Bedienwege mit stabilen, additiv erweiterbaren IDs. Seine
+Quellen- und Konfliktregel unterscheidet echte Angebote von eindeutigen
+Dokumentationsdefekten. Eine verbindliche Impact-Matrix ordnet Änderungen den
+erforderlichen Funktions-, A11Y-, PTY-/VoiceOver-, DocFX/axe/lynx- und
+Linux-/Windows-Nachweisen zu. Größere, unklare, dependency-bezogene,
+Rename- und Release-Änderungen erhalten die vollständige Matrix.
 
-## Risiken, Fragen und Authority / Risks, Questions And Authority
+*The new functional contract covers every capability currently offered by the
+TUI, README, and migrated help. Stable additive IDs and the impact matrix let
+future PL/0, legacy, and other features extend the contract without weakening
+regression coverage.*
 
+## Erweiterungen und Reihenfolge / Extensions And Order
+
+- PL/0 bleibt hinter Secure Development und ergänzt den Produktvertrag, ohne
+  bestehende IDs zu ersetzen. Der Dependency-Preflight löst die dann aktuell
+  freigegebenen Repository-Pins auf und führt kein automatisches Upgrade aus.
+- Legacy-Kompatibilität folgt PL/0. Version 1 umfasst belegte Standard- und
+  8087-MCS-Dialekte mit compiler-authentischen Fixtures; BCD bleibt auf Basis
+  der historischen Quellen ein ausdrücklich belegtes Nicht-Ziel.
+- Formelkopie sowie Einfügen und Löschen von Zeilen oder Spalten folgen als
+  eigenes Lastenheft. Überlappende Kopien verwenden einen unveränderlichen
+  Quell-Snapshot; strukturelle Operationen verschieben vollständige Zellrecords
+  atomar und machen ungültige Ziele als \`#REF!\` sichtbar.
+
+*PL/0, evidenced MCS compatibility, and structural spreadsheet features are
+separate ordered contracts. This separation keeps future additions traceable
+and lets the regression baseline grow before implementation begins.*
+
+## Sicherheit, A11Y und Authority / Security, A11Y And Authority
+
+NIST SSDF und CWE Top 25 gelten für die Level-2-Arbeit. STRIDE/CAPEC werden
+für Import- und Interpretergrenzen verwendet. SBOM und SLSA gelten für
+verteilbare Artefakte; VEX wird bei bekannten Schwachstellen benötigt. ASVS,
+Zero Trust und AI-SBOM sind für die lokale, nicht KI-basierte TUI jeweils mit
+Begründung \`N/A\`. WCAG 2.2 Level AA, deutsch-zuerst/englisch-danach und
+CEFR-B2 bleiben verbindlich.
+
+Das Ergebnis \`Ready\` bestätigt ausschließlich Qualität und Konsistenz der
+Intake-Artefakte. Es bestätigt keine fertige Produktimplementierung, keine
+bestandene TUI-Funktions- oder A11Y-Abnahme und erteilt keine Commit-, Push-,
+PR-, Merge-, Provider-, Paketveröffentlichungs- oder Bypass-Berechtigung.
+
+*NIST SSDF, CWE Top 25, applicable threat and supply-chain evidence, and WCAG
+2.2 AA are explicit. \`Ready\` applies only to intake quality; it is not product
+acceptance and grants no remote or delivery authority.*
+
+## Findings und nächste Aktion / Findings And Next Action
+
+- Critical: 0
+- High: 0
+- Medium: 0
+- Low: 0
 - Akzeptierte Risiken: keine
 - Offene Fragen: keine
-- Delivery Authority: \`LocalImplementation\`
-- Keine Commit-, Push-, PR-, Merge-, Provider-, Secret- oder
-  NuGet-Veröffentlichungsberechtigung wurde erteilt.
+- Nächste Aktion: \`$speckit-intake-series-next tinycalc-delivery\`
 
-*No risk was accepted and no question remains open. Local implementation
-authority grants neither remote actions nor NuGet publication.*
+*No finding, accepted risk, or open question remains. The next read-only step
+is to determine the currently eligible target from the validated series.*
 `;
 const rootOrderPath = "Lastenheft_Abarbeitungsreihenfolge.md";
 const orderDependencies = [
   "keine",
   "Constitution abgeschlossen",
-  "Terminal.Gui abgeschlossen",
+  "Terminal.Gui-Migration abgeschlossen",
+  "vollständige Funktionsabnahme",
+  "A11Y-Abnahme",
   "Rename",
-  "A11Y",
   "Kommentarhärtung",
   "Security und TinyPl0-NuGet-Liefergate",
+  "PL/0-Erweiterung",
+  "Legacy-Kompatibilität",
   "unabhängige Wurzel",
   "unabhängige Wurzel",
   "unabhängige Wurzel",
@@ -386,6 +455,9 @@ ${orderRows}
 
 Nur der explizite Zustand \`Eligible\` bezeichnet die bevorzugte nächste
 Ausführung. \`Pending\` erteilt keine automatische Ausführungsberechtigung.
+
+*Only the explicit \`Eligible\` state identifies the preferred next execution.
+\`Pending\` does not grant automatic execution authority.*
 `;
 const outputs = [
   [manifestPath, json(manifest)],

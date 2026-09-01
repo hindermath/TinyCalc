@@ -19,15 +19,21 @@
       "status": "Completed"
     },
     {
-      "path": "requirements/intakes/active/Lastenheft_Rename_MicroCalc_TinyCalc.md",
+      "path": "requirements/intakes/active/Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md",
       "role": "OrderedMember",
-      "normalizedSha256": "951950e7ca8c726d9d92756b2e87e405af91668e6010aef3751e643278b46990",
+      "normalizedSha256": "f7b72c2abbd55d197cbc3cee5050f189868656ae0cff8b8745fa430535632d40",
       "status": "Eligible"
     },
     {
       "path": "requirements/intakes/active/Lastenheft_A11Y_TUI.md",
       "role": "OrderedMember",
-      "normalizedSha256": "715af76d7875650acd3a39ed15c46e28d19a6dd1ad3bff29b6be6fb7987db7bc",
+      "normalizedSha256": "820e10c7229720fbda87360b9ee1abf6ac907aa2b27a1d9dc42bfa7b110a2a01",
+      "status": "Blocked"
+    },
+    {
+      "path": "requirements/intakes/active/Lastenheft_Rename_MicroCalc_TinyCalc.md",
+      "role": "OrderedMember",
+      "normalizedSha256": "49642f8486493627b6ebc30454423e33fdad748ed6d434943a78aa79e6440f1c",
       "status": "Blocked"
     },
     {
@@ -45,7 +51,19 @@
     {
       "path": "requirements/intakes/active/Lastenheft_PL0-Zellfunktionen_V1.md",
       "role": "OrderedMember",
-      "normalizedSha256": "2333b3f24bdc0bc64d0af49fe2e7ba7d5bea70aca5881b64d2731cd46274c94d",
+      "normalizedSha256": "bbec90bb96a7b40f7f995df2a3ec1095a9d25acde1b98f85773315c91d8cdc90",
+      "status": "Blocked"
+    },
+    {
+      "path": "requirements/intakes/active/Lastenheft_Legacy-Kompatibilitaet_V1.md",
+      "role": "OrderedMember",
+      "normalizedSha256": "2e6a8036d18e7d3ed7360623f841a31411d245c5acf1441f0fe9d5877fc475b1",
+      "status": "Blocked"
+    },
+    {
+      "path": "requirements/intakes/active/Lastenheft_Formelkopie-und-Tabellenoperationen_V1.md",
+      "role": "OrderedMember",
+      "normalizedSha256": "3bf64c36fde0c6e109f3e331d2595a06232deb275b3a8eb65a5136e0fd27aec8",
       "status": "Blocked"
     },
     {
@@ -82,18 +100,24 @@
     },
     {
       "from": "requirements/intakes/active/Lastenheft_TerminalGui_Migration.003-terminalgui-migration.md",
-      "to": "requirements/intakes/active/Lastenheft_Rename_MicroCalc_TinyCalc.md",
+      "to": "requirements/intakes/active/Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md",
       "kind": "HardCompletionGate",
       "binding": true
     },
     {
-      "from": "requirements/intakes/active/Lastenheft_Rename_MicroCalc_TinyCalc.md",
+      "from": "requirements/intakes/active/Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md",
       "to": "requirements/intakes/active/Lastenheft_A11Y_TUI.md",
       "kind": "HardCompletionGate",
       "binding": true
     },
     {
       "from": "requirements/intakes/active/Lastenheft_A11Y_TUI.md",
+      "to": "requirements/intakes/active/Lastenheft_Rename_MicroCalc_TinyCalc.md",
+      "kind": "HardCompletionGate",
+      "binding": true
+    },
+    {
+      "from": "requirements/intakes/active/Lastenheft_Rename_MicroCalc_TinyCalc.md",
       "to": "requirements/intakes/active/Lastenheft_Didactic-Inline-Code-Comment-Hardening.md",
       "kind": "HardCompletionGate",
       "binding": true
@@ -107,6 +131,18 @@
     {
       "from": "requirements/intakes/active/Lastenheft_Secure-Development-Hardening.md",
       "to": "requirements/intakes/active/Lastenheft_PL0-Zellfunktionen_V1.md",
+      "kind": "HardCompletionGate",
+      "binding": true
+    },
+    {
+      "from": "requirements/intakes/active/Lastenheft_PL0-Zellfunktionen_V1.md",
+      "to": "requirements/intakes/active/Lastenheft_Legacy-Kompatibilitaet_V1.md",
+      "kind": "HardCompletionGate",
+      "binding": true
+    },
+    {
+      "from": "requirements/intakes/active/Lastenheft_Legacy-Kompatibilitaet_V1.md",
+      "to": "requirements/intakes/active/Lastenheft_Formelkopie-und-Tabellenoperationen_V1.md",
       "kind": "HardCompletionGate",
       "binding": true
     }

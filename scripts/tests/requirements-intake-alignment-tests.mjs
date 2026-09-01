@@ -71,7 +71,10 @@ expectFailure("duplicate requirement", {
 }, /unique requirement IDs/);
 expectFailure("missing owner", {
   coveragePath: fixture("missing-owner", coverageSource, (value) => {
-    value.requirements[0].proposedOwnerGroup = "N/A";
+    const openRequirement = value.requirements.find((item) =>
+      ["Open", "PartiallySatisfied"].includes(item.status));
+    if (!openRequirement) throw new Error("fixture has no open requirement to clear");
+    openRequirement.proposedOwnerGroup = "N/A";
   }),
 }, /lacks owner/);
 

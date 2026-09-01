@@ -1,0 +1,119 @@
+{
+  "schemaVersion": "1.0",
+  "documentType": "IntakeSeriesManifest",
+  "seriesId": "5b4523b4-d946-4091-9cbc-11825af94332",
+  "title": "TinyCalc Delivery Intake Series",
+  "policy": "tinycalc-delivery-v1",
+  "status": "Active",
+  "orderedTargets": [
+    {
+      "path": "requirements/intakes/active/Lastenheft_Constitution_Change.002-constitution-change.md",
+      "role": "Primary",
+      "normalizedSha256": "04c4e1ba93d626463829a07f33b5591a6417b6aeaf89e805b637ab1bf5c26a0a",
+      "status": "Completed"
+    },
+    {
+      "path": "requirements/intakes/active/Lastenheft_TerminalGui_Migration.003-terminalgui-migration.md",
+      "role": "OrderedMember",
+      "normalizedSha256": "01db3bd8f2dc375fe1400a91580ce1a906dfc446c12fb8ad011419fe50fee94d",
+      "status": "Completed"
+    },
+    {
+      "path": "requirements/intakes/active/Lastenheft_Rename_MicroCalc_TinyCalc.md",
+      "role": "OrderedMember",
+      "normalizedSha256": "951950e7ca8c726d9d92756b2e87e405af91668e6010aef3751e643278b46990",
+      "status": "Eligible"
+    },
+    {
+      "path": "requirements/intakes/active/Lastenheft_A11Y_TUI.md",
+      "role": "OrderedMember",
+      "normalizedSha256": "715af76d7875650acd3a39ed15c46e28d19a6dd1ad3bff29b6be6fb7987db7bc",
+      "status": "Blocked"
+    },
+    {
+      "path": "requirements/intakes/active/Lastenheft_Didactic-Inline-Code-Comment-Hardening.md",
+      "role": "OrderedMember",
+      "normalizedSha256": "1cc552828fbfff244d9665e0d9f06e632b4dac4575d35d763213968fea2e646e",
+      "status": "Blocked"
+    },
+    {
+      "path": "requirements/intakes/active/Lastenheft_Secure-Development-Hardening.md",
+      "role": "OrderedMember",
+      "normalizedSha256": "d3e7688032d657270e186d6ca4e91fed0873bd5f753e26c173e4546ac138a39b",
+      "status": "Blocked"
+    },
+    {
+      "path": "requirements/intakes/active/Lastenheft_PL0-Zellfunktionen_V1.md",
+      "role": "OrderedMember",
+      "normalizedSha256": "2333b3f24bdc0bc64d0af49fe2e7ba7d5bea70aca5881b64d2731cd46274c94d",
+      "status": "Blocked"
+    },
+    {
+      "path": "requirements/intakes/active/Lastenheft_Sandbox-gestuetzte-Secure-Development-Haertung.md",
+      "role": "OrderedMember",
+      "normalizedSha256": "3669d72d727ceeff5510dde789f9c9c1ddf815bad9c55d5377378959f102f2a2",
+      "status": "Pending"
+    },
+    {
+      "path": "requirements/intakes/active/Lastenheft_RL-SE-Checklist-Selbstpruefung.md",
+      "role": "OrderedMember",
+      "normalizedSha256": "a0b1b4d778848e6a96304eb3bdea3c62c46e73f732c901c5b81fd893421fbaeb",
+      "status": "Pending"
+    },
+    {
+      "path": "requirements/intakes/active/Lastenheft_GSDB-Spec-Kit-Intensivpruefung.md",
+      "role": "OrderedMember",
+      "normalizedSha256": "efd35926e427cc80bdcb098aebc25ad506e2a6e4aadb73627a2317854d0b1aa7",
+      "status": "Pending"
+    }
+  ],
+  "roots": [
+    "requirements/intakes/active/Lastenheft_Constitution_Change.002-constitution-change.md",
+    "requirements/intakes/active/Lastenheft_Sandbox-gestuetzte-Secure-Development-Haertung.md",
+    "requirements/intakes/active/Lastenheft_RL-SE-Checklist-Selbstpruefung.md",
+    "requirements/intakes/active/Lastenheft_GSDB-Spec-Kit-Intensivpruefung.md"
+  ],
+  "dependencies": [
+    {
+      "from": "requirements/intakes/active/Lastenheft_Constitution_Change.002-constitution-change.md",
+      "to": "requirements/intakes/active/Lastenheft_TerminalGui_Migration.003-terminalgui-migration.md",
+      "kind": "HardCompletionGate",
+      "binding": true
+    },
+    {
+      "from": "requirements/intakes/active/Lastenheft_TerminalGui_Migration.003-terminalgui-migration.md",
+      "to": "requirements/intakes/active/Lastenheft_Rename_MicroCalc_TinyCalc.md",
+      "kind": "HardCompletionGate",
+      "binding": true
+    },
+    {
+      "from": "requirements/intakes/active/Lastenheft_Rename_MicroCalc_TinyCalc.md",
+      "to": "requirements/intakes/active/Lastenheft_A11Y_TUI.md",
+      "kind": "HardCompletionGate",
+      "binding": true
+    },
+    {
+      "from": "requirements/intakes/active/Lastenheft_A11Y_TUI.md",
+      "to": "requirements/intakes/active/Lastenheft_Didactic-Inline-Code-Comment-Hardening.md",
+      "kind": "HardCompletionGate",
+      "binding": true
+    },
+    {
+      "from": "requirements/intakes/active/Lastenheft_Didactic-Inline-Code-Comment-Hardening.md",
+      "to": "requirements/intakes/active/Lastenheft_Secure-Development-Hardening.md",
+      "kind": "HardCompletionGate",
+      "binding": true
+    },
+    {
+      "from": "requirements/intakes/active/Lastenheft_Secure-Development-Hardening.md",
+      "to": "requirements/intakes/active/Lastenheft_PL0-Zellfunktionen_V1.md",
+      "kind": "HardCompletionGate",
+      "binding": true
+    }
+  ],
+  "evidencePaths": [
+    "specs/requirements-reconciliation-20260726/requirements-coverage.json",
+    "specs/requirements-reconciliation-20260726/migration-proposal.json",
+    "Lastenheft_Abarbeitungsreihenfolge.md"
+  ]
+}

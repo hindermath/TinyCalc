@@ -1,31 +1,31 @@
 {
   "schemaVersion": "2.0",
   "documentType": "IntakeReceipt",
-  "receiptId": "f36ec0dd-33e3-4f34-aaf8-e264f41057ff",
+  "receiptId": "d8b0496b-b2f4-4c34-bece-bd08bc420604",
   "intakeId": "beb93d96-c7eb-4a45-b87b-fe1c6ebd51c0",
   "generator": {
     "preset": "intake-authoring-governance",
-    "version": "0.2.1"
+    "version": "0.3.1"
   },
-  "createdAt": "2026-07-26T21:00:00Z",
+  "createdAt": "2026-09-01T07:17:52Z",
   "operation": {
-    "operationId": "418ea177-4ff8-4a61-8806-08fc7be4a85e",
+    "operationId": "e7b56721-0a8a-4a3c-870d-7dbe36039a04",
     "type": "Update",
-    "authorityEvidence": "User-approved TinyCalc requirements and intake consolidation plan"
+    "authorityEvidence": "The user explicitly requested implementation of the approved intake-only consolidation plan. No product implementation, commit, push, pull request, merge, bypass, provider, or follow-up-feature authority is granted."
   },
   "status": "ReadyForReview",
   "target": {
     "path": "requirements/intakes/active/Lastenheft_A11Y_TUI.md",
-    "normalizedSha256": "715af76d7875650acd3a39ed15c46e28d19a6dd1ad3bff29b6be6fb7987db7bc"
+    "normalizedSha256": "820e10c7229720fbda87360b9ee1abf6ac907aa2b27a1d9dc42bfa7b110a2a01"
   },
   "sources": [
     {
       "sourceId": "SRC001",
       "order": 1,
       "kind": "File",
-      "label": "Archived predecessor intake",
+      "label": "Byte-identical prior active intake",
       "location": "Repository",
-      "path": "requirements/intakes/history/pre-intake-split-20260726/Lastenheft_A11Y_TUI.md",
+      "path": "requirements/intakes/archive/a11y-tui/20260901T071752Z/Lastenheft_A11Y_TUI.md",
       "requestedUrl": "N/A",
       "finalUrl": "N/A",
       "retrievedAt": "N/A",
@@ -36,9 +36,135 @@
       "lastModified": "N/A",
       "redirectChain": [],
       "rawSha256": "N/A",
-      "normalizedSha256": "6be69742f6fe1b103115098418bf61a02b7c8af22296927015806404a11f568f",
+      "normalizedSha256": "715af76d7875650acd3a39ed15c46e28d19a6dd1ad3bff29b6be6fb7987db7bc",
       "gitBlob": "N/A",
-      "proofBoundary": "Repository predecessor and normalized SHA-256"
+      "proofBoundary": "Byte-identical repository archive"
+    },
+    {
+      "sourceId": "SRC002",
+      "order": 2,
+      "kind": "Inline",
+      "label": "Approved current-state accessibility and impact-evidence decisions",
+      "location": "SnapshotOnly",
+      "path": "N/A",
+      "requestedUrl": "N/A",
+      "finalUrl": "N/A",
+      "retrievedAt": "N/A",
+      "httpStatus": "N/A",
+      "contentType": "N/A",
+      "contentLength": "N/A",
+      "etag": "N/A",
+      "lastModified": "N/A",
+      "redirectChain": [],
+      "rawSha256": "N/A",
+      "normalizedSha256": "b5a64abfc319be5143ecc9c41a1782c8af6623d85f53b9744bf7d89a73edb4c7",
+      "gitBlob": "N/A",
+      "proofBoundary": "SnapshotOnly"
+    },
+    {
+      "sourceId": "SRC003",
+      "order": 3,
+      "kind": "File",
+      "label": "Binding functional product-contract intake",
+      "location": "Repository",
+      "path": "requirements/intakes/active/Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md",
+      "requestedUrl": "N/A",
+      "finalUrl": "N/A",
+      "retrievedAt": "N/A",
+      "httpStatus": "N/A",
+      "contentType": "N/A",
+      "contentLength": "N/A",
+      "etag": "N/A",
+      "lastModified": "N/A",
+      "redirectChain": [],
+      "rawSha256": "N/A",
+      "normalizedSha256": "f7b72c2abbd55d197cbc3cee5050f189868656ae0cff8b8745fa430535632d40",
+      "gitBlob": "N/A",
+      "proofBoundary": "Current active intake and normalized SHA-256"
+    },
+    {
+      "sourceId": "SRC004",
+      "order": 4,
+      "kind": "File",
+      "label": "Current Terminal.Gui integration boundary",
+      "location": "Repository",
+      "path": "src/MicroCalc.Tui/Program.cs",
+      "requestedUrl": "N/A",
+      "finalUrl": "N/A",
+      "retrievedAt": "N/A",
+      "httpStatus": "N/A",
+      "contentType": "N/A",
+      "contentLength": "N/A",
+      "etag": "N/A",
+      "lastModified": "N/A",
+      "redirectChain": [],
+      "rawSha256": "N/A",
+      "normalizedSha256": "18e089937a1103ff4c85678a2f3c32c4e57c1df141c10d137992fccaa78d40a2",
+      "gitBlob": "21285e059b4cf245b4e65675cbb71ffbeb71ff85",
+      "proofBoundary": "Repository file and normalized SHA-256"
+    },
+    {
+      "sourceId": "SRC005",
+      "order": 5,
+      "kind": "File",
+      "label": "Current TUI colour and focus styling boundary",
+      "location": "Repository",
+      "path": "src/MicroCalc.Tui/GridColorScheme.cs",
+      "requestedUrl": "N/A",
+      "finalUrl": "N/A",
+      "retrievedAt": "N/A",
+      "httpStatus": "N/A",
+      "contentType": "N/A",
+      "contentLength": "N/A",
+      "etag": "N/A",
+      "lastModified": "N/A",
+      "redirectChain": [],
+      "rawSha256": "N/A",
+      "normalizedSha256": "ccce386bc400800068c46cacb6e51e9946f0e5bb4364d42bf7103283eea8d9c6",
+      "gitBlob": "2b7982c827bc004c538ca8e26ec9eb25c45c9385",
+      "proofBoundary": "Repository file and normalized SHA-256"
+    },
+    {
+      "sourceId": "SRC006",
+      "order": 6,
+      "kind": "File",
+      "label": "Bundled migrated help asset",
+      "location": "Repository",
+      "path": "src/MicroCalc.Tui/Resources/CALC.HLP",
+      "requestedUrl": "N/A",
+      "finalUrl": "N/A",
+      "retrievedAt": "N/A",
+      "httpStatus": "N/A",
+      "contentType": "N/A",
+      "contentLength": "N/A",
+      "etag": "N/A",
+      "lastModified": "N/A",
+      "redirectChain": [],
+      "rawSha256": "N/A",
+      "normalizedSha256": "04c8366203c1b4120b73f7e8dc30a9d6be673d0a4de41a7024eee608e646832f",
+      "gitBlob": "32ab848c2b02539b86df454cff94c4cf5c3ee354",
+      "proofBoundary": "Repository file and normalized SHA-256"
+    },
+    {
+      "sourceId": "SRC007",
+      "order": 7,
+      "kind": "File",
+      "label": "Migrated learner-facing help documentation",
+      "location": "Repository",
+      "path": "docs/help/microcalc-help.md",
+      "requestedUrl": "N/A",
+      "finalUrl": "N/A",
+      "retrievedAt": "N/A",
+      "httpStatus": "N/A",
+      "contentType": "N/A",
+      "contentLength": "N/A",
+      "etag": "N/A",
+      "lastModified": "N/A",
+      "redirectChain": [],
+      "rawSha256": "N/A",
+      "normalizedSha256": "c6ba22dcb82b17f17b052a33b7ebc541b8cf759203a2eddedeaf247f456026f3",
+      "gitBlob": "7e890b58d60c11602c2ab2b91085afd364537c04",
+      "proofBoundary": "Repository file and normalized SHA-256"
     }
   ],
   "profile": "level2-lastenheft",
@@ -47,20 +173,34 @@
     {
       "id": "IAD001",
       "status": "Answered",
-      "question": "Welcher Zielpfad ist nach der Konsolidierung verbindlich?",
-      "answer": "requirements/intakes/active/Lastenheft_A11Y_TUI.md",
-      "evidence": "specs/requirements-reconciliation-20260726/migration-proposal.json"
+      "question": "Is the Terminal.Gui migration still part of this intake?",
+      "answer": "No. The migration is technically complete; this intake verifies current interaction and accessibility behaviour.",
+      "evidence": "Repository state and approved consolidation plan."
     },
     {
       "id": "IAD002",
       "status": "Answered",
-      "question": "Welche Delivery Authority gilt?",
-      "answer": "LocalImplementation",
-      "evidence": "The migration grants no feature-delivery authority."
+      "question": "Which execution order is binding?",
+      "answer": "Functional acceptance precedes A11Y acceptance, and rename release-closeout follows it.",
+      "evidence": "Explicit user decision and active series."
+    },
+    {
+      "id": "IAD003",
+      "status": "Answered",
+      "question": "Does the intake permanently require one Terminal.Gui version?",
+      "answer": "No. Execution resolves the then-current explicitly approved repository pin and classifies drift without an automatic dependency upgrade.",
+      "evidence": "Explicit user decision."
+    },
+    {
+      "id": "IAD004",
+      "status": "Answered",
+      "question": "When are PTY, VoiceOver, DocFX, axe, and lynx evidence required?",
+      "answer": "The binding impact matrix selects proportionate gates; major, unclear, dependency, rename, and release-closeout changes require the full matrix.",
+      "evidence": "Approved functional contract and this intake."
     }
   ],
   "openDecisionIds": [],
-  "questionCount": 0,
+  "questionCount": 4,
   "agentSurface": {
     "specifyCanonicalId": "speckit.specify",
     "specifyInvocation": "$speckit-specify",
@@ -68,14 +208,14 @@
     "autonomousInvocation": "$speckit-autonomous"
   },
   "deliveryAuthority": "LocalImplementation",
-  "authorityEvidence": "Default: this migration grants no remote feature-delivery authority.",
+  "authorityEvidence": "The user explicitly requested implementation of the approved intake-only consolidation plan. No product implementation, commit, push, pull request, merge, bypass, provider, or follow-up-feature authority is granted.",
   "promptState": "Enabled",
   "provenanceMode": "Supersession",
   "supersedes": {
-    "receiptPath": "specs/intake-authoring-receipts/history/a11y-tui.schema-1.1.json",
-    "targetNormalizedSha256": "6be69742f6fe1b103115098418bf61a02b7c8af22296927015806404a11f568f",
-    "archiveTargetPath": "requirements/intakes/history/pre-intake-split-20260726/Lastenheft_A11Y_TUI.md",
-    "archiveReceiptPath": "specs/intake-authoring-receipts/history/a11y-tui.schema-1.1.json"
+    "receiptPath": "specs/intake-authoring-receipts/history/a11y-tui.20260901T071752Z.json",
+    "targetNormalizedSha256": "715af76d7875650acd3a39ed15c46e28d19a6dd1ad3bff29b6be6fb7987db7bc",
+    "archiveTargetPath": "requirements/intakes/archive/a11y-tui/20260901T071752Z/Lastenheft_A11Y_TUI.md",
+    "archiveReceiptPath": "specs/intake-authoring-receipts/history/a11y-tui.20260901T071752Z.json"
   },
   "legacyAdoption": {
     "evidenceType": "N/A",
@@ -83,7 +223,7 @@
     "priorGitBlob": "N/A"
   },
   "updateAuthorized": true,
-  "updateAuthorityEvidence": "User-approved migration preserves predecessor evidence.",
+  "updateAuthorityEvidence": "The user explicitly requested implementation of the approved intake-only consolidation plan. No product implementation, commit, push, pull request, merge, bypass, provider, or follow-up-feature authority is granted.",
   "series": {
     "seriesId": "5b4523b4-d946-4091-9cbc-11825af94332",
     "manifestPath": "requirements/intakes/series/tinycalc-delivery/manifest.json",

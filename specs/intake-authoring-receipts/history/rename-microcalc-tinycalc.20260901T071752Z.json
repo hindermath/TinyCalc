@@ -1,0 +1,95 @@
+{
+  "schemaVersion": "2.0",
+  "documentType": "IntakeReceipt",
+  "receiptId": "b4e6471a-404f-4dc4-a4ea-51659bbb093d",
+  "intakeId": "b4f18668-0276-45ee-8a6f-16a8bd8b833d",
+  "generator": {
+    "preset": "intake-authoring-governance",
+    "version": "0.2.1"
+  },
+  "createdAt": "2026-07-26T21:00:00Z",
+  "operation": {
+    "operationId": "313385fe-d32f-4236-a6b1-b35630aa375c",
+    "type": "Update",
+    "authorityEvidence": "User-approved TinyCalc requirements and intake consolidation plan"
+  },
+  "status": "ReadyForReview",
+  "target": {
+    "path": "requirements/intakes/active/Lastenheft_Rename_MicroCalc_TinyCalc.md",
+    "normalizedSha256": "951950e7ca8c726d9d92756b2e87e405af91668e6010aef3751e643278b46990"
+  },
+  "sources": [
+    {
+      "sourceId": "SRC001",
+      "order": 1,
+      "kind": "File",
+      "label": "Archived predecessor intake",
+      "location": "Repository",
+      "path": "requirements/intakes/history/pre-intake-split-20260726/Lastenheft_Rename_MicroCalc_TinyCalc.md",
+      "requestedUrl": "N/A",
+      "finalUrl": "N/A",
+      "retrievedAt": "N/A",
+      "httpStatus": "N/A",
+      "contentType": "N/A",
+      "contentLength": "N/A",
+      "etag": "N/A",
+      "lastModified": "N/A",
+      "redirectChain": [],
+      "rawSha256": "N/A",
+      "normalizedSha256": "be54c723dfbd2803eea86a8c3f02e2eaedc52d1c07328a4221fe0d1785094a45",
+      "gitBlob": "N/A",
+      "proofBoundary": "Repository predecessor and normalized SHA-256"
+    }
+  ],
+  "profile": "level2-lastenheft",
+  "languagePolicy": "GermanFirstEnglishSecond",
+  "decisions": [
+    {
+      "id": "IAD001",
+      "status": "Answered",
+      "question": "Welcher Zielpfad ist nach der Konsolidierung verbindlich?",
+      "answer": "requirements/intakes/active/Lastenheft_Rename_MicroCalc_TinyCalc.md",
+      "evidence": "specs/requirements-reconciliation-20260726/migration-proposal.json"
+    },
+    {
+      "id": "IAD002",
+      "status": "Answered",
+      "question": "Welche Delivery Authority gilt?",
+      "answer": "LocalImplementation",
+      "evidence": "The migration grants no feature-delivery authority."
+    }
+  ],
+  "openDecisionIds": [],
+  "questionCount": 0,
+  "agentSurface": {
+    "specifyCanonicalId": "speckit.specify",
+    "specifyInvocation": "$speckit-specify",
+    "autonomousCanonicalId": "speckit.autonomous",
+    "autonomousInvocation": "$speckit-autonomous"
+  },
+  "deliveryAuthority": "LocalImplementation",
+  "authorityEvidence": "Default: this migration grants no remote feature-delivery authority.",
+  "promptState": "Enabled",
+  "provenanceMode": "Supersession",
+  "supersedes": {
+    "receiptPath": "specs/intake-authoring-receipts/history/rename-microcalc-tinycalc.schema-1.1.json",
+    "targetNormalizedSha256": "be54c723dfbd2803eea86a8c3f02e2eaedc52d1c07328a4221fe0d1785094a45",
+    "archiveTargetPath": "requirements/intakes/history/pre-intake-split-20260726/Lastenheft_Rename_MicroCalc_TinyCalc.md",
+    "archiveReceiptPath": "specs/intake-authoring-receipts/history/rename-microcalc-tinycalc.schema-1.1.json"
+  },
+  "legacyAdoption": {
+    "evidenceType": "N/A",
+    "priorTargetNormalizedSha256": "N/A",
+    "priorGitBlob": "N/A"
+  },
+  "updateAuthorized": true,
+  "updateAuthorityEvidence": "User-approved migration preserves predecessor evidence.",
+  "series": {
+    "seriesId": "5b4523b4-d946-4091-9cbc-11825af94332",
+    "manifestPath": "requirements/intakes/series/tinycalc-delivery/manifest.json",
+    "order": 3,
+    "role": "OrderedMember",
+    "supersedesIntakeIds": []
+  },
+  "nextAction": "$speckit-intake-review requirements/intakes/active/Lastenheft_Rename_MicroCalc_TinyCalc.md"
+}

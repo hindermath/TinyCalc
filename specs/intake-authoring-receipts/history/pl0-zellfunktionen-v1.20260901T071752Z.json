@@ -1,0 +1,123 @@
+{
+  "schemaVersion": "2.0",
+  "documentType": "IntakeReceipt",
+  "receiptId": "af03322d-4e98-427f-9323-7f02e224fe33",
+  "intakeId": "7474c2ca-2efe-4d05-a359-9af278333007",
+  "generator": {
+    "preset": "intake-authoring-governance",
+    "version": "0.3.1"
+  },
+  "createdAt": "2026-08-31T22:15:00Z",
+  "operation": {
+    "operationId": "fc038bcb-d385-45dd-adf1-3e12c34abc93",
+    "type": "Update",
+    "authorityEvidence": "User explicitly requested that the PL/0 intake use version-neutral dependency wording and then limited execution to Lastenheft and intake artifacts only."
+  },
+  "status": "ReadyForReview",
+  "target": {
+    "path": "requirements/intakes/active/Lastenheft_PL0-Zellfunktionen_V1.md",
+    "normalizedSha256": "c3041f51bd99d64d6a0e5dc09e529bb04d0b853d7c4e615c758cf5ecb93f1f2d"
+  },
+  "sources": [
+    {
+      "sourceId": "SRC001",
+      "order": 1,
+      "kind": "File",
+      "label": "Archived accepted PL0 intake before dependency wording update",
+      "location": "Repository",
+      "path": "requirements/intakes/archive/pl0-zellfunktionen-v1/20260831T220254Z/Lastenheft_PL0-Zellfunktionen_V1.md",
+      "requestedUrl": "N/A",
+      "finalUrl": "N/A",
+      "retrievedAt": "N/A",
+      "httpStatus": "N/A",
+      "contentType": "N/A",
+      "contentLength": "N/A",
+      "etag": "N/A",
+      "lastModified": "N/A",
+      "redirectChain": [],
+      "rawSha256": "N/A",
+      "normalizedSha256": "2333b3f24bdc0bc64d0af49fe2e7ba7d5bea70aca5881b64d2731cd46274c94d",
+      "gitBlob": "664fa17fb029b0cf134d8efe58a1a315a87d31f2",
+      "proofBoundary": "Byte-identical repository archive and prior Git blob"
+    },
+    {
+      "sourceId": "SRC002",
+      "order": 2,
+      "kind": "Inline",
+      "label": "Approved version-neutral PL0 dependency wording",
+      "location": "SnapshotOnly",
+      "path": "N/A",
+      "requestedUrl": "N/A",
+      "finalUrl": "N/A",
+      "retrievedAt": "N/A",
+      "httpStatus": "N/A",
+      "contentType": "N/A",
+      "contentLength": "N/A",
+      "etag": "N/A",
+      "lastModified": "N/A",
+      "redirectChain": [],
+      "rawSha256": "N/A",
+      "normalizedSha256": "90a992f00b263b555858dd6e721748d22e878bdac669ac3b2350d59a4b619960",
+      "gitBlob": "N/A",
+      "proofBoundary": "SnapshotOnly"
+    }
+  ],
+  "profile": "level2-lastenheft",
+  "languagePolicy": "GermanFirstEnglishSecond",
+  "decisions": [
+    {
+      "id": "IAD001",
+      "status": "Answered",
+      "question": "Are the PL0 cell-function scope and its TinyPl0 predecessor approved?",
+      "answer": "Yes. The existing PL0 scope and fail-closed TinyPl0 delivery gate remain unchanged.",
+      "evidence": "Preserved from the superseded receipt and archived target."
+    },
+    {
+      "id": "IAD002",
+      "status": "Answered",
+      "question": "Is a local ProjectReference fallback permitted?",
+      "answer": "No. The public pinned TinyPl0 package and locked contract gate remain mandatory.",
+      "evidence": "Preserved from the superseded receipt and archived target."
+    },
+    {
+      "id": "IAD003",
+      "status": "Answered",
+      "question": "Should the intake permanently require one concrete Terminal.Gui version?",
+      "answer": "No. It resolves the then-current explicitly repository-pinned and approved version at execution time, records it as evidence, revalidates drift, and performs no automatic upgrade.",
+      "evidence": "Explicit current user correction and approved replacement plan."
+    }
+  ],
+  "openDecisionIds": [],
+  "questionCount": 1,
+  "agentSurface": {
+    "specifyCanonicalId": "speckit.specify",
+    "specifyInvocation": "$speckit-specify Nutze requirements/intakes/active/Lastenheft_PL0-Zellfunktionen_V1.md als verbindliches Intake. Prüfe zuerst beide Stufen des TinyPl0-Liefergates sowie den versionsneutralen Dependency-Preflight und dokumentiere fehlende, geänderte oder ungepinnte Evidenz als Blocker. Erstelle oder aktualisiere ausschließlich die passende Feature-Spezifikation. Bewahre Scope, Nicht-Ziele, Reihenfolge, strenges PL/0-Profil, NuGet-Vertrag, Security-, A11Y-, Dokumentations- und Evidenzgrenzen. Implementiere nichts; committe und pushe nicht; erstelle oder merge keinen Pull Request und starte kein weiteres Feature.",
+    "autonomousCanonicalId": "speckit.autonomous",
+    "autonomousInvocation": "$speckit-autonomous Führe genau einen vollständigen autonomen Spec-Kit-Lauf mit requirements/intakes/active/Lastenheft_PL0-Zellfunktionen_V1.md als verbindlichem Intake aus. Delivery Mode: LocalImplementation. Prüfe vor jeder Änderung das zweistufige TinyPl0-Liefergate und den versionsneutralen Dependency-Preflight; stoppe fail-closed, wenn Release-, NuGet-, SBOM-/VEX-/SLSA-, Locked-Restore-, Contract-Test- oder Pin-Evidenz fehlt oder ungeklärte Dependency-Drift besteht. Führe kein automatisches Upgrade aus. Bewahre Scope, Reihenfolge, strenges PL/0-Profil, Security-, A11Y-, Dokumentations- und Evidenzgrenzen. Nutze keine lokale ProjectReference als Fallback. Nicht pushen, keinen Pull Request erstellen oder mergen, keine Pakete veröffentlichen, keinen Bypass nutzen, keine Secrets offenlegen und kein Folgefeature starten."
+  },
+  "deliveryAuthority": "LocalImplementation",
+  "authorityEvidence": "The current request authorizes intake artifacts only and grants no implementation, commit, push, PR, merge, package-publication, bypass, or provider authority.",
+  "promptState": "Enabled",
+  "provenanceMode": "Supersession",
+  "supersedes": {
+    "receiptPath": "specs/intake-authoring-receipts/history/pl0-zellfunktionen-v1.20260831T220254Z.json",
+    "targetNormalizedSha256": "2333b3f24bdc0bc64d0af49fe2e7ba7d5bea70aca5881b64d2731cd46274c94d",
+    "archiveTargetPath": "requirements/intakes/archive/pl0-zellfunktionen-v1/20260831T220254Z/Lastenheft_PL0-Zellfunktionen_V1.md",
+    "archiveReceiptPath": "specs/intake-authoring-receipts/history/pl0-zellfunktionen-v1.20260831T220254Z.json"
+  },
+  "legacyAdoption": {
+    "evidenceType": "N/A",
+    "priorTargetNormalizedSha256": "N/A",
+    "priorGitBlob": "N/A"
+  },
+  "updateAuthorized": true,
+  "updateAuthorityEvidence": "Explicit current user request to replace fixed Terminal.Gui wording with execution-time repository-pinned dependency resolution.",
+  "series": {
+    "seriesId": "5b4523b4-d946-4091-9cbc-11825af94332",
+    "manifestPath": "requirements/intakes/series/tinycalc-delivery/manifest.json",
+    "order": 8,
+    "role": "OrderedMember",
+    "supersedesIntakeIds": []
+  },
+  "nextAction": "$speckit-intake-review requirements/intakes/active/Lastenheft_PL0-Zellfunktionen_V1.md"
+}

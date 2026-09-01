@@ -1,0 +1,10 @@
+{
+  "schemaVersion": "1.0",
+  "proposalId": "82a3659f-d959-4c3e-bdea-3d862a0a9a07",
+  "type": "Update",
+  "target": "requirements/intakes/active/Lastenheft_Formelkopie-und-Tabellenoperationen_V1.md",
+  "change": "Add immutable overlap snapshots, whole persistent cell-record shifts, derived-state revalidation, active-coordinate semantics, and expected artefacts.",
+  "scopePreserved": true,
+  "approved": true,
+  "authorityEvidence": "The user explicitly selected whole-cell shift semantics and requested implementation of the approved intake-only plan."
+}
