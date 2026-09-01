@@ -1,0 +1,102 @@
+{
+  "schemaVersion": "2.0",
+  "documentType": "IntakeReceipt",
+  "receiptId": "b5289658-afd9-403b-bfa7-914659c98f56",
+  "intakeId": "40e85866-18d3-4cc8-b667-a1de8da44b10",
+  "generator": {
+    "preset": "intake-authoring-governance",
+    "version": "0.3.1"
+  },
+  "createdAt": "2026-08-31T22:10:00Z",
+  "operation": {
+    "operationId": "28544f0f-950e-447b-bec4-c84aaf14afc0",
+    "type": "Create",
+    "authorityEvidence": "User approved the complete TinyCalc functional-acceptance and durable-regression plan, then explicitly limited execution to Lastenheft and intake artifacts only."
+  },
+  "status": "ReadyForReview",
+  "target": {
+    "path": "requirements/intakes/active/Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md",
+    "normalizedSha256": "5903d7bdbc9cd2f04194a1013dcc75208905164d0d92c016d206eb0e39b7cbb0"
+  },
+  "sources": [
+    {
+      "sourceId": "SRC001",
+      "order": 1,
+      "kind": "Inline",
+      "label": "Approved TinyCalc functional acceptance and durable regression plan",
+      "location": "SnapshotOnly",
+      "path": "N/A",
+      "requestedUrl": "N/A",
+      "finalUrl": "N/A",
+      "retrievedAt": "N/A",
+      "httpStatus": "N/A",
+      "contentType": "N/A",
+      "contentLength": "N/A",
+      "etag": "N/A",
+      "lastModified": "N/A",
+      "redirectChain": [],
+      "rawSha256": "N/A",
+      "normalizedSha256": "89ce462a74b0c480f25713dde24a68159125a81b022b971faefc461421a9eff8",
+      "gitBlob": "N/A",
+      "proofBoundary": "SnapshotOnly"
+    }
+  ],
+  "profile": "level2-lastenheft",
+  "languagePolicy": "GermanFirstEnglishSecond",
+  "decisions": [
+    {
+      "id": "IAD001",
+      "status": "Answered",
+      "question": "Which serial order governs functional acceptance, accessibility, and rename?",
+      "answer": "Functional acceptance follows the migration, accessibility follows functional acceptance, and rename follows accessibility.",
+      "evidence": "Explicit user decision in the current planning conversation."
+    },
+    {
+      "id": "IAD002",
+      "status": "Answered",
+      "question": "Which recurring regression policy is required?",
+      "answer": "Every PR and push runs the full automated active contract; macOS PTY and VoiceOver use the approved impact triggers and every feature or release closeout.",
+      "evidence": "Explicit user approval of the expanded durable-regression plan."
+    },
+    {
+      "id": "IAD003",
+      "status": "Answered",
+      "question": "How are dependency versions represented in long-lived requirements?",
+      "answer": "Requirements remain version-neutral while execution uses the then-current explicitly repository-pinned and approved version and records it as evidence.",
+      "evidence": "Explicit user correction of the fixed Terminal.Gui wording."
+    }
+  ],
+  "openDecisionIds": [],
+  "questionCount": 3,
+  "agentSurface": {
+    "specifyCanonicalId": "speckit.specify",
+    "specifyInvocation": "$speckit-specify Nutze requirements/intakes/active/Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md als verbindliches Intake. Erstelle oder aktualisiere ausschließlich die passende Feature-Spezifikation. Bewahre den aktuellen Produktumfang, die Reihenfolge Migration -> Funktionsabnahme -> A11Y -> Rename, den wachsenden Produktvertrag, die versionsneutrale Dependency-Regel sowie Security-, A11Y-, Dokumentations- und Evidenzgrenzen. Implementiere nichts; committe und pushe nicht; erstelle oder merge keinen Pull Request und starte kein Folgefeature.",
+    "autonomousCanonicalId": "speckit.autonomous",
+    "autonomousInvocation": "$speckit-autonomous Führe genau einen vollständigen autonomen Spec-Kit-Lauf mit requirements/intakes/active/Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md als verbindlichem Intake aus. Delivery Mode: LocalImplementation. Bewahre Scope, Reihenfolge, vollständigen Produktvertrag, versionsneutralen Dependency-Preflight, Security-, A11Y-, Plattform-, Dokumentations- und Evidenzgrenzen. Nicht pushen, keinen Pull Request erstellen oder mergen, keinen Bypass nutzen, keine Secrets offenlegen und kein Folgefeature starten."
+  },
+  "deliveryAuthority": "LocalImplementation",
+  "authorityEvidence": "The current request authorizes intake artifacts only and grants no implementation, commit, push, PR, merge, bypass, or provider authority.",
+  "promptState": "Enabled",
+  "provenanceMode": "New",
+  "supersedes": {
+    "receiptPath": "N/A",
+    "targetNormalizedSha256": "N/A",
+    "archiveTargetPath": "N/A",
+    "archiveReceiptPath": "N/A"
+  },
+  "legacyAdoption": {
+    "evidenceType": "N/A",
+    "priorTargetNormalizedSha256": "N/A",
+    "priorGitBlob": "N/A"
+  },
+  "updateAuthorized": false,
+  "updateAuthorityEvidence": "N/A",
+  "series": {
+    "seriesId": "5b4523b4-d946-4091-9cbc-11825af94332",
+    "manifestPath": "requirements/intakes/series/tinycalc-delivery/manifest.json",
+    "order": 3,
+    "role": "OrderedMember",
+    "supersedesIntakeIds": []
+  },
+  "nextAction": "$speckit-intake-review requirements/intakes/active/Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md"
+}

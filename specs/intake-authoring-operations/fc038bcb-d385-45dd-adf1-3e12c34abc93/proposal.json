@@ -1,0 +1,10 @@
+{
+  "schemaVersion": "1.0",
+  "proposalId": "d3d1d0c1-4992-4ae3-8686-0b11a10b9bd9",
+  "type": "Update",
+  "target": "requirements/intakes/active/Lastenheft_PL0-Zellfunktionen_V1.md",
+  "change": "Replace fixed or stale UI dependency wording with execution-time resolution of the current explicitly repository-pinned and approved version, including drift classification and evidence requirements.",
+  "scopePreserved": true,
+  "approved": true,
+  "authorityEvidence": "User explicitly requested version-neutral wording and then limited execution to Lastenheft and intake artifacts only."
+}

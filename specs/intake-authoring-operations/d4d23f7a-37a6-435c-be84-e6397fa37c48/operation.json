@@ -1,0 +1,42 @@
+{
+  "schemaVersion": "1.0",
+  "documentType": "IntakeOperation",
+  "operationId": "d4d23f7a-37a6-435c-be84-e6397fa37c48",
+  "type": "Update",
+  "status": "Completed",
+  "createdAt": "2026-09-01T07:17:52Z",
+  "authorityEvidence": "The user explicitly requested implementation of the approved intake-only consolidation plan. No product implementation, commit, push, pull request, merge, bypass, provider, or follow-up-feature authority is granted.",
+  "proposalPath": "specs/intake-authoring-operations/d4d23f7a-37a6-435c-be84-e6397fa37c48/proposal.json",
+  "proposalNormalizedSha256": "b61fc545ea889b25500b383653fd84ffa01b3d3ef6d30b7e95d6c5408d16ed2d",
+  "approval": {
+    "approved": true,
+    "approvedBy": "Thorsten Hindermann",
+    "approvedAt": "2026-09-01T07:17:52Z",
+    "evidence": "Explicit user request: Implement the approved intake-only plan."
+  },
+  "stagingDirectory": "specs/intake-authoring-operations/d4d23f7a-37a6-435c-be84-e6397fa37c48/staging",
+  "intendedTargets": [
+    "requirements/intakes/active/Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md",
+    "specs/intake-authoring-receipts/tui-funktionsabnahme-und-regressionsvertrag.json",
+    "requirements/intakes/archive/tui-funktionsabnahme-und-regressionsvertrag/20260901T071752Z/Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md",
+    "specs/intake-authoring-receipts/history/tui-funktionsabnahme-und-regressionsvertrag.20260901T071752Z.json"
+  ],
+  "validatedTargets": [
+    "requirements/intakes/active/Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md",
+    "specs/intake-authoring-receipts/tui-funktionsabnahme-und-regressionsvertrag.json",
+    "requirements/intakes/archive/tui-funktionsabnahme-und-regressionsvertrag/20260901T071752Z/Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md",
+    "specs/intake-authoring-receipts/history/tui-funktionsabnahme-und-regressionsvertrag.20260901T071752Z.json"
+  ],
+  "publishedTargets": [
+    "requirements/intakes/active/Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md",
+    "specs/intake-authoring-receipts/tui-funktionsabnahme-und-regressionsvertrag.json",
+    "requirements/intakes/archive/tui-funktionsabnahme-und-regressionsvertrag/20260901T071752Z/Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md",
+    "specs/intake-authoring-receipts/history/tui-funktionsabnahme-und-regressionsvertrag.20260901T071752Z.json"
+  ],
+  "rollbackBoundary": "The byte-identical prior target and receipt are archived; no product implementation or unrelated intake content is changed.",
+  "failure": {
+    "class": "N/A",
+    "message": "N/A"
+  },
+  "nextAction": "$speckit-intake-review requirements/intakes/active/Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md"
+}

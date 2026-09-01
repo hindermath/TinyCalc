@@ -1,208 +1,250 @@
 <!-- intake-authoring:begin -->
 # Lastenheft: Barrierefreiheit der TinyCalc TUI (A11Y)
 
-**Dokument-Status:** Entwurf
-**Erstellt:** 2026-03-31
-**Empfohlener Durchführungszeitraum:** Parallel zur oder direkt nach der Migration
-von Terminal.Gui 1.19.0 auf 2.0.0 (die Migration selbst ist Voraussetzung für R-A11Y-CALC-04).
-Die Kurzfrist-Anforderungen (R-A11Y-CALC-01 bis R-A11Y-CALC-03) können auch auf 1.19.0 umgesetzt werden.
-**Grundlage:** `docs/tui-a11y-assessment.md` im RiderProjects-Workspace
+**Status:** ReadyForReview
+**Zielgruppe:** TinyCalc-Anwendende, Auszubildende, Lehrende, Entwicklung und Review
+**Vorausgesetztes Wissen:** Grundlegende Tastaturbedienung; Kenntnisse über Screenreader oder Spec Kit werden nicht vorausgesetzt
+**Profil:** `level2-lastenheft`
+**Reihenfolge:** Nach der vollständigen TUI-Funktionsabnahme und vor dem internen Rename
 
----
+*Status: Ready for review. This intake follows complete TUI functional
+acceptance and precedes the internal rename.*
 
-## Ausgangslage
+## Begriffe beim ersten Gebrauch / Terms At First Use
 
-TinyCalc nutzt **Terminal.Gui 1.19.0** (statisches `Application.Init()`-Modell).
-Das ist die ältere, weniger aktiv gewartete API; die aktuelle Empfehlung ist 2.0.0.
+### Deutsch
 
-Die Anwendung besitzt viele Keyboard-Shortcuts (`Ctrl+E/X/D/S/A`, `/`, `Esc`, `Ctrl+Q`,
-`P`/`N`), die jedoch nur fragmentarisch im UI sichtbar sind: Die Statuszeile zeigt
-lediglich `"Type '/' for commands"`. Ein Nutzer mit Screen-Reader weiß nicht,
-welche weiteren Shortcuts existieren.
+- **A11Y:** Kurzform für Barrierefreiheit; zwischen `A` und `Y` stehen elf
+  ausgelassene Buchstaben.
+- **Screenreader:** Software, die sichtbaren Text und Bedienelemente vorliest
+  oder an eine Braillezeile überträgt.
+- **PTY:** ein Pseudoterminal für echte, automatisierte oder manuelle
+  Terminalbedienung.
+- **Fokus:** das aktuell per Tastatur bedienbare Element.
+- **Impact-Klasse:** die im Produktvertrag festgelegte Einstufung, welche
+  Prüfungen eine Änderung auslöst.
 
-Das Tabellenkalkulationsmodell (Zellnavigation per Pfeiltasten, Formel-Eingabe per `Esc`)
-ist grundsätzlich gut für Keyboard-Navigation geeignet — es fehlt nur die explizite
-Dokumentation und das Text-Feedback.
+### English
 
----
+- **A11Y:** short form for accessibility; eleven letters are omitted between
+  `A` and `Y`.
+- **Screen reader:** software that speaks visible text and controls or sends
+  them to a Braille display.
+- **PTY:** a pseudo-terminal for real automated or manual terminal interaction.
+- **Focus:** the control currently operated from the keyboard.
+- **Impact class:** the product-contract category that selects required checks.
 
-## Anforderungen
+## Zweck / Purpose
 
-### R-A11Y-CALC-01: Vollständige Shortcut-Legende in der StatusBar
+TinyCalc muss vollständig per Tastatur bedienbar, textuell verständlich und in
+den anwendbaren Kriterien mit WCAG 2.2 Level AA vereinbar sein. Farbe, Position
+oder Fokusrahmen dürfen nie allein Bedeutung tragen. Die Abnahme verbindet
+automatisierte Prüfungen mit echten macOS-PTY- und VoiceOver-Bedienpfaden.
 
-Die Statuszeile muss alle wichtigen Shortcuts als sichtbaren Text anzeigen.
-Da der Platz begrenzt ist, ist eine kontextabhängige Rotation akzeptabel
-(z. B. Navigation-Shortcuts im Normal-Modus, Bearbeitungs-Shortcuts im Editier-Modus).
+*TinyCalc must remain keyboard-operable, text-first, and conformant with
+applicable WCAG 2.2 AA criteria. Automated checks are combined with real macOS
+PTY and VoiceOver interaction.*
 
-Mindestinhalt im Normal-Modus:
+## Aktueller Zustand / Current State
 
-```
-/ Befehle  Esc Bearbeiten  Ctrl+Q Beenden  Ctrl+S Speichern  P/N Hilfe
-```
+- Die Terminal.Gui-Migration ist technisch abgeschlossen und kein Auftrag
+  dieses Intakes.
+- TinyCalc verwendet die jeweils im Repository ausdrücklich gepinnte und
+  freigegebene Terminal.Gui-Version.
+- Raster, Status- und Nachrichtenzeile, Menüs, Dialoge und mehrseitige Hilfe
+  sind vorhanden, aber noch nicht vollständig mit realen Tastatur- und
+  Screenreader-Pfaden abgenommen.
+- Der vorgelagerte Produktvertrag inventarisiert alle aktuellen Tasten,
+  Befehle, Dialoge, Datei-, Formel- und Hilfepfade.
+- DocFX besitzt einen eigenen HTML-A11Y-Pfad mit Playwright/axe und lynx, der
+  bei DocFX-Änderungen verbindlich ist.
 
-Mindestinhalt im Editier-Modus:
+*The migration is complete. Existing UI paths are inventoried by the preceding
+product contract, but complete real-keyboard and screen-reader evidence is
+still required.*
 
-```
-Enter Bestätigen  Esc Abbrechen  Ctrl+A Zeilenanfang  Ctrl+E Zeilenende
-```
+## Zielzustand / Target State
 
-### R-A11Y-CALC-02: Text-Bestätigung nach jeder Aktion
+- Jede aktive Vertrags-ID besitzt eine tastaturbedienbare, textuell erkennbare
+  und fokussichere Darstellung.
+- Status, Fehler, Bestätigungen, Auswahl und Hilfe bleiben ohne Farbe
+  verständlich.
+- Automatisierte TUI-/PTY-Prüfungen und impact-gebundene VoiceOver-Nachweise
+  beziehen sich auf denselben Commit.
+- DocFX-Inhalte erfüllen den dokumentierten axe- und lynx-Nachweis.
+- Spätere Features erweitern die A11Y-Vertrags-IDs additiv und führen die
+  erforderlichen Gates dauerhaft erneut aus.
 
-Nach jeder benutzerinitierten Aktion muss eine Meldung in der Nachrichtenzeile
-als **sichtbarer Text** erscheinen.
+*Every active contract path gains keyboard, text, focus, PTY, screen-reader,
+and documentation evidence appropriate to its impact.*
 
-Beispiele:
-- Datei gespeichert → `„Gespeichert: <Dateiname>"`
-- Neue Datei → `„Neue Tabelle erstellt"`
-- Formel-Fehler → `„Fehler in Zelle <B3>: Division durch null"`
-- Bereich kopiert → `„<N> Zellen kopiert"`
+## Umfang / Scope
 
-Reine Farbänderungen (z. B. Zelle wird hervorgehoben) genügen nicht als
-alleiniges Feedback für Screen-Reader-Nutzer.
+- Hauptfenster, Menü, Raster, aktive Zelle, Status- und Nachrichtenzeile.
+- Sämtliche im Produktvertrag aufgeführten Navigationstasten und Aliasse.
+- Editor, Befehlspalette sowie Load-, Save-, Print-, Format- und
+  Clear-Bestätigungen einschließlich Abbruch.
+- Hilfe mit Buttons, `P`/`N`, `Esc`, Seitenstatus und vollständiger
+  Shortcut-Referenz.
+- Fokusreihenfolge, sichtbarer Fokus, Kontrast, Textfeedback und Terminalgrößen.
+- Linux-/Windows-Automation, macOS-PTY und impact-gebundene VoiceOver-Sitzung.
+- DocFX/axe/lynx bei geänderten Dokumentations- oder API-Seiten.
 
-### R-A11Y-CALC-03: Hilfe-Dialog mit vollständiger Shortcut-Referenz
+*Scope covers every current TUI interaction, dialog, help path, focus and text
+state, required platforms, real-terminal evidence, and documentation A11Y.*
 
-Der bestehende Hilfe-Dialog (erreichbar via `P`/`N`) muss eine vollständige,
-strukturierte Referenz aller Keyboard-Shortcuts enthalten — in tabellarischer
-Form, die von Screen-Readern als Text erfasst werden kann.
-Die aktuelle mehrseitige Hilfe ist beizubehalten; die Shortcut-Referenz kann
-als eigene Hilfeseite ergänzt werden.
+## Nicht-Ziele / Non-Goals
 
-### R-A11Y-CALC-04: Migration auf Terminal.Gui 2.0.0
+- Keine erneute Terminal.Gui-Migration und kein automatisches
+  Dependency-Upgrade.
+- Keine Änderung der Formel- oder Tabellenfachlogik ohne einen während der
+  A11Y-Prüfung bestätigten Funktionsdefekt.
+- Keine Maus als alleiniger oder primärer Bedienweg.
+- Keine Behauptung nativer UI-Automation-Semantik, die Terminal und Framework
+  nicht bereitstellen.
+- Kein interner Rename; er folgt als eigener Intake nach erfolgreicher A11Y-
+  Abnahme.
 
-TinyCalc verwendet noch die veraltete statische API von Terminal.Gui 1.19.0.
-Die Migration auf 2.0.0 (instanzbasiertes `Application.Create().Init()`) ist
-Voraussetzung für:
-- Zugriff auf neuere `ColorScheme`-APIs für High-Contrast
-- Besseres Test-Support durch `FakeDriver` (Headless-Tests ohne echtes Terminal)
-- Langfristige Wartbarkeit und Kompatibilität mit TinyPl0
+*This intake does not repeat the migration, upgrade dependencies, redesign
+spreadsheet logic, require pointer-only interaction, claim unavailable native
+automation semantics, or perform the later rename.*
 
-Die Migration soll als eigenständiger PR mit vollständigem Regressionstest
-(`dotnet test MicroCalc.sln`) durchgeführt werden.
+## Funktionale Anforderungen / Functional Requirements
 
-### R-A11Y-CALC-05: Farbkontrast WCAG 2.2 AA
+- **R-A11Y-CALC-01:** Status- und Hilfetexte müssen alle kontextuell verfügbaren
+  Tasten aus dem Produktvertrag vollständig und ohne widersprüchliche
+  Doppelbelegung erklären.
+- **R-A11Y-CALC-02:** Jede benutzerinitiierte Aktion erzeugt eine eindeutige
+  sichtbare Textmeldung für Erfolg, Abbruch oder Fehler. Reine Farb- oder
+  Positionsänderung genügt nicht.
+- **R-A11Y-CALC-03:** Die mehrseitige Hilfe enthält eine strukturierte,
+  textbrowser- und screenreadergeeignete Shortcut- und Befehlsreferenz.
+- **R-A11Y-CALC-04:** Ein Preflight bestätigt die abgeschlossene Migration und
+  löst die aktuell freigegebene Repository-Pin- und Lockquelle auf. Der Zustand
+  wird als `AlreadySatisfied` belegt; Drift löst die vollständigen
+  Kompatibilitäts-, PTY- und A11Y-Gates aus, aber kein automatisches Upgrade.
+- **R-A11Y-CALC-05:** Text erreicht mindestens 4,5:1 Kontrast und große
+  Textdarstellung mindestens 3:1, soweit das Terminal Farben kontrollierbar
+  wiedergibt. Nicht-Text-Fokus- und Auswahlindikatoren erreichen die
+  anwendbaren WCAG-2.2-AA-Anforderungen und besitzen zusätzlich Textbedeutung.
+- **R-A11Y-CALC-06:** Alle Dialoge besitzen eine logische Fokusreihenfolge,
+  eindeutig beschriftete Aktionen und vollständige Tastaturpfade für
+  Bestätigen und Abbrechen.
+- **R-A11Y-CALC-07:** Prozessbasierte PTY-Tests führen Navigation, Bearbeitung,
+  Befehle, Hilfe, Datei- und Fehlerpfade mit beobachtbaren Textresultaten aus.
+- **R-A11Y-CALC-08:** `A11yImpact`, größere TUI-Änderungen,
+  Dependency-Drift und Release-Closeout verlangen eine dokumentierte
+  macOS-VoiceOver-Sitzung; reine Textänderungen ohne TUI- oder DocFX-Wirkung
+  wiederholen sie nicht.
+- **R-A11Y-CALC-09:** Jede DocFX-Regeneration wird auf repräsentativen Seiten
+  mit Playwright plus `@axe-core/playwright` und zusätzlich mit `lynx`
+  textorientiert geprüft.
+- **R-A11Y-CALC-10:** Alle Nachweise werden als stabile `A11Y-*`-IDs an den
+  wachsenden Produktvertrag gebunden; alle früheren aktiven IDs bleiben
+  Pflichtregression.
 
-Nach der Migration (R-A11Y-CALC-04) müssen alle verwendeten `ColorScheme`-
-Definitionen einen Mindest-Kontrast von **4,5:1** (WCAG 2.2 AA, Normaltext)
-einhalten. Zellen, Statuszeilen, Nachrichtenzeilen und aktive Zell-Hervorhebung
-sind einzeln zu prüfen.
+*Requirements cover contract-driven labels, text feedback, help, dependency
+preflight, contrast, focus, PTY, VoiceOver, DocFX, and additive contract IDs.*
 
-### R-A11Y-CALC-06: A11Y-Tests für Dokumentations-HTML (Playwright+axe)
+## Qualität, Sicherheit und Governance / Quality, Security And Governance
 
-Die mit `docfx` generierte TinyCalc-Dokumentation muss durch automatisierte
-Playwright-Tests mit `@axe-core/playwright` auf WCAG 2.2 AA-Konformität geprüft
-werden — analog zu TuiVision (`tests/web-a11y/`).
-Zusätzlich: Validierung mit `lynx` als Text-Browser.
-Diese Tests sind in `ci.yml` zu integrieren.
+- WCAG 2.2 Level AA ist die konkrete Basis, soweit Kriterien auf Terminal oder
+  HTML anwendbar sind.
+- C#/.NET bleibt die speichersichere Hauptlaufzeit. NIST SSDF und CWE Top 25
+  gelten immer.
+- SBOM und SLSA gelten für verteilbare Artefakte; VEX wird bei bekannten
+  Schwachstellen gepflegt.
+- ASVS und Zero Trust sind für die lokale TUI begründet `N/A`. AI-SBOM ist
+  `N/A`, weil KI nur Entwicklungswerkzeug ist.
+- Dokumentation und Lerntexte stehen deutsch zuerst und englisch danach auf
+  CEFR-B2-Niveau und bleiben für Braillezeile und Textbrowser verständlich.
 
-### R-A11Y-CALC-07: Prozessbasierte Keyboard-Integrationstests (mittelfristig)
+*The quality boundary applies WCAG 2.2 AA, secure C#/.NET, NIST SSDF, CWE Top
+25, applicable supply-chain evidence, and bilingual text-first delivery.*
 
-Ergänzende Integrationstests, die TinyCalc als Prozess starten, Tastatureingaben
-via stdin simulieren und Ausgaben via stdout auf erwartete Textmuster prüfen.
-Ziel: maschinenlesbare Verifikation der Keyboard-Navigation ohne Screen-Reader.
-Hinweis: Playwright kann Terminal-UIs nicht direkt testen; dieser Ansatz
-ist die praktikable Alternative.
+## Abhängigkeiten, Risiken und Evidenz / Dependencies, Risks And Evidence
 
----
+- Harter Vorgänger: vollständige TUI-Funktionsabnahme mit aktuellem
+  Produktvertrag.
+- Harter Nachfolger: interner Rename von MicroCalc zu TinyCalc.
+- Risiken sind unvollständige Shortcut-Texte, Fokusverlust, rein farbliche
+  Zustände, abgeschnittene Statusmeldungen, falsche Dialogabbruchpfade,
+  Terminaltreiber-Unterschiede und nicht reproduzierbare VoiceOver-Nachweise.
+- Evidenz umfasst Unit-/TUI-/PTY-Tests, Linux-/Windows-CI,
+  commitgebundene macOS-PTY-/VoiceOver-Protokolle und DocFX/axe/lynx.
+- Unsicherer Impact wird fail-safe als `FunctionalImpact + A11yImpact`
+  klassifiziert.
 
-## Nicht im Scope
+*The intake depends on the functional contract and produces automated,
+cross-platform, real-terminal, VoiceOver, and documentation evidence before
+the rename.*
 
-- Vollständige Screen-Reader-Semantik (Terminal.Gui bietet keine UI-Automation-Integration)
-- Maus als primärer Eingabekanal
-- Änderungen an der Formel-Engine (`MicroCalc.Core`)
-- Änderungen an den Golden-Tests (außer Anpassungen durch die Migration)
+## Erwartete Artefakte / Expected Artifacts
 
----
+- Vertragsgebundene Shortcut-, Fokus-, Status-, Dialog- und Hilfeverbesserungen.
+- `A11Y-*`-Testfälle und Evidence-Matrix für automatisierte und manuelle
+  Nachweise.
+- Reproduzierbare macOS-PTY- und VoiceOver-Bedienprotokolle.
+- Aktualisierte zweisprachige Hilfe, DocFX-Ausgabe und axe-/lynx-Evidenz, wenn
+  diese Inhalte betroffen sind.
+- Aktualisierte A11Y-/Security-Dokumentation und Projektstatistik nach den
+  Repository-Regeln.
 
-## Akzeptanzkriterien
+*Expected artefacts include accessible interaction updates, contract tests,
+real-terminal evidence, documentation proof, security evidence, and
+statistics.*
 
-| ID | Kriterium |
-|----|-----------|
-| AK-A11Y-CALC-01 | StatusBar zeigt kontextabhängige, vollständige Shortcut-Legende |
-| AK-A11Y-CALC-02 | Jede Aktion erzeugt sichtbaren Text in Nachrichtenzeile oder Statuszeile |
-| AK-A11Y-CALC-03 | Hilfe-Dialog enthält vollständige Shortcut-Referenz als strukturierten Text |
-| AK-A11Y-CALC-04 | `dotnet test MicroCalc.sln` nach Migration auf Terminal.Gui 2.0.0 vollständig grün |
-| AK-A11Y-CALC-05 | Alle ColorScheme-Kombinationen erreichen Kontrast ≥ 4,5:1 |
-| AK-A11Y-CALC-06 | Playwright+axe-Tests für DocFX-HTML ohne serious/critical Violations |
-| AK-A11Y-CALC-07 | lynx kann Dokumentationsstartseite vollständig als Text darstellen |
+## Abnahmekriterien / Acceptance Criteria
 
----
+- **AK-A11Y-CALC-01:** Jede aktive Vertrags-ID ist vollständig per Tastatur
+  erreichbar und liefert eindeutigen sichtbaren Text.
+- **AK-A11Y-CALC-02:** Erfolg, Abbruch und Fehler aller Dialoge verändern Fokus
+  und Daten nur wie dokumentiert.
+- **AK-A11Y-CALC-03:** Hilfe und Status erklären alle aktuellen Tasten und
+  Befehle ohne Widerspruch.
+- **AK-A11Y-CALC-04:** Der Dependency-Preflight belegt Migration und aktuellen
+  Pin versionsneutral; Drift löst die Vollmatrix aus und kein Pfad führt ein
+  Upgrade durch.
+- **AK-A11Y-CALC-05:** Kontrast-, Fokus- und Nicht-Farb-Prüfungen bestehen für
+  Raster, Auswahl, Menü, Dialoge, Status und Nachrichten.
+- **AK-A11Y-CALC-06:** Linux-/Windows-Automation, macOS-PTY und die geforderte
+  VoiceOver-Sitzung bestehen für denselben Commit.
+- **AK-A11Y-CALC-07:** Geänderte DocFX-Seiten besitzen keine serious/critical
+  axe-Verstöße und sind mit lynx vollständig verständlich.
+- **AK-A11Y-CALC-08:** Alle früheren und neuen `A11Y-*`-Vertrags-IDs bestehen;
+  Build, Unit-Test oder Smoke allein können den Abschluss nicht ausweisen.
 
-## Beispiel: Agentic-AI-Dialog (Platzhalter für spätere Durchführung)
+*Acceptance proves complete keyboard and text paths, safe dialogs, current
+dependency evidence, contrast, cross-platform PTY/VoiceOver, DocFX A11Y, and
+full contract regression.*
 
-Dieser Abschnitt wird während der Umsetzung mit Agentic-AI plus Spec-Kit/SDD
-befüllt — jeder Schritt mit Commit-URL und Zeitstempel.
+## Annahmen und Entscheidungen / Assumptions And Decisions
 
----
+- **IAD001 – beantwortet:** Die Terminal.Gui-Migration ist abgeschlossen und
+  wird als `AlreadySatisfied` belegt, nicht erneut implementiert.
+- **IAD002 – beantwortet:** Funktionsabnahme ist harter Vorgänger; Rename folgt
+  erst nach dieser A11Y-Abnahme.
+- **IAD003 – beantwortet:** Dependency-Anforderungen bleiben versionsneutral;
+  maßgeblich ist der aktuelle freigegebene Repository-Pin zur Ausführungszeit.
+- **IAD004 – beantwortet:** Vollständige Automation bleibt dauerhaft aktiv;
+  reale macOS-PTY-/VoiceOver-Evidenz folgt den verbindlichen Impact-Triggern.
+- Delivery Authority bleibt `LocalImplementation`; dieses Intake erteilt keine
+  Commit-, Push-, PR-, Merge-, Bypass- oder Folgefeature-Berechtigung.
 
-## Hinweis für Lernende
-
-**Deutsch:** Bei Tabellenkalkulationen ist die Tastaturnavigation besonders wichtig:
-Pfeiltasten für Zellnavigation, Tab für Spaltensprung, Enter für Eingabebestätigung
-sind Standard. Ein Screen-Reader-Nutzer ist auf **sichtbaren Text** angewiesen —
-alles, was nur durch Farbe oder Position kommuniziert wird, ist nicht zugänglich.
-
-**English:** Keyboard navigation is especially important for spreadsheets: arrow keys
-for cell navigation, Tab for column jumps, Enter to confirm input. A screen reader
-user depends on visible text — anything communicated only through colour or position
-is not accessible.
-
----
-
-## Spec-Kit-Intake-Reife / Spec Kit Intake Readiness
-
-Dieses Lastenheft ist als Eingabedatei fuer einen spaeteren `/speckit-specify`-Lauf vorgesehen. Vor dem Start muss der aktuelle Repository-Stand geprueft werden, damit bereits erledigte oder ueberholte Punkte nicht erneut umgesetzt werden.
-
-*This requirements document is intended as input for a later `/speckit-specify` run. Before starting, check the current repository state so already completed or superseded items are not implemented again.*
-
-Der spaetere Lauf muss mindestens klassifizieren:
-
-- `Applicable`: gilt fuer diesen Lauf und braucht Umsetzung oder Evidenz.
-- `AlreadySatisfied`: ist im aktuellen Stand bereits nachweisbar erledigt.
-- `N/A`: gilt fuer diesen Lauf nicht und braucht eine kurze Begruendung.
-- `Open`: gilt, ist aber noch nicht ausreichend geklaert oder belegt.
-- `FollowUp`: fachlich relevant, aber nicht Teil dieses Laufs.
-
-## Kopierbarer `/speckit-specify`-Prompt / Copyable `/speckit-specify` Prompt
-
-```text
-Ersetzter Alt-Prompt: speckit-specify Nutze requirements/intakes/active/Lastenheft_A11Y_TUI.md als verbindliche Eingabedatei. Erstelle die Feature-Spezifikation fuer einen Barrierefreiheits- und Nutzbarkeitslauf im Repository TinyCalc.
-
-Ziel: Pruefe das Lastenheft gegen den aktuellen Repository-Stand und erstelle eine belastbare Spec-Kit-Spezifikation, die fuer Auszubildende, Entwickler*innen, Reviewer und KI-Agenten nachvollziehbar ist.
-
-Pflichtpunkte:
-- Lies dieses Lastenheft vollstaendig und uebernehme vorhandene Anforderungen, Scope-Grenzen, Reihenfolgehinweise und Akzeptanzkriterien.
-- Pruefe, welche Punkte bereits umgesetzt, ueberholt oder noch offen sind.
-- Klassifiziere Anforderungen als `Applicable`, `AlreadySatisfied`, `N/A`, `Open` oder `FollowUp`.
-- Plane nur `Applicable`-Punkte fuer diesen Lauf.
-- Dokumentiere fuer `N/A` und `FollowUp` jeweils eine kurze Begruendung.
-- Beachte `constitution.md`, `.specify/memory/constitution.md`, AGENTS/CLAUDE/GEMINI/Copilot-Guidance, installierte Spec-Kit-Presets, Secure-Development-Basis, A11Y-Regeln, CEFR-B2-Verstaendlichkeit und didaktische Kommentar-Governance.
-- Starte keinen weiteren Lastenheft-Lauf und kombiniere mehrere Lastenhefte nur, wenn die Kopplung fachlich begruendet und dokumentiert ist.
-
-Erzeuge eine Spezifikation mit Scope, Nicht-Zielen, Anforderungen, Abhaengigkeiten, Akzeptanzkriterien, Risiken, Teststrategie, Evidenzpfaden und offenen Folgepunkten.
-```
 <!-- intake-authoring:prompts -->
-## Kopierbare Spec-Kit-Prompts / Copy-Ready Spec Kit Prompts
-
-Die folgenden Alternativen starten keinen Lauf automatisch. Der autonome
-Prompt ist auf `LocalImplementation` begrenzt und erteilt keine Remote-,
-PR-, Merge-, Bypass-, Secret- oder Provider-Berechtigung.
-
-*The alternatives below do not start a run automatically. The autonomous
-prompt is limited to `LocalImplementation` and grants no remote,
-pull-request, merge, bypass, secret, or provider authority.*
+## Ausführbare Spec-Kit-Prompts / Copy-Ready Spec Kit Prompts
 
 ### Specify
 
 <!-- spec-kit-command-id: speckit.specify -->
 ```text
-$speckit-specify Use requirements/intakes/active/Lastenheft_A11Y_TUI.md as the binding intake. Preserve its scope, non-goals, ordering, governance, evidence, and acceptance criteria. Create or update only the matching feature specification. Do not implement, commit, push, create a pull request, merge, or start another feature.
+$speckit-specify Nutze requirements/intakes/active/Lastenheft_A11Y_TUI.md als verbindliches Intake. Erstelle oder aktualisiere ausschließlich die passende Feature-Spezifikation. Behandle die Terminal.Gui-Migration als AlreadySatisfied, löse den aktuellen Repository-Pin versionsneutral auf und bewahre die Reihenfolge Funktionsabnahme -> A11Y -> Rename, den vollständigen Produktvertrag, WCAG 2.2 AA, PTY-/VoiceOver-, DocFX/axe/lynx-, Security-, Plattform-, Dokumentations- und Evidenzgrenzen. Implementiere nichts; committe und pushe nicht; erstelle oder merge keinen Pull Request und starte kein Folgefeature.
 ```
 
 ### Autonomous
 
 <!-- spec-kit-command-id: speckit.autonomous -->
 ```text
-$speckit-autonomous Execute one complete autonomous Spec Kit run using requirements/intakes/active/Lastenheft_A11Y_TUI.md as the binding intake. Delivery mode: LocalImplementation. Preserve all scope, ordering, security, accessibility, evidence, and acceptance boundaries. Do not push, create or merge a pull request, use bypass authority, expose secrets, or start a follow-up feature.
+$speckit-autonomous Führe genau einen vollständigen autonomen Spec-Kit-Lauf mit requirements/intakes/active/Lastenheft_A11Y_TUI.md als verbindlichem Intake aus. Delivery Mode: LocalImplementation. Stoppe vor Änderungen, solange die vollständige Funktionsabnahme nicht abgeschlossen ist oder der Repository-Pin ungeklärt ist. Behandle die Migration als AlreadySatisfied und bewahre Produktvertrag, WCAG 2.2 AA, Impact-Matrix, PTY-/VoiceOver-, DocFX/axe/lynx-, Security-, Plattform-, Dokumentations- und Evidenzgrenzen. Nicht pushen, keinen Pull Request erstellen oder mergen, keinen Bypass nutzen, keine Secrets offenlegen und kein Folgefeature starten.
 ```
 <!-- intake-authoring:end -->

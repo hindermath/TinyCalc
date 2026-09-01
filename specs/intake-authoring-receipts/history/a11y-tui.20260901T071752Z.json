@@ -1,0 +1,95 @@
+{
+  "schemaVersion": "2.0",
+  "documentType": "IntakeReceipt",
+  "receiptId": "f36ec0dd-33e3-4f34-aaf8-e264f41057ff",
+  "intakeId": "beb93d96-c7eb-4a45-b87b-fe1c6ebd51c0",
+  "generator": {
+    "preset": "intake-authoring-governance",
+    "version": "0.2.1"
+  },
+  "createdAt": "2026-07-26T21:00:00Z",
+  "operation": {
+    "operationId": "418ea177-4ff8-4a61-8806-08fc7be4a85e",
+    "type": "Update",
+    "authorityEvidence": "User-approved TinyCalc requirements and intake consolidation plan"
+  },
+  "status": "ReadyForReview",
+  "target": {
+    "path": "requirements/intakes/active/Lastenheft_A11Y_TUI.md",
+    "normalizedSha256": "715af76d7875650acd3a39ed15c46e28d19a6dd1ad3bff29b6be6fb7987db7bc"
+  },
+  "sources": [
+    {
+      "sourceId": "SRC001",
+      "order": 1,
+      "kind": "File",
+      "label": "Archived predecessor intake",
+      "location": "Repository",
+      "path": "requirements/intakes/history/pre-intake-split-20260726/Lastenheft_A11Y_TUI.md",
+      "requestedUrl": "N/A",
+      "finalUrl": "N/A",
+      "retrievedAt": "N/A",
+      "httpStatus": "N/A",
+      "contentType": "N/A",
+      "contentLength": "N/A",
+      "etag": "N/A",
+      "lastModified": "N/A",
+      "redirectChain": [],
+      "rawSha256": "N/A",
+      "normalizedSha256": "6be69742f6fe1b103115098418bf61a02b7c8af22296927015806404a11f568f",
+      "gitBlob": "N/A",
+      "proofBoundary": "Repository predecessor and normalized SHA-256"
+    }
+  ],
+  "profile": "level2-lastenheft",
+  "languagePolicy": "GermanFirstEnglishSecond",
+  "decisions": [
+    {
+      "id": "IAD001",
+      "status": "Answered",
+      "question": "Welcher Zielpfad ist nach der Konsolidierung verbindlich?",
+      "answer": "requirements/intakes/active/Lastenheft_A11Y_TUI.md",
+      "evidence": "specs/requirements-reconciliation-20260726/migration-proposal.json"
+    },
+    {
+      "id": "IAD002",
+      "status": "Answered",
+      "question": "Welche Delivery Authority gilt?",
+      "answer": "LocalImplementation",
+      "evidence": "The migration grants no feature-delivery authority."
+    }
+  ],
+  "openDecisionIds": [],
+  "questionCount": 0,
+  "agentSurface": {
+    "specifyCanonicalId": "speckit.specify",
+    "specifyInvocation": "$speckit-specify",
+    "autonomousCanonicalId": "speckit.autonomous",
+    "autonomousInvocation": "$speckit-autonomous"
+  },
+  "deliveryAuthority": "LocalImplementation",
+  "authorityEvidence": "Default: this migration grants no remote feature-delivery authority.",
+  "promptState": "Enabled",
+  "provenanceMode": "Supersession",
+  "supersedes": {
+    "receiptPath": "specs/intake-authoring-receipts/history/a11y-tui.schema-1.1.json",
+    "targetNormalizedSha256": "6be69742f6fe1b103115098418bf61a02b7c8af22296927015806404a11f568f",
+    "archiveTargetPath": "requirements/intakes/history/pre-intake-split-20260726/Lastenheft_A11Y_TUI.md",
+    "archiveReceiptPath": "specs/intake-authoring-receipts/history/a11y-tui.schema-1.1.json"
+  },
+  "legacyAdoption": {
+    "evidenceType": "N/A",
+    "priorTargetNormalizedSha256": "N/A",
+    "priorGitBlob": "N/A"
+  },
+  "updateAuthorized": true,
+  "updateAuthorityEvidence": "User-approved migration preserves predecessor evidence.",
+  "series": {
+    "seriesId": "5b4523b4-d946-4091-9cbc-11825af94332",
+    "manifestPath": "requirements/intakes/series/tinycalc-delivery/manifest.json",
+    "order": 4,
+    "role": "OrderedMember",
+    "supersedesIntakeIds": []
+  },
+  "nextAction": "$speckit-intake-review requirements/intakes/active/Lastenheft_A11Y_TUI.md"
+}

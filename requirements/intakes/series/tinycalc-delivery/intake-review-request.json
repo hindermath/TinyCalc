@@ -1,6 +1,6 @@
 {
   "schemaVersion": "1.1",
-  "reviewId": "2c338c63-9f64-47c1-ba50-a95c7ea3fce1",
+  "reviewId": "c00e3d93-58fe-4d36-b1a4-94090cca1137",
   "mode": "Series",
   "policy": "tinycalc-delivery-v1",
   "targets": [
@@ -13,11 +13,15 @@
       "role": "OrderedMember"
     },
     {
-      "path": "requirements/intakes/active/Lastenheft_Rename_MicroCalc_TinyCalc.md",
+      "path": "requirements/intakes/active/Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md",
       "role": "OrderedMember"
     },
     {
       "path": "requirements/intakes/active/Lastenheft_A11Y_TUI.md",
+      "role": "OrderedMember"
+    },
+    {
+      "path": "requirements/intakes/active/Lastenheft_Rename_MicroCalc_TinyCalc.md",
       "role": "OrderedMember"
     },
     {
@@ -30,6 +34,14 @@
     },
     {
       "path": "requirements/intakes/active/Lastenheft_PL0-Zellfunktionen_V1.md",
+      "role": "OrderedMember"
+    },
+    {
+      "path": "requirements/intakes/active/Lastenheft_Legacy-Kompatibilitaet_V1.md",
+      "role": "OrderedMember"
+    },
+    {
+      "path": "requirements/intakes/active/Lastenheft_Formelkopie-und-Tabellenoperationen_V1.md",
       "role": "OrderedMember"
     },
     {
@@ -49,11 +61,14 @@
     "orderedTargetPaths": [
       "requirements/intakes/active/Lastenheft_Constitution_Change.002-constitution-change.md",
       "requirements/intakes/active/Lastenheft_TerminalGui_Migration.003-terminalgui-migration.md",
-      "requirements/intakes/active/Lastenheft_Rename_MicroCalc_TinyCalc.md",
+      "requirements/intakes/active/Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md",
       "requirements/intakes/active/Lastenheft_A11Y_TUI.md",
+      "requirements/intakes/active/Lastenheft_Rename_MicroCalc_TinyCalc.md",
       "requirements/intakes/active/Lastenheft_Didactic-Inline-Code-Comment-Hardening.md",
       "requirements/intakes/active/Lastenheft_Secure-Development-Hardening.md",
       "requirements/intakes/active/Lastenheft_PL0-Zellfunktionen_V1.md",
+      "requirements/intakes/active/Lastenheft_Legacy-Kompatibilitaet_V1.md",
+      "requirements/intakes/active/Lastenheft_Formelkopie-und-Tabellenoperationen_V1.md",
       "requirements/intakes/active/Lastenheft_Sandbox-gestuetzte-Secure-Development-Haertung.md",
       "requirements/intakes/active/Lastenheft_RL-SE-Checklist-Selbstpruefung.md",
       "requirements/intakes/active/Lastenheft_GSDB-Spec-Kit-Intensivpruefung.md"
@@ -72,16 +87,21 @@
       },
       {
         "from": "requirements/intakes/active/Lastenheft_TerminalGui_Migration.003-terminalgui-migration.md",
-        "to": "requirements/intakes/active/Lastenheft_Rename_MicroCalc_TinyCalc.md",
+        "to": "requirements/intakes/active/Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md",
         "kind": "HardCompletionGate"
       },
       {
-        "from": "requirements/intakes/active/Lastenheft_Rename_MicroCalc_TinyCalc.md",
+        "from": "requirements/intakes/active/Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md",
         "to": "requirements/intakes/active/Lastenheft_A11Y_TUI.md",
         "kind": "HardCompletionGate"
       },
       {
         "from": "requirements/intakes/active/Lastenheft_A11Y_TUI.md",
+        "to": "requirements/intakes/active/Lastenheft_Rename_MicroCalc_TinyCalc.md",
+        "kind": "HardCompletionGate"
+      },
+      {
+        "from": "requirements/intakes/active/Lastenheft_Rename_MicroCalc_TinyCalc.md",
         "to": "requirements/intakes/active/Lastenheft_Didactic-Inline-Code-Comment-Hardening.md",
         "kind": "HardCompletionGate"
       },
@@ -93,6 +113,16 @@
       {
         "from": "requirements/intakes/active/Lastenheft_Secure-Development-Hardening.md",
         "to": "requirements/intakes/active/Lastenheft_PL0-Zellfunktionen_V1.md",
+        "kind": "HardCompletionGate"
+      },
+      {
+        "from": "requirements/intakes/active/Lastenheft_PL0-Zellfunktionen_V1.md",
+        "to": "requirements/intakes/active/Lastenheft_Legacy-Kompatibilitaet_V1.md",
+        "kind": "HardCompletionGate"
+      },
+      {
+        "from": "requirements/intakes/active/Lastenheft_Legacy-Kompatibilitaet_V1.md",
+        "to": "requirements/intakes/active/Lastenheft_Formelkopie-und-Tabellenoperationen_V1.md",
         "kind": "HardCompletionGate"
       }
     ]

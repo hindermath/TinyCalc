@@ -1,0 +1,10 @@
+{
+  "schemaVersion": "1.0",
+  "proposalId": "6e5215f5-3fb7-4401-b69a-20c2a5f367cc",
+  "type": "Update",
+  "target": "requirements/intakes/active/Lastenheft_PL0-Zellfunktionen_V1.md",
+  "change": "Bind PL0 to the completed functional product contract and additive PL0 contract IDs while retaining version-neutral dependency resolution.",
+  "scopePreserved": true,
+  "approved": true,
+  "authorityEvidence": "The user explicitly requested implementation of the approved intake-only consolidation plan."
+}

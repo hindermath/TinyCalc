@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "1.0",
+  "documentType": "SupersededIntakeReviewEvidence",
+  "seriesId": "5b4523b4-d946-4091-9cbc-11825af94332",
+  "supersededReviewId": "2c338c63-9f64-47c1-ba50-a95c7ea3fce1",
+  "supersededStatus": "Ready",
+  "supersededReviewedAt": "2026-08-29T16:19:38Z",
+  "supersededTargetCount": 10,
+  "supersededAt": "2026-08-31T22:17:02Z",
+  "supersedingOperationId": "caa91395-702c-43e5-af48-9de5e36c31d8",
+  "sourceRevision": "4f1b612f54690e49ba3cb02269d469ec2b309f2c",
+  "artifacts": [
+    {
+      "path": "requirements/intakes/series-archive/tinycalc-delivery/20260831T221702Z-review/intake-review-request.json",
+      "normalizedSha256": "f7d4cea5d69ca4142d345a84d7f4f15fd0fa73003ad8741c2cad666ab3e83958"
+    },
+    {
+      "path": "requirements/intakes/series-archive/tinycalc-delivery/20260831T221702Z-review/intake-review-result.json",
+      "normalizedSha256": "e2079cb67e984b6f5c74d310efc6ad4ebc33c4f16f1a114413b147a9933f4681"
+    },
+    {
+      "path": "requirements/intakes/series-archive/tinycalc-delivery/20260831T221702Z-review/intake-review-report.md",
+      "normalizedSha256": "312cba8be57b68a5509e1eb7539173078f02a6b39a6476ef026e3ea63970c51d"
+    }
+  ],
+  "proofBoundary": "The previous review is archived and invalidated because the PL/0 intake, target set, order, and dependency graph changed. No successor review was started. This evidence grants no implementation or publication authority.",
+  "nextAction": "$speckit-intake-series-status"
+}

@@ -1,11 +1,13 @@
 <!-- intake-authoring:begin -->
 # Lastenheft: Kompilierte PL/0-Zellfunktionen Version 1
 
-**Status:** ReadyForReview  
-**Zielgruppe:** Auszubildende ab dem ersten Ausbildungsjahr, Lehrende und TinyCalc-Anwendende  
-**Vorausgesetztes Wissen:** Grundlegende Tabellenkalkulation und einfache Programmierbegriffe; Spec-Kit-Erfahrung wird nicht vorausgesetzt  
-**Profil:** `level2-lastenheft`  
-**Reihenfolge:** Rang 7 nach `Lastenheft_Secure-Development-Hardening.md`; bis zum bestandenen TinyPl0-Liefergate blockiert
+**Status:** ReadyForReview
+**Zielgruppe:** Auszubildende ab dem ersten Ausbildungsjahr, Lehrende und TinyCalc-Anwendende
+**Vorausgesetztes Wissen:** Grundlegende Tabellenkalkulation und einfache Programmierbegriffe; Spec-Kit-Erfahrung wird nicht vorausgesetzt
+**Profil:** `level2-lastenheft`
+**Reihenfolge:** Nach `Lastenheft_Secure-Development-Hardening.md`; die exakte
+Rangnummer wird aus der jeweils gültigen Intake-Serie abgeleitet. Bis zum
+bestandenen TinyPl0-Liefergate bleibt dieses Intake blockiert.
 
 *Status: Ready for review. Audience: apprentices from the first training year,
 teachers, and TinyCalc users. Basic spreadsheet and programming knowledge is
@@ -50,6 +52,10 @@ gate passes.*
   versionierte .NET-Bibliotheken. Eine `ProjectReference` bindet stattdessen
   lokalen Quellcode direkt ein. Locked Restore stellt ausschließlich die in
   der Paket-Lockdatei festgeschriebenen Versionen wieder her.
+- **Repository-gepinnte Version und Dependency-Drift:** Eine gepinnte Version
+  ist im Repository ausdrücklich festgelegt und reproduzierbar. Dependency-
+  Drift bedeutet, dass sich diese Festlegung seit der letzten Abnahme geändert
+  hat und deshalb erneut geprüft werden muss.
 - **Contract-Test:** ein automatisierter Test an der Grenze zwischen TinyCalc
   und TinyPl0. Er belegt, dass beide Seiten denselben öffentlichen API- und
   Laufzeitvertrag verstehen.
@@ -101,6 +107,10 @@ gate passes.*
   versioned .NET libraries. A `ProjectReference` directly includes local
   source instead. Locked restore restores only the versions recorded in the
   package lock file.
+- **Repository-pinned version and dependency drift:** A pinned version is
+  explicitly selected in the repository and can be restored reproducibly.
+  Dependency drift means this selection changed since the last acceptance and
+  therefore requires renewed validation.
 - **Contract test:** an automated test at the boundary between TinyCalc and
   TinyPl0. It proves that both sides understand the same public API and runtime
   contract.
@@ -140,15 +150,21 @@ accessible editor and a step debugger are part of version 1.*
   benutzerdefinierte Funktionen und keine allgemeine Mehrargument-Schnittstelle.
 - Arbeitsblattdateien speichern Zellen und AutoCalc, aber keinen Funktionskatalog
   und keine explizite Formatversion.
-- TinyCalc verwendet Terminal.Gui 1.19; die TinyPl0-IDE verwendet Terminal.Gui
-  2.0 und ist nicht als wiederverwendbare UI-Bibliothek aufgebaut.
+- Die konkrete Terminal.Gui-Version ist ein datierter Repository-Iststand und
+  keine zeitlose PL/0-Anforderung. Vor Spezifikation und Implementierung muss
+  die dann im Repository ausdrücklich gepinnte und freigegebene Version samt
+  Deklarations- und Lockquelle ermittelt werden.
+- Die TinyPl0-IDE ist nicht als wiederverwendbare UI-Bibliothek aufgebaut und
+  wird unabhängig von ihrer dann aktuellen TUI-Abhängigkeit nicht eingebettet.
 - TinyPl0 stellt Compiler und VM als .NET-10-Projekte bereit, aber noch nicht
   über die für dieses Intake geforderten öffentlichen NuGet-Pakete.
 
 *TinyCalc currently evaluates numbers, cell references, and built-in functions
 as `double`. It has no qualified user-function namespace, worksheet function
-catalog, or explicit file-format version. TinyPl0 provides compiler and VM
-projects, but not yet the public NuGet delivery required here.*
+catalog, or explicit file-format version. The concrete Terminal.Gui version is
+a dated repository snapshot, not a permanent PL/0 requirement. TinyPl0
+provides compiler and VM projects, but not yet the public NuGet delivery
+required here.*
 
 ## Zielzustand / Target State
 
@@ -171,8 +187,9 @@ PL/0 code has no direct access to cells or operating-system resources.*
 
 ## Umfang / Scope
 
-- Konsum der öffentlichen Pakete `TinyPl0.Core` und `TinyPl0.Vm` in derselben
-  fest gepinnten stabilen Version.
+- Konsum der öffentlichen Pakete `TinyPl0.Core` und `TinyPl0.Vm` in derselben,
+  zum Ausführungszeitpunkt ausdrücklich ausgewählten und fest gepinnten
+  stabilen Version.
 - Formelparser-Erweiterung für qualifizierte PL/0-Namen und mehrere Argumente.
 - Arbeitsblattbezogener Funktionskatalog mit Name, geordneten Parametern und
   kanonischem PL/0-Quellcode.
@@ -267,19 +284,28 @@ Vor jeder TinyCalc-Implementierung müssen zwei Stufen erfolgreich sein:
    Quellcommit sind dokumentiert; `TinyPl0.Core` und `TinyPl0.Vm` liegen in
    derselben stabilen Version auf NuGet.org vor; SBOM-, VEX- und
    Provenance/SLSA-Evidenz ist verlinkt.
-2. **Technischer Preflight:** `dotnet restore --locked-mode` stellt die exakt
-   gepinnte Version wieder her; keine lokale `ProjectReference` ist vorhanden;
-   Contract-Tests belegen Compile, Run, Step, Instruktionslimit, Abbruch und
-   strukturierte Diagnosen.
+2. **Technischer Preflight:** Die aktuellen Repository-Deklarationen bestimmen
+   die freigegebenen, exakt gepinnten TinyPl0- und Terminal.Gui-Versionen.
+   `dotnet restore --locked-mode` stellt sie reproduzierbar wieder her; keine
+   lokale `ProjectReference` ist vorhanden; Contract-Tests belegen Compile,
+   Run, Step, Instruktionslimit, Abbruch und strukturierte Diagnosen.
+
+Der Preflight klassifiziert Terminal.Gui als `Unchanged`, `DependencyDrift`
+oder `Unpinned`. `DependencyDrift` verlangt erneute Build-, vollständige TUI-,
+PTY- und A11Y-Prüfung. `Unpinned` blockiert fail-closed. Der Preflight führt
+kein automatisches Upgrade durch. Die aufgelösten Versionen, ihre Quelle und
+der Lockfile-Hash werden als Evidence festgehalten.
 
 Review, Spezifikation und Planung dürfen vorher vorbereitet werden. Ein
 Implementierungs- oder autonomer Lauf muss jedoch vor Änderungen stoppen,
 solange eine Gate-Stufe fehlt. Es gibt keinen lokalen Fallback.
 
 *The binding gate requires completed TinyPl0 release evidence and a successful
-locked package/API preflight. Review and planning may be prepared earlier, but
-implementation must stop before any change while either stage is incomplete.
-No local fallback is allowed.*
+locked package/API preflight. The preflight resolves the currently approved
+repository pins, classifies UI dependency drift, records the version sources
+and lock hash, and never performs an automatic upgrade. Review and planning
+may be prepared earlier, but implementation must stop before any change while
+either stage is incomplete. No local fallback is allowed.*
 
 ## Qualität und Governance / Quality And Governance
 
@@ -312,8 +338,11 @@ non-AI product scope and must be recorded with that rationale.*
 - Interner Vorgänger: `Lastenheft_Secure-Development-Hardening.md`.
 - Externer harter Vorgänger: TinyPl0
   `Lastenheft_Embeddable-VM-und-NuGet.md` einschließlich öffentlichem Release.
-- Die Terminal.Gui-Migration, Umbenennung, TUI-A11Y und Kommentarhärtung liegen
-  durch die bestehende Serienkette bereits vor diesem Intake.
+- Die vollständige TUI-Funktionsabnahme ist der verbindliche
+  Produktvertrags-Vorgänger. TUI-A11Y, Umbenennung und Kommentarhärtung liegen
+  durch die bestehende Serienkette ebenfalls vor diesem Intake.
+- PL/0 ergänzt vor jeder Produktänderung neue `PL0-*`-Vertrags-IDs; sämtliche
+  bis dahin aktiven IDs bleiben Pflichtregression.
 - Risiken sind blockierende oder bösartige Programme, API-Drift, Paket-Tausch,
   Ganzzahlüberlauf, veralteter P-Code, schwer erkennbare Diagnosezustände und
   Tastatur-/Screenreader-Barrieren.
@@ -335,6 +364,10 @@ barriers.*
   Sicherheitsdokumente unter `docs/security/`.
 - Paket-Lockdatei, TinyPl0-Release-/SBOM-/VEX-/SLSA-Verweise und bestandener
   Cross-Repo-Contract-Test.
+- Dependency-Preflight mit aufgelösten TinyPl0- und Terminal.Gui-Versionen,
+  Deklarationsquellen, Lockfile-Hash und Driftklassifikation.
+- Aktualisierter maschinenlesbarer Produktvertrag mit neuen `PL0-*`-IDs und
+  vollständiger Regression aller bisherigen aktiven IDs.
 - Aktualisierte DocFX-Ausgabe mit Playwright/axe- und lynx-orientierter
   Textprüfung, sofern DocFX-Inhalte geändert werden.
 - Aktualisierte Projektstatistik nach den Repository-Regeln.
@@ -366,6 +399,12 @@ where applicable, and updated project statistics.*
   auf den verbindlichen Plattformen erfolgreich.
 - **AC-010:** Dokumentation, Security-Evidenz, Paketnachweise und Statistik sind
   aktuell, zweisprachig und textorientiert prüfbar.
+- **AC-011:** Der Dependency-Preflight erkennt unveränderte, geänderte und
+  ungepinnte Terminal.Gui-Zustände korrekt; Drift löst die vollständigen
+  TUI-/PTY-/A11Y-Gates aus und kein Pfad führt selbstständig ein Upgrade durch.
+- **AC-012:** Alle neuen `PL0-*`-IDs und alle zuvor aktiven Vertrags-IDs
+  bestehen auf demselben Commit; kein PL/0-Pfad schwächt bestehende TUI-,
+  Datei-, Formel-, Hilfe- oder A11Y-Evidenz.
 
 *Acceptance proves the package gate, pure integer calculation, strict-profile
 rejection, bounded execution, consistent stepping, no stale-code fallback,
@@ -379,6 +418,13 @@ backward-compatible persistence, cross-platform tests, and complete evidence.*
   freigegeben.
 - **IAD002 – beantwortet:** Das zweistufige Gate und das Verbot einer lokalen
   `ProjectReference` als Fallback wurden ausdrücklich genehmigt.
+- **IAD003 – beantwortet:** Versionsnummern in Anforderungen sind datierte
+  Ist-Snapshots. Maßgeblich ist die zum späteren Ausführungszeitpunkt aktuelle,
+  ausdrücklich repository-gepinnte und freigegebene Version; Drift wird neu
+  geprüft und kein automatisches Upgrade ist erlaubt.
+- **IAD004 – beantwortet:** PL/0 ist eine additive Erweiterung des zuvor
+  abgenommenen Produktvertrags und darf keine bestehende Vertrags-ID ersetzen
+  oder aus der Regression entfernen.
 - Delivery Authority bleibt `LocalImplementation`; das Intake erteilt keine
   Commit-, Push-, PR-, Merge-, Paketveröffentlichungs- oder Bypass-Berechtigung.
 - Es bestehen keine offenen fachlichen Intake-Fragen.
@@ -394,14 +440,14 @@ questions remain open.*
 ### Specify
 
 ```text
-$speckit-specify Nutze requirements/intakes/active/Lastenheft_PL0-Zellfunktionen_V1.md als verbindliches Intake. Prüfe zuerst beide Stufen des TinyPl0-Liefergates und dokumentiere fehlende Evidenz als Blocker. Erstelle oder aktualisiere ausschließlich die passende Feature-Spezifikation. Bewahre Scope, Nicht-Ziele, Reihenfolge, strenges PL/0-Profil, NuGet-Vertrag, Security-, A11Y-, Dokumentations- und Evidenzgrenzen. Implementiere nichts; committe und pushe nicht; erstelle oder merge keinen Pull Request und starte kein weiteres Feature.
+$speckit-specify Nutze requirements/intakes/active/Lastenheft_PL0-Zellfunktionen_V1.md als verbindliches Intake. Prüfe zuerst beide Stufen des TinyPl0-Liefergates sowie den versionsneutralen Dependency-Preflight und dokumentiere fehlende, geänderte oder ungepinnte Evidenz als Blocker. Erstelle oder aktualisiere ausschließlich die passende Feature-Spezifikation. Bewahre Scope, Nicht-Ziele, Reihenfolge, strenges PL/0-Profil, NuGet-Vertrag, Security-, A11Y-, Dokumentations- und Evidenzgrenzen. Implementiere nichts; committe und pushe nicht; erstelle oder merge keinen Pull Request und starte kein weiteres Feature.
 ```
 
 <!-- spec-kit-command-id: speckit.autonomous -->
 ### Autonomous
 
 ```text
-$speckit-autonomous Führe genau einen vollständigen autonomen Spec-Kit-Lauf mit requirements/intakes/active/Lastenheft_PL0-Zellfunktionen_V1.md als verbindlichem Intake aus. Delivery Mode: LocalImplementation. Prüfe vor jeder Änderung das zweistufige TinyPl0-Liefergate und stoppe fail-closed, wenn Release-, NuGet-, SBOM-/VEX-/SLSA-, Locked-Restore- oder Contract-Test-Evidenz fehlt. Bewahre Scope, Reihenfolge, strenges PL/0-Profil, Security-, A11Y-, Dokumentations- und Evidenzgrenzen. Nutze keine lokale ProjectReference als Fallback. Nicht pushen, keinen Pull Request erstellen oder mergen, keine Pakete veröffentlichen, keinen Bypass nutzen, keine Secrets offenlegen und kein Folgefeature starten.
+$speckit-autonomous Führe genau einen vollständigen autonomen Spec-Kit-Lauf mit requirements/intakes/active/Lastenheft_PL0-Zellfunktionen_V1.md als verbindlichem Intake aus. Delivery Mode: LocalImplementation. Prüfe vor jeder Änderung das zweistufige TinyPl0-Liefergate und den versionsneutralen Dependency-Preflight; stoppe fail-closed, wenn Release-, NuGet-, SBOM-/VEX-/SLSA-, Locked-Restore-, Contract-Test- oder Pin-Evidenz fehlt oder ungeklärte Dependency-Drift besteht. Führe kein automatisches Upgrade aus. Bewahre Scope, Reihenfolge, strenges PL/0-Profil, Security-, A11Y-, Dokumentations- und Evidenzgrenzen. Nutze keine lokale ProjectReference als Fallback. Nicht pushen, keinen Pull Request erstellen oder mergen, keine Pakete veröffentlichen, keinen Bypass nutzen, keine Secrets offenlegen und kein Folgefeature starten.
 ```
 
 <!-- intake-authoring:end -->

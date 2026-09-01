@@ -1,0 +1,109 @@
+{
+  "schemaVersion": "2.0",
+  "documentType": "IntakeReceipt",
+  "receiptId": "251c5c8e-ece0-4806-928f-dfcefe7e5732",
+  "intakeId": "5f813415-ee1c-42dd-bb0c-7706459d54e9",
+  "generator": {
+    "preset": "intake-authoring-governance",
+    "version": "0.3.1"
+  },
+  "createdAt": "2026-08-31T22:10:00Z",
+  "operation": {
+    "operationId": "c4bf1240-4845-4d32-afdd-a80e9e879d5f",
+    "type": "Create",
+    "authorityEvidence": "User approved a separate structural spreadsheet intake after legacy compatibility and explicitly limited execution to Lastenheft and intake artifacts only."
+  },
+  "status": "ReadyForReview",
+  "target": {
+    "path": "requirements/intakes/active/Lastenheft_Formelkopie-und-Tabellenoperationen_V1.md",
+    "normalizedSha256": "4bff4f19cde8158308680fb2541ec1c22f81150da3ad3166a535fa55ea945a6a"
+  },
+  "sources": [
+    {
+      "sourceId": "SRC001",
+      "order": 1,
+      "kind": "Inline",
+      "label": "Approved TinyCalc formula copy and structural spreadsheet scope",
+      "location": "SnapshotOnly",
+      "path": "N/A",
+      "requestedUrl": "N/A",
+      "finalUrl": "N/A",
+      "retrievedAt": "N/A",
+      "httpStatus": "N/A",
+      "contentType": "N/A",
+      "contentLength": "N/A",
+      "etag": "N/A",
+      "lastModified": "N/A",
+      "redirectChain": [],
+      "rawSha256": "N/A",
+      "normalizedSha256": "975432062e558de5924b3883caaeac68c47adbc5af0787ae570a90546e8984db",
+      "gitBlob": "N/A",
+      "proofBoundary": "SnapshotOnly"
+    }
+  ],
+  "profile": "level2-lastenheft",
+  "languagePolicy": "GermanFirstEnglishSecond",
+  "decisions": [
+    {
+      "id": "IAD001",
+      "status": "Answered",
+      "question": "Does the worksheet remain fixed or become dynamically sized?",
+      "answer": "It remains fixed at seven columns and twenty-one rows.",
+      "evidence": "Explicit user selection: Festes 7x21-Raster."
+    },
+    {
+      "id": "IAD002",
+      "status": "Answered",
+      "question": "How are formula references handled during copy and shifts?",
+      "answer": "Relative references are adjusted structurally, including ranges and PL/0 arguments.",
+      "evidence": "Explicit user selection of relative adjustment in the fixed-grid option."
+    },
+    {
+      "id": "IAD003",
+      "status": "Answered",
+      "question": "What happens to references targeting deleted cells?",
+      "answer": "They become an explicit visible and persistent #REF! error.",
+      "evidence": "Explicit user selection: Explizites #REF!."
+    },
+    {
+      "id": "IAD004",
+      "status": "Answered",
+      "question": "Where is this feature ordered?",
+      "answer": "It is a separate hard successor to legacy compatibility, which itself follows PL/0.",
+      "evidence": "Explicit user selection of two serial intakes."
+    }
+  ],
+  "openDecisionIds": [],
+  "questionCount": 4,
+  "agentSurface": {
+    "specifyCanonicalId": "speckit.specify",
+    "specifyInvocation": "$speckit-specify Nutze requirements/intakes/active/Lastenheft_Formelkopie-und-Tabellenoperationen_V1.md als verbindliches Intake. Erstelle oder aktualisiere ausschließlich die passende Feature-Spezifikation. Bewahre das feste 7x21-Raster, AST-basierte relative Referenzen einschließlich PL0-Aufrufen, Ziel-Formatierung, atomare Vorschau/Bestätigung, sichtbares #REF! sowie Security-, A11Y-, Dokumentations- und Evidenzgrenzen. Implementiere nichts; committe und pushe nicht; erstelle oder merge keinen Pull Request und starte kein Folgefeature.",
+    "autonomousCanonicalId": "speckit.autonomous",
+    "autonomousInvocation": "$speckit-autonomous Führe genau einen vollständigen autonomen Spec-Kit-Lauf mit requirements/intakes/active/Lastenheft_Formelkopie-und-Tabellenoperationen_V1.md als verbindlichem Intake aus. Delivery Mode: LocalImplementation. Stoppe vor Änderungen, solange die Legacy-Kompatibilität nicht vollständig abgeschlossen ist. Bewahre das feste Raster, AST-basierte Referenzanpassung, atomare Operationen, explizites #REF!, Ziel-Formatierung, vollständige Regression sowie Security-, A11Y-, Plattform-, Dokumentations- und Evidenzgrenzen. Nicht pushen, keinen Pull Request erstellen oder mergen, keinen Bypass nutzen, keine Secrets offenlegen und kein Folgefeature starten."
+  },
+  "deliveryAuthority": "LocalImplementation",
+  "authorityEvidence": "The current request authorizes intake artifacts only and grants no implementation, commit, push, PR, merge, bypass, or provider authority.",
+  "promptState": "Enabled",
+  "provenanceMode": "New",
+  "supersedes": {
+    "receiptPath": "N/A",
+    "targetNormalizedSha256": "N/A",
+    "archiveTargetPath": "N/A",
+    "archiveReceiptPath": "N/A"
+  },
+  "legacyAdoption": {
+    "evidenceType": "N/A",
+    "priorTargetNormalizedSha256": "N/A",
+    "priorGitBlob": "N/A"
+  },
+  "updateAuthorized": false,
+  "updateAuthorityEvidence": "N/A",
+  "series": {
+    "seriesId": "5b4523b4-d946-4091-9cbc-11825af94332",
+    "manifestPath": "requirements/intakes/series/tinycalc-delivery/manifest.json",
+    "order": 10,
+    "role": "OrderedMember",
+    "supersedesIntakeIds": []
+  },
+  "nextAction": "$speckit-intake-review requirements/intakes/active/Lastenheft_Formelkopie-und-Tabellenoperationen_V1.md"
+}

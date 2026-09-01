@@ -2,7 +2,7 @@
   "schemaVersion": "1.0",
   "documentType": "RequirementsReconciliation",
   "repository": "hindermath/TinyCalc",
-  "reviewedAt": "2026-07-26",
+  "reviewedAt": "2026-09-01",
   "sources": [
     {
       "sourceId": "TC-CONSTITUTION",
@@ -61,7 +61,25 @@
     {
       "sourceId": "TC-PL0-CELLS",
       "path": "requirements/intakes/active/Lastenheft_PL0-Zellfunktionen_V1.md",
-      "normalizedSha256": "5214bbddc484f5297a914edfbfd0265975fc6f15e74a7f6d711b05317913f25b",
+      "normalizedSha256": "bbec90bb96a7b40f7f995df2a3ec1095a9d25acde1b98f85773315c91d8cdc90",
+      "role": "ActiveIntakeCandidate"
+    },
+    {
+      "sourceId": "TC-FUNCTIONAL-CONTRACT",
+      "path": "requirements/intakes/active/Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md",
+      "normalizedSha256": "f7b72c2abbd55d197cbc3cee5050f189868656ae0cff8b8745fa430535632d40",
+      "role": "ActiveIntakeCandidate"
+    },
+    {
+      "sourceId": "TC-LEGACY-COMPAT",
+      "path": "requirements/intakes/active/Lastenheft_Legacy-Kompatibilitaet_V1.md",
+      "normalizedSha256": "2e6a8036d18e7d3ed7360623f841a31411d245c5acf1441f0fe9d5877fc475b1",
+      "role": "ActiveIntakeCandidate"
+    },
+    {
+      "sourceId": "TC-STRUCTURAL-SPREADSHEET",
+      "path": "requirements/intakes/active/Lastenheft_Formelkopie-und-Tabellenoperationen_V1.md",
+      "normalizedSha256": "3bf64c36fde0c6e109f3e331d2595a06232deb275b3a8eb65a5136e0fd27aec8",
       "role": "ActiveIntakeCandidate"
     },
     {
@@ -79,15 +97,15 @@
     {
       "sourceId": "TC-ORDER-GENERATED",
       "path": "Lastenheft_Abarbeitungsreihenfolge.md",
-      "normalizedSha256": "db5cbad8a5216d99931b733cf9f7a7d538d2621ac2000512f8e0dfa601de87f7",
+      "normalizedSha256": "1efbf3beb0765da3afd5b347bf829141a6f6e9c4f8fb2b0b13c3727814f1a956",
       "role": "GeneratedOrder"
     }
   ],
   "summary": {
-    "total": 9,
-    "AlreadySatisfied": 0,
-    "PartiallySatisfied": 2,
-    "Open": 7,
+    "total": 13,
+    "AlreadySatisfied": 2,
+    "PartiallySatisfied": 1,
+    "Open": 10,
     "DeferredOptional": 0,
     "Blocked": 0,
     "N/A": 0
@@ -98,31 +116,31 @@
       "sourceId": "TC-CONSTITUTION",
       "sourcePath": "Lastenheft_Constitution_Change.md",
       "sourceNormalizedSha256": "a46ff154633ff2979379847a36fa9a6e157ceca249a4fff283fe452425431d59",
-      "statement": "Bilingual, documentation, TDD, and learner guidance exists, but the intake has not received a dedicated closure decision.",
-      "status": "PartiallySatisfied",
+      "statement": "The constitution intake is delivered and recorded as completed in the canonical series.",
+      "status": "AlreadySatisfied",
       "evidencePaths": [
         "constitution.md",
         ".specify/memory/constitution.md",
         "AGENTS.md"
       ],
       "proposedOwnerGroup": "Governance",
-      "residualRisk": "Existing evidence may not cover every acceptance criterion in the intake.",
-      "reevaluationTrigger": "Before executing or archiving Lastenheft_Constitution_Change.md"
+      "residualRisk": "A future constitution change requires a separate versioned intake and fresh evidence.",
+      "reevaluationTrigger": "When constitution or shared governance requirements change"
     },
     {
       "requirementId": "TC-RQ-002",
       "sourceId": "TC-TERMINALGUI",
       "sourcePath": "Lastenheft_TerminalGui_Migration.md",
       "sourceNormalizedSha256": "3450414273d371c025e6f9303f9add3e0abf5da2754c7be5953c09b96a579bb1",
-      "statement": "The product still references Terminal.Gui 1.19.0, so the 2.x migration is not complete.",
-      "status": "Open",
+      "statement": "The Terminal.Gui migration is technically delivered; complete functional and accessibility acceptance remains in successor intakes.",
+      "status": "AlreadySatisfied",
       "evidencePaths": [
         "src/MicroCalc.Tui/MicroCalc.Tui.csproj",
         "tests/MicroCalc.Tui.Tests"
       ],
       "proposedOwnerGroup": "TUI",
-      "residualRisk": "The accepted product or governance outcome remains unverified.",
-      "reevaluationTrigger": "Before executing or archiving Lastenheft_TerminalGui_Migration.md"
+      "residualRisk": "Migration completion alone does not prove complete visual, interactive, or accessibility parity.",
+      "reevaluationTrigger": "On Terminal.Gui dependency drift or when executing the functional-acceptance intake"
     },
     {
       "requirementId": "TC-RQ-003",
@@ -145,7 +163,7 @@
       "sourceId": "TC-A11Y",
       "sourcePath": "Lastenheft_A11Y_TUI.md",
       "sourceNormalizedSha256": "6be69742f6fe1b103115098418bf61a02b7c8af22296927015806404a11f568f",
-      "statement": "A11Y foundations and tests exist, but the intake depends partly on the open Terminal.Gui migration and retains unclosed TUI criteria.",
+      "statement": "A11Y foundations exist, but full WCAG, PTY, VoiceOver, and documentation evidence remains blocked by complete functional acceptance.",
       "status": "PartiallySatisfied",
       "evidencePaths": [
         "src/MicroCalc.Tui",
@@ -236,7 +254,7 @@
       "requirementId": "TC-RQ-010",
       "sourceId": "TC-PL0-CELLS",
       "sourcePath": "requirements/intakes/active/Lastenheft_PL0-Zellfunktionen_V1.md",
-      "sourceNormalizedSha256": "5214bbddc484f5297a914edfbfd0265975fc6f15e74a7f6d711b05317913f25b",
+      "sourceNormalizedSha256": "bbec90bb96a7b40f7f995df2a3ec1095a9d25acde1b98f85773315c91d8cdc90",
       "statement": "Compiled PL/0 cell functions, the strict TinyCalc profile, and the step debugger are approved for version 1 but remain blocked by the TinyPl0 completion and NuGet delivery gate.",
       "status": "Open",
       "evidencePaths": [
@@ -246,6 +264,55 @@
       "proposedOwnerGroup": "Formula Engine",
       "residualRisk": "Implementation before verified TinyPl0 package delivery would bypass the approved supply-chain and contract gate.",
       "reevaluationTrigger": "After the TinyPl0 intake is complete and both stable packages are available in the same version on NuGet.org"
+    },
+    {
+      "requirementId": "TC-RQ-011",
+      "sourceId": "TC-FUNCTIONAL-CONTRACT",
+      "sourcePath": "requirements/intakes/active/Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md",
+      "sourceNormalizedSha256": "f7b72c2abbd55d197cbc3cee5050f189868656ae0cff8b8745fa430535632d40",
+      "statement": "Every capability currently offered through the TUI, README, and migrated help requires complete interactive acceptance and a permanent additive regression contract.",
+      "status": "Open",
+      "evidencePaths": [
+        "requirements/intakes/active/Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md",
+        "requirements/intakes/series/tinycalc-delivery/manifest.json",
+        "requirements/intakes/series/tinycalc-delivery/intake-review-result.json"
+      ],
+      "proposedOwnerGroup": "TUI",
+      "residualRisk": "Build, unit tests, and smoke mode alone can miss broken PTY interaction paths and documentation drift.",
+      "reevaluationTrigger": "Before every functional feature delivery and on TUI, help, README, dependency, rename, or release-closeout changes"
+    },
+    {
+      "requirementId": "TC-RQ-012",
+      "sourceId": "TC-LEGACY-COMPAT",
+      "sourcePath": "requirements/intakes/active/Lastenheft_Legacy-Kompatibilitaet_V1.md",
+      "sourceNormalizedSha256": "2e6a8036d18e7d3ed7360623f841a31411d245c5acf1441f0fe9d5877fc475b1",
+      "statement": "Version 1 requires safe import of evidenced standard and 8087 MCS files with compiler-authentic fixtures while retaining JSON as the only write format.",
+      "status": "Open",
+      "evidencePaths": [
+        "requirements/intakes/active/Lastenheft_Legacy-Kompatibilitaet_V1.md",
+        "CALC.PAS",
+        "CALC.INC",
+        "CALC.HLP"
+      ],
+      "proposedOwnerGroup": "Core IO",
+      "residualRisk": "Unauthenticated or malformed fixtures could create false compatibility claims or unsafe partial imports.",
+      "reevaluationTrigger": "After PL/0 completion and before implementing or extending MCS import"
+    },
+    {
+      "requirementId": "TC-RQ-013",
+      "sourceId": "TC-STRUCTURAL-SPREADSHEET",
+      "sourcePath": "requirements/intakes/active/Lastenheft_Formelkopie-und-Tabellenoperationen_V1.md",
+      "sourceNormalizedSha256": "3bf64c36fde0c6e109f3e331d2595a06232deb275b3a8eb65a5136e0fd27aec8",
+      "statement": "Formula copy and fixed-grid row or column operations require immutable source snapshots, atomic whole-cell moves, structural reference adjustment, and visible REF errors.",
+      "status": "Open",
+      "evidencePaths": [
+        "requirements/intakes/active/Lastenheft_Formelkopie-und-Tabellenoperationen_V1.md",
+        "src/MicroCalc.Core/Engine/MicroCalcEngine.cs",
+        "src/MicroCalc.Core/Model/Cell.cs"
+      ],
+      "proposedOwnerGroup": "Spreadsheet Engine",
+      "residualRisk": "Incorrect overlap or reference handling could silently corrupt formulas, formats, or persisted cell state.",
+      "reevaluationTrigger": "After legacy compatibility completion and before implementing structural spreadsheet operations"
     }
   ]
 }

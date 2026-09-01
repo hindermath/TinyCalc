@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "documentType": "IntakeSeriesReceipt",
+  "receiptId": "51757b18-f1fb-4742-b562-a6ac61728d47",
+  "seriesId": "5b4523b4-d946-4091-9cbc-11825af94332",
+  "generator": {
+    "preset": "intake-sequencing-governance",
+    "version": "0.2.3"
+  },
+  "createdAt": "2026-08-30T14:56:02Z",
+  "operation": {
+    "operationId": "f02706bb-83bd-4c66-946f-d2080cfac62f",
+    "type": "Update",
+    "authorityEvidence": "Thorsten explicitly authorized continued serial autonomous Spec Kit runs through 2026-08-31 05:00 Europe/Berlin with MergeAndSync and narrow Admin-Bypass authority; Feature 003 task T073 limits this closeout to one branch-qualified Lastenheft rename, one tinycalc-delivery series mutation, and one causal closeout pull request."
+  },
+  "status": "Ready",
+  "manifest": {
+    "path": "requirements/intakes/series/tinycalc-delivery/manifest.json",
+    "normalizedSha256": "60aa9ea242b8081135e2ac1bfcf1bd50929e60bf9a9ebefe5ee0047bfeb6bd8d"
+  },
+  "supersedes": {
+    "receiptPath": "requirements/intakes/series-archive/tinycalc-delivery/20260830T145602Z/receipt.json",
+    "receiptNormalizedSha256": "e24fc005f00c639dee63b75a977e4092aa28971900e7bf4c58355bb1cf6ab1be",
+    "manifestArchivePath": "requirements/intakes/series-archive/tinycalc-delivery/20260830T145602Z/manifest.json",
+    "manifestArchiveSha256": "eef3cfd5b9e43395ab9ee59848bb183f1429a3104e5ce4a0980393987a530be2"
+  },
+  "tombstone": {
+    "path": "N/A",
+    "normalizedSha256": "N/A"
+  },
+  "nextAction": "$speckit-intake-series-status"
+}

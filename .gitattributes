@@ -1,1 +1,2 @@
 * text=auto eol=lf
+requirements/intakes/archive/** whitespace=-trailing-space

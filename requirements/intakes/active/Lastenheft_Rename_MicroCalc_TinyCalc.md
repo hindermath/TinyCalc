@@ -1,267 +1,276 @@
 <!-- intake-authoring:begin -->
-# Lastenheft: Umbenennung MicroCalc → TinyCalc
-
-**Dokument-Status:** Entwurf
-**Erstellt:** 2026-03-31
-**Betrifft:** Alle Dateien und Ordner im Repository, die den String „MicroCalc" enthalten
-**Empfohlener Durchführungszeitraum:** Als eigenständiger PR; kann parallel zur
-Terminal.Gui-Migration (`Lastenheft_TerminalGui_Migration.md`) vorbereitet, aber
-idealerweise **nach** der Migration gemergt werden, um Konflikte zu vermeiden.
-**Wichtig:** Die GitHub-Repository-URL bleibt unverändert
-(`github.com/hindermath/TinyCalc`) — nur der interne Code-Namespace ändert sich.
-
----
+# Lastenheft: Umbenennung MicroCalc zu TinyCalc
+
+**Status:** ReadyForReview
+**Zielgruppe:** TinyCalc-Anwendende, Auszubildende, Lehrende, Entwicklung und Review
+**Vorausgesetztes Wissen:** Grundlegende Projekt- und Namespace-Begriffe; Spec-Kit-Erfahrung wird nicht vorausgesetzt
+**Profil:** `level2-lastenheft`
+**Reihenfolge:** Nach der vollständigen TUI-A11Y-Abnahme und vor der didaktischen Kommentarhärtung
+
+*Status: Ready for review. This intake follows complete TUI accessibility
+acceptance and precedes didactic comment hardening.*
+
+## Begriffe beim ersten Gebrauch / Terms At First Use
+
+### Deutsch
+
+- **Rename:** konsistente Umbenennung einer technischen Identität mit allen
+  aktiven Verweisen.
+- **Namespace:** hierarchischer Name, der C#-Typen eindeutig zuordnet.
+- **Live-Inventar:** zur Ausführungszeit aus dem aktuellen Git-Stand erzeugte
+  Liste aller betroffenen Dateien und Referenzen.
+- **Historische Allowlist:** ausdrücklich begründete Orte, an denen der frühere
+  Name als Herkunftsnachweis erhalten bleibt.
+- **Atomar:** der Repository-Stand ist vor und nach der Änderung konsistent; es
+  gibt keinen ausgelieferten Zwischenstand mit gemischten Identitäten.
+
+### English
+
+- **Rename:** a consistent change of technical identity and all active
+  references.
+- **Namespace:** the hierarchical name that identifies C# types.
+- **Live inventory:** the execution-time list of affected files and references
+  generated from the current Git state.
+- **Historical allowlist:** justified locations where the former name remains
+  as provenance.
+- **Atomic:** the repository is consistent before and after the change without
+  a delivered mixed-name state.
+
+## Zweck / Purpose
+
+Das Projekt heißt nach außen TinyCalc, verwendet intern aber weiterhin
+MicroCalc in Solution-, Projekt-, Assembly-, Namespace-, Test-, UI- und
+Dokumentationsflächen. Ein atomarer Rename stellt eine einheitliche aktive
+Produktidentität her, ohne Legacy-Quellen oder historische Evidenz
+umzuschreiben.
+
+*The repository shall use TinyCalc consistently on active product surfaces
+while preserving legacy sources, historical evidence, and compatibility
+boundaries.*
+
+## Aktueller Zustand / Current State
+
+- Repository und README verwenden TinyCalc als äußere Identität.
+- Solution, Projekte, Namespaces, Tests und Teile der UI heißen noch MicroCalc.
+- Frühere feste Datei- und Trefferzahlen sind datierte Snapshots und können bis
+  zur späteren Ausführung veraltet sein.
+- Die Terminal.Gui-Migration, vollständige Funktionsabnahme und TUI-A11Y-
+  Abnahme liegen gemäß Serienkette vor diesem Intake.
+- Das native JSON-Format und die Erweiterung `.mcalc.json` enthalten
+  bestehende Nutzerdaten und dürfen nicht unbeabsichtigt inkompatibel werden.
+
+*The external name is TinyCalc, while active internal surfaces still use
+MicroCalc. Static inventories are stale-prone, and existing JSON data is a
+compatibility boundary.*
+
+## Zielzustand / Target State
+
+- Das Ausführungs-Preflight erzeugt ein vollständiges Live-Inventar aus dem
+  aktuellen Git-Stand und klassifiziert jeden Treffer.
+- Alle aktiven technischen und nutzerseitigen Identitäten heißen TinyCalc.
+- Historische Pascal-Quellen, Archive, frühere PR-Nachweise und erklärte
+  Herkunftstexte bleiben unverändert oder ausdrücklich allowlisted.
+- Build, Tests, Smoke, Produktvertrag, A11Y, Dokumentation und CI bestehen für
+  denselben Rename-Commit.
+- Persistierte Arbeitsblätter bleiben lesbar; der Rename ändert keine
+  Tabellenfachlogik.
+
+*Active identities become TinyCalc, historical evidence remains traceable, and
+all functional, accessibility, build, documentation, and compatibility gates
+pass on the same commit.*
+
+## Umfang / Scope
+
+- Solution-, Projektordner-, Projektdatei-, Assembly- und Root-Namespace-Namen.
+- Namespaces, `using`-Anweisungen, Tests, Projektverweise und Buildskripte.
+- Aktive UI-Titel, Status-/Fehlertexte, README, Hilfe, DocFX, API-Dokumentation,
+  CI, Entwickler- und Agentenhinweise.
+- Umbenennung der aktiven migrierten Hilfedatei
+  `docs/help/microcalc-help.md` nach `docs/help/tinycalc-help.md` samt
+  Verweisen.
+- Live-Inventar für Git-getrackte Textdateien, Pfade und generierte
+  Dokumentationsnavigation.
+- Explizite historische Allowlist mit Begründung, Owner und Prüfbefehl.
+
+*Scope covers all active technical, UI, documentation, CI, test, and agent
+surfaces plus an execution-time inventory and historical allowlist.*
+
+## Wichtige Schnittstellenänderungen / Important Interface Changes
+
+- `MicroCalc.sln` wird zu `TinyCalc.sln`.
+- Die Projekte und Assemblies werden zu `TinyCalc.Core`,
+  `TinyCalc.Tui`, `TinyCalc.Core.Tests` und `TinyCalc.Tui.Tests`.
+- Öffentliche C#-Namespaces wechseln von `MicroCalc.*` zu `TinyCalc.*`;
+  alle internen Konsumenten, XML-Verweise und Tests werden atomar angepasst.
+- Es gibt derzeit kein veröffentlichtes NuGet-Paket, dessen Paket-ID migriert
+  werden müsste.
+- JSON-Schema, gespeicherte Zellbedeutung und Lesbarkeit bestehender
+  `.mcalc.json`-Dateien bleiben unverändert. Eine neue Dateierweiterung ist
+  kein Bestandteil dieses Intakes.
+- Die GitHub-Repository-URL bleibt `github.com/hindermath/TinyCalc`.
+
+*The rename changes solution, project, assembly, and C# namespace identities.
+It does not change the repository URL or existing JSON data semantics.*
+
+## Nicht-Ziele / Non-Goals
+
+- Keine Änderung von Formel-, Tabellen-, PL/0-, Legacy- oder
+  Persistenzfachlogik.
+- Keine Umbenennung oder inhaltliche Bereinigung der historischen
+  `CALC.PAS`, `CALC.INC` und `CALC.HLP`.
+- Kein massenhaftes Umschreiben archivierter Intakes, Specs, PR-Texte,
+  Statistikprotokolle oder unveränderlicher Provenienz.
+- Keine Änderung der Repository-URL oder Einführung eines neuen öffentlichen
+  Pakets.
+- Kein automatisches Dependency-Upgrade.
+- Keine erneute Funktions- oder A11Y-Implementierung; vorhandene Verträge werden
+  vollständig regressiv geprüft.
+
+*The feature changes identity, not product behaviour, historical sources,
+archives, repository location, packages, or dependencies.*
+
+## Funktionale Anforderungen / Functional Requirements
+
+- **R-RN-TC-01:** Vor jeder Änderung erzeugt ein reproduzierbarer Preflight mit
+  `rg`, Git-Inventar und Projektmetadaten eine vollständige Liste aller
+  aktiven Pfade und Inhalte mit `MicroCalc` oder abgeleiteten technischen
+  Namen.
+- **R-RN-TC-02:** Jeder Inventartreffer wird als `Rename`,
+  `HistoricalAllowlist`, `GeneratedRegenerate` oder `Defect`
+  klassifiziert. Unklassifizierte Treffer blockieren.
+- **R-RN-TC-03:** Solution, Projektordner, Projektdateien, Assembly-Namen,
+  Root-Namespaces, C#-Namespaces, `using`-Anweisungen und Projektverweise
+  werden in einem atomaren Feature geändert.
+- **R-RN-TC-04:** CI, lokale Build-/Test-/Smoke-Befehle, Skripte, DocFX,
+  Entwickler- und Agentenhinweise verwenden anschließend die neuen Pfade.
+- **R-RN-TC-05:** UI-Titel, aktive Lerntexte, README und migrierte Hilfe
+  verwenden TinyCalc; Links und Navigation zeigen auf die umbenannte
+  Hilfedatei.
+- **R-RN-TC-06:** Historische Quellen und Archive werden nicht global ersetzt.
+  Jeder verbleibende frühere Name außerhalb aktiver Produktflächen steht in
+  der geprüften Allowlist mit Begründung.
+- **R-RN-TC-07:** Bestehende JSON-Dateien vor dem Rename laden unverändert,
+  lassen sich erneut speichern und behalten dieselbe fachliche Bedeutung.
+- **R-RN-TC-08:** Der vollständige aktive Produktvertrag einschließlich
+  Feature-004-Funktionsmatrix und Feature-005-A11Y-Gates besteht nach dem
+  Rename auf demselben Commit.
+- **R-RN-TC-09:** Linux-/Windows-CI, macOS-PTY/VoiceOver sowie
+  DocFX/axe/lynx bestehen gemäß `ReleaseCloseout`-Matrix.
+- **R-RN-TC-10:** Öffentliche XML-Dokumentation, API-Links und generierte
+  DocFX-Seiten enthalten keine gebrochenen Namespace- oder Assembly-Verweise.
+- **R-RN-TC-11:** Ein abschließender Drift-Scan meldet jeden nicht allowlisteten
+  alten aktiven Namen, jeden fehlenden neuen Pfad und jede gebrochene Referenz
+  als blockierenden Fehler.
+- **R-RN-TC-12:** Exakte Dependency-Versionen werden aus den aktuellen
+  Repository-Pins aufgelöst; der Rename führt kein Upgrade durch.
+
+*Requirements bind a live inventory, explicit disposition, atomic identity
+changes, historical preservation, JSON compatibility, complete regression,
+cross-platform A11Y, documentation integrity, drift scanning, and
+version-neutral dependency handling.*
+
+## Qualität, Sicherheit und Governance / Quality, Security And Governance
+
+- C#/.NET bleibt die speichersichere Hauptlaufzeit. NIST SSDF und CWE Top 25
+  gelten für Skripte, Dateipfade, Build- und Dokumentationsverarbeitung.
+- Rename-Skripte arbeiten nur auf dem geprüften Git-Inventar, verwenden keine
+  unbeschränkten Dateisystem-Globs und bewahren historische Allowlist-Pfade.
+- SBOM und SLSA werden für verteilbare Artefakte auf die neuen Assembly-Namen
+  aktualisiert; VEX wird bei bekannten Schwachstellen gepflegt.
+- ASVS und Zero Trust sind für die lokale TUI begründet `N/A`. AI-SBOM ist
+  `N/A`, weil KI nur Entwicklungswerkzeug ist.
+- Nutzerseitige Texte bleiben deutsch zuerst und englisch danach auf
+  CEFR-B2-Niveau sowie für Screenreader, Braillezeile und Textbrowser geeignet.
+
+*The rename uses bounded inventory-based tooling, secure C#/.NET and
+supply-chain evidence, explicit N/A decisions, and accessible bilingual text.*
+
+## Abhängigkeiten, Risiken und Evidenz / Dependencies, Risks And Evidence
+
+- Harte Vorgänger: vollständige TUI-Funktionsabnahme und TUI-A11Y-Abnahme.
+- Harter Nachfolger: didaktische Inline-Code-Kommentarhärtung.
+- Risiken sind veraltete statische Inventare, gebrochene Projektverweise,
+  gemischte Assembly-Namen, fehlerhafte DocFX-Links, unbeabsichtigte
+  JSON-Inkompatibilität, überschriebenes historisches Material und
+  abgeschwächte Tests.
+- Evidenz umfasst Vorher-/Nachher-Inventar, Klassifikationsmatrix,
+  Allowlist-Scan, Build/Test/Smoke, Produktvertrag, Linux-/Windows-CI,
+  macOS-PTY/VoiceOver und DocFX/axe/lynx.
+- Die exakten Dateizahlen werden erst aus dem Ausführungscommit gewonnen und
+  als Evidenz gebunden; keine Zahl in diesem Intake gilt als zeitlos.
+
+*The intake depends on functional and A11Y acceptance and requires live,
+same-commit inventory, compatibility, platform, terminal, screen-reader, and
+documentation evidence.*
+
+## Erwartete Artefakte / Expected Artifacts
+
+- Umbenannte Solution, Projekte, Assemblies, Namespaces und aktive Hilfedatei.
+- Vollständige Live-Inventar-, Dispositions- und historische Allowlist-Datei.
+- Aktualisierte Projektverweise, CI, Skripte, XML-Dokumentation, DocFX,
+  README, Hilfe und Agentenhinweise.
+- JSON-Kompatibilitäts-, Build-, Test-, Smoke-, Produktvertrags-, PTY-,
+  VoiceOver-, axe- und lynx-Evidenz.
+- Aktualisierte SBOM-/SLSA-, Security- und Projektstatistik-Evidenz.
+
+*Expected artefacts cover renamed active identities, inventories, allowlists,
+references, documentation, compatibility, tests, accessibility, security, and
+statistics.*
+
+## Abnahmekriterien / Acceptance Criteria
+
+- **AK-RN-TC-01:** Live-Inventar und Dispositionsmatrix enthalten jeden
+  Git-getrackten Treffer des alten Namens und jeden betroffenen Pfad.
+- **AK-RN-TC-02:** Solution, vier Projekte, Assemblies, Namespaces,
+  Projektverweise und Tests verwenden ausschließlich die neue aktive Identität.
+- **AK-RN-TC-03:** Jeder verbleibende alte Name ist historisch notwendig,
+  allowlisted und mit Begründung belegt.
+- **AK-RN-TC-04:** Bestehende `.mcalc.json`-Fixtures laden vor und nach dem
+  Rename mit identischer fachlicher Bedeutung.
+- **AK-RN-TC-05:** Restore, Release-Build, vollständige Tests und `--smoke`
+  bestehen über die neuen Pfade.
+- **AK-RN-TC-06:** Alle bisherigen Vertrags- und A11Y-IDs bestehen auf dem
+  Rename-Commit.
+- **AK-RN-TC-07:** Linux-/Windows-CI, macOS-PTY/VoiceOver und
+  DocFX/axe/lynx bestehen auf demselben Commit.
+- **AK-RN-TC-08:** Die migrierte Hilfe besitzt den neuen Pfad; alle aktiven
+  Links, XML-Verweise und DocFX-Navigationen sind gültig.
+- **AK-RN-TC-09:** Ein absichtlich wieder eingefügter alter aktiver Name wird
+  vom Drift-Scan zuverlässig erkannt und blockiert.
+
+*Acceptance proves complete inventory, active identity consistency, justified
+history, JSON compatibility, build and product regression, cross-platform
+A11Y, documentation links, and effective drift detection.*
+
+## Annahmen und Entscheidungen / Assumptions And Decisions
+
+- **IAD001 – beantwortet:** Rename folgt erst nach vollständiger
+  Funktionsabnahme und TUI-A11Y.
+- **IAD002 – beantwortet:** Dateipfade und Trefferzahlen werden zur Ausführung
+  live ermittelt und nicht in diesem Intake eingefroren.
+- **IAD003 – beantwortet:** Historische Quellen und Evidenz behalten den
+  früheren Namen; aktive Produktflächen verwenden TinyCalc.
+- **IAD004 – beantwortet:** JSON-Semantik und `.mcalc.json` bleiben
+  kompatibel; eine neue Dateierweiterung ist kein Bestandteil dieses Intakes.
+- **IAD005 – beantwortet:** Der Rename löst die vollständige
+  ReleaseCloseout-Regressionsmatrix aus.
+- Delivery Authority bleibt `LocalImplementation`; dieses Intake erteilt keine
+  Commit-, Push-, PR-, Merge-, Bypass- oder Folgefeature-Berechtigung.
 
-## Ausgangslage und Motivation
-
-Das Projekt heißt nach außen **TinyCalc** (GitHub-Repo, README-Titel, Workspace-Name),
-verwendet intern aber noch den ursprünglichen Pascal-Port-Namen **MicroCalc**.
-Diese Diskrepanz verwirrt Lernende und erschwert die Orientierung im Code.
-
-Ein vollständiger Rename auf `TinyCalc` in allen Namespaces, Projektnamen
-und Dokumenten stellt Konsistenz her — das Projekt nennt sich überall gleich.
-
----
-
-## Vollständige Rename-Übersicht
-
-### 1. Solution-Datei
-
-| Aktuell | Neu |
-|---------|-----|
-| `MicroCalc.sln` | `TinyCalc.sln` |
-
-### 2. Projektordner und .csproj-Dateien (4 Projekte)
-
-| Aktueller Ordner | Neuer Ordner | .csproj-Datei |
-|-----------------|-------------|---------------|
-| `src/MicroCalc.Core/` | `src/TinyCalc.Core/` | `TinyCalc.Core.csproj` |
-| `src/MicroCalc.Tui/` | `src/TinyCalc.Tui/` | `TinyCalc.Tui.csproj` |
-| `tests/MicroCalc.Core.Tests/` | `tests/TinyCalc.Core.Tests/` | `TinyCalc.Core.Tests.csproj` |
-| `tests/MicroCalc.Tui.Tests/` | `tests/TinyCalc.Tui.Tests/` | `TinyCalc.Tui.Tests.csproj` |
-
-### 3. Namespaces und Using-Statements (19 + 20 Stellen)
-
-| Alt | Neu |
-|-----|-----|
-| `namespace MicroCalc.Core.Engine` | `namespace TinyCalc.Core.Engine` |
-| `namespace MicroCalc.Core.Formula` | `namespace TinyCalc.Core.Formula` |
-| `namespace MicroCalc.Core.IO` | `namespace TinyCalc.Core.IO` |
-| `namespace MicroCalc.Core.Model` | `namespace TinyCalc.Core.Model` |
-| `namespace MicroCalc.Tui` | `namespace TinyCalc.Tui` |
-| `namespace MicroCalc.Tui.Help` | `namespace TinyCalc.Tui.Help` |
-| `namespace MicroCalc.Tui.Smoke` | `namespace TinyCalc.Tui.Smoke` |
-| `namespace MicroCalc.Core.Tests` | `namespace TinyCalc.Core.Tests` |
-| `namespace MicroCalc.Tui.Tests` | `namespace TinyCalc.Tui.Tests` |
-| `using MicroCalc.*` (20×) | `using TinyCalc.*` |
-
-### 4. UI-Text in Program.cs
-
-| Stelle | Alt | Neu |
-|--------|-----|-----|
-| Window-Titel (Program.cs ~Z. 80) | `"MicroCalc .NET 10"` | `"TinyCalc .NET 10"` |
-
-### 5. GitHub Actions CI-Workflow (`.github/workflows/ci.yml`)
-
-| Zeile | Alt | Neu |
-|-------|-----|-----|
-| restore | `dotnet restore MicroCalc.sln` | `dotnet restore TinyCalc.sln` |
-| build | `dotnet build MicroCalc.sln ...` | `dotnet build TinyCalc.sln ...` |
-| test | `dotnet test MicroCalc.sln ...` | `dotnet test TinyCalc.sln ...` |
-
-### 6. Markdown-Dateien (25 Dateien enthalten „MicroCalc")
-
-Alle `MicroCalc`-Textstellen in Fließtext, Überschriften, Code-Blöcken und
-Pfadangaben sind zu ersetzen. Dateiliste:
-
-| Datei | Typ |
-|-------|-----|
-| `README.md` | Haupt-README |
-| `AGENTS.md`, `CLAUDE.md`, `GEMINI.md` | KI-Agenten-Dateien |
-| `CONTRIBUTING.md` | Beitrags-Leitfaden |
-| `PLAN_MICROCALC_CSHARP_DOTNET10.md` | Plan-Datei (Inhalt ersetzen, ggf. umbenennen) |
-| `docs/help/microcalc-help.md` | **Datei umbenennen** → `tinycalc-help.md` |
-| `docs/project-statistics.md` | Statistik-Ledger |
-| `docs/PR_TEXT_*.md` (6 Dateien) | PR-Text-Archiv (historisch, ggf. belassen) |
-| `Lastenheft_A11Y_TUI.md` | Neu erstelltes Lastenheft (bereits MicroCalc-Refs) |
-| `.github/copilot-instructions.md` | Copilot-Instruktionen |
-| `.github/pull_request_template.md` | PR-Template |
-| `.specify/memory/constitution.md` | Spec-Kit-Constitution |
-| `.specify/templates/plan-template.md` | Spec-Kit-Template |
-| `specs/001-project-context/*.md` (5 Dateien) | Spec-Kit-Kontext |
-
-**Hinweis zu PR-Text-Archiven:** Die `docs/PR_TEXT_*.md`-Dateien sind historische
-Commit-Protokolle. Dort kann „MicroCalc" als historischer Name belassen werden
-oder durch „TinyCalc (ehem. MicroCalc)" ersetzt werden — Entscheidung beim PR.
-
-### 7. Rider IDE-Ordner
-
-| Ordner | Verhalten |
-|--------|-----------|
-| `.idea/.idea.MicroCalc/` | Wird automatisch neu angelegt, sobald Rider die umbenannte `TinyCalc.sln` öffnet. Alten Ordner nach dem Rename löschen. |
-
----
-
-## Anforderungen
-
-### R-RN-TC-01: Atomarer Rename in einem einzigen PR
-
-Alle Änderungen unter Abschnitt „Rename-Übersicht" sind in **einem** PR zu
-bündeln, um einen inkonsistenten Zwischenzustand im Repository zu vermeiden.
-Der PR-Titel lautet: `refactor: MicroCalc → TinyCalc vollständiger Namespace-Rename`.
-
-### R-RN-TC-02: Empfohlene Werkzeuge für den Rename
-
-Empfohlen: JetBrains Rider **Rename Refactoring** (`F2` auf Solution/Projekt/Namespace)
-für Namespaces und Projektnamen. Rider aktualisiert `.sln`, alle `.csproj`-Querverweise,
-Namespaces und `using`-Statements automatisch.
-
-Für Markdown und andere Textdateien: globales Suchen & Ersetzen
-(`MicroCalc` → `TinyCalc`) mit Ausnahme der historischen PR-Text-Archive
-(Entscheidung liegt beim Durchführenden).
-
-### R-RN-TC-03: Datei `docs/help/microcalc-help.md` umbenennen
-
-```bash
-git mv docs/help/microcalc-help.md docs/help/tinycalc-help.md
-```
-
-Alle Verweise auf `microcalc-help.md` in anderen Dateien müssen
-auf `tinycalc-help.md` aktualisiert werden.
-
-### R-RN-TC-04: CI-Workflow muss nach Rename funktionieren
-
-Nach dem Rename muss der GitHub Actions Workflow `ci.yml` grün sein:
-
-```bash
-dotnet restore TinyCalc.sln
-dotnet build TinyCalc.sln --configuration Release --no-restore
-dotnet test TinyCalc.sln --configuration Release --no-build
-```
-
-### R-RN-TC-05: Smoke-Test bleibt lauffähig
-
-```bash
-dotnet run --no-build --configuration Release \
-  --project src/TinyCalc.Tui/TinyCalc.Tui.csproj -- --smoke
-# Erwartete Ausgabe: SMOKE_OK
-```
-
-### R-RN-TC-06: Keine verbleibenden `MicroCalc`-Strings im aktiven Code
-
-Nach dem PR darf kein `MicroCalc`-String mehr in:
-- `.cs`-Dateien (Namespaces, using-Statements, String-Literale)
-- `.csproj`-Dateien (Projektnamen, ProjectReference-Pfade)
-- `.sln`-Datei
-- `.github/workflows/ci.yml`
-- `README.md`, `AGENTS.md`, `CLAUDE.md`, `GEMINI.md`
-
-vorkommen. Prüfbefehl:
-```bash
-grep -r "MicroCalc" --include="*.cs" --include="*.csproj" --include="*.sln" \
-  --include="*.yml" src/ tests/ .github/ README.md AGENTS.md CLAUDE.md GEMINI.md
-# Erwartetes Ergebnis: keine Ausgabe
-```
-
----
-
-## Nicht im Scope
-
-- Änderung der GitHub-Repository-URL (bleibt `github.com/hindermath/TinyCalc`)
-- Änderung der NuGet-Paket-ID (kein öffentliches Paket vorhanden)
-- Inhalte der historischen `docs/PR_TEXT_*.md`-Archive (optional)
-- Terminal.Gui-Migration (separates Lastenheft)
-
----
-
-## Akzeptanzkriterien
-
-| ID | Kriterium |
-|----|-----------|
-| AK-RN-TC-01 | Solution heißt `TinyCalc.sln`; alle 4 Projektordner und .csproj-Dateien umbenannt |
-| AK-RN-TC-02 | `grep -r "MicroCalc" src/ tests/` liefert keine Treffer |
-| AK-RN-TC-03 | `grep -r "MicroCalc" .github/` liefert keine Treffer |
-| AK-RN-TC-04 | `dotnet test TinyCalc.sln --configuration Release` vollständig grün |
-| AK-RN-TC-05 | `--smoke`-Modus gibt `SMOKE_OK` aus |
-| AK-RN-TC-06 | `docs/help/tinycalc-help.md` vorhanden; alte Datei gelöscht |
-| AK-RN-TC-07 | Window-Titel in der laufenden App zeigt „TinyCalc .NET 10" |
-
----
-
-## Beispiel: Agentic-AI-Dialog (Platzhalter)
-
-Dieser Abschnitt wird während der Umsetzung mit Commit-URLs und Zeitstempeln befüllt.
-
----
-
-## Hinweis für Lernende
-
-**Deutsch:** Ein vollständiger Namespace-Rename ist ein klassisches Refactoring.
-Rider macht den Großteil automatisch — aber die Dokumentation (Markdown, YAML, CI)
-muss manuell oder per globalem Suchen & Ersetzen nachgezogen werden.
-Ein `grep` nach dem alten Namen am Ende des PRs ist die einfachste Abnahme-Prüfung.
-
-**English:** A complete namespace rename is a classic refactoring. Rider handles most of it
-automatically — but documentation (Markdown, YAML, CI) must be updated manually or via
-global search & replace. A `grep` for the old name at the end of the PR is the simplest
-acceptance check.
-
----
-
-## Spec-Kit-Intake-Reife / Spec Kit Intake Readiness
-
-Dieses Lastenheft ist als Eingabedatei fuer einen spaeteren `/speckit-specify`-Lauf vorgesehen. Vor dem Start muss der aktuelle Repository-Stand geprueft werden, damit bereits erledigte oder ueberholte Punkte nicht erneut umgesetzt werden.
-
-*This requirements document is intended as input for a later `/speckit-specify` run. Before starting, check the current repository state so already completed or superseded items are not implemented again.*
-
-Der spaetere Lauf muss mindestens klassifizieren:
-
-- `Applicable`: gilt fuer diesen Lauf und braucht Umsetzung oder Evidenz.
-- `AlreadySatisfied`: ist im aktuellen Stand bereits nachweisbar erledigt.
-- `N/A`: gilt fuer diesen Lauf nicht und braucht eine kurze Begruendung.
-- `Open`: gilt, ist aber noch nicht ausreichend geklaert oder belegt.
-- `FollowUp`: fachlich relevant, aber nicht Teil dieses Laufs.
-
-## Kopierbarer `/speckit-specify`-Prompt / Copyable `/speckit-specify` Prompt
-
-```text
-Ersetzter Alt-Prompt: speckit-specify Nutze requirements/intakes/active/Lastenheft_Rename_MicroCalc_TinyCalc.md als verbindliche Eingabedatei. Erstelle die Feature-Spezifikation fuer einen Umbenennungs- und Migrationslauf im Repository TinyCalc.
-
-Ziel: Pruefe das Lastenheft gegen den aktuellen Repository-Stand und erstelle eine belastbare Spec-Kit-Spezifikation, die fuer Auszubildende, Entwickler*innen, Reviewer und KI-Agenten nachvollziehbar ist.
-
-Pflichtpunkte:
-- Lies dieses Lastenheft vollstaendig und uebernehme vorhandene Anforderungen, Scope-Grenzen, Reihenfolgehinweise und Akzeptanzkriterien.
-- Pruefe, welche Punkte bereits umgesetzt, ueberholt oder noch offen sind.
-- Klassifiziere Anforderungen als `Applicable`, `AlreadySatisfied`, `N/A`, `Open` oder `FollowUp`.
-- Plane nur `Applicable`-Punkte fuer diesen Lauf.
-- Dokumentiere fuer `N/A` und `FollowUp` jeweils eine kurze Begruendung.
-- Beachte `constitution.md`, `.specify/memory/constitution.md`, AGENTS/CLAUDE/GEMINI/Copilot-Guidance, installierte Spec-Kit-Presets, Secure-Development-Basis, A11Y-Regeln, CEFR-B2-Verstaendlichkeit und didaktische Kommentar-Governance.
-- Starte keinen weiteren Lastenheft-Lauf und kombiniere mehrere Lastenhefte nur, wenn die Kopplung fachlich begruendet und dokumentiert ist.
-
-Erzeuge eine Spezifikation mit Scope, Nicht-Zielen, Anforderungen, Abhaengigkeiten, Akzeptanzkriterien, Risiken, Teststrategie, Evidenzpfaden und offenen Folgepunkten.
-```
 <!-- intake-authoring:prompts -->
-## Kopierbare Spec-Kit-Prompts / Copy-Ready Spec Kit Prompts
-
-Die folgenden Alternativen starten keinen Lauf automatisch. Der autonome
-Prompt ist auf `LocalImplementation` begrenzt und erteilt keine Remote-,
-PR-, Merge-, Bypass-, Secret- oder Provider-Berechtigung.
-
-*The alternatives below do not start a run automatically. The autonomous
-prompt is limited to `LocalImplementation` and grants no remote,
-pull-request, merge, bypass, secret, or provider authority.*
+## Ausführbare Spec-Kit-Prompts / Copy-Ready Spec Kit Prompts
 
 ### Specify
 
 <!-- spec-kit-command-id: speckit.specify -->
 ```text
-$speckit-specify Use requirements/intakes/active/Lastenheft_Rename_MicroCalc_TinyCalc.md as the binding intake. Preserve its scope, non-goals, ordering, governance, evidence, and acceptance criteria. Create or update only the matching feature specification. Do not implement, commit, push, create a pull request, merge, or start another feature.
+$speckit-specify Nutze requirements/intakes/active/Lastenheft_Rename_MicroCalc_TinyCalc.md als verbindliches Intake. Erstelle oder aktualisiere ausschließlich die passende Feature-Spezifikation. Erzeuge das Live-Inventar zur Ausführungszeit und bewahre die Reihenfolge Funktionsabnahme -> A11Y -> Rename, historische Allowlist, JSON-Kompatibilität, atomaren Solution-/Projekt-/Assembly-/Namespace-Rename, vollständigen Produktvertrag, ReleaseCloseout-Matrix sowie Security-, A11Y-, Plattform-, Dokumentations- und Evidenzgrenzen. Implementiere nichts; committe und pushe nicht; erstelle oder merge keinen Pull Request und starte kein Folgefeature.
 ```
 
 ### Autonomous
 
 <!-- spec-kit-command-id: speckit.autonomous -->
 ```text
-$speckit-autonomous Execute one complete autonomous Spec Kit run using requirements/intakes/active/Lastenheft_Rename_MicroCalc_TinyCalc.md as the binding intake. Delivery mode: LocalImplementation. Preserve all scope, ordering, security, accessibility, evidence, and acceptance boundaries. Do not push, create or merge a pull request, use bypass authority, expose secrets, or start a follow-up feature.
+$speckit-autonomous Führe genau einen vollständigen autonomen Spec-Kit-Lauf mit requirements/intakes/active/Lastenheft_Rename_MicroCalc_TinyCalc.md als verbindlichem Intake aus. Delivery Mode: LocalImplementation. Stoppe vor Änderungen, solange Funktions- und A11Y-Abnahme oder das Live-Inventar mit Disposition und historischer Allowlist fehlen. Bewahre JSON-Kompatibilität, atomaren Rename, vollständigen Produktvertrag, Linux-/Windows-, macOS-PTY-/VoiceOver-, DocFX/axe/lynx-, Security-, Dokumentations- und Evidenzgrenzen. Nicht pushen, keinen Pull Request erstellen oder mergen, keinen Bypass nutzen, keine Secrets offenlegen und kein Folgefeature starten.
 ```
 <!-- intake-authoring:end -->

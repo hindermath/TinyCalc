@@ -1,0 +1,10 @@
+{
+  "schemaVersion": "1.0",
+  "proposalId": "5791c0b2-4f69-4bce-a263-732362c59fe6",
+  "type": "Update",
+  "target": "requirements/intakes/active/Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md",
+  "change": "Embed the complete current capability baseline, source-conflict policy, durable regression triggers, and additive contract rules.",
+  "scopePreserved": true,
+  "approved": true,
+  "authorityEvidence": "The user explicitly requested implementation of the approved intake-only consolidation plan."
+}
