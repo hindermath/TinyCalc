@@ -1,25 +1,24 @@
 {
   "schemaVersion": "1.0",
   "documentType": "IntakeSeriesOperation",
-  "operationId": "37a3b85b-bd5b-4dbf-b8fa-d796292f3bda",
+  "operationId": "454804f5-315e-4ee6-893a-3ea7c0cdb21e",
   "seriesId": "5b4523b4-d946-4091-9cbc-11825af94332",
   "type": "Update",
   "status": "Published",
-  "authorityEvidence": "The user explicitly requested implementation of the approved intake-only consolidation plan. No product implementation, commit, push, pull request, merge, bypass, provider, or follow-up-feature authority is granted.",
-  "proposalNormalizedSha256": "fb9fa46d7f7fa411c4795931b9462c569a5c21e8cdf7e21a7b023d5e68e028c1",
+  "authorityEvidence": "The user explicitly approved and requested implementation of the PL0 delivery-evidence refresh plan. No commit, push, pull request, merge, bypass, package change, product implementation, or downstream review authority is granted.",
+  "proposalNormalizedSha256": "b665aeae32117eaaf66a4dd1577631023d0e5cdc37d76e131f842e9a369b6136",
   "preparedPaths": [
     "requirements/intakes/series/tinycalc-delivery/manifest.json",
     "requirements/intakes/series/tinycalc-delivery/receipt.json",
     "requirements/intakes/series/tinycalc-delivery/operation.json",
     "requirements/intakes/series/tinycalc-delivery/order.md",
     "Lastenheft_Abarbeitungsreihenfolge.md",
-    "Pflichtenheft.md",
-    "requirements/intakes/series-archive/tinycalc-delivery/20260901T071752Z/manifest.json",
-    "requirements/intakes/series-archive/tinycalc-delivery/20260901T071752Z/receipt.json",
-    "requirements/intakes/series-archive/tinycalc-delivery/20260901T071752Z-review/intake-review-request.json",
-    "requirements/intakes/series-archive/tinycalc-delivery/20260901T071752Z-review/intake-review-result.json",
-    "requirements/intakes/series-archive/tinycalc-delivery/20260901T071752Z-review/intake-review-report.md",
-    "requirements/intakes/series-archive/tinycalc-delivery/20260901T071752Z-review/superseded-review.json"
+    "requirements/intakes/series-archive/tinycalc-delivery/20260903T161641Z/manifest.json",
+    "requirements/intakes/series-archive/tinycalc-delivery/20260903T161641Z/receipt.json",
+    "requirements/intakes/series-archive/tinycalc-delivery/20260903T161641Z-review/intake-review-request.json",
+    "requirements/intakes/series-archive/tinycalc-delivery/20260903T161641Z-review/intake-review-result.json",
+    "requirements/intakes/series-archive/tinycalc-delivery/20260903T161641Z-review/intake-review-report.md",
+    "requirements/intakes/series-archive/tinycalc-delivery/20260903T161641Z-review/superseded-review.json"
   ],
   "validation": {
     "bash": "Pass",
@@ -33,13 +32,12 @@
       "requirements/intakes/series/tinycalc-delivery/operation.json",
       "requirements/intakes/series/tinycalc-delivery/order.md",
       "Lastenheft_Abarbeitungsreihenfolge.md",
-      "Pflichtenheft.md",
-      "requirements/intakes/series-archive/tinycalc-delivery/20260901T071752Z/manifest.json",
-      "requirements/intakes/series-archive/tinycalc-delivery/20260901T071752Z/receipt.json",
-      "requirements/intakes/series-archive/tinycalc-delivery/20260901T071752Z-review/intake-review-request.json",
-      "requirements/intakes/series-archive/tinycalc-delivery/20260901T071752Z-review/intake-review-result.json",
-      "requirements/intakes/series-archive/tinycalc-delivery/20260901T071752Z-review/intake-review-report.md",
-      "requirements/intakes/series-archive/tinycalc-delivery/20260901T071752Z-review/superseded-review.json"
+      "requirements/intakes/series-archive/tinycalc-delivery/20260903T161641Z/manifest.json",
+      "requirements/intakes/series-archive/tinycalc-delivery/20260903T161641Z/receipt.json",
+      "requirements/intakes/series-archive/tinycalc-delivery/20260903T161641Z-review/intake-review-request.json",
+      "requirements/intakes/series-archive/tinycalc-delivery/20260903T161641Z-review/intake-review-result.json",
+      "requirements/intakes/series-archive/tinycalc-delivery/20260903T161641Z-review/intake-review-report.md",
+      "requirements/intakes/series-archive/tinycalc-delivery/20260903T161641Z-review/superseded-review.json"
     ]
   }
 }

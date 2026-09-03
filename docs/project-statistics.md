@@ -471,6 +471,7 @@ stopwatch time.*
 | 2026-08-30 | OK und Enter im Werte-Dialog wiederhergestellt / OK and Enter restored in the value dialog | Arbeitsfenster: eine kurze Agentensitzung am 2026-08-30. Terminal.Gui setzt beim Hinzufuegen den jeweils letzten Dialogbutton als Default; nach unveraendert sichtbarer Reihenfolge `OK`, `Cancel` werden deshalb die Buttonrolle und `DefaultAcceptView` explizit auf `OK` gesetzt. Umfang vor dem Statistik-Selbstnachweis: `12` Produktionscode-Zeilen, `37` Testcode-Zeilen und `0` Dokumentationszeilen, insgesamt `49` Nettozeilen; Versionsmetadaten und Statistikdateien sind ausgeschlossen. Konservative Referenz: `0.6` Arbeitstage bzw. `4.8` Stunden; Thorsten-Solo-Referenz: `0.4` Arbeitstage bzw. `3.1` Stunden. Validierung: Release-Build innerhalb von `dotnet test`, 76/76 Core-Tests und 6/6 TUI-Tests sowie realer PTY-Lauf mit Werteingabe und Enter; keine neue Abhaengigkeit. *The value dialog now restores OK as its sole default and default accept view after both buttons are added. The 49 net production and test lines correspond to 0.6 conservative or 0.4 Thorsten-solo workdays; all 82 tests and a real Enter-key PTY path pass, with no dependency added.* |
 | 2026-08-30 | Gemeinsame TUI-Fix-Lieferung vorbereitet / Combined TUI fix delivery prepared | Arbeitsfenster: dieselbe Agentensitzung am 2026-08-30. Eine bilinguale PR-Beschreibung dokumentiert Problem, Loesung, Risiken und Testplan fuer Grid-Kontrast sowie `OK`-/Enter-Weiterleitung. Umfang vor dem Statistik-Selbstnachweis: `0` Produktionscode-Zeilen, `0` Testcode-Zeilen und `68` Dokumentationszeilen netto. Konservative Referenz: `0.9` Arbeitstage bzw. `6.6` Stunden; Thorsten-Solo-Referenz: `0.5` Arbeitstage bzw. `4.2` Stunden. Der Nutzer hat Commit, Push und DeliveryMode `MergeAndSync` mit Admin-Bypass ausdruecklich autorisiert; materielle Gates bleiben verbindlich. *The 68 net documentation lines provide the bilingual PR problem, solution, risks, and test plan. They correspond to 0.9 conservative or 0.5 Thorsten-solo workdays; material gates remain mandatory.* |
 | 2026-09-01 | Vollstaendigen TUI-Funktionsvertrag und erweiterbare Intake-Roadmap vorbereitet / Complete TUI contract and extensible intake roadmap prepared | Arbeitsfenster: eine sichtbare Agentensitzung am 2026-09-01 auf Branch `codex/tinycalc-intake-regression-roadmap`. Arbeitspakete: vollstaendiger TUI-/README-/Hilfe-Funktionsvertrag mit stabilen IDs und Impact-Matrix, A11Y-/Rename-/PL0-Fortschreibung, getrennte Lastenhefte fuer MCS-Legacy-Kompatibilitaet und strukturelle Tabellenoperationen, 13-Ziele-Serie mit vier Wurzeln und neun Hard Gates, hashgebundene Vorgänger- und Review-Evidenz, Renderer-/Coverage-Nachzug sowie bilinguale PR-Beschreibung. Umfang vor diesem Statistik-Selbstnachweis: `0` Produktionscode-Zeilen, `0` Testcode-Zeilen und `+7293 / -723 = 6570` Dokumentations-, Intake-, Governance- und Automationszeilen netto einschliesslich unveraenderbarer Archivevidenz; der Renderer-Anteil betraegt davon `+130 / -58 = 72` Nettozeilen. Konservative Referenz: `82.1` Arbeitstage, ca. `640.6` Stunden und `3.8` Monate bei 21.5 Arbeitstagen/Monat. Thorsten-Solo-Referenz: `52.6` Arbeitstage, ca. `410.0` Stunden und `2.4` Monate. Gegen einen sichtbaren Aktivtag sind `82.1x` und `52.6x` blended repository speedup bzw. Lieferdichte, keine Stoppuhrmessung. Lokale Validierung: Intake-, Serien-, Review- und Governance-Gates in PowerShell und Bash, acht Negativ-Fixtures, Hash-/Archiv-Lineage, Secret-Scan, Homogenitaet, JSON-/Markdown-/Diff-Pruefungen; kein lokaler Produkt-Build, weil Produktcode, Tests, APIs und Laufzeit unveraendert sind und die verpflichtende Linux-/Windows-CI als Delivery-Gate abgewartet wird. Der Nutzer hat Commit, Push und DeliveryMode `MergeAndSync` mit Admin-Bypass ausdruecklich autorisiert. *One visible session prepared the complete functional contract and extensible thirteen-target roadmap. The 6,570 net documentation, intake, governance, and automation lines correspond to 82.1 conservative or 52.6 Thorsten-solo days; these values describe blended repository delivery density, not stopwatch time. Product code and tests remain unchanged, while remote Linux and Windows CI stays mandatory before merge.* |
+| 2026-09-03 | TinyPl0-Lieferstufe im PL/0-Intake aktualisiert / TinyPl0 delivery stage refreshed in the PL/0 intake | Arbeitsfenster: eine sichtbare Agentensitzung am 2026-09-03 auf Branch `codex/pl0-delivery-evidence-refresh`. Arbeitspakete: die ueberholte Noch-nicht-Aussage durch den stabilen Release `v0.4.1`, Quellcommit und erfolgreichen Build-/SBOM-/VEX-/Provenienz-/Attestierungs-/Publish-/Consumer-Lauf ersetzt; beide versionsgleichen NuGet.org-Pakete als Remote-Snapshots gebunden; TinyCalc-Preflight und internen Security-Vorgaenger weiterhin offen und blockierend gehalten; Intake-, Receipt-, Serien- und Review-Vorgaenger byteidentisch archiviert; aktiven Alt-Review supersediert; Renderer, Alignment und bilinguale PR-Beschreibung nachgezogen. Umfang vor diesem Statistik-Selbstnachweis: `0` Produktionscode-Zeilen, `0` Testcode-Zeilen und `+1600 / -440 = 1160` Dokumentations-, Intake-, Governance- und Automationszeilen netto einschliesslich unveraenderbarer Archivevidenz. Konservative Referenz: `14.5` Arbeitstage, ca. `113.1` Stunden und `0.7` Monate bei 21.5 Arbeitstagen/Monat. Thorsten-Solo-Referenz: `9.3` Arbeitstage, ca. `72.4` Stunden und `0.4` Monate. Gegen einen sichtbaren Aktivtag sind `14.5x` und `9.3x` blended repository speedup beziehungsweise Lieferdichte, keine Stoppuhrmessung. Validierung: Live-Release-/Workflow-/NuGet-Abgleich, Authoring- und Serienvalidatoren in PowerShell und Bash, explizit ausstehender Review, Alignment, Hash-/Archiv-Lineage, JSON, UTF-8, Secret-Scan, Markdown und `git diff --check`. Beide Homogenitaetsvarianten bestanden 28 von 29 Pruefungen und meldeten ausschliesslich den erwarteten Statistik-Profil-Drift: Der Renderer darf bei schmutzigem Arbeitsbaum nicht schreiben, waehrend Commit und Stash nicht autorisiert sind. NIST SSDF und CWE Top 25 bleiben anwendbar; SBOM/VEX/SLSA sind gebundene Liefernachweise, waehrend ASVS, Zero Trust und Produkt-AI-SBOM begruendet `N/A` bleiben. Kein `dotnet build`, `dotnet test`, Restore, Paketupgrade oder DocFX-Neubau, weil Produktcode, Tests, APIs, Abhaengigkeiten, Laufzeit und DocFX-Inhalte unveraendert sind. Keine Commit-, Push-, PR-, Merge- oder Bypass-Berechtigung. *One visible session corrected the delivery snapshot, bound release and public-package evidence, preserved the open TinyCalc preflight and blocked lifecycle, and archived all superseded governance evidence. The 1,160 net documentation and governance lines correspond to 14.5 conservative or 9.3 Thorsten-solo days; these values describe blended delivery density, not stopwatch time. Both homogeneity variants have only the expected statistics drift because the clean-tree renderer cannot write without commit authority. No product or remote delivery action is authorised.* |
 
 ## Statistikprofil-1-Archiv / Statistics Profile 1 Archive
 Basis dieses Schlussblocks sind die aktuell dokumentierten Snapshot- und
@@ -635,27 +636,27 @@ Profil 2 verwendet Git-getrackte Textdateien und sichtbare Git-Aktivitaet. Die W
 
 | Kennzahl / Metric | Wert / Value |
 |---|---:|
-| Textbasis / Text base | 154952 lines |
-| Textdateien / Text files | 1086 |
-| Beobachtbarer Zeitraum / Observable period | 2025-09-07..2026-09-01 |
-| Aktivtage / Active days | 73 |
-| Relevante Commits / Relevant commits | 204 |
-| Zeilen je Aktivtag / Lines per active day | 2122.6 |
+| Textbasis / Text base | 156374 lines |
+| Textdateien / Text files | 1096 |
+| Beobachtbarer Zeitraum / Observable period | 2025-09-07..2026-09-03 |
+| Aktivtage / Active days | 74 |
+| Relevante Commits / Relevant commits | 205 |
+| Zeilen je Aktivtag / Lines per active day | 2113.2 |
 | Peak-Tag im Fenster / Peak day in window | 2026-06-17 / 27058 |
 | Peak-Woche im Fenster / Peak week in window | 2026-07-19 / 33630 |
 | Laengste Serie / Longest streak | 8 days |
-| Speedup vs. 80 lines/day | 26.5x |
-| Speedup vs. 125 lines/day | 17.0x |
-| Methodik / Methodology | v2; source `ec4bf2b68fb7` |
+| Speedup vs. 80 lines/day | 26.4x |
+| Speedup vs. 125 lines/day | 16.9x |
+| Methodik / Methodology | v2; source `08272b4ae598` |
 
 ### Artefaktmix / Artifact Mix
 
 ```text
 Produktiv / Production          [#...................]   1.8% | 2830
-Tests                           [#...................]   4.3% | 6645
-Dokumentation / Documentation   [###############.....]  72.8% | 112813
-Skripte / Scripts               [###.................]  13.8% | 21441
-Konfiguration / Configuration   [#...................]   5.3% | 8211
+Tests                           [#...................]   4.2% | 6645
+Dokumentation / Documentation   [##############......]  72.5% | 113362
+Skripte / Scripts               [###.................]  13.7% | 21452
+Konfiguration / Configuration   [#...................]   5.8% | 9073
 Daten und Medien / Data and media [....................]   0.0% | 0
 Sonstiger Text / Other text     [#...................]   1.9% | 3012
 ```
@@ -682,8 +683,8 @@ Wochen / Weeks 27..52 | 2026-03-08..2026-09-05
 So/Su  3 0 4 0 0 2 0 0 0 0 0 0 1 0 4 0 0 0 1 4 4 1 4 4 0 4
 Mo/Mo  0 0 0 2 0 1 4 0 4 0 0 0 0 0 0 0 3 1 4 4 0 0 0 2 0 0
 Di/Tu  0 0 0 3 0 0 0 0 3 0 0 3 0 0 0 0 2 0 3 4 4 0 0 0 0 4
-Mi/We  0 0 1 0 0 0 3 0 2 0 0 0 2 0 4 0 2 0 0 2 4 0 0 0 0 -
-Do/Th  0 0 0 0 0 0 0 4 0 0 0 1 0 4 1 0 0 0 1 4 0 0 4 0 0 -
+Mi/We  0 0 1 0 0 0 3 0 2 0 0 0 2 0 4 0 2 0 0 2 4 0 0 0 0 0
+Do/Th  0 0 0 0 0 0 0 4 0 0 0 1 0 4 1 0 0 0 1 4 0 0 4 0 0 3
 Fr/Fr  0 0 2 4 0 2 4 0 0 0 4 2 2 0 3 2 3 4 4 4 1 0 0 0 0 -
 Sa/Sa  0 0 2 0 0 0 0 0 0 0 0 0 0 0 4 0 4 4 0 4 2 0 2 0 3 -
 ```
@@ -785,8 +786,8 @@ Die festen Slots halten den Phasenvergleich auch bei fehlenden oder spaeter erga
 
 ```text
 Scale: 0..50x
-80 lines/day       [###########.........] 26.5x
-125 lines/day      [#######.............] 17.0x
+80 lines/day       [###########.........] 26.4x
+125 lines/day      [#######.............] 16.9x
 ```
 
 Die Faktoren vergleichen sichtbare Lieferdichte mit den dokumentierten manuellen Referenzen. Sie messen keine Arbeitszeit.
@@ -799,7 +800,7 @@ Die Faktoren vergleichen sichtbare Lieferdichte mit den dokumentierten manuellen
 Scale: 0..5000 lines/day
 Experienced manual [#...................] 80
 Thorsten solo      [#...................] 125
-Visible repository [########............] 2122.6
+Visible repository [########............] 2113.2
 ```
 
 Die gemeinsame Skala vergleicht Referenzen und sichtbare Lieferdichte. Sie schreibt die Git-Aktivitaet keiner Person oder KI pauschal zu.
@@ -808,9 +809,9 @@ Die gemeinsame Skala vergleicht Referenzen und sichtbare Lieferdichte. Sie schre
 
 ### Textalternative / Text Alternative
 
-DE: Das Fenster beginnt am 2025-09-07 und endet am 2026-09-01. Es enthaelt 73 aktive und 287 inaktive vergangene Tage. Peak-Tag: 2026-06-17 / 27058. Peak-Woche: 2026-07-19 / 33630. Laengste Serie: 8 Tage (2026-07-19..2026-07-26).
+DE: Das Fenster beginnt am 2025-09-07 und endet am 2026-09-03. Es enthaelt 74 aktive und 288 inaktive vergangene Tage. Peak-Tag: 2026-06-17 / 27058. Peak-Woche: 2026-07-19 / 33630. Laengste Serie: 8 Tage (2026-07-19..2026-07-26).
 
-*EN: The window starts on 2025-09-07 and ends on 2026-09-01. It contains 73 active and 287 inactive elapsed days. Peak day: 2026-06-17 / 27058. Peak week: 2026-07-19 / 33630. Longest streak: 8 days (2026-07-19..2026-07-26).*
+*EN: The window starts on 2025-09-07 and ends on 2026-09-03. It contains 74 active and 288 inactive elapsed days. Peak day: 2026-06-17 / 27058. Peak week: 2026-07-19 / 33630. Longest streak: 8 days (2026-07-19..2026-07-26).*
 
 | Monat / Month | Geaenderte Textzeilen / Changed text lines |
 |---|---:|
@@ -825,6 +826,6 @@ DE: Das Fenster beginnt am 2025-09-07 und endet am 2026-09-01. Es enthaelt 73 ak
 | 2026-06 | 37273 |
 | 2026-07 | 74876 |
 | 2026-08 | 26218 |
-| 2026-09 | 7601 |
+| 2026-09 | 8819 |
 
 <!-- project-statistics-v2:end -->

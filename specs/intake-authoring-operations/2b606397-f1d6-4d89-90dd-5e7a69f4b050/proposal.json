@@ -1,0 +1,10 @@
+{
+  "schemaVersion": "1.0",
+  "proposalId": "886eb105-aee1-48ec-9427-6b23970d23c7",
+  "type": "Update",
+  "target": "requirements/intakes/active/Lastenheft_PL0-Zellfunktionen_V1.md",
+  "change": "Record the completed TinyPl0 v0.4.1 delivery evidence while retaining the open TinyCalc dependency preflight, internal predecessor, version-neutral integration choice, and existing scope.",
+  "scopePreserved": true,
+  "approved": true,
+  "authorityEvidence": "The user explicitly approved and requested implementation of the PL0 delivery-evidence refresh plan. No commit, push, pull request, merge, bypass, package change, product implementation, or downstream review authority is granted."
+}

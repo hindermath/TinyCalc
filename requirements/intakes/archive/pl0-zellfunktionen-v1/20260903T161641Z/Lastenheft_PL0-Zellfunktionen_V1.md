@@ -156,20 +156,15 @@ accessible editor and a step debugger are part of version 1.*
   Deklarations- und Lockquelle ermittelt werden.
 - Die TinyPl0-IDE ist nicht als wiederverwendbare UI-Bibliothek aufgebaut und
   wird unabhängig von ihrer dann aktuellen TUI-Abhängigkeit nicht eingebettet.
-- TinyPl0 hat den zugehörigen Liefer-Intake abgeschlossen. Der stabile Release
-  `v0.4.1` stellt `TinyPl0.Core` und `TinyPl0.Vm` versionsgleich öffentlich auf
-  NuGet.org bereit. Diese nachgewiesene Lieferung ist noch kein TinyCalc-Pin;
-  die freigegebene Integrationsversion wird erst im technischen Preflight
-  ausgewählt und festgeschrieben.
+- TinyPl0 stellt Compiler und VM als .NET-10-Projekte bereit, aber noch nicht
+  über die für dieses Intake geforderten öffentlichen NuGet-Pakete.
 
 *TinyCalc currently evaluates numbers, cell references, and built-in functions
 as `double`. It has no qualified user-function namespace, worksheet function
 catalog, or explicit file-format version. The concrete Terminal.Gui version is
-a dated repository snapshot, not a permanent PL/0 requirement. TinyPl0 has
-completed the corresponding delivery intake. Stable release `v0.4.1` provides
-matching public `TinyPl0.Core` and `TinyPl0.Vm` packages on NuGet.org. This
-evidenced delivery is not yet a TinyCalc pin; the approved integration version
-is selected and locked only by the technical preflight.*
+a dated repository snapshot, not a permanent PL/0 requirement. TinyPl0
+provides compiler and VM projects, but not yet the public NuGet delivery
+required here.*
 
 ## Zielzustand / Target State
 
@@ -294,35 +289,6 @@ Vor jeder TinyCalc-Implementierung müssen zwei Stufen erfolgreich sein:
    `dotnet restore --locked-mode` stellt sie reproduzierbar wieder her; keine
    lokale `ProjectReference` ist vorhanden; Contract-Tests belegen Compile,
    Run, Step, Instruktionslimit, Abbruch und strukturierte Diagnosen.
-
-### Gate-Status am 3. September 2026 / Gate Status On 3 September 2026
-
-- **Stufe 1 - Erfüllt:** TinyPl0-Release
-  [`v0.4.1`](https://github.com/hindermath/TinyPl0/releases/tag/v0.4.1) ist an
-  Quellcommit `edab567e1e7cd3ea8eb8e3bea425b54f24d4b506` gebunden. Der
-  [Release-Lauf 33757534918](https://github.com/hindermath/TinyPl0/actions/runs/33757534918)
-  hat Paketbau, SBOM-, VEX- und Provenienz-Eingaben, Attestierung, paarweise
-  Veröffentlichung sowie den öffentlichen NuGet-only-Consumer erfolgreich
-  abgeschlossen. `TinyPl0.Core` und `TinyPl0.Vm` sind versionsgleich als
-  stabile Pakete auf NuGet.org verfügbar.
-- **Stufe 2 - Offen:** TinyCalc hat noch keine Integrationsversion ausgewählt
-  oder gepinnt und noch keinen Locked Restore, Driftentscheid oder
-  Cross-Repo-Contract-Test für Compile, Run, Step, Instruktionslimit, Abbruch
-  und strukturierte Diagnosen ausgeführt. Der interne Vorgänger
-  `Lastenheft_Secure-Development-Hardening.md` bleibt ebenfalls blockierend.
-- `0.4.1` ist der nachgewiesene Lieferkandidat, aber keine zeitlose normative
-  Versionsvorgabe. Der spätere Preflight muss die dann freigegebene Version
-  aus den aktuellen Repository-Deklarationen bestimmen.
-
-*Stage 1 is satisfied: TinyPl0 release `v0.4.1` is bound to source commit
-`edab567e1e7cd3ea8eb8e3bea425b54f24d4b506`. Release run `33757534918`
-successfully completed package creation, SBOM, VEX and provenance input,
-attestation, paired publication, and the public NuGet-only consumer. Stage 2
-remains open: TinyCalc has not selected or pinned an integration version and
-has not run locked restore, drift classification, or the cross-repository
-contract tests. The internal secure-development predecessor also remains
-blocking. Version `0.4.1` is the evidenced delivery candidate, not a permanent
-normative integration pin.*
 
 Der Preflight klassifiziert Terminal.Gui als `Unchanged`, `DependencyDrift`
 oder `Unpinned`. `DependencyDrift` verlangt erneute Build-, vollständige TUI-,

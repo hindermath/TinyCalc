@@ -16,16 +16,16 @@ const json = (value) => `${JSON.stringify(value, null, 2)}\n`;
 const config = readJson("requirements/intake-governance-config.json");
 const seriesRoot = "requirements/intakes/series/tinycalc-delivery";
 const seriesId = "5b4523b4-d946-4091-9cbc-11825af94332";
-const seriesReceiptId = "711d1d7c-6a7b-43f7-ac21-dd256c8043e2";
-const seriesOperationId = "37a3b85b-bd5b-4dbf-b8fa-d796292f3bda";
+const seriesReceiptId = "10fd0b17-0740-486d-b4f4-7c05caa901e1";
+const seriesOperationId = "454804f5-315e-4ee6-893a-3ea7c0cdb21e";
 const reviewId = "c00e3d93-58fe-4d36-b1a4-94090cca1137";
 const createdAt = "2026-07-26T21:00:00Z";
-const seriesUpdatedAt = "2026-09-01T07:17:52Z";
+const seriesUpdatedAt = "2026-09-03T16:16:41Z";
 const reviewedAt = "2026-09-01T07:48:26Z";
 const reviewHead = "4f1b612f54690e49ba3cb02269d469ec2b309f2c";
-const seriesArchiveRoot = "requirements/intakes/series-archive/tinycalc-delivery/20260901T071752Z";
-const reviewArchiveRoot = "requirements/intakes/series-archive/tinycalc-delivery/20260901T071752Z-review";
-const seriesAuthorityEvidence = "The user explicitly requested implementation of the approved intake-only consolidation plan. No product implementation, commit, push, pull request, merge, bypass, provider, or follow-up-feature authority is granted.";
+const seriesArchiveRoot = "requirements/intakes/series-archive/tinycalc-delivery/20260903T161641Z";
+const reviewArchiveRoot = "requirements/intakes/series-archive/tinycalc-delivery/20260903T161641Z-review";
+const seriesAuthorityEvidence = "The user explicitly approved and requested implementation of the PL0 delivery-evidence refresh plan. No commit, push, pull request, merge, bypass, package change, product implementation, or downstream review authority is granted.";
 
 // Der optionale Vorgängername hält die historische Quelle stabil, wenn der aktive Intake nach der Lieferung branchgestempelt wird.
 // The optional predecessor name keeps the historical source stable when delivery adds the branch stamp to the active intake.
@@ -37,7 +37,7 @@ const members = [
   ["rename-microcalc-tinycalc", "Lastenheft_Rename_MicroCalc_TinyCalc.md", "Blocked", "cbb11a6e-0b5c-4b47-a49c-37648ba16cb6", "85e5cd04-bf99-47b1-bad9-04a6469873dc"],
   ["didactic-inline-code-comment-hardening", "Lastenheft_Didactic-Inline-Code-Comment-Hardening.md", "Blocked", "fb3cd161-2086-4cb0-8a8e-a72d1db26500", "a6780a05-df3a-401a-ad1f-796cd3656f1a"],
   ["secure-development-hardening", "Lastenheft_Secure-Development-Hardening.md", "Blocked", "fc7fc58f-180b-43f5-86e6-94d5feb93377", "ad3da51c-6f14-4617-8472-3a13b4b19673"],
-  ["pl0-zellfunktionen-v1", "Lastenheft_PL0-Zellfunktionen_V1.md", "Blocked", "3833866f-3334-4ea9-a92d-0c5748af17da", "d4dc7910-16c8-4ddb-9743-2ac553a5ffcb"],
+  ["pl0-zellfunktionen-v1", "Lastenheft_PL0-Zellfunktionen_V1.md", "Blocked", "e89021a2-d681-42b5-916c-d604fef2a369", "2b606397-f1d6-4d89-90dd-5e7a69f4b050"],
   ["legacy-kompatibilitaet-v1", "Lastenheft_Legacy-Kompatibilitaet_V1.md", "Blocked", "dc355aa6-c523-414c-a472-542967ba62ed", "97c7ee77-1286-4642-92fc-c64982ac18a5"],
   ["formelkopie-und-tabellenoperationen-v1", "Lastenheft_Formelkopie-und-Tabellenoperationen_V1.md", "Blocked", "8d8ca7c4-b610-4aab-9f6c-b9a738961a87", "32428ec7-e89a-4ceb-aa70-8749e49f6595"],
   ["sandbox-gestuetzte-secure-development-haertung", "Lastenheft_Sandbox-gestuetzte-Secure-Development-Haertung.md", "Pending", "dcbee93b-bb9f-49f5-b363-fbe082f7dc1e", "aeb455e1-e871-475f-9c6e-29f8b201c9fd"],
@@ -225,9 +225,9 @@ const seriesReceipt = {
   manifest: {path: manifestPath, normalizedSha256: manifestHash},
   supersedes: {
     receiptPath: `${seriesArchiveRoot}/receipt.json`,
-    receiptNormalizedSha256: "5b37b4598163d274a3aff9dfac6ce3607ce5fb0a977da1ac2582b067caaa0b4b",
+    receiptNormalizedSha256: "27243ebc531d363cdafe0555bfa715a610769344cd48a9cfb96f35ca5c6b43b2",
     manifestArchivePath: `${seriesArchiveRoot}/manifest.json`,
-    manifestArchiveSha256: "f6764be50bd8a04a963ae7ec3a495e4faf2753edd328fa9089b94dde03d8239f",
+    manifestArchiveSha256: "fb9fa46d7f7fa411c4795931b9462c569a5c21e8cdf7e21a7b023d5e68e028c1",
   },
   tombstone: {path: "N/A", normalizedSha256: "N/A"},
   nextAction: "$speckit-intake-series-status",
@@ -247,7 +247,6 @@ const operation = {
     `${seriesRoot}/operation.json`,
     `${seriesRoot}/order.md`,
     "Lastenheft_Abarbeitungsreihenfolge.md",
-    "Pflichtenheft.md",
     `${seriesArchiveRoot}/manifest.json`,
     `${seriesArchiveRoot}/receipt.json`,
     `${reviewArchiveRoot}/intake-review-request.json`,
@@ -264,7 +263,6 @@ const operation = {
       `${seriesRoot}/operation.json`,
       `${seriesRoot}/order.md`,
       "Lastenheft_Abarbeitungsreihenfolge.md",
-      "Pflichtenheft.md",
       `${seriesArchiveRoot}/manifest.json`,
       `${seriesArchiveRoot}/receipt.json`,
       `${reviewArchiveRoot}/intake-review-request.json`,
@@ -428,7 +426,7 @@ const orderDependencies = [
   "A11Y-Abnahme",
   "Rename",
   "Kommentarhärtung",
-  "Security und TinyPl0-NuGet-Liefergate",
+  "Security und TinyCalc-Preflight",
   "PL/0-Erweiterung",
   "Legacy-Kompatibilität",
   "unabhängige Wurzel",
@@ -465,9 +463,6 @@ const outputs = [
   [`${seriesRoot}/operation.json`, json(operation)],
   [rootOrderPath, order],
   [`${seriesRoot}/order.md`, order],
-  [requestPath, json(request)],
-  [`${seriesRoot}/intake-review-result.json`, json(result)],
-  [`${seriesRoot}/intake-review-report.md`, report],
   ...receipts.map((entry) => [entry.path, json(entry.value)]),
 ];
 
@@ -478,6 +473,19 @@ for (const [relativePath, content] of outputs) {
     fs.writeFileSync(fullPath, content);
   } else if (!fs.existsSync(fullPath) || normalize(read(relativePath)) !== normalize(content)) {
     console.error(`stale generated intake-governance artifact: ${relativePath}`);
+    process.exit(1);
+  }
+}
+
+// Ein Inhalts- oder Serienhashwechsel macht den bisherigen Review ungueltig. Aktive Review-Dateien duerfen erst der getrennte Review-Schritt neu erzeugen.
+// A content or series hash change invalidates the previous review. Only the separate review step may create active review files again.
+for (const relativePath of [
+  requestPath,
+  `${seriesRoot}/intake-review-result.json`,
+  `${seriesRoot}/intake-review-report.md`,
+]) {
+  if (fs.existsSync(path.join(root, relativePath))) {
+    console.error(`stale active intake-review artifact: ${relativePath}`);
     process.exit(1);
   }
 }

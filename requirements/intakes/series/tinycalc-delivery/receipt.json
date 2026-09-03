@@ -1,28 +1,28 @@
 {
   "schemaVersion": "1.0",
   "documentType": "IntakeSeriesReceipt",
-  "receiptId": "711d1d7c-6a7b-43f7-ac21-dd256c8043e2",
+  "receiptId": "10fd0b17-0740-486d-b4f4-7c05caa901e1",
   "seriesId": "5b4523b4-d946-4091-9cbc-11825af94332",
   "generator": {
     "preset": "intake-sequencing-governance",
     "version": "0.2.3"
   },
-  "createdAt": "2026-09-01T07:17:52Z",
+  "createdAt": "2026-09-03T16:16:41Z",
   "operation": {
-    "operationId": "37a3b85b-bd5b-4dbf-b8fa-d796292f3bda",
+    "operationId": "454804f5-315e-4ee6-893a-3ea7c0cdb21e",
     "type": "Update",
-    "authorityEvidence": "The user explicitly requested implementation of the approved intake-only consolidation plan. No product implementation, commit, push, pull request, merge, bypass, provider, or follow-up-feature authority is granted."
+    "authorityEvidence": "The user explicitly approved and requested implementation of the PL0 delivery-evidence refresh plan. No commit, push, pull request, merge, bypass, package change, product implementation, or downstream review authority is granted."
   },
   "status": "Ready",
   "manifest": {
     "path": "requirements/intakes/series/tinycalc-delivery/manifest.json",
-    "normalizedSha256": "fb9fa46d7f7fa411c4795931b9462c569a5c21e8cdf7e21a7b023d5e68e028c1"
+    "normalizedSha256": "b665aeae32117eaaf66a4dd1577631023d0e5cdc37d76e131f842e9a369b6136"
   },
   "supersedes": {
-    "receiptPath": "requirements/intakes/series-archive/tinycalc-delivery/20260901T071752Z/receipt.json",
-    "receiptNormalizedSha256": "5b37b4598163d274a3aff9dfac6ce3607ce5fb0a977da1ac2582b067caaa0b4b",
-    "manifestArchivePath": "requirements/intakes/series-archive/tinycalc-delivery/20260901T071752Z/manifest.json",
-    "manifestArchiveSha256": "f6764be50bd8a04a963ae7ec3a495e4faf2753edd328fa9089b94dde03d8239f"
+    "receiptPath": "requirements/intakes/series-archive/tinycalc-delivery/20260903T161641Z/receipt.json",
+    "receiptNormalizedSha256": "27243ebc531d363cdafe0555bfa715a610769344cd48a9cfb96f35ca5c6b43b2",
+    "manifestArchivePath": "requirements/intakes/series-archive/tinycalc-delivery/20260903T161641Z/manifest.json",
+    "manifestArchiveSha256": "fb9fa46d7f7fa411c4795931b9462c569a5c21e8cdf7e21a7b023d5e68e028c1"
   },
   "tombstone": {
     "path": "N/A",

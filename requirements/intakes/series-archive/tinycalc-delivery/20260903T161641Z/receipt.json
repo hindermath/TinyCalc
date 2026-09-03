@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "documentType": "IntakeSeriesReceipt",
+  "receiptId": "711d1d7c-6a7b-43f7-ac21-dd256c8043e2",
+  "seriesId": "5b4523b4-d946-4091-9cbc-11825af94332",
+  "generator": {
+    "preset": "intake-sequencing-governance",
+    "version": "0.2.3"
+  },
+  "createdAt": "2026-09-01T07:17:52Z",
+  "operation": {
+    "operationId": "37a3b85b-bd5b-4dbf-b8fa-d796292f3bda",
+    "type": "Update",
+    "authorityEvidence": "The user explicitly requested implementation of the approved intake-only consolidation plan. No product implementation, commit, push, pull request, merge, bypass, provider, or follow-up-feature authority is granted."
+  },
+  "status": "Ready",
+  "manifest": {
+    "path": "requirements/intakes/series/tinycalc-delivery/manifest.json",
+    "normalizedSha256": "fb9fa46d7f7fa411c4795931b9462c569a5c21e8cdf7e21a7b023d5e68e028c1"
+  },
+  "supersedes": {
+    "receiptPath": "requirements/intakes/series-archive/tinycalc-delivery/20260901T071752Z/receipt.json",
+    "receiptNormalizedSha256": "5b37b4598163d274a3aff9dfac6ce3607ce5fb0a977da1ac2582b067caaa0b4b",
+    "manifestArchivePath": "requirements/intakes/series-archive/tinycalc-delivery/20260901T071752Z/manifest.json",
+    "manifestArchiveSha256": "f6764be50bd8a04a963ae7ec3a495e4faf2753edd328fa9089b94dde03d8239f"
+  },
+  "tombstone": {
+    "path": "N/A",
+    "normalizedSha256": "N/A"
+  },
+  "nextAction": "$speckit-intake-series-status"
+}

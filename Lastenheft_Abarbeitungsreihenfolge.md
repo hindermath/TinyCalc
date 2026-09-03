@@ -16,7 +16,7 @@ lives in the series manifest.*
 | 5 | `requirements/intakes/active/Lastenheft_Rename_MicroCalc_TinyCalc.md` | `Blocked` | A11Y-Abnahme |
 | 6 | `requirements/intakes/active/Lastenheft_Didactic-Inline-Code-Comment-Hardening.md` | `Blocked` | Rename |
 | 7 | `requirements/intakes/active/Lastenheft_Secure-Development-Hardening.md` | `Blocked` | Kommentarhärtung |
-| 8 | `requirements/intakes/active/Lastenheft_PL0-Zellfunktionen_V1.md` | `Blocked` | Security und TinyPl0-NuGet-Liefergate |
+| 8 | `requirements/intakes/active/Lastenheft_PL0-Zellfunktionen_V1.md` | `Blocked` | Security und TinyCalc-Preflight |
 | 9 | `requirements/intakes/active/Lastenheft_Legacy-Kompatibilitaet_V1.md` | `Blocked` | PL/0-Erweiterung |
 | 10 | `requirements/intakes/active/Lastenheft_Formelkopie-und-Tabellenoperationen_V1.md` | `Blocked` | Legacy-Kompatibilität |
 | 11 | `requirements/intakes/active/Lastenheft_Sandbox-gestuetzte-Secure-Development-Haertung.md` | `Pending` | unabhängige Wurzel |
