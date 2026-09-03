@@ -1,0 +1,42 @@
+{
+  "schemaVersion": "1.0",
+  "documentType": "IntakeOperation",
+  "operationId": "2b606397-f1d6-4d89-90dd-5e7a69f4b050",
+  "type": "Update",
+  "status": "Completed",
+  "createdAt": "2026-09-03T16:16:41Z",
+  "authorityEvidence": "The user explicitly approved and requested implementation of the PL0 delivery-evidence refresh plan. No commit, push, pull request, merge, bypass, package change, product implementation, or downstream review authority is granted.",
+  "proposalPath": "specs/intake-authoring-operations/2b606397-f1d6-4d89-90dd-5e7a69f4b050/proposal.json",
+  "proposalNormalizedSha256": "b3b951da0f094084d19e2b68cca22bee4d05b3c1cc9eead18e71602b91138d0f",
+  "approval": {
+    "approved": true,
+    "approvedBy": "Thorsten Hindermann",
+    "approvedAt": "2026-09-03T16:16:41Z",
+    "evidence": "Explicit user request: PLEASE IMPLEMENT THIS PLAN."
+  },
+  "stagingDirectory": "specs/intake-authoring-operations/2b606397-f1d6-4d89-90dd-5e7a69f4b050/staging",
+  "intendedTargets": [
+    "requirements/intakes/active/Lastenheft_PL0-Zellfunktionen_V1.md",
+    "specs/intake-authoring-receipts/pl0-zellfunktionen-v1.json",
+    "requirements/intakes/archive/pl0-zellfunktionen-v1/20260903T161641Z/Lastenheft_PL0-Zellfunktionen_V1.md",
+    "specs/intake-authoring-receipts/history/pl0-zellfunktionen-v1.20260903T161641Z.json"
+  ],
+  "validatedTargets": [
+    "requirements/intakes/active/Lastenheft_PL0-Zellfunktionen_V1.md",
+    "specs/intake-authoring-receipts/pl0-zellfunktionen-v1.json",
+    "requirements/intakes/archive/pl0-zellfunktionen-v1/20260903T161641Z/Lastenheft_PL0-Zellfunktionen_V1.md",
+    "specs/intake-authoring-receipts/history/pl0-zellfunktionen-v1.20260903T161641Z.json"
+  ],
+  "publishedTargets": [
+    "requirements/intakes/active/Lastenheft_PL0-Zellfunktionen_V1.md",
+    "specs/intake-authoring-receipts/pl0-zellfunktionen-v1.json",
+    "requirements/intakes/archive/pl0-zellfunktionen-v1/20260903T161641Z/Lastenheft_PL0-Zellfunktionen_V1.md",
+    "specs/intake-authoring-receipts/history/pl0-zellfunktionen-v1.20260903T161641Z.json"
+  ],
+  "rollbackBoundary": "The byte-identical prior target and receipt are archived. The update records only completed external TinyPl0 delivery evidence; TinyCalc preflight, internal predecessor, scope, requirements, acceptance criteria, product code, dependencies, and remote state remain unchanged.",
+  "failure": {
+    "class": "N/A",
+    "message": "N/A"
+  },
+  "nextAction": "$speckit-intake-review requirements/intakes/active/Lastenheft_PL0-Zellfunktionen_V1.md"
+}

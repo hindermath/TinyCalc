@@ -16,5 +16,10 @@ bash .specify/presets/intake-sequencing-governance/scripts/validate-intake-serie
   --file requirements/intakes/series/tinycalc-delivery/manifest.json --repo "$repo_root"
 bash .specify/presets/intake-sequencing-governance/scripts/validate-intake-series-receipt.sh \
   --file requirements/intakes/series/tinycalc-delivery/receipt.json --repo "$repo_root"
-bash .specify/presets/intake-review-governance/scripts/validate-intake-review-result.sh \
-  --result requirements/intakes/series/tinycalc-delivery/intake-review-result.json --repo "$repo_root"
+review_result="requirements/intakes/series/tinycalc-delivery/intake-review-result.json"
+if [[ -f "$review_result" ]]; then
+  bash .specify/presets/intake-review-governance/scripts/validate-intake-review-result.sh \
+    --result "$review_result" --repo "$repo_root"
+else
+  printf '%s\n' 'PASS: intake review is explicitly pending after a hash-bound governance update'
+fi

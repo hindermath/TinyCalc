@@ -1,22 +1,22 @@
 {
   "schemaVersion": "2.0",
   "documentType": "IntakeReceipt",
-  "receiptId": "3833866f-3334-4ea9-a92d-0c5748af17da",
+  "receiptId": "e89021a2-d681-42b5-916c-d604fef2a369",
   "intakeId": "7474c2ca-2efe-4d05-a359-9af278333007",
   "generator": {
     "preset": "intake-authoring-governance",
     "version": "0.3.1"
   },
-  "createdAt": "2026-09-01T07:17:52Z",
+  "createdAt": "2026-09-03T16:16:41Z",
   "operation": {
-    "operationId": "d4dc7910-16c8-4ddb-9743-2ac553a5ffcb",
+    "operationId": "2b606397-f1d6-4d89-90dd-5e7a69f4b050",
     "type": "Update",
-    "authorityEvidence": "The user explicitly requested implementation of the approved intake-only consolidation plan. No product implementation, commit, push, pull request, merge, bypass, provider, or follow-up-feature authority is granted."
+    "authorityEvidence": "The user explicitly approved and requested implementation of the PL0 delivery-evidence refresh plan. No commit, push, pull request, merge, bypass, package change, product implementation, or downstream review authority is granted."
   },
   "status": "ReadyForReview",
   "target": {
     "path": "requirements/intakes/active/Lastenheft_PL0-Zellfunktionen_V1.md",
-    "normalizedSha256": "bbec90bb96a7b40f7f995df2a3ec1095a9d25acde1b98f85773315c91d8cdc90"
+    "normalizedSha256": "0a82eb5c07c1412b089cc2895df63b89923d10a4bc8df611af596ef56511ca83"
   },
   "sources": [
     {
@@ -25,7 +25,7 @@
       "kind": "File",
       "label": "Byte-identical prior active intake",
       "location": "Repository",
-      "path": "requirements/intakes/archive/pl0-zellfunktionen-v1/20260901T071752Z/Lastenheft_PL0-Zellfunktionen_V1.md",
+      "path": "requirements/intakes/archive/pl0-zellfunktionen-v1/20260903T161641Z/Lastenheft_PL0-Zellfunktionen_V1.md",
       "requestedUrl": "N/A",
       "finalUrl": "N/A",
       "retrievedAt": "N/A",
@@ -36,7 +36,7 @@
       "lastModified": "N/A",
       "redirectChain": [],
       "rawSha256": "N/A",
-      "normalizedSha256": "c3041f51bd99d64d6a0e5dc09e529bb04d0b853d7c4e615c758cf5ecb93f1f2d",
+      "normalizedSha256": "bbec90bb96a7b40f7f995df2a3ec1095a9d25acde1b98f85773315c91d8cdc90",
       "gitBlob": "N/A",
       "proofBoundary": "Byte-identical repository archive"
     },
@@ -44,7 +44,7 @@
       "sourceId": "SRC002",
       "order": 2,
       "kind": "Inline",
-      "label": "Approved additive product-contract alignment",
+      "label": "Approved TinyPl0 delivery-evidence refresh plan",
       "location": "SnapshotOnly",
       "path": "N/A",
       "requestedUrl": "N/A",
@@ -57,13 +57,118 @@
       "lastModified": "N/A",
       "redirectChain": [],
       "rawSha256": "N/A",
-      "normalizedSha256": "2afc77d6d578e1b51af720d7943b16fd65f57a1ecb1e396f39cf4b6d51ec1a4b",
+      "normalizedSha256": "76ba69a0398f7204402682920a24fb515b3f68b4c1075f0bd479914fefe50ebc",
       "gitBlob": "N/A",
       "proofBoundary": "SnapshotOnly"
     },
     {
       "sourceId": "SRC003",
       "order": 3,
+      "kind": "Url",
+      "label": "TinyPl0 v0.4.1 release metadata",
+      "location": "RemoteSnapshot",
+      "path": "N/A",
+      "requestedUrl": "https://api.github.com/repos/hindermath/TinyPl0/releases/tags/v0.4.1",
+      "finalUrl": "https://api.github.com/repos/hindermath/TinyPl0/releases/tags/v0.4.1",
+      "retrievedAt": "2026-09-03T16:16:41Z",
+      "httpStatus": 200,
+      "contentType": "application/json; charset=utf-8",
+      "contentLength": 5088,
+      "etag": "W/\"943b450a40c56c285ddb33a37003a644503a47cc43425dba03e04c1ec4e624a5\"",
+      "lastModified": "Thu, 03 Sep 2026 12:50:37 GMT",
+      "redirectChain": [],
+      "rawSha256": "b98712d1a869b34378f6c129f2b919e519d190ea5c150a0c135f194aa1818f44",
+      "normalizedSha256": "b98712d1a869b34378f6c129f2b919e519d190ea5c150a0c135f194aa1818f44",
+      "gitBlob": "N/A",
+      "proofBoundary": "RemoteSnapshot"
+    },
+    {
+      "sourceId": "SRC004",
+      "order": 4,
+      "kind": "Url",
+      "label": "TinyPl0 v0.4.1 release workflow metadata",
+      "location": "RemoteSnapshot",
+      "path": "N/A",
+      "requestedUrl": "https://api.github.com/repos/hindermath/TinyPl0/actions/runs/33757534918",
+      "finalUrl": "https://api.github.com/repos/hindermath/TinyPl0/actions/runs/33757534918",
+      "retrievedAt": "2026-09-03T16:16:41Z",
+      "httpStatus": 200,
+      "contentType": "application/json; charset=utf-8",
+      "contentLength": 14088,
+      "etag": "W/\"1dd25fefc0755e693589a3bae94bc639401714c5f55a326827b523909e6681c9\"",
+      "lastModified": "N/A",
+      "redirectChain": [],
+      "rawSha256": "98931786fbc143d27c75d0320e65a35b0cd47afda2e01dc86b20e348e3bc7083",
+      "normalizedSha256": "98931786fbc143d27c75d0320e65a35b0cd47afda2e01dc86b20e348e3bc7083",
+      "gitBlob": "N/A",
+      "proofBoundary": "RemoteSnapshot"
+    },
+    {
+      "sourceId": "SRC005",
+      "order": 5,
+      "kind": "Url",
+      "label": "TinyPl0 v0.4.1 release workflow jobs",
+      "location": "RemoteSnapshot",
+      "path": "N/A",
+      "requestedUrl": "https://api.github.com/repos/hindermath/TinyPl0/actions/runs/33757534918/jobs?per_page=100",
+      "finalUrl": "https://api.github.com/repos/hindermath/TinyPl0/actions/runs/33757534918/jobs?per_page=100",
+      "retrievedAt": "2026-09-03T16:16:41Z",
+      "httpStatus": 200,
+      "contentType": "application/json; charset=utf-8",
+      "contentLength": 11909,
+      "etag": "W/\"41b3fab866dd49f7ba940197758c0c7faeb5698f9c0269f3fc5849882a629fb5\"",
+      "lastModified": "N/A",
+      "redirectChain": [],
+      "rawSha256": "1c74aadadcefcd408bf50ab7b15f9220de2e4d794ee9cb231dd7288e5a57e65a",
+      "normalizedSha256": "1c74aadadcefcd408bf50ab7b15f9220de2e4d794ee9cb231dd7288e5a57e65a",
+      "gitBlob": "N/A",
+      "proofBoundary": "RemoteSnapshot"
+    },
+    {
+      "sourceId": "SRC006",
+      "order": 6,
+      "kind": "Url",
+      "label": "Public TinyPl0.Core version index",
+      "location": "RemoteSnapshot",
+      "path": "N/A",
+      "requestedUrl": "https://api.nuget.org/v3-flatcontainer/tinypl0.core/index.json",
+      "finalUrl": "https://api.nuget.org/v3-flatcontainer/tinypl0.core/index.json",
+      "retrievedAt": "2026-09-03T16:16:41Z",
+      "httpStatus": 200,
+      "contentType": "application/json",
+      "contentLength": 53,
+      "etag": "0x8DF09BA9D81509A",
+      "lastModified": "Thu, 03 Sep 2026 12:55:22 GMT",
+      "redirectChain": [],
+      "rawSha256": "b44790768cec415b238de7c574fb897e974a4afd7d5a84c6c6da21010398d249",
+      "normalizedSha256": "831500b0265467bf30aa89868352977203ced1815f647b330897ed8fce2b99fe",
+      "gitBlob": "N/A",
+      "proofBoundary": "RemoteSnapshot"
+    },
+    {
+      "sourceId": "SRC007",
+      "order": 7,
+      "kind": "Url",
+      "label": "Public TinyPl0.Vm version index",
+      "location": "RemoteSnapshot",
+      "path": "N/A",
+      "requestedUrl": "https://api.nuget.org/v3-flatcontainer/tinypl0.vm/index.json",
+      "finalUrl": "https://api.nuget.org/v3-flatcontainer/tinypl0.vm/index.json",
+      "retrievedAt": "2026-09-03T16:16:41Z",
+      "httpStatus": 200,
+      "contentType": "application/json",
+      "contentLength": 53,
+      "etag": "0x8DF09BA9D7C6F55",
+      "lastModified": "Thu, 03 Sep 2026 12:55:22 GMT",
+      "redirectChain": [],
+      "rawSha256": "b44790768cec415b238de7c574fb897e974a4afd7d5a84c6c6da21010398d249",
+      "normalizedSha256": "831500b0265467bf30aa89868352977203ced1815f647b330897ed8fce2b99fe",
+      "gitBlob": "N/A",
+      "proofBoundary": "RemoteSnapshot"
+    },
+    {
+      "sourceId": "SRC008",
+      "order": 8,
       "kind": "File",
       "label": "Binding functional product-contract intake",
       "location": "Repository",
@@ -83,8 +188,8 @@
       "proofBoundary": "Current active intake and normalized SHA-256"
     },
     {
-      "sourceId": "SRC004",
-      "order": 4,
+      "sourceId": "SRC009",
+      "order": 9,
       "kind": "File",
       "label": "Current formula evaluator extension boundary",
       "location": "Repository",
@@ -104,8 +209,8 @@
       "proofBoundary": "Repository file and normalized SHA-256"
     },
     {
-      "sourceId": "SRC005",
-      "order": 5,
+      "sourceId": "SRC010",
+      "order": 10,
       "kind": "File",
       "label": "Current JSON persistence boundary",
       "location": "Repository",
@@ -125,8 +230,8 @@
       "proofBoundary": "Repository file and normalized SHA-256"
     },
     {
-      "sourceId": "SRC006",
-      "order": 6,
+      "sourceId": "SRC011",
+      "order": 11,
       "kind": "File",
       "label": "Current TUI integration boundary",
       "location": "Repository",
@@ -176,10 +281,17 @@
       "question": "How does PL0 affect the current product contract?",
       "answer": "PL0 adds stable PL0 contract IDs before product code and retains regression for every earlier active ID.",
       "evidence": "Approved intake consolidation plan."
+    },
+    {
+      "id": "IAD005",
+      "status": "Answered",
+      "question": "Which part of the TinyPl0 delivery gate is now satisfied?",
+      "answer": "The external TinyPl0 delivery stage is satisfied by release v0.4.1, source commit edab567e1e7cd3ea8eb8e3bea425b54f24d4b506, successful release run 33757534918, and matching public packages. The TinyCalc technical preflight and internal predecessor remain open and blocking.",
+      "evidence": "GitHub release and workflow snapshots plus the two official NuGet.org version indexes."
     }
   ],
   "openDecisionIds": [],
-  "questionCount": 4,
+  "questionCount": 5,
   "agentSurface": {
     "specifyCanonicalId": "speckit.specify",
     "specifyInvocation": "$speckit-specify",
@@ -187,14 +299,14 @@
     "autonomousInvocation": "$speckit-autonomous"
   },
   "deliveryAuthority": "LocalImplementation",
-  "authorityEvidence": "The user explicitly requested implementation of the approved intake-only consolidation plan. No product implementation, commit, push, pull request, merge, bypass, provider, or follow-up-feature authority is granted.",
+  "authorityEvidence": "The user explicitly approved and requested implementation of the PL0 delivery-evidence refresh plan. No commit, push, pull request, merge, bypass, package change, product implementation, or downstream review authority is granted.",
   "promptState": "Enabled",
   "provenanceMode": "Supersession",
   "supersedes": {
-    "receiptPath": "specs/intake-authoring-receipts/history/pl0-zellfunktionen-v1.20260901T071752Z.json",
-    "targetNormalizedSha256": "c3041f51bd99d64d6a0e5dc09e529bb04d0b853d7c4e615c758cf5ecb93f1f2d",
-    "archiveTargetPath": "requirements/intakes/archive/pl0-zellfunktionen-v1/20260901T071752Z/Lastenheft_PL0-Zellfunktionen_V1.md",
-    "archiveReceiptPath": "specs/intake-authoring-receipts/history/pl0-zellfunktionen-v1.20260901T071752Z.json"
+    "receiptPath": "specs/intake-authoring-receipts/history/pl0-zellfunktionen-v1.20260903T161641Z.json",
+    "targetNormalizedSha256": "bbec90bb96a7b40f7f995df2a3ec1095a9d25acde1b98f85773315c91d8cdc90",
+    "archiveTargetPath": "requirements/intakes/archive/pl0-zellfunktionen-v1/20260903T161641Z/Lastenheft_PL0-Zellfunktionen_V1.md",
+    "archiveReceiptPath": "specs/intake-authoring-receipts/history/pl0-zellfunktionen-v1.20260903T161641Z.json"
   },
   "legacyAdoption": {
     "evidenceType": "N/A",
@@ -202,7 +314,7 @@
     "priorGitBlob": "N/A"
   },
   "updateAuthorized": true,
-  "updateAuthorityEvidence": "The user explicitly requested implementation of the approved intake-only consolidation plan. No product implementation, commit, push, pull request, merge, bypass, provider, or follow-up-feature authority is granted.",
+  "updateAuthorityEvidence": "The user explicitly approved and requested implementation of the PL0 delivery-evidence refresh plan. No commit, push, pull request, merge, bypass, package change, product implementation, or downstream review authority is granted.",
   "series": {
     "seriesId": "5b4523b4-d946-4091-9cbc-11825af94332",
     "manifestPath": "requirements/intakes/series/tinycalc-delivery/manifest.json",
