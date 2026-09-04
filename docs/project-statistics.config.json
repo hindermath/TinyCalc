@@ -99,6 +99,14 @@
       "labelEn": "TUI fix delivery",
       "netLines": 68,
       "activeDays": 1
+    },
+    {
+      "slot": 12,
+      "id": "assurance-preset",
+      "labelDe": "Assurance-Preset",
+      "labelEn": "Assurance preset",
+      "netLines": 3328,
+      "activeDays": 1
     }
   ],
   "excludedPaths": [

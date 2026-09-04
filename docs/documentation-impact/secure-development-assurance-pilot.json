@@ -1,0 +1,88 @@
+{
+  "schemaVersion": "1.1",
+  "feature": "secure-development-assurance-pilot",
+  "entries": [
+    {
+      "changeId": "CHG024",
+      "scope": "Secure Development Assurance preset and generated Spec Kit agent surfaces",
+      "decision": "GeneratedUpdate",
+      "rationale": "Install the immutable v0.1.0 preset as the canonical source for the portable evidence contract and the status and review surfaces required by the explicitly approved TinyCalc field test.",
+      "documents": [
+        ".agents/skills/speckit-secure-development-status/SKILL.md",
+        ".agents/skills/speckit-secure-development-review/SKILL.md",
+        ".claude/skills/speckit-secure-development-status/SKILL.md",
+        ".claude/skills/speckit-secure-development-review/SKILL.md",
+        ".github/agents/speckit.secure-development-status.agent.md",
+        ".github/agents/speckit.secure-development-review.agent.md",
+        ".github/prompts/speckit.secure-development-status.prompt.md",
+        ".github/prompts/speckit.secure-development-review.prompt.md",
+        ".opencode/command/speckit.secure-development-status.md",
+        ".opencode/command/speckit.secure-development-review.md"
+      ],
+      "owner": "Repository Maintainer",
+      "audiences": [
+        "Maintainers and AI agents",
+        "Technical reviewers",
+        "Field-test owner"
+      ],
+      "readerPaths": [
+        "Preset registry and installed contract",
+        "Agent or command entry point",
+        "Read-only status or bounded gate review",
+        "Field-test evidence and closeout"
+      ],
+      "canonicalSource": ".specify/presets/secure-development-assurance-governance/preset.yml",
+      "navigationImpact": "Two generated secure-development commands and their agent-specific surfaces become available without changing the TinyCalc product entry points.",
+      "documentClass": "GeneratedOperational",
+      "languageStrategy": "The immutable preset provides synchronized German-first and English-second operational guidance.",
+      "languagePartners": [],
+      "platformAndExampleProof": "The preset contract tests cover Bash and PowerShell plus LF, CRLF, and UTF-8 BOM fixtures; composition is verified in a temporary Git repository.",
+      "distributionClass": "sourceOnly",
+      "homeSyncRequired": false,
+      "evidence": "docs/documentation-impact/secure-development-assurance-pilot.json",
+      "risk": "Low; generated governance surfaces are added, while product behavior and human approval boundaries remain unchanged.",
+      "criticality": "Security",
+      "reevaluationTrigger": "The installed preset version, release hash, generated command surfaces, security-governance prerequisite, or evidence contract changes.",
+      "generatedSource": {
+        "path": ".specify/presets/secure-development-assurance-governance/preset.yml",
+        "renderer": "specify preset add via the central 13-preset installer"
+      }
+    },
+    {
+      "changeId": "CHG025",
+      "scope": "docs/project-statistics.md",
+      "decision": "GeneratedUpdate",
+      "rationale": "Record the completed governance installation as a visible delivery phase and refresh the reproducible Profile 2 statistics block.",
+      "documents": [
+        "docs/project-statistics.md"
+      ],
+      "owner": "Repository Maintainer",
+      "audiences": [
+        "Repository users",
+        "Maintainers and AI agents",
+        "Reviewers"
+      ],
+      "readerPaths": [
+        "Repository statistics ledger",
+        "Secure development assurance pilot entry",
+        "Overall Profile 2 statistics"
+      ],
+      "canonicalSource": "docs/project-statistics.config.json",
+      "navigationImpact": "No new portal; the existing statistics ledger gains one chronological field-test installation entry and one phase slot.",
+      "documentClass": "GeneratedStatistical",
+      "languageStrategy": "German first and English second in the existing synchronized statistics document.",
+      "languagePartners": [],
+      "platformAndExampleProof": "The PowerShell renderer verifies schema, ASCII width, accessibility text alternatives, and clean-tree reproducibility.",
+      "distributionClass": "sourceOnly",
+      "homeSyncRequired": false,
+      "evidence": "docs/documentation-impact/secure-development-assurance-pilot.json",
+      "risk": "Low; statistics describe repository activity and do not alter product behavior.",
+      "criticality": "Normal",
+      "reevaluationTrigger": "The pilot installation changes, the field-test features complete, or the statistics methodology changes.",
+      "generatedSource": {
+        "path": "docs/project-statistics.config.json",
+        "renderer": "pwsh -NoProfile -File scripts/render-project-statistics.ps1"
+      }
+    }
+  ]
+}
