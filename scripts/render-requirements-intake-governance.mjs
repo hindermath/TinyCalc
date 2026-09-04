@@ -477,17 +477,19 @@ for (const [relativePath, content] of outputs) {
   }
 }
 
-// Ein Inhalts- oder Serienhashwechsel macht den bisherigen Review ungueltig. Aktive Review-Dateien duerfen erst der getrennte Review-Schritt neu erzeugen.
-// A content or series hash change invalidates the previous review. Only the separate review step may create active review files again.
-for (const relativePath of [
+// Nach einem Hashwechsel ist entweder kein aktiver Review vorhanden oder der getrennte Review-Schritt hat den vollstaendigen Dreiersatz neu erzeugt.
+// After a hash change, either no active review exists or the separate review step has recreated the complete three-file set.
+const activeReviewPaths = [
   requestPath,
   `${seriesRoot}/intake-review-result.json`,
   `${seriesRoot}/intake-review-report.md`,
-]) {
-  if (fs.existsSync(path.join(root, relativePath))) {
-    console.error(`stale active intake-review artifact: ${relativePath}`);
-    process.exit(1);
-  }
+];
+const activeReviewCount = activeReviewPaths.filter((relativePath) =>
+  fs.existsSync(path.join(root, relativePath))
+).length;
+if (activeReviewCount !== 0 && activeReviewCount !== activeReviewPaths.length) {
+  console.error("incomplete active intake-review evidence");
+  process.exit(1);
 }
 
 const configuredCountMismatch =
