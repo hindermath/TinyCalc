@@ -638,27 +638,27 @@ Profil 2 verwendet Git-getrackte Textdateien und sichtbare Git-Aktivitaet. Die W
 
 | Kennzahl / Metric | Wert / Value |
 |---|---:|
-| Textbasis / Text base | 156531 lines |
-| Textdateien / Text files | 1098 |
+| Textbasis / Text base | 159858 lines |
+| Textdateien / Text files | 1122 |
 | Beobachtbarer Zeitraum / Observable period | 2025-09-07..2026-09-04 |
 | Aktivtage / Active days | 75 |
-| Relevante Commits / Relevant commits | 206 |
-| Zeilen je Aktivtag / Lines per active day | 2087.1 |
+| Relevante Commits / Relevant commits | 207 |
+| Zeilen je Aktivtag / Lines per active day | 2131.4 |
 | Peak-Tag im Fenster / Peak day in window | 2026-06-17 / 27058 |
 | Peak-Woche im Fenster / Peak week in window | 2026-07-19 / 33630 |
 | Laengste Serie / Longest streak | 8 days |
-| Speedup vs. 80 lines/day | 26.1x |
-| Speedup vs. 125 lines/day | 16.7x |
-| Methodik / Methodology | v2; source `cad8d13fcecf` |
+| Speedup vs. 80 lines/day | 26.6x |
+| Speedup vs. 125 lines/day | 17.1x |
+| Methodik / Methodology | v2; source `3d9389abc2fe` |
 
 ### Artefaktmix / Artifact Mix
 
 ```text
 Produktiv / Production          [#...................]   1.8% | 2830
 Tests                           [#...................]   4.2% | 6645
-Dokumentation / Documentation   [###############.....]  72.5% | 113519
-Skripte / Scripts               [###.................]  13.7% | 21452
-Konfiguration / Configuration   [#...................]   5.8% | 9073
+Dokumentation / Documentation   [###############.....]  73.1% | 116846
+Skripte / Scripts               [###.................]  13.4% | 21452
+Konfiguration / Configuration   [#...................]   5.7% | 9073
 Daten und Medien / Data and media [....................]   0.0% | 0
 Sonstiger Text / Other text     [#...................]   1.9% | 3012
 ```
@@ -687,7 +687,7 @@ Mo/Mo  0 0 0 2 0 1 4 0 4 0 0 0 0 0 0 0 3 1 4 4 0 0 0 2 0 0
 Di/Tu  0 0 0 3 0 0 0 0 3 0 0 3 0 0 0 0 2 0 3 4 4 0 0 0 0 4
 Mi/We  0 0 1 0 0 0 3 0 2 0 0 0 2 0 4 0 2 0 0 2 4 0 0 0 0 0
 Do/Th  0 0 0 0 0 0 0 4 0 0 0 1 0 4 1 0 0 0 1 4 0 0 4 0 0 3
-Fr/Fr  0 0 2 4 0 2 4 0 0 0 4 2 2 0 3 2 3 4 4 4 1 0 0 0 0 2
+Fr/Fr  0 0 2 4 0 2 4 0 0 0 4 2 2 0 3 2 3 4 4 4 1 0 0 0 0 4
 Sa/Sa  0 0 2 0 0 0 0 0 0 0 0 0 0 0 4 0 4 4 0 4 2 0 2 0 3 -
 ```
 
@@ -713,7 +713,7 @@ Wochen / Weeks 27..52 | 2026-03-08..2026-09-05
    cap 50000 | . . . . . . . . . . . . . . . . . . . . . . . . . .
        41667 | . . . . . . . . . . . . . . . . . . . . . . . . . .
        33333 | . . . . . . . . . . . . . . . . . . . # . . . . . .
-       25000 | . . . . . . . . . . . . . . # . . . . # . . . . . .
+       25000 | . . . . . . . . . . . . . . # . . . . # . . . . . #
        16667 | . . . . . . . . . . . . . . # . . . . # # . . . . #
         8333 | . . . . . . # . # . . . . . # . . # . # # . # . . #
            0 +-----------------------------------------------------
@@ -754,15 +754,15 @@ Die kumulative Kurve summiert nur das Brutto-Aenderungsvolumen im Fenster. Sie d
 ### Phasenvolumen / Phase Volume
 
 ```text
-Slots 0..11
-   cap 10000 | . . . . . . . . . . . .
-        8333 | . . . . . . . # . . . .
-        6667 | # . . . . . . # . . . .
-        5000 | # . . . . . . # . . . .
-        3333 | # # . . . . . # . . . .
-        1667 | # # # . . . # # . . . .
-           0 +-------------------------
-             00 01 02 03 04 05 06 07 08 09 10 11
+Slots 0..12
+   cap 10000 | . . . . . . . . . . . . .
+        8333 | . . . . . . . # . . . . .
+        6667 | # . . . . . . # . . . . .
+        5000 | # . . . . . . # . . . . .
+        3333 | # # . . . . . # . . . . .
+        1667 | # # # . . . # # . . . . #
+           0 +---------------------------
+             00 01 02 03 04 05 06 07 08 09 10 11 12
 ```
 
 | Slot | Phase | Nettozeilen / Net lines |
@@ -779,6 +779,7 @@ Slots 0..11
 | 9 | Grid-Kontrast / Grid contrast | 60 |
 | 10 | Dialog-Default / Dialog default | 49 |
 | 11 | TUI-Fix-Lieferung / TUI fix delivery | 68 |
+| 12 | Assurance-Preset / Assurance preset | 3327 |
 
 Die festen Slots halten den Phasenvergleich auch bei fehlenden oder spaeter ergaenzten Werten stabil.
 
@@ -788,8 +789,8 @@ Die festen Slots halten den Phasenvergleich auch bei fehlenden oder spaeter erga
 
 ```text
 Scale: 0..50x
-80 lines/day       [##########..........] 26.1x
-125 lines/day      [#######.............] 16.7x
+80 lines/day       [###########.........] 26.6x
+125 lines/day      [#######.............] 17.1x
 ```
 
 Die Faktoren vergleichen sichtbare Lieferdichte mit den dokumentierten manuellen Referenzen. Sie messen keine Arbeitszeit.
@@ -802,7 +803,7 @@ Die Faktoren vergleichen sichtbare Lieferdichte mit den dokumentierten manuellen
 Scale: 0..5000 lines/day
 Experienced manual [#...................] 80
 Thorsten solo      [#...................] 125
-Visible repository [########............] 2087.1
+Visible repository [#########...........] 2131.4
 ```
 
 Die gemeinsame Skala vergleicht Referenzen und sichtbare Lieferdichte. Sie schreibt die Git-Aktivitaet keiner Person oder KI pauschal zu.
@@ -828,6 +829,6 @@ DE: Das Fenster beginnt am 2025-09-07 und endet am 2026-09-04. Es enthaelt 75 ak
 | 2026-06 | 37273 |
 | 2026-07 | 74876 |
 | 2026-08 | 26218 |
-| 2026-09 | 8980 |
+| 2026-09 | 12307 |
 
 <!-- project-statistics-v2:end -->
