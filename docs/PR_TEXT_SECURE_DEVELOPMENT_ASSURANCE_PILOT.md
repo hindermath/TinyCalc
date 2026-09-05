@@ -1,4 +1,4 @@
-# PR: Secure Development Assurance Governance v0.1.1 fuer TinyCalc installieren
+# PR: Secure Development Assurance Governance v0.1.2 fuer TinyCalc installieren
 
 ## Problem
 
@@ -9,18 +9,24 @@ reviewgebundenen Secure-Development-Assurance-Oberflaechen.
 
 Die urspruengliche v0.1.0-Installation zeigte zwei Paketfehler: ungueltige
 erzeugte Validatorpfade (SDA-FT-001) und nichtdeterministische rohe Snapshots
-(SDA-FT-002). Der kanonische v0.1.1-Patch korrigiert beide Defekte.
+(SDA-FT-002). v0.1.1 korrigierte beide Defekte. Die anschliessende unabhaengige
+Pruefung fand mit SDA-FT-003 zwei weitere Eingabegrenzen: ungueltige oder
+fehlende `acceptedRisks[].id`-Werte und mehrere aneinandergehaengte JSON-Wurzeln
+konnten die Bash-Auswertung umgehen. v0.1.2 schliesst beide Grenzen
+shell-paritaetisch.
 
 *The original field-test installation exposed invalid generated validator
-paths and nondeterministic read-only snapshots. The canonical v0.1.1 patch
-corrects both defects with observed red/green regressions.*
+paths and nondeterministic read-only snapshots. v0.1.1 corrected those defects.
+The independent follow-up review found invalid or missing accepted-risk IDs and
+multiple concatenated JSON roots as additional Bash bypasses. v0.1.2 closes
+both boundaries consistently in Bash and PowerShell.*
 
 ## Loesung
 
 - das unveraenderliche Release-ZIP von
-  `secure-development-assurance-governance` v0.1.1 mit dem verifizierten
+  `secure-development-assurance-governance` v0.1.2 mit dem verifizierten
   SHA-256
-  `516eaba9b6ce258c27777e88decb7e45a1e1810cab5d3cb866738bc2326453a4`
+  `4eb30804bb3c329681e0b7d44187c8daeb3e9e4f250bb6003d5b746c0ad0b656`
   geprueft und installiert
 - das optionale 13-Preset-Profil aktiviert; das neue Preset hat Prioritaet 15,
   waehrend `security-governance` v0.6.2 unveraendert Prioritaet 10 behaelt
@@ -37,7 +43,7 @@ TinyCalc-Produktcode noch Produkt-API. Das wegen
 `hindermath/absdd-image-sandbox#52` ausgeschlossene Sandbox-Lastenheft bleibt
 ausserhalb dieses PRs.
 
-*Install the immutable v0.1.1 field-test archive, its evidence contract and
+*Install the immutable v0.1.2 field-test archive, its evidence contract and
 eight generated agent surfaces. Preserve the thirteen-preset composition and
 priorities. This installation changes no product code or API and starts no
 Spec Kit feature. Sandbox work remains excluded.*
@@ -72,24 +78,27 @@ is not replaced. Reassess when the service, AI or runtime scope changes.*
 ## Validierung
 
 - Release-ZIP erneut geladen und SHA-256 bytegenau bestaetigt
-- Exakte zentrale 13-Preset-Matrix fuer v0.1.1 pruefen
+- Exakte zentrale 13-Preset-Matrix fuer v0.1.2 pruefen
 - `specify preset list`, `specify preset info`,
   `specify preset resolve secure-development-evidence-contract` und
   `specify check` bestanden
 - Preset-Vertragstests einschliesslich positiver/negativer Kontexte,
-  Read-only-Hashnachweis sowie Bash-/PowerShell- und LF/CRLF/BOM-Paritaet
-  bestanden
+  Read-only-Hashnachweis, Bash-/PowerShell- und LF/CRLF/BOM-Paritaet sowie
+  RED/GREEN-Regressionen fuer Risk-IDs und genau eine JSON-Wurzel bestanden
 - Komposition in einer temporaeren Git-Arbeitskopie: Disable/Enable, alte
-  Profile 8 bis 12 und erneute Installation aus dem v0.1.1-Tag-ZIP zum exakten
+  Profile 8 bis 12 und erneute Installation aus dem v0.1.2-Tag-ZIP zum exakten
   13-Preset-Profil bestanden. Die bekannte CLI-Remove-Grenze bleibt offen.
 - Documentation-Impact-Validator, Secret-Scan, JSON-Pruefung und
   `git diff --check` bestanden
 
-Paket-Merge: `00e72dc1c0eedec3ea420072e79f3709573c6cf7`.
-[Paket-CI 33971814720](https://github.com/hindermath/spec-kit-preset-secure-development-assurance-governance/actions/runs/33971814720)
-besteht beide Tests auf Linux, macOS und Windows am geprueften Head
-`41318dbebdbffbd00754dafc8b9064b5ba0eb677`. Auch die Installation aus dem
-echten Tag-ZIP besteht alle acht Oberflaechen. Die unveraenderten aktuellen
+Paket-Merge: `02423602592ad0183454e259df628ab940436ba6`.
+[Paket-CI 33976340466](https://github.com/hindermath/spec-kit-preset-secure-development-assurance-governance/actions/runs/33976340466)
+besteht die vollstaendige Testsuite auf Linux, macOS und Windows am geprueften
+Head `cf7e18fe7dc45dca93801a8c58d19c7dfc2f4fc1`. Das veroeffentlichte
+[v0.1.2-Prerelease](https://github.com/hindermath/spec-kit-preset-secure-development-assurance-governance/releases/tag/v0.1.2)
+und sein echtes Tag-ZIP bestehen alle acht Oberflaechen. Source-Merge
+`610352901d35d5885044ffe3355a7767396cc63a` uebernimmt dieselben Bytes. Die
+unveraenderten aktuellen
 TinyCalc-CI- und Review-Gates bleiben vor Merge zwingend; Paket-CI ersetzt sie
 nicht.
 
@@ -108,7 +117,8 @@ pre-merge requirements; package success does not imply field-test acceptance.*
 - keine C5-, Konformitaets- oder Zertifizierungsbehauptung
 - die fachliche Feldtest-Evidence entsteht erst in den zwei getrennten,
   sequenziellen Spec-Kit-Laeufen
-- v0.1.0 bleibt unveraendert; v0.1.1 ist ein Feldtest-Prerelease
+- v0.1.0 und v0.1.1 bleiben unveraendert; v0.1.2 ist das aktuelle
+  Feldtest-Prerelease
 - Spec Kit 0.12.11 kann beim Multi-Agent-Remove zwei unbenutzbare Claude-Skills
   zuruecklassen. Das Runbook beschreibt die enge gepruefte Bereinigung;
   vollstaendiger Uninstall-Erfolg wird deshalb nicht behauptet.

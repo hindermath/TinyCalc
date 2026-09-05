@@ -598,9 +598,9 @@
       "installed_at": "2026-08-15T23:13:01.536490+00:00"
     },
     "secure-development-assurance-governance": {
-      "version": "0.1.1",
+      "version": "0.1.2",
       "source": "local",
-      "manifest_hash": "sha256:93716428e17def07dac4a61af383552d03187c2f7de4f5c070d0c7f9b7695aef",
+      "manifest_hash": "sha256:624d726e0afb71b852581b102f243b9c4d605b4e67e78bb0ec4433b89947750a",
       "enabled": true,
       "priority": 15,
       "registered_commands": {
@@ -633,7 +633,7 @@
         "speckit-secure-development-status",
         "speckit-secure-development-review"
       ],
-      "installed_at": "2026-09-05T14:41:13.098259+00:00"
+      "installed_at": "2026-09-05T16:19:47.781175+00:00"
     }
   }
 }

@@ -6,7 +6,7 @@
       "changeId": "CHG024",
       "scope": "Secure Development Assurance preset and generated Spec Kit agent surfaces",
       "decision": "GeneratedUpdate",
-      "rationale": "Install the SHA-256-verified immutable v0.1.1 field-test prerelease, fixing SDA-FT-001 generated paths and SDA-FT-002 raw-byte snapshots; preserve v0.1.0 and the portable evidence and human-decision boundaries.",
+      "rationale": "Install the SHA-256-verified immutable v0.1.2 field-test prerelease. Preserve the v0.1.0 and v0.1.1 releases while adding the SDA-FT-003 accepted-risk ID and single-JSON-root validation boundaries to the earlier generated-path and raw-snapshot fixes.",
       "documents": [
         ".agents/skills/speckit-secure-development-status/SKILL.md",
         ".agents/skills/speckit-secure-development-review/SKILL.md",
@@ -36,7 +36,7 @@
       "documentClass": "GeneratedOperational",
       "languageStrategy": "The immutable preset provides synchronized German-first and English-second operational guidance.",
       "languagePartners": [],
-      "platformAndExampleProof": "Package CI 33971814720 passed native Linux, macOS and Windows contracts and all eight generated surfaces at head 41318dbebdbffbd00754dafc8b9064b5ba0eb677. Actual v0.1.1 archive SHA-256: 516eaba9b6ce258c27777e88decb7e45a1e1810cab5d3cb866738bc2326453a4. CLI 0.12.11 multi-agent removal may leave unusable Claude skills; the runbook records this limitation rather than claiming complete uninstall success.",
+      "platformAndExampleProof": "Package CI 33976340466 passed native Linux, macOS and Windows contracts at head cf7e18fe7dc45dca93801a8c58d19c7dfc2f4fc1. The actual v0.1.2 archive passed all eight generated surfaces; SHA-256: 4eb30804bb3c329681e0b7d44187c8daeb3e9e4f250bb6003d5b746c0ad0b656. Source merge 610352901d35d5885044ffe3355a7767396cc63a preserves the reviewed package bytes. CLI 0.12.11 multi-agent removal may leave unusable Claude skills; the runbook records this limitation rather than claiming complete uninstall success.",
       "distributionClass": "sourceOnly",
       "homeSyncRequired": false,
       "evidence": "docs/documentation-impact/secure-development-assurance-pilot.json",
