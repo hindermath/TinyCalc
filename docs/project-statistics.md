@@ -410,6 +410,44 @@ conservative manual workdays (6.6 hours) or 0.5 Thorsten-solo workdays (4.2
 hours); these values describe blended repository delivery density, not
 stopwatch time.*
 
+### 12. Feature 004 RL-SE-Checklist-Selbstpruefung
+
+- Status: lokale Bewertung, Assurance-Gates, unabhaengiger Review,
+  Dokumentation, Produktregression und plattformuebergreifende CI-Definition
+  abgeschlossen; Provider- und Exact-Head-Gates stehen noch aus.
+- Beobachtbares Arbeitsfenster: 2026-09-05 18:45 bis 20:20 Uhr
+  (`Europe/Berlin`), ein sichtbarer Aktivtag.
+- Arbeitspakete: Spec-Kit-Spezifikation, Plan, Tasks und Analyse; 157-Zeilen-
+  Matrix; PowerShell-/Bash-Validator; Baseline-3.2.0-Neubindung; vier
+  Assurance-Gates; einmaliger unabhaengiger Closure-Review; DE-first/EN-second-
+  Bericht; priorisierte Folgearbeit; Documentation Impact; PR- und
+  Evidence-Index; Release-Build, 82 Tests und Smoke; Linux-/Windows-CI-
+  Erweiterung.
+- Aenderungsvolumen vor dem Statistik-Selbstnachweis; Statistik-Ledger,
+  Konfiguration und `Directory.Build.props` sind ausgeschlossen:
+  - Produktionscode: `0` Zeilen
+  - Testcode: `0` Zeilen
+  - Dokumentation, Governance, Evidence und Validator-Tooling:
+    `+6711 / -9 = 6702` Zeilen netto
+  - Gesamt: `6702` Zeilen netto
+- Konservative Referenz mit 80 Zeilen pro Arbeitstag: `83.8` Arbeitstage,
+  `653.4` Stunden bei 7.8 Stunden pro Tag und `3.9` Monate bei 21.5
+  Arbeitstagen pro Monat.
+- Thorsten-Solo-Referenz mit 125 Zeilen pro Arbeitstag: `53.6` Arbeitstage,
+  `418.2` Stunden bei 7.8 Stunden pro Tag und `2.5` Monate.
+- Gegen einen sichtbaren Aktivtag sind `83.8x` und `53.6x` blended repository
+  speedup beziehungsweise Lieferdichte. Diese Werte sind keine
+  Stoppuhrmessung.
+
+*The local RL-SE assessment covers all 157 canonical items, paired validators,
+four Ready assurance gates, one independent closure review, bilingual reader
+evidence, explicit follow-up, and unchanged-product regression. Its 6,702 net
+documentation, governance, evidence, and validator-tooling lines correspond to
+83.8 conservative manual days (653.4 hours, 3.9 months) or 53.6 Thorsten-solo
+days (418.2 hours, 2.5 months). These one-visible-day comparisons describe
+blended repository delivery density, not stopwatch time; provider and
+exact-head gates remain pending.*
+
 ## Einordnung der KI-/Spec-Kit-Wirkung
 
 - Die beobachtbare manuelle Gesamtbasis liegt bereits bei 20379 Zeilen
@@ -476,6 +514,7 @@ stopwatch time.*
 | 2026-09-04 | Secure Development Assurance Governance v0.1.0 installiert / Secure Development Assurance Governance v0.1.0 installed | Arbeitsfenster: eine sichtbare Agentensitzung am 2026-09-04 auf Branch `codex/secure-development-assurance-pilot`. Das unveraenderliche Release-ZIP wurde mit SHA-256 `d9effc395e590d1ffe832d059f8681501da1d1b6e7d44d79a3e61929bc5229c1` bestaetigt und als dreizehntes Preset installiert. `security-governance` v0.6.2 bleibt Prioritaet 10; das neue Assurance-Preset v0.1.0 verwendet Prioritaet 15 und erzeugt ausschliesslich den portablen Evidence-Vertrag sowie Status-/Review-Oberflaechen. Umfang vor diesem Statistik-Selbstnachweis: `0` Produktionscode-Zeilen, `0` Testcode-Zeilen und `+3327 / -0 = 3327` Dokumentations-, Governance-, Validator- und Testzeilen netto. Konservative Referenz: `41.6` Arbeitstage, ca. `324.4` Stunden und `1.9` Monate; Thorsten-Solo-Referenz: `26.6` Arbeitstage, ca. `207.6` Stunden und `1.2` Monate. Gegen einen sichtbaren Aktivtag sind `41.6x` und `26.6x` blended repository speedup beziehungsweise Lieferdichte, keine Stoppuhrmessung. Validierung: exakte 13-Preset-Matrix unter Bash und PowerShell, `preset list/info/resolve`, `specify check`, Vertrags- und Shell-Paritaetstests, Read-only-Hashnachweis, LF/CRLF/BOM-Fixtures, temporaere Disable-/Enable-/Remove-/12er-/Reinstall-Komposition, Documentation Impact, JSON, Secret-Scan und `git diff --check`. Produktcode, Tests, API und Laufzeit bleiben unveraendert; die Installation startet keinen Spec-Kit-Lauf. *One visible session verified and installed the immutable v0.1.0 release as the thirteenth preset. The 3,327 net governance, validator, test, and documentation lines correspond to 41.6 conservative or 26.6 Thorsten-solo workdays; these are blended delivery-density comparisons, not stopwatch measurements. Product behavior remains unchanged and the two field-test runs start only after this installation is delivered.* |
 | 2026-09-05 | Assurance-Preset v0.1.1 korrigiert installiert / Corrected assurance preset v0.1.1 installed | Arbeitsfenster: eine sichtbare Sitzung am 2026-09-05 auf dem bestehenden Branch `codex/secure-development-assurance-pilot`. Arbeitspakete: hashgeprueftes unveraenderliches v0.1.1-Archiv, korrigierte Validatorpfade und rohe Snapshots, acht erzeugte Agentenflaechen, aktuelle Dokumentationsauswirkung und formale Bypass-Grenze. Umfang vor diesem Statistik-Selbstnachweis: `0` Produktcode- und `0` Produkttest-Zeilen; uebernommener Paketdelta und Dokumentation `+785 / -101 = 684` Nettozeilen, davon `343` Preset-Testzeilen, `17` Validatorzeilen und `324` Dokumentations-/Governance-/CI-Zeilen. Wiederverwendung, keine 684 neu entwickelten Produktzeilen. Konservative Referenz 80 Zeilen/Tag: `8.6` Arbeitstage, `66.7` Stunden; Thorsten-Solo 125: `5.5` Arbeitstage, `42.7` Stunden bei 7.8 Stunden/Tag. Gegen einen sichtbaren Aktivtag: `8.6x`/`5.5x` blended repository speedup, keine Stoppuhrmessung. Native Paket-CI auf drei Plattformen bestanden; lokale exakte 13er-Matrix, Maintenance-Regressionssuite (52 Tests, 3 bedingte Skips), Preset-Vertraege und Dokumentationsvalidator geprueft. Produkt-API, Laufzeit und DocFX bleiben unveraendert; kein Feature-Lauf gestartet. / Verified archive reuse and generated-surface correction; volume describes imported governance and evidence, not new product code. Native package gates pass; current TinyCalc delivery and the two substantive field tests remain separate. |
 | 2026-09-05 | Assurance-Preset v0.1.2 mit strikten Evidence-Grenzen installiert / Assurance preset v0.1.2 installed with strict evidence boundaries | Arbeitsfenster: dieselbe sichtbare Sitzung am 2026-09-05 auf Branch `codex/secure-development-assurance-pilot`. Arbeitspakete: unveraendertes veroeffentlichtes v0.1.2-Archiv mit SHA-256 `4eb30804bb3c329681e0b7d44187c8daeb3e9e4f250bb6003d5b746c0ad0b656`, strikte skalare und nichtleere `acceptedRisks[].id`, genau eine JSON-Wurzel, Bash-/PowerShell-Paritaet, unabhaengige Kandidatenpruefung sowie aktualisierte Feldtest-Evidence. Umfang vor diesem Statistik-Selbstnachweis: `0` Produktcode- und `0` Produkttest-Zeilen; uebernommener Preset- und Dokumentationsdelta `+225 / -26 = 199` Nettozeilen, davon `98` Preset-Testzeilen, `17` Validatorzeilen und `84` Dokumentations-/Governance-Zeilen. Wiederverwendung, keine 199 neu entwickelten Produktzeilen. Konservative Referenz 80 Zeilen/Tag: `2.5` Arbeitstage und ca. `19.4` Stunden; Thorsten-Solo 125: `1.6` Arbeitstage und ca. `12.4` Stunden bei 7.8 Stunden/Tag. Gegen einen sichtbaren Aktivtag: `2.5x`/`1.6x` blended repository speedup, keine Stoppuhrmessung. Paket- und Source-Merge wurden providerseitig geprueft; native CI auf Linux, macOS und Windows, exakte 13er-Matrix, vollstaendige Preset-Vertraege, alle acht installierten Oberflaechen, Documentation Impact, JSON, Secret-Scan und `git diff --check` bestanden. NIST SSDF und CWE Top 25 gelten; ASVS, Zero Trust und Produkt-AI-SBOM sind fuer diese lokale Governance-Installation begruendet `N/A`. Produkt-API, Laufzeit und DocFX bleiben unveraendert; kein Feature-Lauf gestartet. / The immutable v0.1.2 archive closes accepted-risk ID and multiple-JSON-root bypasses consistently in both shells. The 199 net imported governance, validator, test, and documentation lines correspond to 2.5 conservative or 1.6 Thorsten-solo days; this is blended delivery density, not stopwatch time. Product behavior is unchanged, and both substantive field-test features remain separate. |
+| 2026-09-05 | Feature 004 RL-SE-Selbstpruefung lokal abgeschlossen / Feature 004 RL-SE self-assessment completed locally | Arbeitsfenster: 2026-09-05 18:45 bis 20:50 Uhr (`Europe/Berlin`), ein sichtbarer Aktivtag. Arbeitspakete: vollstaendige 157-ID-Matrix, Baseline-3.2.0-Korrektur unter ausdruecklicher enger Autoritaet, beide Validatoren samt vollstaendiger JSON-Schema-Pruefung und robuster plattformuebergreifender Negativ-Fixture, vier Assurance-Gates, einmaliger unabhaengiger Review, DE-first/EN-second-Bericht, 42 Human-only- und 62 Follow-up-Grenzen, Dependency-/Produktregression, CI-, PR-, Documentation-Impact- und Evidence-Index. Umfang vor dem Statistik-Selbstnachweis: `0` Produktionscode-Zeilen, `0` Testcode-Zeilen und `+6769 / -9 = 6760` Dokumentations-, Governance-, Evidence- und Validator-Tooling-Zeilen netto. Konservative Referenz: `84.5` Arbeitstage, `659.1` Stunden und `3.9` Monate; Thorsten-Solo: `54.1` Arbeitstage, `421.8` Stunden und `2.5` Monate. Gegen einen sichtbaren Aktivtag sind `84.5x` und `54.1x` blended repository speedup, keine Stoppuhrmessung. Lokal bestanden: 157/157, Schema-Negativtest auch unter CI-Fehlersemantik, Assurance Ready, Review Ready, Build 0/0, 82/82 Tests, `SMOKE_OK`, 0 bekannte anfaellige Pakete sowie Dokumentations- und statische Gates. Die erste Provider-Runde war gruen; zwei spaet eingetroffene Review-Hinweise und der plattformabhaengige Harness-Fehler wurden behoben und verlangen eine neue Exact-Head-Runde. *The 6,760 net documentation, governance, evidence, and validator-tooling lines provide the complete local assessment without product or test-code changes. Manual comparisons are delivery-density estimates; the corrected exact head still requires provider convergence.* |
 
 ## Statistikprofil-1-Archiv / Statistics Profile 1 Archive
 Basis dieses Schlussblocks sind die aktuell dokumentierten Snapshot- und
@@ -640,29 +679,29 @@ Profil 2 verwendet Git-getrackte Textdateien und sichtbare Git-Aktivitaet. Die W
 
 | Kennzahl / Metric | Wert / Value |
 |---|---:|
-| Textbasis / Text base | 160741 lines |
-| Textdateien / Text files | 1126 |
+| Textbasis / Text base | 167501 lines |
+| Textdateien / Text files | 1149 |
 | Beobachtbarer Zeitraum / Observable period | 2025-09-07..2026-09-05 |
 | Aktivtage / Active days | 76 |
-| Relevante Commits / Relevant commits | 209 |
-| Zeilen je Aktivtag / Lines per active day | 2115.0 |
+| Relevante Commits / Relevant commits | 212 |
+| Zeilen je Aktivtag / Lines per active day | 2204.0 |
 | Peak-Tag im Fenster / Peak day in window | 2026-06-17 / 27058 |
 | Peak-Woche im Fenster / Peak week in window | 2026-07-19 / 33630 |
 | Laengste Serie / Longest streak | 8 days |
-| Speedup vs. 80 lines/day | 26.4x |
-| Speedup vs. 125 lines/day | 16.9x |
-| Methodik / Methodology | v2; source `c8f351bc96dc` |
+| Speedup vs. 80 lines/day | 27.5x |
+| Speedup vs. 125 lines/day | 17.6x |
+| Methodik / Methodology | v2; source `fb8f3e523aef` |
 
 ### Artefaktmix / Artifact Mix
 
 ```text
-Produktiv / Production          [#...................]   1.8% | 2830
-Tests                           [#...................]   4.1% | 6645
-Dokumentation / Documentation   [###############.....]  73.2% | 117729
-Skripte / Scripts               [###.................]  13.3% | 21452
-Konfiguration / Configuration   [#...................]   5.6% | 9073
+Produktiv / Production          [#...................]   1.7% | 2830
+Tests                           [#...................]   4.1% | 6937
+Dokumentation / Documentation   [###############.....]  73.7% | 123425
+Skripte / Scripts               [###.................]  13.1% | 21907
+Konfiguration / Configuration   [#...................]   5.6% | 9390
 Daten und Medien / Data and media [....................]   0.0% | 0
-Sonstiger Text / Other text     [#...................]   1.9% | 3012
+Sonstiger Text / Other text     [#...................]   1.8% | 3012
 ```
 
 Die Balken teilen die aktuelle getrackte Textbasis in stabile Kategorien. Prozent und Zeilenwert sind die genaue, textorientierte Aussage.
@@ -690,7 +729,7 @@ Di/Tu  0 0 0 3 0 0 0 0 3 0 0 3 0 0 0 0 2 0 3 4 4 0 0 0 0 4
 Mi/We  0 0 1 0 0 0 3 0 2 0 0 0 2 0 4 0 2 0 0 2 4 0 0 0 0 0
 Do/Th  0 0 0 0 0 0 0 4 0 0 0 1 0 4 1 0 0 0 1 4 0 0 4 0 0 3
 Fr/Fr  0 0 2 4 0 2 4 0 0 0 4 2 2 0 3 2 3 4 4 4 1 0 0 0 0 4
-Sa/Sa  0 0 2 0 0 0 0 0 0 0 0 0 0 0 4 0 4 4 0 4 2 0 2 0 3 3
+Sa/Sa  0 0 2 0 0 0 0 0 0 0 0 0 0 0 4 0 4 4 0 4 2 0 2 0 3 4
 ```
 
 DE: 0 = keine Aenderung; 1 = 1..79; 2 = 80..399; 3 = 400..1599; 4 = 1600+ geaenderte Textzeilen; - = noch nicht abgelaufen.
@@ -714,7 +753,7 @@ Wochen / Weeks 01..26 | 2025-09-07..2026-03-07
 Wochen / Weeks 27..52 | 2026-03-08..2026-09-05
    cap 50000 | . . . . . . . . . . . . . . . . . . . . . . . . . .
        41667 | . . . . . . . . . . . . . . . . . . . . . . . . . .
-       33333 | . . . . . . . . . . . . . . . . . . . # . . . . . .
+       33333 | . . . . . . . . . . . . . . . . . . . # . . . . . #
        25000 | . . . . . . . . . . . . . . # . . . . # . . . . . #
        16667 | . . . . . . . . . . . . . . # . . . . # # . . . . #
         8333 | . . . . . . # . # . . . . . # . . # . # # . # . . #
@@ -756,15 +795,15 @@ Die kumulative Kurve summiert nur das Brutto-Aenderungsvolumen im Fenster. Sie d
 ### Phasenvolumen / Phase Volume
 
 ```text
-Slots 0..12
-   cap 10000 | . . . . . . . . . . . . .
-        8333 | . . . . . . . # . . . . .
-        6667 | # . . . . . . # . . . . .
-        5000 | # . . . . . . # . . . . .
-        3333 | # # . . . . . # . . . . .
-        1667 | # # # . . . # # . . . . #
-           0 +---------------------------
-             00 01 02 03 04 05 06 07 08 09 10 11 12
+Slots 0..13
+   cap 10000 | . . . . . . . . . . . . . .
+        8333 | . . . . . . . # . . . . . .
+        6667 | # . . . . . . # . . . . . #
+        5000 | # . . . . . . # . . . . . #
+        3333 | # # . . . . . # . . . . . #
+        1667 | # # # . . . # # . . . . # #
+           0 +-----------------------------
+             00 01 02 03 04 05 06 07 08 09 10 11 12 13
 ```
 
 | Slot | Phase | Nettozeilen / Net lines |
@@ -782,6 +821,7 @@ Slots 0..12
 | 10 | Dialog-Default / Dialog default | 49 |
 | 11 | TUI-Fix-Lieferung / TUI fix delivery | 68 |
 | 12 | Assurance-Preset / Assurance preset | 3327 |
+| 13 | 004 RL-SE-Selbstpruefung / 004 RL-SE self-assessment | 6760 |
 
 Die festen Slots halten den Phasenvergleich auch bei fehlenden oder spaeter ergaenzten Werten stabil.
 
@@ -791,8 +831,8 @@ Die festen Slots halten den Phasenvergleich auch bei fehlenden oder spaeter erga
 
 ```text
 Scale: 0..50x
-80 lines/day       [###########.........] 26.4x
-125 lines/day      [#######.............] 16.9x
+80 lines/day       [###########.........] 27.5x
+125 lines/day      [#######.............] 17.6x
 ```
 
 Die Faktoren vergleichen sichtbare Lieferdichte mit den dokumentierten manuellen Referenzen. Sie messen keine Arbeitszeit.
@@ -805,7 +845,7 @@ Die Faktoren vergleichen sichtbare Lieferdichte mit den dokumentierten manuellen
 Scale: 0..5000 lines/day
 Experienced manual [#...................] 80
 Thorsten solo      [#...................] 125
-Visible repository [########............] 2115.0
+Visible repository [#########...........] 2204.0
 ```
 
 Die gemeinsame Skala vergleicht Referenzen und sichtbare Lieferdichte. Sie schreibt die Git-Aktivitaet keiner Person oder KI pauschal zu.
@@ -831,6 +871,6 @@ DE: Das Fenster beginnt am 2025-09-07 und endet am 2026-09-05. Es enthaelt 76 ak
 | 2026-06 | 37273 |
 | 2026-07 | 74876 |
 | 2026-08 | 26218 |
-| 2026-09 | 13444 |
+| 2026-09 | 20248 |
 
 <!-- project-statistics-v2:end -->

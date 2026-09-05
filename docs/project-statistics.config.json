@@ -107,6 +107,14 @@
       "labelEn": "Assurance preset",
       "netLines": 3327,
       "activeDays": 1
+    },
+    {
+      "slot": 13,
+      "id": "004-rlse",
+      "labelDe": "004 RL-SE-Selbstpruefung",
+      "labelEn": "004 RL-SE self-assessment",
+      "netLines": 6760,
+      "activeDays": 1
     }
   ],
   "excludedPaths": [

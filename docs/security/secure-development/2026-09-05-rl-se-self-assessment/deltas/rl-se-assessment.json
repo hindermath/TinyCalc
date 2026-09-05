@@ -1,0 +1,42 @@
+{
+  "schemaVersion": "1.0",
+  "documentType": "SecureDevelopmentGateEvidence",
+  "contextId": "tinycalc-rl-se-self-assessment",
+  "gate": "delta",
+  "mode": "development",
+  "runbookApplicability": "N/A",
+  "runbookRationale": "The feature quickstart and run evidence define the bounded documentation-only procedure.",
+  "createdAt": "2026-09-05T19:50:00+02:00",
+  "review": {
+    "owner": "TinyCalc project owner role",
+    "reviewer": "Independent technical security review role",
+    "reviewedAt": "2026-09-05T19:50:00+02:00",
+    "reviewDue": "2027-09-05",
+    "residualRisk": "Open and follow-up rows remain visible and require separately authorised work.",
+    "reevaluationTrigger": "Any assessment-row, evidence, source, product, dependency, workflow, or baseline change."
+  },
+  "assessments": [
+    {
+      "id": "DELTA-001",
+      "applicability": "Applicable",
+      "implementation": "Fulfilled",
+      "evidence": "docs/security/secure-development/2026-09-05-rl-se-self-assessment/assessment-matrix.json"
+    },
+    {
+      "id": "DELTA-002",
+      "applicability": "Applicable",
+      "implementation": "Fulfilled",
+      "evidence": "specs/004-rl-se-self-assessment/autonomous-run-evidence.md"
+    },
+    {
+      "id": "DELTA-003",
+      "applicability": "N/A",
+      "implementation": "Not Assessed",
+      "reason": "This self-assessment does not change TinyCalc product or test code and performs no automatic hardening.",
+      "reevaluationTrigger": "Any later product, test, dependency, public API, DocFX, or provider-configuration change.",
+      "evidence": "specs/004-rl-se-self-assessment/spec.md"
+    }
+  ],
+  "outcome": "Ready",
+  "externalComparisonBoundary": "HOSK/GWDG: ExternalComparison only; never local evidence"
+}

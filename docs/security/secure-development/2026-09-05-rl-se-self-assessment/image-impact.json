@@ -1,0 +1,47 @@
+{
+  "schemaVersion": "1.0",
+  "documentType": "SecureDevelopmentGateEvidence",
+  "contextId": "tinycalc-rl-se-self-assessment",
+  "gate": "image-impact",
+  "mode": "development",
+  "runbookApplicability": "N/A",
+  "runbookRationale": "No OCI image or deployment image is built by this documentation-only feature.",
+  "createdAt": "2026-09-05T19:50:00+02:00",
+  "review": {
+    "owner": "TinyCalc project owner role",
+    "reviewer": "Independent technical security review role",
+    "reviewedAt": "2026-09-05T19:50:00+02:00",
+    "reviewDue": "2027-09-05",
+    "residualRisk": "CI and script changes still require exact-head platform validation.",
+    "reevaluationTrigger": "Any container, image, toolchain, CI, network, mount, secret, or SBOM change."
+  },
+  "assessments": [
+    {
+      "id": "IMAGE-001",
+      "applicability": "Applicable",
+      "implementation": "Fulfilled",
+      "evidence": "scripts/validate-rl-se-assessment.ps1"
+    },
+    {
+      "id": "IMAGE-002",
+      "applicability": "N/A",
+      "implementation": "Not Assessed",
+      "reason": "The feature creates no OCI or deployment image and does not change product packages.",
+      "reevaluationTrigger": "Any Dockerfile, compose, OCI, deployment-image, package, or product-SBOM change.",
+      "evidence": "specs/004-rl-se-self-assessment/plan.md"
+    }
+  ],
+  "imageChecks": {
+    "build": "N/A",
+    "compose": "N/A",
+    "toolchain": "Fulfilled",
+    "ociDigest": "N/A",
+    "sbom": "N/A",
+    "secrets": "N/A",
+    "mounts": "N/A",
+    "network": "N/A",
+    "ci": "Fulfilled"
+  },
+  "outcome": "Ready",
+  "externalComparisonBoundary": "HOSK/GWDG: ExternalComparison only; never local evidence"
+}

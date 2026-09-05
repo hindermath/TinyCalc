@@ -4,7 +4,7 @@
 
 Repository: TinyCalc, Level 2
 
-Stand: 2026-08-30
+Stand: 2026-09-05
 
 Constitution: Principles XII–XVIII
 
@@ -36,6 +36,7 @@ Screenreadern und auf Braillezeilen verständlich.
 
 | Dokument | Status | Zweck |
 |---|---|---|
+| [RL-SE-Selbstpruefung](secure-development/2026-09-05-rl-se-self-assessment/evidence-matrix.md) | technisch Ready; menschliche Freigaben Open | 157-Punkte-Matrix, Familien-Summen, Entscheidungsgrenzen und Folgearbeit |
 | [S-ADR-Index](adr/README.md) | aktuell | Index der Security Architecture Decision Records |
 | [GSDB-Selbsteinschätzung](gsdb-self-assessment.md) | bestehender Preflight | sichere Entwicklungsrichtlinie und Preset-Voraussetzungen |
 | [Feature-Architektur](../architecture/terminalgui-migration.md) | abgeschlossen | Kontext-, Baustein-, Laufzeit-, Deployment-, Qualitäts- und Risikosichten |
@@ -63,6 +64,10 @@ arc42 Section 8, dependency audit, measurable security scenarios, ASVS and
 Zero Trust applicability decisions, supply-chain evidence, SAMM review, the
 focused security ADR, and the SPDX SBOM. Each document is German first and
 English second, with text-first diagrams and linear alternatives.
+
+The supplementary table links the RL-SE self-assessment with all 157 checklist
+items, family totals, decision boundaries, and separately authorized follow-up
+work. Its technical status is Ready; human approvals remain Open.
 
 Any new trust boundary, input or I/O surface, application instance, package,
 source, advisory, license, product/workflow change, or commit invalidates the
