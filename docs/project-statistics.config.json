@@ -115,13 +115,23 @@
       "labelEn": "004 RL-SE self-assessment",
       "netLines": 6760,
       "activeDays": 1
+    },
+    {
+      "slot": 14,
+      "id": "004x",
+      "labelDe": "004 RL-SE-Closeout",
+      "labelEn": "004 RL-SE closeout",
+      "netLines": 1265,
+      "activeDays": 1
     }
   ],
   "excludedPaths": [
     "Directory.Build.props",
     "Lastenheft_Abarbeitungsreihenfolge.md",
+    "docs/documentation-impact/rl-se-self-assessment.json",
     "docs/project-statistics.config.json",
     "requirements/intakes/active/*Lastenheft_TerminalGui_Migration*",
+    "requirements/intakes/active/*Lastenheft_RL-SE-Checklist-Selbstpruefung*",
     "requirements/intakes/series/tinycalc-delivery/intake-review-request.json",
     "requirements/intakes/series/tinycalc-delivery/intake-review-result.json",
     "requirements/intakes/series/tinycalc-delivery/manifest.json",
@@ -129,13 +139,23 @@
     "requirements/intakes/series/tinycalc-delivery/order.md",
     "requirements/intakes/series/tinycalc-delivery/receipt.json",
     "requirements/intakes/series-archive/tinycalc-delivery/20260830T145602Z/*",
+    "requirements/intakes/series-archive/tinycalc-delivery/20260905T185700Z/*",
+    "requirements/intakes/series-archive/tinycalc-delivery/20260905T185700Z-review/*",
     "scripts/render-requirements-intake-governance.mjs",
     "scripts/validate-requirements-intake-alignment.mjs",
     "specs/intake-authoring-receipts/terminalgui-migration.json",
+    "specs/intake-authoring-receipts/rename-microcalc-tinycalc.json",
+    "specs/intake-authoring-receipts/rl-se-checklist-selbstpruefung.json",
     "specs/003-terminalgui-migration/autonomous-run-evidence.md",
     "specs/003-terminalgui-migration/tasks.md",
     "specs/003-terminalgui-migration/evidence/delivery.md",
-    "specs/003-terminalgui-migration/evidence/platform-ci.md"
+    "specs/003-terminalgui-migration/evidence/platform-ci.md",
+    "specs/004-rl-se-self-assessment/autonomous-run-evidence.md",
+    "specs/004-rl-se-self-assessment/tasks.md",
+    "specs/004-rl-se-self-assessment/evidence/accepted-premerge.json",
+    "specs/004-rl-se-self-assessment/evidence/delivery.md",
+    "specs/004-rl-se-self-assessment/evidence/evidence-index.md",
+    "specs/004-rl-se-self-assessment/evidence/postmerge.json"
   ],
   "categoryOverrides": []
 }

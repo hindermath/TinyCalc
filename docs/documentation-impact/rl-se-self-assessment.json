@@ -14,6 +14,8 @@
         "docs/security/secure-development/2026-09-05-rl-se-self-assessment/closure.json",
         "docs/security/secure-development/2026-09-05-rl-se-self-assessment/image-impact.json",
         "docs/security/secure-development/2026-09-05-rl-se-self-assessment/evidence-matrix.md",
+        "specs/004-rl-se-self-assessment/evidence/evidence-index.md",
+        "specs/004-rl-se-self-assessment/evidence/delivery.md",
         "docs/security/README.md"
       ],
       "owner": "Repository Maintainer",
@@ -26,10 +28,11 @@
         "Security documentation index",
         "RL-SE self-assessment summary",
         "Family summary and decision boundaries",
-        "Machine-readable row evidence and follow-up"
+        "Machine-readable row evidence and follow-up",
+        "Causal feature and closeout delivery evidence"
       ],
       "canonicalSource": "docs/security/secure-development/2026-09-05-rl-se-self-assessment/assessment-matrix.json",
-      "navigationImpact": "DE: Der bestehende Sicherheitsindex erhaelt genau einen relativen Link; DocFX-Navigation und API-Navigation bleiben unveraendert. EN: The existing security index gains exactly one relative link; DocFX and API navigation remain unchanged.",
+      "navigationImpact": "DE: Der bestehende Sicherheitsindex erhaelt genau einen relativen Link. Feature-lokaler Evidence-Index und Liefernachweis bilden den kausalen Closeout-Lesepfad; DocFX-Navigation und API-Navigation bleiben unveraendert. EN: The existing security index gains exactly one relative link. The feature-local evidence index and delivery record form the causal closeout reader path; DocFX and API navigation remain unchanged.",
       "documentClass": "ActiveSemantic",
       "languageStrategy": "DE: Lesertext ist Deutsch zuerst und Englisch danach; strukturierte Statuswerte bleiben sprachneutrale Vertragswerte. EN: Reader text is German first and English second; structured status values remain language-neutral contract values.",
       "languagePartners": [],
@@ -69,6 +72,39 @@
       "risk": "DE: Niedrig; Agentenparitaet wird nicht beruehrt. EN: Low; agent parity is unaffected.",
       "criticality": "Normal",
       "reevaluationTrigger": "DE: Eine Aenderung gemeinsamer Agentenregeln, generierter Skill-Oberflaechen oder der Preset-Aufloesung. EN: Any change to shared agent rules, generated skill surfaces, or preset resolution."
+    },
+    {
+      "changeId": "CHG028",
+      "scope": "Deterministic requirements-governance closeout and stale-review supersession",
+      "decision": "UpdateRequired",
+      "rationale": "DE: Der branchgestempelte RL-SE-Pfad und die fortgeschriebenen Lifecycle-Zustaende muessen auch aus dem deterministischen Governance-Renderer entstehen. Der zuvor gueltige Serienreview wird wegen dieser Manifestmutation unveraendert archiviert und nicht als aktueller Review ausgegeben. EN: The branch-stamped RL-SE path and updated lifecycle states must also be produced by the deterministic governance renderer. The previously valid series review is archived unchanged because the manifest changed and is not presented as a current review.",
+      "documents": [
+        "scripts/render-requirements-intake-governance.mjs",
+        "specs/intake-authoring-receipts/rl-se-checklist-selbstpruefung.json",
+        "requirements/intakes/series-archive/tinycalc-delivery/20260905T185700Z-review/superseded-review.json"
+      ],
+      "owner": "Repository Maintainer",
+      "audiences": [
+        "Maintainers and AI agents",
+        "Intake and delivery reviewers"
+      ],
+      "readerPaths": [
+        "Requirements intake governance renderer",
+        "Branch-stamped RL-SE authoring receipt",
+        "Superseded series-review evidence"
+      ],
+      "canonicalSource": "requirements/intakes/series/tinycalc-delivery/manifest.json",
+      "navigationImpact": "DE: Keine neue Benutzer- oder DocFX-Navigation. Die aktive Review-Dreiergruppe ist nach der Manifestmutation bewusst abwesend; ihr byteidentisches Archiv und der Supersession-Nachweis bleiben auffindbar. EN: No new user or DocFX navigation. The active three-file review set is intentionally absent after the manifest mutation; its byte-identical archive and supersession evidence remain discoverable.",
+      "documentClass": "OperationalReference",
+      "languageStrategy": "DE: Begruendung und Proof-Grenze sind Deutsch-zuerst/Englisch-danach dokumentiert; maschinenlesbare IDs und Statuswerte bleiben sprachneutral. EN: Rationale and proof boundary are documented German-first/English-second; machine-readable IDs and status values remain language-neutral.",
+      "languagePartners": [],
+      "platformAndExampleProof": "DE: PowerShell- und Bash-Alignment laufen gegen denselben Node-Renderer auf Linux, macOS und Windows. EN: PowerShell and Bash alignment use the same Node renderer on Linux, macOS, and Windows.",
+      "distributionClass": "sourceOnly",
+      "homeSyncRequired": false,
+      "evidence": "requirements/intakes/series-archive/tinycalc-delivery/20260905T185700Z-review/superseded-review.json",
+      "risk": "DE: Niedrig; die Korrektur macht den bereits genehmigten Serienstand reproduzierbar und verhindert, dass ein Review des Vorgaengermanifests als aktuell erscheint. EN: Low; the correction makes the already approved series state reproducible and prevents a review of the predecessor manifest from appearing current.",
+      "criticality": "Security",
+      "reevaluationTrigger": "DE: Jede weitere Intake-, Lifecycle-, Serien-, Review- oder Renderer-Aenderung. EN: Any further intake, lifecycle, series, review, or renderer change."
     }
   ]
 }

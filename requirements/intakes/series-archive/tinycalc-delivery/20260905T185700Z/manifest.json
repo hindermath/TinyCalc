@@ -22,7 +22,7 @@
       "path": "requirements/intakes/active/Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md",
       "role": "OrderedMember",
       "normalizedSha256": "f7b72c2abbd55d197cbc3cee5050f189868656ae0cff8b8745fa430535632d40",
-      "status": "Pending"
+      "status": "Eligible"
     },
     {
       "path": "requirements/intakes/active/Lastenheft_A11Y_TUI.md",
@@ -73,22 +73,22 @@
       "status": "Pending"
     },
     {
-      "path": "requirements/intakes/active/Lastenheft_RL-SE-Checklist-Selbstpruefung.004-rl-se-self-assessment.md",
+      "path": "requirements/intakes/active/Lastenheft_RL-SE-Checklist-Selbstpruefung.md",
       "role": "OrderedMember",
-      "normalizedSha256": "96a5ef9c414d55c69ad117509d41f056f10d005824890bd5a2867eaf8ab948da",
-      "status": "Completed"
+      "normalizedSha256": "a0b1b4d778848e6a96304eb3bdea3c62c46e73f732c901c5b81fd893421fbaeb",
+      "status": "Pending"
     },
     {
       "path": "requirements/intakes/active/Lastenheft_GSDB-Spec-Kit-Intensivpruefung.md",
       "role": "OrderedMember",
       "normalizedSha256": "efd35926e427cc80bdcb098aebc25ad506e2a6e4aadb73627a2317854d0b1aa7",
-      "status": "Eligible"
+      "status": "Pending"
     }
   ],
   "roots": [
     "requirements/intakes/active/Lastenheft_Constitution_Change.002-constitution-change.md",
     "requirements/intakes/active/Lastenheft_Sandbox-gestuetzte-Secure-Development-Haertung.md",
-    "requirements/intakes/active/Lastenheft_RL-SE-Checklist-Selbstpruefung.004-rl-se-self-assessment.md",
+    "requirements/intakes/active/Lastenheft_RL-SE-Checklist-Selbstpruefung.md",
     "requirements/intakes/active/Lastenheft_GSDB-Spec-Kit-Intensivpruefung.md"
   ],
   "dependencies": [

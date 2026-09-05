@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "documentType": "SupersededIntakeReviewEvidence",
+  "seriesId": "5b4523b4-d946-4091-9cbc-11825af94332",
+  "supersededReviewId": "05b0ee98-6bd1-420c-a4bc-3ae15e59f1c4",
+  "supersededStatus": "Ready",
+  "supersededReviewedAt": "2026-09-04T06:32:13Z",
+  "supersededTargetCount": 13,
+  "supersededAt": "2026-09-05T18:58:08Z",
+  "supersedingOperationId": "e8b26612-01d1-4dfb-94b3-f9f9b5231ec3",
+  "successorReviewId": "N/A",
+  "sourceRevision": "0be9fdb5931a1c62b90156f0fe694f7871b3962a",
+  "artifacts": [
+    {
+      "path": "requirements/intakes/series-archive/tinycalc-delivery/20260905T185700Z-review/intake-review-request.json",
+      "normalizedSha256": "8974a95ff2d9cf3823e12521f3142f90ba4c1fa278230c74132cf90ec1c99158"
+    },
+    {
+      "path": "requirements/intakes/series-archive/tinycalc-delivery/20260905T185700Z-review/intake-review-result.json",
+      "normalizedSha256": "f16ce40dcc146fc4396a64a5cefd9fe80ac9a889e797390f1ce362b5f22de76e"
+    },
+    {
+      "path": "requirements/intakes/series-archive/tinycalc-delivery/20260905T185700Z-review/intake-review-report.md",
+      "normalizedSha256": "f3c7cbcaedc6445c3967fd4241c9d62a3a40c0e112ab1f43e51206ca62d8c799"
+    }
+  ],
+  "proofBoundary": "The prior Ready review is archived and invalidated because the RL-SE path and lifecycle state, the GSDB eligibility state, and the bound series manifest changed. A successor review is intentionally not fabricated during the Feature 004 closeout. This evidence grants no GSDB start or additional delivery authority.",
+  "nextAction": "$speckit-intake-review requirements/intakes/series/tinycalc-delivery/manifest.json"
+}

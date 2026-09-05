@@ -1,24 +1,24 @@
 {
   "schemaVersion": "1.0",
   "documentType": "IntakeSeriesOperation",
-  "operationId": "454804f5-315e-4ee6-893a-3ea7c0cdb21e",
+  "operationId": "e8b26612-01d1-4dfb-94b3-f9f9b5231ec3",
   "seriesId": "5b4523b4-d946-4091-9cbc-11825af94332",
   "type": "Update",
   "status": "Published",
-  "authorityEvidence": "The user explicitly approved and requested implementation of the PL0 delivery-evidence refresh plan. No commit, push, pull request, merge, bypass, package change, product implementation, or downstream review authority is granted.",
-  "proposalNormalizedSha256": "b665aeae32117eaaf66a4dd1577631023d0e5cdc37d76e131f842e9a369b6136",
+  "authorityEvidence": "Thorsten explicitly approved the Feature 004 plan and DeliveryMode MergeAndSync with formal-only Admin-Bypass. The causal closeout is limited to the branch-qualified RL-SE Lastenheft rename, one tinycalc-delivery series update, lifecycle evidence, and one evidence-only closeout pull request. GSDB is made eligible but is not started.",
+  "proposalNormalizedSha256": "24552c219bd516067da0c2fe6f6be39a935aac8f3e38f7237db9b505d68ad99b",
   "preparedPaths": [
     "requirements/intakes/series/tinycalc-delivery/manifest.json",
     "requirements/intakes/series/tinycalc-delivery/receipt.json",
     "requirements/intakes/series/tinycalc-delivery/operation.json",
     "requirements/intakes/series/tinycalc-delivery/order.md",
     "Lastenheft_Abarbeitungsreihenfolge.md",
-    "requirements/intakes/series-archive/tinycalc-delivery/20260903T161641Z/manifest.json",
-    "requirements/intakes/series-archive/tinycalc-delivery/20260903T161641Z/receipt.json",
-    "requirements/intakes/series-archive/tinycalc-delivery/20260903T161641Z-review/intake-review-request.json",
-    "requirements/intakes/series-archive/tinycalc-delivery/20260903T161641Z-review/intake-review-result.json",
-    "requirements/intakes/series-archive/tinycalc-delivery/20260903T161641Z-review/intake-review-report.md",
-    "requirements/intakes/series-archive/tinycalc-delivery/20260903T161641Z-review/superseded-review.json"
+    "requirements/intakes/series-archive/tinycalc-delivery/20260905T185700Z/manifest.json",
+    "requirements/intakes/series-archive/tinycalc-delivery/20260905T185700Z/receipt.json",
+    "requirements/intakes/series-archive/tinycalc-delivery/20260905T185700Z-review/intake-review-request.json",
+    "requirements/intakes/series-archive/tinycalc-delivery/20260905T185700Z-review/intake-review-result.json",
+    "requirements/intakes/series-archive/tinycalc-delivery/20260905T185700Z-review/intake-review-report.md",
+    "requirements/intakes/series-archive/tinycalc-delivery/20260905T185700Z-review/superseded-review.json"
   ],
   "validation": {
     "bash": "Pass",
@@ -32,12 +32,12 @@
       "requirements/intakes/series/tinycalc-delivery/operation.json",
       "requirements/intakes/series/tinycalc-delivery/order.md",
       "Lastenheft_Abarbeitungsreihenfolge.md",
-      "requirements/intakes/series-archive/tinycalc-delivery/20260903T161641Z/manifest.json",
-      "requirements/intakes/series-archive/tinycalc-delivery/20260903T161641Z/receipt.json",
-      "requirements/intakes/series-archive/tinycalc-delivery/20260903T161641Z-review/intake-review-request.json",
-      "requirements/intakes/series-archive/tinycalc-delivery/20260903T161641Z-review/intake-review-result.json",
-      "requirements/intakes/series-archive/tinycalc-delivery/20260903T161641Z-review/intake-review-report.md",
-      "requirements/intakes/series-archive/tinycalc-delivery/20260903T161641Z-review/superseded-review.json"
+      "requirements/intakes/series-archive/tinycalc-delivery/20260905T185700Z/manifest.json",
+      "requirements/intakes/series-archive/tinycalc-delivery/20260905T185700Z/receipt.json",
+      "requirements/intakes/series-archive/tinycalc-delivery/20260905T185700Z-review/intake-review-request.json",
+      "requirements/intakes/series-archive/tinycalc-delivery/20260905T185700Z-review/intake-review-result.json",
+      "requirements/intakes/series-archive/tinycalc-delivery/20260905T185700Z-review/intake-review-report.md",
+      "requirements/intakes/series-archive/tinycalc-delivery/20260905T185700Z-review/superseded-review.json"
     ]
   }
 }

@@ -16,23 +16,23 @@ const json = (value) => `${JSON.stringify(value, null, 2)}\n`;
 const config = readJson("requirements/intake-governance-config.json");
 const seriesRoot = "requirements/intakes/series/tinycalc-delivery";
 const seriesId = "5b4523b4-d946-4091-9cbc-11825af94332";
-const seriesReceiptId = "10fd0b17-0740-486d-b4f4-7c05caa901e1";
-const seriesOperationId = "454804f5-315e-4ee6-893a-3ea7c0cdb21e";
+const seriesReceiptId = "81b13f03-e73b-4ebf-a8fe-88aa0795ca8d";
+const seriesOperationId = "e8b26612-01d1-4dfb-94b3-f9f9b5231ec3";
 const reviewId = "c00e3d93-58fe-4d36-b1a4-94090cca1137";
 const createdAt = "2026-07-26T21:00:00Z";
-const seriesUpdatedAt = "2026-09-03T16:16:41Z";
+const seriesUpdatedAt = "2026-09-05T18:58:08Z";
 const reviewedAt = "2026-09-01T07:48:26Z";
 const reviewHead = "4f1b612f54690e49ba3cb02269d469ec2b309f2c";
-const seriesArchiveRoot = "requirements/intakes/series-archive/tinycalc-delivery/20260903T161641Z";
-const reviewArchiveRoot = "requirements/intakes/series-archive/tinycalc-delivery/20260903T161641Z-review";
-const seriesAuthorityEvidence = "The user explicitly approved and requested implementation of the PL0 delivery-evidence refresh plan. No commit, push, pull request, merge, bypass, package change, product implementation, or downstream review authority is granted.";
+const seriesArchiveRoot = "requirements/intakes/series-archive/tinycalc-delivery/20260905T185700Z";
+const reviewArchiveRoot = "requirements/intakes/series-archive/tinycalc-delivery/20260905T185700Z-review";
+const seriesAuthorityEvidence = "Thorsten explicitly approved the Feature 004 plan and DeliveryMode MergeAndSync with formal-only Admin-Bypass. The causal closeout is limited to the branch-qualified RL-SE Lastenheft rename, one tinycalc-delivery series update, lifecycle evidence, and one evidence-only closeout pull request. GSDB is made eligible but is not started.";
 
 // Der optionale Vorgängername hält die historische Quelle stabil, wenn der aktive Intake nach der Lieferung branchgestempelt wird.
 // The optional predecessor name keeps the historical source stable when delivery adds the branch stamp to the active intake.
 const members = [
   ["constitution-change", "Lastenheft_Constitution_Change.002-constitution-change.md", "Completed", "b00956e5-e42b-48c4-b63d-ee748cad27f3", "4936d97b-6206-433e-b76c-a570c1842695"],
   ["terminalgui-migration", "Lastenheft_TerminalGui_Migration.003-terminalgui-migration.md", "Completed", "098464e1-cbf6-4812-8b42-c88a55d3c192", "9d791f78-d8ad-4076-aab6-acd550bcc331", "Lastenheft_TerminalGui_Migration.md"],
-  ["tui-funktionsabnahme-und-regressionsvertrag", "Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md", "Eligible", "fa3e818c-350d-497c-8216-31230ae57c67", "d4d23f7a-37a6-435c-be84-e6397fa37c48"],
+  ["tui-funktionsabnahme-und-regressionsvertrag", "Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md", "Pending", "fa3e818c-350d-497c-8216-31230ae57c67", "d4d23f7a-37a6-435c-be84-e6397fa37c48"],
   ["a11y-tui", "Lastenheft_A11Y_TUI.md", "Blocked", "d8b0496b-b2f4-4c34-bece-bd08bc420604", "e7b56721-0a8a-4a3c-870d-7dbe36039a04"],
   ["rename-microcalc-tinycalc", "Lastenheft_Rename_MicroCalc_TinyCalc.md", "Blocked", "cbb11a6e-0b5c-4b47-a49c-37648ba16cb6", "85e5cd04-bf99-47b1-bad9-04a6469873dc"],
   ["didactic-inline-code-comment-hardening", "Lastenheft_Didactic-Inline-Code-Comment-Hardening.md", "Blocked", "fb3cd161-2086-4cb0-8a8e-a72d1db26500", "a6780a05-df3a-401a-ad1f-796cd3656f1a"],
@@ -41,8 +41,8 @@ const members = [
   ["legacy-kompatibilitaet-v1", "Lastenheft_Legacy-Kompatibilitaet_V1.md", "Blocked", "dc355aa6-c523-414c-a472-542967ba62ed", "97c7ee77-1286-4642-92fc-c64982ac18a5"],
   ["formelkopie-und-tabellenoperationen-v1", "Lastenheft_Formelkopie-und-Tabellenoperationen_V1.md", "Blocked", "8d8ca7c4-b610-4aab-9f6c-b9a738961a87", "32428ec7-e89a-4ceb-aa70-8749e49f6595"],
   ["sandbox-gestuetzte-secure-development-haertung", "Lastenheft_Sandbox-gestuetzte-Secure-Development-Haertung.md", "Pending", "dcbee93b-bb9f-49f5-b363-fbe082f7dc1e", "aeb455e1-e871-475f-9c6e-29f8b201c9fd"],
-  ["rl-se-checklist-selbstpruefung", "Lastenheft_RL-SE-Checklist-Selbstpruefung.md", "Pending", "2093b09a-e0bf-4b03-9df9-b81594d23d2d", "999ece6f-b454-4150-afeb-ce544b76c29d"],
-  ["gsdb-spec-kit-intensivpruefung", "Lastenheft_GSDB-Spec-Kit-Intensivpruefung.md", "Pending", "704cea09-a869-49a5-baf9-70f24aa8d67b", "9352f182-123b-43b1-8959-aea8e8da9612"],
+  ["rl-se-checklist-selbstpruefung", "Lastenheft_RL-SE-Checklist-Selbstpruefung.004-rl-se-self-assessment.md", "Completed", "2093b09a-e0bf-4b03-9df9-b81594d23d2d", "999ece6f-b454-4150-afeb-ce544b76c29d", "Lastenheft_RL-SE-Checklist-Selbstpruefung.md"],
+  ["gsdb-spec-kit-intensivpruefung", "Lastenheft_GSDB-Spec-Kit-Intensivpruefung.md", "Eligible", "704cea09-a869-49a5-baf9-70f24aa8d67b", "9352f182-123b-43b1-8959-aea8e8da9612"],
 ].map(([slug, fileName, status, receiptId, operationId, priorFileName], index) => ({
   slug,
   fileName,
@@ -225,9 +225,9 @@ const seriesReceipt = {
   manifest: {path: manifestPath, normalizedSha256: manifestHash},
   supersedes: {
     receiptPath: `${seriesArchiveRoot}/receipt.json`,
-    receiptNormalizedSha256: "27243ebc531d363cdafe0555bfa715a610769344cd48a9cfb96f35ca5c6b43b2",
+    receiptNormalizedSha256: "d19e2b4835d47afa6f9e1235da07e7a8f609b31370f80152a400777ed160f98c",
     manifestArchivePath: `${seriesArchiveRoot}/manifest.json`,
-    manifestArchiveSha256: "fb9fa46d7f7fa411c4795931b9462c569a5c21e8cdf7e21a7b023d5e68e028c1",
+    manifestArchiveSha256: "b665aeae32117eaaf66a4dd1577631023d0e5cdc37d76e131f842e9a369b6136",
   },
   tombstone: {path: "N/A", normalizedSha256: "N/A"},
   nextAction: "$speckit-intake-series-status",
@@ -421,7 +421,7 @@ const rootOrderPath = "Lastenheft_Abarbeitungsreihenfolge.md";
 const orderDependencies = [
   "keine",
   "Constitution abgeschlossen",
-  "Terminal.Gui-Migration abgeschlossen",
+  "Terminal.Gui-Migration abgeschlossen; Feldtest ausstehend",
   "vollständige Funktionsabnahme",
   "A11Y-Abnahme",
   "Rename",

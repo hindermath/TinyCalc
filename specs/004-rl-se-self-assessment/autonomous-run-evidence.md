@@ -213,9 +213,10 @@ hardening and does not invent a human approval, certification, legal opinion,
 or audit confirmation. Identified gaps are recorded as open or deferred
 follow-up work.
 
-## Aktueller Bewertungsabschluss / Current Assessment Completion
+## Zwischenstand vor Provider-Lieferung / Interim State Before Provider Delivery
 
-**DE:** Die lokale fachliche Bewertung ist abgeschlossen: 157/157 IDs sind
+**DE:** An diesem damaligen Checkpoint war die lokale fachliche Bewertung
+abgeschlossen: 157/157 IDs sind
 validiert, alle vier Assurance-Gates und der einmalige unabhaengige Review sind
 `Ready`, und die Folgearbeit ist ohne automatische Haertung dokumentiert. Noch
 nicht als erfolgreich behauptet werden Dependency-/Regressionspruefung,
@@ -223,7 +224,8 @@ Release-Build, Tests, Smoke, Linux-/Windows-CI, Provider-Reviews, Exact-Head-
 PreMerge, beide Merges, PostMerge und lokaler Fast-Forward-Sync. Diese Schritte
 bleiben die naechsten materiellen Delivery-Gates.
 
-**EN:** The local domain assessment is complete: all 157 IDs are validated,
+**EN:** At that earlier checkpoint, the local domain assessment was complete:
+all 157 IDs were validated,
 all four assurance gates and the single independent review are `Ready`, and
 follow-up work is documented without automatic hardening. Dependency and
 regression checks, Release build, tests, smoke, Linux/Windows CI, provider
@@ -321,3 +323,112 @@ a fixture with an extra root property is blocked with exit code 2 and
 manifest without a stale version. This change invalidated the earlier
 PreMerge snapshot; it will be replaced only after review converges on the new
 exact head.
+
+## Finaler Feature-Merge / Final Feature Merge
+
+**DE:** Die Folgekorrektur wurde bis zum exakten Head
+`ebda8ad45d455f9a2a7d82daa73a86be0fecde50` fortgefuehrt. CI-Lauf
+`33985257787` bestand die Linux- und Windows-Produktjobs, beide Matrix-
+Einstiege, die robuste Schema-Negativ-Fixture sowie die statischen und Secret-
+Gates. Der unabhaengige Claude-Review-Lauf `33985257791`, Job
+`101357470647`, war auf demselben Head fachlich erfolgreich. Danach bestanden
+null aktive Review-Threads und null `Changes Requested`.
+
+Das akzeptierte Schema-2.0-PreMerge enthaelt genau eine `Primary`-Zeile fuer
+jedes der 20 RLSE-Gates und hat den normalisierten Hash
+`bacb87d1a195b6a3b45c94084aaccf3cb7e8f6de164f68dc39b32f1750f987c5`.
+Unmittelbar vor dem Merge blieb ausschliesslich die formale Code-Owner-Regel
+des Rulesets `13146993` offen. Der genehmigte Admin-Bypass ersetzte nur diese
+formale Freigabe; kein technisches, Security-, A11Y-, Governance-, Evidence-
+oder Review-Gate wurde umgangen.
+
+PR #68 wurde am `2026-09-05T18:54:52Z` mit Subject
+`docs: assess RL-SE checklist compliance` gemergt. Der echte Provider-Merge
+`aa647ec39ff7b1013f19a551d9d34ca919069474` besitzt genau zwei Eltern und
+genau einmal den Trailer
+`Co-authored-by: Copilot <223556219+Copilot@users.noreply.github.com>`.
+Lokales `main`, `origin/main` und Provider-Merge waren nach ausschliesslichem
+Fast-Forward-Sync identisch.
+
+**EN:** The follow-up correction converged on exact head
+`ebda8ad45d455f9a2a7d82daa73a86be0fecde50`. CI run `33985257787` passed
+Linux and Windows product jobs, both matrix entry points, the robust negative
+schema fixture, and static and secret gates. Independent Claude review run
+`33985257791`, job `101357470647`, completed successfully on the same head,
+with zero active review threads and zero `Changes Requested` afterwards.
+
+The accepted schema-2.0 PreMerge contains exactly one `Primary` row for each
+of the 20 RLSE gates and has normalized hash
+`bacb87d1a195b6a3b45c94084aaccf3cb7e8f6de164f68dc39b32f1750f987c5`.
+Only formal code-owner ruleset `13146993` remained before merge. The approved
+admin bypass replaced that formal approval only; no material gate was
+bypassed. PR #68 merged at `2026-09-05T18:54:52Z`. Actual provider merge
+`aa647ec39ff7b1013f19a551d9d34ca919069474` has exactly two parents, the
+required subject, and exactly one Copilot co-author trailer. Local `main`,
+`origin/main`, and the provider merge matched after fast-forward-only sync.
+
+## PostMerge und Intake-Serie / PostMerge and Intake Series
+
+**DE:** Der kausal nach dem Sync erzeugte Schema-2.0-PostMerge-Snapshot
+`2921590b-4c8a-41c0-9f54-ee5089e86fbd` bindet den akzeptierten PreMerge-Hash,
+den finalen Head und den echten Merge-Commit. `changedPaths` ist leer,
+`mergeAuthorized` ist wahr und der normalisierte PostMerge-Hash lautet
+`e18386d3b60faba07a1a320be0ea832b498278d5eb03ff29336f641af3834ca8`.
+
+Auf dem einzigen Closeout-Branch benannte das vorhandene macOS-/Linux-Bash-
+Skript nur den RL-SE-Intake nach
+`Lastenheft_RL-SE-Checklist-Selbstpruefung.004-rl-se-self-assessment.md` um.
+Die genau einmal fortgeschriebene Serie behaelt 13 Ziele, vier Wurzeln, neun
+Hard Gates und ihre Reihenfolge. RL-SE ist `Completed`; GSDB ist der einzige
+deklarierte `Eligible`-Kandidat, wurde aber nicht gestartet. Der TUI-
+Funktionsfeldtest bleibt bis zur menschlichen Feldabnahme `Pending`, ebenso die
+Sandbox-Haertung; sieben lineare Nachfolger bleiben `Blocked`.
+
+Manifest und Receipt des Vorgaengers liegen byteidentisch im Zeitstempelarchiv
+`requirements/intakes/series-archive/tinycalc-delivery/20260905T185700Z/`.
+Der fuer das Vorgaengermanifest gueltige Review
+`05b0ee98-6bd1-420c-a4bc-3ae15e59f1c4` liegt ebenfalls byteidentisch im
+zugehoerigen `-review`-Archiv und ist dort ausdruecklich supersediert. Weil die
+Serie mutiert wurde, ist die aktive Review-Dreiergruppe bewusst abwesend; dieser
+Closeout startet keinen neuen Intake-Review.
+Operation `e8b26612-01d1-4dfb-94b3-f9f9b5231ec3` ist `Published`, Receipt
+`81b13f03-e73b-4ebf-a8fe-88aa0795ca8d` ist `Ready`, und das aktuelle Manifest
+hat den normalisierten Hash
+`24552c219bd516067da0c2fe6f6be39a935aac8f3e38f7237db9b505d68ad99b`.
+PowerShell und Bash bestaetigten Requirements-Governance, Manifest und Receipt;
+beide Order-Ansichten enthalten alle 13 Pfade genau einmal. Der anschliessende
+`speckit-intake-series-status`-Nachweis war strikt read-only.
+
+**EN:** The causal schema-2.0 PostMerge snapshot binds the accepted PreMerge
+hash, final head, and actual merge commit. Its `changedPaths` list is empty,
+`mergeAuthorized` is true, and its normalized hash is shown above. The existing
+macOS/Linux Bash script renamed only the RL-SE intake with the Feature 004
+branch stamp. The single authorised series update preserves 13 targets, four
+roots, nine hard gates, and order. RL-SE is `Completed`; GSDB is the sole
+declared `Eligible` candidate but was not started. The TUI functional field
+test and sandbox hardening remain `Pending`, and seven linear successors remain
+`Blocked`. Archived predecessor evidence is byte-identical. PowerShell and
+Bash validated governance, manifest, receipt, and complete order views. The
+review that was valid for the predecessor manifest is archived byte-identically
+and marked superseded; no successor intake review is started by this closeout.
+The subsequent series-status proof was strictly read-only.
+
+## Terminale getrackte Grenze / Terminal Tracked Boundary
+
+**DE:** Dieser Closeout bereitet vor dem einzigen evidence-only PR alle
+getrackten Fakten vollstaendig vor. Der exakte SHA des final amendierten
+Closeout-Commits kann nicht selbstreferenziell in seinen Inhalt geschrieben
+werden. Nach dem Amend werden PR-Head, Checks, Review, Provider-Merge, Eltern,
+Trailer, Branchbereinigung und Fast-Forward nur noch read-only geprueft und in
+`.specify/runtime/autonomous-routing/faae97c9-e61b-480e-b6dd-24b8121868d0/closeout-provider-evidence.json`
+gespeichert. Nach dem Closeout-Merge gibt es keinen getrackten Write. Die drei
+menschlichen Freigabeentscheidungen der Matrix bleiben `Open`; der Closeout
+startet GSDB nicht.
+
+**EN:** This closeout prepares every tracked fact before the single
+evidence-only pull request. The final amended closeout SHA cannot be embedded
+in its own content. After the amend, the pull-request head, checks, review,
+provider merge, parents, trailer, branch cleanup, and fast-forward are checked
+read-only and stored only in the ignored runtime provider-evidence file. No
+tracked write occurs after the closeout merge. The matrix's three human
+approval decisions remain `Open`, and this closeout does not start GSDB.

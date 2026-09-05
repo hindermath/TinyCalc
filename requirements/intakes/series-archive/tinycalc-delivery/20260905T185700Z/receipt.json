@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "documentType": "IntakeSeriesReceipt",
+  "receiptId": "10fd0b17-0740-486d-b4f4-7c05caa901e1",
+  "seriesId": "5b4523b4-d946-4091-9cbc-11825af94332",
+  "generator": {
+    "preset": "intake-sequencing-governance",
+    "version": "0.2.3"
+  },
+  "createdAt": "2026-09-03T16:16:41Z",
+  "operation": {
+    "operationId": "454804f5-315e-4ee6-893a-3ea7c0cdb21e",
+    "type": "Update",
+    "authorityEvidence": "The user explicitly approved and requested implementation of the PL0 delivery-evidence refresh plan. No commit, push, pull request, merge, bypass, package change, product implementation, or downstream review authority is granted."
+  },
+  "status": "Ready",
+  "manifest": {
+    "path": "requirements/intakes/series/tinycalc-delivery/manifest.json",
+    "normalizedSha256": "b665aeae32117eaaf66a4dd1577631023d0e5cdc37d76e131f842e9a369b6136"
+  },
+  "supersedes": {
+    "receiptPath": "requirements/intakes/series-archive/tinycalc-delivery/20260903T161641Z/receipt.json",
+    "receiptNormalizedSha256": "27243ebc531d363cdafe0555bfa715a610769344cd48a9cfb96f35ca5c6b43b2",
+    "manifestArchivePath": "requirements/intakes/series-archive/tinycalc-delivery/20260903T161641Z/manifest.json",
+    "manifestArchiveSha256": "fb9fa46d7f7fa411c4795931b9462c569a5c21e8cdf7e21a7b023d5e68e028c1"
+  },
+  "tombstone": {
+    "path": "N/A",
+    "normalizedSha256": "N/A"
+  },
+  "nextAction": "$speckit-intake-series-status"
+}
