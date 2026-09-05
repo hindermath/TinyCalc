@@ -1,0 +1,88 @@
+{
+  "schemaVersion": "1.1",
+  "feature": "secure-development-assurance-pilot",
+  "entries": [
+    {
+      "changeId": "CHG024",
+      "scope": "Secure Development Assurance preset and generated Spec Kit agent surfaces",
+      "decision": "GeneratedUpdate",
+      "rationale": "Install the SHA-256-verified immutable v0.1.2 field-test prerelease. Preserve the v0.1.0 and v0.1.1 releases while adding the SDA-FT-003 accepted-risk ID and single-JSON-root validation boundaries to the earlier generated-path and raw-snapshot fixes.",
+      "documents": [
+        ".agents/skills/speckit-secure-development-status/SKILL.md",
+        ".agents/skills/speckit-secure-development-review/SKILL.md",
+        ".claude/skills/speckit-secure-development-status/SKILL.md",
+        ".claude/skills/speckit-secure-development-review/SKILL.md",
+        ".github/agents/speckit.secure-development-status.agent.md",
+        ".github/agents/speckit.secure-development-review.agent.md",
+        ".github/prompts/speckit.secure-development-status.prompt.md",
+        ".github/prompts/speckit.secure-development-review.prompt.md",
+        ".opencode/command/speckit.secure-development-status.md",
+        ".opencode/command/speckit.secure-development-review.md"
+      ],
+      "owner": "Repository Maintainer",
+      "audiences": [
+        "Maintainers and AI agents",
+        "Technical reviewers",
+        "Field-test owner"
+      ],
+      "readerPaths": [
+        "Preset registry and installed contract",
+        "Agent or command entry point",
+        "Read-only status or bounded gate review",
+        "Field-test evidence and closeout"
+      ],
+      "canonicalSource": ".specify/presets/secure-development-assurance-governance/preset.yml",
+      "navigationImpact": "Two generated secure-development commands and their agent-specific surfaces become available without changing the TinyCalc product entry points.",
+      "documentClass": "GeneratedOperational",
+      "languageStrategy": "The immutable preset provides synchronized German-first and English-second operational guidance.",
+      "languagePartners": [],
+      "platformAndExampleProof": "Package CI 33976340466 passed native Linux, macOS and Windows contracts at head cf7e18fe7dc45dca93801a8c58d19c7dfc2f4fc1. The actual v0.1.2 archive passed all eight generated surfaces; SHA-256: 4eb30804bb3c329681e0b7d44187c8daeb3e9e4f250bb6003d5b746c0ad0b656. Source merge 610352901d35d5885044ffe3355a7767396cc63a preserves the reviewed package bytes. CLI 0.12.11 multi-agent removal may leave unusable Claude skills; the runbook records this limitation rather than claiming complete uninstall success.",
+      "distributionClass": "sourceOnly",
+      "homeSyncRequired": false,
+      "evidence": "docs/documentation-impact/secure-development-assurance-pilot.json",
+      "risk": "Low; generated governance surfaces are added, while product behavior and human approval boundaries remain unchanged.",
+      "criticality": "Security",
+      "reevaluationTrigger": "The installed preset version, release hash, generated command surfaces, security-governance prerequisite, or evidence contract changes.",
+      "generatedSource": {
+        "path": ".specify/presets/secure-development-assurance-governance/preset.yml",
+        "renderer": "specify preset add via the central 13-preset installer"
+      }
+    },
+    {
+      "changeId": "CHG025",
+      "scope": "docs/project-statistics.md",
+      "decision": "GeneratedUpdate",
+      "rationale": "Record the completed governance installation as a visible delivery phase and refresh the reproducible Profile 2 statistics block.",
+      "documents": [
+        "docs/project-statistics.md"
+      ],
+      "owner": "Repository Maintainer",
+      "audiences": [
+        "Repository users",
+        "Maintainers and AI agents",
+        "Reviewers"
+      ],
+      "readerPaths": [
+        "Repository statistics ledger",
+        "Secure development assurance pilot entry",
+        "Overall Profile 2 statistics"
+      ],
+      "canonicalSource": "docs/project-statistics.config.json",
+      "navigationImpact": "No new portal; the existing statistics ledger gains one chronological field-test installation entry and one phase slot.",
+      "documentClass": "GeneratedStatistical",
+      "languageStrategy": "German first and English second in the existing synchronized statistics document.",
+      "languagePartners": [],
+      "platformAndExampleProof": "The PowerShell renderer verifies schema, ASCII width, accessibility text alternatives, and clean-tree reproducibility.",
+      "distributionClass": "sourceOnly",
+      "homeSyncRequired": false,
+      "evidence": "docs/documentation-impact/secure-development-assurance-pilot.json",
+      "risk": "Low; statistics describe repository activity and do not alter product behavior.",
+      "criticality": "Normal",
+      "reevaluationTrigger": "The pilot installation changes, the field-test features complete, or the statistics methodology changes.",
+      "generatedSource": {
+        "path": "docs/project-statistics.config.json",
+        "renderer": "pwsh -NoProfile -File scripts/render-project-statistics.ps1"
+      }
+    }
+  ]
+}
