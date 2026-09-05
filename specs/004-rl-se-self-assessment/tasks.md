@@ -229,30 +229,30 @@ ohne Produktdelta als konkreter spaeterer Arbeitsauftrag nutzbar.
 - [x] T045 Genau einen PR nach `main` mit
   `docs/PR_TEXT_RL_SE_SELF_ASSESSMENT.md` eroeffnen; PR-Nummer, URL und
   `headRefOid` festhalten.
-- [ ] T046 CI auf unveraendertem PR-Head bis Linux-/Windows-Produkt- und
+- [x] T046 CI auf unveraendertem PR-Head bis Linux-/Windows-Produkt- und
   Matrixjobs gruen laufen lassen; konkrete Logs, Plattformen, Exitcodes und
   unveraenderliche URLs binden.
-- [ ] T047 Alle PR-Reviews und Threads bis null actionable findings, null
+- [x] T047 Alle PR-Reviews und Threads bis null actionable findings, null
   Changes Requested und unveraendertem Head konvergieren. Jeder neuer Commit
   invalidiert die betroffenen Exact-Head-Nachweise.
-- [ ] T048 `/tmp/tinycalc-004-rlse/gates/premerge.json` als temporaere
+- [x] T048 `/tmp/tinycalc-004-rlse/gates/premerge.json` als temporaere
   Schema-2.0-PreMerge-Evidenz mit exakt einer `Primary`-Zeile je
   RLSE-GATE-001..020 fuer den reviewten Head erstellen und mit
   `validate-autonomous-gate-evidence.ps1` pruefen.
-- [ ] T049 Unmittelbar vor dem Merge Autoritaet, PR-Head, Checks, Reviews und
+- [x] T049 Unmittelbar vor dem Merge Autoritaet, PR-Head, Checks, Reviews und
   formale Policy pruefen; normal mergen, oder `--admin` nur wenn ausschliesslich
   eine formale Regel verbleibt. Merge-Subject ist
   `docs: assess RL-SE checklist compliance`; der Merge-Body enthaelt exakt den
   Copilot-Trailer. Provider-Merge-SHA, Eltern und Trailer sofort read-only
   pruefen.
-- [ ] T050 Lokal auf `main` wechseln und ausschliesslich per
+- [x] T050 Lokal auf `main` wechseln und ausschliesslich per
   `git pull --ff-only` auf den Provider-Merge synchronisieren. Den akzeptierten
   PreMerge-Snapshot fuer den vorbenannten evidence-only Closeout bewahren;
   keinen GSDB-Lauf starten.
 
 ## Phase 8: Kausaler Closeout und finaler Zustand / Causal Closeout and Final State
 
-- [ ] T051 Vom synchronisierten `main` den einzigen vorbenannten Branch
+- [x] T051 Vom synchronisierten `main` den einzigen vorbenannten Branch
   `codex/004-rl-se-self-assessment-closeout` erzeugen, den akzeptierten
   PreMerge-Snapshot unveraendert als
   `specs/004-rl-se-self-assessment/evidence/accepted-premerge.json` und die
@@ -260,13 +260,13 @@ ohne Produktdelta als konkreter spaeterer Arbeitsauftrag nutzbar.
   `specs/004-rl-se-self-assessment/evidence/postmerge.json` mit
   `acceptedPreMergeSha256`, echtem Merge-Commit und leerem Produktdelta
   getrackt ablegen und validieren.
-- [ ] T052 Das Lastenheft mit dem vorhandenen macOS/Linux-Bash-Skript exakt zu
+- [x] T052 Das Lastenheft mit dem vorhandenen macOS/Linux-Bash-Skript exakt zu
   `requirements/intakes/active/Lastenheft_RL-SE-Checklist-Selbstpruefung.004-rl-se-self-assessment.md`
   umbenennen, danach genau `speckit-intake-series-update` fuer
   `requirements/intakes/series/tinycalc-delivery/manifest.json` kausal
   ausfuehren und `speckit-intake-series-status` read-only pruefen. **Grenze**:
   GSDB wird nur als naechster berechtigter Intake ausgewiesen, nicht gestartet.
-- [ ] T053 Statistik, Run-/Delivery-Evidenz und alle Closeout-Pfade vorab
+- [x] T053 Statistik, Run-/Delivery-Evidenz und alle Closeout-Pfade vorab
   vollstaendig abschliessen, den exakten Closeout-Satz validieren und genau
   einen Closeout-Commit mit exakt einem Copilot-Trailer erstellen. Nach dessen
   Provider-Merge sind keine getrackten Writes mehr erlaubt.

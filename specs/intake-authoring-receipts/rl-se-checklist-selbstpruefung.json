@@ -15,8 +15,8 @@
   },
   "status": "ReadyForReview",
   "target": {
-    "path": "requirements/intakes/active/Lastenheft_RL-SE-Checklist-Selbstpruefung.md",
-    "normalizedSha256": "a0b1b4d778848e6a96304eb3bdea3c62c46e73f732c901c5b81fd893421fbaeb"
+    "path": "requirements/intakes/active/Lastenheft_RL-SE-Checklist-Selbstpruefung.004-rl-se-self-assessment.md",
+    "normalizedSha256": "96a5ef9c414d55c69ad117509d41f056f10d005824890bd5a2867eaf8ab948da"
   },
   "sources": [
     {
@@ -48,7 +48,7 @@
       "id": "IAD001",
       "status": "Answered",
       "question": "Welcher Zielpfad ist nach der Konsolidierung verbindlich?",
-      "answer": "requirements/intakes/active/Lastenheft_RL-SE-Checklist-Selbstpruefung.md",
+      "answer": "requirements/intakes/active/Lastenheft_RL-SE-Checklist-Selbstpruefung.004-rl-se-self-assessment.md",
       "evidence": "specs/requirements-reconciliation-20260726/migration-proposal.json"
     },
     {
@@ -91,5 +91,5 @@
     "role": "OrderedMember",
     "supersedesIntakeIds": []
   },
-  "nextAction": "$speckit-intake-review requirements/intakes/active/Lastenheft_RL-SE-Checklist-Selbstpruefung.md"
+  "nextAction": "$speckit-intake-review requirements/intakes/active/Lastenheft_RL-SE-Checklist-Selbstpruefung.004-rl-se-self-assessment.md"
 }
