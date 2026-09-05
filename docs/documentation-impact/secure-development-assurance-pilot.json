@@ -6,7 +6,7 @@
       "changeId": "CHG024",
       "scope": "Secure Development Assurance preset and generated Spec Kit agent surfaces",
       "decision": "GeneratedUpdate",
-      "rationale": "Install the immutable v0.1.0 preset as the canonical source for the portable evidence contract and the status and review surfaces required by the explicitly approved TinyCalc field test.",
+      "rationale": "Install the SHA-256-verified immutable v0.1.1 field-test prerelease, fixing SDA-FT-001 generated paths and SDA-FT-002 raw-byte snapshots; preserve v0.1.0 and the portable evidence and human-decision boundaries.",
       "documents": [
         ".agents/skills/speckit-secure-development-status/SKILL.md",
         ".agents/skills/speckit-secure-development-review/SKILL.md",
@@ -36,7 +36,7 @@
       "documentClass": "GeneratedOperational",
       "languageStrategy": "The immutable preset provides synchronized German-first and English-second operational guidance.",
       "languagePartners": [],
-      "platformAndExampleProof": "The preset contract tests cover Bash and PowerShell plus LF, CRLF, and UTF-8 BOM fixtures; composition is verified in a temporary Git repository.",
+      "platformAndExampleProof": "Package CI 33971814720 passed native Linux, macOS and Windows contracts and all eight generated surfaces at head 41318dbebdbffbd00754dafc8b9064b5ba0eb677. Actual v0.1.1 archive SHA-256: 516eaba9b6ce258c27777e88decb7e45a1e1810cab5d3cb866738bc2326453a4. CLI 0.12.11 multi-agent removal may leave unusable Claude skills; the runbook records this limitation rather than claiming complete uninstall success.",
       "distributionClass": "sourceOnly",
       "homeSyncRequired": false,
       "evidence": "docs/documentation-impact/secure-development-assurance-pilot.json",
