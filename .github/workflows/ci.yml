@@ -29,13 +29,17 @@ jobs:
         run: |
           ./scripts/validate-rl-se-assessment.ps1 -Assessment docs/security/secure-development/2026-09-05-rl-se-self-assessment/assessment-matrix.json
           $fixture = Join-Path $env:RUNNER_TEMP 'rlse-invalid-extra-property.json'
+          $stdout = Join-Path $env:RUNNER_TEMP 'rlse-schema-negative.stdout.txt'
+          $stderr = Join-Path $env:RUNNER_TEMP 'rlse-schema-negative.stderr.txt'
           $matrix = Get-Content docs/security/secure-development/2026-09-05-rl-se-self-assessment/assessment-matrix.json -Raw | ConvertFrom-Json
           $matrix | Add-Member -NotePropertyName unexpectedField -NotePropertyValue $true
           $matrix | ConvertTo-Json -Depth 100 | Set-Content -LiteralPath $fixture -Encoding utf8
-          $failure = & pwsh -NoProfile -File ./scripts/validate-rl-se-assessment.ps1 -Assessment $fixture 2>&1
-          $invalidExit = $LASTEXITCODE
-          $failureText = $failure | Out-String
-          if ($invalidExit -ne 2 -or $failureText -notmatch 'Matrix verletzt das JSON-Schema') {
+          $process = Start-Process -FilePath pwsh -ArgumentList @(
+            '-NoProfile', '-File', './scripts/validate-rl-se-assessment.ps1',
+            '-Assessment', $fixture
+          ) -Wait -PassThru -NoNewWindow -RedirectStandardOutput $stdout -RedirectStandardError $stderr
+          $failureText = (Get-Content -LiteralPath $stdout, $stderr -Raw) -join "`n"
+          if ($process.ExitCode -ne 2 -or $failureText -notmatch 'Matrix verletzt das JSON-Schema') {
             throw 'RL-SE schema-negative fixture did not fail as required.'
           }
 
