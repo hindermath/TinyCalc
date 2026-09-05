@@ -1,0 +1,185 @@
+{
+  "schemaVersion": "1.0",
+  "gates": [
+    {
+      "gateId": "RLSE-GATE-001",
+      "applicability": "Applicable",
+      "requiredScope": "Validate active run state, branch, accepted intake and current series-review hashes at every phase boundary.",
+      "requiredCommandTokens": ["validate-autonomous-run-state.ps1", "004-rl-se-self-assessment"],
+      "requiredRunnerOrPlatformTokens": ["macOS"],
+      "rationale": "",
+      "reevaluationTrigger": "Before each semantic phase and delivery action."
+    },
+    {
+      "gateId": "RLSE-GATE-002",
+      "applicability": "Applicable",
+      "requiredScope": "Prove the canonical baseline manifest, all controlled document hashes, exactly twelve checklist families and exactly 157 unique IDs.",
+      "requiredCommandTokens": ["validate-secure-development-assurance.ps1", "baseline-manifest.json", "157"],
+      "requiredRunnerOrPlatformTokens": ["macOS"],
+      "rationale": "",
+      "reevaluationTrigger": "After any secure-development baseline or manifest change."
+    },
+    {
+      "gateId": "RLSE-GATE-003",
+      "applicability": "Applicable",
+      "requiredScope": "Prove observable RED failure before the real matrix and GREEN success for all 157 canonical rows using both entrypoints.",
+      "requiredCommandTokens": ["validate-rl-se-assessment.ps1", "validate-rl-se-assessment.sh", "RED", "GREEN", "157/157"],
+      "requiredRunnerOrPlatformTokens": ["macOS", "Linux", "Windows", "PowerShell", "Bash"],
+      "rationale": "",
+      "reevaluationTrigger": "After matrix schema, validator or checklist source changes."
+    },
+    {
+      "gateId": "RLSE-GATE-004",
+      "applicability": "Applicable",
+      "requiredScope": "Prove every positive row has concrete evidence, every N/A/Open/FollowUp row has its mandatory rationale and follow-up data, and Human-only decisions are not claimed.",
+      "requiredCommandTokens": ["assessment-matrix.json", "AlreadySatisfied", "N/A", "Open", "FollowUp", "humanOnly"],
+      "requiredRunnerOrPlatformTokens": ["macOS"],
+      "rationale": "",
+      "reevaluationTrigger": "After any assessment row or evidence reference changes."
+    },
+    {
+      "gateId": "RLSE-GATE-005",
+      "applicability": "Applicable",
+      "requiredScope": "Validate Baseline, Delta, Closure and Image Impact independently and require a successful technical assurance status and separate independent review.",
+      "requiredCommandTokens": ["speckit-secure-development-status", "speckit-secure-development-review", "Baseline", "Delta", "Closure", "ImageImpact"],
+      "requiredRunnerOrPlatformTokens": ["macOS"],
+      "rationale": "",
+      "reevaluationTrigger": "After any assurance evidence, accepted risk or review change."
+    },
+    {
+      "gateId": "RLSE-GATE-006",
+      "applicability": "Applicable",
+      "requiredScope": "Prove NIST SSDF, CWE Top 25, C# secure-coding, STRIDE/CAPEC, SAMM and regulatory applicability decisions without certification or legal claims.",
+      "requiredCommandTokens": ["NIST SSDF", "CWE Top 25", "STRIDE", "CAPEC", "SAMM", "regulatory-applicability"],
+      "requiredRunnerOrPlatformTokens": ["macOS"],
+      "rationale": "",
+      "reevaluationTrigger": "After a finding, architecture, product, legal-source or baseline change."
+    },
+    {
+      "gateId": "RLSE-GATE-007",
+      "applicability": "Applicable",
+      "requiredScope": "Prove current dependency, SBOM, VEX disposition, SLSA/Provenance and OpenSSF evidence for the unchanged distributable product without overstating assurance.",
+      "requiredCommandTokens": ["dependency-audit.md", "tinycalc-terminalgui.spdx.json", "supply-chain-evidence.md", "SLSA", "OpenSSF"],
+      "requiredRunnerOrPlatformTokens": ["macOS", "GitHub"],
+      "rationale": "",
+      "reevaluationTrigger": "After dependency, build, workflow, artefact or advisory changes."
+    },
+    {
+      "gateId": "RLSE-GATE-008",
+      "applicability": "N/A",
+      "requiredScope": "Assess OWASP ASVS verification scope.",
+      "requiredCommandTokens": [],
+      "requiredRunnerOrPlatformTokens": [],
+      "rationale": "TinyCalc is a local TUI with no Web, API, HTTP, authentication or authorization service in this feature.",
+      "reevaluationTrigger": "Introduction of a Web, API, HTTP, authentication or remotely reachable service."
+    },
+    {
+      "gateId": "RLSE-GATE-009",
+      "applicability": "N/A",
+      "requiredScope": "Assess AI-SBOM for released or operated AI components.",
+      "requiredCommandTokens": [],
+      "requiredRunnerOrPlatformTokens": [],
+      "rationale": "AI is development tooling only; no model, dataset, inference service or AI runtime ships with TinyCalc.",
+      "reevaluationTrigger": "An AI model, dataset, inference service or AI runtime becomes a product component."
+    },
+    {
+      "gateId": "RLSE-GATE-010",
+      "applicability": "N/A",
+      "requiredScope": "Assess NIST Zero Trust architecture applicability.",
+      "requiredCommandTokens": [],
+      "requiredRunnerOrPlatformTokens": [],
+      "rationale": "The unchanged product is a local single-process TUI and this feature adds no distributed trust boundary.",
+      "reevaluationTrigger": "Cloud, remote, service-based or networked product architecture."
+    },
+    {
+      "gateId": "RLSE-GATE-011",
+      "applicability": "Applicable",
+      "requiredScope": "Prove DE-first/EN-second CEFR-B2 and WCAG 2.2 AA text-first readability of all new reader-facing artefacts.",
+      "requiredCommandTokens": ["DE-first", "EN-second", "CEFR B2", "WCAG 2.2 AA", "text-first"],
+      "requiredRunnerOrPlatformTokens": ["macOS"],
+      "rationale": "",
+      "reevaluationTrigger": "After any reader-facing content or navigation change."
+    },
+    {
+      "gateId": "RLSE-GATE-012",
+      "applicability": "Applicable",
+      "requiredScope": "Prove all thirteen installed governance presets and the current intake series remain valid and no unrelated feature was started.",
+      "requiredCommandTokens": ["specify check", "validate-intake-series", "13", "no-next-feature"],
+      "requiredRunnerOrPlatformTokens": ["macOS"],
+      "rationale": "",
+      "reevaluationTrigger": "After preset, series, registry or feature-state changes."
+    },
+    {
+      "gateId": "RLSE-GATE-013",
+      "applicability": "Applicable",
+      "requiredScope": "Prove Documentation Impact UpdateRequired, repository-internal distribution, no Home sync, no unintended agent-guidance change and current project statistics.",
+      "requiredCommandTokens": ["test-documentation-impact.ps1", "render-project-statistics.ps1", "-CheckOnly", "NoUpdateRequired", "Home sync"],
+      "requiredRunnerOrPlatformTokens": ["macOS"],
+      "rationale": "",
+      "reevaluationTrigger": "After documentation scope, agent guidance, statistics or distribution changes."
+    },
+    {
+      "gateId": "RLSE-GATE-014",
+      "applicability": "Applicable",
+      "requiredScope": "Prove no product-code, public-API, DocFX, dependency or workflow delta beyond the approved assessment additions to ci.yml, and validate exact intended delivery paths before each commit.",
+      "requiredCommandTokens": ["validate-autonomous-delivery-set.ps1", "git diff --cached --check", ".github/workflows/ci.yml", "src/", "tests/", "docfx"],
+      "requiredRunnerOrPlatformTokens": ["macOS"],
+      "rationale": "",
+      "reevaluationTrigger": "Before each commit and after any worktree change."
+    },
+    {
+      "gateId": "RLSE-GATE-015",
+      "applicability": "Applicable",
+      "requiredScope": "Prove unchanged product restore, Release build, full xUnit suite and exact SMOKE_OK output with aligned feature version and build counter.",
+      "requiredCommandTokens": ["dotnet restore MicroCalc.sln", "dotnet build MicroCalc.sln", "dotnet test MicroCalc.sln", "--smoke", "SMOKE_OK"],
+      "requiredRunnerOrPlatformTokens": ["macOS", "Linux", "Windows"],
+      "rationale": "",
+      "reevaluationTrigger": "After source, project, version, dependency or build-environment changes."
+    },
+    {
+      "gateId": "RLSE-GATE-016",
+      "applicability": "Applicable",
+      "requiredScope": "Prove homogeneity, agent-secret, gitleaks and PowerShell static-analysis gates without tracked secrets, runtime state or private absolute paths.",
+      "requiredCommandTokens": ["check-homogeneity", "scan-agent-secrets", "gitleaks", "invoke-psscriptanalyzer.ps1"],
+      "requiredRunnerOrPlatformTokens": ["macOS", "Linux", "Windows"],
+      "rationale": "",
+      "reevaluationTrigger": "After script, agent-surface, evidence or secret-scan configuration changes."
+    },
+    {
+      "gateId": "RLSE-GATE-017",
+      "applicability": "Applicable",
+      "requiredScope": "Prove exact-head PR check and review convergence with no unresolved actionable thread or changes-requested decision.",
+      "requiredCommandTokens": ["gh pr checks", "reviewDecision", "mergeStateStatus", "reviewedHead"],
+      "requiredRunnerOrPlatformTokens": ["GitHub"],
+      "rationale": "",
+      "reevaluationTrigger": "After every PR commit, review, check rerun or base update."
+    },
+    {
+      "gateId": "RLSE-GATE-018",
+      "applicability": "Applicable",
+      "requiredScope": "Validate a temporary schema-2.0 PreMerge snapshot for the exact reviewed head with one Primary row per gate.",
+      "requiredCommandTokens": ["validate-autonomous-gate-evidence.ps1", "PreMerge", "Primary", "reviewedHead"],
+      "requiredRunnerOrPlatformTokens": ["macOS"],
+      "rationale": "",
+      "reevaluationTrigger": "After any gate, review, evidence or head change."
+    },
+    {
+      "gateId": "RLSE-GATE-019",
+      "applicability": "Applicable",
+      "requiredScope": "Prove MergeAndSync, formal-only bypass authority if needed, provider merge commit and parents, local main fast-forward, causal PostMerge evidence and no product delta.",
+      "requiredCommandTokens": ["gh pr merge", "MergeAndSync", "Admin-Bypass", "git pull --ff-only", "PostMerge", "acceptedPreMergeSha256"],
+      "requiredRunnerOrPlatformTokens": ["GitHub", "macOS"],
+      "rationale": "",
+      "reevaluationTrigger": "Immediately before merge and after any authority, policy, head or provider-state change."
+    },
+    {
+      "gateId": "RLSE-GATE-020",
+      "applicability": "Applicable",
+      "requiredScope": "Prove final read-only validation, terminal run-state closeout, branch cleanup and the boundary that GSDB starts only after complete RL-SE MergeAndSync.",
+      "requiredCommandTokens": ["finalValidation", "Completed", "branch cleanup", "no-next-feature", "GSDB"],
+      "requiredRunnerOrPlatformTokens": ["macOS", "GitHub"],
+      "rationale": "",
+      "reevaluationTrigger": "At final closeout and before starting any successor feature."
+    }
+  ]
+}

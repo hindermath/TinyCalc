@@ -1,0 +1,74 @@
+{
+  "schemaVersion": "1.1",
+  "feature": "004-rl-se-self-assessment",
+  "entries": [
+    {
+      "changeId": "CHG026",
+      "scope": "RL-SE assessment evidence and security-documentation discoverability",
+      "decision": "UpdateRequired",
+      "rationale": "DE: Die 157-Punkte-Selbstpruefung benoetigt eine maschinenlesbare Matrix, vier Assurance-Gates, einen linearen zweisprachigen Bericht und einen Link im bestehenden Sicherheitsindex. EN: The 157-item self-assessment requires a machine-readable matrix, four assurance gates, a linear bilingual report, and a link in the existing security index.",
+      "documents": [
+        "docs/security/secure-development/2026-09-05-rl-se-self-assessment/assessment-matrix.json",
+        "docs/security/secure-development/2026-09-05-rl-se-self-assessment/baseline.json",
+        "docs/security/secure-development/2026-09-05-rl-se-self-assessment/deltas/rl-se-assessment.json",
+        "docs/security/secure-development/2026-09-05-rl-se-self-assessment/closure.json",
+        "docs/security/secure-development/2026-09-05-rl-se-self-assessment/image-impact.json",
+        "docs/security/secure-development/2026-09-05-rl-se-self-assessment/evidence-matrix.md",
+        "docs/security/README.md"
+      ],
+      "owner": "Repository Maintainer",
+      "audiences": [
+        "Repository users",
+        "Maintainers and AI agents",
+        "Technical and human reviewers"
+      ],
+      "readerPaths": [
+        "Security documentation index",
+        "RL-SE self-assessment summary",
+        "Family summary and decision boundaries",
+        "Machine-readable row evidence and follow-up"
+      ],
+      "canonicalSource": "docs/security/secure-development/2026-09-05-rl-se-self-assessment/assessment-matrix.json",
+      "navigationImpact": "DE: Der bestehende Sicherheitsindex erhaelt genau einen relativen Link; DocFX-Navigation und API-Navigation bleiben unveraendert. EN: The existing security index gains exactly one relative link; DocFX and API navigation remain unchanged.",
+      "documentClass": "ActiveSemantic",
+      "languageStrategy": "DE: Lesertext ist Deutsch zuerst und Englisch danach; strukturierte Statuswerte bleiben sprachneutrale Vertragswerte. EN: Reader text is German first and English second; structured status values remain language-neutral contract values.",
+      "languagePartners": [],
+      "platformAndExampleProof": "DE: Der Bericht ist textorientiert, bietet eine lineare Alternative zur Tabelle und benoetigt weder Farbe noch Zeigerbedienung. Die Validatoren laufen ueber PowerShell und Bash. EN: The report is text-first, provides a linear alternative to the table, and requires neither color nor pointer input. Validators run through PowerShell and Bash.",
+      "distributionClass": "sourceOnly",
+      "homeSyncRequired": false,
+      "evidence": "docs/documentation-impact/rl-se-self-assessment.json",
+      "risk": "DE: Niedrig; die Aenderung bewertet und dokumentiert den Repository-Stand, ohne Produktverhalten oder menschliche Freigaben zu veraendern. EN: Low; the change assesses and documents repository state without changing product behavior or human approvals.",
+      "criticality": "Security",
+      "reevaluationTrigger": "DE: Produkt-, Architektur-, Abhaengigkeits-, Workflow-, Distributions-, Preset- oder Baseline-Aenderung. EN: Any product, architecture, dependency, workflow, distribution, preset, or baseline change."
+    },
+    {
+      "changeId": "CHG027",
+      "scope": "Shared agent guidance and generated agent command surfaces",
+      "decision": "NoUpdateRequired",
+      "rationale": "DE: Das Feature nutzt die vorhandenen Governance- und Agentenregeln unveraendert. Es fuegt nur feature-lokale Evidenz und Validatoren hinzu. EN: The feature uses existing governance and agent rules unchanged. It adds only feature-local evidence and validators.",
+      "documents": [],
+      "owner": "Repository Maintainer",
+      "audiences": [
+        "Maintainers and AI agents",
+        "Reviewers"
+      ],
+      "readerPaths": [
+        "Repository agent guidance",
+        "Installed Spec Kit skills",
+        "Feature-local run evidence"
+      ],
+      "canonicalSource": "AGENTS.md",
+      "navigationImpact": "DE: Keine neue Agenten- oder Befehlsoberflaeche und keine Navigationsaenderung. EN: No new agent or command surface and no navigation change.",
+      "documentClass": "OperationalReference",
+      "languageStrategy": "DE: Die vorhandene gemeinsame Zweisprachigkeit bleibt unveraendert. EN: Existing shared bilingual guidance remains unchanged.",
+      "languagePartners": [],
+      "platformAndExampleProof": "DE: Die Feature-Validatoren verwenden vorhandene plattformuebergreifende PowerShell- und Bash-Muster. EN: Feature validators use existing cross-platform PowerShell and Bash patterns.",
+      "distributionClass": "sourceOnly",
+      "homeSyncRequired": false,
+      "evidence": "docs/documentation-impact/rl-se-self-assessment.json",
+      "risk": "DE: Niedrig; Agentenparitaet wird nicht beruehrt. EN: Low; agent parity is unaffected.",
+      "criticality": "Normal",
+      "reevaluationTrigger": "DE: Eine Aenderung gemeinsamer Agentenregeln, generierter Skill-Oberflaechen oder der Preset-Aufloesung. EN: Any change to shared agent rules, generated skill surfaces, or preset resolution."
+    }
+  ]
+}

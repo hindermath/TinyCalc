@@ -1,0 +1,57 @@
+{
+  "schemaVersion": "1.0",
+  "documentType": "SecureDevelopmentGateEvidence",
+  "contextId": "tinycalc-rl-se-self-assessment",
+  "gate": "closure",
+  "mode": "development",
+  "runbookApplicability": "N/A",
+  "runbookRationale": "The feature quickstart and run evidence are sufficient for this repository-internal development assessment.",
+  "createdAt": "2026-09-05T19:50:00+02:00",
+  "review": {
+    "owner": "TinyCalc project owner role",
+    "reviewer": "Independent technical security review role",
+    "reviewedAt": "2026-09-05T19:50:00+02:00",
+    "reviewDue": "2027-09-05",
+    "residualRisk": "The assessment identifies open decisions and follow-up work; it does not prove organization-wide control effectiveness.",
+    "reevaluationTrigger": "Any matrix, evidence, product, architecture, dependency, workflow, distribution, or baseline change."
+  },
+  "assessments": [
+    {
+      "id": "CLOSURE-001",
+      "applicability": "Applicable",
+      "implementation": "Fulfilled",
+      "evidence": "docs/security/secure-development/2026-09-05-rl-se-self-assessment/assessment-matrix.json"
+    },
+    {
+      "id": "CLOSURE-002",
+      "applicability": "Applicable",
+      "implementation": "Fulfilled",
+      "evidence": "specs/004-rl-se-self-assessment/autonomous-run-evidence.md"
+    }
+  ],
+  "outcome": "Ready",
+  "humanDecisions": {
+    "technicalValidation": {
+      "status": "Fulfilled",
+      "authority": "RL-SE validator and assurance status gate",
+      "evidence": "specs/004-rl-se-self-assessment/autonomous-run-evidence.md"
+    },
+    "pilotAuthorization": {
+      "status": "Open",
+      "authority": "TinyCalc project owner",
+      "evidence": "NotProvided"
+    },
+    "projectAcceptance": {
+      "status": "Open",
+      "authority": "TinyCalc project owner",
+      "evidence": "NotProvided"
+    },
+    "generalRelease": {
+      "status": "Open",
+      "authority": "TinyCalc project owner",
+      "evidence": "NotProvided"
+    }
+  },
+  "nextAction": "Perform the independent technical review and retain all human-only decisions as Open until authorised evidence exists.",
+  "externalComparisonBoundary": "HOSK/GWDG: ExternalComparison only; never local evidence"
+}

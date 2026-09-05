@@ -24,6 +24,17 @@ jobs:
     steps:
       - uses: actions/checkout@v6
 
+      - name: Validate RL-SE assessment (PowerShell)
+        shell: pwsh
+        run: |
+          ./scripts/validate-rl-se-assessment.ps1 -Assessment docs/security/secure-development/2026-09-05-rl-se-self-assessment/assessment-matrix.json
+
+      - name: Validate RL-SE assessment (Bash)
+        if: runner.os == 'Linux'
+        shell: bash
+        run: |
+          bash scripts/validate-rl-se-assessment.sh --assessment docs/security/secure-development/2026-09-05-rl-se-self-assessment/assessment-matrix.json
+
       - name: Setup .NET
         uses: actions/setup-dotnet@v5
         with:
