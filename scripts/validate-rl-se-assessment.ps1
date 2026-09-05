@@ -3,11 +3,11 @@
 Prueft die TinyCalc-RL-SE-Selbstbewertung. / Validates the TinyCalc RL-SE self-assessment.
 
 .DESCRIPTION
-DE: Der Validator bindet die Matrix an Baseline 3.1.0 und verlangt alle 157
+DE: Der Validator bindet die Matrix an das aktuelle Baseline-Manifest und verlangt alle 157
 kanonischen Checklisten-IDs genau einmal. Er prueft Statuskombinationen,
 Pflichtfelder, Human-only-Grenzen und sichere repository-relative Pfade.
 
-EN: The validator binds the matrix to baseline 3.1.0 and requires all 157
+EN: The validator binds the matrix to the current baseline manifest and requires all 157
 canonical checklist IDs exactly once. It checks status combinations, required
 fields, human-only boundaries, and safe repository-relative paths.
 
@@ -77,6 +77,22 @@ function Read-RlSeJson {
         return Get-Content -LiteralPath $Path -Raw -Encoding utf8 | ConvertFrom-Json -Depth 100
     } catch {
         Stop-RlSeValidation "Ungueltiges UTF-8-JSON in $($Path): $($_.Exception.Message)"
+    }
+}
+
+function Test-RlSeJsonSchema {
+    param(
+        [Parameter(Mandatory)][string] $DocumentPath,
+        [Parameter(Mandatory)][string] $SchemaPath
+    )
+    try {
+        $json = Get-Content -LiteralPath $DocumentPath -Raw -Encoding utf8
+        $valid = Test-Json -Json $json -SchemaFile $SchemaPath -ErrorAction Stop
+    } catch {
+        Stop-RlSeValidation "Matrix verletzt das JSON-Schema: $($_.Exception.Message)"
+    }
+    if (-not $valid) {
+        Stop-RlSeValidation 'Matrix verletzt das JSON-Schema.'
     }
 }
 
@@ -246,6 +262,7 @@ function Test-RlSeAssessment {
     } else {
         [IO.Path]::GetFullPath((Join-Path $rootFull $AssessmentPath))
     }
+    Test-RlSeJsonSchema $fullAssessment $schemaPath
     $document = Read-RlSeJson $fullAssessment
     if ((Get-RlSeText $document 'schemaVersion' 'schemaVersion') -cne '1.0' -or
         (Get-RlSeText $document 'assessmentId' 'assessmentId') -cne 'rl-se-self-assessment-2026-09-05') {

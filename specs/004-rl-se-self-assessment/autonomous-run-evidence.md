@@ -295,3 +295,29 @@ finding.
   Dokumentations-/Governance-/Evidence-/Validator-Delta, die Baselines 80/125,
   7.8 Stunden pro Tag, Monate mit 21.5 Arbeitstagen und ein sichtbarer Aktivtag
   stehen im chronologischen Ledger und in der zugaenglichen Gesamtstatistik.
+
+## PR-Review-Korrektur / PR Review Correction
+
+**DE:** PR #68 wurde ohne Force-Push auf dem exakten Head
+`dc74bf0c83e2e86c19415c8ec8a1f447cbf4ff6d` geoeffnet. Alle Linux-, Windows-,
+Secret-, statischen Analyse- und Claude-Checks bestanden. Die unmittelbar vor
+dem Merge wiederholte Thread-Abfrage fand danach zwei neue Copilot-Hinweise:
+Das geladene JSON-Schema wurde noch nicht als Ganzes ausgewertet und die Hilfe
+nannte noch Baseline 3.1.0. Die Korrektur ruft nun `Test-Json -SchemaFile` vor
+der semantischen Pruefung auf; eine Fixture mit zusaetzlichem Root-Feld wird
+mit Exitcode 2 und `Matrix verletzt das JSON-Schema` blockiert. Die Hilfe
+spricht versionsstabil vom aktuellen Baseline-Manifest. Der fruehere
+PreMerge-Snapshot wurde durch diese Aenderung ungueltig und wird erst nach dem
+neuen Exact-Head-Review ersetzt.
+
+**EN:** PR #68 was opened without force-push at exact head
+`dc74bf0c83e2e86c19415c8ec8a1f447cbf4ff6d`. All Linux, Windows, secret,
+static-analysis, and Claude checks passed. The repeated thread query
+immediately before merge then found two new Copilot findings: the loaded JSON
+schema was not evaluated as a whole and the help still named baseline 3.1.0.
+The correction now calls `Test-Json -SchemaFile` before semantic validation;
+a fixture with an extra root property is blocked with exit code 2 and
+`Matrix verletzt das JSON-Schema`. The help now refers to the current baseline
+manifest without a stale version. This change invalidated the earlier
+PreMerge snapshot; it will be replaced only after review converges on the new
+exact head.

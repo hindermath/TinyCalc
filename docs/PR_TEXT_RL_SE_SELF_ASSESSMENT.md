@@ -33,9 +33,9 @@ der kontrollierten Dokumente wurden dabei nicht veraendert.
   allein gilt nicht als Erfuellungsnachweis.
 - Human-only-Punkte bleiben ohne autorisierte menschliche Evidenz `Open` und
   `NotProvided`.
-- Ein PowerShell-Validator und ein duennes Bash-Frontend pruefen IDs,
-  Statuskombinationen, Pfade, Baseline-Versionen und normalisierte SHA-256-
-  Bindungen reproduzierbar.
+- Ein PowerShell-Validator und ein duennes Bash-Frontend pruefen das gesamte
+  JSON-Schema, IDs, Statuskombinationen, Pfade, Baseline-Versionen und
+  normalisierte SHA-256-Bindungen reproduzierbar.
 - Baseline, Delta, Closure und Image Impact entsprechen Assurance Governance
   0.1.2. Der read-only Status und genau ein unabhaengiger Closure-Review
   melden fuer den lokalen Evidenzstand `Ready`.
@@ -101,6 +101,7 @@ Lokal auszufuehren:
 ```text
 pwsh -NoProfile -File scripts/validate-rl-se-assessment.ps1 -Assessment <matrix>
 bash scripts/validate-rl-se-assessment.sh --assessment <matrix>
+schema-negative fixture with an unexpected root property (must exit 2)
 bash <assurance-validator> status <evidence-directory>
 bash <assurance-validator> review closure rl-se-self-assessment development
 dotnet restore MicroCalc.sln
@@ -153,8 +154,8 @@ were regenerated. Controlled document content was not changed.
 The machine-readable matrix contains each canonical ID exactly once and gives
 every row its disposition, two status axes, rationale, evidence, owner,
 follow-up, priority, risk, trigger, residual risk, and Human-only boundary.
-PowerShell and Bash entry points validate the contract and normalized source
-bindings. The result is 21 `AlreadySatisfied`, 32 justified `N/A`, 42
+PowerShell and Bash entry points validate the complete JSON Schema contract
+and normalized source bindings. The result is 21 `AlreadySatisfied`, 32 justified `N/A`, 42
 Human-only `Open`, and 62 `FollowUp` items. All 157 IDs are present with no
 missing, duplicate, or invented ID.
 

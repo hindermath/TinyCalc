@@ -224,9 +224,9 @@ ohne Produktdelta als konkreter spaeterer Arbeitsauftrag nutzbar.
 - [x] T043 Einen fokussierten Conventional Commit mit exakt einem Copilot-
   Co-author-Trailer erstellen und Commitcount, Version, Pfade und Trailer
   sofort read-only pruefen.
-- [ ] T044 Autoritaet und Delivery-Satz erneut pruefen, Branch ohne Force-Push
+- [x] T044 Autoritaet und Delivery-Satz erneut pruefen, Branch ohne Force-Push
   pushen und Remote-Head an lokalen Exact Head binden.
-- [ ] T045 Genau einen PR nach `main` mit
+- [x] T045 Genau einen PR nach `main` mit
   `docs/PR_TEXT_RL_SE_SELF_ASSESSMENT.md` eroeffnen; PR-Nummer, URL und
   `headRefOid` festhalten.
 - [ ] T046 CI auf unveraendertem PR-Head bis Linux-/Windows-Produkt- und
