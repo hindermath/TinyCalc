@@ -182,9 +182,9 @@
       "sourceId": "PRESET-secure-development-assurance-governance",
       "sourceClass": "Preset",
       "path": ".specify/presets/secure-development-assurance-governance/preset.yml",
-      "version": "0.1.2",
+      "version": "0.1.3",
       "reviewedAt": "2026-09-06",
-      "normalizedSha256": "624d726e0afb71b852581b102f243b9c4d605b4e67e78bb0ec4433b89947750a",
+      "normalizedSha256": "8e17022fb60749a3db454239641592f125e727585c0312418fae538e2b3ca622",
       "scope": {
         "de": "Diese Quelle wird nur für ihren benannten TinyCalc-Prüfumfang verwendet.",
         "en": "This source is used only for its named TinyCalc assessment scope."
@@ -932,9 +932,9 @@
       "sourceId": "SRC-049",
       "sourceClass": "Validator",
       "path": ".specify/presets/secure-development-assurance-governance/scripts/validate-secure-development-assurance.ps1",
-      "version": "0.1.2",
+      "version": "0.1.3",
       "reviewedAt": "2026-09-06",
-      "normalizedSha256": "1a48b065d30a849674b28016c12ce47519eba60a4fd32467832f91584d0cf32d",
+      "normalizedSha256": "104d6a424f68eee91b9f7ea89e5cd0bf3446c21821392e367c187bebe741785e",
       "scope": {
         "de": "Diese Quelle wird nur für ihren benannten TinyCalc-Prüfumfang verwendet.",
         "en": "This source is used only for its named TinyCalc assessment scope."
@@ -1249,7 +1249,7 @@
       "path": "AGENTS.md",
       "version": "Current",
       "reviewedAt": "2026-09-06",
-      "normalizedSha256": "ba8234fd050a06f64ffbb8ddfbb7c04be99ee669a0d2eb0764455c8585e0cf4b",
+      "normalizedSha256": "4cb8a055a479f2571277c10af59503aea85f24ea830a340a88b2d351d561e9fc",
       "scope": {
         "de": "Zeilenspezifischer aktueller Nachweis aus AGENTS.md; der Hash beweist Inhalt, nicht automatisch Erfuellung.",
         "en": "Current row-specific evidence from AGENTS.md; the hash proves content, not automatic fulfilment."
@@ -1264,7 +1264,7 @@
       "path": ".specify/presets/.registry",
       "version": "Current",
       "reviewedAt": "2026-09-06",
-      "normalizedSha256": "3dd7cdd07cd9581a532749967d91115fac499b00f500822cefbcccca7723ad81",
+      "normalizedSha256": "88f4be9f2ca39a98e543baa530ecb339797c031408bbc70cb8f7a04308b176b6",
       "scope": {
         "de": "Zeilenspezifischer aktueller Nachweis aus .specify/presets/.registry; der Hash beweist Inhalt, nicht automatisch Erfuellung.",
         "en": "Current row-specific evidence from .specify/presets/.registry; the hash proves content, not automatic fulfilment."
@@ -13191,7 +13191,7 @@
     },
     {
       "presetId": "secure-development-assurance-governance",
-      "version": "0.1.2",
+      "version": "0.1.3",
       "priority": "NotInStandardMatrix",
       "standardMatrixMember": false,
       "applicability": "Applicable",
