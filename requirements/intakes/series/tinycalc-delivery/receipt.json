@@ -1,28 +1,28 @@
 {
   "schemaVersion": "1.0",
   "documentType": "IntakeSeriesReceipt",
-  "receiptId": "81b13f03-e73b-4ebf-a8fe-88aa0795ca8d",
+  "receiptId": "e7c7271a-1271-49d3-b265-d0fcc6ff9e85",
   "seriesId": "5b4523b4-d946-4091-9cbc-11825af94332",
   "generator": {
     "preset": "intake-sequencing-governance",
     "version": "0.2.3"
   },
-  "createdAt": "2026-09-05T18:58:08Z",
+  "createdAt": "2026-09-06T15:19:49Z",
   "operation": {
-    "operationId": "e8b26612-01d1-4dfb-94b3-f9f9b5231ec3",
+    "operationId": "5415a66a-8944-411d-9914-9b090cb6bb5b",
     "type": "Update",
-    "authorityEvidence": "Thorsten explicitly approved the Feature 004 plan and DeliveryMode MergeAndSync with formal-only Admin-Bypass. The causal closeout is limited to the branch-qualified RL-SE Lastenheft rename, one tinycalc-delivery series update, lifecycle evidence, and one evidence-only closeout pull request. GSDB is made eligible but is not started."
+    "authorityEvidence": "Thorsten explicitly approved the Feature 005 autonomous run and DeliveryMode MergeAndSync with formal-only Admin-Bypass. The causal closeout is limited to the branch-qualified GSDB Lastenheft rename, one tinycalc-delivery series update, preserved predecessor archives, lifecycle evidence, and one evidence-only closeout pull request. No successor intake or feature is selected or started."
   },
   "status": "Ready",
   "manifest": {
     "path": "requirements/intakes/series/tinycalc-delivery/manifest.json",
-    "normalizedSha256": "24552c219bd516067da0c2fe6f6be39a935aac8f3e38f7237db9b505d68ad99b"
+    "normalizedSha256": "586424d2424b31f16c1461583affb3b0204886ccca0e79fb59af7759842b6703"
   },
   "supersedes": {
-    "receiptPath": "requirements/intakes/series-archive/tinycalc-delivery/20260905T185700Z/receipt.json",
-    "receiptNormalizedSha256": "d19e2b4835d47afa6f9e1235da07e7a8f609b31370f80152a400777ed160f98c",
-    "manifestArchivePath": "requirements/intakes/series-archive/tinycalc-delivery/20260905T185700Z/manifest.json",
-    "manifestArchiveSha256": "b665aeae32117eaaf66a4dd1577631023d0e5cdc37d76e131f842e9a369b6136"
+    "receiptPath": "requirements/intakes/series-archive/tinycalc-delivery/20260906T151949Z/receipt.json",
+    "receiptNormalizedSha256": "b4c0fca16a66a3a7242ae6dfa85af262e5c206cc794444f551d7fa0f25852094",
+    "manifestArchivePath": "requirements/intakes/series-archive/tinycalc-delivery/20260906T151949Z/manifest.json",
+    "manifestArchiveSha256": "24552c219bd516067da0c2fe6f6be39a935aac8f3e38f7237db9b505d68ad99b"
   },
   "tombstone": {
     "path": "N/A",

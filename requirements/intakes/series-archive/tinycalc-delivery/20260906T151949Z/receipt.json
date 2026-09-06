@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "documentType": "IntakeSeriesReceipt",
+  "receiptId": "81b13f03-e73b-4ebf-a8fe-88aa0795ca8d",
+  "seriesId": "5b4523b4-d946-4091-9cbc-11825af94332",
+  "generator": {
+    "preset": "intake-sequencing-governance",
+    "version": "0.2.3"
+  },
+  "createdAt": "2026-09-05T18:58:08Z",
+  "operation": {
+    "operationId": "e8b26612-01d1-4dfb-94b3-f9f9b5231ec3",
+    "type": "Update",
+    "authorityEvidence": "Thorsten explicitly approved the Feature 004 plan and DeliveryMode MergeAndSync with formal-only Admin-Bypass. The causal closeout is limited to the branch-qualified RL-SE Lastenheft rename, one tinycalc-delivery series update, lifecycle evidence, and one evidence-only closeout pull request. GSDB is made eligible but is not started."
+  },
+  "status": "Ready",
+  "manifest": {
+    "path": "requirements/intakes/series/tinycalc-delivery/manifest.json",
+    "normalizedSha256": "24552c219bd516067da0c2fe6f6be39a935aac8f3e38f7237db9b505d68ad99b"
+  },
+  "supersedes": {
+    "receiptPath": "requirements/intakes/series-archive/tinycalc-delivery/20260905T185700Z/receipt.json",
+    "receiptNormalizedSha256": "d19e2b4835d47afa6f9e1235da07e7a8f609b31370f80152a400777ed160f98c",
+    "manifestArchivePath": "requirements/intakes/series-archive/tinycalc-delivery/20260905T185700Z/manifest.json",
+    "manifestArchiveSha256": "b665aeae32117eaaf66a4dd1577631023d0e5cdc37d76e131f842e9a369b6136"
+  },
+  "tombstone": {
+    "path": "N/A",
+    "normalizedSha256": "N/A"
+  },
+  "nextAction": "$speckit-intake-series-status"
+}
