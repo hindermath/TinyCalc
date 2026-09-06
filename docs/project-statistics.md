@@ -549,6 +549,7 @@ runtime evidence.*
 | 2026-09-05 | Assurance-Preset v0.1.2 mit strikten Evidence-Grenzen installiert / Assurance preset v0.1.2 installed with strict evidence boundaries | Arbeitsfenster: dieselbe sichtbare Sitzung am 2026-09-05 auf Branch `codex/secure-development-assurance-pilot`. Arbeitspakete: unveraendertes veroeffentlichtes v0.1.2-Archiv mit SHA-256 `4eb30804bb3c329681e0b7d44187c8daeb3e9e4f250bb6003d5b746c0ad0b656`, strikte skalare und nichtleere `acceptedRisks[].id`, genau eine JSON-Wurzel, Bash-/PowerShell-Paritaet, unabhaengige Kandidatenpruefung sowie aktualisierte Feldtest-Evidence. Umfang vor diesem Statistik-Selbstnachweis: `0` Produktcode- und `0` Produkttest-Zeilen; uebernommener Preset- und Dokumentationsdelta `+225 / -26 = 199` Nettozeilen, davon `98` Preset-Testzeilen, `17` Validatorzeilen und `84` Dokumentations-/Governance-Zeilen. Wiederverwendung, keine 199 neu entwickelten Produktzeilen. Konservative Referenz 80 Zeilen/Tag: `2.5` Arbeitstage und ca. `19.4` Stunden; Thorsten-Solo 125: `1.6` Arbeitstage und ca. `12.4` Stunden bei 7.8 Stunden/Tag. Gegen einen sichtbaren Aktivtag: `2.5x`/`1.6x` blended repository speedup, keine Stoppuhrmessung. Paket- und Source-Merge wurden providerseitig geprueft; native CI auf Linux, macOS und Windows, exakte 13er-Matrix, vollstaendige Preset-Vertraege, alle acht installierten Oberflaechen, Documentation Impact, JSON, Secret-Scan und `git diff --check` bestanden. NIST SSDF und CWE Top 25 gelten; ASVS, Zero Trust und Produkt-AI-SBOM sind fuer diese lokale Governance-Installation begruendet `N/A`. Produkt-API, Laufzeit und DocFX bleiben unveraendert; kein Feature-Lauf gestartet. / The immutable v0.1.2 archive closes accepted-risk ID and multiple-JSON-root bypasses consistently in both shells. The 199 net imported governance, validator, test, and documentation lines correspond to 2.5 conservative or 1.6 Thorsten-solo days; this is blended delivery density, not stopwatch time. Product behavior is unchanged, and both substantive field-test features remain separate. |
 | 2026-09-05 | Feature 004 RL-SE-Selbstpruefung geliefert / Feature 004 RL-SE self-assessment delivered | Arbeitsfenster: 2026-09-05 18:45 bis 20:55 Uhr (`Europe/Berlin`), ein sichtbarer Aktivtag. Arbeitspakete: vollstaendige 157-ID-Matrix, Baseline-3.2.0-Korrektur unter ausdruecklicher enger Autoritaet, beide Validatoren samt vollstaendiger JSON-Schema-Pruefung und robuster plattformuebergreifender Negativ-Fixture, vier Assurance-Gates, einmaliger unabhaengiger Review, DE-first/EN-second-Bericht, 42 Human-only- und 62 Follow-up-Grenzen, Dependency-/Produktregression, CI-, PR-, Documentation-Impact- und Evidence-Index. Umfang vor dem Statistik-Selbstnachweis: `0` Produktionscode-Zeilen, `0` Testcode-Zeilen und `+6769 / -9 = 6760` Dokumentations-, Governance-, Evidence- und Validator-Tooling-Zeilen netto. Konservative Referenz: `84.5` Arbeitstage, `659.1` Stunden und `3.9` Monate; Thorsten-Solo: `54.1` Arbeitstage, `421.8` Stunden und `2.5` Monate. Gegen einen sichtbaren Aktivtag sind `84.5x` und `54.1x` blended repository speedup, keine Stoppuhrmessung. Bestanden: 157/157, Schema-Negativtest auch unter CI-Fehlersemantik, Assurance Ready, Review Ready, Build 0/0, 82/82 Tests, `SMOKE_OK`, 0 bekannte anfaellige Pakete, Linux-/Windows-CI und unabhaengiger Exact-Head-Review. PR `#68` wurde nach ausschliesslich formalem Admin-Bypass als Provider-Merge `aa647ec39ff7b1013f19a551d9d34ca919069474` verifiziert und lokal per Fast-Forward synchronisiert. *The 6,760 net documentation, governance, evidence, and validator-tooling lines provide the complete assessment without product or test-code changes. All material local and provider gates passed; the feature PR is merged and synchronized. Manual comparisons remain delivery-density estimates.* |
 | 2026-09-05 | Feature 004 kausalen Closeout vorbereitet / Feature 004 causal closeout prepared | Arbeitsfenster: 2026-09-05 20:55 bis 21:25 Uhr (`Europe/Berlin`), ein sichtbarer Aktivtag. Arbeitspakete: akzeptierter Schema-2.0-PreMerge-Snapshot, kausaler PostMerge-Snapshot, branchgestempelter RL-SE-Intake, byteidentisches Serien- und Reviewarchiv, genau eine Manifest-/Receipt-/Order-Fortschreibung, deterministischer Governance-Renderer, read-only Serienstatus, aktualisierte Run-/Delivery-/Documentation-Impact-Evidenz und terminale getrackte Proof-Grenze. Umfang vor dem Statistik-Selbstnachweis: `0` Produktionscode-Zeilen, `0` Testcode-Zeilen und `1265` Dokumentations-, Governance- und Evidence-Zeilen netto; Statistikdateien und Versionsmetadaten sind ausgeschlossen. Konservative Referenz: `15.8` Arbeitstage, `123.3` Stunden und `0.7` Monate bei 21.5 Arbeitstagen/Monat; Thorsten-Solo: `10.1` Arbeitstage, `78.9` Stunden und `0.5` Monate bei 7.8 Stunden/Tag. Gegen einen sichtbaren Aktivtag sind `15.8x` und `10.1x` blended repository speedup beziehungsweise Lieferdichte, keine Stoppuhrmessung. RL-SE ist `Completed`; GSDB ist nur als naechster `Eligible`-Kandidat ausgewiesen und wurde nicht gestartet. Der fuer das Vorgaengermanifest gueltige Review ist supersediert archiviert; ein aktueller Serienreview wird nicht erfunden. Nach dem einzigen Closeout-Commit folgen genau ein evidence-only PR sowie Provider-/Sync-Fakten ausschliesslich read-only in ignorierter Runtime-Evidenz. *The 1,265 net closeout lines causally bind PreMerge, PostMerge, the branch-stamped intake, series and superseded-review lineage, and the terminal tracked proof boundary. They correspond to 15.8 conservative or 10.1 Thorsten-solo days; the single evidence-only provider PR remains, and GSDB was not started.* |
+| 2026-09-06 | Assurance-Profil v0.1.2 integriert / Assurance profile v0.1.2 integrated | Arbeitsfenster: eine sichtbare Agentensitzung am 2026-09-06; Branch `codex/assurance-preset-integration`. Nur freigegebene Repository-Integration, keine Produktcode- oder Produkttest-Aenderung. Wiederverwendetes Paket und Dokumentations-/Konfigurationsdelta vor Statistik-Selbstnachweis: +246 / -15 Zeilen; importiertes Paket ist keine neu entwickelte Produktlogik. Zwoelf bestehende Presets, alte Profile, projektgefuehrte Baseline und menschliche Entscheidungen bleiben unveraendert. Paketbindung, exakte 13er-Matrix, Byte-Erhalt, isolierte Vertrags-/Oberflaechentests und lesender Status sind im Integrationsnachweis dokumentiert; Lieferung folgt per fokussiertem PR mit CI und MergeAndSync. Keine Home-Verteilung oder fachlichen Reviews. Referenzen bleiben im unveraenderten Statistikprofil konfiguriert. / One visible session integrates only the approved repository profile. Imported package content is reuse, not new product logic. Product code/tests and the original twelve presets remain unchanged; see the integration record for tests and boundaries. |
 
 ## Statistikprofil-1-Archiv / Statistics Profile 1 Archive
 Basis dieses Schlussblocks sind die aktuell dokumentierten Snapshot- und
@@ -713,26 +714,26 @@ Profil 2 verwendet Git-getrackte Textdateien und sichtbare Git-Aktivitaet. Die W
 
 | Kennzahl / Metric | Wert / Value |
 |---|---:|
-| Textbasis / Text base | 188182 lines |
-| Textdateien / Text files | 1167 |
+| Textbasis / Text base | 188446 lines |
+| Textdateien / Text files | 1170 |
 | Beobachtbarer Zeitraum / Observable period | 2025-09-14..2026-09-06 |
 | Aktivtage / Active days | 77 |
-| Relevante Commits / Relevant commits | 216 |
-| Zeilen je Aktivtag / Lines per active day | 2443.9 |
+| Relevante Commits / Relevant commits | 218 |
+| Zeilen je Aktivtag / Lines per active day | 2447.4 |
 | Peak-Tag im Fenster / Peak day in window | 2026-06-17 / 27058 |
 | Peak-Woche im Fenster / Peak week in window | 2026-07-19 / 33387 |
 | Laengste Serie / Longest streak | 8 days |
-| Speedup vs. 80 lines/day | 30.5x |
+| Speedup vs. 80 lines/day | 30.6x |
 | Speedup vs. 125 lines/day | 19.6x |
-| Methodik / Methodology | v2; source `05318337cb4c` |
+| Methodik / Methodology | v2; source `1127f71494a4` |
 
 ### Artefaktmix / Artifact Mix
 
 ```text
 Produktiv / Production          [#...................]   1.5% | 2830
 Tests                           [#...................]   4.3% | 8063
-Dokumentation / Documentation   [###############.....]  74.8% | 140844
-Skripte / Scripts               [##..................]  12.1% | 22857
+Dokumentation / Documentation   [###############.....]  74.9% | 141086
+Skripte / Scripts               [##..................]  12.1% | 22879
 Konfiguration / Configuration   [#...................]   5.6% | 10573
 Daten und Medien / Data and media [....................]   0.0% | 0
 Sonstiger Text / Other text     [#...................]   1.6% | 3015
@@ -866,7 +867,7 @@ Die festen Slots halten den Phasenvergleich auch bei fehlenden oder spaeter erga
 
 ```text
 Scale: 0..50x
-80 lines/day       [############........] 30.5x
+80 lines/day       [############........] 30.6x
 125 lines/day      [########............] 19.6x
 ```
 
@@ -880,7 +881,7 @@ Die Faktoren vergleichen sichtbare Lieferdichte mit den dokumentierten manuellen
 Scale: 0..5000 lines/day
 Experienced manual [#...................] 80
 Thorsten solo      [#...................] 125
-Visible repository [##########..........] 2443.9
+Visible repository [##########..........] 2447.4
 ```
 
 Die gemeinsame Skala vergleicht Referenzen und sichtbare Lieferdichte. Sie schreibt die Git-Aktivitaet keiner Person oder KI pauschal zu.
@@ -906,6 +907,6 @@ DE: Das Fenster beginnt am 2025-09-14 und endet am 2026-09-06. Es enthaelt 77 ak
 | 2026-06 | 37273 |
 | 2026-07 | 74031 |
 | 2026-08 | 26210 |
-| 2026-09 | 41694 |
+| 2026-09 | 41998 |
 
 <!-- project-statistics-v2:end -->
