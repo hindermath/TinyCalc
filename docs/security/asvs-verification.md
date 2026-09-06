@@ -31,7 +31,7 @@ Any such new surface changes the status to open and requires an explicit ASVS
 level, scope, owner, checks, and evidence before implementation. The canonical
 rationale and trigger remain in `docs/security/arc42-security.md`, Section 11.
 
-## Feature 005 review / Prüfung für Feature 005
+## Prüfung für Feature 005 / Feature 005 review
 
 **DE:** Prüftag ist 2026-09-06. Produkt-ASVS bleibt `N/A`: Die read-only
 Prüfung fand keine Web-, API-, HTTP-, Browser-, Authentifizierungs- oder

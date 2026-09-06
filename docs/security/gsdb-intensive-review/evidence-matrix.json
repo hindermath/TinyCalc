@@ -1144,7 +1144,7 @@
       "path": "docs/security/cloud-compliance-assurance.md",
       "version": "Current",
       "reviewedAt": "2026-09-06",
-      "normalizedSha256": "dc404d4aa11e5cedb37449bfb1e2e2a205a7a1e8ad48127facc9a452fe3e32f9",
+      "normalizedSha256": "fbbc64b78515cea75ab31f25032abd4530cc2e06a43c9c2ce7607ca003869803",
       "scope": {
         "de": "Zeilenspezifischer aktueller Nachweis aus docs/security/cloud-compliance-assurance.md; der Hash beweist Inhalt, nicht automatisch Erfuellung.",
         "en": "Current row-specific evidence from docs/security/cloud-compliance-assurance.md; the hash proves content, not automatic fulfilment."
@@ -1159,7 +1159,7 @@
       "path": "docs/security/regulatory-applicability.md",
       "version": "Current",
       "reviewedAt": "2026-09-06",
-      "normalizedSha256": "482c3b3cd374e8efa323350184fbd5929cd6ab02ed84bc4cf9462a690ce1ca00",
+      "normalizedSha256": "b4bc6e92d73916dc6d79f6ee9e8fa1b7ef06b071f6deeefe3d0696a26315f2b4",
       "scope": {
         "de": "Zeilenspezifischer aktueller Nachweis aus docs/security/regulatory-applicability.md; der Hash beweist Inhalt, nicht automatisch Erfuellung.",
         "en": "Current row-specific evidence from docs/security/regulatory-applicability.md; the hash proves content, not automatic fulfilment."
@@ -1204,7 +1204,7 @@
       "path": "docs/security/cloud-autonomy-applicability.md",
       "version": "Current",
       "reviewedAt": "2026-09-06",
-      "normalizedSha256": "89ab5e34ac81ac9832f43749c8b02ee4480d24951620f34d621eae9df4171151",
+      "normalizedSha256": "398a07285563cf0a9c6b555771ed7672d68a24a170045d236feeb75a87130009",
       "scope": {
         "de": "Zeilenspezifischer aktueller Nachweis aus docs/security/cloud-autonomy-applicability.md; der Hash beweist Inhalt, nicht automatisch Erfuellung.",
         "en": "Current row-specific evidence from docs/security/cloud-autonomy-applicability.md; the hash proves content, not automatic fulfilment."
@@ -1219,7 +1219,7 @@
       "path": "docs/security/asvs-verification.md",
       "version": "Current",
       "reviewedAt": "2026-09-06",
-      "normalizedSha256": "32012026c330e0affbbd7e07f62fb5f00fee6393924b30c09b3161c1c02d315b",
+      "normalizedSha256": "bb1cbaadfde55dfe863fe04c9ab3b5de062769ccc1ed1970991bc0641d935c07",
       "scope": {
         "de": "Zeilenspezifischer aktueller Nachweis aus docs/security/asvs-verification.md; der Hash beweist Inhalt, nicht automatisch Erfuellung.",
         "en": "Current row-specific evidence from docs/security/asvs-verification.md; the hash proves content, not automatic fulfilment."
@@ -1387,8 +1387,8 @@
       "implementationStatus": "Not Assessed",
       "learningStage": "Foundation",
       "rationale": {
-        "de": "CL-01-02 fordert 'CL-01-02: OWASP ASVS-Level / OWASP ASVS Level'. Die aktuelle TinyCalc-Grenze am Nachweis docs/secure-development/checklisten/CL_01_Standards-Anwendbarkeit.md @ CL-01-02: OWASP ASVS-Level / OWASP ASVS Level; docs/security/asvs-verification.md @ ## Feature 005 review / Prüfung für Feature 005 löst den Kontrollpunkt nicht aus; deshalb gilt N/A / Not Assessed bis zum dokumentierten Änderungstrigger.",
-        "en": "CL-01-02 requires 'CL-01-02: OWASP ASVS-Level / OWASP ASVS Level'. The current TinyCalc boundary evidenced at docs/secure-development/checklisten/CL_01_Standards-Anwendbarkeit.md @ CL-01-02: OWASP ASVS-Level / OWASP ASVS Level; docs/security/asvs-verification.md @ ## Feature 005 review / Prüfung für Feature 005 does not trigger the control, so it remains N/A / Not Assessed until the recorded change trigger."
+        "de": "CL-01-02 fordert 'CL-01-02: OWASP ASVS-Level / OWASP ASVS Level'. Die aktuelle TinyCalc-Grenze am Nachweis docs/secure-development/checklisten/CL_01_Standards-Anwendbarkeit.md @ CL-01-02: OWASP ASVS-Level / OWASP ASVS Level; docs/security/asvs-verification.md @ ## Prüfung für Feature 005 / Feature 005 review löst den Kontrollpunkt nicht aus; deshalb gilt N/A / Not Assessed bis zum dokumentierten Änderungstrigger.",
+        "en": "CL-01-02 requires 'CL-01-02: OWASP ASVS-Level / OWASP ASVS Level'. The current TinyCalc boundary evidenced at docs/secure-development/checklisten/CL_01_Standards-Anwendbarkeit.md @ CL-01-02: OWASP ASVS-Level / OWASP ASVS Level; docs/security/asvs-verification.md @ ## Prüfung für Feature 005 / Feature 005 review does not trigger the control, so it remains N/A / Not Assessed until the recorded change trigger."
       },
       "evidence": [
         {
@@ -1404,13 +1404,13 @@
         },
         {
           "path": "docs/security/asvs-verification.md",
-          "locator": "## Feature 005 review / Prüfung für Feature 005",
+          "locator": "## Prüfung für Feature 005 / Feature 005 review",
           "observedAt": "2026-09-06",
           "freshness": "Revalidated",
           "availability": "Existing",
           "supports": {
-            "de": "CL-01-02 ist durch docs/security/asvs-verification.md am exakten Locator '## Feature 005 review / Prüfung für Feature 005' belegt. Der am 2026-09-06 als Revalidated geprüfte Inhalt stützt ausschließlich die Einstufung N/A / Not Assessed.",
-            "en": "CL-01-02 is bound to docs/security/asvs-verification.md at the exact locator '## Feature 005 review / Prüfung für Feature 005'. The content observed on 2026-09-06 as Revalidated supports only the N/A / Not Assessed disposition."
+            "de": "CL-01-02 ist durch docs/security/asvs-verification.md am exakten Locator '## Prüfung für Feature 005 / Feature 005 review' belegt. Der am 2026-09-06 als Revalidated geprüfte Inhalt stützt ausschließlich die Einstufung N/A / Not Assessed.",
+            "en": "CL-01-02 is bound to docs/security/asvs-verification.md at the exact locator '## Prüfung für Feature 005 / Feature 005 review'. The content observed on 2026-09-06 as Revalidated supports only the N/A / Not Assessed disposition."
           }
         }
       ],
@@ -2029,8 +2029,8 @@
       "implementationStatus": "Not Assessed",
       "learningStage": "Foundation",
       "rationale": {
-        "de": "CL-01-12 betrifft 'CL-01-12: Regulatorische Anwendbarkeit / Regulatory Applicability'. Die technischen Nachweise docs/secure-development/checklisten/CL_01_Standards-Anwendbarkeit.md @ CL-01-12: Regulatorische Anwendbarkeit / Regulatory Applicability; docs/security/regulatory-applicability.md @ ## Feature 005 technical screening / Technische Vorprüfung Feature 005 enthalten keine zuständige menschliche Entscheidung; GSDB-FINDING-001 hält die Einstufung Open / Not Assessed sichtbar.",
-        "en": "CL-01-12 concerns 'CL-01-12: Regulatorische Anwendbarkeit / Regulatory Applicability'. The technical evidence at docs/secure-development/checklisten/CL_01_Standards-Anwendbarkeit.md @ CL-01-12: Regulatorische Anwendbarkeit / Regulatory Applicability; docs/security/regulatory-applicability.md @ ## Feature 005 technical screening / Technische Vorprüfung Feature 005 contains no decision by the accountable human role; GSDB-FINDING-001 therefore keeps the result Open / Not Assessed."
+        "de": "CL-01-12 betrifft 'CL-01-12: Regulatorische Anwendbarkeit / Regulatory Applicability'. Die technischen Nachweise docs/secure-development/checklisten/CL_01_Standards-Anwendbarkeit.md @ CL-01-12: Regulatorische Anwendbarkeit / Regulatory Applicability; docs/security/regulatory-applicability.md @ ## Technische Vorprüfung Feature 005 / Feature 005 technical screening enthalten keine zuständige menschliche Entscheidung; GSDB-FINDING-001 hält die Einstufung Open / Not Assessed sichtbar.",
+        "en": "CL-01-12 concerns 'CL-01-12: Regulatorische Anwendbarkeit / Regulatory Applicability'. The technical evidence at docs/secure-development/checklisten/CL_01_Standards-Anwendbarkeit.md @ CL-01-12: Regulatorische Anwendbarkeit / Regulatory Applicability; docs/security/regulatory-applicability.md @ ## Technische Vorprüfung Feature 005 / Feature 005 technical screening contains no decision by the accountable human role; GSDB-FINDING-001 therefore keeps the result Open / Not Assessed."
       },
       "evidence": [
         {
@@ -2046,13 +2046,13 @@
         },
         {
           "path": "docs/security/regulatory-applicability.md",
-          "locator": "## Feature 005 technical screening / Technische Vorprüfung Feature 005",
+          "locator": "## Technische Vorprüfung Feature 005 / Feature 005 technical screening",
           "observedAt": "2026-09-06",
           "freshness": "Revalidated",
           "availability": "Existing",
           "supports": {
-            "de": "CL-01-12 ist durch docs/security/regulatory-applicability.md am exakten Locator '## Feature 005 technical screening / Technische Vorprüfung Feature 005' belegt. Der am 2026-09-06 als Revalidated geprüfte Inhalt stützt ausschließlich die Einstufung Open / Not Assessed.",
-            "en": "CL-01-12 is bound to docs/security/regulatory-applicability.md at the exact locator '## Feature 005 technical screening / Technische Vorprüfung Feature 005'. The content observed on 2026-09-06 as Revalidated supports only the Open / Not Assessed disposition."
+            "de": "CL-01-12 ist durch docs/security/regulatory-applicability.md am exakten Locator '## Technische Vorprüfung Feature 005 / Feature 005 technical screening' belegt. Der am 2026-09-06 als Revalidated geprüfte Inhalt stützt ausschließlich die Einstufung Open / Not Assessed.",
+            "en": "CL-01-12 is bound to docs/security/regulatory-applicability.md at the exact locator '## Technische Vorprüfung Feature 005 / Feature 005 technical screening'. The content observed on 2026-09-06 as Revalidated supports only the Open / Not Assessed disposition."
           }
         }
       ],
@@ -2845,8 +2845,8 @@
       "implementationStatus": "Not Assessed",
       "learningStage": "Foundation",
       "rationale": {
-        "de": "CL-02-12 fordert 'CL-02-12: Cloud-Autonomie und digitale Souveränität / Cloud Autonomy and Digital Sovereignty'. Die aktuelle TinyCalc-Grenze am Nachweis docs/secure-development/checklisten/CL_02_Sichere-Softwarearchitektur.md @ CL-02-12: Cloud-Autonomie und digitale Souveränität / Cloud Autonomy and Digital Sovereignty; docs/security/cloud-autonomy-applicability.md @ ## Feature 005 C3A assessment / Feature-005-C3A-Bewertung löst den Kontrollpunkt nicht aus; deshalb gilt N/A / Not Assessed bis zum dokumentierten Änderungstrigger.",
-        "en": "CL-02-12 requires 'CL-02-12: Cloud-Autonomie und digitale Souveränität / Cloud Autonomy and Digital Sovereignty'. The current TinyCalc boundary evidenced at docs/secure-development/checklisten/CL_02_Sichere-Softwarearchitektur.md @ CL-02-12: Cloud-Autonomie und digitale Souveränität / Cloud Autonomy and Digital Sovereignty; docs/security/cloud-autonomy-applicability.md @ ## Feature 005 C3A assessment / Feature-005-C3A-Bewertung does not trigger the control, so it remains N/A / Not Assessed until the recorded change trigger."
+        "de": "CL-02-12 fordert 'CL-02-12: Cloud-Autonomie und digitale Souveränität / Cloud Autonomy and Digital Sovereignty'. Die aktuelle TinyCalc-Grenze am Nachweis docs/secure-development/checklisten/CL_02_Sichere-Softwarearchitektur.md @ CL-02-12: Cloud-Autonomie und digitale Souveränität / Cloud Autonomy and Digital Sovereignty; docs/security/cloud-autonomy-applicability.md @ ## Feature-005-C3A-Bewertung / Feature 005 C3A assessment löst den Kontrollpunkt nicht aus; deshalb gilt N/A / Not Assessed bis zum dokumentierten Änderungstrigger.",
+        "en": "CL-02-12 requires 'CL-02-12: Cloud-Autonomie und digitale Souveränität / Cloud Autonomy and Digital Sovereignty'. The current TinyCalc boundary evidenced at docs/secure-development/checklisten/CL_02_Sichere-Softwarearchitektur.md @ CL-02-12: Cloud-Autonomie und digitale Souveränität / Cloud Autonomy and Digital Sovereignty; docs/security/cloud-autonomy-applicability.md @ ## Feature-005-C3A-Bewertung / Feature 005 C3A assessment does not trigger the control, so it remains N/A / Not Assessed until the recorded change trigger."
       },
       "evidence": [
         {
@@ -2862,13 +2862,13 @@
         },
         {
           "path": "docs/security/cloud-autonomy-applicability.md",
-          "locator": "## Feature 005 C3A assessment / Feature-005-C3A-Bewertung",
+          "locator": "## Feature-005-C3A-Bewertung / Feature 005 C3A assessment",
           "observedAt": "2026-09-06",
           "freshness": "Revalidated",
           "availability": "Existing",
           "supports": {
-            "de": "CL-02-12 ist durch docs/security/cloud-autonomy-applicability.md am exakten Locator '## Feature 005 C3A assessment / Feature-005-C3A-Bewertung' belegt. Der am 2026-09-06 als Revalidated geprüfte Inhalt stützt ausschließlich die Einstufung N/A / Not Assessed.",
-            "en": "CL-02-12 is bound to docs/security/cloud-autonomy-applicability.md at the exact locator '## Feature 005 C3A assessment / Feature-005-C3A-Bewertung'. The content observed on 2026-09-06 as Revalidated supports only the N/A / Not Assessed disposition."
+            "de": "CL-02-12 ist durch docs/security/cloud-autonomy-applicability.md am exakten Locator '## Feature-005-C3A-Bewertung / Feature 005 C3A assessment' belegt. Der am 2026-09-06 als Revalidated geprüfte Inhalt stützt ausschließlich die Einstufung N/A / Not Assessed.",
+            "en": "CL-02-12 is bound to docs/security/cloud-autonomy-applicability.md at the exact locator '## Feature-005-C3A-Bewertung / Feature 005 C3A assessment'. The content observed on 2026-09-06 as Revalidated supports only the N/A / Not Assessed disposition."
           }
         }
       ],
@@ -2904,8 +2904,8 @@
       "implementationStatus": "Not Assessed",
       "learningStage": "Foundation",
       "rationale": {
-        "de": "CL-02-13 fordert 'CL-02-13: Cloud-Compliance-Assurance / Cloud Compliance Assurance'. Die aktuelle TinyCalc-Grenze am Nachweis docs/secure-development/checklisten/CL_02_Sichere-Softwarearchitektur.md @ CL-02-13: Cloud-Compliance-Assurance / Cloud Compliance Assurance; docs/security/cloud-compliance-assurance.md @ ## Feature 005 C5 assessment / Feature-005-C5-Bewertung löst den Kontrollpunkt nicht aus; deshalb gilt N/A / Not Assessed bis zum dokumentierten Änderungstrigger.",
-        "en": "CL-02-13 requires 'CL-02-13: Cloud-Compliance-Assurance / Cloud Compliance Assurance'. The current TinyCalc boundary evidenced at docs/secure-development/checklisten/CL_02_Sichere-Softwarearchitektur.md @ CL-02-13: Cloud-Compliance-Assurance / Cloud Compliance Assurance; docs/security/cloud-compliance-assurance.md @ ## Feature 005 C5 assessment / Feature-005-C5-Bewertung does not trigger the control, so it remains N/A / Not Assessed until the recorded change trigger."
+        "de": "CL-02-13 fordert 'CL-02-13: Cloud-Compliance-Assurance / Cloud Compliance Assurance'. Die aktuelle TinyCalc-Grenze am Nachweis docs/secure-development/checklisten/CL_02_Sichere-Softwarearchitektur.md @ CL-02-13: Cloud-Compliance-Assurance / Cloud Compliance Assurance; docs/security/cloud-compliance-assurance.md @ ## Feature-005-C5-Bewertung / Feature 005 C5 assessment löst den Kontrollpunkt nicht aus; deshalb gilt N/A / Not Assessed bis zum dokumentierten Änderungstrigger.",
+        "en": "CL-02-13 requires 'CL-02-13: Cloud-Compliance-Assurance / Cloud Compliance Assurance'. The current TinyCalc boundary evidenced at docs/secure-development/checklisten/CL_02_Sichere-Softwarearchitektur.md @ CL-02-13: Cloud-Compliance-Assurance / Cloud Compliance Assurance; docs/security/cloud-compliance-assurance.md @ ## Feature-005-C5-Bewertung / Feature 005 C5 assessment does not trigger the control, so it remains N/A / Not Assessed until the recorded change trigger."
       },
       "evidence": [
         {
@@ -2921,13 +2921,13 @@
         },
         {
           "path": "docs/security/cloud-compliance-assurance.md",
-          "locator": "## Feature 005 C5 assessment / Feature-005-C5-Bewertung",
+          "locator": "## Feature-005-C5-Bewertung / Feature 005 C5 assessment",
           "observedAt": "2026-09-06",
           "freshness": "Revalidated",
           "availability": "Existing",
           "supports": {
-            "de": "CL-02-13 ist durch docs/security/cloud-compliance-assurance.md am exakten Locator '## Feature 005 C5 assessment / Feature-005-C5-Bewertung' belegt. Der am 2026-09-06 als Revalidated geprüfte Inhalt stützt ausschließlich die Einstufung N/A / Not Assessed.",
-            "en": "CL-02-13 is bound to docs/security/cloud-compliance-assurance.md at the exact locator '## Feature 005 C5 assessment / Feature-005-C5-Bewertung'. The content observed on 2026-09-06 as Revalidated supports only the N/A / Not Assessed disposition."
+            "de": "CL-02-13 ist durch docs/security/cloud-compliance-assurance.md am exakten Locator '## Feature-005-C5-Bewertung / Feature 005 C5 assessment' belegt. Der am 2026-09-06 als Revalidated geprüfte Inhalt stützt ausschließlich die Einstufung N/A / Not Assessed.",
+            "en": "CL-02-13 is bound to docs/security/cloud-compliance-assurance.md at the exact locator '## Feature-005-C5-Bewertung / Feature 005 C5 assessment'. The content observed on 2026-09-06 as Revalidated supports only the N/A / Not Assessed disposition."
           }
         }
       ],

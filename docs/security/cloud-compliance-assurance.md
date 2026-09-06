@@ -1,6 +1,6 @@
 # Cloud-Compliance-Assurance / Cloud Compliance Assurance
 
-## Feature 005 C5 assessment / Feature-005-C5-Bewertung
+## Feature-005-C5-Bewertung / Feature 005 C5 assessment
 
 ## Deutscher Prüfblock
 

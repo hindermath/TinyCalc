@@ -1,6 +1,6 @@
 # Regulatorische Anwendbarkeit / Regulatory Applicability
 
-## Feature 005 technical screening / Technische Vorprüfung Feature 005
+## Technische Vorprüfung Feature 005 / Feature 005 technical screening
 
 ## Deutscher Prüfblock
 

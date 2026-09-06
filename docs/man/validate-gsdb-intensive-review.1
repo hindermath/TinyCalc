@@ -1,15 +1,75 @@
 .TH VALIDATE-GSDB-INTENSIVE-REVIEW 1 "2026-09-06" "TinyCalc" "User Commands"
 .SH NAME
-validate-gsdb-intensive-review \- read-only validation of the TinyCalc GSDB assessment
+validate-gsdb-intensive-review \- schreibgeschützte Prüfung der TinyCalc-GSDB-Bewertung
 .SH SYNOPSIS
 .B validate-gsdb-intensive-review.sh
+[\fB--action\fR AKTION] [\fB--assessment\fR DATEI] [\fB--repository-root\fR VERZEICHNIS]
+.SH BESCHREIBUNG
+Der Befehl prüft die Evidenzmatrix von Feature 005, ohne Dateien zu ändern.
+Der mit Bash 3 kompatible Einstieg übergibt die semantische Prüfung an
+PowerShell 7. Die deutsche und englische Kurzbedienhilfe ist außerdem über
+PowerShell Get-Help und die Option --help verfügbar.
+.SH OPTIONEN
+.TP
+.B --action AKTION
+Wählt Validate, ValidateFixtures, ValidateSources, ValidateCompendium oder
+ValidateMappings. Der Bash-Einstieg akzeptiert auch kleingeschriebene Formen
+mit Bindestrich.
+.TP
+.B --assessment DATEI
+Wählt die JSON-Bewertungsdatei. Standard ist die Produktionsmatrix von
+Feature 005.
+.TP
+.B --repository-root VERZEICHNIS
+Wählt die Repository-Wurzel für die Auflösung von Quellen und Evidenz.
+.TP
+.B -h, --help
+Zeigt die kompakte zweisprachige Hilfe.
+.SH NUR-LESE-GRENZE
+Der Validator liest JSON, Markdown, Quellmanifeste und Repository-Evidenz. Er
+ändert weder Bewertung oder Quelldateien noch Git-Index, Provider-Zustand oder
+Secrets. Solange diese Grenze gilt, ist ein Dry-Run-Schalter nicht anwendbar.
+.SH FEHLERKLASSEN
+GSDB001 umfasst fehlende oder ungültige UTF-8-, JSON- oder Schemaeingaben.
+GSDB002 umfasst Quellbindungen und sichere Pfade. GSDB003 umfasst kanonische
+IDs. GSDB004 umfasst die Sammelbandparität. GSDB005 umfasst Bewertungsfelder
+und Statusachsen. GSDB006 umfasst nicht belegte positive Evidenz. GSDB007
+umfasst Human-only- und Freigabegrenzen. GSDB008 umfasst Pflichten-, Preset-,
+Workflow- oder Validatorabdeckung. GSDB009 umfasst Finding-Verknüpfungen.
+GSDB010 umfasst Abweichungen bei Zusammenfassung, Sortierung, Datum oder Hash.
+Preset-Zuordnungen und Finding-Verknüpfungen werden als exakt wechselseitige
+Mengen geprüft. Allgemeine Evidenz-Locators und ungebundene Evidenzpfade werden
+abgelehnt. Ungültige Aktionen und Optionen werden gemeldet, ohne ihre
+übergebenen Werte auszugeben.
+.SH BEENDIGUNGSSTATUS
+Null bedeutet, dass der gewählte Vertrag bestanden wurde. Eins bedeutet eine
+fehlgeschlagene Prüfung; stderr beginnt dann mit genau einer stabilen
+GSDB-Fehlerklasse.
+.SH BEISPIELE
+.nf
+bash scripts/validate-gsdb-intensive-review.sh --action validate \
+  --assessment docs/security/gsdb-intensive-review/evidence-matrix.json \
+  --repository-root .
+
+pwsh -NoProfile -File scripts/validate-gsdb-intensive-review.ps1 \
+  -Action ValidateFixtures -RepositoryRoot .
+.fi
+.SH SIEHE AUCH
+docs/security/gsdb-intensive-review/evidence-matrix.md und
+specs/005-gsdb-intensive-review/checklists/script-parity.md enthalten die
+vollständige zweisprachige Bewertungs- und Paritätsevidenz.
+.SH ENGLISH VERSION
+.SS NAME
+validate-gsdb-intensive-review \- read-only validation of the TinyCalc GSDB assessment
+.SS SYNOPSIS
+.B validate-gsdb-intensive-review.sh
 [\fB--action\fR ACTION] [\fB--assessment\fR FILE] [\fB--repository-root\fR DIR]
-.SH DESCRIPTION
+.SS DESCRIPTION
 The command validates the Feature 005 evidence matrix without changing files.
 The Bash 3 compatible entry delegates to the PowerShell 7 semantic engine.
-Die deutsche und englische Bedienhilfe ist auch über PowerShell Get-Help und
-die Option --help verfügbar.
-.SH OPTIONS
+Bilingual compact help is also available through PowerShell Get-Help and the
+--help option.
+.SS OPTIONS
 .TP
 .B --action ACTION
 Select Validate, ValidateFixtures, ValidateSources, ValidateCompendium, or
@@ -24,26 +84,26 @@ Select the repository root used for source and evidence resolution.
 .TP
 .B -h, --help
 Show bilingual compact help.
-.SH READ-ONLY BOUNDARY
+.SS READ-ONLY BOUNDARY
 The validator reads JSON, Markdown, source manifests, and repository evidence.
 It does not modify the assessment, source files, Git index, provider state, or
 secrets. A dry-run switch is therefore not applicable while this boundary
 remains true.
-.SH FAILURE CLASSES
-GSDB001 covers missing or invalid UTF-8/JSON/schema input. GSDB002 covers source
-binding and safe-path failures. GSDB003 covers canonical ID failures. GSDB004
-covers compendium parity. GSDB005 covers assessment fields and status axes.
-GSDB006 covers unsupported positive evidence. GSDB007 covers Human-only or
-approval boundaries. GSDB008 covers duty, preset, workflow, or validator
+.SS FAILURE CLASSES
+GSDB001 covers missing or invalid UTF-8, JSON, or schema input. GSDB002 covers
+source binding and safe-path failures. GSDB003 covers canonical ID failures.
+GSDB004 covers compendium parity. GSDB005 covers assessment fields and status
+axes. GSDB006 covers unsupported positive evidence. GSDB007 covers Human-only
+or approval boundaries. GSDB008 covers duty, preset, workflow, or validator
 coverage. GSDB009 covers finding linkage. GSDB010 covers summary, ordering,
-date, or hash drift.
-Preset mappings and finding links are checked as exact reciprocal sets.
-Generic evidence locators and unbound evidence paths are rejected. Invalid
-actions and options are reported without echoing their supplied values.
-.SH EXIT STATUS
+date, or hash drift. Preset mappings and finding links are checked as exact
+reciprocal sets. Generic evidence locators and unbound evidence paths are
+rejected. Invalid actions and options are reported without echoing their
+supplied values.
+.SS EXIT STATUS
 Zero means the selected contract passed. One means validation failed and stderr
 begins with exactly one stable GSDB failure class.
-.SH EXAMPLES
+.SS EXAMPLES
 .nf
 bash scripts/validate-gsdb-intensive-review.sh --action validate \
   --assessment docs/security/gsdb-intensive-review/evidence-matrix.json \
@@ -52,7 +112,7 @@ bash scripts/validate-gsdb-intensive-review.sh --action validate \
 pwsh -NoProfile -File scripts/validate-gsdb-intensive-review.ps1 \
   -Action ValidateFixtures -RepositoryRoot .
 .fi
-.SH SEE ALSO
+.SS SEE ALSO
 docs/security/gsdb-intensive-review/evidence-matrix.md and
 specs/005-gsdb-intensive-review/checklists/script-parity.md provide the complete
 bilingual assessment and parity evidence.

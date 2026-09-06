@@ -590,11 +590,11 @@ function Assert-GsdbAssessmentFields {
     }
 
     $RequiredFeatureEvidence = [ordered]@{
-        'CL-01-02' = @('docs/security/asvs-verification.md', '## Feature 005 review / Prüfung für Feature 005')
+        'CL-01-02' = @('docs/security/asvs-verification.md', '## Prüfung für Feature 005 / Feature 005 review')
         'CL-01-06' = @('docs/security/zero-trust-applicability.md', '## Feature 005: Produkt und Lieferung / Product and delivery')
-        'CL-01-12' = @('docs/security/regulatory-applicability.md', '## Feature 005 technical screening / Technische Vorprüfung Feature 005')
-        'CL-02-12' = @('docs/security/cloud-autonomy-applicability.md', '## Feature 005 C3A assessment / Feature-005-C3A-Bewertung')
-        'CL-02-13' = @('docs/security/cloud-compliance-assurance.md', '## Feature 005 C5 assessment / Feature-005-C5-Bewertung')
+        'CL-01-12' = @('docs/security/regulatory-applicability.md', '## Technische Vorprüfung Feature 005 / Feature 005 technical screening')
+        'CL-02-12' = @('docs/security/cloud-autonomy-applicability.md', '## Feature-005-C3A-Bewertung / Feature 005 C3A assessment')
+        'CL-02-13' = @('docs/security/cloud-compliance-assurance.md', '## Feature-005-C5-Bewertung / Feature 005 C5 assessment')
         'CL-04-01' = @('docs/security/security-quality-scenarios.md', '## GSDB-Szenarien 2026-09-06 / GSDB Scenarios 2026-09-06')
         'CL-05-01' = @('docs/security/supply-chain-evidence.md', '### Feature-005-Lieferkettenlauf / Feature 005 supply-chain run')
         'CL-05-03' = @('docs/security/dependency-audit.md', '## Feature-005-Prüfung 2026-09-06 / Feature 005 Review 2026-09-06')
