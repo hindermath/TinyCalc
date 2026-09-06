@@ -130,3 +130,16 @@ head.
 - `specs/003-terminalgui-migration/evidence/regression.md`
 - Constitution Principles XII and XIII
 - iSAQB CPSA-F Quality Attribute Scenarios
+
+## GSDB-Szenarien 2026-09-06 / GSDB Scenarios 2026-09-06
+
+| Reiz und Umgebung / Stimulus and environment | Reaktion / Response | Messbarer Nachweis / Measure |
+|---|---|---|
+| Ungültige Formel oder Datei im Normalbetrieb / Invalid formula or file | sicher ablehnen oder begrenzten Fehler melden / reject safely or show a bounded error | Parser-/Engine-/IO-Tests grün; kein Stacktrace oder Secret / tests green; no stack trace or secret |
+| Manipulierte Abhängigkeit im Lieferlauf / Manipulated dependency | Lieferung fail-closed stoppen / stop delivery fail-closed | aktuelle Paket-, Lizenz-, Advisory- und SBOM-Prüfung / current package, licence, advisory, and SBOM checks |
+| Geänderter Matrix-/Preset-Beleg / Changed matrix or preset evidence | Status nicht wiederverwenden / do not reuse status | Validator endet ungleich null / validator exits non-zero |
+| Fehlende menschliche Entscheidung / Missing human decision | keinen Pass ableiten / infer no pass | `NotProvided` und offen oder ausstehend / `NotProvided` and open or pending |
+
+Diese Szenarien sind Prüfkriterien, keine Sicherheits-, Rechts- oder
+Barrierefreiheitszertifizierung. / These scenarios are assessment criteria,
+not security, legal, or accessibility certification.

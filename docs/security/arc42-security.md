@@ -306,3 +306,36 @@ those risks; documentation alone does not close them.
 - `specs/003-terminalgui-migration/spec.md`
 - Constitution Principles XII–XVIII
 - arc42 Section 8 and iSAQB CPSA-F quality concepts
+
+## 12. GSDB-Architekturprüfung 2026-09-06 / GSDB Architecture Review 2026-09-06
+
+### Deutscher Prüfblock
+
+Kontext-, Baustein-, Laufzeit- und Deployment-Sicht aus
+`docs/architecture/maintenance-tui.md` und
+`docs/architecture/terminalgui-migration.md` stimmen mit dem beobachteten
+Produkt überein: lokale TUI, Core-Engine, lokale Datei-/Formeleingaben und
+Terminaltreiber. Repository, CI und Provider bilden eine getrennte
+Liefergrenze.
+
+- Defense in Depth: Parser-/Domänenregeln, Tests und Liefergates sind getrennte
+  Schichten; keine einzelne Schicht ist vollständiger Schutz.
+- Least Privilege und Fail-Safe Defaults: Der Prozess nutzt Benutzerrechte;
+  ungültige Eingaben und Prüfabweichungen scheitern.
+- Angriffsfläche und Separation of Concerns: Kein Web/API/Auth-Endpunkt wurde
+  gefunden. Formel, IO, TUI und Delivery-Nachweise bleiben getrennt.
+- Sichere Konfiguration: Secrets bleiben außerhalb von Quellcode und Evidenz.
+- Supply Chain: Paket-, Lizenz-, Advisory-, SBOM- und Provenance-Prüfungen sind
+  eigenständige Gates.
+
+Es entsteht kein ADR oder S-ADR, weil keine Architekturentscheidung getroffen
+wird. Ein neuer Dienst, Trust Boundary, Deployment-Modus, Qualitätskonflikt
+oder struktureller Security-Entscheid ist der Trigger.
+
+### English review block
+
+The views remain consistent with a local TUI, Core engine, local file/formula
+input, and terminal drivers. Repository, CI, and provider delivery form a
+separate boundary. Defense in depth, least privilege, fail-safe defaults,
+attack-surface reduction, separation of concerns, secure configuration, and
+supply-chain controls were reassessed without changing architecture.

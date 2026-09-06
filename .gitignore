@@ -874,3 +874,6 @@ modules.xml
 .agents/*
 !.agents/skills/
 !.agents/skills/**
+
+# Operational state for the active local autonomous run
+specs/005-gsdb-intensive-review/autonomous-run-state.json

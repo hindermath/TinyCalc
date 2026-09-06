@@ -218,3 +218,53 @@ advisory, license, or head mismatch blocks delivery.
 - [SLSA v1.2](https://slsa.dev/spec/v1.2/)
 - [OpenSSF Scorecard](https://securityscorecards.dev/)
 - Constitution Principles XIV and XVI
+
+## GSDB-Aktualisierung 2026-09-06 / GSDB Update 2026-09-06
+
+**DE:** Eine Produkt-AI-SBOM ist `N/A`. KI wird nur als Entwicklungswerkzeug
+verwendet; kein Modell, Dataset, Embedding, Inferenzdienst oder AI-Runtime-
+Baustein wird mit TinyCalc ausgeliefert oder betrieben. Ein solcher Baustein
+öffnet die Prüfung und verlangt AI-SBOM-Evidenz.
+
+Eine SPDX-SBOM bleibt für das verteilbare Release `Applicable`. Werkzeug-,
+Hash- und Driftstand folgen im finalen Lieferkettenlauf. VEX wird nur für echte
+aktuelle Funde erstellt und darf keinen Fund ohne technische Begründung
+neutralisieren. SLSA ist Zielmodell für Provenance. Ohne signierte,
+überprüfbare Attestation wird kein SLSA-Level behauptet.
+
+**EN:** Product AI-SBOM is `N/A` because AI is development tooling only; no
+model, dataset, inference service, or AI runtime ships or operates with the
+product. SPDX SBOM remains applicable. VEX is created only for actual current
+findings, and no SLSA level is claimed without a signed verifiable attestation.
+
+### Feature-005-Lieferkettenlauf / Feature 005 supply-chain run
+
+**DE:** Syft 1.51.0 erzeugte am 2026-09-06 aus dem Release-Ausgabebaum eine
+temporäre SPDX-JSON-SBOM im autorisierten Runtime-Verzeichnis. SHA-256 ist
+`802e95731f30096b62f461ca5499db218c4f84fd886e0edca032387a8ca29564`.
+Sie und die getrackte Vergleichs-SBOM enthalten jeweils 27 eindeutige Pakete.
+Die einzige Drift ist die eigene Assembly-Version von `MicroCalc.Tui` von
+`1.3.1.11` auf `1.5.1.20`; alle externen Paketnamen und Versionen stimmen.
+
+Der credential-freie lokale 38-Archiv-Snapshot meldete keine anfälligen
+Pakete; der identische externe Graph bindet zusätzlich den früheren
+Online-Bericht mit null bekannten Funden. Daher ist VEX aktuell `N/A`, weil
+kein Fund oder Fehlalarm zu disponieren ist. Dies behauptet keine frische
+Online-Registry-Abfrage. Ein echter Fund verlangt eine technische Disposition
+und ein kritischer offener Fund blockiert. Einige Workflow-Actions sind auf SHA
+gepinnt, andere auf Major-Tags; das bleibt offene Nacharbeit. Lizenzen bleiben
+über den identischen Graphen an 23 MIT und eine BSD-2-Clause gebunden. Es gibt
+keine signierte Provenance, keinen behaupteten SLSA-Level und keinen aktuellen
+veröffentlichten OpenSSF-Score für TinyCalc.
+
+**EN:** Syft 1.51.0 generated a temporary SPDX JSON SBOM from the Release
+output. Its SHA-256 is
+`802e95731f30096b62f461ca5499db218c4f84fd886e0edca032387a8ca29564`.
+Both SBOMs contain 27 unique packages; only the TinyCalc assembly version
+differs, from `1.3.1.11` to `1.5.1.20`. The credential-free local 38-archive
+snapshot reported no vulnerable package, and the identical external graph is
+also bound to the prior online result with zero known findings. VEX is
+therefore currently `N/A` because there is no finding or false positive to
+classify; this is not a claim of a fresh online-registry query. Actions use a
+mix of immutable SHAs and major tags, signed provenance is absent, no SLSA
+level is claimed, and no current OpenSSF score is claimed.

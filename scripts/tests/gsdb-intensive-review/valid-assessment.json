@@ -1,0 +1,54 @@
+{
+  "fixtureMode": true,
+  "schemaVersion": "1.0",
+  "assessmentId": "tinycalc-gsdb-intensive-review-fixture",
+  "reviewedAt": "2026-09-06",
+  "repository": "TinyCalc",
+  "featurePath": "specs/005-gsdb-intensive-review",
+  "sourceInventory": [
+    {
+      "sourceId": "baseline-manifest",
+      "sourceClass": "Guideline",
+      "path": "docs/secure-development/baseline-manifest.json",
+      "version": "3.2.0",
+      "reviewedAt": "2026-09-06",
+      "normalizedSha256": "e7739adbf67b2d0f16273f52839c2cb6d4807753f7246b33bac6969b59355ad3",
+      "scope": "Fixture source binding only; not a production assessment.",
+      "freshness": "Current",
+      "locator": "baselineVersion",
+      "findingIds": []
+    }
+  ],
+  "checklistRows": [
+    {
+      "id": "CL-01-01",
+      "sourcePath": "docs/secure-development/checklisten/CL_01_Standards-Anwendbarkeit.md",
+      "sourceLocator": "CL-01-01",
+      "applicability": "Applicable",
+      "implementationStatus": "Fulfilled",
+      "learningStage": "Foundation",
+      "rationale": "The fixture proves one source and one row contract only.",
+      "evidence": [
+        {
+          "path": "constitution.md",
+          "locator": "Principles XIV-XVIII",
+          "observedAt": "2026-09-06",
+          "freshness": "Current",
+          "availability": "Existing",
+          "supports": "NIST SSDF and CWE Top 25 are always applicable."
+        }
+      ],
+      "owner": "TinyCalc project owner role",
+      "reviewer": "Independent technical security review role",
+      "followUp": "Re-run after any fixture or source-contract change.",
+      "expectedEvidence": "A passing focused fixture validation.",
+      "targetDueAt": "N/A: the focused fixture is complete.",
+      "reevaluationTrigger": "Any validator, schema, fixture, or source-contract change.",
+      "residualRisk": "A one-row fixture does not prove production completeness.",
+      "severity": "None",
+      "humanOnly": false,
+      "humanDecisionEvidence": "NotProvided",
+      "findingIds": []
+    }
+  ]
+}

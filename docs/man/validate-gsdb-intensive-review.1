@@ -1,0 +1,58 @@
+.TH VALIDATE-GSDB-INTENSIVE-REVIEW 1 "2026-09-06" "TinyCalc" "User Commands"
+.SH NAME
+validate-gsdb-intensive-review \- read-only validation of the TinyCalc GSDB assessment
+.SH SYNOPSIS
+.B validate-gsdb-intensive-review.sh
+[\fB--action\fR ACTION] [\fB--assessment\fR FILE] [\fB--repository-root\fR DIR]
+.SH DESCRIPTION
+The command validates the Feature 005 evidence matrix without changing files.
+The Bash 3 compatible entry delegates to the PowerShell 7 semantic engine.
+Die deutsche und englische Bedienhilfe ist auch über PowerShell Get-Help und
+die Option --help verfügbar.
+.SH OPTIONS
+.TP
+.B --action ACTION
+Select Validate, ValidateFixtures, ValidateSources, ValidateCompendium, or
+ValidateMappings. Hyphenated lower-case forms are accepted by the Bash entry.
+.TP
+.B --assessment FILE
+Select the assessment JSON file. The default is the Feature 005 production
+matrix.
+.TP
+.B --repository-root DIR
+Select the repository root used for source and evidence resolution.
+.TP
+.B -h, --help
+Show bilingual compact help.
+.SH READ-ONLY BOUNDARY
+The validator reads JSON, Markdown, source manifests, and repository evidence.
+It does not modify the assessment, source files, Git index, provider state, or
+secrets. A dry-run switch is therefore not applicable while this boundary
+remains true.
+.SH FAILURE CLASSES
+GSDB001 covers missing or invalid UTF-8/JSON/schema input. GSDB002 covers source
+binding and safe-path failures. GSDB003 covers canonical ID failures. GSDB004
+covers compendium parity. GSDB005 covers assessment fields and status axes.
+GSDB006 covers unsupported positive evidence. GSDB007 covers Human-only or
+approval boundaries. GSDB008 covers duty, preset, workflow, or validator
+coverage. GSDB009 covers finding linkage. GSDB010 covers summary, ordering,
+date, or hash drift.
+Preset mappings and finding links are checked as exact reciprocal sets.
+Generic evidence locators and unbound evidence paths are rejected. Invalid
+actions and options are reported without echoing their supplied values.
+.SH EXIT STATUS
+Zero means the selected contract passed. One means validation failed and stderr
+begins with exactly one stable GSDB failure class.
+.SH EXAMPLES
+.nf
+bash scripts/validate-gsdb-intensive-review.sh --action validate \
+  --assessment docs/security/gsdb-intensive-review/evidence-matrix.json \
+  --repository-root .
+
+pwsh -NoProfile -File scripts/validate-gsdb-intensive-review.ps1 \
+  -Action ValidateFixtures -RepositoryRoot .
+.fi
+.SH SEE ALSO
+docs/security/gsdb-intensive-review/evidence-matrix.md and
+specs/005-gsdb-intensive-review/checklists/script-parity.md provide the complete
+bilingual assessment and parity evidence.

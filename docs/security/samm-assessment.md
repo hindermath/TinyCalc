@@ -105,3 +105,24 @@ new assessment. Until T063/T067, the exact-head confirmation remains pending.
 - `specs/003-terminalgui-migration/tasks.md`
 - [OWASP SAMM](https://owasp.org/www-project-samm/)
 - Constitution Principles XIV and XVIII
+
+## GSDB-Neubewertung 2026-09-06 / GSDB Reassessment 2026-09-06
+
+**DE:** OWASP SAMM bleibt für das langlebige Repository `Applicable`. Die
+sichtbare Reife umfasst versionsgebundene Anforderungen, Bedrohungsmodell,
+Security-Architektur, Code-/Abhängigkeitsprüfungen, CI und Liefergates. Es wird
+kein numerischer Reifegrad erfunden: Organisationsweite Interviews, Kennzahlen
+und menschliche Freigabe fehlen. Update-Automation, signierte Provenance und
+wiederkehrende Review-Metriken bleiben getrennte Aufträge.
+
+Owner ist die Repository-Maintenance-Rolle; Reviewer ist die unabhängige
+technische Security-Review-Rolle. Wiederkehrende Befunde, Prozessänderungen,
+eine neue Runtime oder ein freigegebener Verbesserungsauftrag lösen eine neue
+Bewertung aus. Restrisiko ist die Differenz zwischen Repository-Evidenz und
+organisationsweiter Wirksamkeit.
+
+**EN:** OWASP SAMM remains applicable to this long-lived repository. Visible
+maturity includes versioned requirements, threat modelling, security
+architecture, code and dependency review, CI, and traceable delivery gates.
+No numeric maturity score is invented without organization-wide interviews,
+metrics, and human approval. Improvement work remains separately authorized.
