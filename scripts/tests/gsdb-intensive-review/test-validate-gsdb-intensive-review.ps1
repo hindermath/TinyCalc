@@ -19,7 +19,11 @@ function Copy-GsdbFixture {
         ConvertFrom-Json -AsHashtable -Depth 100
     & $Mutate $Document
     $Target = Join-Path $FixtureRoot "${Name}.json"
-    $Json = $Document | ConvertTo-Json -Depth 100
+    # ConvertTo-Json folgt auf Windows der Plattform-Zeilenendung. Fixtures
+    # müssen den produktiven LF-Vertrag trotzdem auf jedem Runner erfüllen.
+    # ConvertTo-Json follows the platform newline on Windows. Fixtures must
+    # still meet the production LF contract on every runner.
+    $Json = ($Document | ConvertTo-Json -Depth 100).Replace("`r`n", "`n").Replace("`r", "`n")
     [IO.File]::WriteAllText($Target, ($Json + "`n"), $Utf8NoBom)
     return $Target
 }
@@ -34,7 +38,7 @@ function Copy-GsdbProductionAssessment {
         ConvertFrom-Json -AsHashtable -Depth 100
     & $Mutate $Document
     $Target = Join-Path $FixtureRoot "production-${Name}.json"
-    $Json = $Document | ConvertTo-Json -Depth 100
+    $Json = ($Document | ConvertTo-Json -Depth 100).Replace("`r`n", "`n").Replace("`r", "`n")
     [IO.File]::WriteAllText($Target, ($Json + "`n"), $Utf8NoBom)
     return $Target
 }

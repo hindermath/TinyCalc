@@ -660,3 +660,26 @@ external duties, 13/13 presets including the 8/8 standard matrix, zero
 unsupported positive claims, 13 open findings, and 42 open Human-only rows.
 Provider, exact-head, PreMerge, merge, PostMerge, closeout, and sync evidence
 remain `Pending` until the corresponding real event.
+
+## Erster PR-Head: Windows-Befund / First PR head: Windows finding
+
+**DE:** PR 70 wurde auf Head
+`ab11a9f197f7f431d4d0f51985167aa921665eba` eröffnet. Der erste CI-Lauf
+`34039191930` schlug im Windows-Validatorjob materiell fehl: PowerShells
+`ConvertTo-Json` erzeugte dort CRLF in Laufzeit-Fixtures, sodass der
+vorgeschaltete LF-Vertrag `GSDB001` statt der erwarteten semantischen
+Fehlerklasse meldete. Ubuntu wurde durch Fail-fast abgebrochen. Dieser Befund
+wird nicht umgangen. Die beiden Fixture-Writer normalisieren ihre JSON-Ausgabe
+nun explizit auf LF; Produktcode und Produktionsmatrix bleiben unverändert.
+Für den prospektiven zweiten Branch-Commit und den erneuten Build wurde die
+Version regelkonform auf `1.5.2.22` gesetzt.
+
+**EN:** PR 70 was opened at head
+`ab11a9f197f7f431d4d0f51985167aa921665eba`. Initial CI run `34039191930`
+failed materially in the Windows validator job: PowerShell `ConvertTo-Json`
+used CRLF for runtime fixtures, so the preceding LF contract returned
+`GSDB001` instead of the intended semantic failure class. Ubuntu was cancelled
+by fail-fast. This finding is not bypassed. Both fixture writers now normalize
+their JSON output explicitly to LF; product code and the production matrix are
+unchanged. Version `1.5.2.22` aligns the prospective second branch commit and
+the remediation build counter.
