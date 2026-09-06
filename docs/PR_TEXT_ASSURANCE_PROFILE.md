@@ -21,7 +21,8 @@ Register the selected profile only after MergeAndSync.*
 
 ## Testplan / Test Plan
 
-Archiv-SHA-256, exakte 13er-Matrix, 581 bytegleiche geschützte Dateien,
+Archiv-SHA-256, exakte 13er-Matrix, 580 bytegleiche geschützte Dateien plus
+eine ausdrücklich genehmigte einzelne GSDB-Hashersetzung für `AGENTS.md`,
 isolierte Paket-/Oberflächentests, lesender Status, Secret-Scan,
 Statistikrenderer und bestehende PR-CI.
 *Verify the archive hash, exact matrix, byte preservation, isolated package and

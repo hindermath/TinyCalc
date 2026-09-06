@@ -1,4 +1,4 @@
-# Secure Development Assurance – Integration
+# Secure Development Assurance – Projektintegration / Project Integration
 
 ## Zweck und Profil / Purpose and Profile
 
@@ -70,7 +70,10 @@ package README provides the complete command contract.*
 
 - SHA-256 des öffentlichen Archivs stimmt mit der Freigabebindung überein.
 - Exakte 13-Preset-Matrix bestanden; alle bestehenden Registereinträge und
-  Profildefinitionen unverändert, 581 geschützte Dateien bytegleich.
+  Profildefinitionen unverändert. Vor dem genehmigten GSDB-Nachtrag waren
+  581 geschützte Dateien bytegleich; danach bleiben 580 bytegleich und die
+  Evidence-Matrix unterscheidet sich ausschließlich in der unten genannten
+  Hashbindung. Sämtliche installierten Presets bleiben bytegleich.
 - Paket-Vertragsfixtures und Installationstests bestanden: positive und
   negative Fälle, vier Gates, menschliche Entscheidungsgrenzen,
   LF/CRLF/BOM, Bash-/PowerShell-Parität und acht generierte Oberflächen.
@@ -93,6 +96,35 @@ fixtures, shell parity, and generated command checks passed. Existing evidence
 reports four Ready gates but three Open human authorization boundaries. Its
 recorded next action is retained, not executed. No product runtime or API
 changes are made; product regression remains in the existing PR CI.*
+
+## Genehmigter Hash-Nachtrag / Authorized Hash-Binding Addendum
+
+Thorsten hat am 2026-09-06 die eng begrenzte Aktualisierung der Hashbindung
+für `AGENTS.md` ausdrücklich genehmigt. Die CI hatte mit `GSDB002` korrekt
+abgebrochen. Der inhaltliche Abgleich zeigt ausschließlich die freigegebene
+13er-Profilintegration, die GitHub-Quellenregel, die lesende Status-/autorisierte
+Review-Grenze und die unveränderte C5-Abgrenzung. Keine belegte
+Sicherheitsanforderung wurde entfernt oder abgeschwächt.
+
+In `docs/security/gsdb-intensive-review/evidence-matrix.json` wurde nur
+`sourceInventory[sourceId=SRC-055].normalizedSha256` aktualisiert:
+
+- Vorher / before: `64b3050bf61ec3844601d60ab7adce9c889f573fb2fcb541d39c61bdbb6fded6`.
+- Nachher / after: `ba8234fd050a06f64ffbb8ddfbb7c04be99ee669a0d2eb0764455c8585e0cf4b`.
+
+Quelle, Locator, Datum, Bewertungen, Findings, Risiken, Baseline und
+menschliche Freigaben bleiben unverändert. Dies ist kein neuer GSDB-Review
+und keine neue Erfüllungsbehauptung. Der Vorgängercommit erhält die historische
+Bindung. Der Bytevergleich erlaubt nur diese einzelne Hashersetzung.
+
+*Thorsten explicitly authorized this narrowly scoped binding update on
+2026-09-06 after CI correctly rejected the stale source hash. Semantic review
+confirmed only the approved profile/source/command-boundary guidance changed;
+no security requirement was removed or weakened. Only SRC-055's normalized
+hash changes. Source metadata, dispositions, findings, risks, baseline, and
+human decisions stay unchanged. This is not a new GSDB review or fulfilment
+claim. The predecessor retains the old binding, and preservation checks
+permit only this exact hash replacement.*
 
 ## Dokumentationsauswirkung / Documentation Impact
 
