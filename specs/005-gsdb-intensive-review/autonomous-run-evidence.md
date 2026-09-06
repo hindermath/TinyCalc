@@ -46,8 +46,8 @@ feature will be started.
 | Plan review | Pass | `checklists/plan-review.md`; 1 Critical, 3 High, 9 Medium and 1 Low resolved, 0 material open |
 | Tasks | Pass | `tasks.md`; 131 sequential unchecked tasks, ten phases and closed feature/closeout delivery sets |
 | Analyze | Pass | Validated `analyze.result.json`; no Critical/High finding remains |
-| Implement | Blocked | T001-T016 complete; T017 semantic validator gate is not complete |
-| Delivery | Open | Exact-head checks, review, temporary PreMerge evidence, merge and sync |
+| Implement | Active | T001-T117 complete; causal closeout PR and terminal read-only validation remain |
+| Delivery | Active | Feature PR 70 is merged and synchronized; closeout provider merge remains `Pending` |
 
 ## Wiederaufnahme-Audit / Resume audit
 
@@ -683,3 +683,131 @@ by fail-fast. This finding is not bypassed. Both fixture writers now normalize
 their JSON output explicitly to LF; product code and the production matrix are
 unchanged. Version `1.5.2.22` aligns the prospective second branch commit and
 the remediation build counter.
+
+## Exakter Feature-Head und Review T082-T106 / Exact feature head and review T082-T106
+
+**DE:** PR 70 konvergierte nach zwei eng begrenzten Korrekturzyklen auf den
+exakten Head `3fbcfdc984eb619b4854e5e74b2a65d554ceeaf1`. Alle 20 tatsächlichen
+Checks waren erfolgreich. Der unabhängige Claude-Review-Lauf `34041219376`
+bestand; `Changes Requested` und ungelöste actionable Threads waren jeweils
+null. GitHub meldete weiterhin ausschließlich `REVIEW_REQUIRED`. Deshalb wurde
+`GSDB-GATE-029` nach erneuter Prüfung auf `Applicable` gesetzt; der Bypass blieb
+auf diese formale Regel begrenzt. Der neue Schema-2.0-PreMerge-Snapshot hat
+SHA-256 `d926db3b9933b768ded951802abac01bdee5ae7ff40b75e8bf090035c1dc2aca`,
+deckt alle 33 Gates genau einmal als `Primary` ab und enthält keine
+Mergebehauptung.
+
+**EN:** PR 70 converged after two narrowly scoped remediation cycles at exact
+head `3fbcfdc984eb619b4854e5e74b2a65d554ceeaf1`. All 20 actual checks passed.
+Independent Claude review run `34041219376` passed; both Changes Requested and
+unresolved actionable threads were zero. GitHub still reported only
+`REVIEW_REQUIRED`. `GSDB-GATE-029` was therefore activated after another
+review, while bypass authority remained limited to that formal rule. The new
+schema-2.0 PreMerge snapshot has SHA-256
+`d926db3b9933b768ded951802abac01bdee5ae7ff40b75e8bf090035c1dc2aca`,
+covers all 33 gates exactly once as `Primary`, and claims no merge fact.
+
+## Feature-Merge und PostMerge T107-T110 / Feature merge and PostMerge T107-T110
+
+**DE:** Der formal begrenzte Admin-Merge schloss PR 70 am
+`2026-09-06T15:13:41Z` als Merge-Commit
+`81fce22905a8caf4a3874e50fe2be5a1d7c7a812`. Seine Eltern sind der vorherige
+`main`-Head `f287223307b8c1ac00e67129354030a61e8dd39d` und der exakt geprüfte
+Feature-Head. Lokales `main` und `origin/main` wurden ausschließlich per
+Fast-Forward auf denselben Merge-Commit synchronisiert. Der persistierte
+PostMerge-Snapshot besitzt SHA-256
+`a7fd5ebf754d5b9e11cdaa29e31ead76c9f1c3e315c5df41549c5e5d7fec8f40`,
+bindet den akzeptierten PreMerge-Hash, den echten Merge-Commit und eine leere
+`changedPaths`-Liste.
+
+**EN:** The formal-only admin merge closed PR 70 at `2026-09-06T15:13:41Z`
+as merge commit `81fce22905a8caf4a3874e50fe2be5a1d7c7a812`. Its parents are prior
+`main` head `f287223307b8c1ac00e67129354030a61e8dd39d` and the exact reviewed
+feature head. Local `main` and `origin/main` were synchronized only by
+fast-forward to the same merge commit. The persisted PostMerge snapshot has
+SHA-256 `a7fd5ebf754d5b9e11cdaa29e31ead76c9f1c3e315c5df41549c5e5d7fec8f40`,
+binds the accepted PreMerge hash and actual merge commit, and records an empty
+`changedPaths` list.
+
+## Kausaler Serien-Closeout T111-T117 / Causal series closeout T111-T117
+
+**DE:** Der Branch `codex/005-gsdb-intensive-review-closeout` wurde nur vom
+synchronisierten `main` erzeugt. Der GSDB-Intake ist branchgestempelt und im
+neuen Manifest als `Completed` geführt. Genau eine Serienoperation mit ID
+`5415a66a-8944-411d-9914-9b090cb6bb5b` aktualisierte 13 Ziele, vier Wurzeln
+und neun bindende Kanten; kein Ziel ist als `Eligible` ausgewählt. Die
+Validatoren nennen lediglich zwei strukturell berechtigte, aber weiterhin
+`Pending` bleibende Kandidaten. Das Vorgänger-Manifest und -Receipt wurden
+byte-identisch unter `20260906T151949Z` archiviert und über die Hashes
+`24552c219bd516067da0c2fe6f6be39a935aac8f3e38f7237db9b505d68ad99b`
+beziehungsweise
+`b4c0fca16a66a3a7242ae6dfa85af262e5c206cc794444f551d7fa0f25852094`
+gebunden. PowerShell und Bash bestanden Manifest, Receipt und vollständiges
+Requirements-Alignment. Der getrennte Intake-Review bleibt nach der
+hashgebundenen Mutation ausdrücklich `Pending` und wurde nicht erfunden.
+
+Die ursprüngliche enge Closeout-Pfadliste nannte die Serienarchive und
+deterministisch generierten Alignment-Artefakte nicht vollständig. Um die
+verbindlichen Anforderungen `preserved archives` und Cross-Shell-Alignment
+ehrlich zu erfüllen, umfasst derselbe evidence-only Commit zusätzlich genau
+die beiden Archive, Root-Reihenfolge, GSDB-Receipt, Generator,
+Alignment-Validator und dessen Negativ-Fixture sowie die kausal erforderliche
+Statistikbindung. Produktcode, Produktabhängigkeiten und Folgefeatures bleiben
+unverändert. Closeout-Head, Checks, Review, Merge und finaler Sync sind bis zu
+ihrem tatsächlichen Providerereignis `Pending`.
+
+**EN:** Branch `codex/005-gsdb-intensive-review-closeout` was created only
+from synchronized `main`. The GSDB intake is branch-stamped and recorded as
+`Completed` in the new manifest. Exactly one series operation with ID
+`5415a66a-8944-411d-9914-9b090cb6bb5b` updated 13 targets, four roots, and
+nine binding edges; no target is declared `Eligible`. The validators only
+report two structurally eligible candidates which remain `Pending` and are
+not selected. The predecessor manifest and receipt were archived
+byte-identically under `20260906T151949Z` and bound by hashes
+`24552c219bd516067da0c2fe6f6be39a935aac8f3e38f7237db9b505d68ad99b`
+and `b4c0fca16a66a3a7242ae6dfa85af262e5c206cc794444f551d7fa0f25852094`.
+PowerShell and Bash passed manifest, receipt, and complete requirements
+alignment validation. The separate Intake Review explicitly remains `Pending`
+after the hash-bound mutation and was not invented.
+
+The original narrow closeout path list did not fully name the series archives
+and deterministic alignment artefacts. To satisfy the binding preserved-
+archive and cross-shell alignment requirements honestly, the same
+evidence-only commit also contains exactly the two archives, root order, GSDB
+receipt, generator, alignment validator and its negative fixture, plus the
+causally required statistics binding. Product code, product dependencies, and
+successor features remain unchanged. Closeout head, checks, review, merge, and
+final synchronization remain `Pending` until their real provider events.
+
+## Enge Closeout-CI-Korrektur / Narrow closeout CI remediation
+
+**DE:** Der erste exakte Closeout-Head `9dc5da77548467aedcbb432c3a3e85d2497ae413`
+bestand die unabhängige Review-, Secret-, Governance-, Homogenitäts- und
+Analyseprüfung. Der Build-Test fand jedoch materiell korrekt, dass die
+GSDB-Quellenbindung noch auf den vor dem Closeout gültigen Intake-Pfad und
+Manifest-Hash zeigte. Dieser Fehler wird nicht umgangen: Matrix und
+Quelleninventar binden nun den branchgestempelten Intake mit SHA-256
+`f4dcb3fac6cb755faed296847ffd40170f0d008fa3640e5e5fa5bc38e4af5375`
+und das abgeschlossene Serienmanifest mit SHA-256
+`586424d2424b31f16c1461583affb3b0204886ccca0e79fb59af7759842b6703`.
+Der daraus entstandene Closeout-Matrix-Hash ist
+`ba992efb1468cf6cb523c42ca96222f0997b367cfa899ca30fb902a918245846`.
+Beide vollständigen Fixture-Suiten und alle Produktionsaktionen bestanden
+danach erneut. Die früher im Bericht genannten Matrix-Hashes bleiben
+historische Nachweise des jeweils geprüften Feature-Heads.
+
+**EN:** The first exact closeout head
+`9dc5da77548467aedcbb432c3a3e85d2497ae413` passed independent review,
+secret, governance, homogeneity, and analysis checks. The build-test correctly
+found a material issue, however: the GSDB source binding still referenced the
+intake path and manifest hash valid before closeout. This failure is not
+bypassed. The matrix and source inventory now bind the branch-stamped intake
+at SHA-256
+`f4dcb3fac6cb755faed296847ffd40170f0d008fa3640e5e5fa5bc38e4af5375`
+and the completed series manifest at SHA-256
+`586424d2424b31f16c1461583affb3b0204886ccca0e79fb59af7759842b6703`.
+The resulting closeout matrix SHA-256 is
+`ba992efb1468cf6cb523c42ca96222f0997b367cfa899ca30fb902a918245846`.
+Both complete fixture suites and every production action passed again. Earlier
+matrix hashes in this report remain historical evidence for the respective
+reviewed feature heads.

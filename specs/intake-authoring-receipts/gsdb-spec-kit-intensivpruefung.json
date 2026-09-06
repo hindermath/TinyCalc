@@ -15,8 +15,8 @@
   },
   "status": "ReadyForReview",
   "target": {
-    "path": "requirements/intakes/active/Lastenheft_GSDB-Spec-Kit-Intensivpruefung.md",
-    "normalizedSha256": "efd35926e427cc80bdcb098aebc25ad506e2a6e4aadb73627a2317854d0b1aa7"
+    "path": "requirements/intakes/active/Lastenheft_GSDB-Spec-Kit-Intensivpruefung.005-gsdb-intensive-review.md",
+    "normalizedSha256": "f4dcb3fac6cb755faed296847ffd40170f0d008fa3640e5e5fa5bc38e4af5375"
   },
   "sources": [
     {
@@ -48,7 +48,7 @@
       "id": "IAD001",
       "status": "Answered",
       "question": "Welcher Zielpfad ist nach der Konsolidierung verbindlich?",
-      "answer": "requirements/intakes/active/Lastenheft_GSDB-Spec-Kit-Intensivpruefung.md",
+      "answer": "requirements/intakes/active/Lastenheft_GSDB-Spec-Kit-Intensivpruefung.005-gsdb-intensive-review.md",
       "evidence": "specs/requirements-reconciliation-20260726/migration-proposal.json"
     },
     {
@@ -91,5 +91,5 @@
     "role": "OrderedMember",
     "supersedesIntakeIds": []
   },
-  "nextAction": "$speckit-intake-review requirements/intakes/active/Lastenheft_GSDB-Spec-Kit-Intensivpruefung.md"
+  "nextAction": "$speckit-intake-review requirements/intakes/active/Lastenheft_GSDB-Spec-Kit-Intensivpruefung.005-gsdb-intensive-review.md"
 }

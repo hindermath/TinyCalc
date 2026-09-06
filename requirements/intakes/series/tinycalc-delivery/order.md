@@ -21,10 +21,12 @@ lives in the series manifest.*
 | 10 | `requirements/intakes/active/Lastenheft_Formelkopie-und-Tabellenoperationen_V1.md` | `Blocked` | Legacy-Kompatibilität |
 | 11 | `requirements/intakes/active/Lastenheft_Sandbox-gestuetzte-Secure-Development-Haertung.md` | `Pending` | unabhängige Wurzel |
 | 12 | `requirements/intakes/active/Lastenheft_RL-SE-Checklist-Selbstpruefung.004-rl-se-self-assessment.md` | `Completed` | unabhängige Wurzel |
-| 13 | `requirements/intakes/active/Lastenheft_GSDB-Spec-Kit-Intensivpruefung.md` | `Eligible` | unabhängige Wurzel |
+| 13 | `requirements/intakes/active/Lastenheft_GSDB-Spec-Kit-Intensivpruefung.005-gsdb-intensive-review.md` | `Completed` | unabhängige Wurzel |
 
-Nur der explizite Zustand `Eligible` bezeichnet die bevorzugte nächste
-Ausführung. `Pending` erteilt keine automatische Ausführungsberechtigung.
+Nur ein ausdrücklich gesetzter Zustand `Eligible` bezeichnet eine bevorzugte
+nächste Ausführung. Nach dem GSDB-Abschluss ist kein Ziel ausgewählt;
+`Pending` erteilt keine automatische Ausführungsberechtigung.
 
-*Only the explicit `Eligible` state identifies the preferred next execution.
-`Pending` does not grant automatic execution authority.*
+*Only an explicitly assigned `Eligible` state identifies a preferred next
+execution. No target is selected after GSDB closeout; `Pending` does not grant
+automatic execution authority.*

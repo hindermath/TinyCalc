@@ -36,13 +36,14 @@ expectFailure("archive target", {
     value.orderedTargets[8].path = "requirements/intakes/archive/Missing.md";
   }),
 }, /directory and series targets differ|archive or backlog/);
-expectFailure("missing eligible", {
-  manifestPath: fixture("missing-eligible", manifestSource, (value) => {
-    const eligibleTarget = value.orderedTargets.find((target) => target.status === "Eligible");
-    if (!eligibleTarget) throw new Error("fixture has no Eligible target to remove");
-    eligibleTarget.status = "Pending";
+expectFailure("multiple eligible", {
+  manifestPath: fixture("multiple-eligible", manifestSource, (value) => {
+    const candidates = value.orderedTargets.filter((target) => target.status !== "Completed");
+    if (candidates.length < 2) throw new Error("fixture needs two incomplete targets");
+    candidates[0].status = "Eligible";
+    candidates[1].status = "Eligible";
   }),
-}, /single explicitly Eligible/);
+}, /at most one explicitly Eligible/);
 expectFailure("stale hash", {
   manifestPath: fixture("stale-hash", manifestSource, (value) => {
     value.orderedTargets[0].normalizedSha256 = "0".repeat(64);

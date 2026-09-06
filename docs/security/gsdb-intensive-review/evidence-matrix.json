@@ -976,10 +976,10 @@
     {
       "sourceId": "SRC-052",
       "sourceClass": "IntakeEvidence",
-      "path": "requirements/intakes/active/Lastenheft_GSDB-Spec-Kit-Intensivpruefung.md",
+      "path": "requirements/intakes/active/Lastenheft_GSDB-Spec-Kit-Intensivpruefung.005-gsdb-intensive-review.md",
       "version": "Current",
       "reviewedAt": "2026-09-06",
-      "normalizedSha256": "efd35926e427cc80bdcb098aebc25ad506e2a6e4aadb73627a2317854d0b1aa7",
+      "normalizedSha256": "f4dcb3fac6cb755faed296847ffd40170f0d008fa3640e5e5fa5bc38e4af5375",
       "scope": {
         "de": "Diese Quelle wird nur für ihren benannten TinyCalc-Prüfumfang verwendet.",
         "en": "This source is used only for its named TinyCalc assessment scope."
@@ -994,7 +994,7 @@
       "path": "requirements/intakes/series/tinycalc-delivery/manifest.json",
       "version": "Current",
       "reviewedAt": "2026-09-06",
-      "normalizedSha256": "24552c219bd516067da0c2fe6f6be39a935aac8f3e38f7237db9b505d68ad99b",
+      "normalizedSha256": "586424d2424b31f16c1461583affb3b0204886ccca0e79fb59af7759842b6703",
       "scope": {
         "de": "Diese Quelle wird nur für ihren benannten TinyCalc-Prüfumfang verwendet.",
         "en": "This source is used only for its named TinyCalc assessment scope."

@@ -95,8 +95,9 @@ export function validate(options = {}) {
   const eligible = targets.filter((target) => target.status === "Eligible");
   // Schema 2 führt den Lifecycle im kanonischen Manifest; nur Schema 1 besitzt noch einen separaten bevorzugten Pfad.
   // Schema 2 keeps lifecycle state in the canonical manifest; only schema 1 still has a separate preferred path.
-  if (eligible.length !== 1 || (preferredNext && eligible[0].path !== preferredNext)) {
-    errors.push("configured preferred intake must be the single explicitly Eligible target");
+  if (eligible.length > 1 ||
+      (preferredNext && (eligible.length !== 1 || eligible[0].path !== preferredNext))) {
+    errors.push("at most one explicitly Eligible target may be configured");
   }
 
   const dependencies = manifest.dependencies ?? [];

@@ -132,6 +132,7 @@
     "docs/project-statistics.config.json",
     "requirements/intakes/active/*Lastenheft_TerminalGui_Migration*",
     "requirements/intakes/active/*Lastenheft_RL-SE-Checklist-Selbstpruefung*",
+    "requirements/intakes/active/*Lastenheft_GSDB-Spec-Kit-Intensivpruefung*",
     "requirements/intakes/series/tinycalc-delivery/intake-review-request.json",
     "requirements/intakes/series/tinycalc-delivery/intake-review-result.json",
     "requirements/intakes/series/tinycalc-delivery/manifest.json",
@@ -141,11 +142,14 @@
     "requirements/intakes/series-archive/tinycalc-delivery/20260830T145602Z/*",
     "requirements/intakes/series-archive/tinycalc-delivery/20260905T185700Z/*",
     "requirements/intakes/series-archive/tinycalc-delivery/20260905T185700Z-review/*",
+    "requirements/intakes/series-archive/tinycalc-delivery/20260906T151949Z/*",
     "scripts/render-requirements-intake-governance.mjs",
+    "scripts/tests/requirements-intake-alignment-tests.mjs",
     "scripts/validate-requirements-intake-alignment.mjs",
     "specs/intake-authoring-receipts/terminalgui-migration.json",
     "specs/intake-authoring-receipts/rename-microcalc-tinycalc.json",
     "specs/intake-authoring-receipts/rl-se-checklist-selbstpruefung.json",
+    "specs/intake-authoring-receipts/gsdb-spec-kit-intensivpruefung.json",
     "specs/003-terminalgui-migration/autonomous-run-evidence.md",
     "specs/003-terminalgui-migration/tasks.md",
     "specs/003-terminalgui-migration/evidence/delivery.md",
@@ -155,7 +159,10 @@
     "specs/004-rl-se-self-assessment/evidence/accepted-premerge.json",
     "specs/004-rl-se-self-assessment/evidence/delivery.md",
     "specs/004-rl-se-self-assessment/evidence/evidence-index.md",
-    "specs/004-rl-se-self-assessment/evidence/postmerge.json"
+    "specs/004-rl-se-self-assessment/evidence/postmerge.json",
+    "specs/005-gsdb-intensive-review/autonomous-run-evidence.md",
+    "specs/005-gsdb-intensive-review/evidence/accepted-premerge.json",
+    "specs/005-gsdb-intensive-review/evidence/postmerge.json"
   ],
   "categoryOverrides": []
 }

@@ -16,16 +16,16 @@ const json = (value) => `${JSON.stringify(value, null, 2)}\n`;
 const config = readJson("requirements/intake-governance-config.json");
 const seriesRoot = "requirements/intakes/series/tinycalc-delivery";
 const seriesId = "5b4523b4-d946-4091-9cbc-11825af94332";
-const seriesReceiptId = "81b13f03-e73b-4ebf-a8fe-88aa0795ca8d";
-const seriesOperationId = "e8b26612-01d1-4dfb-94b3-f9f9b5231ec3";
+const seriesReceiptId = "e7c7271a-1271-49d3-b265-d0fcc6ff9e85";
+const seriesOperationId = "5415a66a-8944-411d-9914-9b090cb6bb5b";
 const reviewId = "c00e3d93-58fe-4d36-b1a4-94090cca1137";
 const createdAt = "2026-07-26T21:00:00Z";
-const seriesUpdatedAt = "2026-09-05T18:58:08Z";
+const seriesUpdatedAt = "2026-09-06T15:19:49Z";
 const reviewedAt = "2026-09-01T07:48:26Z";
 const reviewHead = "4f1b612f54690e49ba3cb02269d469ec2b309f2c";
-const seriesArchiveRoot = "requirements/intakes/series-archive/tinycalc-delivery/20260905T185700Z";
+const seriesArchiveRoot = "requirements/intakes/series-archive/tinycalc-delivery/20260906T151949Z";
 const reviewArchiveRoot = "requirements/intakes/series-archive/tinycalc-delivery/20260905T185700Z-review";
-const seriesAuthorityEvidence = "Thorsten explicitly approved the Feature 004 plan and DeliveryMode MergeAndSync with formal-only Admin-Bypass. The causal closeout is limited to the branch-qualified RL-SE Lastenheft rename, one tinycalc-delivery series update, lifecycle evidence, and one evidence-only closeout pull request. GSDB is made eligible but is not started.";
+const seriesAuthorityEvidence = "Thorsten explicitly approved the Feature 005 autonomous run and DeliveryMode MergeAndSync with formal-only Admin-Bypass. The causal closeout is limited to the branch-qualified GSDB Lastenheft rename, one tinycalc-delivery series update, preserved predecessor archives, lifecycle evidence, and one evidence-only closeout pull request. No successor intake or feature is selected or started.";
 
 // Der optionale Vorgängername hält die historische Quelle stabil, wenn der aktive Intake nach der Lieferung branchgestempelt wird.
 // The optional predecessor name keeps the historical source stable when delivery adds the branch stamp to the active intake.
@@ -42,7 +42,7 @@ const members = [
   ["formelkopie-und-tabellenoperationen-v1", "Lastenheft_Formelkopie-und-Tabellenoperationen_V1.md", "Blocked", "8d8ca7c4-b610-4aab-9f6c-b9a738961a87", "32428ec7-e89a-4ceb-aa70-8749e49f6595"],
   ["sandbox-gestuetzte-secure-development-haertung", "Lastenheft_Sandbox-gestuetzte-Secure-Development-Haertung.md", "Pending", "dcbee93b-bb9f-49f5-b363-fbe082f7dc1e", "aeb455e1-e871-475f-9c6e-29f8b201c9fd"],
   ["rl-se-checklist-selbstpruefung", "Lastenheft_RL-SE-Checklist-Selbstpruefung.004-rl-se-self-assessment.md", "Completed", "2093b09a-e0bf-4b03-9df9-b81594d23d2d", "999ece6f-b454-4150-afeb-ce544b76c29d", "Lastenheft_RL-SE-Checklist-Selbstpruefung.md"],
-  ["gsdb-spec-kit-intensivpruefung", "Lastenheft_GSDB-Spec-Kit-Intensivpruefung.md", "Eligible", "704cea09-a869-49a5-baf9-70f24aa8d67b", "9352f182-123b-43b1-8959-aea8e8da9612"],
+  ["gsdb-spec-kit-intensivpruefung", "Lastenheft_GSDB-Spec-Kit-Intensivpruefung.005-gsdb-intensive-review.md", "Completed", "704cea09-a869-49a5-baf9-70f24aa8d67b", "9352f182-123b-43b1-8959-aea8e8da9612", "Lastenheft_GSDB-Spec-Kit-Intensivpruefung.md"],
 ].map(([slug, fileName, status, receiptId, operationId, priorFileName], index) => ({
   slug,
   fileName,
@@ -225,9 +225,9 @@ const seriesReceipt = {
   manifest: {path: manifestPath, normalizedSha256: manifestHash},
   supersedes: {
     receiptPath: `${seriesArchiveRoot}/receipt.json`,
-    receiptNormalizedSha256: "d19e2b4835d47afa6f9e1235da07e7a8f609b31370f80152a400777ed160f98c",
+    receiptNormalizedSha256: "b4c0fca16a66a3a7242ae6dfa85af262e5c206cc794444f551d7fa0f25852094",
     manifestArchivePath: `${seriesArchiveRoot}/manifest.json`,
-    manifestArchiveSha256: "b665aeae32117eaaf66a4dd1577631023d0e5cdc37d76e131f842e9a369b6136",
+    manifestArchiveSha256: "24552c219bd516067da0c2fe6f6be39a935aac8f3e38f7237db9b505d68ad99b",
   },
   tombstone: {path: "N/A", normalizedSha256: "N/A"},
   nextAction: "$speckit-intake-series-status",
@@ -247,12 +247,9 @@ const operation = {
     `${seriesRoot}/operation.json`,
     `${seriesRoot}/order.md`,
     "Lastenheft_Abarbeitungsreihenfolge.md",
+    "specs/intake-authoring-receipts/gsdb-spec-kit-intensivpruefung.json",
     `${seriesArchiveRoot}/manifest.json`,
     `${seriesArchiveRoot}/receipt.json`,
-    `${reviewArchiveRoot}/intake-review-request.json`,
-    `${reviewArchiveRoot}/intake-review-result.json`,
-    `${reviewArchiveRoot}/intake-review-report.md`,
-    `${reviewArchiveRoot}/superseded-review.json`,
   ],
   validation: {bash: "Pass", powerShell: "Pass"},
   publication: {
@@ -263,12 +260,9 @@ const operation = {
       `${seriesRoot}/operation.json`,
       `${seriesRoot}/order.md`,
       "Lastenheft_Abarbeitungsreihenfolge.md",
+      "specs/intake-authoring-receipts/gsdb-spec-kit-intensivpruefung.json",
       `${seriesArchiveRoot}/manifest.json`,
       `${seriesArchiveRoot}/receipt.json`,
-      `${reviewArchiveRoot}/intake-review-request.json`,
-      `${reviewArchiveRoot}/intake-review-result.json`,
-      `${reviewArchiveRoot}/intake-review-report.md`,
-      `${reviewArchiveRoot}/superseded-review.json`,
     ],
   },
 };
@@ -451,11 +445,13 @@ lives in the series manifest.*
 |---:|---|---|---|
 ${orderRows}
 
-Nur der explizite Zustand \`Eligible\` bezeichnet die bevorzugte nächste
-Ausführung. \`Pending\` erteilt keine automatische Ausführungsberechtigung.
+Nur ein ausdrücklich gesetzter Zustand \`Eligible\` bezeichnet eine bevorzugte
+nächste Ausführung. Nach dem GSDB-Abschluss ist kein Ziel ausgewählt;
+\`Pending\` erteilt keine automatische Ausführungsberechtigung.
 
-*Only the explicit \`Eligible\` state identifies the preferred next execution.
-\`Pending\` does not grant automatic execution authority.*
+*Only an explicitly assigned \`Eligible\` state identifies a preferred next
+execution. No target is selected after GSDB closeout; \`Pending\` does not grant
+automatic execution authority.*
 `;
 const outputs = [
   [manifestPath, json(manifest)],
