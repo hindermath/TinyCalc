@@ -503,12 +503,17 @@
     },
     {
       "gateId": "GSDB-GATE-029",
-      "applicability": "N/A",
+      "applicability": "Applicable",
       "requiredScope": "Use the authorised Admin-Bypass command for a sole remaining formal merge rule after every material technical, security, accessibility, governance, evidence and review gate has passed.",
-      "requiredCommandTokens": [],
-      "requiredRunnerOrPlatformTokens": [],
-      "rationale": "Normal merge is preferred and no current exact-head provider evidence shows that the sole remaining blocker is a formal rule; bypass is not pre-authorised as a passing technical gate.",
-      "reevaluationTrigger": "At the exact reviewed head, all material gates pass and the provider reports only a formal merge-rule blocker. Update this requirement to Applicable, require token 'gh pr merge --merge --admin --delete-branch', re-review the changed head, and regenerate PreMerge evidence before use."
+      "requiredCommandTokens": [
+        "gh pr merge --merge --admin --delete-branch"
+      ],
+      "requiredRunnerOrPlatformTokens": [
+        "GitHub",
+        "exact PR head"
+      ],
+      "rationale": "At exact head fcd524590083ebcdd2f45aba8bde02f79cebde58 all 20 actual checks passed, the independent Claude review passed, Changes Requested and unresolved actionable threads were both zero, and GitHub reported only the formal REVIEW_REQUIRED merge rule. The user's Admin-Bypass authority is limited to that formal rule and cannot bypass a material gate.",
+      "reevaluationTrigger": "Before each Admin-Bypass use and after any head, check, review, thread, policy, authority, or material-gate change; regenerate exact-head PreMerge evidence and block on any material failure."
     },
     {
       "gateId": "GSDB-GATE-030",
