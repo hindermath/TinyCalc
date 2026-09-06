@@ -811,3 +811,19 @@ The resulting closeout matrix SHA-256 is
 Both complete fixture suites and every production action passed again. Earlier
 matrix hashes in this report remain historical evidence for the respective
 reviewed feature heads.
+
+Der Copilot-Review des ersten veröffentlichten Closeout-Heads meldete außerdem
+zwei kleine, aber konkrete Wartbarkeitsbefunde. Die unbenutzte veraltete
+Review-Archiv-Konstante wurde entfernt. Die Schema-1-Prüfung unterscheidet nun
+zwischen fehlendem und abweichendem `preferredNext`, während Schema 2 weiterhin
+höchstens ein ausdrücklich `Eligible` gesetztes Ziel erlaubt. Zwei neue
+Negativfälle sichern diese Meldungen; die Suite bestand mit 10 Fällen. Diese
+Befunde werden vor dem Merge geschlossen und nicht durch Admin-Rechte umgangen.
+
+The Copilot review of the first published closeout head additionally reported
+two small but concrete maintainability findings. The unused stale review-
+archive constant was removed. Schema 1 validation now distinguishes a missing
+from a mismatched `preferredNext`, while schema 2 continues to allow at most
+one explicitly `Eligible` target. Two new negative cases protect these
+messages, and the suite passed with 10 cases. These findings are closed before
+merge and are not bypassed through admin authority.

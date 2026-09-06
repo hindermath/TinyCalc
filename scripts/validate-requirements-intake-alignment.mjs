@@ -14,7 +14,7 @@ export function validate(options = {}) {
   const resolve = (candidate) => path.isAbsolute(candidate) ? candidate : path.join(root, candidate);
   const read = (relativePath) => fs.readFileSync(resolve(relativePath), "utf8");
   const parse = (relativePath) => JSON.parse(read(relativePath));
-  const config = parse("requirements/intake-governance-config.json");
+  const config = parse(options.configPath ?? "requirements/intake-governance-config.json");
   const manifestPath = options.manifestPath ??
     config.collections?.seriesManifest ?? config.seriesManifest;
   const coveragePath = options.coveragePath ??
@@ -95,9 +95,13 @@ export function validate(options = {}) {
   const eligible = targets.filter((target) => target.status === "Eligible");
   // Schema 2 führt den Lifecycle im kanonischen Manifest; nur Schema 1 besitzt noch einen separaten bevorzugten Pfad.
   // Schema 2 keeps lifecycle state in the canonical manifest; only schema 1 still has a separate preferred path.
-  if (eligible.length > 1 ||
-      (preferredNext && (eligible.length !== 1 || eligible[0].path !== preferredNext))) {
+  if (eligible.length > 1) {
     errors.push("at most one explicitly Eligible target may be configured");
+  }
+  if (preferredNext && eligible.length !== 1) {
+    errors.push("schema 1 preferredNext requires exactly one explicitly Eligible target");
+  } else if (preferredNext && eligible[0].path !== preferredNext) {
+    errors.push("schema 1 preferredNext must match the explicitly Eligible target");
   }
 
   const dependencies = manifest.dependencies ?? [];

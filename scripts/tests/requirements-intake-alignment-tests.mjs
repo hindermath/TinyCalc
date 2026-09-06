@@ -7,6 +7,7 @@ import process from "node:process";
 import {validate} from "../validate-requirements-intake-alignment.mjs";
 
 const root = process.cwd();
+const configSource = "requirements/intake-governance-config.json";
 const manifestSource = "requirements/intakes/series/tinycalc-delivery/manifest.json";
 const coverageSource = "specs/requirements-reconciliation-20260726/requirements-coverage.json";
 const temp = fs.mkdtempSync(path.join(os.tmpdir(), "tinycalc-requirements-"));
@@ -44,6 +45,32 @@ expectFailure("multiple eligible", {
     candidates[1].status = "Eligible";
   }),
 }, /at most one explicitly Eligible/);
+expectFailure("schema 1 missing eligible", {
+  configPath: fixture("schema1-missing-eligible-config", configSource, (value) => {
+    value.schemaVersion = "1.0";
+    value.activeIntakeCount = JSON.parse(fs.readFileSync(path.join(root, manifestSource), "utf8"))
+      .orderedTargets.length;
+    value.archiveIntakeCount = 0;
+    value.preferredNext = JSON.parse(fs.readFileSync(path.join(root, manifestSource), "utf8"))
+      .orderedTargets.find((target) => target.status !== "Completed").path;
+  }),
+}, /preferredNext requires exactly one explicitly Eligible/);
+expectFailure("schema 1 mismatched eligible", {
+  configPath: fixture("schema1-mismatched-eligible-config", configSource, (value) => {
+    const manifest = JSON.parse(fs.readFileSync(path.join(root, manifestSource), "utf8"));
+    const candidates = manifest.orderedTargets.filter((target) => target.status !== "Completed");
+    if (candidates.length < 2) throw new Error("fixture needs two incomplete targets");
+    value.schemaVersion = "1.0";
+    value.activeIntakeCount = manifest.orderedTargets.length;
+    value.archiveIntakeCount = 0;
+    value.preferredNext = candidates[0].path;
+  }),
+  manifestPath: fixture("schema1-mismatched-eligible-manifest", manifestSource, (value) => {
+    const candidates = value.orderedTargets.filter((target) => target.status !== "Completed");
+    if (candidates.length < 2) throw new Error("fixture needs two incomplete targets");
+    candidates[1].status = "Eligible";
+  }),
+}, /preferredNext must match the explicitly Eligible target/);
 expectFailure("stale hash", {
   manifestPath: fixture("stale-hash", manifestSource, (value) => {
     value.orderedTargets[0].normalizedSha256 = "0".repeat(64);
@@ -80,4 +107,4 @@ expectFailure("missing owner", {
 }, /lacks owner/);
 
 fs.rmSync(temp, {recursive: true, force: true});
-console.log("requirements/intake negative fixtures PASS (8 cases)");
+console.log("requirements/intake negative fixtures PASS (10 cases)");

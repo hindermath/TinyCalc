@@ -24,7 +24,6 @@ const seriesUpdatedAt = "2026-09-06T15:19:49Z";
 const reviewedAt = "2026-09-01T07:48:26Z";
 const reviewHead = "4f1b612f54690e49ba3cb02269d469ec2b309f2c";
 const seriesArchiveRoot = "requirements/intakes/series-archive/tinycalc-delivery/20260906T151949Z";
-const reviewArchiveRoot = "requirements/intakes/series-archive/tinycalc-delivery/20260905T185700Z-review";
 const seriesAuthorityEvidence = "Thorsten explicitly approved the Feature 005 autonomous run and DeliveryMode MergeAndSync with formal-only Admin-Bypass. The causal closeout is limited to the branch-qualified GSDB Lastenheft rename, one tinycalc-delivery series update, preserved predecessor archives, lifecycle evidence, and one evidence-only closeout pull request. No successor intake or feature is selected or started.";
 
 // Der optionale Vorgängername hält die historische Quelle stabil, wenn der aktive Intake nach der Lieferung branchgestempelt wird.
