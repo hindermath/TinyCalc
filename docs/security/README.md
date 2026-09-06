@@ -42,6 +42,23 @@ Screenreadern und auf Braillezeilen verständlich.
 | [Feature-Architektur](../architecture/terminalgui-migration.md) | abgeschlossen | Kontext-, Baustein-, Laufzeit-, Deployment-, Qualitäts- und Risikosichten |
 | [Feature-Evidenz](../../specs/003-terminalgui-migration/evidence/) | lokal fortgeschrieben | Befehle, Hashes, Tests, PTY, Coverage, Pakete und Checkpoints |
 
+### GSDB-Intensivprüfung Feature 005
+
+Der barrierearme Leserpfad beginnt bei der [vollständigen GSDB-Evidenzmatrix](gsdb-intensive-review/evidence-matrix.md).
+Danach folgen das [Quelleninventar mit Hashbindungen](gsdb-intensive-review/source-inventory.md),
+die [Zuordnung aller 13 Presets](gsdb-intensive-review/preset-mapping.md) und
+die [offenen Befunde mit Ownern und Folgeschritten](gsdb-intensive-review/open-findings.md).
+Ergänzend dokumentieren die [regulatorische Vorprüfung](regulatory-applicability.md),
+die [Cloud-Autonomie-Prüfung](cloud-autonomy-applicability.md) und die
+[Cloud-Compliance-Assurance](cloud-compliance-assurance.md) ihre getrennten
+Human-only-Grenzen. Die JSON-Matrix bleibt die kanonische Maschinenquelle.
+
+The accessible Feature 005 reader path starts with the complete GSDB evidence
+matrix, then continues to the hashed source inventory, all 13 preset mappings,
+and actionable open findings. Separate regulatory, cloud-autonomy, and
+cloud-assurance records preserve Human-only decisions. The JSON matrix remains
+the canonical machine-readable source.
+
 ### Gültigkeits- und Review-Regeln
 
 - Ein neuer Trust Boundary, eine neue Datei-/Netzwerk-/Auth-Fläche oder eine

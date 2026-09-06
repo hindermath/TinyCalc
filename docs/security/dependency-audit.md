@@ -173,3 +173,48 @@ review block.
 - SPDX License List and `licenses.nuget.org`
 - OpenSSF Scorecard
 - OWASP Software Assurance Maturity Model (SAMM)
+
+## Feature-005-Prüfung 2026-09-06 / Feature 005 Review 2026-09-06
+
+### Deutscher Prüfblock
+
+Auf macOS mit .NET SDK 10.0.400 wurde der direkte und transitive Graph aktuell
+ausgelesen. Das Produkt besitzt weiterhin genau `Terminal.Gui` 2.4.17 direkt
+und 23 transitive Pakete. Der normalisierte Satz aus Paket-ID und Version hat
+für den aktuellen und den am 30. August 2026 geprüften Graph denselben SHA-256
+`44ba70fe2ea6d74391b0f6ed5b7b2d31cbf807bc5ef70f7dde508f5b9e540232`.
+
+Die drei Paketabfragen wurden in einem begrenzten, credential-freien lokalen
+NuGet-Kontext erneut ausgeführt. Der Kontext enthielt nur die 38 bereits
+geprüften und lokal vorhandenen Paketarchive; `--no-restore` verhinderte jeden
+erneuten Netzwerkzugriff. Direkte und transitive Auflösung, Outdated-Prüfung
+und Vulnerability-Prüfung endeten jeweils mit Exitcode 0. Für alle vier
+Projekte wurden in diesem Snapshot weder Updates noch anfällige Pakete
+gemeldet. Dieser Befund ist ein aktueller lokaler Cache-Nachweis, kein neuer
+Online-Registry-Scan. Der unveränderte Produktgraph bindet ergänzend den
+früheren Online-Bericht mit null bekannten Funden und Hash
+`5a512fe3f66fb021353733e412c987ca854944f06c9ffc0a2d57a52274fd29e1`.
+
+Die 24 ausgelieferten Lizenzen bleiben an den früheren Beleg gebunden: 23 MIT,
+einmal BSD-2-Clause, null unbekannt oder unvereinbar. Im Repository wurden
+weder Dependabot- noch Renovate-Konfiguration und keine zentrale Dependency-
+Track-Einspeisung gefunden. Diese Lücke hat Owner Repository-Maintenance,
+Termin 2026-12-31 und Trigger bei Paket-, Registry-, Advisory-, SDK- oder
+Releaseänderung. Ein bekannter kritischer CVE blockiert; Updates werden hier
+nicht ausgeführt.
+
+### English review block
+
+The current product graph still contains one direct package, Terminal.Gui
+2.4.17, and 23 transitive packages. Its normalized package/version set matches
+the prior reviewed graph at SHA-256
+`44ba70fe2ea6d74391b0f6ed5b7b2d31cbf807bc5ef70f7dde508f5b9e540232`.
+All three package queries were repeated in a bounded credential-free local
+NuGet context containing only 38 previously reviewed cached archives.
+`--no-restore` prevented network access. Direct/transitive, outdated, and
+vulnerability queries all exited zero; the snapshot reported neither updates
+nor vulnerable packages for any project. This is current local-cache evidence,
+not a new online-registry scan. The unchanged graph also binds the prior
+online result with zero known findings. No local Dependabot, Renovate, or
+central Dependency-Track ingestion was found. Any known critical CVE blocks
+delivery.

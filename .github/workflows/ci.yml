@@ -24,6 +24,25 @@ jobs:
     steps:
       - uses: actions/checkout@v6
 
+      - name: Validate GSDB fixtures and production matrix (PowerShell)
+        shell: pwsh
+        run: |
+          ./scripts/tests/gsdb-intensive-review/test-validate-gsdb-intensive-review.ps1
+          ./scripts/validate-gsdb-intensive-review.ps1 -RepositoryRoot . -Action ValidateSources
+          ./scripts/validate-gsdb-intensive-review.ps1 -RepositoryRoot . -Action ValidateCompendium
+          ./scripts/validate-gsdb-intensive-review.ps1 -RepositoryRoot . -Action ValidateMappings
+          ./scripts/validate-gsdb-intensive-review.ps1 -RepositoryRoot . -Action Validate
+
+      - name: Validate GSDB fixtures and production matrix (Bash)
+        if: runner.os == 'Linux'
+        shell: bash
+        run: |
+          bash scripts/tests/gsdb-intensive-review/test-validate-gsdb-intensive-review.sh
+          bash scripts/validate-gsdb-intensive-review.sh --repository-root . --action validate-sources
+          bash scripts/validate-gsdb-intensive-review.sh --repository-root . --action validate-compendium
+          bash scripts/validate-gsdb-intensive-review.sh --repository-root . --action validate-mappings
+          bash scripts/validate-gsdb-intensive-review.sh --repository-root . --action validate
+
       - name: Validate RL-SE assessment (PowerShell)
         shell: pwsh
         run: |

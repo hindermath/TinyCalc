@@ -197,3 +197,28 @@ is claimed as passed early, and both remain delivery blockers.
 - `docs/security/adr/003-terminalgui-lifecycle-supply-chain.md`
 - `specs/003-terminalgui-migration/security-plan.md`
 - Constitution Principles XII, XIII, and XVII
+
+## GSDB-Neubewertung 2026-09-06 / GSDB Reassessment 2026-09-06
+
+### Deutscher Prüfblock
+
+| Vertrauensgrenze | Gefährdung | STRIDE/CIA | CAPEC | Aktueller Umgang |
+|---|---|---|---|---|
+| Datei und Formel | manipulierte Eingabe | Tampering, Verfügbarkeit | CAPEC-153 | Parser-/IO-Tests und begrenzte Fehler; offene Nacharbeit in der Matrix |
+| Managed und Native | manipulierte Abhängigkeit | Tampering, Elevation, Integrität | CAPEC-538 | NuGet-, SBOM-, Lizenz- und Plattformprüfung |
+| Repository und Build | veränderter Quell-/Workflowstand | Spoofing, Tampering, Integrität | CAPEC-538 | Branch-, Hash-, Delivery-Set- und CI-Gates |
+| Agent und Provider | überschrittene Autorität | Spoofing, Repudiation, Vertraulichkeit | CAPEC-115 | geschlossene Pfade, Human-only-Grenze, Exact-Head-Evidenz |
+
+Keine Zeile behauptet eine neue Mitigation. Kritische Assets sind Quellcode,
+Formeldaten, Release-Artefakte, Lieferkettennachweise und Governance-Autorität.
+Restrisiken sind native Terminalunterschiede, alternde Advisory-Daten und
+menschliche oder rechtliche Entscheidungen ohne Nachweis.
+
+### English review block
+
+The reassessment covers file/formula, managed/native, repository/build, and
+agent/provider boundaries. STRIDE and CIA identify input tampering, dependency
+manipulation, source or workflow drift, and authority overreach. CAPEC-153,
+CAPEC-538, and CAPEC-115 provide attack-pattern references. No new mitigation
+is claimed. Re-evaluate on any boundary, dependency, provider, workflow, or
+product-I/O change.

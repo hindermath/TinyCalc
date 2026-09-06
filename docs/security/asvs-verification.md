@@ -30,3 +30,17 @@ or browser surface. No ASVS level or web verification result is invented.
 Any such new surface changes the status to open and requires an explicit ASVS
 level, scope, owner, checks, and evidence before implementation. The canonical
 rationale and trigger remain in `docs/security/arc42-security.md`, Section 11.
+
+## Prüfung für Feature 005 / Feature 005 review
+
+**DE:** Prüftag ist 2026-09-06. Produkt-ASVS bleibt `N/A`: Die read-only
+Prüfung fand keine Web-, API-, HTTP-, Browser-, Authentifizierungs- oder
+Sessionfläche. Deshalb wird keine ASVS-Stufe gewählt oder als bestanden
+gemeldet. Owner ist die Repository-Maintenance-Rolle; Reviewer ist die
+unabhängige technische Security-Review-Rolle. Jede neue genannte Fläche setzt
+den Status auf `Open` und verlangt Level, Scope und Verifikation.
+
+**EN:** Review date is 2026-09-06. Product ASVS remains `N/A` because the
+read-only review found no web, API, HTTP, browser, authentication, or session
+surface. No ASVS level or passing verification is claimed. Any such surface
+reopens applicability and requires a level, scope, and evidence.

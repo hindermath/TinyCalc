@@ -1,0 +1,600 @@
+{
+  "schemaVersion": "1.0",
+  "gates": [
+    {
+      "gateId": "GSDB-GATE-001",
+      "applicability": "Applicable",
+      "requiredScope": "Validate the active Feature 005 run state, exact branch, accepted Analyze-entry hashes, current Analyze-remediated artefact hashes bound through analyze-remediation.md and analyze.result.json, current Ready intake review, and GSDB eligibility before every semantic or delivery phase.",
+      "requiredCommandTokens": [
+        "validate-autonomous-run-state.ps1",
+        "validate-intake-review-result.ps1",
+        "validate-intake-series-manifest.ps1",
+        "shasum -a 256",
+        "analyze-remediation.md",
+        "005-gsdb-intensive-review"
+      ],
+      "requiredRunnerOrPlatformTokens": [
+        "macOS",
+        "PowerShell 7"
+      ],
+      "rationale": "",
+      "reevaluationTrigger": "Before every semantic phase or delivery action and after any branch, head, intake, review, series, authority, or run-state change."
+    },
+    {
+      "gateId": "GSDB-GATE-002",
+      "applicability": "Applicable",
+      "requiredScope": "Validate all completed structured phase results against schema 1.0, their exact phase IDs, normalized payload hashes, zero executed implementation-task counts for pre-implementation phases including Analyze, and 131/131 only for terminal Implement without treating any earlier phase completion as run completion.",
+      "requiredCommandTokens": [
+        "validate-autonomous-phase-result.ps1",
+        "-PhaseId specify",
+        "-PhaseId clarify",
+        "-PhaseId requirements-checklist",
+        "-PhaseId plan",
+        "-PhaseId plan-review",
+        "-PhaseId tasks",
+        "-PhaseId analyze",
+        "-PhaseId implement"
+      ],
+      "requiredRunnerOrPlatformTokens": [
+        "macOS",
+        "PowerShell 7"
+      ],
+      "rationale": "",
+      "reevaluationTrigger": "After any phase payload/result change and at each phase boundary."
+    },
+    {
+      "gateId": "GSDB-GATE-003",
+      "applicability": "Applicable",
+      "requiredScope": "Prove the current GSDB 3.2.0 source inventory, normalized hashes, twelve checklist families, exact canonical ID set and 157 observed unique IDs, including related, learning, managed-reference, constitution, registry, preset, workflow, validator, and project-evidence sources.",
+      "requiredCommandTokens": [
+        "validate-gsdb-intensive-review.ps1",
+        "-Action ValidateSources",
+        "baseline-manifest.json",
+        "157/157"
+      ],
+      "requiredRunnerOrPlatformTokens": [
+        "macOS",
+        "PowerShell 7"
+      ],
+      "rationale": "",
+      "reevaluationTrigger": "After any GSDB, constitution, registry, preset, workflow, validator, evidence, or intake-source change."
+    },
+    {
+      "gateId": "GSDB-GATE-004",
+      "applicability": "Applicable",
+      "requiredScope": "Prove that the generated compendium contains exactly the canonical 157 IDs once each and that every canonical checklist content block matches its compendium block; any mismatch becomes a finding.",
+      "requiredCommandTokens": [
+        "validate-gsdb-intensive-review.ps1",
+        "-Action ValidateCompendium",
+        "Checklistensammelband_Sichere-Entwicklung.md",
+        "157/157"
+      ],
+      "requiredRunnerOrPlatformTokens": [
+        "macOS",
+        "PowerShell 7"
+      ],
+      "rationale": "",
+      "reevaluationTrigger": "After any individual checklist, compendium, generator, or baseline-manifest change."
+    },
+    {
+      "gateId": "GSDB-GATE-005",
+      "applicability": "Applicable",
+      "requiredScope": "Prove repeatable RED for a fresh missing path and all declared invalid fixtures, the smallest valid helper GREEN, and full GREEN for the complete production matrix through both PowerShell and Bash entrypoints.",
+      "requiredCommandTokens": [
+        "validate-gsdb-intensive-review.ps1",
+        "validate-gsdb-intensive-review.sh",
+        "-Action ValidateFixtures",
+        "RED",
+        "GREEN",
+        "157/157"
+      ],
+      "requiredRunnerOrPlatformTokens": [
+        "macOS",
+        "Linux",
+        "Windows",
+        "PowerShell 7",
+        "Bash"
+      ],
+      "rationale": "",
+      "reevaluationTrigger": "After schema, validator, fixture, checklist, source, or CI workflow changes."
+    },
+    {
+      "gateId": "GSDB-GATE-006",
+      "applicability": "Applicable",
+      "requiredScope": "Validate exactly 157 complete checklist assessments, two-axis status semantics, learning stage, concrete evidence locators, owners, reviewers, follow-up, expected evidence, target dates, triggers, residual risks, findings, and zero unsupported Human-only approvals.",
+      "requiredCommandTokens": [
+        "validate-gsdb-intensive-review.ps1",
+        "-Action Validate",
+        "evidence-matrix.json",
+        "157/157",
+        "learningStage",
+        "expectedEvidence",
+        "targetDueAt",
+        "humanDecisionEvidence"
+      ],
+      "requiredRunnerOrPlatformTokens": [
+        "macOS",
+        "PowerShell 7"
+      ],
+      "rationale": "",
+      "reevaluationTrigger": "After any matrix, evidence, reviewer, finding, or summary change."
+    },
+    {
+      "gateId": "GSDB-GATE-007",
+      "applicability": "Applicable",
+      "requiredScope": "Prove every guideline or related-document duty outside checklist coverage is assessed, all thirteen installed presets are mapped to checkpoints, old six/seven-preset wording is classified, and reused Feature 004 evidence has current scope/freshness locators.",
+      "requiredCommandTokens": [
+        "validate-gsdb-intensive-review.ps1",
+        "-Action ValidateMappings",
+        "externalDuties",
+        "presetAssessments",
+        "13/13",
+        "2026-09-05-rl-se-self-assessment"
+      ],
+      "requiredRunnerOrPlatformTokens": [
+        "macOS",
+        "PowerShell 7"
+      ],
+      "rationale": "",
+      "reevaluationTrigger": "After guideline, related-document, preset, Feature 004 evidence, mapping, or freshness changes."
+    },
+    {
+      "gateId": "GSDB-GATE-008",
+      "applicability": "Applicable",
+      "requiredScope": "Prove explicit NIST SSDF and CWE Top 25 coverage against the TinyCalc lifecycle, formula/input, error, file-I/O, dependency, and delivery evidence without any N/A disposition.",
+      "requiredCommandTokens": [
+        "validate-gsdb-intensive-review.ps1",
+        "NIST SSDF",
+        "CWE Top 25",
+        "security-checklist.md",
+        "evidence-matrix.json"
+      ],
+      "requiredRunnerOrPlatformTokens": [
+        "macOS"
+      ],
+      "rationale": "",
+      "reevaluationTrigger": "After product, lifecycle, weakness-list, security-evidence, or baseline changes."
+    },
+    {
+      "gateId": "GSDB-GATE-009",
+      "applicability": "Applicable",
+      "requiredScope": "Assess C# memory-safety status together with secure API, input, deserialization, error, path, file-I/O, dependency and native-boundary rules; no product hardening or blanket security claim is allowed.",
+      "requiredCommandTokens": [
+        "validate-gsdb-intensive-review.ps1",
+        "C# MSL",
+        "secure-coding",
+        "src/MicroCalc.Core",
+        "src/MicroCalc.Tui"
+      ],
+      "requiredRunnerOrPlatformTokens": [
+        "macOS",
+        ".NET 10",
+        "C# 14"
+      ],
+      "rationale": "",
+      "reevaluationTrigger": "After source, language, runtime, API, native dependency, input, error, or I/O changes."
+    },
+    {
+      "gateId": "GSDB-GATE-010",
+      "applicability": "Applicable",
+      "requiredScope": "Reassess current context, building-block, runtime and deployment views; four trust-boundary groups; CIA, STRIDE, CAPEC; Defense in Depth; Least Privilege; Fail-Safe Defaults; Attack Surface Reduction; separation of security concerns; secure configuration; arc42 security concepts; quality scenarios; technical debt; and ADR/S-ADR non-applicability without changing product architecture.",
+      "requiredCommandTokens": [
+        "validate-gsdb-intensive-review.ps1",
+        "threat-model.md",
+        "arc42-security.md",
+        "security-quality-scenarios.md",
+        "STRIDE",
+        "CAPEC",
+        "Defense in Depth",
+        "Least Privilege",
+        "Fail-Safe Defaults",
+        "Attack Surface Reduction"
+      ],
+      "requiredRunnerOrPlatformTokens": [
+        "macOS"
+      ],
+      "rationale": "",
+      "reevaluationTrigger": "After architecture, data-flow, trust-boundary, integration, deployment, threat, or quality-attribute changes."
+    },
+    {
+      "gateId": "GSDB-GATE-011",
+      "applicability": "N/A",
+      "requiredScope": "Execute OWASP ASVS verification for a Web, API, HTTP, authentication, authorization, or remotely reachable product service.",
+      "requiredCommandTokens": [],
+      "requiredRunnerOrPlatformTokens": [],
+      "rationale": "TinyCalc is an unchanged local Terminal.Gui application and this assessment introduces no Web, API, HTTP, authentication, authorization, or remote product service.",
+      "reevaluationTrigger": "Introduction of any Web, API, HTTP, authentication, authorization, or remotely reachable product service; then select and document an ASVS level and verification scope."
+    },
+    {
+      "gateId": "GSDB-GATE-012",
+      "applicability": "Applicable",
+      "requiredScope": "Reassess the distributable product dependency graph, SPDX SBOM, licence evidence, SLSA/provenance boundary, workflow action pinning and OpenSSF posture without claiming an unsupported assurance level.",
+      "requiredCommandTokens": [
+        "dotnet list MicroCalc.sln package --include-transitive",
+        "tinycalc-terminalgui.spdx.json",
+        "supply-chain-evidence.md",
+        "SLSA",
+        "OpenSSF"
+      ],
+      "requiredRunnerOrPlatformTokens": [
+        "macOS",
+        "GitHub Actions"
+      ],
+      "rationale": "",
+      "reevaluationTrigger": "After package, lock/pin, licence, workflow, builder, artefact, release, registry, or provider changes."
+    },
+    {
+      "gateId": "GSDB-GATE-013",
+      "applicability": "Applicable",
+      "requiredScope": "Run a current direct and transitive vulnerability audit, record the VEX applicability decision for every known shipped finding, and block delivery on any unresolved critical vulnerability.",
+      "requiredCommandTokens": [
+        "dotnet list MicroCalc.sln package --vulnerable --include-transitive",
+        "dependency-audit.md",
+        "VEX",
+        "critical CVE"
+      ],
+      "requiredRunnerOrPlatformTokens": [
+        "macOS",
+        ".NET 10"
+      ],
+      "rationale": "",
+      "reevaluationTrigger": "After any advisory, dependency graph, SBOM, release, framework, or scan-date change."
+    },
+    {
+      "gateId": "GSDB-GATE-014",
+      "applicability": "N/A",
+      "requiredScope": "Produce G7/BSI AI-SBOM evidence for product models, datasets, inference infrastructure, system properties, security properties, and key performance indicators.",
+      "requiredCommandTokens": [],
+      "requiredRunnerOrPlatformTokens": [],
+      "rationale": "AI is used as development tooling only; TinyCalc ships and operates no model, training or embedding dataset, inference service, or AI runtime component.",
+      "reevaluationTrigger": "Any model, dataset, inference service, AI runtime, or AI-dependent product capability becomes part of the shipped or operated system."
+    },
+    {
+      "gateId": "GSDB-GATE-015",
+      "applicability": "N/A",
+      "requiredScope": "Apply NIST SP 800-207 Zero Trust architecture to the product runtime.",
+      "requiredCommandTokens": [],
+      "requiredRunnerOrPlatformTokens": [],
+      "rationale": "The unchanged TinyCalc product is a local single-process TUI without distributed product identity, cloud, service, or network boundaries.",
+      "reevaluationTrigger": "Introduction of a network, cloud, remote, service-based, managed, or identity-bearing product boundary."
+    },
+    {
+      "gateId": "GSDB-GATE-016",
+      "applicability": "Applicable",
+      "requiredScope": "Assess Zero Trust principles for repository, CI, identity and provider delivery boundaries, including least privilege, exact-head identity, short-lived credentials and fail-safe denial; do not change provider configuration.",
+      "requiredCommandTokens": [
+        "validate-gsdb-intensive-review.ps1",
+        "zero-trust-applicability.md",
+        "delivery environment",
+        "exact-head"
+      ],
+      "requiredRunnerOrPlatformTokens": [
+        "macOS",
+        "GitHub"
+      ],
+      "rationale": "",
+      "reevaluationTrigger": "After repository host, CI, credential, identity, permission, branch policy, or remote-delivery changes."
+    },
+    {
+      "gateId": "GSDB-GATE-017",
+      "applicability": "Applicable",
+      "requiredScope": "Create separate current BSI C3A cloud-autonomy and BSI C5 cloud-compliance applicability evidence for repository, CI and artefact providers without inferring N/A from the local product runtime.",
+      "requiredCommandTokens": [
+        "validate-gsdb-intensive-review.ps1",
+        "cloud-autonomy-applicability.md",
+        "cloud-compliance-assurance.md",
+        "BSI C3A",
+        "BSI C5"
+      ],
+      "requiredRunnerOrPlatformTokens": [
+        "macOS",
+        "GitHub"
+      ],
+      "rationale": "",
+      "reevaluationTrigger": "After repository, CI, cloud, hosting, artefact-provider, contract, region, portability, or exit-strategy changes."
+    },
+    {
+      "gateId": "GSDB-GATE-018",
+      "applicability": "Applicable",
+      "requiredScope": "Record separate current NIS2, CRA, EU AI Act, DORA and privacy applicability decisions plus OWASP SAMM follow-up, each with primary source, date, scope, owner, reviewer, trigger and residual risk; legal acceptance remains Human-only.",
+      "requiredCommandTokens": [
+        "validate-gsdb-intensive-review.ps1",
+        "regulatory-applicability.md",
+        "NIS2",
+        "CRA",
+        "EU AI Act",
+        "DORA",
+        "Privacy",
+        "SAMM"
+      ],
+      "requiredRunnerOrPlatformTokens": [
+        "macOS"
+      ],
+      "rationale": "",
+      "reevaluationTrigger": "After market placement, customer delivery, regulated-sector use, cloud operation, AI runtime, personal-data flow, law/source update, audit, or incident."
+    },
+    {
+      "gateId": "GSDB-GATE-019",
+      "applicability": "Applicable",
+      "requiredScope": "Prove DE-first/EN-second CEFR-B2 content, correct German umlauts and ß without ASCII substitutions, semantic Markdown, meaningful links, heading order, language parity, and text-complete WCAG 2.2 AA status/owner/dependency/follow-up evidence without colour or layout dependence.",
+      "requiredCommandTokens": [
+        "check-homogeneity.ps1",
+        "-DryRun",
+        "-NoPatch",
+        "gsdb-intensive-review.md",
+        "WCAG 2.2 AA",
+        "CEFR B2",
+        "German umlauts"
+      ],
+      "requiredRunnerOrPlatformTokens": [
+        "macOS",
+        "text review"
+      ],
+      "rationale": "",
+      "reevaluationTrigger": "After any reader-facing text, table, link, status, navigation, image, example, or language-partner change."
+    },
+    {
+      "gateId": "GSDB-GATE-020",
+      "applicability": "Applicable",
+      "requiredScope": "Regenerate DocFX because docfx.json includes changed docs/**/*.md, then execute a representative text-oriented HTML accessibility smoke with lynx and preferably Playwright/axe where the reviewed toolchain is available; absence of the preferred harness is recorded and cannot suppress the mandatory DocFX/lynx proof.",
+      "requiredCommandTokens": [
+        "docfx docfx.json",
+        "lynx -dump -nolist",
+        "_site/docs/security/gsdb-intensive-review"
+      ],
+      "requiredRunnerOrPlatformTokens": [
+        "macOS",
+        "DocFX",
+        "lynx",
+        "text review"
+      ],
+      "rationale": "",
+      "reevaluationTrigger": "After any Markdown, public API, XML comment, DocFX source/navigation/configuration, generated HTML, or accessibility-toolchain change."
+    },
+    {
+      "gateId": "GSDB-GATE-021",
+      "applicability": "Applicable",
+      "requiredScope": "Prove the paired read-only validator contract, bilingual PowerShell help, approved Test-GsdbIntensiveReview Verb-Noun entry, Bash safety/parity and Bash 3.x compatibility, dedicated script-parity checklist, man page and actual Linux/Windows CI execution. WhatIf/dry-run is N/A only while both entrypoints remain non-mutating.",
+      "requiredCommandTokens": [
+        "validate-gsdb-intensive-review.ps1 -Action ValidateFixtures",
+        "bash scripts/validate-gsdb-intensive-review.sh --action validate-fixtures",
+        "Test-GsdbIntensiveReview",
+        "script-parity.md",
+        "validate-gsdb-intensive-review.1",
+        "set -euo pipefail",
+        "Set-StrictMode -Version Latest"
+      ],
+      "requiredRunnerOrPlatformTokens": [
+        "macOS",
+        "ubuntu-latest",
+        "windows-latest",
+        "PowerShell 7",
+        "Bash"
+      ],
+      "rationale": "",
+      "reevaluationTrigger": "After validator, wrapper, help, man page, fixture, shell, parameter, or CI job changes."
+    },
+    {
+      "gateId": "GSDB-GATE-022",
+      "applicability": "N/A",
+      "requiredScope": "Measure changed product-code coverage with a 70 percent minimum and 80 percent target after observable product RED and GREEN tests.",
+      "requiredCommandTokens": [],
+      "requiredRunnerOrPlatformTokens": [],
+      "rationale": "The accepted scope changes assessment evidence and its validator only; no TinyCalc product source or product test behavior is changed.",
+      "reevaluationTrigger": "Any change under src/ or to product behavior/tests; such a delta blocks until product TDD and coverage are planned and evidenced."
+    },
+    {
+      "gateId": "GSDB-GATE-023",
+      "applicability": "Applicable",
+      "requiredScope": "Prove unchanged-product restore, Release build, full xUnit regression and exact single-line SMOKE_OK after repository version alignment and build-counter increment.",
+      "requiredCommandTokens": [
+        "dotnet restore MicroCalc.sln",
+        "dotnet build MicroCalc.sln --configuration Release --no-restore",
+        "dotnet test MicroCalc.sln --configuration Release --no-build",
+        "dotnet run --no-build --configuration Release --project src/MicroCalc.Tui/MicroCalc.Tui.csproj -- --smoke",
+        "SMOKE_OK"
+      ],
+      "requiredRunnerOrPlatformTokens": [
+        "macOS",
+        "ubuntu-latest",
+        "windows-latest",
+        ".NET 10"
+      ],
+      "rationale": "",
+      "reevaluationTrigger": "After source, test, project, version, dependency, environment, workflow, evidence-validator, or build-output changes."
+    },
+    {
+      "gateId": "GSDB-GATE-024",
+      "applicability": "Applicable",
+      "requiredScope": "Record current direct/transitive, outdated and vulnerable NuGet results, justify every pinning exception, assess the observed absence or presence of Dependabot/Renovate and central Dependency-Track ingestion as owned follow-up, and prove no new dependency or known critical CVE enters delivery.",
+      "requiredCommandTokens": [
+        "dotnet list MicroCalc.sln package --include-transitive",
+        "dotnet list MicroCalc.sln package --outdated --include-transitive",
+        "dotnet list MicroCalc.sln package --vulnerable --include-transitive",
+        "Dependabot",
+        "Renovate",
+        "Dependency-Track",
+        "dependency-audit.md"
+      ],
+      "requiredRunnerOrPlatformTokens": [
+        "macOS",
+        ".NET 10"
+      ],
+      "rationale": "",
+      "reevaluationTrigger": "After dependency, SDK, framework, lock/pin, advisory, registry, licence, or release changes."
+    },
+    {
+      "gateId": "GSDB-GATE-025",
+      "applicability": "Applicable",
+      "requiredScope": "Validate Documentation Impact UpdateRequired, reader-path discoverability, unchanged shared agent guidance, and current statistics with chronological ledger and refreshed ASCII trends using 80/125 line baselines and 7.8 hours per day.",
+      "requiredCommandTokens": [
+        "test-documentation-impact.ps1",
+        "validate-documentation-impact.ps1",
+        "render-project-statistics.ps1 -Repo . -CheckOnly",
+        "docs/security/README.md",
+        "80",
+        "125",
+        "7.8"
+      ],
+      "requiredRunnerOrPlatformTokens": [
+        "macOS",
+        "PowerShell 7"
+      ],
+      "rationale": "",
+      "reevaluationTrigger": "After documentation, navigation, audience, distribution, shared guidance, statistics configuration, line count, or work-window changes."
+    },
+    {
+      "gateId": "GSDB-GATE-026",
+      "applicability": "Applicable",
+      "requiredScope": "Prove homogeneity, agent-secret scan, gitleaks, PowerShell static analysis, Bash safety/parity and absence of tracked runner profiles, secrets, private absolute paths, runtime logs or agent state.",
+      "requiredCommandTokens": [
+        "check-homogeneity.ps1 -TargetDir . -DryRun -NoPatch",
+        "scan-agent-secrets.ps1 -FailOnHigh -WorkspaceRoot .",
+        "invoke-psscriptanalyzer.ps1",
+        "gitleaks",
+        "bash -n scripts/validate-gsdb-intensive-review.sh"
+      ],
+      "requiredRunnerOrPlatformTokens": [
+        "macOS",
+        "ubuntu-22.04",
+        "macos-14",
+        "windows-2022",
+        "PowerShell 7",
+        "Bash"
+      ],
+      "rationale": "",
+      "reevaluationTrigger": "After script, evidence, agent-surface, secret-rule, workflow, static-analysis, or delivery-set changes."
+    },
+    {
+      "gateId": "GSDB-GATE-027",
+      "applicability": "Applicable",
+      "requiredScope": "Before every commit or push, align Version, AssemblyVersion and FileVersion to feature minor 5 with the prospective feature-branch commit count including the pending commit and an incremented build counter, validate the exact intended tracked/untracked delivery set read-only, stage only intended paths, and pass cached diff checks.",
+      "requiredCommandTokens": [
+        "validate-autonomous-delivery-set.ps1 -Repo . -Intended",
+        "Directory.Build.props",
+        "1.5.",
+        "git diff --cached --check",
+        "git status --short"
+      ],
+      "requiredRunnerOrPlatformTokens": [
+        "macOS",
+        "PowerShell 7",
+        "Git"
+      ],
+      "rationale": "",
+      "reevaluationTrigger": "Before every commit/push and after any index, worktree, version, task, or intended-path change."
+    },
+    {
+      "gateId": "GSDB-GATE-028",
+      "applicability": "Applicable",
+      "requiredScope": "Prove all required provider checks and current reviews converge on the exact PR head with no Changes Requested and no unresolved actionable thread; missing/refused/stale evidence is not a pass.",
+      "requiredCommandTokens": [
+        "gh pr checks --required --watch --fail-fast",
+        "gh pr view --json headRefOid,reviewDecision,mergeStateStatus,reviews,statusCheckRollup",
+        "gh api graphql",
+        "reviewedHead"
+      ],
+      "requiredRunnerOrPlatformTokens": [
+        "GitHub",
+        "exact PR head"
+      ],
+      "rationale": "",
+      "reevaluationTrigger": "After every PR commit, base update, review, thread change, provider rerun, check change, or authority change."
+    },
+    {
+      "gateId": "GSDB-GATE-029",
+      "applicability": "Applicable",
+      "requiredScope": "Use the authorised Admin-Bypass command for a sole remaining formal merge rule after every material technical, security, accessibility, governance, evidence and review gate has passed.",
+      "requiredCommandTokens": [
+        "gh pr merge --merge --admin --delete-branch"
+      ],
+      "requiredRunnerOrPlatformTokens": [
+        "GitHub",
+        "exact PR head"
+      ],
+      "rationale": "At exact head fcd524590083ebcdd2f45aba8bde02f79cebde58 all 20 actual checks passed, the independent Claude review passed, Changes Requested and unresolved actionable threads were both zero, and GitHub reported only the formal REVIEW_REQUIRED merge rule. The user's Admin-Bypass authority is limited to that formal rule and cannot bypass a material gate.",
+      "reevaluationTrigger": "Before each Admin-Bypass use and after any head, check, review, thread, policy, authority, or material-gate change; regenerate exact-head PreMerge evidence and block on any material failure."
+    },
+    {
+      "gateId": "GSDB-GATE-030",
+      "applicability": "Applicable",
+      "requiredScope": "Generate and validate a fresh temporary schema-2.0 PreMerge snapshot bound to the normalized accepted requirements hash and exact reviewed head, with exactly one Primary row per declared gate and no merge claim.",
+      "requiredCommandTokens": [
+        "validate-autonomous-gate-evidence.ps1",
+        "-Requirements specs/005-gsdb-intensive-review/contracts/autonomous-run-gate-requirements.json",
+        "PreMerge",
+        "schemaVersion 2.0",
+        "Primary",
+        "reviewedHead"
+      ],
+      "requiredRunnerOrPlatformTokens": [
+        "macOS",
+        "PowerShell 7",
+        "exact PR head"
+      ],
+      "rationale": "",
+      "reevaluationTrigger": "After any requirement, gate, evidence, review, head, provider check, workflow, runner, command, or authority change."
+    },
+    {
+      "gateId": "GSDB-GATE-031",
+      "applicability": "Applicable",
+      "requiredScope": "Merge normally, verify provider merge commit and parents, fast-forward local main, and validate schema-2.0 PostMerge evidence bound to the accepted PreMerge hash with empty changedPaths; no material gate may be bypassed.",
+      "requiredCommandTokens": [
+        "gh pr merge --merge --delete-branch",
+        "gh pr view --json mergedAt,mergeCommit,state,headRefOid",
+        "git pull --ff-only",
+        "validate-autonomous-gate-evidence.ps1",
+        "PostMerge",
+        "acceptedPreMergeSha256",
+        "changedPaths"
+      ],
+      "requiredRunnerOrPlatformTokens": [
+        "GitHub",
+        "macOS",
+        "PowerShell 7",
+        "local main"
+      ],
+      "rationale": "",
+      "reevaluationTrigger": "Immediately before merge and after any authority, policy, head, provider, merge-commit, parent, PreMerge hash, or synchronization change."
+    },
+    {
+      "gateId": "GSDB-GATE-032",
+      "applicability": "Applicable",
+      "requiredScope": "In the pre-named single-commit-capable causal evidence-only branch codex/005-gsdb-intensive-review-closeout, branch-stamp only the GSDB intake, update tinycalc-delivery exactly once with preserved lineage, validate manifest/receipt/review status in PowerShell and Bash, complete declared post-actions, fast-forward again, and close the run without starting another feature.",
+      "requiredCommandTokens": [
+        "rename-lastenheft.ps1",
+        "rename-lastenheft.sh",
+        "codex/005-gsdb-intensive-review-closeout",
+        ".005-gsdb-intensive-review.md",
+        "validate-intake-series-manifest.ps1",
+        "validate-intake-series-manifest.sh",
+        "validate-intake-series-receipt.ps1",
+        "validate-intake-series-receipt.sh",
+        "validate-requirements-intake-alignment.ps1",
+        "validate-requirements-intake-alignment.sh",
+        "validate-autonomous-run-state.ps1",
+        "finalValidation",
+        "Completed",
+        "no-next-feature"
+      ],
+      "requiredRunnerOrPlatformTokens": [
+        "macOS",
+        "GitHub",
+        "PowerShell 7",
+        "Bash",
+        "local main"
+      ],
+      "rationale": "",
+      "reevaluationTrigger": "After feature merge, series/intake/review drift, closeout-head change, provider closeout result, post-action change, branch cleanup, or final synchronization change."
+    },
+    {
+      "gateId": "GSDB-GATE-033",
+      "applicability": "N/A",
+      "requiredScope": "Start a parallel autonomous campaign or any successor feature/intake as part of Feature 005 closeout.",
+      "requiredCommandTokens": [],
+      "requiredRunnerOrPlatformTokens": [],
+      "rationale": "The accepted authority covers one serial GSDB feature only and explicitly forbids starting another feature or campaign.",
+      "reevaluationTrigger": "A new explicit user delegation names a separate eligible target or a bounded parallel campaign after Feature 005 has fully completed MergeAndSync."
+    }
+  ]
+}

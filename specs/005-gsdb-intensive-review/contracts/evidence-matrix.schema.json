@@ -1,0 +1,1038 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/hindermath/TinyCalc/specs/005-gsdb-intensive-review/contracts/evidence-matrix.schema.json",
+  "title": "TinyCalc GSDB Intensive Review Evidence Matrix",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "assessmentId",
+    "reviewedAt",
+    "repository",
+    "featurePath",
+    "baseline",
+    "sourceInventory",
+    "checklistRows",
+    "externalDuties",
+    "presetAssessments",
+    "findings",
+    "summary"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "const": "1.0"
+    },
+    "assessmentId": {
+      "const": "tinycalc-gsdb-intensive-review-005"
+    },
+    "reviewedAt": {
+      "$ref": "#/$defs/date"
+    },
+    "repository": {
+      "const": "TinyCalc"
+    },
+    "featurePath": {
+      "const": "specs/005-gsdb-intensive-review"
+    },
+    "baseline": {
+      "$ref": "#/$defs/baseline"
+    },
+    "sourceInventory": {
+      "type": "array",
+      "minItems": 30,
+      "items": {
+        "$ref": "#/$defs/sourceBinding"
+      },
+      "allOf": [
+        {
+          "contains": {
+            "properties": {
+              "sourceClass": {
+                "const": "Guideline"
+              }
+            },
+            "required": [
+              "sourceClass"
+            ]
+          },
+          "minContains": 1
+        },
+        {
+          "contains": {
+            "properties": {
+              "sourceClass": {
+                "const": "Checklist"
+              }
+            },
+            "required": [
+              "sourceClass"
+            ]
+          },
+          "minContains": 12
+        },
+        {
+          "contains": {
+            "properties": {
+              "sourceClass": {
+                "const": "Compendium"
+              }
+            },
+            "required": [
+              "sourceClass"
+            ]
+          },
+          "minContains": 1
+        },
+        {
+          "contains": {
+            "properties": {
+              "sourceClass": {
+                "const": "Constitution"
+              }
+            },
+            "required": [
+              "sourceClass"
+            ]
+          },
+          "minContains": 2
+        },
+        {
+          "contains": {
+            "properties": {
+              "sourceClass": {
+                "const": "Preset"
+              }
+            },
+            "required": [
+              "sourceClass"
+            ]
+          },
+          "minContains": 13
+        }
+      ]
+    },
+    "checklistRows": {
+      "type": "array",
+      "minItems": 157,
+      "maxItems": 157,
+      "items": {
+        "$ref": "#/$defs/assessmentRow"
+      }
+    },
+    "externalDuties": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/externalDuty"
+      }
+    },
+    "presetAssessments": {
+      "type": "array",
+      "minItems": 13,
+      "maxItems": 13,
+      "items": {
+        "$ref": "#/$defs/presetAssessment"
+      }
+    },
+    "findings": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/finding"
+      }
+    },
+    "summary": {
+      "$ref": "#/$defs/summary"
+    }
+  },
+  "$defs": {
+    "nonBlank": {
+      "type": "string",
+      "pattern": "^.*\\S.*$"
+    },
+    "date": {
+      "type": "string",
+      "format": "date"
+    },
+    "dateTimeOrDate": {
+      "type": "string",
+      "anyOf": [
+        {
+          "format": "date"
+        },
+        {
+          "format": "date-time"
+        }
+      ]
+    },
+    "digest": {
+      "type": "string",
+      "pattern": "^[0-9a-f]{64}$"
+    },
+    "relativePath": {
+      "type": "string",
+      "minLength": 1,
+      "allOf": [
+        {
+          "not": {
+            "pattern": "^[\\\\/]"
+          }
+        },
+        {
+          "not": {
+            "pattern": "^[A-Za-z]:"
+          }
+        },
+        {
+          "not": {
+            "pattern": "(^|[\\\\/])\\.\\.([\\\\/]|$)"
+          }
+        },
+        {
+          "not": {
+            "pattern": "\\\\"
+          }
+        }
+      ]
+    },
+    "bilingualText": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "de",
+        "en"
+      ],
+      "properties": {
+        "de": {
+          "$ref": "#/$defs/nonBlank"
+        },
+        "en": {
+          "$ref": "#/$defs/nonBlank"
+        }
+      }
+    },
+    "baseline": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "manifestPath",
+        "baselineVersion",
+        "manifestNormalizedSha256",
+        "declaredChecklistItemCount",
+        "observedChecklistItemCount",
+        "compendiumParity"
+      ],
+      "properties": {
+        "manifestPath": {
+          "const": "docs/secure-development/baseline-manifest.json"
+        },
+        "baselineVersion": {
+          "const": "3.2.0"
+        },
+        "manifestNormalizedSha256": {
+          "$ref": "#/$defs/digest"
+        },
+        "declaredChecklistItemCount": {
+          "const": 157
+        },
+        "observedChecklistItemCount": {
+          "const": 157
+        },
+        "compendiumParity": {
+          "enum": [
+            "Matched",
+            "Finding"
+          ]
+        }
+      }
+    },
+    "sourceBinding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "sourceId",
+        "sourceClass",
+        "path",
+        "version",
+        "reviewedAt",
+        "normalizedSha256",
+        "scope",
+        "freshness",
+        "locator",
+        "findingIds"
+      ],
+      "properties": {
+        "sourceId": {
+          "$ref": "#/$defs/nonBlank"
+        },
+        "sourceClass": {
+          "enum": [
+            "Guideline",
+            "Checklist",
+            "Compendium",
+            "RelatedDocument",
+            "LearningDocument",
+            "ManagedReference",
+            "ManagedBinary",
+            "Constitution",
+            "Preset",
+            "ProjectEvidence",
+            "Workflow",
+            "Validator",
+            "Registry",
+            "IntakeEvidence"
+          ]
+        },
+        "path": {
+          "$ref": "#/$defs/relativePath"
+        },
+        "version": {
+          "$ref": "#/$defs/nonBlank"
+        },
+        "reviewedAt": {
+          "$ref": "#/$defs/date"
+        },
+        "normalizedSha256": {
+          "$ref": "#/$defs/digest"
+        },
+        "scope": {
+          "$ref": "#/$defs/bilingualText"
+        },
+        "freshness": {
+          "enum": [
+            "Current",
+            "Revalidated",
+            "Stale",
+            "Conflicting",
+            "Unresolved"
+          ]
+        },
+        "locator": {
+          "$ref": "#/$defs/nonBlank"
+        },
+        "findingIds": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "pattern": "^GSDB-FINDING-[0-9]{3}$"
+          }
+        }
+      }
+    },
+    "evidenceReference": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "path",
+        "locator",
+        "observedAt",
+        "freshness",
+        "availability",
+        "supports"
+      ],
+      "properties": {
+        "path": {
+          "$ref": "#/$defs/relativePath"
+        },
+        "locator": {
+          "$ref": "#/$defs/nonBlank"
+        },
+        "observedAt": {
+          "$ref": "#/$defs/dateTimeOrDate"
+        },
+        "freshness": {
+          "enum": [
+            "Current",
+            "Revalidated",
+            "Stale",
+            "Conflicting",
+            "Planned"
+          ]
+        },
+        "availability": {
+          "enum": [
+            "Existing",
+            "Planned",
+            "Unavailable"
+          ]
+        },
+        "supports": {
+          "$ref": "#/$defs/bilingualText"
+        },
+        "providerUrl": {
+          "type": "string",
+          "format": "uri",
+          "pattern": "^https://"
+        }
+      }
+    },
+    "assessmentFields": {
+      "type": "object",
+      "properties": {
+        "applicability": {
+          "enum": [
+            "Applicable",
+            "N/A",
+            "Open"
+          ]
+        },
+        "implementationStatus": {
+          "enum": [
+            "Fulfilled",
+            "Partly Fulfilled",
+            "Not Fulfilled",
+            "Not Assessed"
+          ]
+        },
+        "learningStage": {
+          "enum": [
+            "Foundation",
+            "Intermediate",
+            "Advanced"
+          ]
+        },
+        "rationale": {
+          "$ref": "#/$defs/bilingualText"
+        },
+        "evidence": {
+          "type": "array",
+          "items": {
+            "$ref": "#/$defs/evidenceReference"
+          }
+        },
+        "owner": {
+          "$ref": "#/$defs/nonBlank"
+        },
+        "reviewer": {
+          "$ref": "#/$defs/nonBlank"
+        },
+        "followUp": {
+          "$ref": "#/$defs/bilingualText"
+        },
+        "expectedEvidence": {
+          "$ref": "#/$defs/bilingualText"
+        },
+        "targetDueAt": {
+          "anyOf": [
+            {
+              "$ref": "#/$defs/date"
+            },
+            {
+              "const": "N/A"
+            }
+          ]
+        },
+        "reevaluationTrigger": {
+          "$ref": "#/$defs/bilingualText"
+        },
+        "residualRisk": {
+          "$ref": "#/$defs/bilingualText"
+        },
+        "severity": {
+          "enum": [
+            "Critical",
+            "High",
+            "Medium",
+            "Low",
+            "None"
+          ]
+        },
+        "humanOnly": {
+          "type": "boolean"
+        },
+        "humanDecisionEvidence": {
+          "const": "NotProvided"
+        },
+        "findingIds": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "pattern": "^GSDB-FINDING-[0-9]{3}$"
+          }
+        }
+      },
+      "required": [
+        "applicability",
+        "implementationStatus",
+        "learningStage",
+        "rationale",
+        "evidence",
+        "owner",
+        "reviewer",
+        "followUp",
+        "expectedEvidence",
+        "targetDueAt",
+        "reevaluationTrigger",
+        "residualRisk",
+        "severity",
+        "humanOnly",
+        "humanDecisionEvidence",
+        "findingIds"
+      ],
+      "allOf": [
+        {
+          "if": {
+            "allOf": [
+              {
+                "properties": {
+                  "applicability": {
+                    "enum": [
+                      "Applicable",
+                      "Open"
+                    ]
+                  }
+                },
+                "required": [
+                  "applicability"
+                ]
+              },
+              {
+                "properties": {
+                  "implementationStatus": {
+                    "enum": [
+                      "Partly Fulfilled",
+                      "Not Fulfilled",
+                      "Not Assessed"
+                    ]
+                  }
+                },
+                "required": [
+                  "implementationStatus"
+                ]
+              }
+            ]
+          },
+          "then": {
+            "properties": {
+              "targetDueAt": {
+                "$ref": "#/$defs/date"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "applicability": {
+                "const": "N/A"
+              }
+            },
+            "required": [
+              "applicability"
+            ]
+          },
+          "then": {
+            "properties": {
+              "implementationStatus": {
+                "const": "Not Assessed"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "applicability": {
+                "const": "Open"
+              }
+            },
+            "required": [
+              "applicability"
+            ]
+          },
+          "then": {
+            "properties": {
+              "implementationStatus": {
+                "const": "Not Assessed"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "humanOnly": {
+                "const": true
+              }
+            },
+            "required": [
+              "humanOnly"
+            ]
+          },
+          "then": {
+            "properties": {
+              "implementationStatus": {
+                "enum": [
+                  "Partly Fulfilled",
+                  "Not Fulfilled",
+                  "Not Assessed"
+                ]
+              },
+              "humanDecisionEvidence": {
+                "const": "NotProvided"
+              }
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "implementationStatus": {
+                "const": "Fulfilled"
+              }
+            },
+            "required": [
+              "implementationStatus"
+            ]
+          },
+          "then": {
+            "properties": {
+              "applicability": {
+                "const": "Applicable"
+              },
+              "evidence": {
+                "minItems": 1,
+                "contains": {
+                  "properties": {
+                    "availability": {
+                      "const": "Existing"
+                    },
+                    "freshness": {
+                      "enum": [
+                        "Current",
+                        "Revalidated"
+                      ]
+                    }
+                  },
+                  "required": [
+                    "availability",
+                    "freshness"
+                  ]
+                },
+                "minContains": 1
+              }
+            }
+          }
+        }
+      ]
+    },
+    "assessmentRow": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/assessmentFields"
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "id",
+            "sourcePath",
+            "sourceLocator",
+            "applicability",
+            "implementationStatus",
+            "learningStage",
+            "rationale",
+            "evidence",
+            "owner",
+            "reviewer",
+            "followUp",
+            "expectedEvidence",
+            "targetDueAt",
+            "reevaluationTrigger",
+            "residualRisk",
+            "severity",
+            "humanOnly",
+            "humanDecisionEvidence",
+            "findingIds"
+          ],
+          "properties": {
+            "id": {
+              "type": "string",
+              "pattern": "^CL-(0[1-9]|1[0-2])-[0-9]{2}$"
+            },
+            "sourcePath": {
+              "$ref": "#/$defs/relativePath"
+            },
+            "sourceLocator": {
+              "$ref": "#/$defs/nonBlank"
+            },
+            "applicability": true,
+            "implementationStatus": true,
+            "learningStage": true,
+            "rationale": true,
+            "evidence": true,
+            "owner": true,
+            "reviewer": true,
+            "followUp": true,
+            "expectedEvidence": true,
+            "targetDueAt": true,
+            "reevaluationTrigger": true,
+            "residualRisk": true,
+            "severity": true,
+            "humanOnly": true,
+            "humanDecisionEvidence": true,
+            "findingIds": true
+          }
+        }
+      ]
+    },
+    "externalDuty": {
+      "allOf": [
+        {
+          "$ref": "#/$defs/assessmentFields"
+        },
+        {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "id",
+            "sourceId",
+            "sourceLocator",
+            "mappedChecklistIds",
+            "applicability",
+            "implementationStatus",
+            "learningStage",
+            "rationale",
+            "evidence",
+            "owner",
+            "reviewer",
+            "followUp",
+            "expectedEvidence",
+            "targetDueAt",
+            "reevaluationTrigger",
+            "residualRisk",
+            "severity",
+            "humanOnly",
+            "humanDecisionEvidence",
+            "findingIds"
+          ],
+          "properties": {
+            "id": {
+              "type": "string",
+              "pattern": "^GSDB-DUTY-[0-9]{3}$"
+            },
+            "sourceId": {
+              "$ref": "#/$defs/nonBlank"
+            },
+            "sourceLocator": {
+              "$ref": "#/$defs/nonBlank"
+            },
+            "mappedChecklistIds": {
+              "type": "array",
+              "uniqueItems": true,
+              "items": {
+                "type": "string",
+                "pattern": "^CL-(0[1-9]|1[0-2])-[0-9]{2}$"
+              }
+            },
+            "applicability": true,
+            "implementationStatus": true,
+            "learningStage": true,
+            "rationale": true,
+            "evidence": true,
+            "owner": true,
+            "reviewer": true,
+            "followUp": true,
+            "expectedEvidence": true,
+            "targetDueAt": true,
+            "reevaluationTrigger": true,
+            "residualRisk": true,
+            "severity": true,
+            "humanOnly": true,
+            "humanDecisionEvidence": true,
+            "findingIds": true
+          }
+        }
+      ]
+    },
+    "presetAssessment": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "presetId",
+        "version",
+        "priority",
+        "standardMatrixMember",
+        "applicability",
+        "mappedChecklistIds",
+        "mappedGateIds",
+        "evidence",
+        "rationale",
+        "owner",
+        "reviewer",
+        "followUp",
+        "reevaluationTrigger",
+        "residualRisk"
+      ],
+      "properties": {
+        "presetId": {
+          "enum": [
+            "security-governance",
+            "secure-development-assurance-governance",
+            "architecture-governance",
+            "isaqb-architecture-governance",
+            "a11y-governance",
+            "cross-platform-governance",
+            "agent-parity-governance",
+            "model-routing-governance",
+            "intake-authoring-governance",
+            "intake-review-governance",
+            "intake-sequencing-governance",
+            "autonomous-run-governance",
+            "parallel-autonomous-run-governance"
+          ]
+        },
+        "version": {
+          "$ref": "#/$defs/nonBlank"
+        },
+        "priority": {
+          "anyOf": [
+            {
+              "type": "integer",
+              "minimum": 0
+            },
+            {
+              "const": "NotInStandardMatrix"
+            }
+          ]
+        },
+        "standardMatrixMember": {
+          "type": "boolean"
+        },
+        "applicability": {
+          "enum": [
+            "Applicable",
+            "N/A",
+            "Open"
+          ]
+        },
+        "mappedChecklistIds": {
+          "type": "array",
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "pattern": "^CL-(0[1-9]|1[0-2])-[0-9]{2}$"
+          }
+        },
+        "mappedGateIds": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "string",
+            "pattern": "^GSDB-GATE-(00[1-9]|0[1-2][0-9]|03[0-3])$"
+          }
+        },
+        "evidence": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "$ref": "#/$defs/evidenceReference"
+          }
+        },
+        "rationale": {
+          "$ref": "#/$defs/bilingualText"
+        },
+        "owner": {
+          "$ref": "#/$defs/nonBlank"
+        },
+        "reviewer": {
+          "$ref": "#/$defs/nonBlank"
+        },
+        "followUp": {
+          "$ref": "#/$defs/bilingualText"
+        },
+        "reevaluationTrigger": {
+          "$ref": "#/$defs/bilingualText"
+        },
+        "residualRisk": {
+          "$ref": "#/$defs/bilingualText"
+        }
+      }
+    },
+    "finding": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "id",
+        "severity",
+        "sourceReferences",
+        "title",
+        "observation",
+        "owner",
+        "reviewer",
+        "followUp",
+        "reevaluationTrigger",
+        "residualRisk",
+        "deliveryImpact",
+        "status"
+      ],
+      "properties": {
+        "id": {
+          "type": "string",
+          "pattern": "^GSDB-FINDING-[0-9]{3}$"
+        },
+        "severity": {
+          "enum": [
+            "Critical",
+            "High",
+            "Medium",
+            "Low"
+          ]
+        },
+        "sourceReferences": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "$ref": "#/$defs/nonBlank"
+          }
+        },
+        "title": {
+          "$ref": "#/$defs/bilingualText"
+        },
+        "observation": {
+          "$ref": "#/$defs/bilingualText"
+        },
+        "owner": {
+          "$ref": "#/$defs/nonBlank"
+        },
+        "reviewer": {
+          "$ref": "#/$defs/nonBlank"
+        },
+        "followUp": {
+          "$ref": "#/$defs/bilingualText"
+        },
+        "reevaluationTrigger": {
+          "$ref": "#/$defs/bilingualText"
+        },
+        "residualRisk": {
+          "$ref": "#/$defs/bilingualText"
+        },
+        "deliveryImpact": {
+          "enum": [
+            "BlocksReview",
+            "BlocksDelivery",
+            "DoesNotBlockCompletedAssessment"
+          ]
+        },
+        "status": {
+          "enum": [
+            "Open",
+            "AcceptedByHumanEvidence",
+            "ResolvedByEvidence"
+          ]
+        }
+      }
+    },
+    "summary": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "checklistTotal",
+        "familyCounts",
+        "byApplicability",
+        "byImplementationStatus",
+        "humanOnlyTotal",
+        "openFindingTotal",
+        "findingsBySeverity",
+        "sourceInventoryTotal",
+        "presetTotal",
+        "standardPresetTotal",
+        "externalDutyTotal",
+        "missingIds",
+        "duplicateIds",
+        "unknownIds",
+        "unsupportedClaims"
+      ],
+      "properties": {
+        "checklistTotal": {
+          "const": 157
+        },
+        "familyCounts": {
+          "type": "object",
+          "additionalProperties": false,
+          "required": [
+            "CL-01",
+            "CL-02",
+            "CL-03",
+            "CL-04",
+            "CL-05",
+            "CL-06",
+            "CL-07",
+            "CL-08",
+            "CL-09",
+            "CL-10",
+            "CL-11",
+            "CL-12"
+          ],
+          "properties": {
+            "CL-01": { "const": 12 },
+            "CL-02": { "const": 13 },
+            "CL-03": { "const": 15 },
+            "CL-04": { "const": 10 },
+            "CL-05": { "const": 13 },
+            "CL-06": { "const": 11 },
+            "CL-07": { "const": 12 },
+            "CL-08": { "const": 13 },
+            "CL-09": { "const": 17 },
+            "CL-10": { "const": 17 },
+            "CL-11": { "const": 12 },
+            "CL-12": { "const": 12 }
+          }
+        },
+        "byApplicability": {
+          "$ref": "#/$defs/countMap"
+        },
+        "byImplementationStatus": {
+          "$ref": "#/$defs/countMap"
+        },
+        "humanOnlyTotal": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 157
+        },
+        "openFindingTotal": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "findingsBySeverity": {
+          "$ref": "#/$defs/countMap"
+        },
+        "sourceInventoryTotal": {
+          "type": "integer",
+          "minimum": 30
+        },
+        "presetTotal": {
+          "const": 13
+        },
+        "standardPresetTotal": {
+          "const": 8
+        },
+        "externalDutyTotal": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "missingIds": {
+          "const": 0
+        },
+        "duplicateIds": {
+          "const": 0
+        },
+        "unknownIds": {
+          "const": 0
+        },
+        "unsupportedClaims": {
+          "const": 0
+        }
+      }
+    },
+    "countMap": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "integer",
+        "minimum": 0
+      }
+    }
+  }
+}

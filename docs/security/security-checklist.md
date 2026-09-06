@@ -183,3 +183,39 @@ deserialisation, authentication, or privileged operation requires replanning.
 - `docs/security/adr/003-terminalgui-lifecycle-supply-chain.md`
 - `specs/003-terminalgui-migration/evidence/regression.md`
 - `specs/003-terminalgui-migration/evidence/coverage-summary.md`
+
+## GSDB-Intensivprüfung 2026-09-06 / Intensive GSDB Review 2026-09-06
+
+### Deutscher Prüfblock
+
+TinyCalc verwendet C# auf .NET 10 und damit eine speichersichere Primärsprache.
+Das ersetzt keine Prüfung sicherer APIs. Die read-only Sichtung von `src/`,
+`tests/`, Lösung und Projektdateien fand folgende Grenzen:
+
+- Formeln und Tastenfolgen sind nicht vertrauenswürdige Eingaben. Parser und
+  Engine begrenzen sie auf den vorhandenen Befehlssatz; dynamische
+  Codeausführung wurde nicht gefunden.
+- Datei-I/O bleibt eine lokale Vertrauensgrenze. Die Prüfung fand keine
+  Netzwerk- oder Privilegiengrenze und keine unsichere Typdeserialisierung.
+- Benutzerfehler werden ohne Stacktrace, Secret oder Verbindungszeichenfolge
+  dargestellt. Interne Fehlerdetails gehören nur in technische Prüfpfade.
+- Terminal.Gui ist die relevante Managed-Abhängigkeit. Native Terminaltreiber
+  bilden eine indirekte Grenze und benötigen eigene Liefer- und Plattformgates.
+
+NIST SSDF gilt für Planung, Quellschutz, Prüfung und Freigabe. CWE Top 25 gilt
+besonders für Eingabevalidierung, Pfade, Fehlerausgabe und Abhängigkeiten. Die
+Prüfung belegt Zuordnung und begrenzte Evidenz, nicht pauschale Erfüllung.
+
+### English review block
+
+TinyCalc uses C# on .NET 10, a memory-safe primary language. This does not
+replace secure-API review. Formula and keyboard data remain untrusted input;
+local files are a trust boundary; errors must not expose stack traces or
+secrets; and terminal dependencies need separate supply-chain and platform
+evidence. NIST SSDF maps to planning, source protection, verification, and
+release. CWE Top 25 maps to input validation, paths, error output, and
+dependencies. This is bounded evidence, not blanket compliance.
+
+Owner: TinyCalc security governance role. Reviewer: independent technical
+security review role. Re-evaluate on any product, parser, file format, native
+boundary, dependency, workflow, or release-scope change.

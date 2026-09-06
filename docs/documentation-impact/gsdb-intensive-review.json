@@ -1,0 +1,58 @@
+{
+  "schemaVersion": "1.1",
+  "feature": "005-gsdb-intensive-review",
+  "entries": [
+    {
+      "changeId": "CHG029",
+      "scope": "GSDB intensive security assessment and accessible reader path",
+      "decision": "UpdateRequired",
+      "rationale": "DE: Die vollständige Bewertung benötigt eine kanonische JSON-Matrix und lineare zweisprachige Lesesichten. EN: The complete assessment requires a canonical JSON matrix and linear bilingual reader views.",
+      "documents": [
+        "docs/security/gsdb-intensive-review/evidence-matrix.json",
+        "docs/security/gsdb-intensive-review/evidence-matrix.md",
+        "docs/security/gsdb-intensive-review/source-inventory.md",
+        "docs/security/gsdb-intensive-review/preset-mapping.md",
+        "docs/security/gsdb-intensive-review/open-findings.md",
+        "docs/security/README.md",
+        "docs/accessibility/gsdb-intensive-review.md"
+      ],
+      "owner": "Repository Maintainer",
+      "audiences": ["Repository users", "Maintainers and AI agents", "Technical and human reviewers"],
+      "readerPaths": ["Security documentation index", "GSDB evidence matrix", "Source and preset evidence", "Open follow-up"],
+      "canonicalSource": "docs/security/gsdb-intensive-review/evidence-matrix.json",
+      "navigationImpact": "DE: Der bestehende Security-Index erhält relative Links; DocFX nimmt die Markdown-Pfade auf. EN: The existing security index gains relative links; DocFX includes the Markdown paths.",
+      "documentClass": "ActiveSemantic",
+      "languageStrategy": "DE: Deutsch zuerst, Englisch danach, CEFR B2 und UTF-8. EN: German first, English second, CEFR B2 and UTF-8.",
+      "languagePartners": [],
+      "platformAndExampleProof": "DE: macOS prüft Inhalt, DocFX und lynx lokal; CI plant Linux-/Windows-Validatoren. EN: macOS checks content, DocFX, and lynx locally; CI defines Linux and Windows validators.",
+      "distributionClass": "sourceOnly",
+      "homeSyncRequired": false,
+      "evidence": "docs/accessibility/gsdb-intensive-review.md",
+      "risk": "DE: Mittel; die Dokumente enthalten Security- und Rechtsanwendbarkeitsaussagen mit offener Human-only-Grenze. EN: Medium; the documents contain security and legal applicability statements with an open Human-only boundary.",
+      "criticality": "Security",
+      "reevaluationTrigger": "DE: Jede Baseline-, Produkt-, Architektur-, Abhängigkeits-, Workflow-, Provider- oder Rechtsänderung. EN: Any baseline, product, architecture, dependency, workflow, provider, or legal change."
+    },
+    {
+      "changeId": "CHG030",
+      "scope": "Shared agent guidance and constitutional rules",
+      "decision": "NoUpdateRequired",
+      "rationale": "DE: Feature 005 bewertet den vorhandenen Stand und ändert keine gemeinsame Regel. Home-Sync ist N/A. EN: Feature 005 assesses current state and changes no shared rule. Home sync is N/A.",
+      "documents": [],
+      "owner": "Repository Maintainer",
+      "audiences": ["Maintainers and AI agents", "Reviewers"],
+      "readerPaths": ["Repository agent guidance", "Both constitutions", "Feature-local evidence"],
+      "canonicalSource": "AGENTS.md",
+      "navigationImpact": "DE: Keine Änderung der Agenten- oder API-Navigation. EN: No agent or API navigation change.",
+      "documentClass": "OperationalReference",
+      "languageStrategy": "DE: Bestehende Sprachparität bleibt unverändert. EN: Existing language parity remains unchanged.",
+      "languagePartners": [],
+      "platformAndExampleProof": "DE: Parität wird read-only über die fünf Agentenflächen und beide Constitutions geprüft. EN: Parity is reviewed read-only across five agent surfaces and both constitutions.",
+      "distributionClass": "sourceOnly",
+      "homeSyncRequired": false,
+      "evidence": "specs/005-gsdb-intensive-review/autonomous-run-evidence.md",
+      "risk": "DE: Niedrig; keine gemeinsame Regel wird geändert. EN: Low; no shared rule changes.",
+      "criticality": "Normal",
+      "reevaluationTrigger": "DE: Eine echte Governance-, Runtime-, Statistik- oder Agentenregeländerung. EN: A real governance, runtime, statistics, or agent-rule change."
+    }
+  ]
+}
