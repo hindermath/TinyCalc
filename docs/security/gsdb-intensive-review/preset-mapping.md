@@ -24,7 +24,7 @@ inactive.
 | `agent-parity-governance` | 0.4.2 | 60 | Standard | CL-09, CL-10, CL-12; Gates 025, 026 | `33ab3c1bd99a5069af5c0006899c26476d0cabd868bd7ac55659bdd4e4794952` |
 | `autonomous-run-governance` | 0.4.1 | 70 | Standard | CL-05, CL-09, CL-12; Gates 001, 002, 027-033 | `9bdee271462fcecf84cdcf6b25cf70b615d9285c9107e4a30f7d4c00011f4759` |
 | `parallel-autonomous-run-governance` | 0.2.6 | 80 | Standard | CL-09, CL-12; Gate 033 (`N/A` execution) | `70af07aa51506790ed99e2743ec7a51127936de0d9e82239e2b3f03716539b0d` |
-| `secure-development-assurance-governance` | 0.1.2 | NotInStandardMatrix | Extra | CL-01 bis CL-12; Gates 003-018, 026 | `624d726e0afb71b852581b102f243b9c4d605b4e67e78bb0ec4433b89947750a` |
+| `secure-development-assurance-governance` | 0.1.3 | NotInStandardMatrix | Extra | CL-01 bis CL-12; Gates 003-018, 026 | `8e17022fb60749a3db454239641592f125e727585c0312418fae538e2b3ca622` |
 | `model-routing-governance` | 0.1.4 | NotInStandardMatrix | Extra | CL-09, CL-12; Gates 001, 002 | `a06eee81c3988b9ef617e131370c2522f4d4f8847c6dcfed833f465ed479fd0e` |
 | `intake-authoring-governance` | 0.3.1 | NotInStandardMatrix | Extra | CL-09, CL-12; Gates 001, 032, 033 | `20e44082b29e58f7444777f31a9e2057585353567be52c81a40a9b65fef7aa4d` |
 | `intake-review-governance` | 0.2.1 | NotInStandardMatrix | Extra | CL-08, CL-09, CL-12; Gates 001, 028, 032 | `81746b9764249a912de4f0570d1178ade21381e38c2409d87957e4a42eadc241` |

@@ -79,7 +79,7 @@ $script:ExpectedPresets = [ordered]@{
     'isaqb-architecture-governance' = @{ Version = '0.2.2'; Priority = 30; Standard = $true; Families = @('CL-02', 'CL-04'); Gates = @('010') }
     'model-routing-governance' = @{ Version = '0.1.4'; Priority = 'NotInStandardMatrix'; Standard = $false; Families = @('CL-09', 'CL-12'); Gates = @('001', '002') }
     'parallel-autonomous-run-governance' = @{ Version = '0.2.6'; Priority = 80; Standard = $true; Families = @('CL-09', 'CL-12'); Gates = @('033') }
-    'secure-development-assurance-governance' = @{ Version = '0.1.2'; Priority = 'NotInStandardMatrix'; Standard = $false; Families = @('CL-01', 'CL-02', 'CL-03', 'CL-04', 'CL-05', 'CL-06', 'CL-07', 'CL-08', 'CL-09', 'CL-10', 'CL-11', 'CL-12'); Gates = @('003', '004', '005', '006', '007', '008', '009', '010', '011', '012', '013', '014', '015', '016', '017', '018', '026') }
+    'secure-development-assurance-governance' = @{ Version = '0.1.3'; Priority = 'NotInStandardMatrix'; Standard = $false; Families = @('CL-01', 'CL-02', 'CL-03', 'CL-04', 'CL-05', 'CL-06', 'CL-07', 'CL-08', 'CL-09', 'CL-10', 'CL-11', 'CL-12'); Gates = @('003', '004', '005', '006', '007', '008', '009', '010', '011', '012', '013', '014', '015', '016', '017', '018', '026') }
     'security-governance' = @{ Version = '0.6.2'; Priority = 10; Standard = $true; Families = @('CL-01', 'CL-03', 'CL-05', 'CL-07', 'CL-08'); Gates = @('008', '009', '010', '011', '012', '013', '014', '015', '016', '017', '018', '024') }
 }
 
