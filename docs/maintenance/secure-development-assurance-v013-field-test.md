@@ -35,7 +35,7 @@ geändert.
 | Preset-Profil | 13 Presets, exakt |
 | Host | macOS 26.6.2, Apple Silicon |
 | Shells | GNU Bash 3.2.57; PowerShell 7.6.5; jq 1.7.1 |
-| Delivery | Branch `codex/assurance-v013-field-test-closeout`; PR-Link wird im Liefercommit ergänzt |
+| Delivery | [TinyCalc PR #74](https://github.com/hindermath/TinyCalc/pull/74); geprüfter Evidence-Commit `e7145f33b7420b2055a6cc5f4a20bfcb5bf123e6` |
 
 ## Technische Prüfung / Technical Validation
 
