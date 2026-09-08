@@ -10,8 +10,8 @@
   "review": {
     "owner": "TinyCalc project owner role",
     "reviewer": "Independent technical security review role",
-    "reviewedAt": "2026-09-05T19:50:00+02:00",
-    "reviewDue": "2027-09-05",
+    "reviewedAt": "2026-09-08T14:08:00+02:00",
+    "reviewDue": "2027-09-08",
     "residualRisk": "CI and script changes still require exact-head platform validation.",
     "reevaluationTrigger": "Any container, image, toolchain, CI, network, mount, secret, or SBOM change."
   },

@@ -11,7 +11,7 @@ Usage:
 EOF
 }
 
-assessment='docs/security/secure-development/2026-09-05-rl-se-self-assessment/assessment-matrix.json'
+assessment='docs/security/secure-development/2026-09-05-tinycalc-rl-se-self-assessment/assessment-matrix.json'
 repository_root='.'
 
 while (($# > 0)); do

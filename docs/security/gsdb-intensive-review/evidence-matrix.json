@@ -946,10 +946,10 @@
     {
       "sourceId": "SRC-050",
       "sourceClass": "ProjectEvidence",
-      "path": "docs/security/secure-development/2026-09-05-rl-se-self-assessment/assessment-matrix.json",
+      "path": "docs/security/secure-development/2026-09-05-tinycalc-rl-se-self-assessment/assessment-matrix.json",
       "version": "1.0",
       "reviewedAt": "2026-09-06",
-      "normalizedSha256": "6ffe434f811571c02c5da951b2234dcbe5dd3564dbaa9176e4fffa40d44b0858",
+      "normalizedSha256": "804b7308968e1aa0984a5b678b977a5a5dc631a15bce5812fbeae0636bf7554c",
       "scope": {
         "de": "Diese Quelle wird nur für ihren benannten TinyCalc-Prüfumfang verwendet.",
         "en": "This source is used only for its named TinyCalc assessment scope."
@@ -961,10 +961,10 @@
     {
       "sourceId": "SRC-051",
       "sourceClass": "ProjectEvidence",
-      "path": "docs/security/secure-development/2026-09-05-rl-se-self-assessment/closure.json",
+      "path": "docs/security/secure-development/2026-09-05-tinycalc-rl-se-self-assessment/closure.json",
       "version": "1.0",
       "reviewedAt": "2026-09-06",
-      "normalizedSha256": "07c34f1e576d23d4b1fa808ebbecc5d38466280a0fbc505a79f633aaeb914e5f",
+      "normalizedSha256": "db2be35af5b02d52be2d74045862756bb149fe0dfddf7043e2f69ccca8054138",
       "scope": {
         "de": "Diese Quelle wird nur für ihren benannten TinyCalc-Prüfumfang verwendet.",
         "en": "This source is used only for its named TinyCalc assessment scope."
@@ -1054,7 +1054,7 @@
       "path": "scripts/validate-rl-se-assessment.sh",
       "version": "Current",
       "reviewedAt": "2026-09-06",
-      "normalizedSha256": "06e3150b58ea460f523b91ba1610d61cd035c218eacab5b89af2a1dca8e1c5b2",
+      "normalizedSha256": "724cb09c551b9c3f806b03dff07edaf7350a838295ffe9cfb63b7a5d4fe9fcdc",
       "scope": {
         "de": "Zeilenspezifischer aktueller Nachweis aus scripts/validate-rl-se-assessment.sh; der Hash beweist Inhalt, nicht automatisch Erfuellung.",
         "en": "Current row-specific evidence from scripts/validate-rl-se-assessment.sh; the hash proves content, not automatic fulfilment."
@@ -1084,7 +1084,7 @@
       "path": "scripts/validate-rl-se-assessment.ps1",
       "version": "Current",
       "reviewedAt": "2026-09-06",
-      "normalizedSha256": "515dc2ace57c79ff209594ad9eb63eb440cb438dc1b719a7dbeba82c64618609",
+      "normalizedSha256": "9012e1f8aabd02d53428fed0a6ad1ee42eb753210b856542e2c9fd383faa744d",
       "scope": {
         "de": "Zeilenspezifischer aktueller Nachweis aus scripts/validate-rl-se-assessment.ps1; der Hash beweist Inhalt, nicht automatisch Erfuellung.",
         "en": "Current row-specific evidence from scripts/validate-rl-se-assessment.ps1; the hash proves content, not automatic fulfilment."
@@ -1144,7 +1144,7 @@
       "path": "docs/security/cloud-compliance-assurance.md",
       "version": "Current",
       "reviewedAt": "2026-09-06",
-      "normalizedSha256": "fbbc64b78515cea75ab31f25032abd4530cc2e06a43c9c2ce7607ca003869803",
+      "normalizedSha256": "17e0cc59206f2657c60a66cde1cf327f5d3cc34ea36c7a68c5ca92e3f3e609f4",
       "scope": {
         "de": "Zeilenspezifischer aktueller Nachweis aus docs/security/cloud-compliance-assurance.md; der Hash beweist Inhalt, nicht automatisch Erfuellung.",
         "en": "Current row-specific evidence from docs/security/cloud-compliance-assurance.md; the hash proves content, not automatic fulfilment."
@@ -1159,7 +1159,7 @@
       "path": "docs/security/regulatory-applicability.md",
       "version": "Current",
       "reviewedAt": "2026-09-06",
-      "normalizedSha256": "b4bc6e92d73916dc6d79f6ee9e8fa1b7ef06b071f6deeefe3d0696a26315f2b4",
+      "normalizedSha256": "ef7e0d2a5a3b4ebc97fcb03ac4b051d37ccaf897971649827f1ee9937e4e9b52",
       "scope": {
         "de": "Zeilenspezifischer aktueller Nachweis aus docs/security/regulatory-applicability.md; der Hash beweist Inhalt, nicht automatisch Erfuellung.",
         "en": "Current row-specific evidence from docs/security/regulatory-applicability.md; the hash proves content, not automatic fulfilment."
@@ -1174,7 +1174,7 @@
       "path": "docs/security/README.md",
       "version": "Current",
       "reviewedAt": "2026-09-06",
-      "normalizedSha256": "773fd9460c8cefda7375c086345b90ae05195028a16e0f0a5261b7154906be69",
+      "normalizedSha256": "a5cb6f1c0bf06f01542572a1dc9da06fa655154d496ba7fd2091419a3589f741",
       "scope": {
         "de": "Zeilenspezifischer aktueller Nachweis aus docs/security/README.md; der Hash beweist Inhalt, nicht automatisch Erfuellung.",
         "en": "Current row-specific evidence from docs/security/README.md; the hash proves content, not automatic fulfilment."

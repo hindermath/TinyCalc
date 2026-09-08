@@ -70,15 +70,15 @@ reference files, and the PDF plus checksum file.
 |---|---|---|---|
 | Constitution | `constitution.md` | `c57f6e586d93a48b2254550367289e9e3e3ba6645ebb8f308f2e9e24dc7c93b9` | Current; Principles XI-XVIII und Registry-Zeile `RiderProjects/TinyCalc` |
 | Constitution | `.specify/memory/constitution.md` | `c57f6e586d93a48b2254550367289e9e3e3ba6645ebb8f308f2e9e24dc7c93b9` | Current; byte-identischer Partner / byte-identical partner |
-| Registry | `.specify/presets/.registry` | `3dd7cdd07cd9581a532749967d91115fac499b00f500822cefbcccca7723ad81` | Current; `presets` mit 13 Einträgen / 13 entries |
-| Workflow | `.github/workflows/ci.yml` | `2b2dfb1606d9068b22b0eb1b5f9f4c266c03923bf1207bbb5d2a3b9fea4e79fc` | Current; Linux-/Windows-Produkt- und GSDB-Validatorjobs nach T059 |
+| Registry | `.specify/presets/.registry` | `88f4be9f2ca39a98e543baa530ecb339797c031408bbc70cb8f7a04308b176b6` | Current; `presets` mit 13 Einträgen / 13 entries |
+| Workflow | `.github/workflows/ci.yml` | `c67a2404fd8d973bc36e49a811b5efc1065ac3bbf8cf5bfd2b211e0b6cfc2ceb` | Current; Linux-/Windows-Produkt- und GSDB-Validatorjobs nach T059 |
 | Workflow | `.github/workflows/agent-secret-scan.yml` | `2e604000c7c18c64420c3553f0db35e18222bafd9324a90295126667e567ada2` | Current; Secret-Scan |
 | Workflow | `.github/workflows/gitleaks.yml` | `825705909c0a7c4f1b3844c73f30c46bc684a736adb959892add3f53897c8a8a` | Current; gitleaks |
 | Workflow | `.github/workflows/homogeneity-check.yml` | `408c5ec7a8eaf5f6a269368032e0d32527cd5d3487d27b2a33467c971dd6a47b` | Current; Ubuntu/macOS/Windows |
 | Workflow | `.github/workflows/powershell-analysis.yml` | `8d1a3b78cd161d630cbad34fc122305ecdb9cae5dc321b1a0c561d774e5d97b8` | Current; PSScriptAnalyzer |
 | Workflow | `.github/workflows/requirements-intake-governance.yml` | `b3c36af60db78839159b3a6dd714c090792b38e8c4a957f4ec8a38f47116a752` | Current; Intake-Parität |
-| Validator | `scripts/validate-rl-se-assessment.ps1` | `515dc2ace57c79ff209594ad9eb63eb440cb438dc1b719a7dbeba82c64618609` | Revalidated; Feature-004-Vertrag / Feature 004 contract |
-| Validator | `scripts/validate-rl-se-assessment.sh` | `06e3150b58ea460f523b91ba1610d61cd035c218eacab5b89af2a1dca8e1c5b2` | Revalidated; Bash-Partner |
+| Validator | `scripts/validate-rl-se-assessment.ps1` | `9012e1f8aabd02d53428fed0a6ad1ee42eb753210b856542e2c9fd383faa744d` | Revalidated; Feature-004-Vertrag / Feature 004 contract |
+| Validator | `scripts/validate-rl-se-assessment.sh` | `724cb09c551b9c3f806b03dff07edaf7350a838295ffe9cfb63b7a5d4fe9fcdc` | Revalidated; Bash-Partner |
 | Validator | `.specify/presets/autonomous-run-governance/scripts/validate-autonomous-run-state.ps1` | `ab45103607ce624349c33d830070984daa56833660ef8ec0d0528a07558cd05a` | Current; Run `69674c80-911c-40ff-9a0e-004f7b13b832` |
 | Validator | `.specify/presets/autonomous-run-governance/scripts/validate-autonomous-phase-result.ps1` | `9cc2521a6a54d45bc34b72739881824b70d0d570212c7d02504c484c8b0d9793` | Current; sieben Vorgängerergebnisse / seven predecessor results |
 | Validator | `.specify/presets/intake-review-governance/scripts/validate-intake-review-result.ps1` | `c94f3db6f5c8fe2f2237abafe6411484881bd404ee99311404c5558d17fff22e` | Current; Ready-Review |
@@ -88,12 +88,12 @@ reference files, and the PDF plus checksum file.
 | IntakeEvidence | `requirements/intakes/series/tinycalc-delivery/intake-review-request.json` | `daf3027245df1d4681305746e771787c19d80d18c647dac5776b7e7eb5f2608d` | Current; Review-Anforderung / review request |
 | IntakeEvidence | `requirements/intakes/series/tinycalc-delivery/intake-review-result.json` | `22bb15b3016d31f2dfcc65aff0a4979e2eac18af998c1a8be58440f6e293757b` | Current; `Ready` |
 | IntakeEvidence | `requirements/intakes/series/tinycalc-delivery/intake-review-report.md` | `0a291a17ef43f4ef7a1178e20dc6504a4ff6e9c8ffb588a94ae7bf667f9915c0` | Current; lesbare Review-Sicht / readable review view |
-| ProjectEvidence | `docs/security/secure-development/2026-09-05-rl-se-self-assessment/baseline.json` | `5e3fc21dc957a18e19c6a43edb5765b781cde3c8352e00fa6f16bf5721f85e1c` | Revalidated; Gate `baseline` |
-| ProjectEvidence | `docs/security/secure-development/2026-09-05-rl-se-self-assessment/assessment-matrix.json` | `6ffe434f811571c02c5da951b2234dcbe5dd3564dbaa9176e4fffa40d44b0858` | Revalidated; 157 Feature-004-Zeilen |
-| ProjectEvidence | `docs/security/secure-development/2026-09-05-rl-se-self-assessment/closure.json` | `07c34f1e576d23d4b1fa808ebbecc5d38466280a0fbc505a79f633aaeb914e5f` | Revalidated; technische Schließung, Human-only offen / technical closure, Human-only open |
-| ProjectEvidence | `docs/security/secure-development/2026-09-05-rl-se-self-assessment/deltas/rl-se-assessment.json` | `81137a3d22381f0381c053ab61c2f187e6f2f483e1c472a8b99b7ac9d0dd2a33` | Revalidated; Feature-004-Delta |
-| ProjectEvidence | `docs/security/secure-development/2026-09-05-rl-se-self-assessment/image-impact.json` | `fb52d3dd414d4d2d7af668a9f206e4a40beaf04a7d08d643ccc01289e345ad42` | Revalidated; Bildauswirkung / image impact |
-| ProjectEvidence | `docs/security/secure-development/2026-09-05-rl-se-self-assessment/evidence-matrix.md` | `2c72d9d33e3269c98cb67c60c2d8551ea3f2272448871de06188401b92ea8fdc` | Revalidated; Lesesicht / reader view |
+| ProjectEvidence | `docs/security/secure-development/2026-09-05-tinycalc-rl-se-self-assessment/baseline.json` | `f8339c12b46e0787a441b127e9002b16e8861eeb3544b741ab3550d79fb69f6d` | Revalidated; Gate `baseline` |
+| ProjectEvidence | `docs/security/secure-development/2026-09-05-tinycalc-rl-se-self-assessment/assessment-matrix.json` | `804b7308968e1aa0984a5b678b977a5a5dc631a15bce5812fbeae0636bf7554c` | Revalidated; 157 Feature-004-Zeilen |
+| ProjectEvidence | `docs/security/secure-development/2026-09-05-tinycalc-rl-se-self-assessment/closure.json` | `db2be35af5b02d52be2d74045862756bb149fe0dfddf7043e2f69ccca8054138` | Revalidated; technische Schließung, Human-only offen / technical closure, Human-only open |
+| ProjectEvidence | `docs/security/secure-development/2026-09-05-tinycalc-rl-se-self-assessment/deltas/rl-se-assessment.json` | `90200736ae784fae69848decdb54d0e5bec63cff3167025e7466a793626ec94b` | Revalidated; Feature-004-Delta |
+| ProjectEvidence | `docs/security/secure-development/2026-09-05-tinycalc-rl-se-self-assessment/image-impact.json` | `2e285061d8aa75f19376d6e08ac5d9aebde1603e085c71268fe0ba26c09ee8bd` | Revalidated; Bildauswirkung / image impact |
+| ProjectEvidence | `docs/security/secure-development/2026-09-05-tinycalc-rl-se-self-assessment/evidence-matrix.md` | `0a133addd835cb1ae334b83b38c9e39058fa85ea87cab710e8d8c02691e67cc1` | Revalidated; Lesesicht / reader view |
 
 ## Zeilenspezifische Evidenzbindungen / Row-Specific Evidence Bindings
 
@@ -115,21 +115,21 @@ paths. A hash proves content, not automatic control fulfilment.
 | ProjectEvidence | `docs/security/security-quality-scenarios.md` | `81427d45fd22554b09b09e2c46f3a0d92ac7b8f7338059330aae733ae4855d04` | Revalidated; Sicherheits-Qualitätsszenarien |
 | ProjectEvidence | `docs/security/supply-chain-evidence.md` | `ce2ad04908b883ec2d1e8b44af0a9ce24c17580bf01dd09c35ffee12242c6e3f` | Revalidated; Supply-Chain-Evidenz |
 | ProjectEvidence | `docs/security/threat-model.md` | `94093ec8a0b84d0362c6695c17280b0a3f5126c5185348ce0416542fbbd554ad` | Revalidated; Bedrohungsmodell / threat model |
-| ProjectEvidence | `scripts/validate-rl-se-assessment.sh` | `06e3150b58ea460f523b91ba1610d61cd035c218eacab5b89af2a1dca8e1c5b2` | Revalidated; read-only shell entry point |
+| ProjectEvidence | `scripts/validate-rl-se-assessment.sh` | `724cb09c551b9c3f806b03dff07edaf7350a838295ffe9cfb63b7a5d4fe9fcdc` | Revalidated; read-only shell entry point |
 | ProjectEvidence | `scripts/scan-agent-secrets.ps1` | `0e8b8035b2b94b41cef29989fc373561650ece571f5ba42a16e07ef984aac0c9` | Revalidated; read-only script entry point |
-| ProjectEvidence | `scripts/validate-rl-se-assessment.ps1` | `515dc2ace57c79ff209594ad9eb63eb440cb438dc1b719a7dbeba82c64618609` | Revalidated; read-only script entry point |
+| ProjectEvidence | `scripts/validate-rl-se-assessment.ps1` | `9012e1f8aabd02d53428fed0a6ad1ee42eb753210b856542e2c9fd383faa744d` | Revalidated; read-only script entry point |
 | ProjectEvidence | `docs/security/security-checklist.md` | `ec1f13a40631751a1828ceb7f1de263c89563895bb7cef689ea26ec4517299e8` | Revalidated; C#/.NET-Sicherheitsprüfung / security review |
 | ProjectEvidence | `docs/security/zero-trust-applicability.md` | `24bbd7e6e6893ce694908da44657bcf4613f01a692dc9272203f15a72f6e3a8e` | Revalidated; Zero-Trust-Disposition |
 | ProjectEvidence | `docs/security/sbom/tinycalc-terminalgui.spdx.json` | `3193a0f53e962ccaac8741331203990ba727a7ca0901ef17a8e3403678ffb398` | Revalidated; SPDX-JSON-Wurzel und Paketbeziehungen |
-| ProjectEvidence | `docs/security/cloud-compliance-assurance.md` | `c92b6bd9506c3395b8bf113bc42c55d66ab39c61c78e7c3c04184e23dc9c275c` | Revalidated; BSI-C5-Assurance-Disposition |
-| ProjectEvidence | `docs/security/regulatory-applicability.md` | `789b4aa74424dcf82bed27df4f1dd645dc4b7290dd5615b2f14abd44586d4259` | Revalidated; Regulatorik und Datenschutz / regulation and privacy |
-| ProjectEvidence | `docs/security/README.md` | `773fd9460c8cefda7375c086345b90ae05195028a16e0f0a5261b7154906be69` | Revalidated; Security-Leserpfad / reader path |
+| ProjectEvidence | `docs/security/cloud-compliance-assurance.md` | `17e0cc59206f2657c60a66cde1cf327f5d3cc34ea36c7a68c5ca92e3f3e609f4` | Revalidated; BSI-C5-Assurance-Disposition |
+| ProjectEvidence | `docs/security/regulatory-applicability.md` | `ef7e0d2a5a3b4ebc97fcb03ac4b051d37ccaf897971649827f1ee9937e4e9b52` | Revalidated; Regulatorik und Datenschutz / regulation and privacy |
+| ProjectEvidence | `docs/security/README.md` | `a5cb6f1c0bf06f01542572a1dc9da06fa655154d496ba7fd2091419a3589f741` | Revalidated; Security-Leserpfad / reader path |
 | ProjectEvidence | `docs/security/dependency-audit.md` | `441e2567712441816448243498112e514dfaa4fcd21cee0ec69ce64335c141c5` | Revalidated; aktueller Paketgraph / current package graph |
-| ProjectEvidence | `docs/security/cloud-autonomy-applicability.md` | `b34586ebbea57b0c9ce6aae99e00f9b8ef17b24c8f0455588dbd6a0703fa1349` | Revalidated; BSI-C3A-Disposition |
-| ProjectEvidence | `docs/security/asvs-verification.md` | `32012026c330e0affbbd7e07f62fb5f00fee6393924b30c09b3161c1c02d315b` | Revalidated; ASVS-N/A und Trigger |
+| ProjectEvidence | `docs/security/cloud-autonomy-applicability.md` | `398a07285563cf0a9c6b555771ed7672d68a24a170045d236feeb75a87130009` | Revalidated; BSI-C3A-Disposition |
+| ProjectEvidence | `docs/security/asvs-verification.md` | `bb1cbaadfde55dfe863fe04c9ab3b5de062769ccc1ed1970991bc0641d935c07` | Revalidated; ASVS-N/A und Trigger |
 | ProjectEvidence | `docs/security/arc42-security.md` | `eb28c797c53a2eca5cc8902ade176a9f854d8f63f58d66f482a09d7cf7e31a57` | Revalidated; arc42 Section 8 |
-| ProjectEvidence | `AGENTS.md` | `64b3050bf61ec3844601d60ab7adce9c889f573fb2fcb541d39c61bdbb6fded6` | Revalidated; Repository-Governance |
-| ProjectEvidence | `.specify/presets/.registry` | `3dd7cdd07cd9581a532749967d91115fac499b00f500822cefbcccca7723ad81` | Revalidated; 13 installierte Presets |
+| ProjectEvidence | `AGENTS.md` | `4cb8a055a479f2571277c10af59503aea85f24ea830a340a88b2d351d561e9fc` | Revalidated; Repository-Governance |
+| ProjectEvidence | `.specify/presets/.registry` | `88f4be9f2ca39a98e543baa530ecb339797c031408bbc70cb8f7a04308b176b6` | Revalidated; 13 installierte Presets |
 | ProjectEvidence | `specs/004-rl-se-self-assessment/autonomous-run-evidence.md` | `d3ec4b95b39d12693a0d549760fa096078e22533ce412068b5f182416b81bece` | Revalidated; Feature-004-Laufevidenz |
 | ProjectEvidence | `docs/security/samm-assessment.md` | `c6036128766f4aabb43ca32631db0a2c4b86f35b2c6d947296525cfa87c569e9` | Revalidated; OWASP-SAMM-Disposition |
 | ProjectEvidence | `specs/004-rl-se-self-assessment/plan.md` | `984cb6e791dacae44dbf3c9d8a7d6baf9d4ba1d3fec33fb306b0117bc5a09861` | Revalidated; Feature-004-Planungsgrenze |
