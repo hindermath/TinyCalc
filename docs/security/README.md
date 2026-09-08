@@ -36,7 +36,7 @@ Screenreadern und auf Braillezeilen verständlich.
 
 | Dokument | Status | Zweck |
 |---|---|---|
-| [RL-SE-Selbstpruefung](secure-development/2026-09-05-rl-se-self-assessment/evidence-matrix.md) | technisch Ready; menschliche Freigaben Open | 157-Punkte-Matrix, Familien-Summen, Entscheidungsgrenzen und Folgearbeit |
+| [RL-SE-Selbstpruefung](secure-development/2026-09-05-tinycalc-rl-se-self-assessment/evidence-matrix.md) | technisch Ready; menschliche Freigaben Open | 157-Punkte-Matrix, Familien-Summen, Entscheidungsgrenzen und Folgearbeit |
 | [S-ADR-Index](adr/README.md) | aktuell | Index der Security Architecture Decision Records |
 | [GSDB-Selbsteinschätzung](gsdb-self-assessment.md) | bestehender Preflight | sichere Entwicklungsrichtlinie und Preset-Voraussetzungen |
 | [Feature-Architektur](../architecture/terminalgui-migration.md) | abgeschlossen | Kontext-, Baustein-, Laufzeit-, Deployment-, Qualitäts- und Risikosichten |

@@ -6,27 +6,28 @@
 
 | Feld | Entscheidung |
 |---|---|
-| Prüftag | 2026-09-06 |
+| Prüftag | 2026-09-08 |
 | Quelle | [BSI C5: Kriterienkatalog Cloud Computing](https://www.bsi.bund.de/SharedDocs/Downloads/DE/BSI/Publikationen/Broschueren/C5_2020.pdf?__blob=publicationFile&v=3) |
-| Scope | Repository-, CI- und Artefaktprovider |
-| Status | `Applicable` als Assurance-Prüfung; Provider-Testat `NotProvided` |
+| Scope | Nichtkommerzielles Ausbildungs- und Beispielprogramm; GitHub nur Entwicklungsinfrastruktur |
+| Status | `N/A`; kein C5-Test oder Provider-Testat für den aktuellen Produktscope erforderlich |
 | Owner | Repository-Maintenance-Rolle |
-| Reviewer | unabhängige technische Security-Review-Rolle; Testatbewertung Human-only |
+| Reviewer | Repository-Owner; technische Evidence-Prüfung getrennt |
 
-C5 beschreibt Sicherheitskriterien und die geteilte Verantwortung zwischen
-Cloudanbieter und Kunde. Lokale Workflow-, Secret-, Abhängigkeits- und
-Delivery-Evidenz deckt nur die Kundenseite teilweise ab. Ein C5-Testat ist laut
-BSI keine BSI-Zertifizierung und ersetzt nicht die Bewertung des konkreten
-Dienstes. Deshalb wird weder Zertifizierung noch Providerfreigabe behauptet.
+C5 ist für den aktuellen TinyCalc-Produktscope nicht anwendbar: TinyCalc ist
+ein nichtkommerzielles Ausbildungs- und Beispielprogramm und betreibt oder
+liefert keine Cloud-Runtime. GitHub, CI und Artefakthosting sind ausschließlich
+Entwicklungsinfrastruktur und keine Produkt-Cloud-Leistung. Deshalb wird kein
+C5-Test, Testat, keine Zertifizierung und keine Providerfreigabe behauptet.
 
-Trigger sind Provider-, Service-, Region-, Vertrags-, Kontroll- oder
-Testatänderungen. Restrisiko bleiben nicht vorliegende aktuelle Testate,
-Providerkontrollen und die menschliche Bewertung der Verantwortungsteilung.
+Wiedervorlage ist der 31.12.2026. Früher neu zu bewerten ist bei Cloud-Runtime,
+Managed Service, produktivem Hosting, Kundenübergabe oder vertraglicher
+Provider-Assurance. Restrisiko ist eine unbemerkte Scopeänderung.
 
 ## English review block
 
-BSI C5 is applicable as an assurance lens for repository, CI, and artifact
-providers. Local workflow, secret, dependency, and delivery evidence covers
-only part of the customer responsibility. No current provider attestation was
-supplied, and no BSI certification or provider approval is claimed. Provider,
-service, region, contract, control, or attestation changes reopen the review.
+BSI C5 is not applicable to TinyCalc's current non-commercial training and
+example-product scope. TinyCalc neither operates nor ships a cloud runtime;
+GitHub, CI, and artifact hosting are development infrastructure only. No C5
+test, attestation, certification, or provider approval is claimed. Re-evaluate
+on 2026-12-31 or earlier for cloud runtime, managed service, production
+hosting, customer handover, or contractual provider assurance.

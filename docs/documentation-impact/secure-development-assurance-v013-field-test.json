@@ -1,0 +1,42 @@
+{
+  "schemaVersion": "1.1",
+  "feature": "secure-development-assurance-v013-field-test",
+  "entries": [
+    {
+      "changeId": "CHG001",
+      "scope": "Secure Development Assurance v0.1.3 project field-test closeout",
+      "decision": "UpdateRequired",
+      "rationale": "DE: Der projektbezogene Feldtest benoetigt einen kanonischen Bericht, aktualisierte C5-/CRA-Scopeentscheidungen und einen exakt gebundenen Evidence-Kontext. EN: The project field test requires a canonical report, updated C5/CRA scope decisions, and an exactly bound evidence context.",
+      "documents": [
+        "docs/maintenance/secure-development-assurance-v013-field-test.md",
+        "docs/security/cloud-compliance-assurance.md",
+        "docs/security/regulatory-applicability.md",
+        "docs/security/secure-development/2026-09-05-tinycalc-rl-se-self-assessment/assessment-matrix.json",
+        "docs/security/secure-development/2026-09-05-tinycalc-rl-se-self-assessment/evidence-matrix.md"
+      ],
+      "owner": "Thorsten Hindermann",
+      "audiences": [
+        "Maintainers and technical reviewers",
+        "Learners"
+      ],
+      "readerPaths": [
+        "Assurance v0.1.3 adoption",
+        "Project field-test report",
+        "Security applicability documents",
+        "Machine-readable evidence"
+      ],
+      "canonicalSource": "docs/maintenance/secure-development-assurance-v013-field-test.md",
+      "navigationImpact": "DE: Der bestehende v0.1.3-Nachtrag verweist auf den Feldtest; keine Produkt- oder API-Navigation wird geaendert. EN: The existing v0.1.3 addendum links to the field test; product and API navigation are unchanged.",
+      "documentClass": "ActiveSemantic",
+      "languageStrategy": "DE: Deutsch zuerst, Englisch danach; strukturierte Vertragswerte bleiben sprachneutral. EN: German first, English second; structured contract values remain language neutral.",
+      "languagePartners": [],
+      "platformAndExampleProof": "DE: Der Bericht ist textorientiert; Bash- und PowerShell-Ergebnisse sowie LF-/CRLF-/BOM-Paritaet sind dokumentiert. EN: The report is text-first and documents Bash/PowerShell plus LF/CRLF/BOM parity.",
+      "distributionClass": "sourceOnly",
+      "homeSyncRequired": false,
+      "evidence": "docs/documentation-impact/secure-development-assurance-v013-field-test.json",
+      "risk": "DE: Niedrig; nur Evidence und Dokumentation werden geaendert. Menschliche Freigaben bleiben offen. EN: Low; only evidence and documentation change. Human approvals remain open.",
+      "criticality": "Security",
+      "reevaluationTrigger": "DE: Preset-, Baseline-, Produkt-, Delivery- oder Scopeaenderung. EN: Preset, baseline, product, delivery, or scope change."
+    }
+  ]
+}

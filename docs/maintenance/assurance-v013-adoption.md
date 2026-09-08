@@ -69,17 +69,26 @@ SSDF/CWE obligations remain; reevaluate at version/profile/baseline changes.*
 ## Technische Quellenbindung / Technical Source Binding
 
 Aktueller read-only Status unter Bash und PowerShell: Kontext
-`docs/security/secure-development/2026-09-05-rl-se-self-assessment`, vier Gates
+`docs/security/secure-development/2026-09-05-tinycalc-rl-se-self-assessment`, vier Gates
 und Overall `Ready`, `technicalValidation=Fulfilled`; Pilotfreigabe,
 Projektabnahme und allgemeine Freigabe bleiben `Open`. Nächste dokumentierte
-Aktion: unabhängiger technischer Review, bis dahin menschliche Entscheidungen
-offen halten. Nicht ausgeführt. GSDB-Validierung und negative Fixtures
+Aktion: projektbezogenen v0.1.3-Feldtest abschließen; menschliche Entscheidungen
+bleiben davon getrennt offen. GSDB-Validierung und negative Fixtures
 GSDB001–GSDB010 bestehen in beiden Shell-Einstiegen.
 
 *Both status validators report the existing context's four Ready gates and
 technicalValidation=Fulfilled; the other three human boundaries remain Open.
-The recorded independent review is not started. GSDB validation and negative
+The project-specific v0.1.3 field-test closeout remains separate. GSDB validation and negative
 fixtures pass through both shell entry points.*
+
+Der projektbezogene Abschluss ist im
+[v0.1.3-Feldbericht](secure-development-assurance-v013-field-test.md)
+dokumentiert. Seine Empfehlung `ReleaseAccepted` gilt nur für das Preset in
+TinyCalc; die drei menschlichen Freigaben bleiben `Open`.
+
+*The [v0.1.3 field-test report](secure-development-assurance-v013-field-test.md)
+records the project closeout. Its `ReleaseAccepted` recommendation covers only
+the preset in TinyCalc; all three human approval boundaries remain `Open`.*
 
 Die genehmigte Aktualisierung bindet ausschliesslich vier geaenderte Quellen neu: PRESET-secure-development-assurance-governance (Manifest), SRC-049 (Validator), SRC-054 (Registry) und SRC-055 (AGENTS.md). Drei Assurance-Versionsfelder, die Preset-Mapping-Zeile und der erwartete Assurance-Versionswert im GSDB-Validator werden auf 0.1.3 fortgeschrieben. Der Bytevergleich erlaubt genau diese Versions-/Hashersetzungen. Alle Bewertungen, Kontrollzuordnungen, Risiken, Termine und menschlichen Freigaben bleiben unveraendert. Das ist keine neue fachliche GSDB-Pruefung oder Erfuellungsbehauptung; Vorgängercommits bewahren die alte Bindung.
 

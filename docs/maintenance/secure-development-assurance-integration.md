@@ -85,7 +85,7 @@ package README provides the complete command contract.*
   LF/CRLF/BOM, Bash-/PowerShell-Parität und acht generierte Oberflächen.
   Alle schreibenden Fixtures liefen ausschließlich in temporären Projekten.
 - Lesender Status: Kontext
-  `docs/security/secure-development/2026-09-05-rl-se-self-assessment`;
+  `docs/security/secure-development/2026-09-05-tinycalc-rl-se-self-assessment`;
   Baseline, Delta, Closure und Image-Impact jeweils `Ready`, insgesamt `Ready`.
   `technicalValidation=Fulfilled`; `pilotAuthorization`, `projectAcceptance`
   und `generalRelease` jeweils `Open`.

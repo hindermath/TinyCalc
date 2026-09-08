@@ -10,8 +10,8 @@
   "review": {
     "owner": "TinyCalc project owner role",
     "reviewer": "Independent technical security review role",
-    "reviewedAt": "2026-09-05T19:50:00+02:00",
-    "reviewDue": "2027-09-05",
+    "reviewedAt": "2026-09-08T14:08:00+02:00",
+    "reviewDue": "2027-09-08",
     "residualRisk": "Open and follow-up rows remain visible and require separately authorised work.",
     "reevaluationTrigger": "Any assessment-row, evidence, source, product, dependency, workflow, or baseline change."
   },
@@ -20,7 +20,7 @@
       "id": "DELTA-001",
       "applicability": "Applicable",
       "implementation": "Fulfilled",
-      "evidence": "docs/security/secure-development/2026-09-05-rl-se-self-assessment/assessment-matrix.json"
+      "evidence": "docs/security/secure-development/2026-09-05-tinycalc-rl-se-self-assessment/assessment-matrix.json"
     },
     {
       "id": "DELTA-002",

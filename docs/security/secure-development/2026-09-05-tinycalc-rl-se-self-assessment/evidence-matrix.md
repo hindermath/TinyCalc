@@ -15,8 +15,8 @@ or a statement of organization-wide effectiveness.
 | Disposition | Count | Plain-language meaning |
 |---|---:|---|
 | `AlreadySatisfied` | 21 | Concrete repository evidence supports the bounded statement. |
-| `N/A` | 32 | The current product boundary does not contain the named capability; every row has a trigger. |
-| `Open` | 42 | A human or organizational decision is not present. |
+| `N/A` | 44 | The current product boundary does not contain the named capability; every row has a trigger. |
+| `Open` | 30 | A human or organizational decision is not present. |
 | `FollowUp` | 62 | Partial context exists, but complete effectiveness is not claimed. |
 | **Total** | **157** | Every canonical ID appears exactly once. |
 
@@ -62,14 +62,14 @@ contain the same set of 157 unique IDs.
 
 **DE:** Die Tabelle oben ist nicht die einzige Ergebnisdarstellung. In linearer
 Lesereihenfolge sind 21 Punkte mit konkreter Repository-Evidenz bereits
-erfuellt, 32 Punkte fuer die aktuelle Produktgrenze begruendet nicht anwendbar,
-42 Punkte wegen fehlender menschlicher oder organisatorischer Entscheidung
+erfuellt, 44 Punkte fuer die aktuelle Produktgrenze begruendet nicht anwendbar,
+30 Punkte wegen fehlender menschlicher oder organisatorischer Entscheidung
 offen und 62 Punkte als fachliche Folgearbeit teilweise erfuellt. Es gibt
 keinen still ausgelassenen und keinen technisch blockierten Punkt.
 
 **EN:** The table above is not the only result representation. In linear reading
-order, 21 items are already supported by concrete repository evidence, 32 are
-justifiably not applicable to the current product boundary, 42 remain open for
+order, 21 items are already supported by concrete repository evidence, 44 are
+justifiably not applicable to the current product boundary, 30 remain open for
 a human or organizational decision, and 62 are partly fulfilled follow-up
 items. No item is silently omitted or technically blocked.
 
@@ -96,9 +96,9 @@ items. No item is silently omitted or technically blocked.
 - `CL-06` Schwachstellenoffenlegung: 11 Punkte; 2 menschlich offen und 9 als
   Folgearbeit. Technische Ausgangsnachweise sind vorhanden, ersetzen aber
   keine organisatorisch autorisierte Offenlegungs- oder Benachrichtigungslage.
-- `CL-07` CRA-Anwendbarkeit: 12 Punkte; alle 12 bleiben Human-only `Open`.
-  Dieser technische Lauf trifft keine Rechts-, Marktrollen-, CE- oder
-  Konformitaetsentscheidung.
+- `CL-07` CRA-Anwendbarkeit: 12 Punkte; alle 12 sind fuer den aktuellen
+  nichtkommerziellen Ausbildungs- und Beispielscope begruendet `N/A`.
+  Wiedervorlage ist der 31.12.2026 oder ein frueherer Scope-Trigger.
 - `CL-08` Sicherheits-Code-Review: 13 Punkte; 1 bereits erfuellt, 3 `N/A` und
   9 als Folgearbeit. Das C#/.NET-Sicherheitsprofil ist gebunden; der Nachweis
   einzelner Kontrollen bleibt auf konkrete spaetere Codeaenderungen begrenzt.
@@ -138,8 +138,9 @@ items. No item is silently omitted or technically blocked.
 - `CL-06` vulnerability disclosure: 11 items; 2 human decisions open and 9
   follow-ups. Technical starting evidence cannot replace an organizationally
   authorized disclosure or notification decision.
-- `CL-07` CRA applicability: 12 items; all 12 remain Human-only `Open`. This
-  technical run does not make legal, market-role, CE, or conformity decisions.
+- `CL-07` CRA applicability: 12 items; all 12 are reasoned `N/A` for the
+  current non-commercial training and example scope. Re-evaluate on
+  2026-12-31 or an earlier scope trigger.
 - `CL-08` security code review: 13 items; 1 already satisfied, 3 `N/A`, and 9
   follow-ups. The C#/.NET security profile is bound; individual controls need
   concrete evidence when relevant code changes.
@@ -176,8 +177,8 @@ replace a human decision.
 
 ## Priorisierte Folgearbeit / Prioritized Follow-up
 
-**DE:** Die 42 Punkte mit Prioritaet `High` sind ausschliesslich Human-only-
-Entscheidungen. Sie verteilen sich auf CL-01 (1), CL-06 (2), CL-07 (12),
+**DE:** Die 30 Punkte mit Prioritaet `High` sind ausschliesslich Human-only-
+Entscheidungen. Sie verteilen sich auf CL-01 (1), CL-06 (2),
 CL-09 (7), CL-10 (14), CL-11 (2) und CL-12 (4). Verantwortlich ist die Rolle
 `TinyCalc project owner role`; konkrete Evidenz steht jeweils noch auf
 `NotProvided`. Dieser Lauf fuehrt keine dieser Entscheidungen stellvertretend
@@ -189,8 +190,8 @@ Folgearbeit: CL-01 (4), CL-02 (9), CL-03 (3), CL-04 (2), CL-05 (9), CL-06
 Matrixzeile nennt Owner, konkrete Aktion, Risiko, Restrisiko und Trigger. Die
 Umsetzung benoetigt einen getrennt autorisierten Arbeitsauftrag.
 
-**EN:** The 42 `High` priority items are exclusively Human-only decisions.
-They are distributed across CL-01 (1), CL-06 (2), CL-07 (12), CL-09 (7),
+**EN:** The 30 `High` priority items are exclusively Human-only decisions.
+They are distributed across CL-01 (1), CL-06 (2), CL-09 (7),
 CL-10 (14), CL-11 (2), and CL-12 (4). The responsible role is
 `TinyCalc project owner role`; their specific evidence remains `NotProvided`.
 This run does not make any of those decisions by proxy.

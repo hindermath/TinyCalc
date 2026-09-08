@@ -27,7 +27,7 @@ JSON-Datei mit genau einem Row-Objekt fuer Vertragstests. / JSON file containing
 [CmdletBinding()]
 param(
     [Alias('Matrix')]
-    [string] $Assessment = 'docs/security/secure-development/2026-09-05-rl-se-self-assessment/assessment-matrix.json',
+    [string] $Assessment = 'docs/security/secure-development/2026-09-05-tinycalc-rl-se-self-assessment/assessment-matrix.json',
     [string] $RepositoryRoot = '.',
     [ValidateSet('Validate', 'ValidateRow', 'ValidateRows')]
     [string] $Action = 'Validate',
