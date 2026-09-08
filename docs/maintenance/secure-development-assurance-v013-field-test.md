@@ -135,4 +135,3 @@ Reviewer und Lernende. Leserpfad: v0.1.3-Adoption → Feldbericht →
 Security-Dokumente → maschinenlesbare Evidence. Die Änderung ist `sourceOnly`,
 zweisprachig, textorientiert und benötigt keinen Home-Sync. Neu zu bewerten ist
 bei Preset-, Baseline-, Produkt-, Delivery- oder Scopeänderung.
-
