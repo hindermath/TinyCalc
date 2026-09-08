@@ -71,7 +71,7 @@ reference files, and the PDF plus checksum file.
 | Constitution | `constitution.md` | `c57f6e586d93a48b2254550367289e9e3e3ba6645ebb8f308f2e9e24dc7c93b9` | Current; Principles XI-XVIII und Registry-Zeile `RiderProjects/TinyCalc` |
 | Constitution | `.specify/memory/constitution.md` | `c57f6e586d93a48b2254550367289e9e3e3ba6645ebb8f308f2e9e24dc7c93b9` | Current; byte-identischer Partner / byte-identical partner |
 | Registry | `.specify/presets/.registry` | `88f4be9f2ca39a98e543baa530ecb339797c031408bbc70cb8f7a04308b176b6` | Current; `presets` mit 13 Einträgen / 13 entries |
-| Workflow | `.github/workflows/ci.yml` | `2b2dfb1606d9068b22b0eb1b5f9f4c266c03923bf1207bbb5d2a3b9fea4e79fc` | Current; Linux-/Windows-Produkt- und GSDB-Validatorjobs nach T059 |
+| Workflow | `.github/workflows/ci.yml` | `c67a2404fd8d973bc36e49a811b5efc1065ac3bbf8cf5bfd2b211e0b6cfc2ceb` | Current; Linux-/Windows-Produkt- und GSDB-Validatorjobs nach T059 |
 | Workflow | `.github/workflows/agent-secret-scan.yml` | `2e604000c7c18c64420c3553f0db35e18222bafd9324a90295126667e567ada2` | Current; Secret-Scan |
 | Workflow | `.github/workflows/gitleaks.yml` | `825705909c0a7c4f1b3844c73f30c46bc684a736adb959892add3f53897c8a8a` | Current; gitleaks |
 | Workflow | `.github/workflows/homogeneity-check.yml` | `408c5ec7a8eaf5f6a269368032e0d32527cd5d3487d27b2a33467c971dd6a47b` | Current; Ubuntu/macOS/Windows |

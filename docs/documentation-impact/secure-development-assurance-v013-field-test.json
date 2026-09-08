@@ -11,6 +11,7 @@
         "docs/maintenance/secure-development-assurance-v013-field-test.md",
         "docs/security/cloud-compliance-assurance.md",
         "docs/security/regulatory-applicability.md",
+        ".github/workflows/ci.yml",
         "docs/security/secure-development/2026-09-05-tinycalc-rl-se-self-assessment/assessment-matrix.json",
         "docs/security/secure-development/2026-09-05-tinycalc-rl-se-self-assessment/evidence-matrix.md"
       ],
