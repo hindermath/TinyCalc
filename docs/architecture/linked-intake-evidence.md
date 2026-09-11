@@ -5,7 +5,7 @@
 ```text
 Kanonisches tinycalc-delivery-Manifest
   + manifestgebundene Intake-Dateien
-  + vorhandene specs/*/autonomous-run-state.json
+  + vorhandene lokale Abschlusszustände oder getrackte PreMerge-/PostMerge-Evidence
   -> UTF-8-, Schema-, Pfad-, Hash-, Graph- und Proof-Validierung
   -> eine typisierte Fünf-Felder-Projektion
   -> Root-Ansicht + Series-Ansicht mit relativem Linkkontext
@@ -17,7 +17,10 @@ enthalten dieselben Positionen, Statuswerte, vollständigen Intake-Dateinamen,
 direkten eingehenden Kanten und Featurezustände. Nur die relativen Linkziele
 unterscheiden sich wegen ihrer verschiedenen Verzeichnisse. Fehlender
 Feature-Abschluss wird ausdrücklich als Fallback dargestellt und nicht
-erraten. Beide Ansichten tragen denselben SHA-256-Generationsmarker. Dadurch
+erraten. Ein frischer Checkout bleibt deterministisch: Fehlt der absichtlich
+lokale Run-State, gilt nur ein getracktes, hashgebundenes PreMerge-/PostMerge-
+Paar mit ausdrücklicher vollständiger Intake-Pfadbindung als gleichwertiger
+Feature-Nachweis. Beide Ansichten tragen denselben SHA-256-Generationsmarker. Dadurch
 erkennen Leser und der nächste Check einen durch Prozess- oder Rechnerabbruch
 unterbrochenen Mehrdateien-Replace; ein erneuter Write repariert ihn aus den
 kanonischen Quellen. Bei im Prozess erkannten Fehlern stellt der Renderer die
@@ -27,7 +30,10 @@ vorherigen Dateien wieder her.
 the same positions, status values, complete intake filenames, direct incoming
 edges, and feature states. Only relative link targets differ because the files
 live in different directories. Missing feature completion is shown explicitly
-as a fallback and is never inferred. Both views carry the same SHA-256
+as a fallback and is never inferred. In a fresh checkout, a tracked,
+hash-bound PreMerge/PostMerge pair with an explicit complete intake-path
+binding is the only accepted equivalent when the intentionally local run
+state is absent. Both views carry the same SHA-256
 generation marker, so readers and the next check detect an interrupted
 multi-file replace; rerunning write repairs it from canonical sources. Errors
 caught in-process restore the previous files.*

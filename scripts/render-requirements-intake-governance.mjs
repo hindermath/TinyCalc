@@ -207,43 +207,89 @@ function lieValidateManifest(rootPath, manifestPath, manifestOverride) {
 function lieFeatureProofs(rootPath, target) {
   const specsPath = path.join(rootPath, "specs");
   if (!fs.existsSync(specsPath)) return [];
-  const proofs = [];
+  const proofs = new Set();
   for (const directory of fs.readdirSync(specsPath, {withFileTypes: true})
     .filter((entry) => entry.isDirectory())
     .sort((left, right) => left.name.localeCompare(right.name, "en"))) {
+    const expectedFeature = `specs/${directory.name}`;
     const stateRelative = `specs/${directory.name}/autonomous-run-state.json`;
     const stateAbsolute = path.join(rootPath, ...stateRelative.split("/"));
-    if (!fs.existsSync(stateAbsolute)) continue;
-    const stateRecord = lieResolveExisting(rootPath, stateRelative);
-    const state = lieReadJson(stateRecord.absolute, stateRecord.safe);
-    if (!state || typeof state !== "object" || Array.isArray(state)) {
-      lieFail("LIE008", `feature evidence is invalid: ${stateRelative}`);
+    if (fs.existsSync(stateAbsolute)) {
+      const stateRecord = lieResolveExisting(rootPath, stateRelative);
+      const state = lieReadJson(stateRecord.absolute, stateRecord.safe);
+      if (!state || typeof state !== "object" || Array.isArray(state)) {
+        lieFail("LIE008", `feature evidence is invalid: ${stateRelative}`);
+      }
+      const accepted = Array.isArray(state.acceptedArtifacts)
+        ? state.acceptedArtifacts.filter((artifact) => artifact?.path === target.path)
+        : [];
+      if (accepted.length > 0) {
+        const closeout = state.closeout ?? {};
+        const featurePath = state.featurePath;
+        if (accepted.length !== 1 || accepted[0].sha256 !== target.normalizedSha256 ||
+            state.status !== "Completed" || typeof featurePath !== "string" ||
+            !["mergeOrPublication", "defaultBranchSync", "postMergeActions", "finalValidation"]
+              .every((field) => closeout[field] === "Completed")) {
+          lieFail("LIE008", `feature evidence is invalid for ${target.path}`);
+        }
+        const safeFeature = lieSafeRelative(featurePath, "LIE008");
+        if (safeFeature !== expectedFeature) {
+          lieFail("LIE008", `feature path differs from its state location: ${stateRelative}`);
+        }
+        proofs.add(safeFeature);
+      }
     }
-    const accepted = Array.isArray(state.acceptedArtifacts)
-      ? state.acceptedArtifacts.filter((artifact) => artifact?.path === target.path)
-      : [];
-    if (accepted.length === 0) continue;
-    const closeout = state.closeout ?? {};
-    const featurePath = state.featurePath;
-    if (accepted.length !== 1 || accepted[0].sha256 !== target.normalizedSha256 ||
-        state.status !== "Completed" || typeof featurePath !== "string" ||
-        !["mergeOrPublication", "defaultBranchSync", "postMergeActions", "finalValidation"]
-          .every((field) => closeout[field] === "Completed")) {
-      lieFail("LIE008", `feature evidence is invalid for ${target.path}`);
+
+    const portableRelative = `${expectedFeature}/evidence/postmerge.json`;
+    const portableAbsolute = path.join(rootPath, ...portableRelative.split("/"));
+    if (!fs.existsSync(portableAbsolute)) continue;
+    const bindingPaths = [
+      `${expectedFeature}/tasks.md`,
+      `${expectedFeature}/plan.md`,
+      `${expectedFeature}/autonomous-run-evidence.md`,
+      `${expectedFeature}/evidence/delivery.md`,
+    ];
+    const explicitlyBound = bindingPaths.some((bindingPath) => {
+      const bindingAbsolute = path.join(rootPath, ...bindingPath.split("/"));
+      if (!fs.existsSync(bindingAbsolute)) return false;
+      const bindingRecord = lieResolveExisting(rootPath, bindingPath);
+      return lieReadText(bindingRecord.absolute, bindingRecord.safe).includes(target.path);
+    });
+    if (!explicitlyBound) continue;
+
+    const portableRecord = lieResolveExisting(rootPath, portableRelative);
+    const portable = lieReadJson(portableRecord.absolute, portableRecord.safe);
+    const acceptedPath = portable?.acceptedPreMergePath;
+    if (!portable || typeof portable !== "object" || Array.isArray(portable) ||
+        portable.snapshotType !== "PostMerge" ||
+        !/^[0-9a-f]{40}$/.test(portable.reviewedHead ?? "") ||
+        !/^[0-9a-f]{40}$/.test(portable.mergeCommit ?? "") ||
+        typeof acceptedPath !== "string" ||
+        !/^[0-9a-f]{64}$/.test(portable.acceptedPreMergeSha256 ?? "") ||
+        !Array.isArray(portable.entries) || portable.entries.length === 0 ||
+        portable.entries.some((entry) => !entry || entry.headSha !== portable.reviewedHead ||
+          !["Pass", "N/A"].includes(entry.result))) {
+      lieFail("LIE008", `portable feature evidence is invalid for ${target.path}`);
     }
-    const safeFeature = lieSafeRelative(featurePath, "LIE008");
-    if (safeFeature !== `specs/${directory.name}`) {
-      lieFail("LIE008", `feature path differs from its state location: ${stateRelative}`);
+    const acceptedRecord = lieResolveExisting(rootPath, acceptedPath);
+    const acceptedContent = lieReadText(acceptedRecord.absolute, acceptedRecord.safe);
+    if (lieDigest(acceptedContent) !== portable.acceptedPreMergeSha256 ||
+        !portable.entries.some((entry) =>
+          typeof entry.evidenceReference === "string" &&
+          entry.evidenceReference.includes(`:${expectedFeature}/`))) {
+      lieFail("LIE008", `portable feature evidence binding is invalid for ${target.path}`);
     }
+    proofs.add(expectedFeature);
+  }
+  for (const safeFeature of proofs) {
     const featureAbsolute = path.join(rootPath, ...safeFeature.split("/"));
     if (!fs.existsSync(featureAbsolute) || !fs.statSync(featureAbsolute).isDirectory()) {
       lieFail("LIE008", `feature target is missing for ${target.path}`);
     }
     lieInsideRoot(rootPath, fs.realpathSync(featureAbsolute), "LIE008");
-    proofs.push(safeFeature);
   }
-  if (proofs.length > 1) lieFail("LIE008", `feature evidence is ambiguous for ${target.path}`);
-  return proofs;
+  if (proofs.size > 1) lieFail("LIE008", `feature evidence is ambiguous for ${target.path}`);
+  return [...proofs];
 }
 
 function lieTable(rootPath, manifestData, outputPath) {

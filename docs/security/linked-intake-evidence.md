@@ -33,10 +33,21 @@ Subjects. Der Renderer schreibt keine Credentials, Umgebungsvariablen,
 Providerlogs, absoluten privaten Pfade oder SQLite-Zustände. Ein unveränderter
 zweiter Write-Lauf meldet null Schreibvorgänge.
 
+Für einen frischen Checkout darf ein lokaler, absichtlich ignorierter
+Run-State die generierte Ausgabe nicht allein bestimmen. Deshalb akzeptiert
+der Renderer alternativ nur das getrackte PostMerge-Paar aus
+`accepted-premerge.json` und `postmerge.json`, wenn ein repositorylokales
+Featuredokument zusätzlich den vollständigen Intake-Pfad ausdrücklich bindet.
+Head, Mergecommit, Gateergebnisse, PreMerge-Pfad und PreMerge-Hash werden dabei
+fail-closed geprüft. Bloße Nummern- oder Slug-Ähnlichkeit bleibt unzureichend.
+
 *Diagnostics expose only stable error classes and safe relative subjects. The
 renderer writes no credentials, environment variables, provider logs,
-absolute private paths, or SQLite state. A second unchanged write run reports
-zero writes.*
+absolute private paths, or SQLite state. A fresh checkout may use the tracked
+PreMerge/PostMerge pair only when a repository feature document explicitly
+binds the complete intake path; head, merge commit, gate results, path, and
+hash are validated fail-closed. Numeric or slug similarity is never proof. A
+second unchanged write run reports zero writes.*
 
 ## Governance-Disposition
 

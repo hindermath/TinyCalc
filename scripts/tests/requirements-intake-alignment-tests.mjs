@@ -288,6 +288,52 @@ if (!generationMarkers[0] || generationMarkers[0] !== generationMarkers[1]) {
   throw new Error("paired views do not share one deterministic generation marker");
 }
 
+const portable = createLinkedFixture("portable-feature-proof");
+const portableLinked = portable.definition.entries.find(
+  (entry) => entry.featureState === "Linked",
+);
+fs.rmSync(path.join(
+  portable.fixtureRoot,
+  portableLinked.featureDirectory,
+  "autonomous-run-state.json",
+));
+writeFixtureFile(
+  portable.fixtureRoot,
+  `${portableLinked.featureDirectory}/tasks.md`,
+  `# Tasks\n\n- [x] Bind \`${portableLinked.intakePath}\`\n`,
+);
+const portablePreMergePath = `${portableLinked.featureDirectory}/evidence/accepted-premerge.json`;
+const portablePreMerge = "{}\n";
+writeFixtureFile(portable.fixtureRoot, portablePreMergePath, portablePreMerge);
+writeFixtureFile(
+  portable.fixtureRoot,
+  `${portableLinked.featureDirectory}/evidence/postmerge.json`,
+  JSON.stringify({
+    schemaVersion: "2.0",
+    snapshotType: "PostMerge",
+    reviewedHead: "1".repeat(40),
+    acceptedPreMergePath: portablePreMergePath,
+    acceptedPreMergeSha256: digest(portablePreMerge),
+    mergeCommit: "2".repeat(40),
+    changedPaths: [],
+    entries: [{
+      headSha: "1".repeat(40),
+      result: "Pass",
+      evidenceReference: `git:${"1".repeat(40)}:${portableLinked.featureDirectory}/tasks.md`,
+    }],
+  }, null, 2) + "\n",
+);
+renderLinkedIntakeViews(renderOptions(portable, {write: true}));
+const portableRoot = fs.readFileSync(
+  path.join(portable.fixtureRoot, portable.outputs[0]),
+  "utf8",
+);
+if (!portableRoot.includes(
+  `[${path.basename(portableLinked.featureDirectory)}](${portableLinked.featureDirectory}/)`,
+)) {
+  throw new Error("tracked portable post-merge evidence did not preserve the feature link");
+}
+
 const importOnly = createLinkedFixture("import-only");
 const importResult = spawnSync(process.execPath, [
   "--input-type=module",
