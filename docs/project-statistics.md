@@ -552,6 +552,7 @@ runtime evidence.*
 | 2026-09-06 | Assurance-Profil v0.1.2 integriert / Assurance profile v0.1.2 integrated | Arbeitsfenster: eine sichtbare Agentensitzung am 2026-09-06; Branch `codex/assurance-preset-integration`. Nur freigegebene Repository-Integration, keine Produktcode- oder Produkttest-Aenderung. Wiederverwendetes Paket und Dokumentations-/Konfigurationsdelta vor Statistik-Selbstnachweis: +246 / -15 Zeilen; importiertes Paket ist keine neu entwickelte Produktlogik. Zwoelf bestehende Presets, alte Profile, projektgefuehrte Baseline und menschliche Entscheidungen bleiben unveraendert. Paketbindung, exakte 13er-Matrix, Byte-Erhalt, isolierte Vertrags-/Oberflaechentests und lesender Status sind im Integrationsnachweis dokumentiert; Lieferung folgt per fokussiertem PR mit CI und MergeAndSync. Keine Home-Verteilung oder fachlichen Reviews. Referenzen bleiben im unveraenderten Statistikprofil konfiguriert. / One visible session integrates only the approved repository profile. Imported package content is reuse, not new product logic. Product code/tests and the original twelve presets remain unchanged; see the integration record for tests and boundaries. |
 | 2026-09-06 | Assurance v0.1.3 – genehmigte Korrekturadoption / approved patch adoption | Eine sichtbare Agentensitzung; Branch `codex/assurance-v013-adoption`. Oeffentliches unveraendertes Paket ersetzt ausschliesslich Assurance, zwoelf weitere Presets und bestehende Profile bleiben erhalten. Gestagter Paket-/Konfigurations-/Dokumentationsdelta: +533 / -40 Zeilen vor Statistik-Selbstnachweis; importierte Zeilen sind wiederverwendetes Paket, keine neu entwickelte Produktlogik. Keine Runtime-/API-Aenderung und keine neue fachliche Freigabe. Technische Bindungen und vorgeschriebene Build-Metadaten werden nur soweit erforderlich mitgefuehrt. Nachweise: `docs/maintenance/assurance-v013-adoption.md`. Lieferung ueber CI, Review und MergeAndSync; kein Home-Sync. / One visible session adopts the immutable public patch, preserving twelve presets and profiles. Reused package volume is not new product logic. No runtime/API or human-approval change; only required technical bindings and build metadata follow. See adoption evidence; CI/review gate MergeAndSync. |
 | 2026-09-08 | Secure Development Assurance v0.1.3 – TinyCalc-Feldtest abgeschlossen / TinyCalc field test completed | Eine sichtbare Agentensitzung auf Branch `codex/assurance-v013-field-test-closeout`. Der projektbezogene Feldtest korrigiert die von v0.1.3 fail-closed erkannte Bindungsabweichung zwischen Verzeichnis und voller Kontext-ID, vereinheitlicht die technische Wiedervorlage auf `2027-09-08`, dokumentiert C5 und CRA fuer den aktuellen nichtkommerziellen Ausbildungs-/Beispielscope als `N/A` und empfiehlt fuer das Preset in TinyCalc genau `ReleaseAccepted`. Pilotfreigabe, Projektabnahme und allgemeine Freigabe bleiben `Open`; keine Produkt-, API-, Runtime- oder Abhaengigkeitsaenderung. Umfang vor Statistik-Selbstnachweis: `+445 / -241 = 686` Brutto-Textaenderungen in Dokumentation, Evidence und zwei nur pfadangepassten Projektvalidatoren sowie dem zugehoerigen CI-Aufruf; `0` Produktions- und Produkttestcode-Zeilen. Konservative Referenz: `8.6` Arbeitstage bzw. ca. `66.9` Stunden; Thorsten-Solo-Referenz: `5.5` Arbeitstage bzw. ca. `42.8` Stunden. Nachweise: unveraendertes v0.1.3-ZIP, exakte 13er-Matrix, Status und vier Reviews in Bash/PowerShell, rohe Read-only-Hashes, Negativ-/LF-/CRLF-/BOM-Paritaet, acht Agentenflaechen, temporaere 13/12-Komposition, RL-SE 157/157, GSDB, Documentation Impact, Secret-Scan und Provider-CI als Liefergate. / One visible session closes the TinyCalc v0.1.3 field test. The preset correctly exposed and now validates an exact context binding. The 686 gross documentation/evidence changes correspond to 8.6 conservative or 5.5 Thorsten-solo days as a repository delivery-density estimate, not stopwatch time. The recommendation is preset-only; human approvals remain open. |
+| 2026-09-12 | GSDB-Neubewertung / GSDB reassessment | Branch codex/gsdb-findings-reevaluation; sichtbares Arbeitsfenster: eine Review-Sitzung am 12.09.2026. Produktion 0, Tests 0; Dokumentation/Evidence +516/-219, netto 297 Zeilen ohne Statistik. Alle 13 Findings konkretisiert, CRA-Entscheidung anerkannt und Vertragsintegration als RV-01 beschrieben; keine Statusfreigabe. Referenzen 80/125 Zeilen je Arbeitstag: 3.71/2.38 Tage netto; keine Stoppuhrmessung. GSDB, Assurance, Documentation Impact und 17 lokale Links bestanden. / One visible review session; production 0, tests 0, documentation/evidence +516/-219, net 297 lines excluding statistics. All 13 findings refined, existing CRA decision acknowledged, RV-01 contract follow-up defined; no approval. Manual references 80/125 lines per workday yield 3.71/2.38 days, not stopwatch time. Validators and 17 local links passed. |
 
 ## Statistikprofil-1-Archiv / Statistics Profile 1 Archive
 Basis dieses Schlussblocks sind die aktuell dokumentierten Snapshot- und
@@ -716,25 +717,25 @@ Profil 2 verwendet Git-getrackte Textdateien und sichtbare Git-Aktivitaet. Die W
 
 | Kennzahl / Metric | Wert / Value |
 |---|---:|
-| Textbasis / Text base | 190046 lines |
-| Textdateien / Text files | 1185 |
+| Textbasis / Text base | 190343 lines |
+| Textdateien / Text files | 1188 |
 | Beobachtbarer Zeitraum / Observable period | 2025-09-14..2026-09-12 |
 | Aktivtage / Active days | 80 |
-| Relevante Commits / Relevant commits | 229 |
-| Zeilen je Aktivtag / Lines per active day | 2375.6 |
+| Relevante Commits / Relevant commits | 230 |
+| Zeilen je Aktivtag / Lines per active day | 2379.3 |
 | Peak-Tag im Fenster / Peak day in window | 2026-06-17 / 27058 |
 | Peak-Woche im Fenster / Peak week in window | 2026-07-19 / 33387 |
 | Laengste Serie / Longest streak | 8 days |
 | Speedup vs. 80 lines/day | 29.7x |
 | Speedup vs. 125 lines/day | 19.0x |
-| Methodik / Methodology | v2; source `953673d49cfa` |
+| Methodik / Methodology | v2; source `5f49ac2d5703` |
 
 ### Artefaktmix / Artifact Mix
 
 ```text
 Produktiv / Production          [#...................]   1.5% | 2830
 Tests                           [#...................]   4.4% | 8338
-Dokumentation / Documentation   [###############.....]  74.9% | 142281
+Dokumentation / Documentation   [###############.....]  74.9% | 142578
 Skripte / Scripts               [##..................]  12.0% | 22879
 Konfiguration / Configuration   [#...................]   5.6% | 10703
 Daten und Medien / Data and media [....................]   0.0% | 0
@@ -766,7 +767,7 @@ Di/Tu  0 0 3 0 0 0 0 3 0 0 3 0 0 0 0 2 0 3 4 4 0 0 0 0 4 3
 Mi/We  0 1 0 0 0 3 0 2 0 0 0 2 0 4 0 2 0 0 2 4 0 0 0 0 0 0
 Do/Th  0 0 0 0 0 0 4 0 0 0 1 0 4 1 0 0 0 1 4 0 0 4 0 0 3 0
 Fr/Fr  0 2 4 0 2 4 0 0 0 4 2 2 0 3 2 3 4 4 4 1 0 0 0 0 4 3
-Sa/Sa  0 2 0 0 0 0 0 0 0 0 0 0 0 4 0 4 4 0 4 2 0 2 0 3 4 3
+Sa/Sa  0 2 0 0 0 0 0 0 0 0 0 0 0 4 0 4 4 0 4 2 0 2 0 3 4 4
 ```
 
 DE: 0 = keine Aenderung; 1 = 1..79; 2 = 80..399; 3 = 400..1599; 4 = 1600+ geaenderte Textzeilen; - = noch nicht abgelaufen.
@@ -884,7 +885,7 @@ Die Faktoren vergleichen sichtbare Lieferdichte mit den dokumentierten manuellen
 Scale: 0..5000 lines/day
 Experienced manual [#...................] 80
 Thorsten solo      [#...................] 125
-Visible repository [##########..........] 2375.6
+Visible repository [##########..........] 2379.3
 ```
 
 Die gemeinsame Skala vergleicht Referenzen und sichtbare Lieferdichte. Sie schreibt die Git-Aktivitaet keiner Person oder KI pauschal zu.
@@ -910,6 +911,6 @@ DE: Das Fenster beginnt am 2025-09-14 und endet am 2026-09-12. Es enthaelt 80 ak
 | 2026-06 | 37273 |
 | 2026-07 | 74031 |
 | 2026-08 | 26210 |
-| 2026-09 | 45120 |
+| 2026-09 | 45855 |
 
 <!-- project-statistics-v2:end -->

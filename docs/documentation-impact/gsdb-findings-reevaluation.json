@@ -1,0 +1,41 @@
+{
+  "schemaVersion": "1.1",
+  "feature": "gsdb-findings-reevaluation",
+  "entries": [
+    {
+      "changeId": "CHG001",
+      "scope": "GSDB findings reassessment 2026-09-12",
+      "decision": "UpdateRequired",
+      "rationale": "DE: Neue Scope-Entscheidung und technische Teilbelege erfordern korrigierte Finding-Begruendungen und konkrete Abschlusskriterien. EN: New scope decisions and partial technical evidence require corrected finding rationales and concrete closure criteria.",
+      "documents": [
+        "docs/security/gsdb-intensive-review/reevaluation-2026-09-12.md",
+        "docs/security/gsdb-intensive-review/open-findings.md",
+        "docs/security/gsdb-intensive-review/evidence-matrix.json",
+        "docs/security/gsdb-intensive-review/evidence-matrix.md",
+        "docs/PR_TEXT_GSDB_REEVALUATION.md"
+      ],
+      "owner": "Thorsten Hindermann",
+      "audiences": [
+        "Maintainers and technical reviewers",
+        "Learners"
+      ],
+      "readerPaths": [
+        "GSDB matrix",
+        "Dated reassessment",
+        "Individual findings and acceptance criteria"
+      ],
+      "canonicalSource": "docs/security/gsdb-intensive-review/reevaluation-2026-09-12.md",
+      "navigationImpact": "DE: Lokale Markdown-Verweise verbinden die Neubewertung mit der Matrix; kein HTML. EN: Local Markdown links connect the reassessment to the matrix; no HTML.",
+      "documentClass": "ActiveSemantic",
+      "languageStrategy": "DE: Deutsch zuerst, Englisch danach; strukturierte Vertragswerte bleiben sprachneutral. EN: German first, English second; structured contract values remain language neutral.",
+      "languagePartners": [],
+      "platformAndExampleProof": "DE: Textorientierte Markdown-Pruefung, lokale Links und Statusvalidatoren. EN: Text-oriented Markdown review, local links and status validators.",
+      "distributionClass": "sourceOnly",
+      "homeSyncRequired": false,
+      "evidence": "docs/documentation-impact/gsdb-findings-reevaluation.json",
+      "risk": "DE: Niedrig; nur Evidence und Dokumentation werden geaendert. Menschliche Freigaben bleiben offen. EN: Low; only evidence and documentation change. Human approvals remain open.",
+      "criticality": "Security",
+      "reevaluationTrigger": "DE: Preset-, Baseline-, Produkt-, Delivery- oder Scopeaenderung. EN: Preset, baseline, product, delivery, or scope change."
+    }
+  ]
+}

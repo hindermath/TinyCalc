@@ -2029,8 +2029,8 @@
       "implementationStatus": "Not Assessed",
       "learningStage": "Foundation",
       "rationale": {
-        "de": "CL-01-12 betrifft 'CL-01-12: Regulatorische Anwendbarkeit / Regulatory Applicability'. Die technischen Nachweise docs/secure-development/checklisten/CL_01_Standards-Anwendbarkeit.md @ CL-01-12: Regulatorische Anwendbarkeit / Regulatory Applicability; docs/security/regulatory-applicability.md @ ## Technische Vorprüfung Feature 005 / Feature 005 technical screening enthalten keine zuständige menschliche Entscheidung; GSDB-FINDING-001 hält die Einstufung Open / Not Assessed sichtbar.",
-        "en": "CL-01-12 concerns 'CL-01-12: Regulatorische Anwendbarkeit / Regulatory Applicability'. The technical evidence at docs/secure-development/checklisten/CL_01_Standards-Anwendbarkeit.md @ CL-01-12: Regulatorische Anwendbarkeit / Regulatory Applicability; docs/security/regulatory-applicability.md @ ## Technische Vorprüfung Feature 005 / Feature 005 technical screening contains no decision by the accountable human role; GSDB-FINDING-001 therefore keeps the result Open / Not Assessed."
+        "de": "CL-01-12: docs/security/regulatory-applicability.md dokumentiert seit 08.09.2026 eine Repository-Owner-Entscheidung zu CRA-N/A im Ausbildungsscope. Open / Not Assessed bezeichnet hier die noch nicht abgeschlossene Überführung in den GSDB-Entscheidungsvertrag; es behauptet nicht, dass keine Scope-Entscheidung existiert. Andere regulatorische Entscheidungen bleiben getrennt offen. Siehe reevaluation-2026-09-12.md.",
+        "en": "CL-01-12: docs/security/regulatory-applicability.md has documented a repository-owner CRA N/A decision for the training scope since 2026-09-08. Open / Not Assessed here denotes incomplete integration into the GSDB decision contract; it does not claim that no scope decision exists. Other regulatory decisions remain separately open. See reevaluation-2026-09-12.md."
       },
       "evidence": [
         {
@@ -5874,8 +5874,8 @@
       "implementationStatus": "Not Assessed",
       "learningStage": "Intermediate",
       "rationale": {
-        "de": "CL-06-07 betrifft 'CL-06-07: CRA-Pflichtmeldung 24 Stunden / CRA 24-Hour Notification'. Die technischen Nachweise docs/secure-development/checklisten/CL_06_Schwachstellenoffenlegung.md @ CL-06-07: CRA-Pflichtmeldung 24 Stunden / CRA 24-Hour Notification; docs/security/regulatory-applicability.md @ Regulatorische Anwendbarkeit / Regulatory Applicability enthalten keine zuständige menschliche Entscheidung; GSDB-FINDING-006 hält die Einstufung Open / Not Assessed sichtbar.",
-        "en": "CL-06-07 concerns 'CL-06-07: CRA-Pflichtmeldung 24 Stunden / CRA 24-Hour Notification'. The technical evidence at docs/secure-development/checklisten/CL_06_Schwachstellenoffenlegung.md @ CL-06-07: CRA-Pflichtmeldung 24 Stunden / CRA 24-Hour Notification; docs/security/regulatory-applicability.md @ Regulatorische Anwendbarkeit / Regulatory Applicability contains no decision by the accountable human role; GSDB-FINDING-006 therefore keeps the result Open / Not Assessed."
+        "de": "CL-06-07: docs/security/regulatory-applicability.md dokumentiert seit 08.09.2026 eine Repository-Owner-Entscheidung zu CRA-N/A im Ausbildungsscope. Open / Not Assessed bezeichnet hier die noch nicht abgeschlossene Überführung in den GSDB-Entscheidungsvertrag; es behauptet nicht, dass keine Scope-Entscheidung existiert. Andere regulatorische Entscheidungen bleiben getrennt offen. Siehe reevaluation-2026-09-12.md.",
+        "en": "CL-06-07: docs/security/regulatory-applicability.md has documented a repository-owner CRA N/A decision for the training scope since 2026-09-08. Open / Not Assessed here denotes incomplete integration into the GSDB decision contract; it does not claim that no scope decision exists. Other regulatory decisions remain separately open. See reevaluation-2026-09-12.md."
       },
       "evidence": [
         {
@@ -6223,8 +6223,8 @@
       "implementationStatus": "Not Assessed",
       "learningStage": "Intermediate",
       "rationale": {
-        "de": "CL-07-01 betrifft 'CL-07-01: Produktart bestimmen / Determine Product Class'. Die technischen Nachweise docs/secure-development/checklisten/CL_07_CRA-Anwendbarkeit.md @ CL-07-01: Produktart bestimmen / Determine Product Class; docs/security/regulatory-applicability.md @ Regulatorische Anwendbarkeit / Regulatory Applicability enthalten keine zuständige menschliche Entscheidung; GSDB-FINDING-007 hält die Einstufung Open / Not Assessed sichtbar.",
-        "en": "CL-07-01 concerns 'CL-07-01: Produktart bestimmen / Determine Product Class'. The technical evidence at docs/secure-development/checklisten/CL_07_CRA-Anwendbarkeit.md @ CL-07-01: Produktart bestimmen / Determine Product Class; docs/security/regulatory-applicability.md @ Regulatorische Anwendbarkeit / Regulatory Applicability contains no decision by the accountable human role; GSDB-FINDING-007 therefore keeps the result Open / Not Assessed."
+        "de": "CL-07-01: docs/security/regulatory-applicability.md dokumentiert seit 08.09.2026 eine Repository-Owner-Entscheidung zu CRA-N/A im Ausbildungsscope. Open / Not Assessed bezeichnet hier die noch nicht abgeschlossene Überführung in den GSDB-Entscheidungsvertrag; es behauptet nicht, dass keine Scope-Entscheidung existiert. Andere regulatorische Entscheidungen bleiben getrennt offen. Siehe reevaluation-2026-09-12.md.",
+        "en": "CL-07-01: docs/security/regulatory-applicability.md has documented a repository-owner CRA N/A decision for the training scope since 2026-09-08. Open / Not Assessed here denotes incomplete integration into the GSDB decision contract; it does not claim that no scope decision exists. Other regulatory decisions remain separately open. See reevaluation-2026-09-12.md."
       },
       "evidence": [
         {
@@ -6284,8 +6284,8 @@
       "implementationStatus": "Not Assessed",
       "learningStage": "Intermediate",
       "rationale": {
-        "de": "CL-07-02 betrifft 'CL-07-02: Kritikalität nach Anhang III / Criticality per Annex III'. Die technischen Nachweise docs/secure-development/checklisten/CL_07_CRA-Anwendbarkeit.md @ CL-07-02: Kritikalität nach Anhang III / Criticality per Annex III; docs/security/regulatory-applicability.md @ Regulatorische Anwendbarkeit / Regulatory Applicability enthalten keine zuständige menschliche Entscheidung; GSDB-FINDING-007 hält die Einstufung Open / Not Assessed sichtbar.",
-        "en": "CL-07-02 concerns 'CL-07-02: Kritikalität nach Anhang III / Criticality per Annex III'. The technical evidence at docs/secure-development/checklisten/CL_07_CRA-Anwendbarkeit.md @ CL-07-02: Kritikalität nach Anhang III / Criticality per Annex III; docs/security/regulatory-applicability.md @ Regulatorische Anwendbarkeit / Regulatory Applicability contains no decision by the accountable human role; GSDB-FINDING-007 therefore keeps the result Open / Not Assessed."
+        "de": "CL-07-02: docs/security/regulatory-applicability.md dokumentiert seit 08.09.2026 eine Repository-Owner-Entscheidung zu CRA-N/A im Ausbildungsscope. Open / Not Assessed bezeichnet hier die noch nicht abgeschlossene Überführung in den GSDB-Entscheidungsvertrag; es behauptet nicht, dass keine Scope-Entscheidung existiert. Andere regulatorische Entscheidungen bleiben getrennt offen. Siehe reevaluation-2026-09-12.md.",
+        "en": "CL-07-02: docs/security/regulatory-applicability.md has documented a repository-owner CRA N/A decision for the training scope since 2026-09-08. Open / Not Assessed here denotes incomplete integration into the GSDB decision contract; it does not claim that no scope decision exists. Other regulatory decisions remain separately open. See reevaluation-2026-09-12.md."
       },
       "evidence": [
         {
@@ -6345,8 +6345,8 @@
       "implementationStatus": "Not Assessed",
       "learningStage": "Intermediate",
       "rationale": {
-        "de": "CL-07-03 betrifft 'CL-07-03: Kritisch nach Anhang IV / Critical per Annex IV'. Die technischen Nachweise docs/secure-development/checklisten/CL_07_CRA-Anwendbarkeit.md @ CL-07-03: Kritisch nach Anhang IV / Critical per Annex IV; docs/security/regulatory-applicability.md @ Regulatorische Anwendbarkeit / Regulatory Applicability enthalten keine zuständige menschliche Entscheidung; GSDB-FINDING-007 hält die Einstufung Open / Not Assessed sichtbar.",
-        "en": "CL-07-03 concerns 'CL-07-03: Kritisch nach Anhang IV / Critical per Annex IV'. The technical evidence at docs/secure-development/checklisten/CL_07_CRA-Anwendbarkeit.md @ CL-07-03: Kritisch nach Anhang IV / Critical per Annex IV; docs/security/regulatory-applicability.md @ Regulatorische Anwendbarkeit / Regulatory Applicability contains no decision by the accountable human role; GSDB-FINDING-007 therefore keeps the result Open / Not Assessed."
+        "de": "CL-07-03: docs/security/regulatory-applicability.md dokumentiert seit 08.09.2026 eine Repository-Owner-Entscheidung zu CRA-N/A im Ausbildungsscope. Open / Not Assessed bezeichnet hier die noch nicht abgeschlossene Überführung in den GSDB-Entscheidungsvertrag; es behauptet nicht, dass keine Scope-Entscheidung existiert. Andere regulatorische Entscheidungen bleiben getrennt offen. Siehe reevaluation-2026-09-12.md.",
+        "en": "CL-07-03: docs/security/regulatory-applicability.md has documented a repository-owner CRA N/A decision for the training scope since 2026-09-08. Open / Not Assessed here denotes incomplete integration into the GSDB decision contract; it does not claim that no scope decision exists. Other regulatory decisions remain separately open. See reevaluation-2026-09-12.md."
       },
       "evidence": [
         {
@@ -6406,8 +6406,8 @@
       "implementationStatus": "Not Assessed",
       "learningStage": "Intermediate",
       "rationale": {
-        "de": "CL-07-04 betrifft 'CL-07-04: Sicherheits-Anforderungen Anhang I Teil I / Annex I Part I Requirements'. Die technischen Nachweise docs/secure-development/checklisten/CL_07_CRA-Anwendbarkeit.md @ CL-07-04: Sicherheits-Anforderungen Anhang I Teil I / Annex I Part I Requirements; docs/security/regulatory-applicability.md @ Regulatorische Anwendbarkeit / Regulatory Applicability enthalten keine zuständige menschliche Entscheidung; GSDB-FINDING-007 hält die Einstufung Open / Not Assessed sichtbar.",
-        "en": "CL-07-04 concerns 'CL-07-04: Sicherheits-Anforderungen Anhang I Teil I / Annex I Part I Requirements'. The technical evidence at docs/secure-development/checklisten/CL_07_CRA-Anwendbarkeit.md @ CL-07-04: Sicherheits-Anforderungen Anhang I Teil I / Annex I Part I Requirements; docs/security/regulatory-applicability.md @ Regulatorische Anwendbarkeit / Regulatory Applicability contains no decision by the accountable human role; GSDB-FINDING-007 therefore keeps the result Open / Not Assessed."
+        "de": "CL-07-04: docs/security/regulatory-applicability.md dokumentiert seit 08.09.2026 eine Repository-Owner-Entscheidung zu CRA-N/A im Ausbildungsscope. Open / Not Assessed bezeichnet hier die noch nicht abgeschlossene Überführung in den GSDB-Entscheidungsvertrag; es behauptet nicht, dass keine Scope-Entscheidung existiert. Andere regulatorische Entscheidungen bleiben getrennt offen. Siehe reevaluation-2026-09-12.md.",
+        "en": "CL-07-04: docs/security/regulatory-applicability.md has documented a repository-owner CRA N/A decision for the training scope since 2026-09-08. Open / Not Assessed here denotes incomplete integration into the GSDB decision contract; it does not claim that no scope decision exists. Other regulatory decisions remain separately open. See reevaluation-2026-09-12.md."
       },
       "evidence": [
         {
@@ -6467,8 +6467,8 @@
       "implementationStatus": "Not Assessed",
       "learningStage": "Intermediate",
       "rationale": {
-        "de": "CL-07-05 betrifft 'CL-07-05: Schwachstellenbehandlung Anhang I Teil II / Annex I Part II Vulnerability Handling'. Die technischen Nachweise docs/secure-development/checklisten/CL_07_CRA-Anwendbarkeit.md @ CL-07-05: Schwachstellenbehandlung Anhang I Teil II / Annex I Part II Vulnerability Handling; docs/security/regulatory-applicability.md @ Regulatorische Anwendbarkeit / Regulatory Applicability enthalten keine zuständige menschliche Entscheidung; GSDB-FINDING-007 hält die Einstufung Open / Not Assessed sichtbar.",
-        "en": "CL-07-05 concerns 'CL-07-05: Schwachstellenbehandlung Anhang I Teil II / Annex I Part II Vulnerability Handling'. The technical evidence at docs/secure-development/checklisten/CL_07_CRA-Anwendbarkeit.md @ CL-07-05: Schwachstellenbehandlung Anhang I Teil II / Annex I Part II Vulnerability Handling; docs/security/regulatory-applicability.md @ Regulatorische Anwendbarkeit / Regulatory Applicability contains no decision by the accountable human role; GSDB-FINDING-007 therefore keeps the result Open / Not Assessed."
+        "de": "CL-07-05: docs/security/regulatory-applicability.md dokumentiert seit 08.09.2026 eine Repository-Owner-Entscheidung zu CRA-N/A im Ausbildungsscope. Open / Not Assessed bezeichnet hier die noch nicht abgeschlossene Überführung in den GSDB-Entscheidungsvertrag; es behauptet nicht, dass keine Scope-Entscheidung existiert. Andere regulatorische Entscheidungen bleiben getrennt offen. Siehe reevaluation-2026-09-12.md.",
+        "en": "CL-07-05: docs/security/regulatory-applicability.md has documented a repository-owner CRA N/A decision for the training scope since 2026-09-08. Open / Not Assessed here denotes incomplete integration into the GSDB decision contract; it does not claim that no scope decision exists. Other regulatory decisions remain separately open. See reevaluation-2026-09-12.md."
       },
       "evidence": [
         {
@@ -6528,8 +6528,8 @@
       "implementationStatus": "Not Assessed",
       "learningStage": "Intermediate",
       "rationale": {
-        "de": "CL-07-06 betrifft 'CL-07-06: Konformitätsbewertung / Conformity Assessment'. Die technischen Nachweise docs/secure-development/checklisten/CL_07_CRA-Anwendbarkeit.md @ CL-07-06: Konformitätsbewertung / Conformity Assessment; docs/security/regulatory-applicability.md @ Regulatorische Anwendbarkeit / Regulatory Applicability enthalten keine zuständige menschliche Entscheidung; GSDB-FINDING-007 hält die Einstufung Open / Not Assessed sichtbar.",
-        "en": "CL-07-06 concerns 'CL-07-06: Konformitätsbewertung / Conformity Assessment'. The technical evidence at docs/secure-development/checklisten/CL_07_CRA-Anwendbarkeit.md @ CL-07-06: Konformitätsbewertung / Conformity Assessment; docs/security/regulatory-applicability.md @ Regulatorische Anwendbarkeit / Regulatory Applicability contains no decision by the accountable human role; GSDB-FINDING-007 therefore keeps the result Open / Not Assessed."
+        "de": "CL-07-06: docs/security/regulatory-applicability.md dokumentiert seit 08.09.2026 eine Repository-Owner-Entscheidung zu CRA-N/A im Ausbildungsscope. Open / Not Assessed bezeichnet hier die noch nicht abgeschlossene Überführung in den GSDB-Entscheidungsvertrag; es behauptet nicht, dass keine Scope-Entscheidung existiert. Andere regulatorische Entscheidungen bleiben getrennt offen. Siehe reevaluation-2026-09-12.md.",
+        "en": "CL-07-06: docs/security/regulatory-applicability.md has documented a repository-owner CRA N/A decision for the training scope since 2026-09-08. Open / Not Assessed here denotes incomplete integration into the GSDB decision contract; it does not claim that no scope decision exists. Other regulatory decisions remain separately open. See reevaluation-2026-09-12.md."
       },
       "evidence": [
         {
@@ -6589,8 +6589,8 @@
       "implementationStatus": "Not Assessed",
       "learningStage": "Intermediate",
       "rationale": {
-        "de": "CL-07-07 betrifft 'CL-07-07: CE-Kennzeichnung / CE Marking'. Die technischen Nachweise docs/secure-development/checklisten/CL_07_CRA-Anwendbarkeit.md @ CL-07-07: CE-Kennzeichnung / CE Marking; docs/security/regulatory-applicability.md @ Regulatorische Anwendbarkeit / Regulatory Applicability enthalten keine zuständige menschliche Entscheidung; GSDB-FINDING-007 hält die Einstufung Open / Not Assessed sichtbar.",
-        "en": "CL-07-07 concerns 'CL-07-07: CE-Kennzeichnung / CE Marking'. The technical evidence at docs/secure-development/checklisten/CL_07_CRA-Anwendbarkeit.md @ CL-07-07: CE-Kennzeichnung / CE Marking; docs/security/regulatory-applicability.md @ Regulatorische Anwendbarkeit / Regulatory Applicability contains no decision by the accountable human role; GSDB-FINDING-007 therefore keeps the result Open / Not Assessed."
+        "de": "CL-07-07: docs/security/regulatory-applicability.md dokumentiert seit 08.09.2026 eine Repository-Owner-Entscheidung zu CRA-N/A im Ausbildungsscope. Open / Not Assessed bezeichnet hier die noch nicht abgeschlossene Überführung in den GSDB-Entscheidungsvertrag; es behauptet nicht, dass keine Scope-Entscheidung existiert. Andere regulatorische Entscheidungen bleiben getrennt offen. Siehe reevaluation-2026-09-12.md.",
+        "en": "CL-07-07: docs/security/regulatory-applicability.md has documented a repository-owner CRA N/A decision for the training scope since 2026-09-08. Open / Not Assessed here denotes incomplete integration into the GSDB decision contract; it does not claim that no scope decision exists. Other regulatory decisions remain separately open. See reevaluation-2026-09-12.md."
       },
       "evidence": [
         {
@@ -6650,8 +6650,8 @@
       "implementationStatus": "Not Assessed",
       "learningStage": "Intermediate",
       "rationale": {
-        "de": "CL-07-08 betrifft 'CL-07-08: Technische Dokumentation / Technical Documentation'. Die technischen Nachweise docs/secure-development/checklisten/CL_07_CRA-Anwendbarkeit.md @ CL-07-08: Technische Dokumentation / Technical Documentation; docs/security/regulatory-applicability.md @ Regulatorische Anwendbarkeit / Regulatory Applicability enthalten keine zuständige menschliche Entscheidung; GSDB-FINDING-007 hält die Einstufung Open / Not Assessed sichtbar.",
-        "en": "CL-07-08 concerns 'CL-07-08: Technische Dokumentation / Technical Documentation'. The technical evidence at docs/secure-development/checklisten/CL_07_CRA-Anwendbarkeit.md @ CL-07-08: Technische Dokumentation / Technical Documentation; docs/security/regulatory-applicability.md @ Regulatorische Anwendbarkeit / Regulatory Applicability contains no decision by the accountable human role; GSDB-FINDING-007 therefore keeps the result Open / Not Assessed."
+        "de": "CL-07-08: docs/security/regulatory-applicability.md dokumentiert seit 08.09.2026 eine Repository-Owner-Entscheidung zu CRA-N/A im Ausbildungsscope. Open / Not Assessed bezeichnet hier die noch nicht abgeschlossene Überführung in den GSDB-Entscheidungsvertrag; es behauptet nicht, dass keine Scope-Entscheidung existiert. Andere regulatorische Entscheidungen bleiben getrennt offen. Siehe reevaluation-2026-09-12.md.",
+        "en": "CL-07-08: docs/security/regulatory-applicability.md has documented a repository-owner CRA N/A decision for the training scope since 2026-09-08. Open / Not Assessed here denotes incomplete integration into the GSDB decision contract; it does not claim that no scope decision exists. Other regulatory decisions remain separately open. See reevaluation-2026-09-12.md."
       },
       "evidence": [
         {
@@ -6711,8 +6711,8 @@
       "implementationStatus": "Not Assessed",
       "learningStage": "Intermediate",
       "rationale": {
-        "de": "CL-07-09 betrifft 'CL-07-09: Meldepflichten 24 / 72 Stunden / 24- and 72-hour Reports'. Die technischen Nachweise docs/secure-development/checklisten/CL_07_CRA-Anwendbarkeit.md @ CL-07-09: Meldepflichten 24 / 72 Stunden / 24- and 72-hour Reports; docs/security/regulatory-applicability.md @ Regulatorische Anwendbarkeit / Regulatory Applicability enthalten keine zuständige menschliche Entscheidung; GSDB-FINDING-007 hält die Einstufung Open / Not Assessed sichtbar.",
-        "en": "CL-07-09 concerns 'CL-07-09: Meldepflichten 24 / 72 Stunden / 24- and 72-hour Reports'. The technical evidence at docs/secure-development/checklisten/CL_07_CRA-Anwendbarkeit.md @ CL-07-09: Meldepflichten 24 / 72 Stunden / 24- and 72-hour Reports; docs/security/regulatory-applicability.md @ Regulatorische Anwendbarkeit / Regulatory Applicability contains no decision by the accountable human role; GSDB-FINDING-007 therefore keeps the result Open / Not Assessed."
+        "de": "CL-07-09: docs/security/regulatory-applicability.md dokumentiert seit 08.09.2026 eine Repository-Owner-Entscheidung zu CRA-N/A im Ausbildungsscope. Open / Not Assessed bezeichnet hier die noch nicht abgeschlossene Überführung in den GSDB-Entscheidungsvertrag; es behauptet nicht, dass keine Scope-Entscheidung existiert. Andere regulatorische Entscheidungen bleiben getrennt offen. Siehe reevaluation-2026-09-12.md.",
+        "en": "CL-07-09: docs/security/regulatory-applicability.md has documented a repository-owner CRA N/A decision for the training scope since 2026-09-08. Open / Not Assessed here denotes incomplete integration into the GSDB decision contract; it does not claim that no scope decision exists. Other regulatory decisions remain separately open. See reevaluation-2026-09-12.md."
       },
       "evidence": [
         {
@@ -6772,8 +6772,8 @@
       "implementationStatus": "Not Assessed",
       "learningStage": "Intermediate",
       "rationale": {
-        "de": "CL-07-10 betrifft 'CL-07-10: Lebenszyklus und Support / Lifecycle and Support'. Die technischen Nachweise docs/secure-development/checklisten/CL_07_CRA-Anwendbarkeit.md @ CL-07-10: Lebenszyklus und Support / Lifecycle and Support; docs/security/regulatory-applicability.md @ Regulatorische Anwendbarkeit / Regulatory Applicability enthalten keine zuständige menschliche Entscheidung; GSDB-FINDING-007 hält die Einstufung Open / Not Assessed sichtbar.",
-        "en": "CL-07-10 concerns 'CL-07-10: Lebenszyklus und Support / Lifecycle and Support'. The technical evidence at docs/secure-development/checklisten/CL_07_CRA-Anwendbarkeit.md @ CL-07-10: Lebenszyklus und Support / Lifecycle and Support; docs/security/regulatory-applicability.md @ Regulatorische Anwendbarkeit / Regulatory Applicability contains no decision by the accountable human role; GSDB-FINDING-007 therefore keeps the result Open / Not Assessed."
+        "de": "CL-07-10: docs/security/regulatory-applicability.md dokumentiert seit 08.09.2026 eine Repository-Owner-Entscheidung zu CRA-N/A im Ausbildungsscope. Open / Not Assessed bezeichnet hier die noch nicht abgeschlossene Überführung in den GSDB-Entscheidungsvertrag; es behauptet nicht, dass keine Scope-Entscheidung existiert. Andere regulatorische Entscheidungen bleiben getrennt offen. Siehe reevaluation-2026-09-12.md.",
+        "en": "CL-07-10: docs/security/regulatory-applicability.md has documented a repository-owner CRA N/A decision for the training scope since 2026-09-08. Open / Not Assessed here denotes incomplete integration into the GSDB decision contract; it does not claim that no scope decision exists. Other regulatory decisions remain separately open. See reevaluation-2026-09-12.md."
       },
       "evidence": [
         {
@@ -6833,8 +6833,8 @@
       "implementationStatus": "Not Assessed",
       "learningStage": "Intermediate",
       "rationale": {
-        "de": "CL-07-11 betrifft 'CL-07-11: Hersteller-Pflichten und -Verträge / Manufacturer Duties and Contracts'. Die technischen Nachweise docs/secure-development/checklisten/CL_07_CRA-Anwendbarkeit.md @ CL-07-11: Hersteller-Pflichten und -Verträge / Manufacturer Duties and Contracts; docs/security/regulatory-applicability.md @ Regulatorische Anwendbarkeit / Regulatory Applicability enthalten keine zuständige menschliche Entscheidung; GSDB-FINDING-007 hält die Einstufung Open / Not Assessed sichtbar.",
-        "en": "CL-07-11 concerns 'CL-07-11: Hersteller-Pflichten und -Verträge / Manufacturer Duties and Contracts'. The technical evidence at docs/secure-development/checklisten/CL_07_CRA-Anwendbarkeit.md @ CL-07-11: Hersteller-Pflichten und -Verträge / Manufacturer Duties and Contracts; docs/security/regulatory-applicability.md @ Regulatorische Anwendbarkeit / Regulatory Applicability contains no decision by the accountable human role; GSDB-FINDING-007 therefore keeps the result Open / Not Assessed."
+        "de": "CL-07-11: docs/security/regulatory-applicability.md dokumentiert seit 08.09.2026 eine Repository-Owner-Entscheidung zu CRA-N/A im Ausbildungsscope. Open / Not Assessed bezeichnet hier die noch nicht abgeschlossene Überführung in den GSDB-Entscheidungsvertrag; es behauptet nicht, dass keine Scope-Entscheidung existiert. Andere regulatorische Entscheidungen bleiben getrennt offen. Siehe reevaluation-2026-09-12.md.",
+        "en": "CL-07-11: docs/security/regulatory-applicability.md has documented a repository-owner CRA N/A decision for the training scope since 2026-09-08. Open / Not Assessed here denotes incomplete integration into the GSDB decision contract; it does not claim that no scope decision exists. Other regulatory decisions remain separately open. See reevaluation-2026-09-12.md."
       },
       "evidence": [
         {
@@ -6894,8 +6894,8 @@
       "implementationStatus": "Not Assessed",
       "learningStage": "Intermediate",
       "rationale": {
-        "de": "CL-07-12 betrifft 'CL-07-12: Nichtanwendbarkeit dokumentieren / Document Non-Applicability'. Die technischen Nachweise docs/secure-development/checklisten/CL_07_CRA-Anwendbarkeit.md @ CL-07-12: Nichtanwendbarkeit dokumentieren / Document Non-Applicability; docs/security/regulatory-applicability.md @ Regulatorische Anwendbarkeit / Regulatory Applicability enthalten keine zuständige menschliche Entscheidung; GSDB-FINDING-007 hält die Einstufung Open / Not Assessed sichtbar.",
-        "en": "CL-07-12 concerns 'CL-07-12: Nichtanwendbarkeit dokumentieren / Document Non-Applicability'. The technical evidence at docs/secure-development/checklisten/CL_07_CRA-Anwendbarkeit.md @ CL-07-12: Nichtanwendbarkeit dokumentieren / Document Non-Applicability; docs/security/regulatory-applicability.md @ Regulatorische Anwendbarkeit / Regulatory Applicability contains no decision by the accountable human role; GSDB-FINDING-007 therefore keeps the result Open / Not Assessed."
+        "de": "CL-07-12: docs/security/regulatory-applicability.md dokumentiert seit 08.09.2026 eine Repository-Owner-Entscheidung zu CRA-N/A im Ausbildungsscope. Open / Not Assessed bezeichnet hier die noch nicht abgeschlossene Überführung in den GSDB-Entscheidungsvertrag; es behauptet nicht, dass keine Scope-Entscheidung existiert. Andere regulatorische Entscheidungen bleiben getrennt offen. Siehe reevaluation-2026-09-12.md.",
+        "en": "CL-07-12: docs/security/regulatory-applicability.md has documented a repository-owner CRA N/A decision for the training scope since 2026-09-08. Open / Not Assessed here denotes incomplete integration into the GSDB decision contract; it does not claim that no scope decision exists. Other regulatory decisions remain separately open. See reevaluation-2026-09-12.md."
       },
       "evidence": [
         {
@@ -13537,18 +13537,18 @@
         "CL-01-12"
       ],
       "title": {
-        "de": "Offene Nacharbeit in CL-01",
-        "en": "Open CL-01 follow-up"
+        "de": "Standardsnachweise und verbleibende regulatorische Entscheidungen",
+        "en": "Standards evidence and remaining regulatory decisions"
       },
       "observation": {
-        "de": "Mindestens eine anwendbare Zeile besitzt noch keinen vollständigen aktuellen Erfüllungsnachweis.",
-        "en": "At least one applicable row still lacks complete current fulfilment evidence."
+        "de": "CRA-N/A ist seit 08.09.2026 dokumentiert; NIS2/DORA bleiben offen. SLSA-Level und aktueller Scorecard-Gesamtnachweis fehlen weiterhin.",
+        "en": "CRA N/A has been documented since 2026-09-08; NIS2/DORA remain open. SLSA level and current aggregate Scorecard evidence remain absent."
       },
       "owner": "TinyCalc security governance role",
       "reviewer": "Independent technical security review role",
       "followUp": {
-        "de": "In einem getrennt autorisierten Härtungsauftrag bearbeiten.",
-        "en": "Address in separately authorized hardening work."
+        "de": "CRA-Scope auf CL-01-12 abbilden; SLSA, Scorecard, OWASP-Kontrollen und jede N/A-Begründung einzeln mit Nachweis und Prüfer abschließen.",
+        "en": "Map the CRA scope to CL-01-12; close SLSA, Scorecard, OWASP controls and each N/A rationale individually with evidence and reviewer."
       },
       "reevaluationTrigger": {
         "de": "Neue Evidenz oder Änderung des betroffenen Scopes.",
@@ -13576,18 +13576,18 @@
         "CL-02-10"
       ],
       "title": {
-        "de": "Offene Nacharbeit in CL-02",
-        "en": "Open CL-02 follow-up"
+        "de": "Projektweite Architekturwirksamkeit unvollständig belegt",
+        "en": "Project-wide architecture effectiveness is incompletely evidenced"
       },
       "observation": {
-        "de": "Mindestens eine anwendbare Zeile besitzt noch keinen vollständigen aktuellen Erfüllungsnachweis.",
-        "en": "At least one applicable row still lacks complete current fulfilment evidence."
+        "de": "arc42 und Bedrohungsmodell liegen vor. Neue Intake-Pfad-, Graph- und Ausgabekontrollen belegen einen Werkzeugslice, nicht die gesamte Produktarchitektur.",
+        "en": "arc42 and the threat model exist. New intake path, graph and output controls prove one tooling slice, not the whole product architecture."
       },
       "owner": "TinyCalc security governance role",
       "reviewer": "Independent technical security review role",
       "followUp": {
-        "de": "In einem getrennt autorisierten Härtungsauftrag bearbeiten.",
-        "en": "Address in separately authorized hardening work."
+        "de": "CL-02-02 bis CL-02-10 gegen reale Komponenten prüfen; zwei unabhängige Schutzschichten für kritische Assets, Rechte, Defaults und S-ADR-Anwendbarkeit mit positiven und negativen Prüfbelegen dokumentieren.",
+        "en": "Review CL-02-02 through CL-02-10 against real components; document two independent controls for critical assets, privileges, defaults and S-ADR applicability with positive and negative evidence."
       },
       "reevaluationTrigger": {
         "de": "Neue Evidenz oder Änderung des betroffenen Scopes.",
@@ -13609,18 +13609,18 @@
         "CL-03-11"
       ],
       "title": {
-        "de": "Offene Nacharbeit in CL-03",
-        "en": "Open CL-03 follow-up"
+        "de": "Kryptografie-Inventar und Ausschlussnachweise fehlen",
+        "en": "Cryptography inventory and exclusion evidence are missing"
       },
       "observation": {
-        "de": "Mindestens eine anwendbare Zeile besitzt noch keinen vollständigen aktuellen Erfüllungsnachweis.",
-        "en": "At least one applicable row still lacks complete current fulfilment evidence."
+        "de": "Richtlinien und Code-Review sind vorhanden; ein vollständiges aktuelles Inventar für CL-03-03, CL-03-06 und CL-03-11 ist nicht nachgewiesen.",
+        "en": "Policies and code review exist; a complete current inventory for CL-03-03, CL-03-06 and CL-03-11 is not evidenced."
       },
       "owner": "TinyCalc security governance role",
       "reviewer": "Independent technical security review role",
       "followUp": {
-        "de": "In einem getrennt autorisierten Härtungsauftrag bearbeiten.",
-        "en": "Address in separately authorized hardening work."
+        "de": "Produkt und Build-Skripte nach Hash-/Krypto-Aufrufen inventarisieren; Zweck, Algorithmus und Eigenbau-Ausschluss je Fund prüfen, Abwesenheit und Ausnahmen nachvollziehbar dokumentieren.",
+        "en": "Inventory hash/crypto calls in product and build scripts; review purpose, algorithm and absence of custom crypto for each result; document absence and exceptions reproducibly."
       },
       "reevaluationTrigger": {
         "de": "Neue Evidenz oder Änderung des betroffenen Scopes.",
@@ -13641,18 +13641,18 @@
         "CL-04-09"
       ],
       "title": {
-        "de": "Offene Nacharbeit in CL-04",
-        "en": "Open CL-04 follow-up"
+        "de": "Bedrohungsmodell: Änderungs- und Reviewnachweis vervollständigen",
+        "en": "Threat model: complete change and review evidence"
       },
       "observation": {
-        "de": "Mindestens eine anwendbare Zeile besitzt noch keinen vollständigen aktuellen Erfüllungsnachweis.",
-        "en": "At least one applicable row still lacks complete current fulfilment evidence."
+        "de": "Das Modell enthält STRIDE/CAPEC und einen Nachtrag vom 06.09.2026. Der Intake-Renderer besitzt neue lokale Bedrohungsnachweise; ein projektweiter Reviewabschluss fehlt.",
+        "en": "The model contains STRIDE/CAPEC and a 2026-09-06 addendum. The intake renderer has new local threat evidence; project-wide review closure is missing."
       },
       "owner": "TinyCalc security governance role",
       "reviewer": "Independent technical security review role",
       "followUp": {
-        "de": "In einem getrennt autorisierten Härtungsauftrag bearbeiten.",
-        "en": "Address in separately authorized hardening work."
+        "de": "Neue Renderer-/Liefergrenzen zum Modell zuordnen, ältere Pending-Aussagen gegen Abschlussbelege prüfen und datierten Review mit Änderungs- und Wiedervorlagetrigger ablegen.",
+        "en": "Map new renderer/delivery boundaries to the model, check older pending claims against completion evidence and record a dated review with change and re-review triggers."
       },
       "reevaluationTrigger": {
         "de": "Neue Evidenz oder Änderung des betroffenen Scopes.",
@@ -13680,18 +13680,18 @@
         "CL-05-12"
       ],
       "title": {
-        "de": "Offene Nacharbeit in CL-05",
-        "en": "Open CL-05 follow-up"
+        "de": "Lieferkette: Provenance und Betriebsnachweise offen",
+        "en": "Supply chain: provenance and operational evidence remain open"
       },
       "observation": {
-        "de": "Mindestens eine anwendbare Zeile besitzt noch keinen vollständigen aktuellen Erfüllungsnachweis.",
-        "en": "At least one applicable row still lacks complete current fulfilment evidence."
+        "de": "SBOM und historische Paket-/Lizenzberichte liegen vor. Produkt-Lockdateien und Update-Konfiguration fehlen; CI nutzt teilweise Major-Tags. Eine signierte Provenance ist nicht belegt.",
+        "en": "SBOM and historical package/license reports exist. Product lock files and update configuration are absent; CI partly uses major tags. Signed provenance is not evidenced."
       },
       "owner": "TinyCalc security governance role",
       "reviewer": "Independent technical security review role",
       "followUp": {
-        "de": "In einem getrennt autorisierten Härtungsauftrag bearbeiten.",
-        "en": "Address in separately authorized hardening work."
+        "de": "Produkt-Lockdateien und kontrolliertes Restore, Update-/CVE-Prozess, Action-Pinning, reproduzierbaren Build, Lizenzprüfung und Secret-Schutz nachweisen; Attestation am Artefakthash verifizieren oder unbelegten SLSA-Level ausdrücklich beibehalten.",
+        "en": "Evidence product lock files and controlled restore, update/CVE process, action pinning, reproducible builds, licence checks and secret protection; verify an attestation against the artifact hash or explicitly retain an unproven SLSA level."
       },
       "reevaluationTrigger": {
         "de": "Neue Evidenz oder Änderung des betroffenen Scopes.",
@@ -13721,18 +13721,18 @@
         "CL-06-11"
       ],
       "title": {
-        "de": "Offene Nacharbeit in CL-06",
-        "en": "Open CL-06 follow-up"
+        "de": "Schwachstellenprozess offen; CRA-Teilscope dokumentiert",
+        "en": "Vulnerability process open; CRA sub-scope documented"
       },
       "observation": {
-        "de": "Mindestens eine anwendbare Zeile besitzt noch keinen vollständigen aktuellen Erfüllungsnachweis.",
-        "en": "At least one applicable row still lacks complete current fulfilment evidence."
+        "de": "CRA-N/A ist dokumentiert, aber CL-06-07 noch nicht fachlich nachgeführt. CVD-Freigabe, erreichbarer Meldekanal und erprobte Reaktion sind nicht vollständig nachgewiesen.",
+        "en": "CRA N/A is documented, but CL-06-07 has not been reconciled. CVD approval, a reachable reporting channel and an exercised response are not fully evidenced."
       },
       "owner": "TinyCalc security governance role",
       "reviewer": "Independent technical security review role",
       "followUp": {
-        "de": "In einem getrennt autorisierten Härtungsauftrag bearbeiten.",
-        "en": "Address in separately authorized hardening work."
+        "de": "CL-06-07 mit Scope-Entscheidung abgleichen; CVD-Verantwortlichen, Meldekanal, Fristen, Triage, Advisory und Patch-Prozess festlegen und anhand einer simulierten Meldung prüfen.",
+        "en": "Reconcile CL-06-07 with the scope decision; define CVD ownership, reporting channel, deadlines, triage, advisories and patch process, then exercise a simulated report."
       },
       "reevaluationTrigger": {
         "de": "Neue Evidenz oder Änderung des betroffenen Scopes.",
@@ -13763,18 +13763,18 @@
         "CL-07-12"
       ],
       "title": {
-        "de": "Offene Nacharbeit in CL-07",
-        "en": "Open CL-07 follow-up"
+        "de": "CRA-Scope dokumentiert; Überführung in GSDB-Vertrag offen",
+        "en": "CRA scope documented; integration into the GSDB contract open"
       },
       "observation": {
-        "de": "Mindestens eine anwendbare Zeile besitzt noch keinen vollständigen aktuellen Erfüllungsnachweis.",
-        "en": "At least one applicable row still lacks complete current fulfilment evidence."
+        "de": "Die Repository-Owner-Entscheidung vom 08.09.2026 dokumentiert CRA-N/A im nichtkommerziellen Ausbildungsscope. Die frühere Aussage, es liege keinerlei Entscheidung vor, ist überholt. Offen bleibt die zeilenspezifische Vertragsintegration, nicht eine pauschale CRA-Konformitätsumsetzung.",
+        "en": "The repository-owner decision of 2026-09-08 documents CRA N/A for the non-commercial training scope. The earlier claim that no decision exists is outdated. Row-specific contract integration remains open, not blanket CRA conformity implementation."
       },
       "owner": "TinyCalc security governance role",
       "reviewer": "Independent technical security review role",
       "followUp": {
-        "de": "In einem getrennt autorisierten Härtungsauftrag bearbeiten.",
-        "en": "Address in separately authorized hardening work."
+        "de": "Nachweisformat für vorhandene menschliche Entscheidungen mit Herkunft, Scope, Datum und Wiedervorlage ergänzen und negativ testen; CL-07-01 bis CL-07-12 einzeln disponieren. N/A-Dokumentation selbst bleibt prüfpflichtig. Keine Änderung auf Fulfilled durch bloßen Preset-Erfolg.",
+        "en": "Extend the evidence format for existing human decisions with provenance, scope, date and review trigger, including negative tests; assess CL-07-01 through CL-07-12 individually. N/A documentation itself still needs verification. Preset success alone must never imply Fulfilled."
       },
       "reevaluationTrigger": {
         "de": "Neue Evidenz oder Änderung des betroffenen Scopes.",
@@ -13802,18 +13802,18 @@
         "CL-08-12"
       ],
       "title": {
-        "de": "Offene Nacharbeit in CL-08",
-        "en": "Open CL-08 follow-up"
+        "de": "Produkt-Codeprüfung und Fehler-/Dateigrenzen nachweisen",
+        "en": "Evidence product code review and error/file boundaries"
       },
       "observation": {
-        "de": "Mindestens eine anwendbare Zeile besitzt noch keinen vollständigen aktuellen Erfüllungsnachweis.",
-        "en": "At least one applicable row still lacks complete current fulfilment evidence."
+        "de": "Produktcode ist seit 30.08.2026 unverändert. ExecuteSafe zeigt ex.Message an; Load liest die ganze Datei und leert die Engine vor Verarbeitung aller Zellen. Das sind konkrete Prüfziele, keine hier reproduzierten Exploits.",
+        "en": "Product code is unchanged since 2026-08-30. ExecuteSafe displays ex.Message; Load reads the whole file and clears the engine before processing all cells. These are concrete review targets, not exploits reproduced in this review."
       },
       "owner": "TinyCalc security governance role",
       "reviewer": "Independent technical security review role",
       "followUp": {
-        "de": "In einem getrennt autorisierten Härtungsauftrag bearbeiten.",
-        "en": "Address in separately authorized hardening work."
+        "de": "Ungültige/große JSON-Dateien, null-Zellen, Feldgrenzen, Zustandskonsistenz nach Ladefehlern und Dateifehlerausgaben prüfen; bereinigte Benutzermeldungen, Ressourcenlimits und passende Regressionen anhand des tatsächlichen Ergebnisses umsetzen.",
+        "en": "Test malformed/large JSON files, null cells, field limits, state consistency after load failures and file error output; implement sanitized user messages, resource limits and suitable regressions according to actual results."
       },
       "reevaluationTrigger": {
         "de": "Neue Evidenz oder Änderung des betroffenen Scopes.",
@@ -13849,18 +13849,18 @@
         "CL-09-17"
       ],
       "title": {
-        "de": "Offene Nacharbeit in CL-09",
-        "en": "Open CL-09 follow-up"
+        "de": "KI-Workflow: technische Teilbelege und menschliche Reviews trennen",
+        "en": "AI workflow: separate technical partial evidence and human reviews"
       },
       "observation": {
-        "de": "Mindestens eine anwendbare Zeile besitzt noch keinen vollständigen aktuellen Erfüllungsnachweis.",
-        "en": "At least one applicable row still lacks complete current fulfilment evidence."
+        "de": "Verlinkte Intake-Belege und Governance v0.4.4 stärken Zuordnung und Lieferintegrität. Werkzeugfreigaben, Vier-Augen-Review, Schulung und Risikoentscheidungen werden dadurch nicht belegt.",
+        "en": "Linked intake evidence and governance v0.4.4 improve traceability and delivery integrity. They do not prove tool approval, four-eyes review, training or risk decisions."
       },
       "owner": "TinyCalc security governance role",
       "reviewer": "Independent technical security review role",
       "followUp": {
-        "de": "In einem getrennt autorisierten Härtungsauftrag bearbeiten.",
-        "en": "Address in separately authorized hardening work."
+        "de": "Technische Nachweise den CL-09-Kontrollen zuordnen; Paketexistenz/CVE, Prompt-Daten, Telemetrie und PR-Kennzeichnung prüfen. Menschliche Freigaben, Lizenzklärung, Review und Schulung als getrennte Belege erfassen.",
+        "en": "Map technical evidence to CL-09 controls; check package existence/CVEs, prompt data, telemetry and PR marking. Record human approval, licence clearance, review and training separately."
       },
       "reevaluationTrigger": {
         "de": "Neue Evidenz oder Änderung des betroffenen Scopes.",
@@ -13894,18 +13894,18 @@
         "CL-10-16"
       ],
       "title": {
-        "de": "Offene Nacharbeit in CL-10",
-        "en": "Open CL-10 follow-up"
+        "de": "Host-/Providerkontrollen nicht vollständig nachgewiesen",
+        "en": "Host/provider controls are not fully evidenced"
       },
       "observation": {
-        "de": "Mindestens eine anwendbare Zeile besitzt noch keinen vollständigen aktuellen Erfüllungsnachweis.",
-        "en": "At least one applicable row still lacks complete current fulfilment evidence."
+        "de": "Neue native Workflow-Definitionen und lokale Validatoren sind vorhanden. Sie belegen weder Host-Verschlüsselung/MFA noch aktive Remote-Regeln, Backup-Erfolg oder Zugriffsrezertifizierung.",
+        "en": "New native workflow definitions and local validators exist. They prove neither host encryption/MFA nor active remote rules, successful recovery or access recertification."
       },
       "owner": "TinyCalc security governance role",
       "reviewer": "Independent technical security review role",
       "followUp": {
-        "de": "In einem getrennt autorisierten Härtungsauftrag bearbeiten.",
-        "en": "Address in separately authorized hardening work."
+        "de": "Für alle 14 Human-only-Punkte datierte, bereinigte Host-/Providerbelege mit verantwortlicher Person erfassen; CL-10-09 durch zwei vergleichbare Builds belegen. Workflow-Dateien nicht als ausgeführte Jobs ausgeben.",
+        "en": "Capture dated, sanitized host/provider evidence with an accountable person for all 14 human-only items; evidence CL-10-09 with two comparable builds. Do not present workflow files as executed jobs."
       },
       "reevaluationTrigger": {
         "de": "Neue Evidenz oder Änderung des betroffenen Scopes.",
@@ -13926,18 +13926,18 @@
         "CL-11-07"
       ],
       "title": {
-        "de": "Offene Nacharbeit in CL-11",
-        "en": "Open CL-11 follow-up"
+        "de": "Datenschutzkonsultationen: Anwendbarkeit weiter offen",
+        "en": "Privacy consultations: applicability remains open"
       },
       "observation": {
-        "de": "Mindestens eine anwendbare Zeile besitzt noch keinen vollständigen aktuellen Erfüllungsnachweis.",
-        "en": "At least one applicable row still lacks complete current fulfilment evidence."
+        "de": "Die Regulatorikquelle trennt Produkt-N/A und anwendbare Delivery-Datenverarbeitung. Eine Entscheidung zu Datenschutzbeauftragtem oder Aufsichtsbehörde fehlt weiterhin.",
+        "en": "The regulatory source separates product N/A and applicable delivery data processing. A decision on the data protection officer or supervisory authority is still absent."
       },
       "owner": "TinyCalc security governance role",
       "reviewer": "Independent technical security review role",
       "followUp": {
-        "de": "In einem getrennt autorisierten Härtungsauftrag bearbeiten.",
-        "en": "Address in separately authorized hardening work."
+        "de": "Datenflüsse von Repository, Provider, Support und Telemetrie abgrenzen; zuständige Person dokumentiert je CL-11-06/-07 die Anwendbarkeit und gegebenenfalls Konsultation. Keine Behördenpflicht allein aus Open ableiten.",
+        "en": "Scope repository, provider, support and telemetry data flows; the accountable person records applicability and any consultation for CL-11-06/-07. Open alone does not establish a duty to contact an authority."
       },
       "reevaluationTrigger": {
         "de": "Neue Evidenz oder Änderung des betroffenen Scopes.",
@@ -13966,18 +13966,18 @@
         "CL-12-12"
       ],
       "title": {
-        "de": "Offene Nacharbeit in CL-12",
-        "en": "Open CL-12 follow-up"
+        "de": "Sandbox-Isolation und Freigaben bleiben offen",
+        "en": "Sandbox isolation and approvals remain open"
       },
       "observation": {
-        "de": "Mindestens eine anwendbare Zeile besitzt noch keinen vollständigen aktuellen Erfüllungsnachweis.",
-        "en": "At least one applicable row still lacks complete current fulfilment evidence."
+        "de": "Index-/Pfadprüfungen reduzieren Manipulationsrisiken. Sie sind kein Nachweis für Laufzeit-Isolation. Diese Review-Sitzung läuft mit uneingeschränktem Dateisystemzugriff und aktiviertem Netzwerk.",
+        "en": "Index/path checks reduce tampering risks. They are not runtime isolation evidence. This review session has unrestricted filesystem access and enabled networking."
       },
       "owner": "TinyCalc security governance role",
       "reviewer": "Independent technical security review role",
       "followUp": {
-        "de": "In einem getrennt autorisierten Härtungsauftrag bearbeiten.",
-        "en": "Address in separately authorized hardening work."
+        "de": "Zielsandbox definieren; abgewiesene Zugriffe außerhalb erlaubter Mounts, Netzwerkrestriktionen und Secret-Isolation testen. Werkzeug-/Modellfreigabe, menschlichen Review und Revalidierung mit tatsächlichen Entscheidungsbelegen dokumentieren.",
+        "en": "Define the target sandbox; test denied access outside allowed mounts, network restrictions and secret isolation. Record tool/model approval, human review and revalidation with actual decision evidence."
       },
       "reevaluationTrigger": {
         "de": "Neue Evidenz oder Änderung des betroffenen Scopes.",
@@ -14012,18 +14012,18 @@
         "GSDB-DUTY-016"
       ],
       "title": {
-        "de": "Querschnittliche Pflichten benötigen Folgemaßnahmen",
-        "en": "Cross-cutting duties need follow-up"
+        "de": "Sechzehn Richtlinienpflichten benötigen Wirksamkeitsnachweise",
+        "en": "Sixteen policy duties need effectiveness evidence"
       },
       "observation": {
-        "de": "Sechzehn externe Pflichten sind inventarisiert und derzeit teilweise erfüllt.",
-        "en": "Sixteen external duties are inventoried and currently partly fulfilled."
+        "de": "Richtlinien und vier technisch bereite Assurance-Gates liegen vor. Organisatorische Wirksamkeit, Notfallübung, Schulung und Freigaben folgen daraus nicht.",
+        "en": "Policies and four technically ready assurance gates exist. Organizational effectiveness, recovery exercises, training and approvals do not follow from them."
       },
       "owner": "TinyCalc security governance role",
       "reviewer": "Independent technical security review role",
       "followUp": {
-        "de": "Die Pflichten in getrennten Härtungs- oder Entscheidungsaufträgen schließen.",
-        "en": "Close the duties in separate hardening or decision work."
+        "de": "GSDB-DUTY-001 bis -016 jeweils mit verantwortlicher Person, konkretem Prozess, aktueller Stichprobe und Abschlusskriterium versehen; gemeinsame Nachweise wiederverwenden, aber jede Pflicht einzeln prüfen.",
+        "en": "For GSDB-DUTY-001 through -016 record an accountable person, concrete process, current sample and closure criterion; reuse shared evidence but verify each duty separately."
       },
       "reevaluationTrigger": {
         "de": "Neue externe Vorgabe oder neue Evidenz.",

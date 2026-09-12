@@ -10,6 +10,14 @@ This reader view contains exactly 157 canonical CL rows. Applicability and fulfi
 
 ## Summary / Zusammenfassung
 
+**DE:** [Neubewertung vom 12.09.2026](reevaluation-2026-09-12.md): Die folgenden
+Zahlen bleiben formale Vertragszustände. Die vorhandene CRA-Scope-Entscheidung
+ist anerkannt; ihre Überführung in den Entscheidungsvertrag ist noch offen.
+
+**EN:** [Reassessment of 2026-09-12](reevaluation-2026-09-12.md): The following
+counts remain formal contract states. The existing CRA scope decision is
+acknowledged; integration into the decision contract remains open.
+
 - Checklist rows / Checklistenzeilen: 157
 - Applicability / Anwendbarkeit: Applicable 83, N/A 32, Open 42
 - Implementation / Umsetzung: Fulfilled 21, Partly Fulfilled 62, Not Assessed 74
