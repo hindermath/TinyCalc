@@ -68,9 +68,9 @@ reference files, and the PDF plus checksum file.
 
 | Klasse / Class | Pfad / Path | Normalisierter SHA-256 / Normalized SHA-256 | Scope, Freshness und Locator |
 |---|---|---|---|
-| Constitution | `constitution.md` | `c57f6e586d93a48b2254550367289e9e3e3ba6645ebb8f308f2e9e24dc7c93b9` | Current; Principles XI-XVIII und Registry-Zeile `RiderProjects/TinyCalc` |
-| Constitution | `.specify/memory/constitution.md` | `c57f6e586d93a48b2254550367289e9e3e3ba6645ebb8f308f2e9e24dc7c93b9` | Current; byte-identischer Partner / byte-identical partner |
-| Registry | `.specify/presets/.registry` | `88f4be9f2ca39a98e543baa530ecb339797c031408bbc70cb8f7a04308b176b6` | Current; `presets` mit 13 Einträgen / 13 entries |
+| Constitution | `constitution.md` | `c879c41c908f85ddee506764e2604bef38f127b64c4c8b1a54616285d3d0c8c9` | Current; Principles XI-XVIII und Registry-Zeile `RiderProjects/TinyCalc` |
+| Constitution | `.specify/memory/constitution.md` | `c879c41c908f85ddee506764e2604bef38f127b64c4c8b1a54616285d3d0c8c9` | Current; byte-identischer Partner / byte-identical partner |
+| Registry | `.specify/presets/.registry` | `238276cf8671d48220f0e8a41dabca1408c72c451c6b078bd4a9704046e92e48` | Current; `presets` mit 13 Einträgen / 13 entries |
 | Workflow | `.github/workflows/ci.yml` | `c67a2404fd8d973bc36e49a811b5efc1065ac3bbf8cf5bfd2b211e0b6cfc2ceb` | Current; Linux-/Windows-Produkt- und GSDB-Validatorjobs nach T059 |
 | Workflow | `.github/workflows/agent-secret-scan.yml` | `2e604000c7c18c64420c3553f0db35e18222bafd9324a90295126667e567ada2` | Current; Secret-Scan |
 | Workflow | `.github/workflows/gitleaks.yml` | `825705909c0a7c4f1b3844c73f30c46bc684a736adb959892add3f53897c8a8a` | Current; gitleaks |
@@ -128,8 +128,8 @@ paths. A hash proves content, not automatic control fulfilment.
 | ProjectEvidence | `docs/security/cloud-autonomy-applicability.md` | `398a07285563cf0a9c6b555771ed7672d68a24a170045d236feeb75a87130009` | Revalidated; BSI-C3A-Disposition |
 | ProjectEvidence | `docs/security/asvs-verification.md` | `bb1cbaadfde55dfe863fe04c9ab3b5de062769ccc1ed1970991bc0641d935c07` | Revalidated; ASVS-N/A und Trigger |
 | ProjectEvidence | `docs/security/arc42-security.md` | `eb28c797c53a2eca5cc8902ade176a9f854d8f63f58d66f482a09d7cf7e31a57` | Revalidated; arc42 Section 8 |
-| ProjectEvidence | `AGENTS.md` | `4cb8a055a479f2571277c10af59503aea85f24ea830a340a88b2d351d561e9fc` | Revalidated; Repository-Governance |
-| ProjectEvidence | `.specify/presets/.registry` | `88f4be9f2ca39a98e543baa530ecb339797c031408bbc70cb8f7a04308b176b6` | Revalidated; 13 installierte Presets |
+| ProjectEvidence | `AGENTS.md` | `1538c920e31fabc4c76905a37ead099067b024d2d9b322a231007290c8179b52` | Revalidated; Repository-Governance |
+| ProjectEvidence | `.specify/presets/.registry` | `238276cf8671d48220f0e8a41dabca1408c72c451c6b078bd4a9704046e92e48` | Revalidated; 13 installierte Presets |
 | ProjectEvidence | `specs/004-rl-se-self-assessment/autonomous-run-evidence.md` | `d3ec4b95b39d12693a0d549760fa096078e22533ce412068b5f182416b81bece` | Revalidated; Feature-004-Laufevidenz |
 | ProjectEvidence | `docs/security/samm-assessment.md` | `c6036128766f4aabb43ca32631db0a2c4b86f35b2c6d947296525cfa87c569e9` | Revalidated; OWASP-SAMM-Disposition |
 | ProjectEvidence | `specs/004-rl-se-self-assessment/plan.md` | `984cb6e791dacae44dbf3c9d8a7d6baf9d4ba1d3fec33fb306b0117bc5a09861` | Revalidated; Feature-004-Planungsgrenze |
