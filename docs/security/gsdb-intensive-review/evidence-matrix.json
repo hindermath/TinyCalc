@@ -62,9 +62,9 @@
       "sourceId": "PRESET-autonomous-run-governance",
       "sourceClass": "Preset",
       "path": ".specify/presets/autonomous-run-governance/preset.yml",
-      "version": "0.4.1",
-      "reviewedAt": "2026-09-06",
-      "normalizedSha256": "9bdee271462fcecf84cdcf6b25cf70b615d9285c9107e4a30f7d4c00011f4759",
+      "version": "0.4.4",
+      "reviewedAt": "2026-09-12",
+      "normalizedSha256": "bee76630e08942fd07776e3c7c6fff0f7b370391f95398cb7e5e50a721c7c6a9",
       "scope": {
         "de": "Diese Quelle wird nur für ihren benannten TinyCalc-Prüfumfang verwendet.",
         "en": "This source is used only for its named TinyCalc assessment scope."
@@ -768,14 +768,14 @@
       "sourceClass": "Constitution",
       "path": "constitution.md",
       "version": "Current",
-      "reviewedAt": "2026-09-06",
-      "normalizedSha256": "c57f6e586d93a48b2254550367289e9e3e3ba6645ebb8f308f2e9e24dc7c93b9",
+      "reviewedAt": "2026-09-12",
+      "normalizedSha256": "978a928658ed5d8dba7c94f6cbf5d7a750372c97fc5173d75fb1f2a32d138c35",
       "scope": {
         "de": "Diese Quelle wird nur für ihren benannten TinyCalc-Prüfumfang verwendet.",
         "en": "This source is used only for its named TinyCalc assessment scope."
       },
       "freshness": "Revalidated",
-      "locator": "Constitution v1.17.0",
+      "locator": "Constitution v1.17.2",
       "findingIds": []
     },
     {
@@ -783,14 +783,14 @@
       "sourceClass": "Constitution",
       "path": ".specify/memory/constitution.md",
       "version": "Current",
-      "reviewedAt": "2026-09-06",
-      "normalizedSha256": "c57f6e586d93a48b2254550367289e9e3e3ba6645ebb8f308f2e9e24dc7c93b9",
+      "reviewedAt": "2026-09-12",
+      "normalizedSha256": "978a928658ed5d8dba7c94f6cbf5d7a750372c97fc5173d75fb1f2a32d138c35",
       "scope": {
         "de": "Diese Quelle wird nur für ihren benannten TinyCalc-Prüfumfang verwendet.",
         "en": "This source is used only for its named TinyCalc assessment scope."
       },
       "freshness": "Revalidated",
-      "locator": "Constitution v1.17.0",
+      "locator": "Constitution v1.17.2",
       "findingIds": []
     },
     {
@@ -1248,8 +1248,8 @@
       "sourceClass": "ProjectEvidence",
       "path": "AGENTS.md",
       "version": "Current",
-      "reviewedAt": "2026-09-06",
-      "normalizedSha256": "4cb8a055a479f2571277c10af59503aea85f24ea830a340a88b2d351d561e9fc",
+      "reviewedAt": "2026-09-12",
+      "normalizedSha256": "2e6a741c8629ee8cfdc1bd10cef6b5e7c1e834c65147db572035e867033005e1",
       "scope": {
         "de": "Zeilenspezifischer aktueller Nachweis aus AGENTS.md; der Hash beweist Inhalt, nicht automatisch Erfuellung.",
         "en": "Current row-specific evidence from AGENTS.md; the hash proves content, not automatic fulfilment."
@@ -1263,8 +1263,8 @@
       "sourceClass": "ProjectEvidence",
       "path": ".specify/presets/.registry",
       "version": "Current",
-      "reviewedAt": "2026-09-06",
-      "normalizedSha256": "88f4be9f2ca39a98e543baa530ecb339797c031408bbc70cb8f7a04308b176b6",
+      "reviewedAt": "2026-09-12",
+      "normalizedSha256": "8b1f5085f0573b95bab983aabdc59fd7f80b32c71a4a2355cbf64af9cfc10978",
       "scope": {
         "de": "Zeilenspezifischer aktueller Nachweis aus .specify/presets/.registry; der Hash beweist Inhalt, nicht automatisch Erfuellung.",
         "en": "Current row-specific evidence from .specify/presets/.registry; the hash proves content, not automatic fulfilment."
@@ -1334,13 +1334,13 @@
       "evidence": [
         {
           "path": "constitution.md",
-          "locator": "Constitution v1.17.0",
-          "observedAt": "2026-09-06",
+          "locator": "Constitution v1.17.2",
+          "observedAt": "2026-09-12",
           "freshness": "Revalidated",
           "availability": "Existing",
           "supports": {
-            "de": "CL-01-01 ist durch constitution.md am exakten Locator 'Constitution v1.17.0' belegt. Der am 2026-09-06 als Revalidated geprüfte Inhalt stützt ausschließlich die Einstufung Applicable / Fulfilled.",
-            "en": "CL-01-01 is bound to constitution.md at the exact locator 'Constitution v1.17.0'. The content observed on 2026-09-06 as Revalidated supports only the Applicable / Fulfilled disposition."
+            "de": "CL-01-01 ist durch constitution.md am exakten Locator 'Constitution v1.17.2' belegt. Der am 2026-09-12 als Revalidated geprüfte Inhalt stützt ausschließlich die Einstufung Applicable / Fulfilled.",
+            "en": "CL-01-01 is bound to constitution.md at the exact locator 'Constitution v1.17.2'. The content observed on 2026-09-12 as Revalidated supports only the Applicable / Fulfilled disposition."
           }
         },
         {
@@ -1581,13 +1581,13 @@
         },
         {
           "path": "constitution.md",
-          "locator": "Constitution v1.17.0",
-          "observedAt": "2026-09-06",
+          "locator": "Constitution v1.17.2",
+          "observedAt": "2026-09-12",
           "freshness": "Revalidated",
           "availability": "Existing",
           "supports": {
-            "de": "CL-01-05 ist durch constitution.md am exakten Locator 'Constitution v1.17.0' belegt. Der am 2026-09-06 als Revalidated geprüfte Inhalt stützt ausschließlich die Einstufung Applicable / Partly Fulfilled.",
-            "en": "CL-01-05 is bound to constitution.md at the exact locator 'Constitution v1.17.0'. The content observed on 2026-09-06 as Revalidated supports only the Applicable / Partly Fulfilled disposition."
+            "de": "CL-01-05 ist durch constitution.md am exakten Locator 'Constitution v1.17.2' belegt. Der am 2026-09-12 als Revalidated geprüfte Inhalt stützt ausschließlich die Einstufung Applicable / Partly Fulfilled.",
+            "en": "CL-01-05 is bound to constitution.md at the exact locator 'Constitution v1.17.2'. The content observed on 2026-09-12 as Revalidated supports only the Applicable / Partly Fulfilled disposition."
           }
         },
         {
@@ -1819,13 +1819,13 @@
         },
         {
           "path": "constitution.md",
-          "locator": "Constitution v1.17.0",
-          "observedAt": "2026-09-06",
+          "locator": "Constitution v1.17.2",
+          "observedAt": "2026-09-12",
           "freshness": "Revalidated",
           "availability": "Existing",
           "supports": {
-            "de": "CL-01-09 ist durch constitution.md am exakten Locator 'Constitution v1.17.0' belegt. Der am 2026-09-06 als Revalidated geprüfte Inhalt stützt ausschließlich die Einstufung Applicable / Partly Fulfilled.",
-            "en": "CL-01-09 is bound to constitution.md at the exact locator 'Constitution v1.17.0'. The content observed on 2026-09-06 as Revalidated supports only the Applicable / Partly Fulfilled disposition."
+            "de": "CL-01-09 ist durch constitution.md am exakten Locator 'Constitution v1.17.2' belegt. Der am 2026-09-12 als Revalidated geprüfte Inhalt stützt ausschließlich die Einstufung Applicable / Partly Fulfilled.",
+            "en": "CL-01-09 is bound to constitution.md at the exact locator 'Constitution v1.17.2'. The content observed on 2026-09-12 as Revalidated supports only the Applicable / Partly Fulfilled disposition."
           }
         },
         {
@@ -1902,13 +1902,13 @@
         },
         {
           "path": "constitution.md",
-          "locator": "Constitution v1.17.0",
-          "observedAt": "2026-09-06",
+          "locator": "Constitution v1.17.2",
+          "observedAt": "2026-09-12",
           "freshness": "Revalidated",
           "availability": "Existing",
           "supports": {
-            "de": "CL-01-10 ist durch constitution.md am exakten Locator 'Constitution v1.17.0' belegt. Der am 2026-09-06 als Revalidated geprüfte Inhalt stützt ausschließlich die Einstufung Applicable / Partly Fulfilled.",
-            "en": "CL-01-10 is bound to constitution.md at the exact locator 'Constitution v1.17.0'. The content observed on 2026-09-06 as Revalidated supports only the Applicable / Partly Fulfilled disposition."
+            "de": "CL-01-10 ist durch constitution.md am exakten Locator 'Constitution v1.17.2' belegt. Der am 2026-09-12 als Revalidated geprüfte Inhalt stützt ausschließlich die Einstufung Applicable / Partly Fulfilled.",
+            "en": "CL-01-10 is bound to constitution.md at the exact locator 'Constitution v1.17.2'. The content observed on 2026-09-12 as Revalidated supports only the Applicable / Partly Fulfilled disposition."
           }
         },
         {
@@ -7687,13 +7687,13 @@
       "evidence": [
         {
           "path": "constitution.md",
-          "locator": "Constitution v1.17.0",
-          "observedAt": "2026-09-06",
+          "locator": "Constitution v1.17.2",
+          "observedAt": "2026-09-12",
           "freshness": "Revalidated",
           "availability": "Existing",
           "supports": {
-            "de": "CL-08-13 ist durch constitution.md am exakten Locator 'Constitution v1.17.0' belegt. Der am 2026-09-06 als Revalidated geprüfte Inhalt stützt ausschließlich die Einstufung Applicable / Fulfilled.",
-            "en": "CL-08-13 is bound to constitution.md at the exact locator 'Constitution v1.17.0'. The content observed on 2026-09-06 as Revalidated supports only the Applicable / Fulfilled disposition."
+            "de": "CL-08-13 ist durch constitution.md am exakten Locator 'Constitution v1.17.2' belegt. Der am 2026-09-12 als Revalidated geprüfte Inhalt stützt ausschließlich die Einstufung Applicable / Fulfilled.",
+            "en": "CL-08-13 is bound to constitution.md at the exact locator 'Constitution v1.17.2'. The content observed on 2026-09-12 as Revalidated supports only the Applicable / Fulfilled disposition."
           }
         },
         {
@@ -12577,7 +12577,7 @@
     },
     {
       "presetId": "autonomous-run-governance",
-      "version": "0.4.1",
+      "version": "0.4.4",
       "priority": 70,
       "standardMatrixMember": true,
       "applicability": "Applicable",
@@ -12640,18 +12640,18 @@
         {
           "path": ".specify/presets/autonomous-run-governance/preset.yml",
           "locator": "id: \"autonomous-run-governance\"",
-          "observedAt": "2026-09-06",
+          "observedAt": "2026-09-12",
           "freshness": "Revalidated",
           "availability": "Existing",
           "supports": {
-            "de": "autonomous-run-governance ist durch .specify/presets/autonomous-run-governance/preset.yml am exakten Locator 'id: \"autonomous-run-governance\"' belegt. Der am 2026-09-06 als Revalidated geprüfte Inhalt stützt ausschließlich die Einstufung Applicable.",
-            "en": "autonomous-run-governance is bound to .specify/presets/autonomous-run-governance/preset.yml at the exact locator 'id: \"autonomous-run-governance\"'. The content observed on 2026-09-06 as Revalidated supports only the Applicable disposition."
+            "de": "autonomous-run-governance ist durch .specify/presets/autonomous-run-governance/preset.yml am exakten Locator 'id: \"autonomous-run-governance\"' belegt. Der am 2026-09-12 als Revalidated geprüfte Inhalt stützt ausschließlich die Einstufung Applicable.",
+            "en": "autonomous-run-governance is bound to .specify/presets/autonomous-run-governance/preset.yml at the exact locator 'id: \"autonomous-run-governance\"'. The content observed on 2026-09-12 as Revalidated supports only the Applicable disposition."
           }
         }
       ],
       "rationale": {
-        "de": "autonomous-run-governance 0.4.1 ist am exakten Preset-Locator inventarisiert und auf 42 Checklistenzeilen sowie 9 Feature-Gates abgebildet.",
-        "en": "autonomous-run-governance 0.4.1 is inventoried at its exact preset locator and mapped to 42 checklist rows and 9 feature gates."
+        "de": "autonomous-run-governance 0.4.4 ist am exakten Preset-Locator inventarisiert und unverändert auf 42 Checklistenzeilen sowie 9 Feature-Gates abgebildet; physische Rename-Pfade, reguläre Indexmodi und Indexbytes stärken GSDB-GATE-027.",
+        "en": "autonomous-run-governance 0.4.4 is inventoried at its exact preset locator and remains mapped to 42 checklist rows and 9 feature gates; physical rename paths, regular index modes, and index bytes strengthen GSDB-GATE-027."
       },
       "owner": "Spec Kit governance role",
       "reviewer": "Independent technical review role",

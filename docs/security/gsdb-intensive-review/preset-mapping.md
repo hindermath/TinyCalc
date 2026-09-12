@@ -22,13 +22,27 @@ inactive.
 | `a11y-governance` | 0.4.3 | 40 | Standard | CL-01; Gates 019, 020, 025 | `abed4e64a34853417674c8403a660daa8b97606b42782be404f0d5faa3347c10` |
 | `cross-platform-governance` | 0.2.2 | 50 | Standard | CL-05, CL-10; Gates 021, 023, 026 | `9eff272453e338884da0c695fe79d56ec074e83661d95cccced8800b3337a64e` |
 | `agent-parity-governance` | 0.4.2 | 60 | Standard | CL-09, CL-10, CL-12; Gates 025, 026 | `33ab3c1bd99a5069af5c0006899c26476d0cabd868bd7ac55659bdd4e4794952` |
-| `autonomous-run-governance` | 0.4.1 | 70 | Standard | CL-05, CL-09, CL-12; Gates 001, 002, 027-033 | `9bdee271462fcecf84cdcf6b25cf70b615d9285c9107e4a30f7d4c00011f4759` |
+| `autonomous-run-governance` | 0.4.4 | 70 | Standard | CL-05, CL-09, CL-12; Gates 001, 002, 027-033 | `bee76630e08942fd07776e3c7c6fff0f7b370391f95398cb7e5e50a721c7c6a9` |
 | `parallel-autonomous-run-governance` | 0.2.6 | 80 | Standard | CL-09, CL-12; Gate 033 (`N/A` execution) | `70af07aa51506790ed99e2743ec7a51127936de0d9e82239e2b3f03716539b0d` |
 | `secure-development-assurance-governance` | 0.1.3 | NotInStandardMatrix | Extra | CL-01 bis CL-12; Gates 003-018, 026 | `8e17022fb60749a3db454239641592f125e727585c0312418fae538e2b3ca622` |
 | `model-routing-governance` | 0.1.4 | NotInStandardMatrix | Extra | CL-09, CL-12; Gates 001, 002 | `a06eee81c3988b9ef617e131370c2522f4d4f8847c6dcfed833f465ed479fd0e` |
 | `intake-authoring-governance` | 0.3.1 | NotInStandardMatrix | Extra | CL-09, CL-12; Gates 001, 032, 033 | `20e44082b29e58f7444777f31a9e2057585353567be52c81a40a9b65fef7aa4d` |
 | `intake-review-governance` | 0.2.1 | NotInStandardMatrix | Extra | CL-08, CL-09, CL-12; Gates 001, 028, 032 | `81746b9764249a912de4f0570d1178ade21381e38c2409d87957e4a42eadc241` |
 | `intake-sequencing-governance` | 0.2.3 | NotInStandardMatrix | Extra | CL-09, CL-12; Gates 001, 032, 033 | `5878fb4d4e075cea5215775ecf15d7b73bf00391c021773934477448edb4699f` |
+
+## Revalidierung v0.4.4 / v0.4.4 Revalidation
+
+**DE:** Am 12.09.2026 wurden Preset-Manifest, Registry, Constitution-Partner und
+Agenten-Guidance erneut am aktuellen Inhalt geprüft. Die CL-05-/CL-09-/CL-12-
+und Gate-001/002/027-033-Zuordnung bleibt fachlich unverändert. Die Prüfung physischer Rename-Pfade, regulärer Indexmodi und Indexbytes in
+v0.4.4 stärkt Gate 027; sie ändert keine Produkt-, Human-only- oder Erfüllungsdisposition.
+
+**EN:** On 2026-09-12, the preset manifest, registry, constitution pair, and
+agent guidance were reviewed again against their current content. The
+CL-05/CL-09/CL-12 and gate 001/002/027-033 mapping remains valid. Version 0.4.4
+strengthens gate 027 through physical rename paths, regular index modes, and
+index-byte checks; it changes
+no product, human-only, or fulfilment disposition.
 
 ## Prüfpfade und Drift / Check Paths and Drift
 

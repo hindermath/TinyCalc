@@ -71,7 +71,7 @@ $script:ExpectedPresets = [ordered]@{
     'a11y-governance' = @{ Version = '0.4.3'; Priority = 40; Standard = $true; Families = @('CL-01'); Gates = @('019', '020', '025') }
     'agent-parity-governance' = @{ Version = '0.4.2'; Priority = 60; Standard = $true; Families = @('CL-09', 'CL-10', 'CL-12'); Gates = @('025', '026') }
     'architecture-governance' = @{ Version = '0.5.2'; Priority = 20; Standard = $true; Families = @('CL-02', 'CL-04'); Gates = @('010', '015', '016', '017', '018') }
-    'autonomous-run-governance' = @{ Version = '0.4.1'; Priority = 70; Standard = $true; Families = @('CL-05', 'CL-09', 'CL-12'); Gates = @('001', '002', '027', '028', '029', '030', '031', '032', '033') }
+    'autonomous-run-governance' = @{ Version = '0.4.4'; Priority = 70; Standard = $true; Families = @('CL-05', 'CL-09', 'CL-12'); Gates = @('001', '002', '027', '028', '029', '030', '031', '032', '033') }
     'cross-platform-governance' = @{ Version = '0.2.2'; Priority = 50; Standard = $true; Families = @('CL-05', 'CL-10'); Gates = @('021', '023', '026') }
     'intake-authoring-governance' = @{ Version = '0.3.1'; Priority = 'NotInStandardMatrix'; Standard = $false; Families = @('CL-09', 'CL-12'); Gates = @('001', '032', '033') }
     'intake-review-governance' = @{ Version = '0.2.1'; Priority = 'NotInStandardMatrix'; Standard = $false; Families = @('CL-08', 'CL-09', 'CL-12'); Gates = @('001', '028', '032') }
