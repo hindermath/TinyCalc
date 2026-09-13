@@ -564,6 +564,7 @@ runtime evidence.*
 | 2026-09-13 | TinyCalc-Gesamtserie nach IR002-Reparatur neu geprueft / TinyCalc full series re-reviewed after IR002 repair | Dieselbe sichtbare Agentensitzung auf Branch `codex/intake-ir002-learner-clarity`. Der vollstaendige hashgebundene Serienreview umfasst `13` Ziele, `4` Wurzeln, `9` verbindliche Hard Gates und keine Worker. `IR002` ist durch den erfolgreichen Single-Re-Review geschlossen; `IR003` und `IR004` bleiben als zwei mittlere Befunde zur Lernendenklarheit in den bereits vorhandenen Secure-Development- und Sandbox-Intakes offen. Ergebnis `NeedsRemediation`: keine Critical-, High- oder Low-Befunde, keine akzeptierten Risiken und keine offenen Fragen. Umfang vor Statistik-Selbstnachweis: `0` Produktionscode-Zeilen, `0` Testcode-Zeilen und `348` neue Review- und Evidence-Zeilen. Konservative Referenz: `4.4` Arbeitstage, ca. `33.9` Stunden und `0.20` Monate; Thorsten-Solo-Referenz: `2.8` Arbeitstage, ca. `21.7` Stunden und `0.13` Monate. Gegen einen sichtbaren Aktivtag sind `4.4x` und `2.8x` blended repository speedup beziehungsweise Lieferdichte, keine Stoppuhrmessung. Request und Resultat bestanden die Bash- und PowerShell-Validatoren; kein Feature, Build, DocFX-Lauf oder Remote-Vorgang wurde gestartet. *The complete hash-bound series review covers 13 targets, four roots, nine binding hard gates, and no workers. IR002 is closed while two Medium learner-clarity findings remain in the existing IR003 and IR004 intakes. The 348 new review-evidence lines correspond to 4.4 conservative or 2.8 Thorsten-solo days as delivery-density estimates.* |
 
 | 2026-09-13 | Autorisierte Whitespace-Lieferkorrektur / Authorized whitespace delivery repair | Sechs Markdown-Zeilenumbrüche in drei noch uncommitteten Intake-Snapshots ersetzt; 21 Dokument-/Belegdateien kausal neu hashgebunden, Originalbytes verlustfrei mit SHA-256/Base64 gesichert. Frühere Bytegleichheitsangaben beziehen sich auf die gesicherten Originale, die lesbaren Archive sind normalisierte Kopien. Ein neuer vollständiger Einzelreview Ready; Serienstatus weiterhin NeedsRemediation mit IR003/IR004. 0 Produktionscode- und 0 Testcode-Änderungen; vorhandene Bash-/PowerShell-Validatoren bestanden. Sichtbares Arbeitsfenster 2026-09-13 auf codex/intake-ir002-learner-clarity; Referenzen 80/125 Zeilen je Arbeitstag, keine zusätzliche manuelle Aufwandsschätzung. UpdateRequired; Statistikblock generiert aus Git. / Six Markdown breaks normalized with lossless original evidence; a fresh Single review passes while unrelated series findings remain open. No product or test code changed; existing cross-shell validators passed. |
+| 2026-09-13 | Mermaid und Abschlussberichte | Neue textbasierte Diagrammregel, Berichtsvorlage, Agent-Paritaet und versionierte Governance; kein Produktcode. / Text-first diagram and completion-report governance; no product code. Branch codex/mermaid-completion-governance-20260913; Phase Governance-Rollout; Git-Fenster 2026-09-13T23:02:13+02:00 bis 2026-09-13T23:15:33+02:00 (keine aktive Arbeitszeit). Messstand 13fb141a0dc4..e03909a7075a, ohne Ledger: 25 Dateien, +902/-29 Dokumentations-/Governance-/Evidence-Zeilen; Produktion 0, Produkt-Tests 0 (N/A: keine Produktlogik). Arbeitspakete: Regel, Profile/Agenten/Bootstrap, Berichtsvorlage, Quellenbindung, Lieferung. Validierung: lokale Paritaet/Erhalt, Mermaid-Rendernachweis, Staged-Gate bestanden; finale CI und Merge/Sync siehe PR https://github.com/hindermath/TinyCalc/pull/83. Referenzen 80/125 Zeilen pro Tag: 11.28/7.22 rechnerische Tage, keine Aufwandmessung. / Declared Git-window and net documentation/evidence diff; no product code or tests; gate evidence in PR; reference days are not measured effort. |
 
 ## Statistikprofil-1-Archiv / Statistics Profile 1 Archive
 Basis dieses Schlussblocks sind die aktuell dokumentierten Snapshot- und
@@ -728,26 +729,26 @@ Profil 2 verwendet Git-getrackte Textdateien und sichtbare Git-Aktivitaet. Die W
 
 | Kennzahl / Metric | Wert / Value |
 |---|---:|
-| Textbasis / Text base | 202267 lines |
-| Textdateien / Text files | 1281 |
+| Textbasis / Text base | 203140 lines |
+| Textdateien / Text files | 1286 |
 | Beobachtbarer Zeitraum / Observable period | 2025-09-21..2026-09-13 |
 | Aktivtage / Active days | 81 |
-| Relevante Commits / Relevant commits | 240 |
-| Zeilen je Aktivtag / Lines per active day | 2497.1 |
+| Relevante Commits / Relevant commits | 243 |
+| Zeilen je Aktivtag / Lines per active day | 2507.9 |
 | Peak-Tag im Fenster / Peak day in window | 2026-06-17 / 27058 |
 | Peak-Woche im Fenster / Peak week in window | 2026-07-19 / 33387 |
 | Laengste Serie / Longest streak | 8 days |
-| Speedup vs. 80 lines/day | 31.2x |
-| Speedup vs. 125 lines/day | 20.0x |
-| Methodik / Methodology | v2; source `f44d91372428` |
+| Speedup vs. 80 lines/day | 31.3x |
+| Speedup vs. 125 lines/day | 20.1x |
+| Methodik / Methodology | v2; source `0ad5d4977aac` |
 
 ### Artefaktmix / Artifact Mix
 
 ```text
 Produktiv / Production          [#...................]   1.4% | 2830
 Tests                           [#...................]   4.1% | 8338
-Dokumentation / Documentation   [###############.....]  73.9% | 149489
-Skripte / Scripts               [##..................]  11.5% | 23219
+Dokumentation / Documentation   [###############.....]  74.0% | 150226
+Skripte / Scripts               [##..................]  11.5% | 23355
 Konfiguration / Configuration   [##..................]   7.6% | 15376
 Daten und Medien / Data and media [....................]   0.0% | 0
 Sonstiger Text / Other text     [#...................]   1.5% | 3015
@@ -882,8 +883,8 @@ Die festen Slots halten den Phasenvergleich auch bei fehlenden oder spaeter erga
 
 ```text
 Scale: 0..50x
-80 lines/day       [############........] 31.2x
-125 lines/day      [########............] 20.0x
+80 lines/day       [#############.......] 31.3x
+125 lines/day      [########............] 20.1x
 ```
 
 Die Faktoren vergleichen sichtbare Lieferdichte mit den dokumentierten manuellen Referenzen. Sie messen keine Arbeitszeit.
@@ -896,7 +897,7 @@ Die Faktoren vergleichen sichtbare Lieferdichte mit den dokumentierten manuellen
 Scale: 0..5000 lines/day
 Experienced manual [#...................] 80
 Thorsten solo      [#...................] 125
-Visible repository [##########..........] 2497.1
+Visible repository [##########..........] 2507.9
 ```
 
 Die gemeinsame Skala vergleicht Referenzen und sichtbare Lieferdichte. Sie schreibt die Git-Aktivitaet keiner Person oder KI pauschal zu.
@@ -922,6 +923,6 @@ DE: Das Fenster beginnt am 2025-09-21 und endet am 2026-09-13. Es enthaelt 81 ak
 | 2026-06 | 37273 |
 | 2026-07 | 74031 |
 | 2026-08 | 26210 |
-| 2026-09 | 59963 |
+| 2026-09 | 61000 |
 
 <!-- project-statistics-v2:end -->
