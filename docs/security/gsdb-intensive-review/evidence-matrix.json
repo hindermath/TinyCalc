@@ -92,9 +92,9 @@
       "sourceId": "PRESET-intake-authoring-governance",
       "sourceClass": "Preset",
       "path": ".specify/presets/intake-authoring-governance/preset.yml",
-      "version": "0.3.1",
-      "reviewedAt": "2026-09-06",
-      "normalizedSha256": "20e44082b29e58f7444777f31a9e2057585353567be52c81a40a9b65fef7aa4d",
+      "version": "0.3.2",
+      "reviewedAt": "2026-09-13",
+      "normalizedSha256": "61107a6a8141a5df1f5088f21ef458d34b3f97f127dc399dfbf3c7ff6947b338",
       "scope": {
         "de": "Diese Quelle wird nur für ihren benannten TinyCalc-Prüfumfang verwendet.",
         "en": "This source is used only for its named TinyCalc assessment scope."
@@ -107,9 +107,9 @@
       "sourceId": "PRESET-intake-review-governance",
       "sourceClass": "Preset",
       "path": ".specify/presets/intake-review-governance/preset.yml",
-      "version": "0.2.1",
-      "reviewedAt": "2026-09-06",
-      "normalizedSha256": "81746b9764249a912de4f0570d1178ade21381e38c2409d87957e4a42eadc241",
+      "version": "0.2.2",
+      "reviewedAt": "2026-09-13",
+      "normalizedSha256": "fd34ea0e30d2dc9ae4a6ad5863d582ef04645ba58382194f8edfd7d957d9445a",
       "scope": {
         "de": "Diese Quelle wird nur für ihren benannten TinyCalc-Prüfumfang verwendet.",
         "en": "This source is used only for its named TinyCalc assessment scope."
@@ -122,9 +122,9 @@
       "sourceId": "PRESET-intake-sequencing-governance",
       "sourceClass": "Preset",
       "path": ".specify/presets/intake-sequencing-governance/preset.yml",
-      "version": "0.2.3",
-      "reviewedAt": "2026-09-06",
-      "normalizedSha256": "5878fb4d4e075cea5215775ecf15d7b73bf00391c021773934477448edb4699f",
+      "version": "0.2.4",
+      "reviewedAt": "2026-09-13",
+      "normalizedSha256": "585b59b1044dcff182b7d89399b2447b8437c72f712db258ef2f706b7404ca54",
       "scope": {
         "de": "Diese Quelle wird nur für ihren benannten TinyCalc-Prüfumfang verwendet.",
         "en": "This source is used only for its named TinyCalc assessment scope."
@@ -1263,8 +1263,8 @@
       "sourceClass": "ProjectEvidence",
       "path": ".specify/presets/.registry",
       "version": "Current",
-      "reviewedAt": "2026-09-12",
-      "normalizedSha256": "8b1f5085f0573b95bab983aabdc59fd7f80b32c71a4a2355cbf64af9cfc10978",
+      "reviewedAt": "2026-09-13",
+      "normalizedSha256": "294031aaf74da9d647434b948ec2202a456c86dec05e12522ebec1d49d84a92e",
       "scope": {
         "de": "Zeilenspezifischer aktueller Nachweis aus .specify/presets/.registry; der Hash beweist Inhalt, nicht automatisch Erfuellung.",
         "en": "Current row-specific evidence from .specify/presets/.registry; the hash proves content, not automatic fulfilment."
@@ -11032,12 +11032,12 @@
         {
           "path": ".specify/presets/.registry",
           "locator": "\"schema_version\": \"1.0\"",
-          "observedAt": "2026-09-06",
+          "observedAt": "2026-09-13",
           "freshness": "Revalidated",
           "availability": "Existing",
           "supports": {
-            "de": "CL-12-06 ist durch .specify/presets/.registry am exakten Locator '\"schema_version\": \"1.0\"' belegt. Der am 2026-09-06 als Revalidated geprüfte Inhalt stützt ausschließlich die Einstufung Applicable / Fulfilled.",
-            "en": "CL-12-06 is bound to .specify/presets/.registry at the exact locator '\"schema_version\": \"1.0\"'. The content observed on 2026-09-06 as Revalidated supports only the Applicable / Fulfilled disposition."
+            "de": "CL-12-06 ist durch .specify/presets/.registry am exakten Locator '\"schema_version\": \"1.0\"' belegt. Der am 2026-09-13 als Revalidated geprüfte Inhalt stützt ausschließlich die Einstufung Applicable / Fulfilled.",
+            "en": "CL-12-06 is bound to .specify/presets/.registry at the exact locator '\"schema_version\": \"1.0\"'. The content observed on 2026-09-13 as Revalidated supports only the Applicable / Fulfilled disposition."
           }
         },
         {
@@ -12745,7 +12745,7 @@
     },
     {
       "presetId": "intake-authoring-governance",
-      "version": "0.3.1",
+      "version": "0.3.2",
       "priority": "NotInStandardMatrix",
       "standardMatrixMember": false,
       "applicability": "Applicable",
@@ -12789,18 +12789,18 @@
         {
           "path": ".specify/presets/intake-authoring-governance/preset.yml",
           "locator": "id: \"intake-authoring-governance\"",
-          "observedAt": "2026-09-06",
+          "observedAt": "2026-09-13",
           "freshness": "Revalidated",
           "availability": "Existing",
           "supports": {
-            "de": "intake-authoring-governance ist durch .specify/presets/intake-authoring-governance/preset.yml am exakten Locator 'id: \"intake-authoring-governance\"' belegt. Der am 2026-09-06 als Revalidated geprüfte Inhalt stützt ausschließlich die Einstufung Applicable.",
-            "en": "intake-authoring-governance is bound to .specify/presets/intake-authoring-governance/preset.yml at the exact locator 'id: \"intake-authoring-governance\"'. The content observed on 2026-09-06 as Revalidated supports only the Applicable disposition."
+            "de": "intake-authoring-governance ist durch .specify/presets/intake-authoring-governance/preset.yml am exakten Locator 'id: \"intake-authoring-governance\"' belegt. Der am 2026-09-13 als Revalidated geprüfte Inhalt stützt ausschließlich die Einstufung Applicable.",
+            "en": "intake-authoring-governance is bound to .specify/presets/intake-authoring-governance/preset.yml at the exact locator 'id: \"intake-authoring-governance\"'. The content observed on 2026-09-13 as Revalidated supports only the Applicable disposition."
           }
         }
       ],
       "rationale": {
-        "de": "intake-authoring-governance 0.3.1 ist am exakten Preset-Locator inventarisiert und auf 29 Checklistenzeilen sowie 3 Feature-Gates abgebildet.",
-        "en": "intake-authoring-governance 0.3.1 is inventoried at its exact preset locator and mapped to 29 checklist rows and 3 feature gates."
+        "de": "intake-authoring-governance 0.3.2 ist am exakten Preset-Locator inventarisiert und auf 29 Checklistenzeilen sowie 3 Feature-Gates abgebildet.",
+        "en": "intake-authoring-governance 0.3.2 is inventoried at its exact preset locator and mapped to 29 checklist rows and 3 feature gates."
       },
       "owner": "Spec Kit governance role",
       "reviewer": "Independent technical review role",
@@ -12819,7 +12819,7 @@
     },
     {
       "presetId": "intake-review-governance",
-      "version": "0.2.1",
+      "version": "0.2.2",
       "priority": "NotInStandardMatrix",
       "standardMatrixMember": false,
       "applicability": "Applicable",
@@ -12876,18 +12876,18 @@
         {
           "path": ".specify/presets/intake-review-governance/preset.yml",
           "locator": "id: \"intake-review-governance\"",
-          "observedAt": "2026-09-06",
+          "observedAt": "2026-09-13",
           "freshness": "Revalidated",
           "availability": "Existing",
           "supports": {
-            "de": "intake-review-governance ist durch .specify/presets/intake-review-governance/preset.yml am exakten Locator 'id: \"intake-review-governance\"' belegt. Der am 2026-09-06 als Revalidated geprüfte Inhalt stützt ausschließlich die Einstufung Applicable.",
-            "en": "intake-review-governance is bound to .specify/presets/intake-review-governance/preset.yml at the exact locator 'id: \"intake-review-governance\"'. The content observed on 2026-09-06 as Revalidated supports only the Applicable disposition."
+            "de": "intake-review-governance ist durch .specify/presets/intake-review-governance/preset.yml am exakten Locator 'id: \"intake-review-governance\"' belegt. Der am 2026-09-13 als Revalidated geprüfte Inhalt stützt ausschließlich die Einstufung Applicable.",
+            "en": "intake-review-governance is bound to .specify/presets/intake-review-governance/preset.yml at the exact locator 'id: \"intake-review-governance\"'. The content observed on 2026-09-13 as Revalidated supports only the Applicable disposition."
           }
         }
       ],
       "rationale": {
-        "de": "intake-review-governance 0.2.1 ist am exakten Preset-Locator inventarisiert und auf 42 Checklistenzeilen sowie 3 Feature-Gates abgebildet.",
-        "en": "intake-review-governance 0.2.1 is inventoried at its exact preset locator and mapped to 42 checklist rows and 3 feature gates."
+        "de": "intake-review-governance 0.2.2 ist am exakten Preset-Locator inventarisiert und auf 42 Checklistenzeilen sowie 3 Feature-Gates abgebildet.",
+        "en": "intake-review-governance 0.2.2 is inventoried at its exact preset locator and mapped to 42 checklist rows and 3 feature gates."
       },
       "owner": "Spec Kit governance role",
       "reviewer": "Independent technical review role",
@@ -12906,7 +12906,7 @@
     },
     {
       "presetId": "intake-sequencing-governance",
-      "version": "0.2.3",
+      "version": "0.2.4",
       "priority": "NotInStandardMatrix",
       "standardMatrixMember": false,
       "applicability": "Applicable",
@@ -12950,18 +12950,18 @@
         {
           "path": ".specify/presets/intake-sequencing-governance/preset.yml",
           "locator": "id: \"intake-sequencing-governance\"",
-          "observedAt": "2026-09-06",
+          "observedAt": "2026-09-13",
           "freshness": "Revalidated",
           "availability": "Existing",
           "supports": {
-            "de": "intake-sequencing-governance ist durch .specify/presets/intake-sequencing-governance/preset.yml am exakten Locator 'id: \"intake-sequencing-governance\"' belegt. Der am 2026-09-06 als Revalidated geprüfte Inhalt stützt ausschließlich die Einstufung Applicable.",
-            "en": "intake-sequencing-governance is bound to .specify/presets/intake-sequencing-governance/preset.yml at the exact locator 'id: \"intake-sequencing-governance\"'. The content observed on 2026-09-06 as Revalidated supports only the Applicable disposition."
+            "de": "intake-sequencing-governance ist durch .specify/presets/intake-sequencing-governance/preset.yml am exakten Locator 'id: \"intake-sequencing-governance\"' belegt. Der am 2026-09-13 als Revalidated geprüfte Inhalt stützt ausschließlich die Einstufung Applicable.",
+            "en": "intake-sequencing-governance is bound to .specify/presets/intake-sequencing-governance/preset.yml at the exact locator 'id: \"intake-sequencing-governance\"'. The content observed on 2026-09-13 as Revalidated supports only the Applicable disposition."
           }
         }
       ],
       "rationale": {
-        "de": "intake-sequencing-governance 0.2.3 ist am exakten Preset-Locator inventarisiert und auf 29 Checklistenzeilen sowie 3 Feature-Gates abgebildet.",
-        "en": "intake-sequencing-governance 0.2.3 is inventoried at its exact preset locator and mapped to 29 checklist rows and 3 feature gates."
+        "de": "intake-sequencing-governance 0.2.4 ist am exakten Preset-Locator inventarisiert und auf 29 Checklistenzeilen sowie 3 Feature-Gates abgebildet.",
+        "en": "intake-sequencing-governance 0.2.4 is inventoried at its exact preset locator and mapped to 29 checklist rows and 3 feature gates."
       },
       "owner": "Spec Kit governance role",
       "reviewer": "Independent technical review role",

@@ -42,3 +42,18 @@ checked before the authorized MergeAndSync/admin-bypass delivery. This does not
 claim independent human approval or product conformity. Documentation impact is
 UpdateRequired, owned by the maintainer, with colocated German/English text.
 Reassess after version, profile, lifecycle or local-extension changes.
+
+## GSDB-Versionsbindung / GSDB version binding
+
+Die aktuelle GSDB-Matrix und ihr Validator verwenden die drei neuen Patch-Versionen.
+Vier Quellenbindungen wurden nach Inhaltspruefung erneuert: drei Preset-Manifeste
+und die Registry. Die Preset-Zuordnung bleibt Applicable; Standardmatrix,
+Checklistenzuordnungen, Statusentscheidungen und menschliche Freigaben werden
+nicht erweitert. Die CL-12-06-Registry-Evidence belegt weiterhin die vorhandene
+Installation. Der separate Lifecycle-Bestandsbefund bleibt sichtbar.
+
+The current GSDB matrix and validator bind the three new patch versions. Four
+source bindings were revalidated: the three preset manifests and the registry.
+Preset applicability, standard-matrix membership, checklist mappings and status
+or human-approval decisions remain unchanged. CL-12-06 registry evidence continues
+to prove installation. The separate project lifecycle finding remains visible.
