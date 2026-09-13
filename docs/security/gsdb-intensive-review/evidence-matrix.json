@@ -92,9 +92,9 @@
       "sourceId": "PRESET-intake-authoring-governance",
       "sourceClass": "Preset",
       "path": ".specify/presets/intake-authoring-governance/preset.yml",
-      "version": "0.3.2",
+      "version": "0.3.4",
       "reviewedAt": "2026-09-13",
-      "normalizedSha256": "61107a6a8141a5df1f5088f21ef458d34b3f97f127dc399dfbf3c7ff6947b338",
+      "normalizedSha256": "3c934d29268fd284aa8641b491d6725cda54480c19065482dc7d270bf27f0186",
       "scope": {
         "de": "Diese Quelle wird nur für ihren benannten TinyCalc-Prüfumfang verwendet.",
         "en": "This source is used only for its named TinyCalc assessment scope."
@@ -107,9 +107,9 @@
       "sourceId": "PRESET-intake-review-governance",
       "sourceClass": "Preset",
       "path": ".specify/presets/intake-review-governance/preset.yml",
-      "version": "0.2.2",
+      "version": "0.2.3",
       "reviewedAt": "2026-09-13",
-      "normalizedSha256": "fd34ea0e30d2dc9ae4a6ad5863d582ef04645ba58382194f8edfd7d957d9445a",
+      "normalizedSha256": "0fe3aedc8ed9b27a9874eabe28b2f457e2de68610e80e72007871249d62327ce",
       "scope": {
         "de": "Diese Quelle wird nur für ihren benannten TinyCalc-Prüfumfang verwendet.",
         "en": "This source is used only for its named TinyCalc assessment scope."
@@ -122,9 +122,9 @@
       "sourceId": "PRESET-intake-sequencing-governance",
       "sourceClass": "Preset",
       "path": ".specify/presets/intake-sequencing-governance/preset.yml",
-      "version": "0.2.4",
+      "version": "0.2.6",
       "reviewedAt": "2026-09-13",
-      "normalizedSha256": "585b59b1044dcff182b7d89399b2447b8437c72f712db258ef2f706b7404ca54",
+      "normalizedSha256": "8b517455df03fcb23f5e05e4a569a751fe72bedaa6932e669bbe368d00353e48",
       "scope": {
         "de": "Diese Quelle wird nur für ihren benannten TinyCalc-Prüfumfang verwendet.",
         "en": "This source is used only for its named TinyCalc assessment scope."
@@ -1264,7 +1264,7 @@
       "path": ".specify/presets/.registry",
       "version": "Current",
       "reviewedAt": "2026-09-13",
-      "normalizedSha256": "294031aaf74da9d647434b948ec2202a456c86dec05e12522ebec1d49d84a92e",
+      "normalizedSha256": "7dd98cd3b9528435deea2875334a1519f8521e0d5ef6d6147cc458d5e400eddd",
       "scope": {
         "de": "Zeilenspezifischer aktueller Nachweis aus .specify/presets/.registry; der Hash beweist Inhalt, nicht automatisch Erfuellung.",
         "en": "Current row-specific evidence from .specify/presets/.registry; the hash proves content, not automatic fulfilment."
@@ -12745,7 +12745,7 @@
     },
     {
       "presetId": "intake-authoring-governance",
-      "version": "0.3.2",
+      "version": "0.3.4",
       "priority": "NotInStandardMatrix",
       "standardMatrixMember": false,
       "applicability": "Applicable",
@@ -12799,8 +12799,8 @@
         }
       ],
       "rationale": {
-        "de": "intake-authoring-governance 0.3.2 ist am exakten Preset-Locator inventarisiert und auf 29 Checklistenzeilen sowie 3 Feature-Gates abgebildet.",
-        "en": "intake-authoring-governance 0.3.2 is inventoried at its exact preset locator and mapped to 29 checklist rows and 3 feature gates."
+        "de": "intake-authoring-governance 0.3.4 ist am exakten Preset-Locator inventarisiert und auf 29 Checklistenzeilen sowie 3 Feature-Gates abgebildet.",
+        "en": "intake-authoring-governance 0.3.4 is inventoried at its exact preset locator and mapped to 29 checklist rows and 3 feature gates."
       },
       "owner": "Spec Kit governance role",
       "reviewer": "Independent technical review role",
@@ -12819,7 +12819,7 @@
     },
     {
       "presetId": "intake-review-governance",
-      "version": "0.2.2",
+      "version": "0.2.3",
       "priority": "NotInStandardMatrix",
       "standardMatrixMember": false,
       "applicability": "Applicable",
@@ -12886,8 +12886,8 @@
         }
       ],
       "rationale": {
-        "de": "intake-review-governance 0.2.2 ist am exakten Preset-Locator inventarisiert und auf 42 Checklistenzeilen sowie 3 Feature-Gates abgebildet.",
-        "en": "intake-review-governance 0.2.2 is inventoried at its exact preset locator and mapped to 42 checklist rows and 3 feature gates."
+        "de": "intake-review-governance 0.2.3 ist am exakten Preset-Locator inventarisiert und auf 42 Checklistenzeilen sowie 3 Feature-Gates abgebildet.",
+        "en": "intake-review-governance 0.2.3 is inventoried at its exact preset locator and mapped to 42 checklist rows and 3 feature gates."
       },
       "owner": "Spec Kit governance role",
       "reviewer": "Independent technical review role",
@@ -12906,7 +12906,7 @@
     },
     {
       "presetId": "intake-sequencing-governance",
-      "version": "0.2.4",
+      "version": "0.2.6",
       "priority": "NotInStandardMatrix",
       "standardMatrixMember": false,
       "applicability": "Applicable",
@@ -12960,8 +12960,8 @@
         }
       ],
       "rationale": {
-        "de": "intake-sequencing-governance 0.2.4 ist am exakten Preset-Locator inventarisiert und auf 29 Checklistenzeilen sowie 3 Feature-Gates abgebildet.",
-        "en": "intake-sequencing-governance 0.2.4 is inventoried at its exact preset locator and mapped to 29 checklist rows and 3 feature gates."
+        "de": "intake-sequencing-governance 0.2.6 ist am exakten Preset-Locator inventarisiert und auf 29 Checklistenzeilen sowie 3 Feature-Gates abgebildet.",
+        "en": "intake-sequencing-governance 0.2.6 is inventoried at its exact preset locator and mapped to 29 checklist rows and 3 feature gates."
       },
       "owner": "Spec Kit governance role",
       "reviewer": "Independent technical review role",
