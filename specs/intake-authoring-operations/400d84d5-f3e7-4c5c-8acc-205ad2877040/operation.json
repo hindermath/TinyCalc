@@ -1,0 +1,55 @@
+{
+  "schemaVersion": "1.0",
+  "documentType": "IntakeOperation",
+  "operationId": "400d84d5-f3e7-4c5c-8acc-205ad2877040",
+  "type": "Update",
+  "status": "Completed",
+  "createdAt": "2026-09-13T21:52:21Z",
+  "authorityEvidence": "Thorsten Hindermann explicitly approved the narrowly bounded intake update on 2026-09-13: Ja, genehmigt. The approval covers only the README-caused receipt and lineage renewal required to continue PR #82; intake scope, order, dependencies and product execution remain unchanged.",
+  "proposalPath": "specs/intake-authoring-operations/400d84d5-f3e7-4c5c-8acc-205ad2877040/proposal.json",
+  "proposalNormalizedSha256": "f0561bf420ced0f5c67bbd73b278149fb9d64686dbccb56c7e08a3627a09fab2",
+  "approval": {
+    "approved": true,
+    "approvedBy": "Thorsten Hindermann",
+    "approvedAt": "2026-09-13T21:52:21Z",
+    "evidence": "Ja, genehmigt."
+  },
+  "stagingDirectory": ".",
+  "intendedTargets": [
+    "requirements/intakes/active/Lastenheft_Rename_MicroCalc_TinyCalc.md",
+    "specs/intake-authoring-receipts/rename-microcalc-tinycalc.json",
+    "requirements/intakes/archive/rename-microcalc-tinycalc/20260913-mermaid-readme-renewal/Lastenheft_Rename_MicroCalc_TinyCalc.md",
+    "specs/intake-authoring-receipts/history/rename-microcalc-tinycalc.20260913-mermaid-readme-renewal.json",
+    "specs/intake-authoring-operations/400d84d5-f3e7-4c5c-8acc-205ad2877040/proposal.json",
+    "specs/intake-authoring-operations/400d84d5-f3e7-4c5c-8acc-205ad2877040/review-supersession.json"
+  ],
+  "validatedTargets": [
+    "requirements/intakes/active/Lastenheft_Rename_MicroCalc_TinyCalc.md",
+    "specs/intake-authoring-receipts/rename-microcalc-tinycalc.json",
+    "requirements/intakes/archive/rename-microcalc-tinycalc/20260913-mermaid-readme-renewal/Lastenheft_Rename_MicroCalc_TinyCalc.md",
+    "specs/intake-authoring-receipts/history/rename-microcalc-tinycalc.20260913-mermaid-readme-renewal.json",
+    "specs/intake-authoring-operations/400d84d5-f3e7-4c5c-8acc-205ad2877040/proposal.json",
+    "specs/intake-authoring-operations/400d84d5-f3e7-4c5c-8acc-205ad2877040/review-supersession.json"
+  ],
+  "publishedTargets": [
+    "requirements/intakes/active/Lastenheft_Rename_MicroCalc_TinyCalc.md",
+    "specs/intake-authoring-receipts/rename-microcalc-tinycalc.json",
+    "requirements/intakes/archive/rename-microcalc-tinycalc/20260913-mermaid-readme-renewal/Lastenheft_Rename_MicroCalc_TinyCalc.md",
+    "specs/intake-authoring-receipts/history/rename-microcalc-tinycalc.20260913-mermaid-readme-renewal.json",
+    "specs/intake-authoring-operations/400d84d5-f3e7-4c5c-8acc-205ad2877040/proposal.json",
+    "specs/intake-authoring-operations/400d84d5-f3e7-4c5c-8acc-205ad2877040/review-supersession.json"
+  ],
+  "rollbackBoundary": "Discard the uncommitted prepared update on validation failure. The active intake remains byte-identical and the archived predecessor preserves the prior receipt and target bytes.",
+  "failure": {
+    "class": "N/A",
+    "message": "N/A"
+  },
+  "nextAction": "$speckit-intake-review requirements/intakes/active/Lastenheft_Rename_MicroCalc_TinyCalc.md",
+  "publicationBoundary": "Prepared in the existing PR #82 worktree and published only after both installed receipt validators pass; no product execution or downstream feature starts.",
+  "reviewInvalidation": {
+    "evidencePath": "specs/intake-authoring-operations/400d84d5-f3e7-4c5c-8acc-205ad2877040/review-supersession.json",
+    "priorReviewId": "3e049bcb-d556-4d18-818a-196b1f59e329",
+    "status": "Superseded",
+    "successorReview": "Pending"
+  }
+}
