@@ -1,0 +1,58 @@
+{
+  "schemaVersion": "1.0",
+  "approved": true,
+  "authority": "Thorsten Hindermann: Bitte ausfuehren, referring explicitly to IR001 reference repairs, RIG017 archive/manifest/receipt consistency and full-series review. DeliveryMode MergeAndSync with Admin-Bypass. No downstream product execution.",
+  "sourceHead": "d46930e454d449f7d1c36698242e704441a01b2a",
+  "receiptUpdates": [
+    "specs/intake-authoring-receipts/tui-funktionsabnahme-und-regressionsvertrag.json",
+    "specs/intake-authoring-receipts/rename-microcalc-tinycalc.json",
+    "specs/intake-authoring-receipts/a11y-tui.json",
+    "specs/intake-authoring-receipts/pl0-zellfunktionen-v1.json"
+  ],
+  "moves": [
+    {
+      "to": "requirements/intakes/archive/Lastenheft_Constitution_Change.002-constitution-change.md",
+      "contentChanged": false,
+      "status": "Completed",
+      "rawSha256": "04c4e1ba93d626463829a07f33b5591a6417b6aeaf89e805b637ab1bf5c26a0a",
+      "normalizedSha256": "04c4e1ba93d626463829a07f33b5591a6417b6aeaf89e805b637ab1bf5c26a0a",
+      "from": "requirements/intakes/active/Lastenheft_Constitution_Change.002-constitution-change.md"
+    },
+    {
+      "to": "requirements/intakes/archive/Lastenheft_TerminalGui_Migration.003-terminalgui-migration.md",
+      "contentChanged": false,
+      "status": "Completed",
+      "rawSha256": "01db3bd8f2dc375fe1400a91580ce1a906dfc446c12fb8ad011419fe50fee94d",
+      "normalizedSha256": "01db3bd8f2dc375fe1400a91580ce1a906dfc446c12fb8ad011419fe50fee94d",
+      "from": "requirements/intakes/active/Lastenheft_TerminalGui_Migration.003-terminalgui-migration.md"
+    },
+    {
+      "to": "requirements/intakes/archive/Lastenheft_RL-SE-Checklist-Selbstpruefung.004-rl-se-self-assessment.md",
+      "contentChanged": false,
+      "status": "Completed",
+      "rawSha256": "96a5ef9c414d55c69ad117509d41f056f10d005824890bd5a2867eaf8ab948da",
+      "normalizedSha256": "96a5ef9c414d55c69ad117509d41f056f10d005824890bd5a2867eaf8ab948da",
+      "from": "requirements/intakes/active/Lastenheft_RL-SE-Checklist-Selbstpruefung.004-rl-se-self-assessment.md"
+    },
+    {
+      "to": "requirements/intakes/archive/Lastenheft_GSDB-Spec-Kit-Intensivpruefung.005-gsdb-intensive-review.md",
+      "contentChanged": false,
+      "status": "Completed",
+      "rawSha256": "f4dcb3fac6cb755faed296847ffd40170f0d008fa3640e5e5fa5bc38e4af5375",
+      "normalizedSha256": "f4dcb3fac6cb755faed296847ffd40170f0d008fa3640e5e5fa5bc38e4af5375",
+      "from": "requirements/intakes/active/Lastenheft_GSDB-Spec-Kit-Intensivpruefung.005-gsdb-intensive-review.md"
+    }
+  ],
+  "rollback": "All preparation in isolated Git worktree; publish only the fully validated commit; original main remains unchanged on failure",
+  "referenceChanges": {
+    "functionalIntake": "requirements/intakes/active/Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md",
+    "scope": "Repair semantic references without changing acceptance requirements",
+    "obsoleteNumbers": [
+      "004",
+      "005"
+    ],
+    "accessibilityIntake": "requirements/intakes/active/Lastenheft_A11Y_TUI.md"
+  },
+  "order": "13 members, four roots and nine edges preserved; only archived endpoints rewritten",
+  "lifecycle": "Four existing Completed states preserved; preferred TUI acceptance Pending to Eligible, consistent with Pflichtenheft; other states unchanged"
+}

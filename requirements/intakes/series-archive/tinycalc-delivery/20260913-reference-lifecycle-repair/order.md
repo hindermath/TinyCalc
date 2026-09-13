@@ -1,6 +1,6 @@
 # TinyCalc Intake-Reihenfolge / Intake Order
 
-<!-- linked-intake-generation: 003fc41489e4741850077c9934af068300345f788f5e577bcd48e902be637ce2 -->
+<!-- linked-intake-generation: 044f43d7740370499df528a07d6451f9431d690621f444dbdace9be159b5b005 -->
 
 Diese Ansicht wird aus der kanonischen Intake-Serie abgeleitet. Verbindliche
 Maschinendaten stehen im [Serienmanifest](manifest.json).
@@ -10,9 +10,9 @@ manifest contains the binding machine-readable data.*
 
 | Position | Status | Lastenheft/Intake | Abhängigkeiten / Dependencies | Spec-Kit-Feature |
 |---:|---|---|---|---|
-| 1 | Completed | [Lastenheft_Constitution_Change.002-constitution-change.md](../../archive/Lastenheft_Constitution_Change.002-constitution-change.md) | — (Root / keine direkte Abhängigkeit) | [002-constitution-change](../../../../specs/002-constitution-change/) |
-| 2 | Completed | [Lastenheft_TerminalGui_Migration.003-terminalgui-migration.md](../../archive/Lastenheft_TerminalGui_Migration.003-terminalgui-migration.md) | [Lastenheft_Constitution_Change.002-constitution-change.md](../../archive/Lastenheft_Constitution_Change.002-constitution-change.md) → current (`HardCompletionGate`, binding: true) | — (kein Spec-Kit-Feature / no Spec Kit feature) |
-| 3 | Eligible | [Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md](../../active/Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md) | [Lastenheft_TerminalGui_Migration.003-terminalgui-migration.md](../../archive/Lastenheft_TerminalGui_Migration.003-terminalgui-migration.md) → current (`HardCompletionGate`, binding: true) | — (kein Spec-Kit-Feature / no Spec Kit feature) |
+| 1 | Completed | [Lastenheft_Constitution_Change.002-constitution-change.md](../../active/Lastenheft_Constitution_Change.002-constitution-change.md) | — (Root / keine direkte Abhängigkeit) | [002-constitution-change](../../../../specs/002-constitution-change/) |
+| 2 | Completed | [Lastenheft_TerminalGui_Migration.003-terminalgui-migration.md](../../active/Lastenheft_TerminalGui_Migration.003-terminalgui-migration.md) | [Lastenheft_Constitution_Change.002-constitution-change.md](../../active/Lastenheft_Constitution_Change.002-constitution-change.md) → current (`HardCompletionGate`, binding: true) | — (kein Spec-Kit-Feature / no Spec Kit feature) |
+| 3 | Pending | [Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md](../../active/Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md) | [Lastenheft_TerminalGui_Migration.003-terminalgui-migration.md](../../active/Lastenheft_TerminalGui_Migration.003-terminalgui-migration.md) → current (`HardCompletionGate`, binding: true) | — (kein Spec-Kit-Feature / no Spec Kit feature) |
 | 4 | Blocked | [Lastenheft_A11Y_TUI.md](../../active/Lastenheft_A11Y_TUI.md) | [Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md](../../active/Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md) → current (`HardCompletionGate`, binding: true) | — (kein Spec-Kit-Feature / no Spec Kit feature) |
 | 5 | Blocked | [Lastenheft_Rename_MicroCalc_TinyCalc.md](../../active/Lastenheft_Rename_MicroCalc_TinyCalc.md) | [Lastenheft_A11Y_TUI.md](../../active/Lastenheft_A11Y_TUI.md) → current (`HardCompletionGate`, binding: true) | — (kein Spec-Kit-Feature / no Spec Kit feature) |
 | 6 | Blocked | [Lastenheft_Didactic-Inline-Code-Comment-Hardening.md](../../active/Lastenheft_Didactic-Inline-Code-Comment-Hardening.md) | [Lastenheft_Rename_MicroCalc_TinyCalc.md](../../active/Lastenheft_Rename_MicroCalc_TinyCalc.md) → current (`HardCompletionGate`, binding: true) | — (kein Spec-Kit-Feature / no Spec Kit feature) |
@@ -21,8 +21,8 @@ manifest contains the binding machine-readable data.*
 | 9 | Blocked | [Lastenheft_Legacy-Kompatibilitaet_V1.md](../../active/Lastenheft_Legacy-Kompatibilitaet_V1.md) | [Lastenheft_PL0-Zellfunktionen_V1.md](../../active/Lastenheft_PL0-Zellfunktionen_V1.md) → current (`HardCompletionGate`, binding: true) | — (kein Spec-Kit-Feature / no Spec Kit feature) |
 | 10 | Blocked | [Lastenheft_Formelkopie-und-Tabellenoperationen_V1.md](../../active/Lastenheft_Formelkopie-und-Tabellenoperationen_V1.md) | [Lastenheft_Legacy-Kompatibilitaet_V1.md](../../active/Lastenheft_Legacy-Kompatibilitaet_V1.md) → current (`HardCompletionGate`, binding: true) | — (kein Spec-Kit-Feature / no Spec Kit feature) |
 | 11 | Pending | [Lastenheft_Sandbox-gestuetzte-Secure-Development-Haertung.md](../../active/Lastenheft_Sandbox-gestuetzte-Secure-Development-Haertung.md) | — (Root / keine direkte Abhängigkeit) | — (kein Spec-Kit-Feature / no Spec Kit feature) |
-| 12 | Completed | [Lastenheft_RL-SE-Checklist-Selbstpruefung.004-rl-se-self-assessment.md](../../archive/Lastenheft_RL-SE-Checklist-Selbstpruefung.004-rl-se-self-assessment.md) | — (Root / keine direkte Abhängigkeit) | [004-rl-se-self-assessment](../../../../specs/004-rl-se-self-assessment/) |
-| 13 | Completed | [Lastenheft_GSDB-Spec-Kit-Intensivpruefung.005-gsdb-intensive-review.md](../../archive/Lastenheft_GSDB-Spec-Kit-Intensivpruefung.005-gsdb-intensive-review.md) | — (Root / keine direkte Abhängigkeit) | [005-gsdb-intensive-review](../../../../specs/005-gsdb-intensive-review/) |
+| 12 | Completed | [Lastenheft_RL-SE-Checklist-Selbstpruefung.004-rl-se-self-assessment.md](../../active/Lastenheft_RL-SE-Checklist-Selbstpruefung.004-rl-se-self-assessment.md) | — (Root / keine direkte Abhängigkeit) | [004-rl-se-self-assessment](../../../../specs/004-rl-se-self-assessment/) |
+| 13 | Completed | [Lastenheft_GSDB-Spec-Kit-Intensivpruefung.005-gsdb-intensive-review.md](../../active/Lastenheft_GSDB-Spec-Kit-Intensivpruefung.005-gsdb-intensive-review.md) | — (Root / keine direkte Abhängigkeit) | [005-gsdb-intensive-review](../../../../specs/005-gsdb-intensive-review/) |
 
 Nur `Eligible` bezeichnet die bevorzugte nächste Ausführung. `Pending` oder
 `Blocked` erteilen keine automatische Ausführungsberechtigung.

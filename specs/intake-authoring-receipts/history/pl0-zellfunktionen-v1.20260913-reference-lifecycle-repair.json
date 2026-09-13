@@ -1,17 +1,17 @@
 {
   "schemaVersion": "2.0",
   "documentType": "IntakeReceipt",
-  "receiptId": "5454514b-7298-44d6-b2d8-c92d231c9e63",
+  "receiptId": "e89021a2-d681-42b5-916c-d604fef2a369",
   "intakeId": "7474c2ca-2efe-4d05-a359-9af278333007",
   "generator": {
     "preset": "intake-authoring-governance",
-    "version": "0.3.4"
+    "version": "0.3.1"
   },
-  "createdAt": "2026-09-13T14:39:58Z",
+  "createdAt": "2026-09-03T16:16:41Z",
   "operation": {
-    "authorityEvidence": "Thorsten Hindermann: Bitte ausfuehren, referring explicitly to IR001 reference repairs, RIG017 archive/manifest/receipt consistency and full-series review. DeliveryMode MergeAndSync with Admin-Bypass. No downstream product execution.",
+    "operationId": "2b606397-f1d6-4d89-90dd-5e7a69f4b050",
     "type": "Update",
-    "operationId": "7a202bdd-9168-409d-b7a1-6a9153c23bcf"
+    "authorityEvidence": "The user explicitly approved and requested implementation of the PL0 delivery-evidence refresh plan. No commit, push, pull request, merge, bypass, package change, product implementation, or downstream review authority is granted."
   },
   "status": "ReadyForReview",
   "target": {
@@ -22,27 +22,6 @@
     {
       "sourceId": "SRC001",
       "order": 1,
-      "kind": "File",
-      "label": "Byte-identical immediately preceding intake",
-      "location": "Repository",
-      "path": "requirements/intakes/archive/pl0-zellfunktionen-v1/20260913-reference-lifecycle-repair/Lastenheft_PL0-Zellfunktionen_V1.md",
-      "requestedUrl": "N/A",
-      "finalUrl": "N/A",
-      "retrievedAt": "N/A",
-      "httpStatus": "N/A",
-      "contentType": "N/A",
-      "contentLength": "N/A",
-      "etag": "N/A",
-      "lastModified": "N/A",
-      "redirectChain": [],
-      "rawSha256": "N/A",
-      "normalizedSha256": "0a82eb5c07c1412b089cc2895df63b89923d10a4bc8df611af596ef56511ca83",
-      "gitBlob": "N/A",
-      "proofBoundary": "Immutable predecessor archive; normalized SHA-256; raw hash in remediation evidence"
-    },
-    {
-      "sourceId": "SRC002",
-      "order": 2,
       "kind": "File",
       "label": "Byte-identical prior active intake",
       "location": "Repository",
@@ -62,8 +41,8 @@
       "proofBoundary": "Byte-identical repository archive"
     },
     {
-      "sourceId": "SRC003",
-      "order": 3,
+      "sourceId": "SRC002",
+      "order": 2,
       "kind": "Inline",
       "label": "Approved TinyPl0 delivery-evidence refresh plan",
       "location": "SnapshotOnly",
@@ -83,8 +62,8 @@
       "proofBoundary": "SnapshotOnly"
     },
     {
-      "sourceId": "SRC004",
-      "order": 4,
+      "sourceId": "SRC003",
+      "order": 3,
       "kind": "Url",
       "label": "TinyPl0 v0.4.1 release metadata",
       "location": "RemoteSnapshot",
@@ -104,8 +83,8 @@
       "proofBoundary": "RemoteSnapshot"
     },
     {
-      "sourceId": "SRC005",
-      "order": 5,
+      "sourceId": "SRC004",
+      "order": 4,
       "kind": "Url",
       "label": "TinyPl0 v0.4.1 release workflow metadata",
       "location": "RemoteSnapshot",
@@ -125,8 +104,8 @@
       "proofBoundary": "RemoteSnapshot"
     },
     {
-      "sourceId": "SRC006",
-      "order": 6,
+      "sourceId": "SRC005",
+      "order": 5,
       "kind": "Url",
       "label": "TinyPl0 v0.4.1 release workflow jobs",
       "location": "RemoteSnapshot",
@@ -146,8 +125,8 @@
       "proofBoundary": "RemoteSnapshot"
     },
     {
-      "sourceId": "SRC007",
-      "order": 7,
+      "sourceId": "SRC006",
+      "order": 6,
       "kind": "Url",
       "label": "Public TinyPl0.Core version index",
       "location": "RemoteSnapshot",
@@ -167,8 +146,8 @@
       "proofBoundary": "RemoteSnapshot"
     },
     {
-      "sourceId": "SRC008",
-      "order": 8,
+      "sourceId": "SRC007",
+      "order": 7,
       "kind": "Url",
       "label": "Public TinyPl0.Vm version index",
       "location": "RemoteSnapshot",
@@ -188,8 +167,8 @@
       "proofBoundary": "RemoteSnapshot"
     },
     {
-      "sourceId": "SRC009",
-      "order": 9,
+      "sourceId": "SRC008",
+      "order": 8,
       "kind": "File",
       "label": "Binding functional product-contract intake",
       "location": "Repository",
@@ -204,13 +183,13 @@
       "lastModified": "N/A",
       "redirectChain": [],
       "rawSha256": "N/A",
-      "normalizedSha256": "aa237aa218a08bbe2e99a9004bc7af9d5859984be01011cfbab575f996dfc482",
+      "normalizedSha256": "f7b72c2abbd55d197cbc3cee5050f189868656ae0cff8b8745fa430535632d40",
       "gitBlob": "N/A",
-      "proofBoundary": "Current functional contract after authorized semantic-reference correction; acceptance scope preserved"
+      "proofBoundary": "Current active intake and normalized SHA-256"
     },
     {
-      "sourceId": "SRC010",
-      "order": 10,
+      "sourceId": "SRC009",
+      "order": 9,
       "kind": "File",
       "label": "Current formula evaluator extension boundary",
       "location": "Repository",
@@ -230,8 +209,8 @@
       "proofBoundary": "Repository file and normalized SHA-256"
     },
     {
-      "sourceId": "SRC011",
-      "order": 11,
+      "sourceId": "SRC010",
+      "order": 10,
       "kind": "File",
       "label": "Current JSON persistence boundary",
       "location": "Repository",
@@ -251,8 +230,8 @@
       "proofBoundary": "Repository file and normalized SHA-256"
     },
     {
-      "sourceId": "SRC012",
-      "order": 12,
+      "sourceId": "SRC011",
+      "order": 11,
       "kind": "File",
       "label": "Current TUI integration boundary",
       "location": "Repository",
@@ -270,27 +249,6 @@
       "normalizedSha256": "18e089937a1103ff4c85678a2f3c32c4e57c1df141c10d137992fccaa78d40a2",
       "gitBlob": "21285e059b4cf245b4e65675cbb71ffbeb71ff85",
       "proofBoundary": "Repository file and normalized SHA-256"
-    },
-    {
-      "sourceId": "SRC013",
-      "order": 13,
-      "kind": "File",
-      "label": "Current authorized reference and lifecycle correction",
-      "location": "Repository",
-      "path": "docs/maintenance/tinycalc-intake-remediation-proposal.json",
-      "requestedUrl": "N/A",
-      "finalUrl": "N/A",
-      "retrievedAt": "N/A",
-      "httpStatus": "N/A",
-      "contentType": "N/A",
-      "contentLength": "N/A",
-      "etag": "N/A",
-      "lastModified": "N/A",
-      "redirectChain": [],
-      "rawSha256": "N/A",
-      "normalizedSha256": "21a53ac4f5b7ab9a344a52ad47f4f7d82ae96169d5b6a239774221b4714066e8",
-      "gitBlob": "N/A",
-      "proofBoundary": "Immutable predecessor archive; normalized SHA-256; raw hash in remediation evidence"
     }
   ],
   "profile": "level2-lastenheft",
@@ -345,10 +303,10 @@
   "promptState": "Enabled",
   "provenanceMode": "Supersession",
   "supersedes": {
-    "receiptPath": "specs/intake-authoring-receipts/history/pl0-zellfunktionen-v1.20260913-reference-lifecycle-repair.json",
-    "archiveTargetPath": "requirements/intakes/archive/pl0-zellfunktionen-v1/20260913-reference-lifecycle-repair/Lastenheft_PL0-Zellfunktionen_V1.md",
-    "archiveReceiptPath": "specs/intake-authoring-receipts/history/pl0-zellfunktionen-v1.20260913-reference-lifecycle-repair.json",
-    "targetNormalizedSha256": "0a82eb5c07c1412b089cc2895df63b89923d10a4bc8df611af596ef56511ca83"
+    "receiptPath": "specs/intake-authoring-receipts/history/pl0-zellfunktionen-v1.20260903T161641Z.json",
+    "targetNormalizedSha256": "bbec90bb96a7b40f7f995df2a3ec1095a9d25acde1b98f85773315c91d8cdc90",
+    "archiveTargetPath": "requirements/intakes/archive/pl0-zellfunktionen-v1/20260903T161641Z/Lastenheft_PL0-Zellfunktionen_V1.md",
+    "archiveReceiptPath": "specs/intake-authoring-receipts/history/pl0-zellfunktionen-v1.20260903T161641Z.json"
   },
   "legacyAdoption": {
     "evidenceType": "N/A",
@@ -356,7 +314,7 @@
     "priorGitBlob": "N/A"
   },
   "updateAuthorized": true,
-  "updateAuthorityEvidence": "Thorsten Hindermann: Bitte ausfuehren, referring explicitly to IR001 reference repairs, RIG017 archive/manifest/receipt consistency and full-series review. DeliveryMode MergeAndSync with Admin-Bypass. No downstream product execution.",
+  "updateAuthorityEvidence": "The user explicitly approved and requested implementation of the PL0 delivery-evidence refresh plan. No commit, push, pull request, merge, bypass, package change, product implementation, or downstream review authority is granted.",
   "series": {
     "seriesId": "5b4523b4-d946-4091-9cbc-11825af94332",
     "manifestPath": "requirements/intakes/series/tinycalc-delivery/manifest.json",

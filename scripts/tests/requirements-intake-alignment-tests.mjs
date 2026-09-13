@@ -51,6 +51,9 @@ expectFailure("multiple eligible", {
   }),
 }, /at most one explicitly Eligible/);
 expectFailure("schema 1 missing eligible", {
+  manifestPath: fixture("schema1-no-eligible-manifest", manifestSource, (value) => {
+    value.orderedTargets.forEach((target) => {if (target.status === "Eligible") target.status = "Pending";});
+  }),
   configPath: fixture("schema1-missing-eligible-config", configSource, (value) => {
     value.schemaVersion = "1.0";
     value.activeIntakeCount = JSON.parse(fs.readFileSync(path.join(root, manifestSource), "utf8"))
@@ -71,6 +74,7 @@ expectFailure("schema 1 mismatched eligible", {
     value.preferredNext = candidates[0].path;
   }),
   manifestPath: fixture("schema1-mismatched-eligible-manifest", manifestSource, (value) => {
+    value.orderedTargets.forEach((target) => {if (target.status === "Eligible") target.status = "Pending";});
     const candidates = value.orderedTargets.filter((target) => target.status !== "Completed");
     if (candidates.length < 2) throw new Error("fixture needs two incomplete targets");
     candidates[1].status = "Eligible";
@@ -110,6 +114,85 @@ expectFailure("missing owner", {
     openRequirement.proposedOwnerGroup = "N/A";
   }),
 }, /lacks owner/);
+
+// Abgeschlossene Mitglieder und historische Receipts duerfen die aktive Menge nicht aufblasen.
+// Completed members and historical receipts must not inflate the active inventory.
+expectFailure("completed member active", {
+  manifestPath: fixture("completed-active", manifestSource, (value) => {
+    value.orderedTargets.find((target) => target.status === "Eligible").status = "Completed";
+  }),
+}, /lifecycle collection mismatch/);
+expectFailure("pending member archived", {
+  manifestPath: fixture("pending-archived", manifestSource, (value) => {
+    value.orderedTargets.find((target) => target.status === "Completed").status = "Pending";
+  }),
+}, /lifecycle collection mismatch/);
+expectFailure("unknown lifecycle", {
+  manifestPath: fixture("unknown-lifecycle", manifestSource, (value) => {
+    value.orderedTargets[0].status = "Finished";
+  }),
+}, /unknown lifecycle/);
+expectFailure("missing eligible", {
+  manifestPath: fixture("missing-eligible", manifestSource, (value) => {
+    value.orderedTargets.forEach((target) => {if (target.status === "Eligible") target.status = "Pending";});
+  }),
+}, /requires exactly one explicitly Eligible/);
+
+const lifecycleRoot = path.join(temp, "lifecycle");
+const liveManifest = JSON.parse(fs.readFileSync(path.join(root, manifestSource), "utf8"));
+const receiptPaths = fs.readdirSync(path.join(root, "specs/intake-authoring-receipts"))
+  .filter((name) => name.endsWith(".json")).map((name) => `specs/intake-authoring-receipts/${name}`);
+for (const relativePath of [configSource, manifestSource, coverageSource, "Pflichtenheft.md",
+  "Lastenheft_Abarbeitungsreihenfolge.md", ...liveManifest.orderedTargets.map((target) => target.path),
+  ...receiptPaths, "requirements/baseline/PLAN_MICROCALC_CSHARP_DOTNET10.pre-intake-split.2026-07-26.md"]) {
+  writeFixtureFile(lifecycleRoot, relativePath, fs.readFileSync(path.join(root, relativePath)));
+}
+if (validate({root: lifecycleRoot}).length) throw new Error("mixed lifecycle fixture failed");
+const historicalPath = receiptPaths.find((relativePath) => {
+  const receipt = JSON.parse(fs.readFileSync(path.join(lifecycleRoot, relativePath), "utf8"));
+  return !fs.existsSync(path.join(lifecycleRoot, receipt.target.path));
+});
+if (!historicalPath) throw new Error("historical receipt fixture missing");
+const originalReceipt = fs.readFileSync(path.join(lifecycleRoot, historicalPath));
+for (const mutation of ["foreign-series", "wrong-hash"]) {
+  const receipt = JSON.parse(originalReceipt);
+  if (mutation === "foreign-series") receipt.series.seriesId = "00000000-0000-4000-8000-000000000001";
+  else receipt.target.normalizedSha256 = "0".repeat(64);
+  writeFixtureFile(lifecycleRoot, historicalPath, JSON.stringify(receipt));
+  if (!validate({root: lifecycleRoot}).some((error) => /receipts and series targets differ/.test(error))) {
+    throw new Error(`historical ${mutation} was accepted`);
+  }
+}
+writeFixtureFile(lifecycleRoot, historicalPath, originalReceipt);
+const archivedTarget = liveManifest.orderedTargets.find((target) => target.status === "Completed");
+const archivedBytes = fs.readFileSync(path.join(lifecycleRoot, archivedTarget.path));
+writeFixtureFile(lifecycleRoot, archivedTarget.path, normalize(archivedBytes.toString()).replaceAll("\n", "\r\n"));
+if (validate({root: lifecycleRoot}).length) throw new Error("CRLF archive parity failed");
+writeFixtureFile(lifecycleRoot, archivedTarget.path, archivedBytes);
+const duplicateManifest = structuredClone(liveManifest);
+duplicateManifest.orderedTargets.push({...archivedTarget});
+writeFixtureFile(lifecycleRoot, manifestSource, JSON.stringify(duplicateManifest));
+if (!validate({root: lifecycleRoot}).some((error) => /receipts and series targets differ/.test(error))) {
+  throw new Error("ambiguous archive successor accepted");
+}
+writeFixtureFile(lifecycleRoot, manifestSource, JSON.stringify(liveManifest));
+fs.unlinkSync(path.join(lifecycleRoot, archivedTarget.path));
+if (!validate({root: lifecycleRoot}).some((error) => /receipts and series targets differ/.test(error))) {
+  throw new Error("missing archive successor accepted");
+}
+
+const protectedPaths = [manifestSource, ...receiptPaths,
+  "requirements/intakes/series/tinycalc-delivery/receipt.json",
+  "requirements/intakes/series/tinycalc-delivery/operation.json"];
+const beforeRender = new Map(protectedPaths.map((relativePath) =>
+  [relativePath, fs.readFileSync(path.join(root, relativePath))]));
+const renderRun = spawnSync(process.execPath, ["scripts/render-requirements-intake-governance.mjs", "--write"],
+  {cwd: root, encoding: "utf8"});
+if (renderRun.status !== 0) throw new Error(`renderer write failed: ${renderRun.stderr}`);
+for (const [relativePath, bytes] of beforeRender) {
+  if (!bytes.equals(fs.readFileSync(path.join(root, relativePath)))) throw new Error(`renderer changed ${relativePath}`);
+}
+console.log("PASS: mixed lifecycle, four state negatives, four archive-resolution negatives, CRLF and renderer preservation");
 
 const linkedFixtureRoot = path.join(root, "scripts/tests/linked-intake-evidence");
 for (const fixturePath of [
@@ -545,6 +628,56 @@ if (!new Set(featureCases.cases.map((entry) => entry.expectedState)).has("NoEvid
   throw new Error("feature fixture catalog omits explicit fallback or proof-boundary coverage");
 }
 
+
+const archiveProof = createLinkedFixture("archive-feature-proof");
+const oldTarget = archiveProof.manifest.orderedTargets.find((target) =>
+  target.status === "Completed" && target.path.startsWith("requirements/intakes/active/"));
+const oldTargetPath = oldTarget.path;
+const priorManifestPath = "requirements/intakes/series-archive/example/manifest.json";
+const priorManifestText = JSON.stringify(archiveProof.manifest);
+writeFixtureFile(archiveProof.fixtureRoot, priorManifestPath, priorManifestText);
+const featureStatePath = "specs/032-linked-intake-evidence/autonomous-run-state.json";
+const featureState = JSON.parse(fs.readFileSync(path.join(archiveProof.fixtureRoot, featureStatePath), "utf8"));
+featureState.acceptedArtifacts = [{path: oldTargetPath, sha256: oldTarget.normalizedSha256}];
+writeFixtureFile(archiveProof.fixtureRoot, featureStatePath, JSON.stringify(featureState));
+oldTarget.path = oldTargetPath.replace("/active/", "/archive/");
+writeFixtureFile(archiveProof.fixtureRoot, oldTarget.path,
+  fs.readFileSync(path.join(archiveProof.fixtureRoot, oldTargetPath)));
+fs.unlinkSync(path.join(archiveProof.fixtureRoot, oldTargetPath));
+for (const edge of archiveProof.manifest.dependencies) {
+  if (edge.from === oldTargetPath) edge.from = oldTarget.path;
+  if (edge.to === oldTargetPath) edge.to = oldTarget.path;
+}
+oldTarget.archivedFrom = {path: oldTargetPath, manifestPath: priorManifestPath,
+  manifestNormalizedSha256: digest(priorManifestText)};
+writeFixtureFile(archiveProof.fixtureRoot, archiveProof.manifestPath, JSON.stringify(archiveProof.manifest));
+writeFixtureFile(archiveProof.fixtureRoot, "requirements/intake-governance-config.json", JSON.stringify({
+  collections: {active: "requirements/intakes/active", archive: "requirements/intakes/archive",
+    seriesManifest: archiveProof.manifestPath},
+}));
+renderLinkedIntakeViews(renderOptions(archiveProof, {write: true}));
+const archiveView = fs.readFileSync(path.join(archiveProof.fixtureRoot, archiveProof.outputs[0]), "utf8");
+if (!archiveView.split("\n").some((line) => line.includes(oldTarget.path) && line.includes("specs/032-linked-intake-evidence"))) {
+  throw new Error("archive relocation lost its proven feature link");
+}
+for (const mutation of ["wrong-hash", "foreign-series", "wrong-name"]) {
+  const changed = structuredClone(archiveProof.manifest);
+  const entry = changed.orderedTargets.find((target) => target.path === oldTarget.path);
+  writeFixtureFile(archiveProof.fixtureRoot, priorManifestPath, priorManifestText);
+  if (mutation === "wrong-hash") entry.archivedFrom.manifestNormalizedSha256 = "0".repeat(64);
+  if (mutation === "wrong-name") entry.archivedFrom.path = "requirements/intakes/active/Unrelated.md";
+  if (mutation === "foreign-series") {
+    const other = JSON.parse(priorManifestText); other.seriesId = "unrelated-series";
+    const changedText = JSON.stringify(other);
+    writeFixtureFile(archiveProof.fixtureRoot, priorManifestPath, changedText);
+    entry.archivedFrom.manifestNormalizedSha256 = digest(changedText);
+  }
+  let code = "";
+  try {renderLinkedIntakeViews(renderOptions(archiveProof, {manifest: changed}));}
+  catch (error) {code = error.code;}
+  if (code !== "LIE008") throw new Error(`archive feature ${mutation} was not rejected: ${code}`);
+}
+console.log("PASS: archive feature-link preservation and three lineage negatives");
 
 fs.rmSync(temp, {recursive: true, force: true});
 console.log(`requirements/intake fixtures PASS (10 legacy, ${negativeCases.cases.length} linked cases)`);

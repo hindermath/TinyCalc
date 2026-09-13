@@ -7,32 +7,22 @@
   "status": "Active",
   "orderedTargets": [
     {
-      "path": "requirements/intakes/archive/Lastenheft_Constitution_Change.002-constitution-change.md",
+      "path": "requirements/intakes/active/Lastenheft_Constitution_Change.002-constitution-change.md",
       "role": "Primary",
       "normalizedSha256": "04c4e1ba93d626463829a07f33b5591a6417b6aeaf89e805b637ab1bf5c26a0a",
-      "status": "Completed",
-      "archivedFrom": {
-        "manifestPath": "requirements/intakes/series-archive/tinycalc-delivery/20260913-reference-lifecycle-repair/manifest.json",
-        "manifestNormalizedSha256": "586424d2424b31f16c1461583affb3b0204886ccca0e79fb59af7759842b6703",
-        "path": "requirements/intakes/active/Lastenheft_Constitution_Change.002-constitution-change.md"
-      }
+      "status": "Completed"
     },
     {
-      "path": "requirements/intakes/archive/Lastenheft_TerminalGui_Migration.003-terminalgui-migration.md",
+      "path": "requirements/intakes/active/Lastenheft_TerminalGui_Migration.003-terminalgui-migration.md",
       "role": "OrderedMember",
       "normalizedSha256": "01db3bd8f2dc375fe1400a91580ce1a906dfc446c12fb8ad011419fe50fee94d",
-      "status": "Completed",
-      "archivedFrom": {
-        "manifestPath": "requirements/intakes/series-archive/tinycalc-delivery/20260913-reference-lifecycle-repair/manifest.json",
-        "manifestNormalizedSha256": "586424d2424b31f16c1461583affb3b0204886ccca0e79fb59af7759842b6703",
-        "path": "requirements/intakes/active/Lastenheft_TerminalGui_Migration.003-terminalgui-migration.md"
-      }
+      "status": "Completed"
     },
     {
       "path": "requirements/intakes/active/Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md",
       "role": "OrderedMember",
-      "normalizedSha256": "aa237aa218a08bbe2e99a9004bc7af9d5859984be01011cfbab575f996dfc482",
-      "status": "Eligible"
+      "normalizedSha256": "f7b72c2abbd55d197cbc3cee5050f189868656ae0cff8b8745fa430535632d40",
+      "status": "Pending"
     },
     {
       "path": "requirements/intakes/active/Lastenheft_A11Y_TUI.md",
@@ -43,7 +33,7 @@
     {
       "path": "requirements/intakes/active/Lastenheft_Rename_MicroCalc_TinyCalc.md",
       "role": "OrderedMember",
-      "normalizedSha256": "89d40b7ca04e2a753670351bd0eb5b7e2bf3234f1792572eb46f19e9affd87e5",
+      "normalizedSha256": "49642f8486493627b6ebc30454423e33fdad748ed6d434943a78aa79e6440f1c",
       "status": "Blocked"
     },
     {
@@ -83,43 +73,33 @@
       "status": "Pending"
     },
     {
-      "path": "requirements/intakes/archive/Lastenheft_RL-SE-Checklist-Selbstpruefung.004-rl-se-self-assessment.md",
+      "path": "requirements/intakes/active/Lastenheft_RL-SE-Checklist-Selbstpruefung.004-rl-se-self-assessment.md",
       "role": "OrderedMember",
       "normalizedSha256": "96a5ef9c414d55c69ad117509d41f056f10d005824890bd5a2867eaf8ab948da",
-      "status": "Completed",
-      "archivedFrom": {
-        "manifestPath": "requirements/intakes/series-archive/tinycalc-delivery/20260913-reference-lifecycle-repair/manifest.json",
-        "manifestNormalizedSha256": "586424d2424b31f16c1461583affb3b0204886ccca0e79fb59af7759842b6703",
-        "path": "requirements/intakes/active/Lastenheft_RL-SE-Checklist-Selbstpruefung.004-rl-se-self-assessment.md"
-      }
+      "status": "Completed"
     },
     {
-      "path": "requirements/intakes/archive/Lastenheft_GSDB-Spec-Kit-Intensivpruefung.005-gsdb-intensive-review.md",
+      "path": "requirements/intakes/active/Lastenheft_GSDB-Spec-Kit-Intensivpruefung.005-gsdb-intensive-review.md",
       "role": "OrderedMember",
       "normalizedSha256": "f4dcb3fac6cb755faed296847ffd40170f0d008fa3640e5e5fa5bc38e4af5375",
-      "status": "Completed",
-      "archivedFrom": {
-        "manifestPath": "requirements/intakes/series-archive/tinycalc-delivery/20260913-reference-lifecycle-repair/manifest.json",
-        "manifestNormalizedSha256": "586424d2424b31f16c1461583affb3b0204886ccca0e79fb59af7759842b6703",
-        "path": "requirements/intakes/active/Lastenheft_GSDB-Spec-Kit-Intensivpruefung.005-gsdb-intensive-review.md"
-      }
+      "status": "Completed"
     }
   ],
   "roots": [
-    "requirements/intakes/archive/Lastenheft_Constitution_Change.002-constitution-change.md",
+    "requirements/intakes/active/Lastenheft_Constitution_Change.002-constitution-change.md",
     "requirements/intakes/active/Lastenheft_Sandbox-gestuetzte-Secure-Development-Haertung.md",
-    "requirements/intakes/archive/Lastenheft_RL-SE-Checklist-Selbstpruefung.004-rl-se-self-assessment.md",
-    "requirements/intakes/archive/Lastenheft_GSDB-Spec-Kit-Intensivpruefung.005-gsdb-intensive-review.md"
+    "requirements/intakes/active/Lastenheft_RL-SE-Checklist-Selbstpruefung.004-rl-se-self-assessment.md",
+    "requirements/intakes/active/Lastenheft_GSDB-Spec-Kit-Intensivpruefung.005-gsdb-intensive-review.md"
   ],
   "dependencies": [
     {
-      "from": "requirements/intakes/archive/Lastenheft_Constitution_Change.002-constitution-change.md",
-      "to": "requirements/intakes/archive/Lastenheft_TerminalGui_Migration.003-terminalgui-migration.md",
+      "from": "requirements/intakes/active/Lastenheft_Constitution_Change.002-constitution-change.md",
+      "to": "requirements/intakes/active/Lastenheft_TerminalGui_Migration.003-terminalgui-migration.md",
       "kind": "HardCompletionGate",
       "binding": true
     },
     {
-      "from": "requirements/intakes/archive/Lastenheft_TerminalGui_Migration.003-terminalgui-migration.md",
+      "from": "requirements/intakes/active/Lastenheft_TerminalGui_Migration.003-terminalgui-migration.md",
       "to": "requirements/intakes/active/Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md",
       "kind": "HardCompletionGate",
       "binding": true

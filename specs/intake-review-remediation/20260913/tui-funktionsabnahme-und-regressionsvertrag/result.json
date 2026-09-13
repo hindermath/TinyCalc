@@ -1,0 +1,61 @@
+{
+  "schemaVersion": "1.1",
+  "reviewId": "c8e38e2e-afe7-4272-a79a-153d8e7e5eff",
+  "mode": "Single",
+  "status": "Ready",
+  "policy": "level2-lastenheft",
+  "reviewedAt": "2026-09-13T14:43:20Z",
+  "repository": {
+    "root": ".",
+    "head": "d46930e454d449f7d1c36698242e704441a01b2a"
+  },
+  "requestEvidence": {
+    "path": "specs/intake-review-remediation/20260913/tui-funktionsabnahme-und-regressionsvertrag/request.json",
+    "normalizedSha256": "4565758dcf01d22b59ec64eb10a2c1a008992014d2eb72c49d2d76879933920b"
+  },
+  "targets": [
+    {
+      "role": "Primary",
+      "gitBlob": "1eaa9cea1dda5682822cd5059d7c67171cf1fda8",
+      "path": "requirements/intakes/active/Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md",
+      "normalizedSha256": "aa237aa218a08bbe2e99a9004bc7af9d5859984be01011cfbab575f996dfc482"
+    }
+  ],
+  "findings": [],
+  "questions": [],
+  "acceptedRisks": [],
+  "operatorExceptions": [],
+  "coverage": {
+    "individual": [
+      "requirements/intakes/active/Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md"
+    ],
+    "series": [],
+    "workers": []
+  },
+  "summary": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+  },
+  "supersedes": "a41a4041-adc7-4779-b065-129a587eb0eb",
+  "reviewBoundary": {
+    "receiptPath": "specs/intake-authoring-receipts/tui-funktionsabnahme-und-regressionsvertrag.json",
+    "nextAction": "Review full current series",
+    "checked": [
+      "Identity, audience and prior knowledge",
+      "Bilingual CEFR-B2 text and first-use terminology",
+      "Goal, scope, non-goals, atomic requirements, measurable acceptance",
+      "DAG, roots, lifecycle, gaps, overlap and handoffs",
+      "Security/privacy, A11Y, platforms and supply chain",
+      "Source freshness, identity, paths, prompts and delivery boundaries"
+    ],
+    "receiptNormalizedSha256": "f3057247539702307bdd204f189d94d668a182b6e138a4ead434d821f5defb98",
+    "closedFindings": [
+      "IR001"
+    ],
+    "closure": "Stable semantic intake names replace stale Feature-004/005 labels; acceptance scope and LocalImplementation prompts preserved",
+    "authority": "Thorsten Hindermann: Bitte ausfuehren, referring explicitly to IR001 reference repairs, RIG017 archive/manifest/receipt consistency and full-series review. DeliveryMode MergeAndSync with Admin-Bypass. No downstream product execution.",
+    "productExecution": "Not started"
+  }
+}

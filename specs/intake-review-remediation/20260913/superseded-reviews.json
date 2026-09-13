@@ -1,0 +1,27 @@
+{
+  "historicalSeriesRecord": "requirements/intakes/series-archive/tinycalc-delivery/20260905T185700Z-review/superseded-review.json",
+  "schemaVersion": "1.0",
+  "reason": "Authorized reference correction and new full-series review",
+  "successorSeriesResult": "requirements/intakes/series/tinycalc-delivery/intake-review-result.json",
+  "supersededAt": "2026-09-13T14:43:20Z",
+  "successorSeriesReviewId": "6b8925ec-2e33-45d5-b04f-04f947d26737",
+  "singleReviews": [
+    {
+      "supersedes": "a41a4041-adc7-4779-b065-129a587eb0eb",
+      "reviewId": "c8e38e2e-afe7-4272-a79a-153d8e7e5eff",
+      "priorResultPath": "specs/intake-review-renewals/20260913/tui-funktionsabnahme-und-regressionsvertrag/result.json",
+      "resultPath": "specs/intake-review-remediation/20260913/tui-funktionsabnahme-und-regressionsvertrag/result.json",
+      "status": "Ready",
+      "priorResultNormalizedSha256": "cb12fdc7f68e832a38ec75347924dc7cdfa10d4386ac626db279d5b8400e2d2a"
+    },
+    {
+      "supersedes": "ccbf5823-5d41-4191-907a-91bb33838d6c",
+      "reviewId": "3e049bcb-d556-4d18-818a-196b1f59e329",
+      "priorResultPath": "specs/intake-review-renewals/20260913/rename-microcalc-tinycalc/result.json",
+      "resultPath": "specs/intake-review-remediation/20260913/rename-microcalc-tinycalc/result.json",
+      "status": "Ready",
+      "priorResultNormalizedSha256": "bce64eae29b3abf7d6a02eb602ffedf9896f3582e3d18fb6f0a48dd7f47bbf90"
+    }
+  ],
+  "historicalSeriesDisposition": "Already invalidated on 2026-09-05; archived result remains byte-identical"
+}

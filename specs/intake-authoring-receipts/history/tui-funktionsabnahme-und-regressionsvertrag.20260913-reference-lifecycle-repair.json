@@ -1,48 +1,27 @@
 {
   "schemaVersion": "2.0",
   "documentType": "IntakeReceipt",
-  "receiptId": "8e719b34-d5ca-4d63-b026-cca59094c560",
+  "receiptId": "1f2e8e2e-cdda-4fab-a498-a878f52770c2",
   "intakeId": "40e85866-18d3-4cc8-b667-a1de8da44b10",
   "generator": {
     "preset": "intake-authoring-governance",
     "version": "0.3.4"
   },
-  "createdAt": "2026-09-13T14:39:58Z",
+  "createdAt": "2026-09-13T12:48:39.987878Z",
   "operation": {
-    "authorityEvidence": "Thorsten Hindermann: Bitte ausfuehren, referring explicitly to IR001 reference repairs, RIG017 archive/manifest/receipt consistency and full-series review. DeliveryMode MergeAndSync with Admin-Bypass. No downstream product execution.",
+    "authorityEvidence": "Thorsten Hindermann explicitly approved the prepared two-receipt renewal and required reviews: Fuer TinyCalc genehmigt. Current MergeAndSync with Admin-Bypass applies to this maintenance delivery only; no downstream product implementation is started or authorized by these receipts.",
     "type": "Update",
-    "operationId": "57888f0e-faf1-4ee4-a769-7bbcba692b14"
+    "operationId": "069d1a52-bf1e-4861-b2f4-fece81d376c6"
   },
   "status": "ReadyForReview",
   "target": {
     "path": "requirements/intakes/active/Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md",
-    "normalizedSha256": "aa237aa218a08bbe2e99a9004bc7af9d5859984be01011cfbab575f996dfc482"
+    "normalizedSha256": "f7b72c2abbd55d197cbc3cee5050f189868656ae0cff8b8745fa430535632d40"
   },
   "sources": [
     {
       "sourceId": "SRC001",
       "order": 1,
-      "kind": "File",
-      "label": "Byte-identical immediately preceding intake",
-      "location": "Repository",
-      "path": "requirements/intakes/archive/tui-funktionsabnahme-und-regressionsvertrag/20260913-reference-lifecycle-repair/Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md",
-      "requestedUrl": "N/A",
-      "finalUrl": "N/A",
-      "retrievedAt": "N/A",
-      "httpStatus": "N/A",
-      "contentType": "N/A",
-      "contentLength": "N/A",
-      "etag": "N/A",
-      "lastModified": "N/A",
-      "redirectChain": [],
-      "rawSha256": "N/A",
-      "normalizedSha256": "f7b72c2abbd55d197cbc3cee5050f189868656ae0cff8b8745fa430535632d40",
-      "gitBlob": "N/A",
-      "proofBoundary": "Immutable predecessor archive; normalized SHA-256; raw hash in remediation evidence"
-    },
-    {
-      "sourceId": "SRC002",
-      "order": 2,
       "kind": "File",
       "label": "Byte-identical immediately preceding intake",
       "location": "Repository",
@@ -62,8 +41,8 @@
       "proofBoundary": "Byte-identical archive; normalized and raw SHA-256"
     },
     {
-      "sourceId": "SRC003",
-      "order": 3,
+      "sourceId": "SRC002",
+      "order": 2,
       "kind": "File",
       "label": "Byte-identical prior active intake",
       "location": "Repository",
@@ -83,8 +62,8 @@
       "proofBoundary": "Byte-identical repository archive"
     },
     {
-      "sourceId": "SRC004",
-      "order": 4,
+      "sourceId": "SRC003",
+      "order": 3,
       "kind": "Inline",
       "label": "Approved complete capability baseline and durable regression decisions",
       "location": "SnapshotOnly",
@@ -104,8 +83,8 @@
       "proofBoundary": "SnapshotOnly"
     },
     {
-      "sourceId": "SRC005",
-      "order": 5,
+      "sourceId": "SRC004",
+      "order": 4,
       "kind": "File",
       "label": "Current Terminal.Gui TUI interaction surface",
       "location": "Repository",
@@ -125,8 +104,8 @@
       "proofBoundary": "Repository file and normalized SHA-256"
     },
     {
-      "sourceId": "SRC006",
-      "order": 6,
+      "sourceId": "SRC005",
+      "order": 5,
       "kind": "File",
       "label": "Current README product surface",
       "location": "Repository",
@@ -146,8 +125,8 @@
       "proofBoundary": "Current repository README; explicitly authorized source freshness renewal"
     },
     {
-      "sourceId": "SRC007",
-      "order": 7,
+      "sourceId": "SRC006",
+      "order": 6,
       "kind": "File",
       "label": "Historical and runtime help source",
       "location": "Repository",
@@ -167,8 +146,8 @@
       "proofBoundary": "Repository file and normalized SHA-256"
     },
     {
-      "sourceId": "SRC008",
-      "order": 8,
+      "sourceId": "SRC007",
+      "order": 7,
       "kind": "File",
       "label": "Bundled runtime help resource",
       "location": "Repository",
@@ -188,8 +167,8 @@
       "proofBoundary": "Repository file and normalized SHA-256"
     },
     {
-      "sourceId": "SRC009",
-      "order": 9,
+      "sourceId": "SRC008",
+      "order": 8,
       "kind": "File",
       "label": "Migrated help surface",
       "location": "Repository",
@@ -209,8 +188,8 @@
       "proofBoundary": "Repository file and normalized SHA-256"
     },
     {
-      "sourceId": "SRC010",
-      "order": 10,
+      "sourceId": "SRC009",
+      "order": 9,
       "kind": "File",
       "label": "Current formula evaluator surface",
       "location": "Repository",
@@ -230,8 +209,8 @@
       "proofBoundary": "Repository file and normalized SHA-256"
     },
     {
-      "sourceId": "SRC011",
-      "order": 11,
+      "sourceId": "SRC010",
+      "order": 10,
       "kind": "File",
       "label": "Current spreadsheet engine surface",
       "location": "Repository",
@@ -251,8 +230,8 @@
       "proofBoundary": "Repository file and normalized SHA-256"
     },
     {
-      "sourceId": "SRC012",
-      "order": 12,
+      "sourceId": "SRC011",
+      "order": 11,
       "kind": "File",
       "label": "Explicit current two-receipt update approval",
       "location": "Repository",
@@ -270,27 +249,6 @@
       "normalizedSha256": "575de423dd12145d681a043a7e0fb46e92ba79006279e87ed5eadf65df5bc757",
       "gitBlob": "N/A",
       "proofBoundary": "Byte-identical archive; normalized and raw SHA-256"
-    },
-    {
-      "sourceId": "SRC013",
-      "order": 13,
-      "kind": "File",
-      "label": "Current authorized reference and lifecycle correction",
-      "location": "Repository",
-      "path": "docs/maintenance/tinycalc-intake-remediation-proposal.json",
-      "requestedUrl": "N/A",
-      "finalUrl": "N/A",
-      "retrievedAt": "N/A",
-      "httpStatus": "N/A",
-      "contentType": "N/A",
-      "contentLength": "N/A",
-      "etag": "N/A",
-      "lastModified": "N/A",
-      "redirectChain": [],
-      "rawSha256": "N/A",
-      "normalizedSha256": "21a53ac4f5b7ab9a344a52ad47f4f7d82ae96169d5b6a239774221b4714066e8",
-      "gitBlob": "N/A",
-      "proofBoundary": "Immutable predecessor archive; normalized SHA-256; raw hash in remediation evidence"
     }
   ],
   "profile": "level2-lastenheft",
@@ -345,10 +303,10 @@
   "promptState": "Enabled",
   "provenanceMode": "Supersession",
   "supersedes": {
-    "receiptPath": "specs/intake-authoring-receipts/history/tui-funktionsabnahme-und-regressionsvertrag.20260913-reference-lifecycle-repair.json",
-    "archiveTargetPath": "requirements/intakes/archive/tui-funktionsabnahme-und-regressionsvertrag/20260913-reference-lifecycle-repair/Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md",
-    "archiveReceiptPath": "specs/intake-authoring-receipts/history/tui-funktionsabnahme-und-regressionsvertrag.20260913-reference-lifecycle-repair.json",
-    "targetNormalizedSha256": "f7b72c2abbd55d197cbc3cee5050f189868656ae0cff8b8745fa430535632d40"
+    "receiptPath": "specs/intake-authoring-receipts/history/tui-funktionsabnahme-und-regressionsvertrag.20260913-receipt-renewal.json",
+    "targetNormalizedSha256": "f7b72c2abbd55d197cbc3cee5050f189868656ae0cff8b8745fa430535632d40",
+    "archiveTargetPath": "requirements/intakes/archive/tui-funktionsabnahme-und-regressionsvertrag/20260913-receipt-renewal/Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md",
+    "archiveReceiptPath": "specs/intake-authoring-receipts/history/tui-funktionsabnahme-und-regressionsvertrag.20260913-receipt-renewal.json"
   },
   "legacyAdoption": {
     "evidenceType": "N/A",
@@ -356,7 +314,7 @@
     "priorGitBlob": "N/A"
   },
   "updateAuthorized": true,
-  "updateAuthorityEvidence": "Thorsten Hindermann: Bitte ausfuehren, referring explicitly to IR001 reference repairs, RIG017 archive/manifest/receipt consistency and full-series review. DeliveryMode MergeAndSync with Admin-Bypass. No downstream product execution.",
+  "updateAuthorityEvidence": "Thorsten Hindermann explicitly approved the prepared two-receipt renewal and required reviews: Fuer TinyCalc genehmigt. Current MergeAndSync with Admin-Bypass applies to this maintenance delivery only; no downstream product implementation is started or authorized by these receipts.",
   "series": {
     "seriesId": "5b4523b4-d946-4091-9cbc-11825af94332",
     "manifestPath": "requirements/intakes/series/tinycalc-delivery/manifest.json",

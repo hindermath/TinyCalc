@@ -1,17 +1,17 @@
 {
   "schemaVersion": "2.0",
   "documentType": "IntakeReceipt",
-  "receiptId": "c45c7b33-4c13-4bbf-9cea-a37142d54a9c",
+  "receiptId": "d8b0496b-b2f4-4c34-bece-bd08bc420604",
   "intakeId": "beb93d96-c7eb-4a45-b87b-fe1c6ebd51c0",
   "generator": {
     "preset": "intake-authoring-governance",
-    "version": "0.3.4"
+    "version": "0.3.1"
   },
-  "createdAt": "2026-09-13T14:39:58Z",
+  "createdAt": "2026-09-01T07:17:52Z",
   "operation": {
-    "authorityEvidence": "Thorsten Hindermann: Bitte ausfuehren, referring explicitly to IR001 reference repairs, RIG017 archive/manifest/receipt consistency and full-series review. DeliveryMode MergeAndSync with Admin-Bypass. No downstream product execution.",
+    "operationId": "e7b56721-0a8a-4a3c-870d-7dbe36039a04",
     "type": "Update",
-    "operationId": "bbc4b3b6-d61b-4973-bf91-ca6004bbf83a"
+    "authorityEvidence": "The user explicitly requested implementation of the approved intake-only consolidation plan. No product implementation, commit, push, pull request, merge, bypass, provider, or follow-up-feature authority is granted."
   },
   "status": "ReadyForReview",
   "target": {
@@ -22,27 +22,6 @@
     {
       "sourceId": "SRC001",
       "order": 1,
-      "kind": "File",
-      "label": "Byte-identical immediately preceding intake",
-      "location": "Repository",
-      "path": "requirements/intakes/archive/a11y-tui/20260913-reference-lifecycle-repair/Lastenheft_A11Y_TUI.md",
-      "requestedUrl": "N/A",
-      "finalUrl": "N/A",
-      "retrievedAt": "N/A",
-      "httpStatus": "N/A",
-      "contentType": "N/A",
-      "contentLength": "N/A",
-      "etag": "N/A",
-      "lastModified": "N/A",
-      "redirectChain": [],
-      "rawSha256": "N/A",
-      "normalizedSha256": "820e10c7229720fbda87360b9ee1abf6ac907aa2b27a1d9dc42bfa7b110a2a01",
-      "gitBlob": "N/A",
-      "proofBoundary": "Immutable predecessor archive; normalized SHA-256; raw hash in remediation evidence"
-    },
-    {
-      "sourceId": "SRC002",
-      "order": 2,
       "kind": "File",
       "label": "Byte-identical prior active intake",
       "location": "Repository",
@@ -62,8 +41,8 @@
       "proofBoundary": "Byte-identical repository archive"
     },
     {
-      "sourceId": "SRC003",
-      "order": 3,
+      "sourceId": "SRC002",
+      "order": 2,
       "kind": "Inline",
       "label": "Approved current-state accessibility and impact-evidence decisions",
       "location": "SnapshotOnly",
@@ -83,8 +62,8 @@
       "proofBoundary": "SnapshotOnly"
     },
     {
-      "sourceId": "SRC004",
-      "order": 4,
+      "sourceId": "SRC003",
+      "order": 3,
       "kind": "File",
       "label": "Binding functional product-contract intake",
       "location": "Repository",
@@ -99,13 +78,13 @@
       "lastModified": "N/A",
       "redirectChain": [],
       "rawSha256": "N/A",
-      "normalizedSha256": "aa237aa218a08bbe2e99a9004bc7af9d5859984be01011cfbab575f996dfc482",
+      "normalizedSha256": "f7b72c2abbd55d197cbc3cee5050f189868656ae0cff8b8745fa430535632d40",
       "gitBlob": "N/A",
-      "proofBoundary": "Current functional contract after authorized semantic-reference correction; acceptance scope preserved"
+      "proofBoundary": "Current active intake and normalized SHA-256"
     },
     {
-      "sourceId": "SRC005",
-      "order": 5,
+      "sourceId": "SRC004",
+      "order": 4,
       "kind": "File",
       "label": "Current Terminal.Gui integration boundary",
       "location": "Repository",
@@ -125,8 +104,8 @@
       "proofBoundary": "Repository file and normalized SHA-256"
     },
     {
-      "sourceId": "SRC006",
-      "order": 6,
+      "sourceId": "SRC005",
+      "order": 5,
       "kind": "File",
       "label": "Current TUI colour and focus styling boundary",
       "location": "Repository",
@@ -146,8 +125,8 @@
       "proofBoundary": "Repository file and normalized SHA-256"
     },
     {
-      "sourceId": "SRC007",
-      "order": 7,
+      "sourceId": "SRC006",
+      "order": 6,
       "kind": "File",
       "label": "Bundled migrated help asset",
       "location": "Repository",
@@ -167,8 +146,8 @@
       "proofBoundary": "Repository file and normalized SHA-256"
     },
     {
-      "sourceId": "SRC008",
-      "order": 8,
+      "sourceId": "SRC007",
+      "order": 7,
       "kind": "File",
       "label": "Migrated learner-facing help documentation",
       "location": "Repository",
@@ -186,27 +165,6 @@
       "normalizedSha256": "c6ba22dcb82b17f17b052a33b7ebc541b8cf759203a2eddedeaf247f456026f3",
       "gitBlob": "7e890b58d60c11602c2ab2b91085afd364537c04",
       "proofBoundary": "Repository file and normalized SHA-256"
-    },
-    {
-      "sourceId": "SRC009",
-      "order": 9,
-      "kind": "File",
-      "label": "Current authorized reference and lifecycle correction",
-      "location": "Repository",
-      "path": "docs/maintenance/tinycalc-intake-remediation-proposal.json",
-      "requestedUrl": "N/A",
-      "finalUrl": "N/A",
-      "retrievedAt": "N/A",
-      "httpStatus": "N/A",
-      "contentType": "N/A",
-      "contentLength": "N/A",
-      "etag": "N/A",
-      "lastModified": "N/A",
-      "redirectChain": [],
-      "rawSha256": "N/A",
-      "normalizedSha256": "21a53ac4f5b7ab9a344a52ad47f4f7d82ae96169d5b6a239774221b4714066e8",
-      "gitBlob": "N/A",
-      "proofBoundary": "Immutable predecessor archive; normalized SHA-256; raw hash in remediation evidence"
     }
   ],
   "profile": "level2-lastenheft",
@@ -254,10 +212,10 @@
   "promptState": "Enabled",
   "provenanceMode": "Supersession",
   "supersedes": {
-    "receiptPath": "specs/intake-authoring-receipts/history/a11y-tui.20260913-reference-lifecycle-repair.json",
-    "archiveTargetPath": "requirements/intakes/archive/a11y-tui/20260913-reference-lifecycle-repair/Lastenheft_A11Y_TUI.md",
-    "archiveReceiptPath": "specs/intake-authoring-receipts/history/a11y-tui.20260913-reference-lifecycle-repair.json",
-    "targetNormalizedSha256": "820e10c7229720fbda87360b9ee1abf6ac907aa2b27a1d9dc42bfa7b110a2a01"
+    "receiptPath": "specs/intake-authoring-receipts/history/a11y-tui.20260901T071752Z.json",
+    "targetNormalizedSha256": "715af76d7875650acd3a39ed15c46e28d19a6dd1ad3bff29b6be6fb7987db7bc",
+    "archiveTargetPath": "requirements/intakes/archive/a11y-tui/20260901T071752Z/Lastenheft_A11Y_TUI.md",
+    "archiveReceiptPath": "specs/intake-authoring-receipts/history/a11y-tui.20260901T071752Z.json"
   },
   "legacyAdoption": {
     "evidenceType": "N/A",
@@ -265,7 +223,7 @@
     "priorGitBlob": "N/A"
   },
   "updateAuthorized": true,
-  "updateAuthorityEvidence": "Thorsten Hindermann: Bitte ausfuehren, referring explicitly to IR001 reference repairs, RIG017 archive/manifest/receipt consistency and full-series review. DeliveryMode MergeAndSync with Admin-Bypass. No downstream product execution.",
+  "updateAuthorityEvidence": "The user explicitly requested implementation of the approved intake-only consolidation plan. No product implementation, commit, push, pull request, merge, bypass, provider, or follow-up-feature authority is granted.",
   "series": {
     "seriesId": "5b4523b4-d946-4091-9cbc-11825af94332",
     "manifestPath": "requirements/intakes/series/tinycalc-delivery/manifest.json",
