@@ -1,6 +1,6 @@
 <!--
 Sync Impact Report
-Version change: 1.17.3 -> 1.17.4
+Version change: 1.17.2 -> 1.17.4
 Modified principles:
 - TinyCalc Level-2 addendum: require a bilingual text alternative directly below supplementary Mermaid diagrams and align the no-diagram-only-information boundary.
 Added sections:

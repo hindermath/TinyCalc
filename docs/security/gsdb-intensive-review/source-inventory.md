@@ -74,8 +74,8 @@ reference files, and the PDF plus checksum file.
 
 | Klasse / Class | Pfad / Path | Normalisierter SHA-256 / Normalized SHA-256 | Scope, Freshness und Locator |
 |---|---|---|---|
-| Constitution | `constitution.md` | `26590f695cb6ea97b54adad691628c357688bb8f6a7e829e229c18943edbe577` | Revalidated 2026-09-13; Principles XI-XVIII und Registry-Zeile `RiderProjects/TinyCalc` |
-| Constitution | `.specify/memory/constitution.md` | `26590f695cb6ea97b54adad691628c357688bb8f6a7e829e229c18943edbe577` | Revalidated 2026-09-13; byte-identischer Partner / byte-identical partner |
+| Constitution | `constitution.md` | `881c959a4e92bf57d62a183c9fdf0558c06f54cfe0009d39cb8036985bd0cb0b` | Revalidated 2026-09-13; Principles XI-XVIII und Registry-Zeile `RiderProjects/TinyCalc` |
+| Constitution | `.specify/memory/constitution.md` | `881c959a4e92bf57d62a183c9fdf0558c06f54cfe0009d39cb8036985bd0cb0b` | Revalidated 2026-09-13; byte-identischer Partner / byte-identical partner |
 | Registry | `.specify/presets/.registry` | `8b1f5085f0573b95bab983aabdc59fd7f80b32c71a4a2355cbf64af9cfc10978` | Current; `presets` mit 13 Einträgen / 13 entries |
 | Workflow | `.github/workflows/ci.yml` | `c67a2404fd8d973bc36e49a811b5efc1065ac3bbf8cf5bfd2b211e0b6cfc2ceb` | Current; Linux-/Windows-Produkt- und GSDB-Validatorjobs nach T059 |
 | Workflow | `.github/workflows/agent-secret-scan.yml` | `2e604000c7c18c64420c3553f0db35e18222bafd9324a90295126667e567ada2` | Current; Secret-Scan |
