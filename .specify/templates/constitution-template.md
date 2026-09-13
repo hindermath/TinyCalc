@@ -65,8 +65,10 @@ Zustände, Übergaben, Verzweigungen oder geordnete Schritte wesentlich von eine
 Visualisierung profitieren, folgt direkt nach der vollständigen text-first-
 Erklärung ein knappes Mermaid-Diagramm. Das Diagramm bleibt ergänzend; sein
 lesbarer Markdown-Quelltext wird versioniert und darf keine Information tragen,
-die im Begleittext fehlt. Ein einfaches Intake ohne wesentlichen Klarheitsgewinn
-dokumentiert `N/A`.
+die im Begleittext fehlt. Unmittelbar darunter fasst eine kurze Textalternative
+die wesentlichen Beziehungen und gegebenenfalls Entscheidungszweige auf Deutsch
+zuerst und Englisch danach zusammen. Ein einfaches Intake ohne wesentlichen
+Klarheitsgewinn dokumentiert `N/A`.
 
 Öffentliche APIs erhalten vollständige XML-Dokumentation mit `<summary>` und
 allen fachlich anwendbaren `<param>`, `<returns>` und `<exception>`-Elementen;
@@ -89,8 +91,10 @@ more connected dependencies, states, handoffs, branches, or ordered steps
 materially benefit from visualization, a concise Mermaid diagram follows the
 complete text-first explanation. The diagram remains supplementary; its
 readable Markdown source is version-controlled and carries no information that
-is absent from the accompanying text. A simple intake without material clarity
-gain records `N/A`.*
+is absent from the accompanying text. A short text alternative immediately
+below summarizes the essential relationships and, where applicable, decision
+branches in German first and English second. A simple intake without material
+clarity gain records `N/A`.*
 
 *Public APIs receive complete XML documentation with `<summary>` and every
 applicable `<param>`, `<returns>`, and `<exception>`; local variables are not XML

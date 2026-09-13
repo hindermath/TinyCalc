@@ -34,15 +34,18 @@ Wenn mindestens drei zusammenhängende Abhängigkeiten, Zustände, Übergaben,
 Verzweigungen oder geordnete Schritte wesentlich von einer Visualisierung
 profitieren, folgt direkt nach der vollständigen deutsch-englischen
 text-first-Erklärung ein knappes Mermaid-Diagramm. Mermaid bleibt ergänzend:
-Der lesbare Markdown-Quelltext wird versioniert, und kein Status, keine
-Reihenfolge, Entscheidung oder nächste Aktion darf nur im Diagramm stehen.
-Bei einem einfachen Intake ohne wesentlichen Klarheitsgewinn wird `N/A`
-dokumentiert.
+Der lesbare Markdown-Quelltext wird versioniert und darf keine Information
+tragen, die im Begleittext fehlt. Unmittelbar darunter fasst eine kurze
+Textalternative die wesentlichen Beziehungen und gegebenenfalls
+Entscheidungszweige auf Deutsch zuerst und Englisch danach zusammen. Bei einem
+einfachen Intake ohne wesentlichen Klarheitsgewinn wird `N/A` dokumentiert.
 
 When three or more connected dependencies, states, handoffs, branches, or
 ordered steps materially benefit from visualization, include one concise
 Mermaid diagram immediately after the complete German-first/English-second
 text-first explanation. Mermaid remains supplementary: keep its readable
-Markdown source version-controlled, and encode no status, order, decision, or
-next action only in the diagram. Record `N/A` when a simple intake gains no
-material clarity from a diagram.
+Markdown source version-controlled, and let it carry no information absent from
+the accompanying text. A short text alternative immediately below summarizes
+the essential relationships and, where applicable, decision branches in German
+first and English second. Record `N/A` when a simple intake gains no material
+clarity from a diagram.

@@ -1,8 +1,8 @@
 <!--
 Sync Impact Report
-Version change: 1.17.2 -> 1.17.3
+Version change: 1.17.3 -> 1.17.4
 Modified principles:
-- TinyCalc Level-2 addendum: bind the text-first Mermaid rule for profile-governed requirement documents.
+- TinyCalc Level-2 addendum: require a bilingual text alternative directly below supplementary Mermaid diagrams and align the no-diagram-only-information boundary.
 Added sections:
 - None
 Removed sections:
@@ -25,7 +25,7 @@ Follow-up TODOs:
 - None
 -->
 
-# Constitution v1.17.3
+# Constitution v1.17.4
 
 # home-baseline Constitution
 
@@ -894,7 +894,7 @@ Community/catalog coordination is tracked in `github/spec-kit#2362`.
 `.github/copilot-instructions.md` for per-agent operational guidance. This
 constitution is the authoritative policy layer above all agent-specific files.
 
-**Version**: 1.17.3 | **Ratified**: 2026-03-31 | **Last Amended**: 2026-09-13
+**Version**: 1.17.4 | **Ratified**: 2026-03-31 | **Last Amended**: 2026-09-13
 
 <!-- EN: constitution.md placeholder
 [DE-Zusammenfassung: constitution.md beschreibt die Prinzipien und Standards für alle home-baseline Workspaces.]
@@ -923,8 +923,10 @@ Zustände, Übergaben, Verzweigungen oder geordnete Schritte wesentlich von eine
 Visualisierung profitieren, folgt direkt nach der vollständigen text-first-
 Erklärung ein knappes Mermaid-Diagramm. Das Diagramm bleibt ergänzend; sein
 lesbarer Markdown-Quelltext wird versioniert und darf keine Information tragen,
-die im Begleittext fehlt. Ein einfaches Intake ohne wesentlichen Klarheitsgewinn
-dokumentiert `N/A`.
+die im Begleittext fehlt. Unmittelbar darunter fasst eine kurze Textalternative
+die wesentlichen Beziehungen und gegebenenfalls Entscheidungszweige auf Deutsch
+zuerst und Englisch danach zusammen. Ein einfaches Intake ohne wesentlichen
+Klarheitsgewinn dokumentiert `N/A`.
 
 Öffentliche C#-Typen und -Mitglieder erhalten vollständige XML-Dokumentation:
 `<summary>` sowie fachlich anwendbare `<param>`, `<returns>` und `<exception>`.
@@ -951,8 +953,10 @@ more connected dependencies, states, handoffs, branches, or ordered steps
 materially benefit from visualization, a concise Mermaid diagram follows the
 complete text-first explanation. The diagram remains supplementary; its
 readable Markdown source is version-controlled and carries no information that
-is absent from the accompanying text. A simple intake without material clarity
-gain records `N/A`.*
+is absent from the accompanying text. A short text alternative immediately
+below summarizes the essential relationships and, where applicable, decision
+branches in German first and English second. A simple intake without material
+clarity gain records `N/A`.*
 
 *Public C# types and members receive complete XML documentation: `<summary>`
 and every technically applicable `<param>`, `<returns>`, and `<exception>`.
