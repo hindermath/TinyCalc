@@ -564,7 +564,7 @@ runtime evidence.*
 | 2026-09-13 | TinyCalc-Gesamtserie nach IR002-Reparatur neu geprueft / TinyCalc full series re-reviewed after IR002 repair | Dieselbe sichtbare Agentensitzung auf Branch `codex/intake-ir002-learner-clarity`. Der vollstaendige hashgebundene Serienreview umfasst `13` Ziele, `4` Wurzeln, `9` verbindliche Hard Gates und keine Worker. `IR002` ist durch den erfolgreichen Single-Re-Review geschlossen; `IR003` und `IR004` bleiben als zwei mittlere Befunde zur Lernendenklarheit in den bereits vorhandenen Secure-Development- und Sandbox-Intakes offen. Ergebnis `NeedsRemediation`: keine Critical-, High- oder Low-Befunde, keine akzeptierten Risiken und keine offenen Fragen. Umfang vor Statistik-Selbstnachweis: `0` Produktionscode-Zeilen, `0` Testcode-Zeilen und `348` neue Review- und Evidence-Zeilen. Konservative Referenz: `4.4` Arbeitstage, ca. `33.9` Stunden und `0.20` Monate; Thorsten-Solo-Referenz: `2.8` Arbeitstage, ca. `21.7` Stunden und `0.13` Monate. Gegen einen sichtbaren Aktivtag sind `4.4x` und `2.8x` blended repository speedup beziehungsweise Lieferdichte, keine Stoppuhrmessung. Request und Resultat bestanden die Bash- und PowerShell-Validatoren; kein Feature, Build, DocFX-Lauf oder Remote-Vorgang wurde gestartet. *The complete hash-bound series review covers 13 targets, four roots, nine binding hard gates, and no workers. IR002 is closed while two Medium learner-clarity findings remain in the existing IR003 and IR004 intakes. The 348 new review-evidence lines correspond to 4.4 conservative or 2.8 Thorsten-solo days as delivery-density estimates.* |
 
 | 2026-09-13 | Autorisierte Whitespace-Lieferkorrektur / Authorized whitespace delivery repair | Sechs Markdown-Zeilenumbrüche in drei noch uncommitteten Intake-Snapshots ersetzt; 21 Dokument-/Belegdateien kausal neu hashgebunden, Originalbytes verlustfrei mit SHA-256/Base64 gesichert. Frühere Bytegleichheitsangaben beziehen sich auf die gesicherten Originale, die lesbaren Archive sind normalisierte Kopien. Ein neuer vollständiger Einzelreview Ready; Serienstatus weiterhin NeedsRemediation mit IR003/IR004. 0 Produktionscode- und 0 Testcode-Änderungen; vorhandene Bash-/PowerShell-Validatoren bestanden. Sichtbares Arbeitsfenster 2026-09-13 auf codex/intake-ir002-learner-clarity; Referenzen 80/125 Zeilen je Arbeitstag, keine zusätzliche manuelle Aufwandsschätzung. UpdateRequired; Statistikblock generiert aus Git. / Six Markdown breaks normalized with lossless original evidence; a fresh Single review passes while unrelated series findings remain open. No product or test code changed; existing cross-shell validators passed. |
-| 2026-09-13 | Text-first-Mermaid-Regel für Lastenhefte / Text-first Mermaid rule for requirement documents | Eine sichtbare Agentensitzung auf Branch `codex/text-first-mermaid-intakes`. Constitution v1.17.3, das Level-2-Autorenprofil und alle fünf Agentenflächen samt Quelltemplates verlangen nun bei mindestens drei zusammenhängenden Elementen ein knappes Mermaid-Diagramm, wenn es die Verständlichkeit verbessert. Die vollständige deutsch-englische Textbeschreibung bleibt zuerst und normativ; das Diagramm ist ergänzend, lesbar und versionskontrolliert. Der aktuelle Serienreview enthält den korrigierten IR002/IR003/IR004-Ablauf als konkretes Beispiel. Die GSDB-Quellnachweise für Constitution, Spec-Kit-Spiegel und `AGENTS.md` wurden kausal neu gebunden. Umfang vor Statistik-Selbstnachweis: `0` Produktionscode-Zeilen, `0` Testcode-Zeilen und `+299 / -136 = 163` Dokumentations-, Governance- und Evidence-Zeilen netto. Konservative Referenz: `2.0` Arbeitstage, ca. `15.9` Stunden und `0.09` Monate; Thorsten-Solo-Referenz: `1.3` Arbeitstage, ca. `10.2` Stunden und `0.06` Monate. Gegen einen sichtbaren Aktivtag sind `2.0x` und `1.3x` blended repository speedup beziehungsweise Lieferdichte, keine Stoppuhrmessung. NIST SSDF, CWE Top 25 und WCAG 2.2 AA gelten; ASVS, SBOM/VEX/SLSA, Produkt-AI-SBOM und Zero Trust sind für diese reine Dokumentations-/Governance-Änderung begründet `N/A`. Kein Produkt-Build oder DocFX-Lauf. *The durable rule keeps complete bilingual text normative and adds concise, version-controlled Mermaid source only where three or more connected elements materially benefit. The GSDB bindings for the constitution, its Spec Kit mirror, and AGENTS.md are refreshed. The 163 net governance and evidence lines correspond to 2.0 conservative or 1.3 Thorsten-solo days as delivery-density estimates.* |
+| 2026-09-13 | Text-first-Mermaid-Regel für Lastenhefte / Text-first Mermaid rule for requirement documents | Eine sichtbare Agentensitzung auf Branch `codex/text-first-mermaid-intakes`. Constitution v1.17.4, das Level-2-Autorenprofil und alle fünf Agentenflächen samt Quelltemplates verlangen nun bei mindestens drei zusammenhängenden Elementen ein knappes Mermaid-Diagramm, wenn es die Verständlichkeit verbessert. Die vollständige deutsch-englische Textbeschreibung bleibt zuerst und normativ; das Diagramm ist ergänzend, lesbar und versionskontrolliert, und unmittelbar darunter folgt eine kurze Textalternative auf Deutsch zuerst und Englisch danach. Der aktuelle Serienreview enthält den korrigierten IR002/IR003/IR004-Ablauf als konkretes Beispiel. Die GSDB-Quellnachweise für Constitution, Spec-Kit-Spiegel und `AGENTS.md` wurden kausal neu gebunden. Umfang vor Statistik-Selbstnachweis: `0` Produktionscode-Zeilen, `0` Testcode-Zeilen und `+338 / -138 = 200` Dokumentations-, Governance- und Evidence-Zeilen netto. Konservative Referenz: `2.5` Arbeitstage, ca. `19.5` Stunden und `0.12` Monate; Thorsten-Solo-Referenz: `1.6` Arbeitstage, ca. `12.5` Stunden und `0.07` Monate. Gegen einen sichtbaren Aktivtag sind `2.5x` und `1.6x` blended repository speedup beziehungsweise Lieferdichte, keine Stoppuhrmessung. NIST SSDF, CWE Top 25 und WCAG 2.2 AA gelten; ASVS, SBOM/VEX/SLSA, Produkt-AI-SBOM und Zero Trust sind für diese reine Dokumentations-/Governance-Änderung begründet `N/A`. Kein Produkt-Build oder DocFX-Lauf. *The durable rule keeps complete bilingual text normative, adds concise version-controlled Mermaid source where it materially benefits three or more connected elements, and requires a short German-first and English-second text alternative immediately below. The GSDB bindings for the constitution, its Spec Kit mirror, and AGENTS.md are refreshed. The 200 net governance and evidence lines correspond to 2.5 conservative or 1.6 Thorsten-solo days as delivery-density estimates.* |
 
 ## Statistikprofil-1-Archiv / Statistics Profile 1 Archive
 Basis dieses Schlussblocks sind die aktuell dokumentierten Snapshot- und
@@ -729,25 +729,25 @@ Profil 2 verwendet Git-getrackte Textdateien und sichtbare Git-Aktivitaet. Die W
 
 | Kennzahl / Metric | Wert / Value |
 |---|---:|
-| Textbasis / Text base | 202447 lines |
+| Textbasis / Text base | 202467 lines |
 | Textdateien / Text files | 1282 |
 | Beobachtbarer Zeitraum / Observable period | 2025-09-21..2026-09-13 |
 | Aktivtage / Active days | 81 |
-| Relevante Commits / Relevant commits | 250 |
-| Zeilen je Aktivtag / Lines per active day | 2499.3 |
+| Relevante Commits / Relevant commits | 251 |
+| Zeilen je Aktivtag / Lines per active day | 2499.6 |
 | Peak-Tag im Fenster / Peak day in window | 2026-06-17 / 27058 |
 | Peak-Woche im Fenster / Peak week in window | 2026-07-19 / 33387 |
 | Laengste Serie / Longest streak | 8 days |
 | Speedup vs. 80 lines/day | 31.2x |
 | Speedup vs. 125 lines/day | 20.0x |
-| Methodik / Methodology | v2; source `738c5250b432` |
+| Methodik / Methodology | v2; source `5c4d1d01225f` |
 
 ### Artefaktmix / Artifact Mix
 
 ```text
 Produktiv / Production          [#...................]   1.4% | 2830
 Tests                           [#...................]   4.1% | 8338
-Dokumentation / Documentation   [###############.....]  73.9% | 149665
+Dokumentation / Documentation   [###############.....]  73.9% | 149685
 Skripte / Scripts               [##..................]  11.5% | 23223
 Konfiguration / Configuration   [##..................]   7.6% | 15376
 Daten und Medien / Data and media [....................]   0.0% | 0
@@ -897,7 +897,7 @@ Die Faktoren vergleichen sichtbare Lieferdichte mit den dokumentierten manuellen
 Scale: 0..5000 lines/day
 Experienced manual [#...................] 80
 Thorsten solo      [#...................] 125
-Visible repository [##########..........] 2499.3
+Visible repository [##########..........] 2499.6
 ```
 
 Die gemeinsame Skala vergleicht Referenzen und sichtbare Lieferdichte. Sie schreibt die Git-Aktivitaet keiner Person oder KI pauschal zu.
@@ -923,6 +923,6 @@ DE: Das Fenster beginnt am 2025-09-21 und endet am 2026-09-13. Es enthaelt 81 ak
 | 2026-06 | 37273 |
 | 2026-07 | 74031 |
 | 2026-08 | 26210 |
-| 2026-09 | 60611 |
+| 2026-09 | 60797 |
 
 <!-- project-statistics-v2:end -->
