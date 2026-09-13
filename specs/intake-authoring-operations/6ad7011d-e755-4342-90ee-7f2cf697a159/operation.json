@@ -1,0 +1,46 @@
+{
+  "schemaVersion": "1.0",
+  "documentType": "IntakeOperation",
+  "operationId": "6ad7011d-e755-4342-90ee-7f2cf697a159",
+  "type": "Update",
+  "status": "Completed",
+  "createdAt": "2026-09-13T17:28:29Z",
+  "authorityEvidence": "$speckit-intake-repair specs/intake-review-remediation/20260913/didactic-inline-code-comment-hardening/result.json",
+  "proposalPath": "specs/intake-authoring-operations/6ad7011d-e755-4342-90ee-7f2cf697a159/proposal.json",
+  "proposalNormalizedSha256": "954786e7efbb2c477bf3aedeef47e29e71a050d60e59977d2f959d8a9f69c0a2",
+  "approval": {
+    "approved": true,
+    "approvedBy": "Thorsten Hindermann",
+    "approvedAt": "2026-09-13T17:28:29Z",
+    "evidence": "$speckit-intake-repair specs/intake-review-remediation/20260913/didactic-inline-code-comment-hardening/result.json"
+  },
+  "stagingDirectory": ".",
+  "intendedTargets": [
+    "requirements/intakes/active/Lastenheft_Didactic-Inline-Code-Comment-Hardening.md",
+    "specs/intake-authoring-receipts/didactic-inline-code-comment-hardening.json",
+    "requirements/intakes/archive/didactic-inline-code-comment-hardening/20260913-ir002-residual-terms/Lastenheft_Didactic-Inline-Code-Comment-Hardening.md",
+    "specs/intake-authoring-receipts/history/didactic-inline-code-comment-hardening.20260913-ir002-residual-terms.json",
+    "specs/intake-authoring-operations/6ad7011d-e755-4342-90ee-7f2cf697a159/proposal.json"
+  ],
+  "validatedTargets": [
+    "requirements/intakes/active/Lastenheft_Didactic-Inline-Code-Comment-Hardening.md",
+    "specs/intake-authoring-receipts/didactic-inline-code-comment-hardening.json",
+    "requirements/intakes/archive/didactic-inline-code-comment-hardening/20260913-ir002-residual-terms/Lastenheft_Didactic-Inline-Code-Comment-Hardening.md",
+    "specs/intake-authoring-receipts/history/didactic-inline-code-comment-hardening.20260913-ir002-residual-terms.json",
+    "specs/intake-authoring-operations/6ad7011d-e755-4342-90ee-7f2cf697a159/proposal.json"
+  ],
+  "publishedTargets": [
+    "requirements/intakes/active/Lastenheft_Didactic-Inline-Code-Comment-Hardening.md",
+    "specs/intake-authoring-receipts/didactic-inline-code-comment-hardening.json",
+    "requirements/intakes/archive/didactic-inline-code-comment-hardening/20260913-ir002-residual-terms/Lastenheft_Didactic-Inline-Code-Comment-Hardening.md",
+    "specs/intake-authoring-receipts/history/didactic-inline-code-comment-hardening.20260913-ir002-residual-terms.json",
+    "specs/intake-authoring-operations/6ad7011d-e755-4342-90ee-7f2cf697a159/proposal.json"
+  ],
+  "rollbackBoundary": "Discard the local repair if validation fails; byte-identical predecessors remain archived.",
+  "failure": {
+    "class": "N/A",
+    "message": "N/A"
+  },
+  "nextAction": "$speckit-intake-review requirements/intakes/active/Lastenheft_Didactic-Inline-Code-Comment-Hardening.md",
+  "publicationBoundary": "Validated local working-tree publication only; no commit, push, pull request or merge."
+}

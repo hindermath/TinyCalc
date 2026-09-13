@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "documentType": "SupersededIntakeReviewEvidence",
+  "seriesId": "5b4523b4-d946-4091-9cbc-11825af94332",
+  "supersededReviewId": "6b8925ec-2e33-45d5-b04f-04f947d26737",
+  "supersededStatus": "NeedsRemediation",
+  "supersededReviewedAt": "2026-09-13T14:43:20Z",
+  "supersededTargetCount": 13,
+  "supersededAt": "2026-09-13T17:10:49Z",
+  "supersedingOperationId": "1ba4aa34-9d36-48ac-b7e2-ddf1b1e7f329",
+  "successorReviewId": "N/A",
+  "sourceRevision": "d46930e454d449f7d1c36698242e704441a01b2a",
+  "artifacts": [
+    {
+      "path": "requirements/intakes/series-archive/tinycalc-delivery/20260913T171049Z-review/intake-review-request.json",
+      "normalizedSha256": "5a2658c9874d63eda019c05e5b0ad0ef99379ae83fc35218c9d5015c86042b7b"
+    },
+    {
+      "path": "requirements/intakes/series-archive/tinycalc-delivery/20260913T171049Z-review/intake-review-result.json",
+      "normalizedSha256": "e084f2f6c85653776aa3d8b602488fee43b27b65dbeae5ee2d9972680da1a1fd"
+    },
+    {
+      "path": "requirements/intakes/series-archive/tinycalc-delivery/20260913T171049Z-review/intake-review-report.md",
+      "normalizedSha256": "0b996ac9ebbfe8625739f3ca889c82436ed95e9c9269effbb007e48697a94212"
+    }
+  ],
+  "proofBoundary": "The prior NeedsRemediation review is archived and invalidated because IR002 was corrected and both the target and series-manifest hashes changed. IR003 and IR004 remain outside this update and must be reassessed by the successor full-series review. This evidence grants no Spec Kit feature or delivery authority.",
+  "nextAction": "$speckit-intake-review requirements/intakes/series/tinycalc-delivery/manifest.json"
+}

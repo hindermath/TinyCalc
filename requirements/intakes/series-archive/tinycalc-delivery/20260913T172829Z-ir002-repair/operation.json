@@ -1,0 +1,50 @@
+{
+  "schemaVersion": "1.0",
+  "documentType": "IntakeSeriesOperation",
+  "operationId": "1ba4aa34-9d36-48ac-b7e2-ddf1b1e7f329",
+  "seriesId": "5b4523b4-d946-4091-9cbc-11825af94332",
+  "type": "Update",
+  "status": "Published",
+  "authorityEvidence": "$speckit-intake-update requirements/intakes/active/Lastenheft_Didactic-Inline-Code-Comment-Hardening.md; causal series hash update only, with order, dependencies and lifecycle preserved.",
+  "proposalNormalizedSha256": "b5049beb8ded0e4c9240c24a59cc262b5a1607f1bd6e14cdcea0e5e2af02a434",
+  "preparedPaths": [
+    "requirements/intakes/series/tinycalc-delivery/manifest.json",
+    "requirements/intakes/series/tinycalc-delivery/receipt.json",
+    "requirements/intakes/series/tinycalc-delivery/operation.json",
+    "requirements/intakes/series/tinycalc-delivery/order.md",
+    "Lastenheft_Abarbeitungsreihenfolge.md",
+    "requirements/intakes/series-archive/tinycalc-delivery/20260913T171049Z-ir002-update/manifest.json",
+    "requirements/intakes/series-archive/tinycalc-delivery/20260913T171049Z-ir002-update/receipt.json",
+    "requirements/intakes/series-archive/tinycalc-delivery/20260913T171049Z-ir002-update/operation.json",
+    "requirements/intakes/series-archive/tinycalc-delivery/20260913T171049Z-ir002-update/order.md",
+    "requirements/intakes/series-archive/tinycalc-delivery/20260913T171049Z-review/intake-review-request.json",
+    "requirements/intakes/series-archive/tinycalc-delivery/20260913T171049Z-review/intake-review-result.json",
+    "requirements/intakes/series-archive/tinycalc-delivery/20260913T171049Z-review/intake-review-report.md",
+    "requirements/intakes/series-archive/tinycalc-delivery/20260913T171049Z-review/superseded-review.json"
+  ],
+  "validation": {
+    "bash": "Pass",
+    "powerShell": "Pass"
+  },
+  "publication": {
+    "publishedPaths": [
+      "requirements/intakes/series/tinycalc-delivery/manifest.json",
+      "requirements/intakes/series/tinycalc-delivery/receipt.json",
+      "requirements/intakes/series/tinycalc-delivery/operation.json",
+      "requirements/intakes/series/tinycalc-delivery/order.md",
+      "Lastenheft_Abarbeitungsreihenfolge.md",
+      "requirements/intakes/series-archive/tinycalc-delivery/20260913T171049Z-ir002-update/manifest.json",
+      "requirements/intakes/series-archive/tinycalc-delivery/20260913T171049Z-ir002-update/receipt.json",
+      "requirements/intakes/series-archive/tinycalc-delivery/20260913T171049Z-ir002-update/operation.json",
+      "requirements/intakes/series-archive/tinycalc-delivery/20260913T171049Z-ir002-update/order.md",
+      "requirements/intakes/series-archive/tinycalc-delivery/20260913T171049Z-review/intake-review-request.json",
+      "requirements/intakes/series-archive/tinycalc-delivery/20260913T171049Z-review/intake-review-result.json",
+      "requirements/intakes/series-archive/tinycalc-delivery/20260913T171049Z-review/intake-review-report.md",
+      "requirements/intakes/series-archive/tinycalc-delivery/20260913T171049Z-review/superseded-review.json"
+    ],
+    "boundary": "Validated local working-tree publication; no commit, push, pull request or merge.",
+    "status": "Published"
+  },
+  "proposalPath": "specs/intake-authoring-operations/3be01c7c-45b2-4214-a158-99b3a753c4cd/proposal.json",
+  "nextAction": "$speckit-intake-review requirements/intakes/series/tinycalc-delivery/manifest.json"
+}

@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "1.0",
+  "documentType": "IntakeUpdateProposal",
+  "operationId": "3be01c7c-45b2-4214-a158-99b3a753c4cd",
+  "intakeId": "38c0a42c-96b8-45fb-a3f0-3501eca07ab4",
+  "approved": true,
+  "approvedAt": "2026-09-13T17:10:49Z",
+  "approvedBy": "Thorsten Hindermann",
+  "authorityEvidence": "$speckit-intake-update requirements/intakes/active/Lastenheft_Didactic-Inline-Code-Comment-Hardening.md",
+  "sourceHead": "ff4dd1d6ead85b678be41098b652720c4db48fc3",
+  "target": "requirements/intakes/active/Lastenheft_Didactic-Inline-Code-Comment-Hardening.md",
+  "finding": {
+    "id": "IR002",
+    "category": "LearnerClarity",
+    "severity": "Medium",
+    "source": "requirements/intakes/series-archive/tinycalc-delivery/20260913T171049Z-review/intake-review-result.json",
+    "correction": "State assumed prior knowledge, explain Formula, Cell, Recalc, Textoverflow, Range, XML comments, DocFX, TUI and proof paths before normative use, and provide equivalent English text for all normative scope, review and acceptance rules."
+  },
+  "preservedBoundaries": [
+    "Feature scope and non-goals",
+    "Comment intensity and review classifications",
+    "Acceptance intent",
+    "TinyCalc delivery-series order, dependencies and lifecycle states",
+    "LocalImplementation delivery authority",
+    "No Spec Kit feature start"
+  ],
+  "securityApplicability": {
+    "NIST_SSDF": "Applicable as the Level-2 secure-development baseline; no product-code change is made.",
+    "CWE_Top_25": "Applicable as the Level-2 review baseline; no executable input or runtime boundary changes.",
+    "WCAG_2_2_AA": "Applicable to the learner-facing Markdown structure and bilingual text.",
+    "OWASP_ASVS": "N/A: TinyCalc is a local TUI without a web, API, HTTP or authentication surface in this update.",
+    "SBOM_VEX_SLSA": "N/A: no release, dependency or build artefact is produced.",
+    "AI_SBOM": "N/A: AI is development tooling only and is not part of the released or operated product.",
+    "ZeroTrust": "N/A: no distributed, service-based, cloud or remote-management boundary is introduced."
+  },
+  "reviewEffect": "The prior full-series NeedsRemediation review is archived and invalidated after the target and manifest hashes change. A new review is required; IR003 and IR004 remain outside this update."
+}

@@ -1,0 +1,95 @@
+{
+  "schemaVersion": "2.0",
+  "documentType": "IntakeReceipt",
+  "receiptId": "fb3cd161-2086-4cb0-8a8e-a72d1db26500",
+  "intakeId": "38c0a42c-96b8-45fb-a3f0-3501eca07ab4",
+  "generator": {
+    "preset": "intake-authoring-governance",
+    "version": "0.2.1"
+  },
+  "createdAt": "2026-07-26T21:00:00Z",
+  "operation": {
+    "operationId": "a6780a05-df3a-401a-ad1f-796cd3656f1a",
+    "type": "Update",
+    "authorityEvidence": "User-approved TinyCalc requirements and intake consolidation plan"
+  },
+  "status": "ReadyForReview",
+  "target": {
+    "path": "requirements/intakes/active/Lastenheft_Didactic-Inline-Code-Comment-Hardening.md",
+    "normalizedSha256": "e94557366921be0efcc3a7eb4cf653ce798a8058d55969ee0de5d1b2d0bb00a6"
+  },
+  "sources": [
+    {
+      "sourceId": "SRC001",
+      "order": 1,
+      "kind": "File",
+      "label": "Archived predecessor intake",
+      "location": "Repository",
+      "path": "requirements/intakes/history/pre-intake-split-20260726/Lastenheft_Didactic-Inline-Code-Comment-Hardening.md",
+      "requestedUrl": "N/A",
+      "finalUrl": "N/A",
+      "retrievedAt": "N/A",
+      "httpStatus": "N/A",
+      "contentType": "N/A",
+      "contentLength": "N/A",
+      "etag": "N/A",
+      "lastModified": "N/A",
+      "redirectChain": [],
+      "rawSha256": "N/A",
+      "normalizedSha256": "5b1c0862e152a690197e642d007e3e9db4aa3fc5f18d8fe2f0d36b3fa5dbaa7b",
+      "gitBlob": "N/A",
+      "proofBoundary": "Repository predecessor and normalized SHA-256"
+    }
+  ],
+  "profile": "level2-lastenheft",
+  "languagePolicy": "GermanFirstEnglishSecond",
+  "decisions": [
+    {
+      "id": "IAD001",
+      "status": "Answered",
+      "question": "Welcher Zielpfad ist nach der Konsolidierung verbindlich?",
+      "answer": "requirements/intakes/active/Lastenheft_Didactic-Inline-Code-Comment-Hardening.md",
+      "evidence": "specs/requirements-reconciliation-20260726/migration-proposal.json"
+    },
+    {
+      "id": "IAD002",
+      "status": "Answered",
+      "question": "Welche Delivery Authority gilt?",
+      "answer": "LocalImplementation",
+      "evidence": "The migration grants no feature-delivery authority."
+    }
+  ],
+  "openDecisionIds": [],
+  "questionCount": 0,
+  "agentSurface": {
+    "specifyCanonicalId": "speckit.specify",
+    "specifyInvocation": "$speckit-specify",
+    "autonomousCanonicalId": "speckit.autonomous",
+    "autonomousInvocation": "$speckit-autonomous"
+  },
+  "deliveryAuthority": "LocalImplementation",
+  "authorityEvidence": "Default: this migration grants no remote feature-delivery authority.",
+  "promptState": "Enabled",
+  "provenanceMode": "Supersession",
+  "supersedes": {
+    "receiptPath": "specs/intake-authoring-receipts/history/didactic-inline-code-comment-hardening.schema-1.1.json",
+    "targetNormalizedSha256": "5b1c0862e152a690197e642d007e3e9db4aa3fc5f18d8fe2f0d36b3fa5dbaa7b",
+    "archiveTargetPath": "requirements/intakes/history/pre-intake-split-20260726/Lastenheft_Didactic-Inline-Code-Comment-Hardening.md",
+    "archiveReceiptPath": "specs/intake-authoring-receipts/history/didactic-inline-code-comment-hardening.schema-1.1.json"
+  },
+  "legacyAdoption": {
+    "evidenceType": "N/A",
+    "priorTargetNormalizedSha256": "N/A",
+    "priorGitBlob": "N/A"
+  },
+  "updateAuthorized": true,
+  "updateAuthorityEvidence": "User-approved migration preserves predecessor evidence.",
+  "series": {
+    "seriesId": "5b4523b4-d946-4091-9cbc-11825af94332",
+    "manifestPath": "requirements/intakes/series/tinycalc-delivery/manifest.json",
+    "order": 6,
+    "role": "OrderedMember",
+    "supersedesIntakeIds": []
+  },
+  "nextAction": "$speckit-intake-review requirements/intakes/active/Lastenheft_Didactic-Inline-Code-Comment-Hardening.md"
+}

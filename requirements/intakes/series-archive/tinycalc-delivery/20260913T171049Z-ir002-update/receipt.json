@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "documentType": "IntakeSeriesReceipt",
+  "receiptId": "0b3b2b72-986e-457e-9a09-c5098554e69c",
+  "seriesId": "5b4523b4-d946-4091-9cbc-11825af94332",
+  "generator": {
+    "preset": "intake-sequencing-governance",
+    "version": "0.2.6"
+  },
+  "createdAt": "2026-09-13T14:39:58Z",
+  "operation": {
+    "authorityEvidence": "Thorsten Hindermann: Bitte ausfuehren, referring explicitly to IR001 reference repairs, RIG017 archive/manifest/receipt consistency and full-series review. DeliveryMode MergeAndSync with Admin-Bypass. No downstream product execution.",
+    "type": "Update",
+    "operationId": "ebe6388a-a66a-4ca8-992f-87e8ff3dd3f5"
+  },
+  "status": "Ready",
+  "manifest": {
+    "path": "requirements/intakes/series/tinycalc-delivery/manifest.json",
+    "normalizedSha256": "7f63fd533af811ffba744a8bc32c9f25d7c4ae13fe9b582b20df91a014366587"
+  },
+  "supersedes": {
+    "receiptNormalizedSha256": "c867fa896e4d36be405a921c090102c98ed6113f05469be23293fb21162f7db7",
+    "receiptPath": "requirements/intakes/series-archive/tinycalc-delivery/20260913-reference-lifecycle-repair/receipt.json",
+    "manifestArchiveSha256": "586424d2424b31f16c1461583affb3b0204886ccca0e79fb59af7759842b6703",
+    "manifestArchivePath": "requirements/intakes/series-archive/tinycalc-delivery/20260913-reference-lifecycle-repair/manifest.json"
+  },
+  "tombstone": {
+    "path": "N/A",
+    "normalizedSha256": "N/A"
+  },
+  "nextAction": "$speckit-intake-series-status"
+}

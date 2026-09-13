@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "documentType": "IntakeRepairProposal",
+  "operationId": "6ad7011d-e755-4342-90ee-7f2cf697a159",
+  "intakeId": "38c0a42c-96b8-45fb-a3f0-3501eca07ab4",
+  "approved": true,
+  "approvedAt": "2026-09-13T17:28:29Z",
+  "approvedBy": "Thorsten Hindermann",
+  "authorityEvidence": "$speckit-intake-repair specs/intake-review-remediation/20260913/didactic-inline-code-comment-hardening/result.json",
+  "sourceHead": "ff4dd1d6ead85b678be41098b652720c4db48fc3",
+  "target": "requirements/intakes/active/Lastenheft_Didactic-Inline-Code-Comment-Hardening.md",
+  "reviewResult": {
+    "path": "specs/intake-review-remediation/20260913/didactic-inline-code-comment-hardening/result.json",
+    "normalizedSha256": "1292ded281946419b99d8065633bbceaf4571d7179d089d3cb26060eb281412e",
+    "reviewId": "417516f8-a708-453b-8eda-3416bb42bd58",
+    "findingId": "IR002"
+  },
+  "repair": "Add short German-first and English-second explanations for API, runtime behaviour, A11Y, CEFR B2 and Spec Kit, including the minimal governed Spec Kit handoff.",
+  "preservedBoundaries": [
+    "Feature scope and non-goals",
+    "Comment intensity and review classifications",
+    "Acceptance intent",
+    "TinyCalc delivery-series order, dependencies and lifecycle states",
+    "LocalImplementation delivery authority",
+    "No Spec Kit feature start"
+  ],
+  "reviewRequirement": "Perform a complete new Single review after publication and bind it to the repaired target hash.",
+  "seriesEffect": "Only the target hash and causal series receipt lineage change; the full-series review remains pending."
+}

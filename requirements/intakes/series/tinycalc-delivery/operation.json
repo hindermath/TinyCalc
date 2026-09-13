@@ -1,26 +1,22 @@
 {
   "schemaVersion": "1.0",
   "documentType": "IntakeSeriesOperation",
-  "operationId": "ebe6388a-a66a-4ca8-992f-87e8ff3dd3f5",
+  "operationId": "398b5798-ddd8-4cdf-bc64-be0c4f8f8174",
   "seriesId": "5b4523b4-d946-4091-9cbc-11825af94332",
   "type": "Update",
   "status": "Published",
-  "authorityEvidence": "Thorsten Hindermann: Bitte ausfuehren, referring explicitly to IR001 reference repairs, RIG017 archive/manifest/receipt consistency and full-series review. DeliveryMode MergeAndSync with Admin-Bypass. No downstream product execution.",
-  "proposalNormalizedSha256": "21a53ac4f5b7ab9a344a52ad47f4f7d82ae96169d5b6a239774221b4714066e8",
+  "authorityEvidence": "$speckit-intake-repair specs/intake-review-remediation/20260913/didactic-inline-code-comment-hardening/result.json; causal series hash update only, with order, dependencies and lifecycle preserved.",
+  "proposalNormalizedSha256": "954786e7efbb2c477bf3aedeef47e29e71a050d60e59977d2f959d8a9f69c0a2",
   "preparedPaths": [
     "requirements/intakes/series/tinycalc-delivery/manifest.json",
     "requirements/intakes/series/tinycalc-delivery/receipt.json",
     "requirements/intakes/series/tinycalc-delivery/operation.json",
     "requirements/intakes/series/tinycalc-delivery/order.md",
     "Lastenheft_Abarbeitungsreihenfolge.md",
-    "requirements/intakes/active/Lastenheft_Constitution_Change.002-constitution-change.md",
-    "requirements/intakes/active/Lastenheft_TerminalGui_Migration.003-terminalgui-migration.md",
-    "requirements/intakes/active/Lastenheft_RL-SE-Checklist-Selbstpruefung.004-rl-se-self-assessment.md",
-    "requirements/intakes/active/Lastenheft_GSDB-Spec-Kit-Intensivpruefung.005-gsdb-intensive-review.md",
-    "requirements/intakes/archive/Lastenheft_Constitution_Change.002-constitution-change.md",
-    "requirements/intakes/archive/Lastenheft_TerminalGui_Migration.003-terminalgui-migration.md",
-    "requirements/intakes/archive/Lastenheft_RL-SE-Checklist-Selbstpruefung.004-rl-se-self-assessment.md",
-    "requirements/intakes/archive/Lastenheft_GSDB-Spec-Kit-Intensivpruefung.005-gsdb-intensive-review.md"
+    "requirements/intakes/series-archive/tinycalc-delivery/20260913T172829Z-ir002-repair/manifest.json",
+    "requirements/intakes/series-archive/tinycalc-delivery/20260913T172829Z-ir002-repair/receipt.json",
+    "requirements/intakes/series-archive/tinycalc-delivery/20260913T172829Z-ir002-repair/operation.json",
+    "requirements/intakes/series-archive/tinycalc-delivery/20260913T172829Z-ir002-repair/order.md"
   ],
   "validation": {
     "bash": "Pass",
@@ -33,17 +29,14 @@
       "requirements/intakes/series/tinycalc-delivery/operation.json",
       "requirements/intakes/series/tinycalc-delivery/order.md",
       "Lastenheft_Abarbeitungsreihenfolge.md",
-      "requirements/intakes/active/Lastenheft_Constitution_Change.002-constitution-change.md",
-      "requirements/intakes/active/Lastenheft_TerminalGui_Migration.003-terminalgui-migration.md",
-      "requirements/intakes/active/Lastenheft_RL-SE-Checklist-Selbstpruefung.004-rl-se-self-assessment.md",
-      "requirements/intakes/active/Lastenheft_GSDB-Spec-Kit-Intensivpruefung.005-gsdb-intensive-review.md",
-      "requirements/intakes/archive/Lastenheft_Constitution_Change.002-constitution-change.md",
-      "requirements/intakes/archive/Lastenheft_TerminalGui_Migration.003-terminalgui-migration.md",
-      "requirements/intakes/archive/Lastenheft_RL-SE-Checklist-Selbstpruefung.004-rl-se-self-assessment.md",
-      "requirements/intakes/archive/Lastenheft_GSDB-Spec-Kit-Intensivpruefung.005-gsdb-intensive-review.md"
+      "requirements/intakes/series-archive/tinycalc-delivery/20260913T172829Z-ir002-repair/manifest.json",
+      "requirements/intakes/series-archive/tinycalc-delivery/20260913T172829Z-ir002-repair/receipt.json",
+      "requirements/intakes/series-archive/tinycalc-delivery/20260913T172829Z-ir002-repair/operation.json",
+      "requirements/intakes/series-archive/tinycalc-delivery/20260913T172829Z-ir002-repair/order.md"
     ],
-    "boundary": "Validated isolated Git worktree committed atomically; original main untouched until merge",
+    "boundary": "Validated local working-tree publication; no commit, push, pull request or merge.",
     "status": "Published"
   },
-  "proposalPath": "docs/maintenance/tinycalc-intake-remediation-proposal.json"
+  "proposalPath": "specs/intake-authoring-operations/6ad7011d-e755-4342-90ee-7f2cf697a159/proposal.json",
+  "nextAction": "$speckit-intake-review requirements/intakes/series/tinycalc-delivery/manifest.json"
 }

@@ -1,70 +1,30 @@
-# TinyCalc Gesamtserienreview / Full-series review
+# TinyCalc Delivery Intake Series Review
 
-Ergebnis: **NeedsRemediation**. 13 Ziele, keine Worker; Critical 0, High 0,
-Medium 3, Low 0. Keine akzeptierten Risiken und keine offenen Rueckfragen.
-Review-ID: 6b8925ec-2e33-45d5-b04f-04f947d26737. Request und alle Ziele sind durch normalisierte
-SHA-256 gebunden; die Einzelnotizen stehen ebenfalls im JSON-Ergebnis.
+## Ergebnis / Outcome
 
-Die beiden IR001-Referenzbefunde sind erledigt; ihre neuen Einzelreviews sind
-Ready. Vier Completed-Mitglieder liegen bytegleich im Archiv. Die Serie
-behaelt 13 Mitglieder, vier Wurzeln und neun Abhaengigkeiten; neun Mitglieder
-liegen aktiv vor. Genau die bereits bevorzugte Funktionsabnahme ist Eligible.
-Das ist eine Prioritaetsmarkierung und startet keinen Produktlauf.
+Deutsch:
+Der vollstaendige Serienreview endet mit **NeedsRemediation**. Alle 13 Zielhashes, vier Wurzeln und neun verbindlichen Hard Gates sind aktuell und konsistent. Genau ein Ziel ist `Eligible`; dieser Status waehlt nur den naechsten Kandidaten und erteilt keine Ausfuehrungs- oder Delivery Authority.
 
-## Neue Befunde / New findings
+English:
+The complete series review ends with **NeedsRemediation**. All 13 target hashes, four roots, and nine binding hard gates are current and consistent. Exactly one target is `Eligible`; this status only selects the next candidate and grants no execution or delivery authority.
 
-- **IR002, Medium – Kommentarhaertung:** Vorkenntnisse und Erstgebrauchs-
-  erklaerungen fuer Formula/Recalc/Textoverflow/XML/DocFX fehlen; die
-  normativen Kommentarregeln besitzen keine ausreichende englische Entsprechung.
-- **IR003, Medium – Secure-Development-Hardening:** Vorkenntnisse und
-  Einfuehrungen zu MSL, Vertrauensgrenzen und Lieferkettenbegriffen fehlen.
-  Die normativen Abschnitte 1-9 sind nur deutsch ausgefuehrt.
-- **IR004, Medium – Sandbox-Haertung:** Vorkenntnisse und Erklaerungen zu
-  Mounts, Tokens, Caches und SBOM fehlen. Die detaillierten Anforderungen
-  und Abnahmekriterien besitzen keine entsprechende englische Fassung.
+## Befunde / Findings
 
-Owner fuer alle drei: Thorsten Hindermann. Korrektur und Wiedervorlage vor
-Ausfuehrung der betroffenen Intakes. Diese zusaetzlichen Inhaltsaenderungen
-gehoeren nicht zur beauftragten IR001-/Lifecycle-Reparatur. Bestehende Inhalte
-bleiben erhalten; keine Risiken wurden durch den Agenten akzeptiert.
+| ID | Schwere / Severity | Ziel / Target | Ergebnis / Disposition |
+|---|---|---|---|
+| `IR003` | Medium | `Lastenheft_Secure-Development-Hardening.md` | Vorkenntnisse, Sicherheitserstbegriffe und gleichwertige englische Normativabschnitte fehlen weiterhin. / Prior knowledge, first-use security terms, and equivalent English normative sections are still missing. |
+| `IR004` | Medium | `Lastenheft_Sandbox-gestuetzte-Secure-Development-Haertung.md` | Vorkenntnisse, Sandbox-Erstbegriffe und gleichwertige englische Anforderungen und Abnahmeregeln fehlen weiterhin. / Prior knowledge, first-use sandbox terms, and equivalent English requirements and acceptance rules are still missing. |
 
-*The two original IR001 findings are resolved and both Single reviews are
-Ready. Four completed targets are preserved byte-for-byte in archive; nine
-remain active, with one preferred Eligible target. The full series has three
-new Medium learner-clarity findings: explicit prerequisites, first-use terms
-and English normative coverage are missing in the comment, secure-development
-and sandbox hardening intakes. Thorsten owns correction and reevaluation
-before their execution. No risk is accepted and no product run is started.*
+`IR002` ist geschlossen. Der Ready-Single-Review `f560c480-9160-463a-b2c3-bba5ba5d776b` bindet das aktualisierte Didactic-Intake mit Hash `460abc8142179cc40e1d0cfe07928260456088205b3200e7ca6c6e10818e46da`.
 
-## Individuelle Pruefnotizen / Individual review notes
+*`IR002` is closed. Ready Single review `f560c480-9160-463a-b2c3-bba5ba5d776b` binds the updated Didactic intake with hash `460abc8142179cc40e1d0cfe07928260456088205b3200e7ca6c6e10818e46da`.*
 
-Die Notizen benennen fuer jedes Ziel Zweck, Abgrenzung und wesentliche
-Pruefgrenze. Historische Completed-Ziele bleiben unveraenderte Evidence;
-ihre alten Prompts oder Versionsangaben sind keine aktuelle Startfreigabe.
-*Each note records purpose, boundaries and the main review conclusion.
-Completed targets remain historical evidence, not current execution prompts.*
+## Abdeckung und Grenzen / Coverage and Boundaries
 
-| Position | Lifecycle | Review note |
-|---:|---|---|
-| 1 | Completed | Historische Constitution-, XML- und TDD-Anforderungen bleiben abgeschlossene Evidence. / Constitution: historical bilingual/XML/TDD requirements preserved as completed evidence; old prompts and original wording are not executable instructions. |
-| 2 | Completed | Abgeschlossene Migration; spaetere Intakes verwenden aktuelle Pins statt historischer Versionsvorgaben. / Terminal.Gui: historical migration version/API snapshots preserved; current successor intakes use execution-time pins and do not repeat migration. |
-| 3 | Eligible | Vollstaendiger Produktvertrag, messbare Abnahme und reparierte fachliche Referenzen. / TUI acceptance: complete offered capability union, immutable contract IDs, measurable success/cancel/error coverage and impact gates; repaired semantic references. |
-| 4 | Blocked | Tastatur, Text, Fokus und PTY/VoiceOver; folgt Funktionsabnahme und geht Rename voraus. / A11Y: keyboard/text/focus, PTY/VoiceOver and DocFX evidence are explicit; functional acceptance precedes this work and rename follows it. |
-| 5 | Blocked | Atomarer Rename, Live-Inventar, historische Allowlist und JSON-Kompatibilitaet. / Rename: live inventory, atomic project identities, historical allowlist and JSON compatibility preserved; repaired functional/A11Y references. |
-| 6 | Blocked | Keine Runtime-Aenderung; begrenzte Warum-Kommentare. Lernenden-Befund IR002 bleibt offen. / Didactic comments: runtime changes excluded, moderate why-comments and explicit dispositions; learner prerequisites and terminology need repair (IR002). |
-| 7 | Blocked | Spaeterer begrenzter Sicherheitsreview mit Evidenzpflicht. Lernenden-Befund IR003 bleibt offen. / Secure development: bounded later applicability/evidence review, explicit risk and human authority boundaries; prerequisites and bilingual normative coverage need repair (IR003). |
-| 8 | Blocked | Reine begrenzte Ganzzahl-VM; Paket-Integration bleibt vor Ausfuehrung zu pruefen. / PL/0: qualified pure integer functions, strict profile and bounded VM; package delivery evidence is dated, integration pin/locked restore/contract tests remain execution prerequisites. |
-| 9 | Blocked | Zwei MCS-Dialekte, atomarer Import, authentische Fixtures; JSON bleibt Schreibformat. / Legacy: two evidenced MCS dialects, bounded atomic import, compiler-authentic fixtures, BCD excluded, JSON canonical and later structural operations separate. |
-| 10 | Blocked | Snapshot und AST, sichere Vorschau, vollstaendige Zellrecords und atomarer Rollback. / Formula copy: immutable snapshot/AST reference changes, complete records for structural shifts, REF errors, previews, confirmation and atomic rollback. |
-| 11 | Pending | Mount-, Schreib- und Token-Grenzen; keine Image-Aenderung. Lernenden-Befund IR004 bleibt offen. / Sandbox: mount/write/token boundaries and applicability evidence, no image mutation or automatic hardening; learner prerequisites and terminology need repair (IR004). |
-| 12 | Completed | Abgeschlossene Selbstpruefung mit Evidenzklassen und menschlichen Entscheidungsgrenzen. / RL-SE: completed evidence classification and human-only boundaries retained; archived bytes are not rewritten to current learner templates. |
-| 13 | Completed | Abgeschlossene GSDB-Pruefung; kein Ersatz fuer die ausstehende Produktabnahme. / GSDB: completed intensive-review scope and evidence/human-only boundaries retained; not a substitute for pending product acceptance. |
+Es wurden 13 Ziele und keine Worker geprueft. Befunde: 0 Critical, 0 High, 2 Medium und 0 Low. Es gibt keine akzeptierten Risiken und keine offenen Fragen. Schema-2.0-Konfiguration, BCP-47-Sprache, Namensprofil, vier Rollen, sechs Collections, Receipt-/Zielhashes, DAG, Lifecycle, Handoffs, Security, Privacy, A11Y, Plattform, Supply Chain, Evidence, Prompt-Grenzen und textbasierte Zugaenglichkeit wurden geprueft. Der Review startet kein Feature und erteilt keine Remote-Berechtigung.
 
-## Naechste Aktion / Next action
+*Thirteen targets and no workers were reviewed. Findings: 0 Critical, 0 High, 2 Medium, and 0 Low. There are no accepted risks or open questions. The schema-2.0 configuration, BCP-47 language, naming profile, four roles, six collections, receipt and target hashes, DAG, lifecycle, handoffs, security, privacy, accessibility, platform, supply chain, evidence, prompt boundaries, and text-first accessibility were reviewed. This review starts no feature and grants no remote authority.*
 
-IR002-IR004 in einem gezielten Intake-Update korrigieren, danach dieselbe
-Gesamtserie erneut reviewen. Ready wird nicht aus bestandenen technischen
-Validatoren abgeleitet. Insbesondere PL/0 behaelt den offenen Integrations-
-Preflight, und historische Governance-Abnahmen ersetzen keine Produktabnahme.
-*Correct IR002-IR004 in a scoped update, then repeat the full-series review.
-Passing validators do not imply semantic Ready; product gates remain separate.*
+## Naechste Aktion / Next Action
+
+`$speckit-intake-repair requirements/intakes/series/tinycalc-delivery/intake-review-result.json`

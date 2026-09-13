@@ -1,32 +1,32 @@
 {
   "schemaVersion": "1.0",
   "documentType": "IntakeSeriesReceipt",
-  "receiptId": "0b3b2b72-986e-457e-9a09-c5098554e69c",
+  "receiptId": "a5e57c0f-f778-49a1-ae8e-bb99ea9a7342",
   "seriesId": "5b4523b4-d946-4091-9cbc-11825af94332",
   "generator": {
     "preset": "intake-sequencing-governance",
     "version": "0.2.6"
   },
-  "createdAt": "2026-09-13T14:39:58Z",
+  "createdAt": "2026-09-13T17:28:29Z",
   "operation": {
-    "authorityEvidence": "Thorsten Hindermann: Bitte ausfuehren, referring explicitly to IR001 reference repairs, RIG017 archive/manifest/receipt consistency and full-series review. DeliveryMode MergeAndSync with Admin-Bypass. No downstream product execution.",
+    "authorityEvidence": "$speckit-intake-repair specs/intake-review-remediation/20260913/didactic-inline-code-comment-hardening/result.json; causal series hash update only, with order, dependencies and lifecycle preserved.",
     "type": "Update",
-    "operationId": "ebe6388a-a66a-4ca8-992f-87e8ff3dd3f5"
+    "operationId": "398b5798-ddd8-4cdf-bc64-be0c4f8f8174"
   },
   "status": "Ready",
   "manifest": {
     "path": "requirements/intakes/series/tinycalc-delivery/manifest.json",
-    "normalizedSha256": "1a4773e80900cd98979c9536704d361f03ce74fe6765501acebefce8545b2d0e"
+    "normalizedSha256": "97cda99469ff71179ccb8eef120666ad245f9507e629bea00d2ec8458360f447"
   },
   "supersedes": {
-    "receiptNormalizedSha256": "c867fa896e4d36be405a921c090102c98ed6113f05469be23293fb21162f7db7",
-    "receiptPath": "requirements/intakes/series-archive/tinycalc-delivery/20260913-reference-lifecycle-repair/receipt.json",
-    "manifestArchiveSha256": "586424d2424b31f16c1461583affb3b0204886ccca0e79fb59af7759842b6703",
-    "manifestArchivePath": "requirements/intakes/series-archive/tinycalc-delivery/20260913-reference-lifecycle-repair/manifest.json"
+    "receiptNormalizedSha256": "41c65c93341735eba6eb003760aecd60496fee326c8a524ab1fcecf759c6cc4a",
+    "receiptPath": "requirements/intakes/series-archive/tinycalc-delivery/20260913T172829Z-ir002-repair/receipt.json",
+    "manifestArchiveSha256": "09c14e212bc31330b44098d02cb1cc0ae1b9a413c458347a3be45faf6b51a9b7",
+    "manifestArchivePath": "requirements/intakes/series-archive/tinycalc-delivery/20260913T172829Z-ir002-repair/manifest.json"
   },
   "tombstone": {
     "path": "N/A",
     "normalizedSha256": "N/A"
   },
-  "nextAction": "$speckit-intake-series-status"
+  "nextAction": "$speckit-intake-review requirements/intakes/series/tinycalc-delivery/manifest.json"
 }
