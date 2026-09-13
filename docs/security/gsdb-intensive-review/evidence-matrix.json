@@ -1248,7 +1248,7 @@
       "sourceClass": "ProjectEvidence",
       "path": "AGENTS.md",
       "version": "Current",
-      "reviewedAt": "2026-09-12",
+      "reviewedAt": "2026-09-13",
       "normalizedSha256": "77013c031f5c8be0ec1fc2c8c72ca3e54d9652765e4edcc0b9f35e9a51476c37",
       "scope": {
         "de": "Zeilenspezifischer aktueller Nachweis aus AGENTS.md; der Hash beweist Inhalt, nicht automatisch Erfuellung.",
