@@ -976,7 +976,7 @@
     {
       "sourceId": "SRC-052",
       "sourceClass": "IntakeEvidence",
-      "path": "requirements/intakes/active/Lastenheft_GSDB-Spec-Kit-Intensivpruefung.005-gsdb-intensive-review.md",
+      "path": "requirements/intakes/archive/Lastenheft_GSDB-Spec-Kit-Intensivpruefung.005-gsdb-intensive-review.md",
       "version": "Current",
       "reviewedAt": "2026-09-06",
       "normalizedSha256": "f4dcb3fac6cb755faed296847ffd40170f0d008fa3640e5e5fa5bc38e4af5375",
@@ -991,7 +991,7 @@
     {
       "sourceId": "SRC-053",
       "sourceClass": "IntakeEvidence",
-      "path": "requirements/intakes/series/tinycalc-delivery/manifest.json",
+      "path": "requirements/intakes/series-archive/tinycalc-delivery/20260913-reference-lifecycle-repair/manifest.json",
       "version": "Current",
       "reviewedAt": "2026-09-06",
       "normalizedSha256": "586424d2424b31f16c1461583affb3b0204886ccca0e79fb59af7759842b6703",

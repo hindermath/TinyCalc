@@ -77,3 +77,5 @@ Source-only; kein Home-Sync. Keine sichtbare TUI-Aenderung, daher keine Screensh
 
 *Documentation decisions and reader paths are recorded in the maintenance
 evidence. Source-only; no home sync or UI screenshots required.*
+
+GSDB-Folgeprüfung: Die bestehende Bewertungsmatrix bindet das inhaltsgleiche archivierte GSDB-Intake und den unveränderten archivierten Manifest-Vorgänger. Die historischen Bewertungsaussagen erhalten dadurch keine neue fachliche Freigabe. / GSDB follow-up: the existing assessment binds the byte-identical archived intake and unchanged predecessor manifest; historical conclusions receive no new substantive approval.

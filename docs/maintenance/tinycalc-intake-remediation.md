@@ -103,3 +103,5 @@ sources are the manifest, intakes, receipts and results; Thorsten owns them.
 This bilingual, text-first maintenance evidence is sourceOnly and requires
 no home sync. Reevaluate after intake changes or before execution. Existing
 Node helper help and this operating record are updated together.*
+
+GSDB-Folgeprüfung: Die bestehende Bewertungsmatrix bindet das inhaltsgleiche archivierte GSDB-Intake und den unveränderten archivierten Manifest-Vorgänger. Die historischen Bewertungsaussagen erhalten dadurch keine neue fachliche Freigabe. / GSDB follow-up: the existing assessment binds the byte-identical archived intake and unchanged predecessor manifest; historical conclusions receive no new substantive approval.
