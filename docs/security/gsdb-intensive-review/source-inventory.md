@@ -68,8 +68,8 @@ reference files, and the PDF plus checksum file.
 
 | Klasse / Class | Pfad / Path | Normalisierter SHA-256 / Normalized SHA-256 | Scope, Freshness und Locator |
 |---|---|---|---|
-| Constitution | `constitution.md` | `70cec028643ef0e3fa3e1cb2f820c8cbb06c358d8878bd1e8e6c1123ce297b73` | Current; Principles XI-XVIII und Registry-Zeile `RiderProjects/TinyCalc` |
-| Constitution | `.specify/memory/constitution.md` | `70cec028643ef0e3fa3e1cb2f820c8cbb06c358d8878bd1e8e6c1123ce297b73` | Current; byte-identischer Partner / byte-identical partner |
+| Constitution | `constitution.md` | `a43a8febec8a22c3d308c6ae0702bcb79f7285398082207730602347e0c91ff4` | Current; Principles XI-XVIII und Registry-Zeile `RiderProjects/TinyCalc` |
+| Constitution | `.specify/memory/constitution.md` | `a43a8febec8a22c3d308c6ae0702bcb79f7285398082207730602347e0c91ff4` | Current; byte-identischer Partner / byte-identical partner |
 | Registry | `.specify/presets/.registry` | `8b1f5085f0573b95bab983aabdc59fd7f80b32c71a4a2355cbf64af9cfc10978` | Current; `presets` mit 13 Einträgen / 13 entries |
 | Workflow | `.github/workflows/ci.yml` | `c67a2404fd8d973bc36e49a811b5efc1065ac3bbf8cf5bfd2b211e0b6cfc2ceb` | Current; Linux-/Windows-Produkt- und GSDB-Validatorjobs nach T059 |
 | Workflow | `.github/workflows/agent-secret-scan.yml` | `2e604000c7c18c64420c3553f0db35e18222bafd9324a90295126667e567ada2` | Current; Secret-Scan |

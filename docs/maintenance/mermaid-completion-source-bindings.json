@@ -1,23 +1,23 @@
 [
   {
-    "basis": "Append-only Mermaid/report governance and declared constitution minor version; prior controls preserved",
     "repository": "hindermath/TinyCalc",
-    "before": "978a928658ed5d8dba7c94f6cbf5d7a750372c97fc5173d75fb1f2a32d138c35",
-    "path": "constitution.md",
-    "after": "70cec028643ef0e3fa3e1cb2f820c8cbb06c358d8878bd1e8e6c1123ce297b73"
+    "before": "70cec028643ef0e3fa3e1cb2f820c8cbb06c358d8878bd1e8e6c1123ce297b73",
+    "after": "a43a8febec8a22c3d308c6ae0702bcb79f7285398082207730602347e0c91ff4",
+    "basis": "Append-only Mermaid/report governance and declared constitution minor version; prior controls preserved",
+    "path": "constitution.md"
   },
   {
-    "basis": "Append-only Mermaid/report governance and declared constitution minor version; prior controls preserved",
     "repository": "hindermath/TinyCalc",
-    "before": "978a928658ed5d8dba7c94f6cbf5d7a750372c97fc5173d75fb1f2a32d138c35",
-    "path": ".specify/memory/constitution.md",
-    "after": "70cec028643ef0e3fa3e1cb2f820c8cbb06c358d8878bd1e8e6c1123ce297b73"
+    "before": "70cec028643ef0e3fa3e1cb2f820c8cbb06c358d8878bd1e8e6c1123ce297b73",
+    "after": "a43a8febec8a22c3d308c6ae0702bcb79f7285398082207730602347e0c91ff4",
+    "basis": "Append-only Mermaid/report governance and declared constitution minor version; prior controls preserved",
+    "path": ".specify/memory/constitution.md"
   },
   {
-    "basis": "Append-only Mermaid/report governance and declared constitution minor version; prior controls preserved",
     "repository": "hindermath/TinyCalc",
-    "before": "2e6a741c8629ee8cfdc1bd10cef6b5e7c1e834c65147db572035e867033005e1",
-    "path": "AGENTS.md",
-    "after": "499dac0296e8300246dfc2048a82068b1425efe1f481532b3152aac9eeb6fd48"
+    "before": "499dac0296e8300246dfc2048a82068b1425efe1f481532b3152aac9eeb6fd48",
+    "after": "499dac0296e8300246dfc2048a82068b1425efe1f481532b3152aac9eeb6fd48",
+    "basis": "Append-only Mermaid/report governance and declared constitution minor version; prior controls preserved",
+    "path": "AGENTS.md"
   }
 ]
