@@ -769,7 +769,7 @@
       "path": "constitution.md",
       "version": "Current",
       "reviewedAt": "2026-09-12",
-      "normalizedSha256": "978a928658ed5d8dba7c94f6cbf5d7a750372c97fc5173d75fb1f2a32d138c35",
+      "normalizedSha256": "70cec028643ef0e3fa3e1cb2f820c8cbb06c358d8878bd1e8e6c1123ce297b73",
       "scope": {
         "de": "Diese Quelle wird nur für ihren benannten TinyCalc-Prüfumfang verwendet.",
         "en": "This source is used only for its named TinyCalc assessment scope."
@@ -784,7 +784,7 @@
       "path": ".specify/memory/constitution.md",
       "version": "Current",
       "reviewedAt": "2026-09-12",
-      "normalizedSha256": "978a928658ed5d8dba7c94f6cbf5d7a750372c97fc5173d75fb1f2a32d138c35",
+      "normalizedSha256": "70cec028643ef0e3fa3e1cb2f820c8cbb06c358d8878bd1e8e6c1123ce297b73",
       "scope": {
         "de": "Diese Quelle wird nur für ihren benannten TinyCalc-Prüfumfang verwendet.",
         "en": "This source is used only for its named TinyCalc assessment scope."
@@ -1249,7 +1249,7 @@
       "path": "AGENTS.md",
       "version": "Current",
       "reviewedAt": "2026-09-12",
-      "normalizedSha256": "2e6a741c8629ee8cfdc1bd10cef6b5e7c1e834c65147db572035e867033005e1",
+      "normalizedSha256": "499dac0296e8300246dfc2048a82068b1425efe1f481532b3152aac9eeb6fd48",
       "scope": {
         "de": "Zeilenspezifischer aktueller Nachweis aus AGENTS.md; der Hash beweist Inhalt, nicht automatisch Erfuellung.",
         "en": "Current row-specific evidence from AGENTS.md; the hash proves content, not automatic fulfilment."
