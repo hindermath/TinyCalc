@@ -564,7 +564,7 @@ runtime evidence.*
 | 2026-09-13 | TinyCalc-Gesamtserie nach IR002-Reparatur neu geprueft / TinyCalc full series re-reviewed after IR002 repair | Dieselbe sichtbare Agentensitzung auf Branch `codex/intake-ir002-learner-clarity`. Der vollstaendige hashgebundene Serienreview umfasst `13` Ziele, `4` Wurzeln, `9` verbindliche Hard Gates und keine Worker. `IR002` ist durch den erfolgreichen Single-Re-Review geschlossen; `IR003` und `IR004` bleiben als zwei mittlere Befunde zur Lernendenklarheit in den bereits vorhandenen Secure-Development- und Sandbox-Intakes offen. Ergebnis `NeedsRemediation`: keine Critical-, High- oder Low-Befunde, keine akzeptierten Risiken und keine offenen Fragen. Umfang vor Statistik-Selbstnachweis: `0` Produktionscode-Zeilen, `0` Testcode-Zeilen und `348` neue Review- und Evidence-Zeilen. Konservative Referenz: `4.4` Arbeitstage, ca. `33.9` Stunden und `0.20` Monate; Thorsten-Solo-Referenz: `2.8` Arbeitstage, ca. `21.7` Stunden und `0.13` Monate. Gegen einen sichtbaren Aktivtag sind `4.4x` und `2.8x` blended repository speedup beziehungsweise Lieferdichte, keine Stoppuhrmessung. Request und Resultat bestanden die Bash- und PowerShell-Validatoren; kein Feature, Build, DocFX-Lauf oder Remote-Vorgang wurde gestartet. *The complete hash-bound series review covers 13 targets, four roots, nine binding hard gates, and no workers. IR002 is closed while two Medium learner-clarity findings remain in the existing IR003 and IR004 intakes. The 348 new review-evidence lines correspond to 4.4 conservative or 2.8 Thorsten-solo days as delivery-density estimates.* |
 
 | 2026-09-13 | Autorisierte Whitespace-Lieferkorrektur / Authorized whitespace delivery repair | Sechs Markdown-Zeilenumbrüche in drei noch uncommitteten Intake-Snapshots ersetzt; 21 Dokument-/Belegdateien kausal neu hashgebunden, Originalbytes verlustfrei mit SHA-256/Base64 gesichert. Frühere Bytegleichheitsangaben beziehen sich auf die gesicherten Originale, die lesbaren Archive sind normalisierte Kopien. Ein neuer vollständiger Einzelreview Ready; Serienstatus weiterhin NeedsRemediation mit IR003/IR004. 0 Produktionscode- und 0 Testcode-Änderungen; vorhandene Bash-/PowerShell-Validatoren bestanden. Sichtbares Arbeitsfenster 2026-09-13 auf codex/intake-ir002-learner-clarity; Referenzen 80/125 Zeilen je Arbeitstag, keine zusätzliche manuelle Aufwandsschätzung. UpdateRequired; Statistikblock generiert aus Git. / Six Markdown breaks normalized with lossless original evidence; a fresh Single review passes while unrelated series findings remain open. No product or test code changed; existing cross-shell validators passed. |
-| 2026-09-13 | Text-first-Mermaid-Regel fuer Lastenhefte / Text-first Mermaid rule for requirement documents | Eine sichtbare Agentensitzung auf Branch `codex/text-first-mermaid-intakes`. Das Level-2-Autorenprofil und alle fuenf Agentenflaechen samt Quelltemplates verlangen nun bei mindestens drei zusammenhaengenden Elementen ein knappes Mermaid-Diagramm, wenn es die Verstaendlichkeit verbessert. Die vollstaendige deutsch-englische Textbeschreibung bleibt zuerst und normativ; das Diagramm ist ergaenzend, lesbar und versionskontrolliert. Der aktuelle Serienreview enthaelt den korrigierten IR002/IR003/IR004-Ablauf als konkretes Beispiel. Der bestehende GSDB-Quellnachweis fuer `AGENTS.md` wurde kausal neu gebunden. Umfang vor Statistik-Selbstnachweis: `0` Produktionscode-Zeilen, `0` Testcode-Zeilen und `+109 / -11 = 98` Dokumentations-, Governance- und Evidence-Zeilen netto. Konservative Referenz: `1.2` Arbeitstage, ca. `9.6` Stunden und `0.06` Monate; Thorsten-Solo-Referenz: `0.8` Arbeitstage, ca. `6.1` Stunden und `0.04` Monate. Gegen einen sichtbaren Aktivtag sind `1.2x` und `0.8x` blended repository speedup beziehungsweise Lieferdichte, keine Stoppuhrmessung. NIST SSDF, CWE Top 25 und WCAG 2.2 AA gelten; ASVS, SBOM/VEX/SLSA, Produkt-AI-SBOM und Zero Trust sind fuer diese reine Dokumentations-/Governance-Aenderung begruendet `N/A`. Kein Produkt-Build oder DocFX-Lauf. *The durable rule keeps complete bilingual text normative and adds concise, version-controlled Mermaid source only where three or more connected elements materially benefit. The existing GSDB binding for AGENTS.md is refreshed. The 98 net governance and evidence lines correspond to 1.2 conservative or 0.8 Thorsten-solo days as delivery-density estimates.* |
+| 2026-09-13 | Text-first-Mermaid-Regel fuer Lastenhefte / Text-first Mermaid rule for requirement documents | Eine sichtbare Agentensitzung auf Branch `codex/text-first-mermaid-intakes`. Das Level-2-Autorenprofil und alle fuenf Agentenflaechen samt Quelltemplates verlangen nun bei mindestens drei zusammenhaengenden Elementen ein knappes Mermaid-Diagramm, wenn es die Verstaendlichkeit verbessert. Die vollstaendige deutsch-englische Textbeschreibung bleibt zuerst und normativ; das Diagramm ist ergaenzend, lesbar und versionskontrolliert. Der aktuelle Serienreview enthaelt den korrigierten IR002/IR003/IR004-Ablauf als konkretes Beispiel. Der bestehende GSDB-Quellnachweis fuer `AGENTS.md` wurde kausal neu gebunden. Umfang vor Statistik-Selbstnachweis: `0` Produktionscode-Zeilen, `0` Testcode-Zeilen und `+118 / -11 = 107` Dokumentations-, Governance- und Evidence-Zeilen netto. Konservative Referenz: `1.3` Arbeitstage, ca. `10.4` Stunden und `0.06` Monate; Thorsten-Solo-Referenz: `0.9` Arbeitstage, ca. `6.7` Stunden und `0.04` Monate. Gegen einen sichtbaren Aktivtag sind `1.3x` und `0.9x` blended repository speedup beziehungsweise Lieferdichte, keine Stoppuhrmessung. NIST SSDF, CWE Top 25 und WCAG 2.2 AA gelten; ASVS, SBOM/VEX/SLSA, Produkt-AI-SBOM und Zero Trust sind fuer diese reine Dokumentations-/Governance-Aenderung begruendet `N/A`. Kein Produkt-Build oder DocFX-Lauf. *The durable rule keeps complete bilingual text normative and adds concise, version-controlled Mermaid source only where three or more connected elements materially benefit. The existing GSDB binding for AGENTS.md is refreshed. The 107 net governance and evidence lines correspond to 1.3 conservative or 0.9 Thorsten-solo days as delivery-density estimates.* |
 
 ## Statistikprofil-1-Archiv / Statistics Profile 1 Archive
 Basis dieses Schlussblocks sind die aktuell dokumentierten Snapshot- und
@@ -729,25 +729,25 @@ Profil 2 verwendet Git-getrackte Textdateien und sichtbare Git-Aktivitaet. Die W
 
 | Kennzahl / Metric | Wert / Value |
 |---|---:|
-| Textbasis / Text base | 202365 lines |
+| Textbasis / Text base | 202374 lines |
 | Textdateien / Text files | 1282 |
 | Beobachtbarer Zeitraum / Observable period | 2025-09-21..2026-09-13 |
 | Aktivtage / Active days | 81 |
-| Relevante Commits / Relevant commits | 241 |
-| Zeilen je Aktivtag / Lines per active day | 2498.3 |
+| Relevante Commits / Relevant commits | 242 |
+| Zeilen je Aktivtag / Lines per active day | 2498.4 |
 | Peak-Tag im Fenster / Peak day in window | 2026-06-17 / 27058 |
 | Peak-Woche im Fenster / Peak week in window | 2026-07-19 / 33387 |
 | Laengste Serie / Longest streak | 8 days |
 | Speedup vs. 80 lines/day | 31.2x |
 | Speedup vs. 125 lines/day | 20.0x |
-| Methodik / Methodology | v2; source `d1653a0c7f2f` |
+| Methodik / Methodology | v2; source `5494a55c1263` |
 
 ### Artefaktmix / Artifact Mix
 
 ```text
 Produktiv / Production          [#...................]   1.4% | 2830
 Tests                           [#...................]   4.1% | 8338
-Dokumentation / Documentation   [###############.....]  73.9% | 149583
+Dokumentation / Documentation   [###############.....]  73.9% | 149592
 Skripte / Scripts               [##..................]  11.5% | 23223
 Konfiguration / Configuration   [##..................]   7.6% | 15376
 Daten und Medien / Data and media [....................]   0.0% | 0
@@ -897,7 +897,7 @@ Die Faktoren vergleichen sichtbare Lieferdichte mit den dokumentierten manuellen
 Scale: 0..5000 lines/day
 Experienced manual [#...................] 80
 Thorsten solo      [#...................] 125
-Visible repository [##########..........] 2498.3
+Visible repository [##########..........] 2498.4
 ```
 
 Die gemeinsame Skala vergleicht Referenzen und sichtbare Lieferdichte. Sie schreibt die Git-Aktivitaet keiner Person oder KI pauschal zu.
@@ -923,6 +923,6 @@ DE: Das Fenster beginnt am 2025-09-21 und endet am 2026-09-13. Es enthaelt 81 ak
 | 2026-06 | 37273 |
 | 2026-07 | 74031 |
 | 2026-08 | 26210 |
-| 2026-09 | 60083 |
+| 2026-09 | 60148 |
 
 <!-- project-statistics-v2:end -->
