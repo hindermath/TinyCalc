@@ -1,17 +1,17 @@
 {
   "schemaVersion": "2.0",
   "documentType": "IntakeReceipt",
-  "receiptId": "1f2e8e2e-cdda-4fab-a498-a878f52770c2",
+  "receiptId": "fa3e818c-350d-497c-8216-31230ae57c67",
   "intakeId": "40e85866-18d3-4cc8-b667-a1de8da44b10",
   "generator": {
     "preset": "intake-authoring-governance",
-    "version": "0.3.4"
+    "version": "0.3.1"
   },
-  "createdAt": "2026-09-13T12:48:39.987878Z",
+  "createdAt": "2026-09-01T07:17:52Z",
   "operation": {
-    "authorityEvidence": "Thorsten Hindermann explicitly approved the prepared two-receipt renewal and required reviews: Fuer TinyCalc genehmigt. Current MergeAndSync with Admin-Bypass applies to this maintenance delivery only; no downstream product implementation is started or authorized by these receipts.",
+    "operationId": "d4d23f7a-37a6-435c-be84-e6397fa37c48",
     "type": "Update",
-    "operationId": "069d1a52-bf1e-4861-b2f4-fece81d376c6"
+    "authorityEvidence": "The user explicitly requested implementation of the approved intake-only consolidation plan. No product implementation, commit, push, pull request, merge, bypass, provider, or follow-up-feature authority is granted."
   },
   "status": "ReadyForReview",
   "target": {
@@ -22,27 +22,6 @@
     {
       "sourceId": "SRC001",
       "order": 1,
-      "kind": "File",
-      "label": "Byte-identical immediately preceding intake",
-      "location": "Repository",
-      "path": "requirements/intakes/archive/tui-funktionsabnahme-und-regressionsvertrag/20260913-receipt-renewal/Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md",
-      "requestedUrl": "N/A",
-      "finalUrl": "N/A",
-      "retrievedAt": "N/A",
-      "httpStatus": "N/A",
-      "contentType": "N/A",
-      "contentLength": "N/A",
-      "etag": "N/A",
-      "lastModified": "N/A",
-      "redirectChain": [],
-      "rawSha256": "N/A",
-      "normalizedSha256": "f7b72c2abbd55d197cbc3cee5050f189868656ae0cff8b8745fa430535632d40",
-      "gitBlob": "N/A",
-      "proofBoundary": "Byte-identical archive; normalized and raw SHA-256"
-    },
-    {
-      "sourceId": "SRC002",
-      "order": 2,
       "kind": "File",
       "label": "Byte-identical prior active intake",
       "location": "Repository",
@@ -62,8 +41,8 @@
       "proofBoundary": "Byte-identical repository archive"
     },
     {
-      "sourceId": "SRC003",
-      "order": 3,
+      "sourceId": "SRC002",
+      "order": 2,
       "kind": "Inline",
       "label": "Approved complete capability baseline and durable regression decisions",
       "location": "SnapshotOnly",
@@ -83,8 +62,8 @@
       "proofBoundary": "SnapshotOnly"
     },
     {
-      "sourceId": "SRC004",
-      "order": 4,
+      "sourceId": "SRC003",
+      "order": 3,
       "kind": "File",
       "label": "Current Terminal.Gui TUI interaction surface",
       "location": "Repository",
@@ -104,8 +83,8 @@
       "proofBoundary": "Repository file and normalized SHA-256"
     },
     {
-      "sourceId": "SRC005",
-      "order": 5,
+      "sourceId": "SRC004",
+      "order": 4,
       "kind": "File",
       "label": "Current README product surface",
       "location": "Repository",
@@ -120,13 +99,13 @@
       "lastModified": "N/A",
       "redirectChain": [],
       "rawSha256": "N/A",
-      "normalizedSha256": "f616050f682899c224591707bdcfb713e8709c295355f8fd24cce44f46193a40",
-      "gitBlob": "2e1c6d20118a0b2a450f74a7757ff64523806c75",
-      "proofBoundary": "Current repository README; explicitly authorized source freshness renewal"
+      "normalizedSha256": "4e6f8d362549e650937de17bb5d257ce5d0ced6149a0012ede8923333a9e1c50",
+      "gitBlob": "03ab7029a31192fa726707cb1f9542344a75c496",
+      "proofBoundary": "Repository file and normalized SHA-256"
     },
     {
-      "sourceId": "SRC006",
-      "order": 6,
+      "sourceId": "SRC005",
+      "order": 5,
       "kind": "File",
       "label": "Historical and runtime help source",
       "location": "Repository",
@@ -146,8 +125,8 @@
       "proofBoundary": "Repository file and normalized SHA-256"
     },
     {
-      "sourceId": "SRC007",
-      "order": 7,
+      "sourceId": "SRC006",
+      "order": 6,
       "kind": "File",
       "label": "Bundled runtime help resource",
       "location": "Repository",
@@ -167,8 +146,8 @@
       "proofBoundary": "Repository file and normalized SHA-256"
     },
     {
-      "sourceId": "SRC008",
-      "order": 8,
+      "sourceId": "SRC007",
+      "order": 7,
       "kind": "File",
       "label": "Migrated help surface",
       "location": "Repository",
@@ -188,8 +167,8 @@
       "proofBoundary": "Repository file and normalized SHA-256"
     },
     {
-      "sourceId": "SRC009",
-      "order": 9,
+      "sourceId": "SRC008",
+      "order": 8,
       "kind": "File",
       "label": "Current formula evaluator surface",
       "location": "Repository",
@@ -209,8 +188,8 @@
       "proofBoundary": "Repository file and normalized SHA-256"
     },
     {
-      "sourceId": "SRC010",
-      "order": 10,
+      "sourceId": "SRC009",
+      "order": 9,
       "kind": "File",
       "label": "Current spreadsheet engine surface",
       "location": "Repository",
@@ -228,27 +207,6 @@
       "normalizedSha256": "32583a74b6cd59e92b21f949cdf640b45b0950493f6006625375aa1726dca022",
       "gitBlob": "944904750d29f4aa3403ec841cd5afbc3b138c24",
       "proofBoundary": "Repository file and normalized SHA-256"
-    },
-    {
-      "sourceId": "SRC011",
-      "order": 11,
-      "kind": "File",
-      "label": "Explicit current two-receipt update approval",
-      "location": "Repository",
-      "path": "specs/intake-authoring-operations/069d1a52-bf1e-4861-b2f4-fece81d376c6/proposal.json",
-      "requestedUrl": "N/A",
-      "finalUrl": "N/A",
-      "retrievedAt": "N/A",
-      "httpStatus": "N/A",
-      "contentType": "N/A",
-      "contentLength": "N/A",
-      "etag": "N/A",
-      "lastModified": "N/A",
-      "redirectChain": [],
-      "rawSha256": "N/A",
-      "normalizedSha256": "575de423dd12145d681a043a7e0fb46e92ba79006279e87ed5eadf65df5bc757",
-      "gitBlob": "N/A",
-      "proofBoundary": "Byte-identical archive; normalized and raw SHA-256"
     }
   ],
   "profile": "level2-lastenheft",
@@ -303,10 +261,10 @@
   "promptState": "Enabled",
   "provenanceMode": "Supersession",
   "supersedes": {
-    "receiptPath": "specs/intake-authoring-receipts/history/tui-funktionsabnahme-und-regressionsvertrag.20260913-receipt-renewal.json",
-    "targetNormalizedSha256": "f7b72c2abbd55d197cbc3cee5050f189868656ae0cff8b8745fa430535632d40",
-    "archiveTargetPath": "requirements/intakes/archive/tui-funktionsabnahme-und-regressionsvertrag/20260913-receipt-renewal/Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md",
-    "archiveReceiptPath": "specs/intake-authoring-receipts/history/tui-funktionsabnahme-und-regressionsvertrag.20260913-receipt-renewal.json"
+    "receiptPath": "specs/intake-authoring-receipts/history/tui-funktionsabnahme-und-regressionsvertrag.20260901T071752Z.json",
+    "targetNormalizedSha256": "5903d7bdbc9cd2f04194a1013dcc75208905164d0d92c016d206eb0e39b7cbb0",
+    "archiveTargetPath": "requirements/intakes/archive/tui-funktionsabnahme-und-regressionsvertrag/20260901T071752Z/Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md",
+    "archiveReceiptPath": "specs/intake-authoring-receipts/history/tui-funktionsabnahme-und-regressionsvertrag.20260901T071752Z.json"
   },
   "legacyAdoption": {
     "evidenceType": "N/A",
@@ -314,7 +272,7 @@
     "priorGitBlob": "N/A"
   },
   "updateAuthorized": true,
-  "updateAuthorityEvidence": "Thorsten Hindermann explicitly approved the prepared two-receipt renewal and required reviews: Fuer TinyCalc genehmigt. Current MergeAndSync with Admin-Bypass applies to this maintenance delivery only; no downstream product implementation is started or authorized by these receipts.",
+  "updateAuthorityEvidence": "The user explicitly requested implementation of the approved intake-only consolidation plan. No product implementation, commit, push, pull request, merge, bypass, provider, or follow-up-feature authority is granted.",
   "series": {
     "seriesId": "5b4523b4-d946-4091-9cbc-11825af94332",
     "manifestPath": "requirements/intakes/series/tinycalc-delivery/manifest.json",

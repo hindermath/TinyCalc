@@ -130,6 +130,17 @@ try {
     }
     Write-HBText $ReceiptPath ($Receipt | ConvertTo-Json -Depth 30)
     Invoke-HBPair Receipt $ReceiptPath $Root 0 'schema 2 URL receipt'
+    $CurrentVersion = [regex]::Match((Get-Content (Join-Path $PresetRoot 'preset.yml') -Raw), '(?m)^\s+version:\s*"?([^"\s]+)').Groups[1].Value
+    if (-not $CurrentVersion) { throw 'Missing current preset version' }
+    $OriginalVersion = $Receipt.generator.version
+    $Receipt.generator.version = $CurrentVersion
+    Write-HBText $ReceiptPath ($Receipt | ConvertTo-Json -Depth 20)
+    Invoke-HBPair Receipt $ReceiptPath $Root 0 'current release generator'
+    $Receipt.generator.version = '99.0.0'
+    Write-HBText $ReceiptPath ($Receipt | ConvertTo-Json -Depth 20)
+    Invoke-HBPair Receipt $ReceiptPath $Root 2 'unknown generator version'
+    $Receipt.generator.version = $OriginalVersion
+    Write-HBText $ReceiptPath ($Receipt | ConvertTo-Json -Depth 20)
     $ArchiveRelative = 'requirements/archive/url-source.001-completed.md'
     $ConfigPath = Join-Path $Root 'requirements/intake-governance-config.json'
     $ManifestPath = Join-Path $Root 'requirements/series.json'

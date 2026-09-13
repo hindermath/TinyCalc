@@ -1,17 +1,17 @@
 {
   "schemaVersion": "2.0",
   "documentType": "IntakeReceipt",
-  "receiptId": "f4079254-7449-468e-83d0-113e09395397",
+  "receiptId": "cbb11a6e-0b5c-4b47-a49c-37648ba16cb6",
   "intakeId": "b4f18668-0276-45ee-8a6f-16a8bd8b833d",
   "generator": {
     "preset": "intake-authoring-governance",
-    "version": "0.3.4"
+    "version": "0.3.1"
   },
-  "createdAt": "2026-09-13T12:48:39.987878Z",
+  "createdAt": "2026-09-01T07:17:52Z",
   "operation": {
-    "authorityEvidence": "Thorsten Hindermann explicitly approved the prepared two-receipt renewal and required reviews: Fuer TinyCalc genehmigt. Current MergeAndSync with Admin-Bypass applies to this maintenance delivery only; no downstream product implementation is started or authorized by these receipts.",
+    "operationId": "85e5cd04-bf99-47b1-bad9-04a6469873dc",
     "type": "Update",
-    "operationId": "0869482c-c6a8-4faf-9a41-a05aa7f4a55c"
+    "authorityEvidence": "The user explicitly requested implementation of the approved intake-only consolidation plan. No product implementation, commit, push, pull request, merge, bypass, provider, or follow-up-feature authority is granted."
   },
   "status": "ReadyForReview",
   "target": {
@@ -22,27 +22,6 @@
     {
       "sourceId": "SRC001",
       "order": 1,
-      "kind": "File",
-      "label": "Byte-identical immediately preceding intake",
-      "location": "Repository",
-      "path": "requirements/intakes/archive/rename-microcalc-tinycalc/20260913-receipt-renewal/Lastenheft_Rename_MicroCalc_TinyCalc.md",
-      "requestedUrl": "N/A",
-      "finalUrl": "N/A",
-      "retrievedAt": "N/A",
-      "httpStatus": "N/A",
-      "contentType": "N/A",
-      "contentLength": "N/A",
-      "etag": "N/A",
-      "lastModified": "N/A",
-      "redirectChain": [],
-      "rawSha256": "N/A",
-      "normalizedSha256": "49642f8486493627b6ebc30454423e33fdad748ed6d434943a78aa79e6440f1c",
-      "gitBlob": "N/A",
-      "proofBoundary": "Byte-identical archive; normalized and raw SHA-256"
-    },
-    {
-      "sourceId": "SRC002",
-      "order": 2,
       "kind": "File",
       "label": "Byte-identical prior active intake",
       "location": "Repository",
@@ -62,8 +41,8 @@
       "proofBoundary": "Byte-identical repository archive"
     },
     {
-      "sourceId": "SRC003",
-      "order": 3,
+      "sourceId": "SRC002",
+      "order": 2,
       "kind": "Inline",
       "label": "Approved live-inventory, compatibility, and release-closeout decisions",
       "location": "SnapshotOnly",
@@ -83,8 +62,8 @@
       "proofBoundary": "SnapshotOnly"
     },
     {
-      "sourceId": "SRC004",
-      "order": 4,
+      "sourceId": "SRC003",
+      "order": 3,
       "kind": "File",
       "label": "Binding functional product-contract intake",
       "location": "Repository",
@@ -104,8 +83,8 @@
       "proofBoundary": "Current active intake and normalized SHA-256"
     },
     {
-      "sourceId": "SRC005",
-      "order": 5,
+      "sourceId": "SRC004",
+      "order": 4,
       "kind": "File",
       "label": "Binding accessibility acceptance intake",
       "location": "Repository",
@@ -125,8 +104,8 @@
       "proofBoundary": "Current active intake and normalized SHA-256"
     },
     {
-      "sourceId": "SRC006",
-      "order": 6,
+      "sourceId": "SRC005",
+      "order": 5,
       "kind": "File",
       "label": "Current TUI product-name boundary",
       "location": "Repository",
@@ -146,8 +125,8 @@
       "proofBoundary": "Repository file and normalized SHA-256"
     },
     {
-      "sourceId": "SRC007",
-      "order": 7,
+      "sourceId": "SRC006",
+      "order": 6,
       "kind": "File",
       "label": "Current CI workflow inventory boundary",
       "location": "Repository",
@@ -167,8 +146,8 @@
       "proofBoundary": "Repository file and normalized SHA-256"
     },
     {
-      "sourceId": "SRC008",
-      "order": 8,
+      "sourceId": "SRC007",
+      "order": 7,
       "kind": "File",
       "label": "Current solution inventory boundary",
       "location": "Repository",
@@ -188,8 +167,8 @@
       "proofBoundary": "Repository file and normalized SHA-256"
     },
     {
-      "sourceId": "SRC009",
-      "order": 9,
+      "sourceId": "SRC008",
+      "order": 8,
       "kind": "File",
       "label": "Current public README boundary",
       "location": "Repository",
@@ -204,13 +183,13 @@
       "lastModified": "N/A",
       "redirectChain": [],
       "rawSha256": "N/A",
-      "normalizedSha256": "f616050f682899c224591707bdcfb713e8709c295355f8fd24cce44f46193a40",
-      "gitBlob": "2e1c6d20118a0b2a450f74a7757ff64523806c75",
-      "proofBoundary": "Current repository README; explicitly authorized source freshness renewal"
+      "normalizedSha256": "4e6f8d362549e650937de17bb5d257ce5d0ced6149a0012ede8923333a9e1c50",
+      "gitBlob": "03ab7029a31192fa726707cb1f9542344a75c496",
+      "proofBoundary": "Repository file and normalized SHA-256"
     },
     {
-      "sourceId": "SRC010",
-      "order": 10,
+      "sourceId": "SRC009",
+      "order": 9,
       "kind": "File",
       "label": "Current migrated learner-facing help boundary",
       "location": "Repository",
@@ -228,27 +207,6 @@
       "normalizedSha256": "c6ba22dcb82b17f17b052a33b7ebc541b8cf759203a2eddedeaf247f456026f3",
       "gitBlob": "7e890b58d60c11602c2ab2b91085afd364537c04",
       "proofBoundary": "Repository file and normalized SHA-256"
-    },
-    {
-      "sourceId": "SRC011",
-      "order": 11,
-      "kind": "File",
-      "label": "Explicit current two-receipt update approval",
-      "location": "Repository",
-      "path": "specs/intake-authoring-operations/0869482c-c6a8-4faf-9a41-a05aa7f4a55c/proposal.json",
-      "requestedUrl": "N/A",
-      "finalUrl": "N/A",
-      "retrievedAt": "N/A",
-      "httpStatus": "N/A",
-      "contentType": "N/A",
-      "contentLength": "N/A",
-      "etag": "N/A",
-      "lastModified": "N/A",
-      "redirectChain": [],
-      "rawSha256": "N/A",
-      "normalizedSha256": "71209700fdb878404f654c9f82dd6310e303785fc1f7db3870cec86ea51c05a3",
-      "gitBlob": "N/A",
-      "proofBoundary": "Byte-identical archive; normalized and raw SHA-256"
     }
   ],
   "profile": "level2-lastenheft",
@@ -303,10 +261,10 @@
   "promptState": "Enabled",
   "provenanceMode": "Supersession",
   "supersedes": {
-    "receiptPath": "specs/intake-authoring-receipts/history/rename-microcalc-tinycalc.20260913-receipt-renewal.json",
-    "targetNormalizedSha256": "49642f8486493627b6ebc30454423e33fdad748ed6d434943a78aa79e6440f1c",
-    "archiveTargetPath": "requirements/intakes/archive/rename-microcalc-tinycalc/20260913-receipt-renewal/Lastenheft_Rename_MicroCalc_TinyCalc.md",
-    "archiveReceiptPath": "specs/intake-authoring-receipts/history/rename-microcalc-tinycalc.20260913-receipt-renewal.json"
+    "receiptPath": "specs/intake-authoring-receipts/history/rename-microcalc-tinycalc.20260901T071752Z.json",
+    "targetNormalizedSha256": "951950e7ca8c726d9d92756b2e87e405af91668e6010aef3751e643278b46990",
+    "archiveTargetPath": "requirements/intakes/archive/rename-microcalc-tinycalc/20260901T071752Z/Lastenheft_Rename_MicroCalc_TinyCalc.md",
+    "archiveReceiptPath": "specs/intake-authoring-receipts/history/rename-microcalc-tinycalc.20260901T071752Z.json"
   },
   "legacyAdoption": {
     "evidenceType": "N/A",
@@ -314,7 +272,7 @@
     "priorGitBlob": "N/A"
   },
   "updateAuthorized": true,
-  "updateAuthorityEvidence": "Thorsten Hindermann explicitly approved the prepared two-receipt renewal and required reviews: Fuer TinyCalc genehmigt. Current MergeAndSync with Admin-Bypass applies to this maintenance delivery only; no downstream product implementation is started or authorized by these receipts.",
+  "updateAuthorityEvidence": "The user explicitly requested implementation of the approved intake-only consolidation plan. No product implementation, commit, push, pull request, merge, bypass, provider, or follow-up-feature authority is granted.",
   "series": {
     "seriesId": "5b4523b4-d946-4091-9cbc-11825af94332",
     "manifestPath": "requirements/intakes/series/tinycalc-delivery/manifest.json",

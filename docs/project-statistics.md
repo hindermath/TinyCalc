@@ -556,6 +556,8 @@ runtime evidence.*
 
 | 2026-09-13 | Intake-Lifecycle-Preset-Rollout / Intake lifecycle preset rollout | Vorhandene Authoring-/Review-/Sequencing-Presets auf 0.3.2/0.2.2/0.2.4 aktualisiert; optionale Profile und Dokumentation nachgefuehrt. Pruefnachweise in docs/maintenance/intake-lifecycle-fleet-rollout.json. / Update existing presets and profile references; preserve other presets and project extensions. |
 
+| 2026-09-13 | Autorisierte Receipt-Erneuerung / Authorized receipt renewal | Zwei byte-identische Intake-Archive, zwei Receipt-Nachfolger, zwei Operationen und zwei Einzelreviews; kanonischer Generator-Backport auf Authoring 0.3.4. 15 Artefaktpruefungen und 36 Negativ-Fixtures bestanden; zwei bestehende Medium-Referenzbefunde bleiben vor Produktausfuehrung offen. Kein Produktcode geaendert. / Two receipt successors and scoped reviews preserve content; canonical compatibility backport, 15 artifact checks and 36 fixtures pass, two Medium business findings remain open. |
+
 ## Statistikprofil-1-Archiv / Statistics Profile 1 Archive
 Basis dieses Schlussblocks sind die aktuell dokumentierten Snapshot- und
 Phasenwerte aus den Abschnitten `## Gesamtstand des Repositories` und

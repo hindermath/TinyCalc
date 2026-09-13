@@ -1,0 +1,43 @@
+{
+  "schemaVersion": "1.0",
+  "documentType": "IntakeOperation",
+  "operationId": "0869482c-c6a8-4faf-9a41-a05aa7f4a55c",
+  "type": "Update",
+  "status": "Completed",
+  "createdAt": "2026-09-13T12:48:39.987878Z",
+  "authorityEvidence": "Thorsten Hindermann explicitly approved the prepared two-receipt renewal and required reviews: Fuer TinyCalc genehmigt. Current MergeAndSync with Admin-Bypass applies to this maintenance delivery only; no downstream product implementation is started or authorized by these receipts.",
+  "proposalPath": "specs/intake-authoring-operations/0869482c-c6a8-4faf-9a41-a05aa7f4a55c/proposal.json",
+  "proposalNormalizedSha256": "71209700fdb878404f654c9f82dd6310e303785fc1f7db3870cec86ea51c05a3",
+  "approval": {
+    "approvedAt": "2026-09-13T12:48:39.987878Z",
+    "evidence": "Thorsten Hindermann explicitly approved the prepared two-receipt renewal and required reviews: Fuer TinyCalc genehmigt. Current MergeAndSync with Admin-Bypass applies to this maintenance delivery only; no downstream product implementation is started or authorized by these receipts.",
+    "approvedBy": "Thorsten Hindermann",
+    "approved": true
+  },
+  "stagingDirectory": ".",
+  "intendedTargets": [
+    "specs/intake-authoring-receipts/rename-microcalc-tinycalc.json",
+    "requirements/intakes/archive/rename-microcalc-tinycalc/20260913-receipt-renewal/Lastenheft_Rename_MicroCalc_TinyCalc.md",
+    "specs/intake-authoring-receipts/history/rename-microcalc-tinycalc.20260913-receipt-renewal.json",
+    "specs/intake-authoring-operations/0869482c-c6a8-4faf-9a41-a05aa7f4a55c/proposal.json"
+  ],
+  "validatedTargets": [
+    "specs/intake-authoring-receipts/rename-microcalc-tinycalc.json",
+    "requirements/intakes/archive/rename-microcalc-tinycalc/20260913-receipt-renewal/Lastenheft_Rename_MicroCalc_TinyCalc.md",
+    "specs/intake-authoring-receipts/history/rename-microcalc-tinycalc.20260913-receipt-renewal.json",
+    "specs/intake-authoring-operations/0869482c-c6a8-4faf-9a41-a05aa7f4a55c/proposal.json"
+  ],
+  "publishedTargets": [
+    "specs/intake-authoring-receipts/rename-microcalc-tinycalc.json",
+    "requirements/intakes/archive/rename-microcalc-tinycalc/20260913-receipt-renewal/Lastenheft_Rename_MicroCalc_TinyCalc.md",
+    "specs/intake-authoring-receipts/history/rename-microcalc-tinycalc.20260913-receipt-renewal.json",
+    "specs/intake-authoring-operations/0869482c-c6a8-4faf-9a41-a05aa7f4a55c/proposal.json"
+  ],
+  "rollbackBoundary": "Discard isolated preparation on failure. Prior target and receipt retained byte-for-byte; no intake content, series order or product changes.",
+  "failure": {
+    "class": "N/A",
+    "message": "N/A"
+  },
+  "nextAction": "Address IR001 from specs/intake-review-renewals/20260913/rename-microcalc-tinycalc/result.json before downstream intake execution; no product run started",
+  "publicationBoundary": "Validated isolated Git worktree; delivery branch receives the complete commit by fast-forward after validation. Target content remains byte-identical."
+}

@@ -1,0 +1,22 @@
+{
+  "schemaVersion": "1.1",
+  "reviewId": "ccbf5823-5d41-4191-907a-91bb33838d6c",
+  "mode": "Single",
+  "policy": "level2-lastenheft",
+  "targets": [
+    {
+      "role": "Primary",
+      "path": "requirements/intakes/active/Lastenheft_Rename_MicroCalc_TinyCalc.md"
+    }
+  ],
+  "series": {
+    "orderedTargetPaths": [],
+    "roots": [],
+    "dependencies": []
+  },
+  "campaign": {
+    "manifestPath": "N/A",
+    "workers": [],
+    "operatorExceptions": []
+  }
+}

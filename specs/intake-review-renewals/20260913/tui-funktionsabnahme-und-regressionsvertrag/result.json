@@ -1,0 +1,72 @@
+{
+  "schemaVersion": "1.1",
+  "reviewId": "a41a4041-adc7-4779-b065-129a587eb0eb",
+  "mode": "Single",
+  "status": "NeedsRemediation",
+  "policy": "level2-lastenheft",
+  "reviewedAt": "2026-09-13T12:58:22.3399150Z",
+  "repository": {
+    "root": ".",
+    "head": "58fd6f552fd6f82ccdb522aa5026a0462f5e9917"
+  },
+  "requestEvidence": {
+    "normalizedSha256": "9a0da36ac281cb533b679180bb601f5a70be02e036ddd3c2aa41eb86c2df81fa",
+    "path": "specs/intake-review-renewals/20260913/tui-funktionsabnahme-und-regressionsvertrag/request.json"
+  },
+  "targets": [
+    {
+      "gitBlob": "36536e5fd547d42ff9f68b17fb04486a53388353",
+      "path": "requirements/intakes/active/Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md",
+      "role": "Primary",
+      "normalizedSha256": "f7b72c2abbd55d197cbc3cee5050f189868656ae0cff8b8745fa430535632d40"
+    }
+  ],
+  "findings": [
+    {
+      "disposition": "Open; preserve intake bytes under the approved receipt-only scope; repair references before downstream execution",
+      "category": "ReferenceConsistency",
+      "evidence": "Intake names Feature-004 functional and Feature-005 A11Y gates, while current specs/004-rl-se-self-assessment and specs/005-gsdb-intensive-review identify different features. Semantic functional/A11Y requirements remain explicit; fixed feature-number references need a separately scoped correction.",
+      "reevaluationTrigger": "Before specifying or executing this intake, or after an explicitly approved reference correction",
+      "id": "IR001",
+      "target": "requirements/intakes/active/Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md",
+      "owner": "Thorsten Hindermann",
+      "severity": "Medium"
+    }
+  ],
+  "questions": [],
+  "acceptedRisks": [],
+  "operatorExceptions": [],
+  "coverage": {
+    "individual": [
+      "requirements/intakes/active/Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md"
+    ],
+    "series": [],
+    "workers": []
+  },
+  "summary": {
+    "critical": 0,
+    "high": 0,
+    "medium": 1,
+    "low": 0
+  },
+  "supersedes": "N/A",
+  "reviewBoundary": {
+    "checked": [
+      "Identity, audience and prior knowledge",
+      "German-first/English-second readability and first-use terminology",
+      "Goal, scope, non-goals, atomic requirements and measurable acceptance",
+      "Dependency order and current series binding",
+      "Security, privacy, accessibility, platform and supply-chain applicability",
+      "Prompt and delivery-authority boundaries",
+      "References and absence of credentials or unnecessary personal data"
+    ],
+    "historicalReviewDisposition": "Prior full-series review was already explicitly superseded on 2026-09-05; its archived bytes and supersession record remain unchanged",
+    "fullSeriesReview": "Still pending; this Single review does not replace a Series review",
+    "unchangedTarget": true,
+    "historicalSupersessionPath": "requirements/intakes/series-archive/tinycalc-delivery/20260905T185700Z-review/superseded-review.json",
+    "nextAction": "Resolve IR001 under a separately scoped intake update before downstream execution; no Specify or autonomous run started",
+    "receiptNormalizedSha256": "77f0d4acef53283abb10fbc2a8425fa30f3622987e1e37e30ab62b8d89881157",
+    "receiptPath": "specs/intake-authoring-receipts/tui-funktionsabnahme-und-regressionsvertrag.json",
+    "receiptId": "1f2e8e2e-cdda-4fab-a498-a878f52770c2"
+  }
+}
