@@ -639,6 +639,8 @@ function receiptFor(member) {
     documentType: "IntakeReceipt",
     receiptId: member.receiptId,
     intakeId: prior.receiptId,
+    // DE/EN: Historical replay of the fixed migration receipt ID/date below.
+    // This records the original generator, not the currently installed preset.
     generator: {preset: "intake-authoring-governance", version: "0.2.1"},
     createdAt,
     operation: {
@@ -712,6 +714,9 @@ const seriesReceipt = {
   documentType: "IntakeSeriesReceipt",
   receiptId: seriesReceiptId,
   seriesId,
+  // DE/EN: Preserve provenance for this fixed historical seriesReceiptId/createdAt.
+  // New operations use the installed preset template; changing this label would
+  // rewrite the existing receipt without a new operation identity.
   generator: {preset: "intake-sequencing-governance", version: "0.2.3"},
   createdAt: seriesUpdatedAt,
   operation: {
