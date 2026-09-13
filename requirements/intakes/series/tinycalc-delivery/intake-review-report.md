@@ -19,6 +19,47 @@ The complete series review ends with **NeedsRemediation**. All 13 target hashes,
 
 *`IR002` is closed. Ready Single review `f560c480-9160-463a-b2c3-bba5ba5d776b` binds the updated Didactic intake with hash `460abc8142179cc40e1d0cfe07928260456088205b3200e7ca6c6e10818e46da`.*
 
+## Textorientierter Ablauf / Text-First Flow
+
+Deutsch:
+Der Serienreview umfasst 13 Ziele. `IR002` ist geschlossen. `IR003` und `IR004`
+bleiben als mittlere Befunde in ihren bereits vorhandenen Intake-Dateien offen.
+Diese beiden Dateien werden korrigiert; anschließend wird die vollständige Serie
+erneut geprüft. Nur ein Review ohne verbleibende Befunde kann den Status `Ready`
+erreichen. Bleiben Befunde offen, bleibt der Status `NeedsRemediation`.
+
+English:
+The series review covers 13 targets. `IR002` is closed. `IR003` and `IR004`
+remain open as Medium findings in their existing intake files. Those two files
+will be repaired, and then the complete series will be reviewed again. Only a
+review without remaining findings can reach `Ready`. If findings remain, the
+status remains `NeedsRemediation`.
+
+```mermaid
+flowchart TD
+    A["Serienreview / Series review<br/>13 Ziele / targets"]
+    A --> B["IR002 geschlossen / closed<br/>Single review: Ready"]
+    A --> C["IR003 offen / open<br/>Secure Development"]
+    A --> D["IR004 offen / open<br/>Sandbox hardening"]
+    C --> E["Bestehende Intakes reparieren / Repair existing intakes"]
+    D --> E
+    E --> F["Gesamte Serie neu prüfen / Re-review complete series"]
+    F --> G{"Befunde übrig? / Findings remain?"}
+    G -- "Nein / No" --> H["Ready"]
+    G -- "Ja / Yes" --> I["NeedsRemediation"]
+```
+
+**Textalternative DE:** Der Serienreview umfasst 13 Ziele. `IR002` ist
+geschlossen; `IR003` und `IR004` bleiben offen und führen gemeinsam zur
+Reparatur der vorhandenen Intakes. Danach wird die vollständige Serie erneut
+geprüft. Ohne verbleibende Befunde lautet das Ergebnis `Ready`; andernfalls
+bleibt es `NeedsRemediation`.
+
+**Text alternative EN:** The series review covers 13 targets. `IR002` is
+closed; `IR003` and `IR004` remain open and jointly lead to repair of the
+existing intakes. The complete series is then reviewed again. With no findings
+remaining, the result is `Ready`; otherwise, it remains `NeedsRemediation`.
+
 ## Abdeckung und Grenzen / Coverage and Boundaries
 
 Es wurden 13 Ziele und keine Worker geprueft. Befunde: 0 Critical, 0 High, 2 Medium und 0 Low. Es gibt keine akzeptierten Risiken und keine offenen Fragen. Schema-2.0-Konfiguration, BCP-47-Sprache, Namensprofil, vier Rollen, sechs Collections, Receipt-/Zielhashes, DAG, Lifecycle, Handoffs, Security, Privacy, A11Y, Plattform, Supply Chain, Evidence, Prompt-Grenzen und textbasierte Zugaenglichkeit wurden geprueft. Der Review startet kein Feature und erteilt keine Remote-Berechtigung.

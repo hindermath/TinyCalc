@@ -20,9 +20,13 @@ Ein Lastenheft MUSS bei fachlich hilfreichen Abläufen, Zuständen oder
 Abhängigkeiten ein Mermaid-Diagramm als lesbaren `mermaid`-Codeblock im
 versionierten Markdown enthalten. Für einfache Inhalte genügt eine kurze
 begründete Angabe „Diagramm nicht erforderlich“. Diagramme ersetzen keine
-Anforderungen. Jeder Codeblock erhält eine kurze Textalternative mit derselben
-wesentlichen Aussage. Status, Kanten und Sicherheitsgrenzen müssen ohne Farbe,
-Maus und grafische Darstellung verständlich bleiben.
+Anforderungen. Das Diagramm folgt unmittelbar nach der vollständigen
+deutsch-englischen text-first-Erklärung. Sein Quelltext darf keine Information
+tragen, die im Begleittext fehlt. Direkt darunter fasst eine kurze
+Textalternative die wesentlichen Beziehungen und gegebenenfalls
+Entscheidungszweige auf Deutsch zuerst und Englisch danach zusammen. Status,
+Kanten und Sicherheitsgrenzen müssen ohne Farbe, Maus und grafische Darstellung
+verständlich bleiben.
 
 Knoten verwenden stabile, lesbare IDs und kurze Labels. Eine Legende erklärt
 Kanten. Reihenfolge allein begründet keine Abhängigkeit. Bei Intake-Serien
@@ -36,12 +40,16 @@ Repository-CI; vertrauliche Inhalte werden nicht an öffentliche Editoren gesend
 
 *Use a readable, versioned Mermaid Markdown block whenever workflows, states or
 dependencies benefit from a diagram. Simple intakes may state why none is
-needed. Include an equivalent short text alternative and an edge legend; do
-not rely on color or graphical rendering. Stable IDs, short labels, source and
-snapshot date keep the diagram maintainable. Series diagrams reflect manifest
-truth, distinguish ordering from dependency and invent no edges. Eligible does
-not grant execution authority. Review diagrams when their sources change; no
-external renderer or interactive HTML is required.*
+needed. The diagram immediately follows the complete German-first/English-second
+text-first explanation, and its source carries no information absent from that
+text. Directly below it, a short text alternative summarizes the essential
+relationships and, where applicable, decision branches in German first and
+English second. Include an edge legend; do not rely on color or graphical
+rendering. Stable IDs, short labels, source and snapshot date keep the diagram
+maintainable. Series diagrams reflect manifest truth, distinguish ordering from
+dependency and invent no edges. Eligible does not grant execution authority.
+Review diagrams when their sources change; no external renderer or interactive
+HTML is required.*
 
 ### Beispiel: gemischte Serie / Example: mixed series
 

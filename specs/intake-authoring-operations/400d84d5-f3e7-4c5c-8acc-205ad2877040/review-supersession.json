@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "1.0",
+  "documentType": "IntakeReviewSupersession",
+  "status": "Superseded",
+  "supersededAt": "2026-09-13T21:52:21Z",
+  "reason": "The authorized README source-freshness renewal changed the active receipt hash while preserving the intake bytes. The prior Single review must not be reported as current for the renewed receipt.",
+  "priorReviewId": "3e049bcb-d556-4d18-818a-196b1f59e329",
+  "priorResultPath": "specs/intake-review-remediation/20260913/rename-microcalc-tinycalc/result.json",
+  "priorResultNormalizedSha256": "a431944a1f5efb45c360ce2d85ef01637a866a14cd959c4f13749760c63430a5",
+  "priorReceiptId": "2e167a8e-d53f-4707-b2fb-c8f3de1f17f6",
+  "priorReceiptNormalizedSha256": "46e95467a050fcc213d1b498c6de3f71dbbc7527fde4ddbd058fd1eefe162935",
+  "successorReceiptId": "81f943b6-6ecf-458b-9c02-090adf31759e",
+  "successorReview": "Pending",
+  "seriesReviewDisposition": "The current series target and manifest hashes did not change. Its existing NeedsRemediation result remains a content-level series finding record and does not replace the pending Single review for the renewed receipt.",
+  "nextAction": "$speckit-intake-review requirements/intakes/active/Lastenheft_Rename_MicroCalc_TinyCalc.md"
+}

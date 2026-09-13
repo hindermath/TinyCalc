@@ -1,17 +1,17 @@
 {
   "schemaVersion": "2.0",
   "documentType": "IntakeReceipt",
-  "receiptId": "81f943b6-6ecf-458b-9c02-090adf31759e",
+  "receiptId": "2e167a8e-d53f-4707-b2fb-c8f3de1f17f6",
   "intakeId": "b4f18668-0276-45ee-8a6f-16a8bd8b833d",
   "generator": {
     "preset": "intake-authoring-governance",
     "version": "0.3.4"
   },
-  "createdAt": "2026-09-13T21:52:21Z",
+  "createdAt": "2026-09-13T14:39:58Z",
   "operation": {
-    "authorityEvidence": "Thorsten Hindermann explicitly approved the narrowly bounded intake update on 2026-09-13: Ja, genehmigt. The approval covers only the README-caused receipt and lineage renewal required to continue PR #82; intake scope, order, dependencies and product execution remain unchanged.",
+    "authorityEvidence": "Thorsten Hindermann: Bitte ausfuehren, referring explicitly to IR001 reference repairs, RIG017 archive/manifest/receipt consistency and full-series review. DeliveryMode MergeAndSync with Admin-Bypass. No downstream product execution.",
     "type": "Update",
-    "operationId": "400d84d5-f3e7-4c5c-8acc-205ad2877040"
+    "operationId": "067046de-cbb9-447f-aac3-0ffa77cabdd1"
   },
   "status": "ReadyForReview",
   "target": {
@@ -25,7 +25,7 @@
       "kind": "File",
       "label": "Byte-identical immediately preceding intake",
       "location": "Repository",
-      "path": "requirements/intakes/archive/rename-microcalc-tinycalc/20260913-mermaid-readme-renewal/Lastenheft_Rename_MicroCalc_TinyCalc.md",
+      "path": "requirements/intakes/archive/rename-microcalc-tinycalc/20260913-reference-lifecycle-repair/Lastenheft_Rename_MicroCalc_TinyCalc.md",
       "requestedUrl": "N/A",
       "finalUrl": "N/A",
       "retrievedAt": "N/A",
@@ -36,9 +36,9 @@
       "lastModified": "N/A",
       "redirectChain": [],
       "rawSha256": "N/A",
-      "normalizedSha256": "89d40b7ca04e2a753670351bd0eb5b7e2bf3234f1792572eb46f19e9affd87e5",
+      "normalizedSha256": "49642f8486493627b6ebc30454423e33fdad748ed6d434943a78aa79e6440f1c",
       "gitBlob": "N/A",
-      "proofBoundary": "Byte-identical immediate predecessor archived for the authorized README receipt renewal"
+      "proofBoundary": "Immutable predecessor archive; normalized SHA-256; raw hash in remediation evidence"
     },
     {
       "sourceId": "SRC002",
@@ -225,9 +225,9 @@
       "lastModified": "N/A",
       "redirectChain": [],
       "rawSha256": "N/A",
-      "normalizedSha256": "65ea048512a8b44409084632c86375b9c7eb43283c706982c8bc95cfae244926",
-      "gitBlob": "c820d2d25e7a3e2943b29cd216e7e072431519e2",
-      "proofBoundary": "Current repository README after merged PR #83; explicitly authorized source freshness renewal for PR #82"
+      "normalizedSha256": "f616050f682899c224591707bdcfb713e8709c295355f8fd24cce44f46193a40",
+      "gitBlob": "2e1c6d20118a0b2a450f74a7757ff64523806c75",
+      "proofBoundary": "Current repository README; explicitly authorized source freshness renewal"
     },
     {
       "sourceId": "SRC011",
@@ -291,27 +291,6 @@
       "normalizedSha256": "21a53ac4f5b7ab9a344a52ad47f4f7d82ae96169d5b6a239774221b4714066e8",
       "gitBlob": "N/A",
       "proofBoundary": "Immutable predecessor archive; normalized SHA-256; raw hash in remediation evidence"
-    },
-    {
-      "sourceId": "SRC014",
-      "order": 14,
-      "kind": "File",
-      "label": "Explicit Mermaid README receipt-renewal approval",
-      "location": "Repository",
-      "path": "specs/intake-authoring-operations/400d84d5-f3e7-4c5c-8acc-205ad2877040/proposal.json",
-      "requestedUrl": "N/A",
-      "finalUrl": "N/A",
-      "retrievedAt": "N/A",
-      "httpStatus": "N/A",
-      "contentType": "N/A",
-      "contentLength": "N/A",
-      "etag": "N/A",
-      "lastModified": "N/A",
-      "redirectChain": [],
-      "rawSha256": "N/A",
-      "normalizedSha256": "f0561bf420ced0f5c67bbd73b278149fb9d64686dbccb56c7e08a3627a09fab2",
-      "gitBlob": "N/A",
-      "proofBoundary": "Approved update proposal; no product or semantic intake change"
     }
   ],
   "profile": "level2-lastenheft",
@@ -366,10 +345,10 @@
   "promptState": "Enabled",
   "provenanceMode": "Supersession",
   "supersedes": {
-    "receiptPath": "specs/intake-authoring-receipts/history/rename-microcalc-tinycalc.20260913-mermaid-readme-renewal.json",
-    "archiveTargetPath": "requirements/intakes/archive/rename-microcalc-tinycalc/20260913-mermaid-readme-renewal/Lastenheft_Rename_MicroCalc_TinyCalc.md",
-    "archiveReceiptPath": "specs/intake-authoring-receipts/history/rename-microcalc-tinycalc.20260913-mermaid-readme-renewal.json",
-    "targetNormalizedSha256": "89d40b7ca04e2a753670351bd0eb5b7e2bf3234f1792572eb46f19e9affd87e5"
+    "receiptPath": "specs/intake-authoring-receipts/history/rename-microcalc-tinycalc.20260913-reference-lifecycle-repair.json",
+    "archiveTargetPath": "requirements/intakes/archive/rename-microcalc-tinycalc/20260913-reference-lifecycle-repair/Lastenheft_Rename_MicroCalc_TinyCalc.md",
+    "archiveReceiptPath": "specs/intake-authoring-receipts/history/rename-microcalc-tinycalc.20260913-reference-lifecycle-repair.json",
+    "targetNormalizedSha256": "49642f8486493627b6ebc30454423e33fdad748ed6d434943a78aa79e6440f1c"
   },
   "legacyAdoption": {
     "evidenceType": "N/A",
@@ -377,7 +356,7 @@
     "priorGitBlob": "N/A"
   },
   "updateAuthorized": true,
-  "updateAuthorityEvidence": "Thorsten Hindermann explicitly approved the narrowly bounded intake update on 2026-09-13: Ja, genehmigt. The approval covers only the README-caused receipt and lineage renewal required to continue PR #82; intake scope, order, dependencies and product execution remain unchanged.",
+  "updateAuthorityEvidence": "Thorsten Hindermann: Bitte ausfuehren, referring explicitly to IR001 reference repairs, RIG017 archive/manifest/receipt consistency and full-series review. DeliveryMode MergeAndSync with Admin-Bypass. No downstream product execution.",
   "series": {
     "seriesId": "5b4523b4-d946-4091-9cbc-11825af94332",
     "manifestPath": "requirements/intakes/series/tinycalc-delivery/manifest.json",

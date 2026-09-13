@@ -768,14 +768,14 @@
       "sourceClass": "Constitution",
       "path": "constitution.md",
       "version": "Current",
-      "reviewedAt": "2026-09-12",
-      "normalizedSha256": "a43a8febec8a22c3d308c6ae0702bcb79f7285398082207730602347e0c91ff4",
+      "reviewedAt": "2026-09-13",
+      "normalizedSha256": "ae3bf63e1d7b07500d8b4b3658924b4cfd6ffb0c12af1f4a67b5580a34bacca7",
       "scope": {
         "de": "Diese Quelle wird nur für ihren benannten TinyCalc-Prüfumfang verwendet.",
         "en": "This source is used only for its named TinyCalc assessment scope."
       },
       "freshness": "Revalidated",
-      "locator": "Constitution v1.18.0",
+      "locator": "Constitution v1.18.1",
       "findingIds": []
     },
     {
@@ -783,14 +783,14 @@
       "sourceClass": "Constitution",
       "path": ".specify/memory/constitution.md",
       "version": "Current",
-      "reviewedAt": "2026-09-12",
-      "normalizedSha256": "a43a8febec8a22c3d308c6ae0702bcb79f7285398082207730602347e0c91ff4",
+      "reviewedAt": "2026-09-13",
+      "normalizedSha256": "ae3bf63e1d7b07500d8b4b3658924b4cfd6ffb0c12af1f4a67b5580a34bacca7",
       "scope": {
         "de": "Diese Quelle wird nur für ihren benannten TinyCalc-Prüfumfang verwendet.",
         "en": "This source is used only for its named TinyCalc assessment scope."
       },
       "freshness": "Revalidated",
-      "locator": "Constitution v1.18.0",
+      "locator": "Constitution v1.18.1",
       "findingIds": []
     },
     {
@@ -1248,8 +1248,8 @@
       "sourceClass": "ProjectEvidence",
       "path": "AGENTS.md",
       "version": "Current",
-      "reviewedAt": "2026-09-12",
-      "normalizedSha256": "499dac0296e8300246dfc2048a82068b1425efe1f481532b3152aac9eeb6fd48",
+      "reviewedAt": "2026-09-13",
+      "normalizedSha256": "5a03ece34b7ee90f6c3917f42692762f25a489c924902dd3dbf4d54cce6b1691",
       "scope": {
         "de": "Zeilenspezifischer aktueller Nachweis aus AGENTS.md; der Hash beweist Inhalt, nicht automatisch Erfuellung.",
         "en": "Current row-specific evidence from AGENTS.md; the hash proves content, not automatic fulfilment."
@@ -1328,19 +1328,19 @@
       "implementationStatus": "Fulfilled",
       "learningStage": "Foundation",
       "rationale": {
-        "de": "CL-01-01 verlangt 'CL-01-01: NIST SSDF und CWE Top 25 / NIST SSDF and CWE Top 25'. Die exakt aufgelösten aktuellen Nachweise constitution.md @ Constitution v1.17.0; docs/security/security-checklist.md @ Sicherheits-Checkliste: TinyCalc Feature 003 belegen die begrenzte TinyCalc-Umsetzung als Applicable / Fulfilled, aber keine organisationsweite Wirksamkeit oder Zertifizierung.",
-        "en": "CL-01-01 requires 'CL-01-01: NIST SSDF und CWE Top 25 / NIST SSDF and CWE Top 25'. The exactly resolved current evidence at constitution.md @ Constitution v1.17.0; docs/security/security-checklist.md @ Sicherheits-Checkliste: TinyCalc Feature 003 supports the bounded TinyCalc result Applicable / Fulfilled, but not organisation-wide effectiveness or certification."
+        "de": "CL-01-01 verlangt 'CL-01-01: NIST SSDF und CWE Top 25 / NIST SSDF and CWE Top 25'. Die exakt aufgelösten aktuellen Nachweise constitution.md @ Constitution v1.18.1; docs/security/security-checklist.md @ Sicherheits-Checkliste: TinyCalc Feature 003 belegen die begrenzte TinyCalc-Umsetzung als Applicable / Fulfilled, aber keine organisationsweite Wirksamkeit oder Zertifizierung.",
+        "en": "CL-01-01 requires 'CL-01-01: NIST SSDF und CWE Top 25 / NIST SSDF and CWE Top 25'. The exactly resolved current evidence at constitution.md @ Constitution v1.18.1; docs/security/security-checklist.md @ Sicherheits-Checkliste: TinyCalc Feature 003 supports the bounded TinyCalc result Applicable / Fulfilled, but not organisation-wide effectiveness or certification."
       },
       "evidence": [
         {
           "path": "constitution.md",
-          "locator": "Constitution v1.18.0",
-          "observedAt": "2026-09-12",
+          "locator": "Constitution v1.18.1",
+          "observedAt": "2026-09-13",
           "freshness": "Revalidated",
           "availability": "Existing",
           "supports": {
-            "de": "CL-01-01 ist durch constitution.md am exakten Locator 'Constitution v1.18.0' belegt. Der am 2026-09-12 als Revalidated geprüfte Inhalt stützt ausschließlich die Einstufung Applicable / Fulfilled.",
-            "en": "CL-01-01 is bound to constitution.md at the exact locator 'Constitution v1.18.0'. The content observed on 2026-09-12 as Revalidated supports only the Applicable / Fulfilled disposition."
+            "de": "CL-01-01 ist durch constitution.md am exakten Locator 'Constitution v1.18.1' belegt. Der am 2026-09-13 als Revalidated geprüfte Inhalt stützt ausschließlich die Einstufung Applicable / Fulfilled.",
+            "en": "CL-01-01 is bound to constitution.md at the exact locator 'Constitution v1.18.1'. The content observed on 2026-09-13 as Revalidated supports only the Applicable / Fulfilled disposition."
           }
         },
         {
@@ -1564,8 +1564,8 @@
       "implementationStatus": "Partly Fulfilled",
       "learningStage": "Foundation",
       "rationale": {
-        "de": "CL-01-05 verlangt 'CL-01-05: SLSA-Build-Level / SLSA Build Level'. Die Nachweise docs/secure-development/checklisten/CL_01_Standards-Anwendbarkeit.md @ CL-01-05: SLSA-Build-Level / SLSA Build Level; constitution.md @ Constitution v1.17.0; docs/security/security-checklist.md @ Sicherheits-Checkliste: TinyCalc Feature 003; docs/security/supply-chain-evidence.md @ Supply-Chain-Evidenz: TinyCalc Feature 003 zeigen vorhandene Teilkontrollen; GSDB-FINDING-001 benennt den fehlenden Wirksamkeits- oder Abschlussnachweis. Daher gilt Applicable / Partly Fulfilled.",
-        "en": "CL-01-05 requires 'CL-01-05: SLSA-Build-Level / SLSA Build Level'. The evidence at docs/secure-development/checklisten/CL_01_Standards-Anwendbarkeit.md @ CL-01-05: SLSA-Build-Level / SLSA Build Level; constitution.md @ Constitution v1.17.0; docs/security/security-checklist.md @ Sicherheits-Checkliste: TinyCalc Feature 003; docs/security/supply-chain-evidence.md @ Supply-Chain-Evidenz: TinyCalc Feature 003 shows existing partial controls; GSDB-FINDING-001 identifies the missing effectiveness or completion proof. The disposition is therefore Applicable / Partly Fulfilled."
+        "de": "CL-01-05 verlangt 'CL-01-05: SLSA-Build-Level / SLSA Build Level'. Die Nachweise docs/secure-development/checklisten/CL_01_Standards-Anwendbarkeit.md @ CL-01-05: SLSA-Build-Level / SLSA Build Level; constitution.md @ Constitution v1.18.1; docs/security/security-checklist.md @ Sicherheits-Checkliste: TinyCalc Feature 003; docs/security/supply-chain-evidence.md @ Supply-Chain-Evidenz: TinyCalc Feature 003 zeigen vorhandene Teilkontrollen; GSDB-FINDING-001 benennt den fehlenden Wirksamkeits- oder Abschlussnachweis. Daher gilt Applicable / Partly Fulfilled.",
+        "en": "CL-01-05 requires 'CL-01-05: SLSA-Build-Level / SLSA Build Level'. The evidence at docs/secure-development/checklisten/CL_01_Standards-Anwendbarkeit.md @ CL-01-05: SLSA-Build-Level / SLSA Build Level; constitution.md @ Constitution v1.18.1; docs/security/security-checklist.md @ Sicherheits-Checkliste: TinyCalc Feature 003; docs/security/supply-chain-evidence.md @ Supply-Chain-Evidenz: TinyCalc Feature 003 shows existing partial controls; GSDB-FINDING-001 identifies the missing effectiveness or completion proof. The disposition is therefore Applicable / Partly Fulfilled."
       },
       "evidence": [
         {
@@ -1581,13 +1581,13 @@
         },
         {
           "path": "constitution.md",
-          "locator": "Constitution v1.18.0",
-          "observedAt": "2026-09-12",
+          "locator": "Constitution v1.18.1",
+          "observedAt": "2026-09-13",
           "freshness": "Revalidated",
           "availability": "Existing",
           "supports": {
-            "de": "CL-01-05 ist durch constitution.md am exakten Locator 'Constitution v1.18.0' belegt. Der am 2026-09-12 als Revalidated geprüfte Inhalt stützt ausschließlich die Einstufung Applicable / Partly Fulfilled.",
-            "en": "CL-01-05 is bound to constitution.md at the exact locator 'Constitution v1.18.0'. The content observed on 2026-09-12 as Revalidated supports only the Applicable / Partly Fulfilled disposition."
+            "de": "CL-01-05 ist durch constitution.md am exakten Locator 'Constitution v1.18.1' belegt. Der am 2026-09-13 als Revalidated geprüfte Inhalt stützt ausschließlich die Einstufung Applicable / Partly Fulfilled.",
+            "en": "CL-01-05 is bound to constitution.md at the exact locator 'Constitution v1.18.1'. The content observed on 2026-09-13 as Revalidated supports only the Applicable / Partly Fulfilled disposition."
           }
         },
         {
@@ -1802,8 +1802,8 @@
       "implementationStatus": "Partly Fulfilled",
       "learningStage": "Foundation",
       "rationale": {
-        "de": "CL-01-09 verlangt 'CL-01-09: OpenSSF Scorecard / OpenSSF Scorecard'. Die Nachweise docs/secure-development/checklisten/CL_01_Standards-Anwendbarkeit.md @ CL-01-09: OpenSSF Scorecard / OpenSSF Scorecard; constitution.md @ Constitution v1.17.0; docs/security/security-checklist.md @ Sicherheits-Checkliste: TinyCalc Feature 003; docs/security/supply-chain-evidence.md @ Supply-Chain-Evidenz: TinyCalc Feature 003 zeigen vorhandene Teilkontrollen; GSDB-FINDING-001 benennt den fehlenden Wirksamkeits- oder Abschlussnachweis. Daher gilt Applicable / Partly Fulfilled.",
-        "en": "CL-01-09 requires 'CL-01-09: OpenSSF Scorecard / OpenSSF Scorecard'. The evidence at docs/secure-development/checklisten/CL_01_Standards-Anwendbarkeit.md @ CL-01-09: OpenSSF Scorecard / OpenSSF Scorecard; constitution.md @ Constitution v1.17.0; docs/security/security-checklist.md @ Sicherheits-Checkliste: TinyCalc Feature 003; docs/security/supply-chain-evidence.md @ Supply-Chain-Evidenz: TinyCalc Feature 003 shows existing partial controls; GSDB-FINDING-001 identifies the missing effectiveness or completion proof. The disposition is therefore Applicable / Partly Fulfilled."
+        "de": "CL-01-09 verlangt 'CL-01-09: OpenSSF Scorecard / OpenSSF Scorecard'. Die Nachweise docs/secure-development/checklisten/CL_01_Standards-Anwendbarkeit.md @ CL-01-09: OpenSSF Scorecard / OpenSSF Scorecard; constitution.md @ Constitution v1.18.1; docs/security/security-checklist.md @ Sicherheits-Checkliste: TinyCalc Feature 003; docs/security/supply-chain-evidence.md @ Supply-Chain-Evidenz: TinyCalc Feature 003 zeigen vorhandene Teilkontrollen; GSDB-FINDING-001 benennt den fehlenden Wirksamkeits- oder Abschlussnachweis. Daher gilt Applicable / Partly Fulfilled.",
+        "en": "CL-01-09 requires 'CL-01-09: OpenSSF Scorecard / OpenSSF Scorecard'. The evidence at docs/secure-development/checklisten/CL_01_Standards-Anwendbarkeit.md @ CL-01-09: OpenSSF Scorecard / OpenSSF Scorecard; constitution.md @ Constitution v1.18.1; docs/security/security-checklist.md @ Sicherheits-Checkliste: TinyCalc Feature 003; docs/security/supply-chain-evidence.md @ Supply-Chain-Evidenz: TinyCalc Feature 003 shows existing partial controls; GSDB-FINDING-001 identifies the missing effectiveness or completion proof. The disposition is therefore Applicable / Partly Fulfilled."
       },
       "evidence": [
         {
@@ -1819,13 +1819,13 @@
         },
         {
           "path": "constitution.md",
-          "locator": "Constitution v1.18.0",
-          "observedAt": "2026-09-12",
+          "locator": "Constitution v1.18.1",
+          "observedAt": "2026-09-13",
           "freshness": "Revalidated",
           "availability": "Existing",
           "supports": {
-            "de": "CL-01-09 ist durch constitution.md am exakten Locator 'Constitution v1.18.0' belegt. Der am 2026-09-12 als Revalidated geprüfte Inhalt stützt ausschließlich die Einstufung Applicable / Partly Fulfilled.",
-            "en": "CL-01-09 is bound to constitution.md at the exact locator 'Constitution v1.18.0'. The content observed on 2026-09-12 as Revalidated supports only the Applicable / Partly Fulfilled disposition."
+            "de": "CL-01-09 ist durch constitution.md am exakten Locator 'Constitution v1.18.1' belegt. Der am 2026-09-13 als Revalidated geprüfte Inhalt stützt ausschließlich die Einstufung Applicable / Partly Fulfilled.",
+            "en": "CL-01-09 is bound to constitution.md at the exact locator 'Constitution v1.18.1'. The content observed on 2026-09-13 as Revalidated supports only the Applicable / Partly Fulfilled disposition."
           }
         },
         {
@@ -1885,8 +1885,8 @@
       "implementationStatus": "Partly Fulfilled",
       "learningStage": "Foundation",
       "rationale": {
-        "de": "CL-01-10 verlangt 'CL-01-10: OWASP Cheat Sheets und Proactive Controls / OWASP Cheat Sheets and Proactive Controls'. Die Nachweise docs/secure-development/checklisten/CL_01_Standards-Anwendbarkeit.md @ CL-01-10: OWASP Cheat Sheets und Proactive Controls / OWASP Cheat Sheets and Proactive Controls; constitution.md @ Constitution v1.17.0; docs/security/security-checklist.md @ Sicherheits-Checkliste: TinyCalc Feature 003 zeigen vorhandene Teilkontrollen; GSDB-FINDING-001 benennt den fehlenden Wirksamkeits- oder Abschlussnachweis. Daher gilt Applicable / Partly Fulfilled.",
-        "en": "CL-01-10 requires 'CL-01-10: OWASP Cheat Sheets und Proactive Controls / OWASP Cheat Sheets and Proactive Controls'. The evidence at docs/secure-development/checklisten/CL_01_Standards-Anwendbarkeit.md @ CL-01-10: OWASP Cheat Sheets und Proactive Controls / OWASP Cheat Sheets and Proactive Controls; constitution.md @ Constitution v1.17.0; docs/security/security-checklist.md @ Sicherheits-Checkliste: TinyCalc Feature 003 shows existing partial controls; GSDB-FINDING-001 identifies the missing effectiveness or completion proof. The disposition is therefore Applicable / Partly Fulfilled."
+        "de": "CL-01-10 verlangt 'CL-01-10: OWASP Cheat Sheets und Proactive Controls / OWASP Cheat Sheets and Proactive Controls'. Die Nachweise docs/secure-development/checklisten/CL_01_Standards-Anwendbarkeit.md @ CL-01-10: OWASP Cheat Sheets und Proactive Controls / OWASP Cheat Sheets and Proactive Controls; constitution.md @ Constitution v1.18.1; docs/security/security-checklist.md @ Sicherheits-Checkliste: TinyCalc Feature 003 zeigen vorhandene Teilkontrollen; GSDB-FINDING-001 benennt den fehlenden Wirksamkeits- oder Abschlussnachweis. Daher gilt Applicable / Partly Fulfilled.",
+        "en": "CL-01-10 requires 'CL-01-10: OWASP Cheat Sheets und Proactive Controls / OWASP Cheat Sheets and Proactive Controls'. The evidence at docs/secure-development/checklisten/CL_01_Standards-Anwendbarkeit.md @ CL-01-10: OWASP Cheat Sheets und Proactive Controls / OWASP Cheat Sheets and Proactive Controls; constitution.md @ Constitution v1.18.1; docs/security/security-checklist.md @ Sicherheits-Checkliste: TinyCalc Feature 003 shows existing partial controls; GSDB-FINDING-001 identifies the missing effectiveness or completion proof. The disposition is therefore Applicable / Partly Fulfilled."
       },
       "evidence": [
         {
@@ -1902,13 +1902,13 @@
         },
         {
           "path": "constitution.md",
-          "locator": "Constitution v1.18.0",
-          "observedAt": "2026-09-12",
+          "locator": "Constitution v1.18.1",
+          "observedAt": "2026-09-13",
           "freshness": "Revalidated",
           "availability": "Existing",
           "supports": {
-            "de": "CL-01-10 ist durch constitution.md am exakten Locator 'Constitution v1.18.0' belegt. Der am 2026-09-12 als Revalidated geprüfte Inhalt stützt ausschließlich die Einstufung Applicable / Partly Fulfilled.",
-            "en": "CL-01-10 is bound to constitution.md at the exact locator 'Constitution v1.18.0'. The content observed on 2026-09-12 as Revalidated supports only the Applicable / Partly Fulfilled disposition."
+            "de": "CL-01-10 ist durch constitution.md am exakten Locator 'Constitution v1.18.1' belegt. Der am 2026-09-13 als Revalidated geprüfte Inhalt stützt ausschließlich die Einstufung Applicable / Partly Fulfilled.",
+            "en": "CL-01-10 is bound to constitution.md at the exact locator 'Constitution v1.18.1'. The content observed on 2026-09-13 as Revalidated supports only the Applicable / Partly Fulfilled disposition."
           }
         },
         {
@@ -7681,19 +7681,19 @@
       "implementationStatus": "Fulfilled",
       "learningStage": "Intermediate",
       "rationale": {
-        "de": "CL-08-13 verlangt 'CL-08-13: Spec-Kit-Secure-Coding-Profile / Spec Kit Secure Coding Profiles'. Die exakt aufgelösten aktuellen Nachweise constitution.md @ Constitution v1.17.0; docs/security/security-checklist.md @ Sicherheits-Checkliste: TinyCalc Feature 003 belegen die begrenzte TinyCalc-Umsetzung als Applicable / Fulfilled, aber keine organisationsweite Wirksamkeit oder Zertifizierung.",
-        "en": "CL-08-13 requires 'CL-08-13: Spec-Kit-Secure-Coding-Profile / Spec Kit Secure Coding Profiles'. The exactly resolved current evidence at constitution.md @ Constitution v1.17.0; docs/security/security-checklist.md @ Sicherheits-Checkliste: TinyCalc Feature 003 supports the bounded TinyCalc result Applicable / Fulfilled, but not organisation-wide effectiveness or certification."
+        "de": "CL-08-13 verlangt 'CL-08-13: Spec-Kit-Secure-Coding-Profile / Spec Kit Secure Coding Profiles'. Die exakt aufgelösten aktuellen Nachweise constitution.md @ Constitution v1.18.1; docs/security/security-checklist.md @ Sicherheits-Checkliste: TinyCalc Feature 003 belegen die begrenzte TinyCalc-Umsetzung als Applicable / Fulfilled, aber keine organisationsweite Wirksamkeit oder Zertifizierung.",
+        "en": "CL-08-13 requires 'CL-08-13: Spec-Kit-Secure-Coding-Profile / Spec Kit Secure Coding Profiles'. The exactly resolved current evidence at constitution.md @ Constitution v1.18.1; docs/security/security-checklist.md @ Sicherheits-Checkliste: TinyCalc Feature 003 supports the bounded TinyCalc result Applicable / Fulfilled, but not organisation-wide effectiveness or certification."
       },
       "evidence": [
         {
           "path": "constitution.md",
-          "locator": "Constitution v1.18.0",
-          "observedAt": "2026-09-12",
+          "locator": "Constitution v1.18.1",
+          "observedAt": "2026-09-13",
           "freshness": "Revalidated",
           "availability": "Existing",
           "supports": {
-            "de": "CL-08-13 ist durch constitution.md am exakten Locator 'Constitution v1.18.0' belegt. Der am 2026-09-12 als Revalidated geprüfte Inhalt stützt ausschließlich die Einstufung Applicable / Fulfilled.",
-            "en": "CL-08-13 is bound to constitution.md at the exact locator 'Constitution v1.18.0'. The content observed on 2026-09-12 as Revalidated supports only the Applicable / Fulfilled disposition."
+            "de": "CL-08-13 ist durch constitution.md am exakten Locator 'Constitution v1.18.1' belegt. Der am 2026-09-13 als Revalidated geprüfte Inhalt stützt ausschließlich die Einstufung Applicable / Fulfilled.",
+            "en": "CL-08-13 is bound to constitution.md at the exact locator 'Constitution v1.18.1'. The content observed on 2026-09-13 as Revalidated supports only the Applicable / Fulfilled disposition."
           }
         },
         {
@@ -7941,12 +7941,12 @@
         {
           "path": "AGENTS.md",
           "locator": "Repository Guidelines",
-          "observedAt": "2026-09-06",
+          "observedAt": "2026-09-13",
           "freshness": "Revalidated",
           "availability": "Existing",
           "supports": {
-            "de": "CL-09-04 ist durch AGENTS.md am exakten Locator 'Repository Guidelines' belegt. Der am 2026-09-06 als Revalidated geprüfte Inhalt stützt ausschließlich die Einstufung Applicable / Partly Fulfilled.",
-            "en": "CL-09-04 is bound to AGENTS.md at the exact locator 'Repository Guidelines'. The content observed on 2026-09-06 as Revalidated supports only the Applicable / Partly Fulfilled disposition."
+            "de": "CL-09-04 ist durch AGENTS.md am exakten Locator 'Repository Guidelines' belegt. Der am 2026-09-13 als Revalidated geprüfte Inhalt stützt ausschließlich die Einstufung Applicable / Partly Fulfilled.",
+            "en": "CL-09-04 is bound to AGENTS.md at the exact locator 'Repository Guidelines'. The content observed on 2026-09-13 as Revalidated supports only the Applicable / Partly Fulfilled disposition."
           }
         },
         {
@@ -8013,12 +8013,12 @@
         {
           "path": "AGENTS.md",
           "locator": "Repository Guidelines",
-          "observedAt": "2026-09-06",
+          "observedAt": "2026-09-13",
           "freshness": "Revalidated",
           "availability": "Existing",
           "supports": {
-            "de": "CL-09-05 ist durch AGENTS.md am exakten Locator 'Repository Guidelines' belegt. Der am 2026-09-06 als Revalidated geprüfte Inhalt stützt ausschließlich die Einstufung Applicable / Partly Fulfilled.",
-            "en": "CL-09-05 is bound to AGENTS.md at the exact locator 'Repository Guidelines'. The content observed on 2026-09-06 as Revalidated supports only the Applicable / Partly Fulfilled disposition."
+            "de": "CL-09-05 ist durch AGENTS.md am exakten Locator 'Repository Guidelines' belegt. Der am 2026-09-13 als Revalidated geprüfte Inhalt stützt ausschließlich die Einstufung Applicable / Partly Fulfilled.",
+            "en": "CL-09-05 is bound to AGENTS.md at the exact locator 'Repository Guidelines'. The content observed on 2026-09-13 as Revalidated supports only the Applicable / Partly Fulfilled disposition."
           }
         },
         {
@@ -8146,12 +8146,12 @@
         {
           "path": "AGENTS.md",
           "locator": "Repository Guidelines",
-          "observedAt": "2026-09-06",
+          "observedAt": "2026-09-13",
           "freshness": "Revalidated",
           "availability": "Existing",
           "supports": {
-            "de": "CL-09-07 ist durch AGENTS.md am exakten Locator 'Repository Guidelines' belegt. Der am 2026-09-06 als Revalidated geprüfte Inhalt stützt ausschließlich die Einstufung Applicable / Partly Fulfilled.",
-            "en": "CL-09-07 is bound to AGENTS.md at the exact locator 'Repository Guidelines'. The content observed on 2026-09-06 as Revalidated supports only the Applicable / Partly Fulfilled disposition."
+            "de": "CL-09-07 ist durch AGENTS.md am exakten Locator 'Repository Guidelines' belegt. Der am 2026-09-13 als Revalidated geprüfte Inhalt stützt ausschließlich die Einstufung Applicable / Partly Fulfilled.",
+            "en": "CL-09-07 is bound to AGENTS.md at the exact locator 'Repository Guidelines'. The content observed on 2026-09-13 as Revalidated supports only the Applicable / Partly Fulfilled disposition."
           }
         },
         {
@@ -8218,12 +8218,12 @@
         {
           "path": "AGENTS.md",
           "locator": "Repository Guidelines",
-          "observedAt": "2026-09-06",
+          "observedAt": "2026-09-13",
           "freshness": "Revalidated",
           "availability": "Existing",
           "supports": {
-            "de": "CL-09-08 ist durch AGENTS.md am exakten Locator 'Repository Guidelines' belegt. Der am 2026-09-06 als Revalidated geprüfte Inhalt stützt ausschließlich die Einstufung Applicable / Partly Fulfilled.",
-            "en": "CL-09-08 is bound to AGENTS.md at the exact locator 'Repository Guidelines'. The content observed on 2026-09-06 as Revalidated supports only the Applicable / Partly Fulfilled disposition."
+            "de": "CL-09-08 ist durch AGENTS.md am exakten Locator 'Repository Guidelines' belegt. Der am 2026-09-13 als Revalidated geprüfte Inhalt stützt ausschließlich die Einstufung Applicable / Partly Fulfilled.",
+            "en": "CL-09-08 is bound to AGENTS.md at the exact locator 'Repository Guidelines'. The content observed on 2026-09-13 as Revalidated supports only the Applicable / Partly Fulfilled disposition."
           }
         },
         {
@@ -8290,12 +8290,12 @@
         {
           "path": "AGENTS.md",
           "locator": "Repository Guidelines",
-          "observedAt": "2026-09-06",
+          "observedAt": "2026-09-13",
           "freshness": "Revalidated",
           "availability": "Existing",
           "supports": {
-            "de": "CL-09-09 ist durch AGENTS.md am exakten Locator 'Repository Guidelines' belegt. Der am 2026-09-06 als Revalidated geprüfte Inhalt stützt ausschließlich die Einstufung Applicable / Partly Fulfilled.",
-            "en": "CL-09-09 is bound to AGENTS.md at the exact locator 'Repository Guidelines'. The content observed on 2026-09-06 as Revalidated supports only the Applicable / Partly Fulfilled disposition."
+            "de": "CL-09-09 ist durch AGENTS.md am exakten Locator 'Repository Guidelines' belegt. Der am 2026-09-13 als Revalidated geprüfte Inhalt stützt ausschließlich die Einstufung Applicable / Partly Fulfilled.",
+            "en": "CL-09-09 is bound to AGENTS.md at the exact locator 'Repository Guidelines'. The content observed on 2026-09-13 as Revalidated supports only the Applicable / Partly Fulfilled disposition."
           }
         },
         {
@@ -8362,12 +8362,12 @@
         {
           "path": "AGENTS.md",
           "locator": "Repository Guidelines",
-          "observedAt": "2026-09-06",
+          "observedAt": "2026-09-13",
           "freshness": "Revalidated",
           "availability": "Existing",
           "supports": {
-            "de": "CL-09-10 ist durch AGENTS.md am exakten Locator 'Repository Guidelines' belegt. Der am 2026-09-06 als Revalidated geprüfte Inhalt stützt ausschließlich die Einstufung Applicable / Partly Fulfilled.",
-            "en": "CL-09-10 is bound to AGENTS.md at the exact locator 'Repository Guidelines'. The content observed on 2026-09-06 as Revalidated supports only the Applicable / Partly Fulfilled disposition."
+            "de": "CL-09-10 ist durch AGENTS.md am exakten Locator 'Repository Guidelines' belegt. Der am 2026-09-13 als Revalidated geprüfte Inhalt stützt ausschließlich die Einstufung Applicable / Partly Fulfilled.",
+            "en": "CL-09-10 is bound to AGENTS.md at the exact locator 'Repository Guidelines'. The content observed on 2026-09-13 as Revalidated supports only the Applicable / Partly Fulfilled disposition."
           }
         },
         {
@@ -8434,12 +8434,12 @@
         {
           "path": "AGENTS.md",
           "locator": "Repository Guidelines",
-          "observedAt": "2026-09-06",
+          "observedAt": "2026-09-13",
           "freshness": "Revalidated",
           "availability": "Existing",
           "supports": {
-            "de": "CL-09-11 ist durch AGENTS.md am exakten Locator 'Repository Guidelines' belegt. Der am 2026-09-06 als Revalidated geprüfte Inhalt stützt ausschließlich die Einstufung Applicable / Partly Fulfilled.",
-            "en": "CL-09-11 is bound to AGENTS.md at the exact locator 'Repository Guidelines'. The content observed on 2026-09-06 as Revalidated supports only the Applicable / Partly Fulfilled disposition."
+            "de": "CL-09-11 ist durch AGENTS.md am exakten Locator 'Repository Guidelines' belegt. Der am 2026-09-13 als Revalidated geprüfte Inhalt stützt ausschließlich die Einstufung Applicable / Partly Fulfilled.",
+            "en": "CL-09-11 is bound to AGENTS.md at the exact locator 'Repository Guidelines'. The content observed on 2026-09-13 as Revalidated supports only the Applicable / Partly Fulfilled disposition."
           }
         },
         {
@@ -8567,12 +8567,12 @@
         {
           "path": "AGENTS.md",
           "locator": "Repository Guidelines",
-          "observedAt": "2026-09-06",
+          "observedAt": "2026-09-13",
           "freshness": "Revalidated",
           "availability": "Existing",
           "supports": {
-            "de": "CL-09-13 ist durch AGENTS.md am exakten Locator 'Repository Guidelines' belegt. Der am 2026-09-06 als Revalidated geprüfte Inhalt stützt ausschließlich die Einstufung Applicable / Partly Fulfilled.",
-            "en": "CL-09-13 is bound to AGENTS.md at the exact locator 'Repository Guidelines'. The content observed on 2026-09-06 as Revalidated supports only the Applicable / Partly Fulfilled disposition."
+            "de": "CL-09-13 ist durch AGENTS.md am exakten Locator 'Repository Guidelines' belegt. Der am 2026-09-13 als Revalidated geprüfte Inhalt stützt ausschließlich die Einstufung Applicable / Partly Fulfilled.",
+            "en": "CL-09-13 is bound to AGENTS.md at the exact locator 'Repository Guidelines'. The content observed on 2026-09-13 as Revalidated supports only the Applicable / Partly Fulfilled disposition."
           }
         },
         {
@@ -8700,12 +8700,12 @@
         {
           "path": "AGENTS.md",
           "locator": "Repository Guidelines",
-          "observedAt": "2026-09-06",
+          "observedAt": "2026-09-13",
           "freshness": "Revalidated",
           "availability": "Existing",
           "supports": {
-            "de": "CL-09-15 ist durch AGENTS.md am exakten Locator 'Repository Guidelines' belegt. Der am 2026-09-06 als Revalidated geprüfte Inhalt stützt ausschließlich die Einstufung Applicable / Partly Fulfilled.",
-            "en": "CL-09-15 is bound to AGENTS.md at the exact locator 'Repository Guidelines'. The content observed on 2026-09-06 as Revalidated supports only the Applicable / Partly Fulfilled disposition."
+            "de": "CL-09-15 ist durch AGENTS.md am exakten Locator 'Repository Guidelines' belegt. Der am 2026-09-13 als Revalidated geprüfte Inhalt stützt ausschließlich die Einstufung Applicable / Partly Fulfilled.",
+            "en": "CL-09-15 is bound to AGENTS.md at the exact locator 'Repository Guidelines'. The content observed on 2026-09-13 as Revalidated supports only the Applicable / Partly Fulfilled disposition."
           }
         },
         {
@@ -8833,12 +8833,12 @@
         {
           "path": "AGENTS.md",
           "locator": "Repository Guidelines",
-          "observedAt": "2026-09-06",
+          "observedAt": "2026-09-13",
           "freshness": "Revalidated",
           "availability": "Existing",
           "supports": {
-            "de": "CL-09-17 ist durch AGENTS.md am exakten Locator 'Repository Guidelines' belegt. Der am 2026-09-06 als Revalidated geprüfte Inhalt stützt ausschließlich die Einstufung Applicable / Partly Fulfilled.",
-            "en": "CL-09-17 is bound to AGENTS.md at the exact locator 'Repository Guidelines'. The content observed on 2026-09-06 as Revalidated supports only the Applicable / Partly Fulfilled disposition."
+            "de": "CL-09-17 ist durch AGENTS.md am exakten Locator 'Repository Guidelines' belegt. Der am 2026-09-13 als Revalidated geprüfte Inhalt stützt ausschließlich die Einstufung Applicable / Partly Fulfilled.",
+            "en": "CL-09-17 is bound to AGENTS.md at the exact locator 'Repository Guidelines'. The content observed on 2026-09-13 as Revalidated supports only the Applicable / Partly Fulfilled disposition."
           }
         },
         {
@@ -9391,12 +9391,12 @@
         {
           "path": "AGENTS.md",
           "locator": "Repository Guidelines",
-          "observedAt": "2026-09-06",
+          "observedAt": "2026-09-13",
           "freshness": "Revalidated",
           "availability": "Existing",
           "supports": {
-            "de": "CL-10-09 ist durch AGENTS.md am exakten Locator 'Repository Guidelines' belegt. Der am 2026-09-06 als Revalidated geprüfte Inhalt stützt ausschließlich die Einstufung Applicable / Partly Fulfilled.",
-            "en": "CL-10-09 is bound to AGENTS.md at the exact locator 'Repository Guidelines'. The content observed on 2026-09-06 as Revalidated supports only the Applicable / Partly Fulfilled disposition."
+            "de": "CL-10-09 ist durch AGENTS.md am exakten Locator 'Repository Guidelines' belegt. Der am 2026-09-13 als Revalidated geprüfte Inhalt stützt ausschließlich die Einstufung Applicable / Partly Fulfilled.",
+            "en": "CL-10-09 is bound to AGENTS.md at the exact locator 'Repository Guidelines'. The content observed on 2026-09-13 as Revalidated supports only the Applicable / Partly Fulfilled disposition."
           }
         },
         {
@@ -10733,12 +10733,12 @@
         {
           "path": "AGENTS.md",
           "locator": "Repository Guidelines",
-          "observedAt": "2026-09-06",
+          "observedAt": "2026-09-13",
           "freshness": "Revalidated",
           "availability": "Existing",
           "supports": {
-            "de": "CL-12-02 ist durch AGENTS.md am exakten Locator 'Repository Guidelines' belegt. Der am 2026-09-06 als Revalidated geprüfte Inhalt stützt ausschließlich die Einstufung Applicable / Partly Fulfilled.",
-            "en": "CL-12-02 is bound to AGENTS.md at the exact locator 'Repository Guidelines'. The content observed on 2026-09-06 as Revalidated supports only the Applicable / Partly Fulfilled disposition."
+            "de": "CL-12-02 ist durch AGENTS.md am exakten Locator 'Repository Guidelines' belegt. Der am 2026-09-13 als Revalidated geprüfte Inhalt stützt ausschließlich die Einstufung Applicable / Partly Fulfilled.",
+            "en": "CL-12-02 is bound to AGENTS.md at the exact locator 'Repository Guidelines'. The content observed on 2026-09-13 as Revalidated supports only the Applicable / Partly Fulfilled disposition."
           }
         },
         {
@@ -10816,12 +10816,12 @@
         {
           "path": "AGENTS.md",
           "locator": "Repository Guidelines",
-          "observedAt": "2026-09-06",
+          "observedAt": "2026-09-13",
           "freshness": "Revalidated",
           "availability": "Existing",
           "supports": {
-            "de": "CL-12-03 ist durch AGENTS.md am exakten Locator 'Repository Guidelines' belegt. Der am 2026-09-06 als Revalidated geprüfte Inhalt stützt ausschließlich die Einstufung Applicable / Partly Fulfilled.",
-            "en": "CL-12-03 is bound to AGENTS.md at the exact locator 'Repository Guidelines'. The content observed on 2026-09-06 as Revalidated supports only the Applicable / Partly Fulfilled disposition."
+            "de": "CL-12-03 ist durch AGENTS.md am exakten Locator 'Repository Guidelines' belegt. Der am 2026-09-13 als Revalidated geprüfte Inhalt stützt ausschließlich die Einstufung Applicable / Partly Fulfilled.",
+            "en": "CL-12-03 is bound to AGENTS.md at the exact locator 'Repository Guidelines'. The content observed on 2026-09-13 as Revalidated supports only the Applicable / Partly Fulfilled disposition."
           }
         },
         {
@@ -10899,12 +10899,12 @@
         {
           "path": "AGENTS.md",
           "locator": "Repository Guidelines",
-          "observedAt": "2026-09-06",
+          "observedAt": "2026-09-13",
           "freshness": "Revalidated",
           "availability": "Existing",
           "supports": {
-            "de": "CL-12-04 ist durch AGENTS.md am exakten Locator 'Repository Guidelines' belegt. Der am 2026-09-06 als Revalidated geprüfte Inhalt stützt ausschließlich die Einstufung Applicable / Partly Fulfilled.",
-            "en": "CL-12-04 is bound to AGENTS.md at the exact locator 'Repository Guidelines'. The content observed on 2026-09-06 as Revalidated supports only the Applicable / Partly Fulfilled disposition."
+            "de": "CL-12-04 ist durch AGENTS.md am exakten Locator 'Repository Guidelines' belegt. Der am 2026-09-13 als Revalidated geprüfte Inhalt stützt ausschließlich die Einstufung Applicable / Partly Fulfilled.",
+            "en": "CL-12-04 is bound to AGENTS.md at the exact locator 'Repository Guidelines'. The content observed on 2026-09-13 as Revalidated supports only the Applicable / Partly Fulfilled disposition."
           }
         },
         {
@@ -11233,12 +11233,12 @@
         {
           "path": "AGENTS.md",
           "locator": "Repository Guidelines",
-          "observedAt": "2026-09-06",
+          "observedAt": "2026-09-13",
           "freshness": "Revalidated",
           "availability": "Existing",
           "supports": {
-            "de": "CL-12-09 ist durch AGENTS.md am exakten Locator 'Repository Guidelines' belegt. Der am 2026-09-06 als Revalidated geprüfte Inhalt stützt ausschließlich die Einstufung Applicable / Partly Fulfilled.",
-            "en": "CL-12-09 is bound to AGENTS.md at the exact locator 'Repository Guidelines'. The content observed on 2026-09-06 as Revalidated supports only the Applicable / Partly Fulfilled disposition."
+            "de": "CL-12-09 ist durch AGENTS.md am exakten Locator 'Repository Guidelines' belegt. Der am 2026-09-13 als Revalidated geprüfte Inhalt stützt ausschließlich die Einstufung Applicable / Partly Fulfilled.",
+            "en": "CL-12-09 is bound to AGENTS.md at the exact locator 'Repository Guidelines'. The content observed on 2026-09-13 as Revalidated supports only the Applicable / Partly Fulfilled disposition."
           }
         },
         {
@@ -11316,12 +11316,12 @@
         {
           "path": "AGENTS.md",
           "locator": "Repository Guidelines",
-          "observedAt": "2026-09-06",
+          "observedAt": "2026-09-13",
           "freshness": "Revalidated",
           "availability": "Existing",
           "supports": {
-            "de": "CL-12-10 ist durch AGENTS.md am exakten Locator 'Repository Guidelines' belegt. Der am 2026-09-06 als Revalidated geprüfte Inhalt stützt ausschließlich die Einstufung Applicable / Partly Fulfilled.",
-            "en": "CL-12-10 is bound to AGENTS.md at the exact locator 'Repository Guidelines'. The content observed on 2026-09-06 as Revalidated supports only the Applicable / Partly Fulfilled disposition."
+            "de": "CL-12-10 ist durch AGENTS.md am exakten Locator 'Repository Guidelines' belegt. Der am 2026-09-13 als Revalidated geprüfte Inhalt stützt ausschließlich die Einstufung Applicable / Partly Fulfilled.",
+            "en": "CL-12-10 is bound to AGENTS.md at the exact locator 'Repository Guidelines'. The content observed on 2026-09-13 as Revalidated supports only the Applicable / Partly Fulfilled disposition."
           }
         },
         {

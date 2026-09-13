@@ -1,0 +1,14 @@
+{
+  "previousReceiptId": "2e167a8e-d53f-4707-b2fb-c8f3de1f17f6",
+  "previousTargetNormalizedSha256": "89d40b7ca04e2a753670351bd0eb5b7e2bf3234f1792572eb46f19e9affd87e5",
+  "authorityEvidence": "Thorsten Hindermann explicitly approved the narrowly bounded intake update on 2026-09-13: Ja, genehmigt. The approval covers only the README-caused receipt and lineage renewal required to continue PR #82; intake scope, order, dependencies and product execution remain unchanged.",
+  "scopePreserved": true,
+  "approved": true,
+  "target": "requirements/intakes/active/Lastenheft_Rename_MicroCalc_TinyCalc.md",
+  "previousReceiptRawSha256": "46e95467a050fcc213d1b498c6de3f71dbbc7527fde4ddbd058fd1eefe162935",
+  "proposalId": "400d84d5-f3e7-4c5c-8acc-205ad2877040",
+  "type": "Update",
+  "schemaVersion": "1.0",
+  "change": "Renew only the README source hash and receipt lineage after the merged Mermaid completion governance changed README.md; preserve the active intake bytes, intake ID, scope, series order, dependencies and LocalImplementation boundary",
+  "reviewHandoff": "$speckit-intake-review requirements/intakes/active/Lastenheft_Rename_MicroCalc_TinyCalc.md"
+}

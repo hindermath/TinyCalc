@@ -566,6 +566,10 @@ runtime evidence.*
 | 2026-09-13 | Autorisierte Whitespace-Lieferkorrektur / Authorized whitespace delivery repair | Sechs Markdown-Zeilenumbrüche in drei noch uncommitteten Intake-Snapshots ersetzt; 21 Dokument-/Belegdateien kausal neu hashgebunden, Originalbytes verlustfrei mit SHA-256/Base64 gesichert. Frühere Bytegleichheitsangaben beziehen sich auf die gesicherten Originale, die lesbaren Archive sind normalisierte Kopien. Ein neuer vollständiger Einzelreview Ready; Serienstatus weiterhin NeedsRemediation mit IR003/IR004. 0 Produktionscode- und 0 Testcode-Änderungen; vorhandene Bash-/PowerShell-Validatoren bestanden. Sichtbares Arbeitsfenster 2026-09-13 auf codex/intake-ir002-learner-clarity; Referenzen 80/125 Zeilen je Arbeitstag, keine zusätzliche manuelle Aufwandsschätzung. UpdateRequired; Statistikblock generiert aus Git. / Six Markdown breaks normalized with lossless original evidence; a fresh Single review passes while unrelated series findings remain open. No product or test code changed; existing cross-shell validators passed. |
 | 2026-09-13 | Mermaid und Abschlussberichte | Neue textbasierte Diagrammregel, Berichtsvorlage, Agent-Paritaet und versionierte Governance; kein Produktcode. / Text-first diagram and completion-report governance; no product code. Branch codex/mermaid-completion-governance-20260913; Phase Governance-Rollout; Git-Fenster 2026-09-13T23:02:13+02:00 bis 2026-09-13T23:15:33+02:00 (keine aktive Arbeitszeit). Messstand 13fb141a0dc4..e03909a7075a, ohne Ledger: 25 Dateien, +902/-29 Dokumentations-/Governance-/Evidence-Zeilen; Produktion 0, Produkt-Tests 0 (N/A: keine Produktlogik). Arbeitspakete: Regel, Profile/Agenten/Bootstrap, Berichtsvorlage, Quellenbindung, Lieferung. Validierung: lokale Paritaet/Erhalt, Mermaid-Rendernachweis, Staged-Gate bestanden; finale CI und Merge/Sync siehe PR https://github.com/hindermath/TinyCalc/pull/83. Referenzen 80/125 Zeilen pro Tag: 11.28/7.22 rechnerische Tage, keine Aufwandmessung. / Declared Git-window and net documentation/evidence diff; no product code or tests; gate evidence in PR; reference days are not measured effort. |
 
+| 2026-09-13 | Text-first-Mermaid-Präzisierung / Text-first Mermaid refinement | Eine sichtbare Agentensitzung auf Branch `codex/text-first-mermaid-intakes`. Aufbauend auf PR `#83` präzisiert Constitution v1.18.1 die barrierefreie Reihenfolge für neue Lastenhefte: vollständige deutsch-englische Textbeschreibung, direkt folgendes ergänzendes Mermaid-Diagramm ohne zusätzliche Information und direkt darunter eine kurze Textalternative auf Deutsch zuerst und Englisch danach. Agentenflächen, Quelltemplates, Spec-Kit-Vorlagen, Autorenprofil und Projektregel sind synchron; der aktuelle Serienreview dient als Beispiel. Umfang vor Statistik-Selbstnachweis: `0` Produktionscode-Zeilen, `0` Testcode-Zeilen und `+469 / -203 = 266` Dokumentations-, Governance- und Evidence-Zeilen netto. Konservative Referenz: `3.3` Arbeitstage, ca. `25.9` Stunden und `0.15` Monate; Thorsten-Solo-Referenz: `2.1` Arbeitstage, ca. `16.6` Stunden und `0.10` Monate. Gegen einen sichtbaren Aktivtag sind `3.3x` und `2.1x` blended repository speedup beziehungsweise Lieferdichte, keine Stoppuhrmessung. NIST SSDF, CWE Top 25 und WCAG 2.2 AA gelten; ASVS, SBOM/VEX/SLSA, Produkt-AI-SBOM und Zero Trust sind für diese reine Dokumentations-/Governance-Änderung begründet `N/A`. Kein Produkt-Build oder DocFX-Lauf. *Building on PR #83, the refinement binds complete bilingual text first, a supplementary Mermaid diagram with no extra information directly after it, and a short German-first/English-second text alternative directly below. The 266 net governance and evidence lines correspond to 3.3 conservative or 2.1 Thorsten-solo days as delivery-density estimates.* |
+
+| 2026-09-13 | README-bedingte Rename-Receipt-Erneuerung / README-driven rename receipt renewal | Dieselbe sichtbare Agentensitzung auf Branch `codex/text-first-mermaid-intakes`. Der semantisch unveränderte Rename-Intake behält Intake-ID, Inhalt, Scope, Reihenfolge, Abhängigkeiten und `LocalImplementation`-Grenze. Der vorherige Intake und Receipt wurden bytegleich archiviert; Receipt `81f943b6-6ecf-458b-9c02-090adf31759e` bindet den durch PR `#83` geänderten README-Hash und die ausdrückliche Genehmigung. Der frühere Single-Review ist für diesen neuen Receipt ausdrücklich supersediert; ein neuer Review bleibt der einzige nächste Schritt. Umfang vor Statistik-Selbstnachweis: `0` Produktionscode-Zeilen, `0` Testcode-Zeilen und `+777 / -15 = 762` Dokumentations-, Governance- und Evidence-Zeilen netto, überwiegend bytegleiche Archivevidenz. Konservative Referenz: `9.5` Arbeitstage, ca. `74.3` Stunden und `0.44` Monate; Thorsten-Solo-Referenz: `6.1` Arbeitstage, ca. `47.5` Stunden und `0.28` Monate. Diese Werte beschreiben Lieferdichte, nicht aktive Handarbeit. Receipt und Operation bestanden die Bash- und PowerShell-Validatoren; die vollständige Fleet-Prüfung zeigte zusätzlich einen getrennten README-Drift im TUI-Funktionsabnahme-Receipt, der nicht von dieser Freigabe umfasst ist. NIST SSDF, CWE Top 25 und WCAG 2.2 AA gelten; ASVS, Produkt-SBOM/VEX/SLSA, Produkt-AI-SBOM und Zero Trust sind für diese reine Receipt-/Evidence-Erneuerung begründet `N/A`. Kein Produkt-Build, DocFX-Lauf oder Folgefeature. *The unchanged rename intake retains its identity and delivery boundaries. The renewed receipt binds the README changed by PR #83, preserves byte-identical predecessor evidence, and explicitly supersedes the prior Single review. The 762 net evidence lines are mostly archive copies and are delivery-density estimates; a separate TUI receipt drift remains outside this approval.* |
+
 ## Statistikprofil-1-Archiv / Statistics Profile 1 Archive
 Basis dieses Schlussblocks sind die aktuell dokumentierten Snapshot- und
 Phasenwerte aus den Abschnitten `## Gesamtstand des Repositories` und
@@ -729,27 +733,27 @@ Profil 2 verwendet Git-getrackte Textdateien und sichtbare Git-Aktivitaet. Die W
 
 | Kennzahl / Metric | Wert / Value |
 |---|---:|
-| Textbasis / Text base | 203140 lines |
-| Textdateien / Text files | 1286 |
+| Textbasis / Text base | 204147 lines |
+| Textdateien / Text files | 1292 |
 | Beobachtbarer Zeitraum / Observable period | 2025-09-21..2026-09-13 |
 | Aktivtage / Active days | 81 |
-| Relevante Commits / Relevant commits | 243 |
-| Zeilen je Aktivtag / Lines per active day | 2507.9 |
+| Relevante Commits / Relevant commits | 256 |
+| Zeilen je Aktivtag / Lines per active day | 2520.3 |
 | Peak-Tag im Fenster / Peak day in window | 2026-06-17 / 27058 |
 | Peak-Woche im Fenster / Peak week in window | 2026-07-19 / 33387 |
 | Laengste Serie / Longest streak | 8 days |
-| Speedup vs. 80 lines/day | 31.3x |
-| Speedup vs. 125 lines/day | 20.1x |
-| Methodik / Methodology | v2; source `0ad5d4977aac` |
+| Speedup vs. 80 lines/day | 31.5x |
+| Speedup vs. 125 lines/day | 20.2x |
+| Methodik / Methodology | v2; source `916d4c6c2788` |
 
 ### Artefaktmix / Artifact Mix
 
 ```text
 Produktiv / Production          [#...................]   1.4% | 2830
 Tests                           [#...................]   4.1% | 8338
-Dokumentation / Documentation   [###############.....]  74.0% | 150226
-Skripte / Scripts               [##..................]  11.5% | 23355
-Konfiguration / Configuration   [##..................]   7.6% | 15376
+Dokumentation / Documentation   [###############.....]  73.8% | 150744
+Skripte / Scripts               [##..................]  11.5% | 23391
+Konfiguration / Configuration   [##..................]   7.8% | 15829
 Daten und Medien / Data and media [....................]   0.0% | 0
 Sonstiger Text / Other text     [#...................]   1.5% | 3015
 ```
@@ -805,7 +809,7 @@ Wochen / Weeks 27..52 | 2026-03-22..2026-09-19
        41667 | . . . . . . . . . . . . . . . . . . . . . . . . . .
        33333 | . . . . . . . . . . . . . . . . . # . . . . . . . .
        25000 | . . . . . . . . . . . . # . . . . # . . . . . # # .
-       16667 | . . . . . . . . . . . . # . . . . # # . . . . # # .
+       16667 | . . . . . . . . . . . . # . . . . # # . . . . # # #
         8333 | . . . . # . # . . . . . # . . # . # # . # . . # # #
            0 +-----------------------------------------------------
 ```
@@ -883,8 +887,8 @@ Die festen Slots halten den Phasenvergleich auch bei fehlenden oder spaeter erga
 
 ```text
 Scale: 0..50x
-80 lines/day       [#############.......] 31.3x
-125 lines/day      [########............] 20.1x
+80 lines/day       [#############.......] 31.5x
+125 lines/day      [########............] 20.2x
 ```
 
 Die Faktoren vergleichen sichtbare Lieferdichte mit den dokumentierten manuellen Referenzen. Sie messen keine Arbeitszeit.
@@ -897,7 +901,7 @@ Die Faktoren vergleichen sichtbare Lieferdichte mit den dokumentierten manuellen
 Scale: 0..5000 lines/day
 Experienced manual [#...................] 80
 Thorsten solo      [#...................] 125
-Visible repository [##########..........] 2507.9
+Visible repository [##########..........] 2520.3
 ```
 
 Die gemeinsame Skala vergleicht Referenzen und sichtbare Lieferdichte. Sie schreibt die Git-Aktivitaet keiner Person oder KI pauschal zu.
@@ -923,6 +927,6 @@ DE: Das Fenster beginnt am 2025-09-21 und endet am 2026-09-13. Es enthaelt 81 ak
 | 2026-06 | 37273 |
 | 2026-07 | 74031 |
 | 2026-08 | 26210 |
-| 2026-09 | 61000 |
+| 2026-09 | 62589 |
 
 <!-- project-statistics-v2:end -->

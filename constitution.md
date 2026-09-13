@@ -1,3 +1,5 @@
+<!-- Mermaid text-alternative refinement 2026-09-13: 1.18.0 -> 1.18.1 (patch: precise placement and text-first equivalence).
+Updated: constitution, agent guidance, intake/workflow templates and project rule. Removed: none. No deferred placeholders. -->
 <!-- Mermaid/report Sync Impact 2026-09-13: 1.17.2 -> 1.18.0 (minor: new mandatory governance).
 Added: Mermaid and feature completion reports. Removed: none. Updated: agent guidance, intake profile,
 spec/plan/tasks templates and completion-report-template.md. No deferred placeholders. /
@@ -32,7 +34,7 @@ Follow-up TODOs:
 - None
 -->
 
-# Constitution v1.18.0
+# Constitution v1.18.1
 
 # home-baseline Constitution
 
@@ -901,7 +903,7 @@ Community/catalog coordination is tracked in `github/spec-kit#2362`.
 `.github/copilot-instructions.md` for per-agent operational guidance. This
 constitution is the authoritative policy layer above all agent-specific files.
 
-**Version**: 1.18.0 | **Ratified**: 2026-03-31 | **Last Amended**: 2026-09-13
+**Version**: 1.18.1 | **Ratified**: 2026-03-31 | **Last Amended**: 2026-09-13
 
 <!-- EN: constitution.md placeholder
 [DE-Zusammenfassung: constitution.md beschreibt die Prinzipien und Standards für alle home-baseline Workspaces.]
@@ -967,9 +969,14 @@ Das Repository verwendet Statistikmethodik 2 mit reproduzierbarer JSON-Konfigura
 ## Mermaid und Spec-Kit-Abschlussbericht / Mermaid and Spec Kit completion report
 
 Neue Lastenhefte enthalten bei hilfreichen Abläufen, Zuständen oder Abhängigkeiten
-lesbaren Mermaid-Quelltext im Markdown und eine gleichwertige Textalternative.
-Bei einfachen Inhalten die Nichtanwendung kurz begründen. Diagramme bilden die
-verbindlichen Text-/Manifestquellen ab; Farbe allein trägt keine Bedeutung.
+lesbaren Mermaid-Quelltext im versionierten Markdown. Das Diagramm folgt
+unmittelbar nach der vollständigen deutsch-englischen text-first-Erklärung; sein
+Quelltext darf keine Information tragen, die im Begleittext fehlt. Direkt
+darunter fasst eine kurze Textalternative die wesentlichen Beziehungen und
+gegebenenfalls Entscheidungszweige auf Deutsch zuerst und Englisch danach
+zusammen. Bei einfachen Inhalten die Nichtanwendung kurz begründen. Diagramme
+bilden die verbindlichen Text-/Manifestquellen ab; Farbe allein trägt keine
+Bedeutung.
 Nach jedem vollständig abgeschlossenen Spec-Kit-Feature-Lauf den vollständigen
 Ergebnisbericht im Chat anzeigen und im Feature-Verzeichnis als
 `completion-report.md` versionieren. Einzelne Planungs-/Status-/Review-Kommandos
@@ -983,8 +990,12 @@ Merge-/Sync-Evidence im Chat und bestehenden Closeout-Nachweis ergänzen; keine
 zusätzlichen Commits allein für selbstreferenzielle Berichts-/Statistikwerte.
 Diese Projektregel und lokale Vorlagen bei Spec-Kit-Updates erhalten.
 
-*New intakes use readable Mermaid Markdown and equivalent text alternatives for
-useful workflows, states or dependencies; justify omission for simple content.
+*New intakes use readable, versioned Mermaid Markdown for useful workflows,
+states or dependencies. The diagram follows immediately after the complete
+German-first/English-second text-first explanation; its source carries no
+information absent from the accompanying text. A short text alternative directly
+below summarizes the essential relationships and, where applicable, decision
+branches in German first and English second. Justify omission for simple content.
 Diagrams reflect authoritative text/manifests and never rely on color alone.
 After each completed feature run, show the full outcome report in chat and
 version completion-report.md in the feature directory using the shared template
