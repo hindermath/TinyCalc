@@ -1,11 +1,10 @@
 <!--
 Sync Impact Report
-Version change: 1.17.1 -> 1.17.2
+Version change: 1.17.2 -> 1.17.3
 Modified principles:
-- Spec Kit preset governance: pin autonomous-run-governance v0.4.4 and require exact staged-candidate validation.
-- None; Security-First remains Principle I and the shared Home Baseline remains unchanged
+- TinyCalc Level-2 addendum: bind the text-first Mermaid rule for profile-governed requirement documents.
 Added sections:
-- Didaktische und sprachliche Klarheit / Pedagogical and Linguistic Clarity (TinyCalc Level-2 addendum only)
+- None
 Removed sections:
 - None
 Templates requiring updates:
@@ -28,7 +27,7 @@ Follow-up TODOs:
 - None
 -->
 
-# Constitution v1.17.2
+# Constitution v1.17.3
 
 # home-baseline Constitution
 
@@ -897,7 +896,7 @@ Community/catalog coordination is tracked in `github/spec-kit#2362`.
 `.github/copilot-instructions.md` for per-agent operational guidance. This
 constitution is the authoritative policy layer above all agent-specific files.
 
-**Version**: 1.17.2 | **Ratified**: 2026-03-31 | **Last Amended**: 2026-09-12
+**Version**: 1.17.3 | **Ratified**: 2026-03-31 | **Last Amended**: 2026-09-13
 
 <!-- EN: constitution.md placeholder
 [DE-Zusammenfassung: constitution.md beschreibt die Prinzipien und Standards für alle home-baseline Workspaces.]
@@ -919,6 +918,16 @@ Beide Sprachblöcke zielen auf CEFR B2. Status, Abhängigkeiten, Entscheidungen
 und nächste Schritte bleiben textuell vollständig und soweit anwendbar nach
 WCAG 2.2 Level AA für Braillezeilen, Screenreader und Textbrowser nutzbar.
 
+Für Lastenhefte, die nach dem Profil
+`.specify/templates/intake-authoring-level2-lastenheft-profile.md` erstellt oder
+gepflegt werden, gilt: Wenn mindestens drei zusammenhängende Abhängigkeiten,
+Zustände, Übergaben, Verzweigungen oder geordnete Schritte wesentlich von einer
+Visualisierung profitieren, folgt direkt nach der vollständigen text-first-
+Erklärung ein knappes Mermaid-Diagramm. Das Diagramm bleibt ergänzend; sein
+lesbarer Markdown-Quelltext wird versioniert und darf keine Information tragen,
+die im Begleittext fehlt. Ein einfaches Intake ohne wesentlichen Klarheitsgewinn
+dokumentiert `N/A`.
+
 Öffentliche C#-Typen und -Mitglieder erhalten vollständige XML-Dokumentation:
 `<summary>` sowie fachlich anwendbare `<param>`, `<returns>` und `<exception>`.
 Lokale Variablen besitzen keine XML-Dokumentationsfläche. CS1591 bleibt eine
@@ -937,6 +946,15 @@ ist, gelten mindestens 70 Prozent Coverage und das Ziel von 80 Prozent.
 language blocks target CEFR B2. Status, dependencies, decisions, and next
 actions remain complete in text and, where applicable, meet WCAG 2.2 Level AA
 for Braille displays, screen readers, and text browsers.*
+
+*For requirement documents created or maintained under
+`.specify/templates/intake-authoring-level2-lastenheft-profile.md`, if three or
+more connected dependencies, states, handoffs, branches, or ordered steps
+materially benefit from visualization, a concise Mermaid diagram follows the
+complete text-first explanation. The diagram remains supplementary; its
+readable Markdown source is version-controlled and carries no information that
+is absent from the accompanying text. A simple intake without material clarity
+gain records `N/A`.*
 
 *Public C# types and members receive complete XML documentation: `<summary>`
 and every technically applicable `<param>`, `<returns>`, and `<exception>`.

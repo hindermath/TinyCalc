@@ -768,14 +768,14 @@
       "sourceClass": "Constitution",
       "path": "constitution.md",
       "version": "Current",
-      "reviewedAt": "2026-09-12",
-      "normalizedSha256": "978a928658ed5d8dba7c94f6cbf5d7a750372c97fc5173d75fb1f2a32d138c35",
+      "reviewedAt": "2026-09-13",
+      "normalizedSha256": "f17a2a0b2703023c6c9a88295e51ddf6c6bbf5ba54059e7f4caed0ffc03066ff",
       "scope": {
         "de": "Diese Quelle wird nur für ihren benannten TinyCalc-Prüfumfang verwendet.",
         "en": "This source is used only for its named TinyCalc assessment scope."
       },
       "freshness": "Revalidated",
-      "locator": "Constitution v1.17.2",
+      "locator": "Constitution v1.17.3",
       "findingIds": []
     },
     {
@@ -783,14 +783,14 @@
       "sourceClass": "Constitution",
       "path": ".specify/memory/constitution.md",
       "version": "Current",
-      "reviewedAt": "2026-09-12",
-      "normalizedSha256": "978a928658ed5d8dba7c94f6cbf5d7a750372c97fc5173d75fb1f2a32d138c35",
+      "reviewedAt": "2026-09-13",
+      "normalizedSha256": "f17a2a0b2703023c6c9a88295e51ddf6c6bbf5ba54059e7f4caed0ffc03066ff",
       "scope": {
         "de": "Diese Quelle wird nur für ihren benannten TinyCalc-Prüfumfang verwendet.",
         "en": "This source is used only for its named TinyCalc assessment scope."
       },
       "freshness": "Revalidated",
-      "locator": "Constitution v1.17.2",
+      "locator": "Constitution v1.17.3",
       "findingIds": []
     },
     {
@@ -1334,13 +1334,13 @@
       "evidence": [
         {
           "path": "constitution.md",
-          "locator": "Constitution v1.17.2",
+          "locator": "Constitution v1.17.3",
           "observedAt": "2026-09-12",
           "freshness": "Revalidated",
           "availability": "Existing",
           "supports": {
-            "de": "CL-01-01 ist durch constitution.md am exakten Locator 'Constitution v1.17.2' belegt. Der am 2026-09-12 als Revalidated geprüfte Inhalt stützt ausschließlich die Einstufung Applicable / Fulfilled.",
-            "en": "CL-01-01 is bound to constitution.md at the exact locator 'Constitution v1.17.2'. The content observed on 2026-09-12 as Revalidated supports only the Applicable / Fulfilled disposition."
+            "de": "CL-01-01 ist durch constitution.md am exakten Locator 'Constitution v1.17.3' belegt. Der am 2026-09-13 als Revalidated geprüfte Inhalt stützt ausschließlich die Einstufung Applicable / Fulfilled.",
+            "en": "CL-01-01 is bound to constitution.md at the exact locator 'Constitution v1.17.3'. The content observed on 2026-09-13 as Revalidated supports only the Applicable / Fulfilled disposition."
           }
         },
         {
@@ -1581,13 +1581,13 @@
         },
         {
           "path": "constitution.md",
-          "locator": "Constitution v1.17.2",
+          "locator": "Constitution v1.17.3",
           "observedAt": "2026-09-12",
           "freshness": "Revalidated",
           "availability": "Existing",
           "supports": {
-            "de": "CL-01-05 ist durch constitution.md am exakten Locator 'Constitution v1.17.2' belegt. Der am 2026-09-12 als Revalidated geprüfte Inhalt stützt ausschließlich die Einstufung Applicable / Partly Fulfilled.",
-            "en": "CL-01-05 is bound to constitution.md at the exact locator 'Constitution v1.17.2'. The content observed on 2026-09-12 as Revalidated supports only the Applicable / Partly Fulfilled disposition."
+            "de": "CL-01-05 ist durch constitution.md am exakten Locator 'Constitution v1.17.3' belegt. Der am 2026-09-13 als Revalidated geprüfte Inhalt stützt ausschließlich die Einstufung Applicable / Partly Fulfilled.",
+            "en": "CL-01-05 is bound to constitution.md at the exact locator 'Constitution v1.17.3'. The content observed on 2026-09-13 as Revalidated supports only the Applicable / Partly Fulfilled disposition."
           }
         },
         {
@@ -1819,13 +1819,13 @@
         },
         {
           "path": "constitution.md",
-          "locator": "Constitution v1.17.2",
+          "locator": "Constitution v1.17.3",
           "observedAt": "2026-09-12",
           "freshness": "Revalidated",
           "availability": "Existing",
           "supports": {
-            "de": "CL-01-09 ist durch constitution.md am exakten Locator 'Constitution v1.17.2' belegt. Der am 2026-09-12 als Revalidated geprüfte Inhalt stützt ausschließlich die Einstufung Applicable / Partly Fulfilled.",
-            "en": "CL-01-09 is bound to constitution.md at the exact locator 'Constitution v1.17.2'. The content observed on 2026-09-12 as Revalidated supports only the Applicable / Partly Fulfilled disposition."
+            "de": "CL-01-09 ist durch constitution.md am exakten Locator 'Constitution v1.17.3' belegt. Der am 2026-09-13 als Revalidated geprüfte Inhalt stützt ausschließlich die Einstufung Applicable / Partly Fulfilled.",
+            "en": "CL-01-09 is bound to constitution.md at the exact locator 'Constitution v1.17.3'. The content observed on 2026-09-13 as Revalidated supports only the Applicable / Partly Fulfilled disposition."
           }
         },
         {
@@ -1902,13 +1902,13 @@
         },
         {
           "path": "constitution.md",
-          "locator": "Constitution v1.17.2",
+          "locator": "Constitution v1.17.3",
           "observedAt": "2026-09-12",
           "freshness": "Revalidated",
           "availability": "Existing",
           "supports": {
-            "de": "CL-01-10 ist durch constitution.md am exakten Locator 'Constitution v1.17.2' belegt. Der am 2026-09-12 als Revalidated geprüfte Inhalt stützt ausschließlich die Einstufung Applicable / Partly Fulfilled.",
-            "en": "CL-01-10 is bound to constitution.md at the exact locator 'Constitution v1.17.2'. The content observed on 2026-09-12 as Revalidated supports only the Applicable / Partly Fulfilled disposition."
+            "de": "CL-01-10 ist durch constitution.md am exakten Locator 'Constitution v1.17.3' belegt. Der am 2026-09-13 als Revalidated geprüfte Inhalt stützt ausschließlich die Einstufung Applicable / Partly Fulfilled.",
+            "en": "CL-01-10 is bound to constitution.md at the exact locator 'Constitution v1.17.3'. The content observed on 2026-09-13 as Revalidated supports only the Applicable / Partly Fulfilled disposition."
           }
         },
         {
@@ -7687,13 +7687,13 @@
       "evidence": [
         {
           "path": "constitution.md",
-          "locator": "Constitution v1.17.2",
+          "locator": "Constitution v1.17.3",
           "observedAt": "2026-09-12",
           "freshness": "Revalidated",
           "availability": "Existing",
           "supports": {
-            "de": "CL-08-13 ist durch constitution.md am exakten Locator 'Constitution v1.17.2' belegt. Der am 2026-09-12 als Revalidated geprüfte Inhalt stützt ausschließlich die Einstufung Applicable / Fulfilled.",
-            "en": "CL-08-13 is bound to constitution.md at the exact locator 'Constitution v1.17.2'. The content observed on 2026-09-12 as Revalidated supports only the Applicable / Fulfilled disposition."
+            "de": "CL-08-13 ist durch constitution.md am exakten Locator 'Constitution v1.17.3' belegt. Der am 2026-09-13 als Revalidated geprüfte Inhalt stützt ausschließlich die Einstufung Applicable / Fulfilled.",
+            "en": "CL-08-13 is bound to constitution.md at the exact locator 'Constitution v1.17.3'. The content observed on 2026-09-13 as Revalidated supports only the Applicable / Fulfilled disposition."
           }
         },
         {

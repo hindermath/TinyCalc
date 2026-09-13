@@ -68,8 +68,8 @@ reference files, and the PDF plus checksum file.
 
 | Klasse / Class | Pfad / Path | Normalisierter SHA-256 / Normalized SHA-256 | Scope, Freshness und Locator |
 |---|---|---|---|
-| Constitution | `constitution.md` | `978a928658ed5d8dba7c94f6cbf5d7a750372c97fc5173d75fb1f2a32d138c35` | Current; Principles XI-XVIII und Registry-Zeile `RiderProjects/TinyCalc` |
-| Constitution | `.specify/memory/constitution.md` | `978a928658ed5d8dba7c94f6cbf5d7a750372c97fc5173d75fb1f2a32d138c35` | Current; byte-identischer Partner / byte-identical partner |
+| Constitution | `constitution.md` | `f17a2a0b2703023c6c9a88295e51ddf6c6bbf5ba54059e7f4caed0ffc03066ff` | Current; Principles XI-XVIII und Registry-Zeile `RiderProjects/TinyCalc` |
+| Constitution | `.specify/memory/constitution.md` | `f17a2a0b2703023c6c9a88295e51ddf6c6bbf5ba54059e7f4caed0ffc03066ff` | Current; byte-identischer Partner / byte-identical partner |
 | Registry | `.specify/presets/.registry` | `8b1f5085f0573b95bab983aabdc59fd7f80b32c71a4a2355cbf64af9cfc10978` | Current; `presets` mit 13 Einträgen / 13 entries |
 | Workflow | `.github/workflows/ci.yml` | `c67a2404fd8d973bc36e49a811b5efc1065ac3bbf8cf5bfd2b211e0b6cfc2ceb` | Current; Linux-/Windows-Produkt- und GSDB-Validatorjobs nach T059 |
 | Workflow | `.github/workflows/agent-secret-scan.yml` | `2e604000c7c18c64420c3553f0db35e18222bafd9324a90295126667e567ada2` | Current; Secret-Scan |
@@ -87,7 +87,7 @@ reference files, and the PDF plus checksum file.
 | IntakeEvidence | `requirements/intakes/series-archive/tinycalc-delivery/20260913-reference-lifecycle-repair/manifest.json` | `586424d2424b31f16c1461583affb3b0204886ccca0e79fb59af7759842b6703` | Current; GSDB `Completed`, kein `declaredEligible` / no `declaredEligible` |
 | IntakeEvidence | `requirements/intakes/series/tinycalc-delivery/intake-review-request.json` | `daf3027245df1d4681305746e771787c19d80d18c647dac5776b7e7eb5f2608d` | Current; Review-Anforderung / review request |
 | IntakeEvidence | `requirements/intakes/series/tinycalc-delivery/intake-review-result.json` | `22bb15b3016d31f2dfcc65aff0a4979e2eac18af998c1a8be58440f6e293757b` | Current; `NeedsRemediation` |
-| IntakeEvidence | `requirements/intakes/series/tinycalc-delivery/intake-review-report.md` | `3d4fb75133879d359d3f2c7846bf445b9cbadba5c43478498dc0bbca650d31e9` | Current; lesbare Review-Sicht / readable review view |
+| IntakeEvidence | `requirements/intakes/series/tinycalc-delivery/intake-review-report.md` | `8db6a7faf90d7bd630afe04efb1d6271546e33187b8d86c4e4b80e2adabbd662` | Current; lesbare Review-Sicht / readable review view |
 | ProjectEvidence | `docs/security/secure-development/2026-09-05-tinycalc-rl-se-self-assessment/baseline.json` | `f8339c12b46e0787a441b127e9002b16e8861eeb3544b741ab3550d79fb69f6d` | Revalidated; Gate `baseline` |
 | ProjectEvidence | `docs/security/secure-development/2026-09-05-tinycalc-rl-se-self-assessment/assessment-matrix.json` | `804b7308968e1aa0984a5b678b977a5a5dc631a15bce5812fbeae0636bf7554c` | Revalidated; 157 Feature-004-Zeilen |
 | ProjectEvidence | `docs/security/secure-development/2026-09-05-tinycalc-rl-se-self-assessment/closure.json` | `db2be35af5b02d52be2d74045862756bb149fe0dfddf7043e2f69ccca8054138` | Revalidated; technische Schließung, Human-only offen / technical closure, Human-only open |

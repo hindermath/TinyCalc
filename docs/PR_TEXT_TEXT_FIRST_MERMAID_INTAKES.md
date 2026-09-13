@@ -19,14 +19,16 @@ Das Level-2-Autorenprofil verlangt bei mindestens drei zusammenhängenden
 Elementen ein knappes Mermaid-Diagramm, wenn es die Verständlichkeit verbessert.
 Die vollständige deutsch-englische Textbeschreibung steht zuerst und bleibt
 normativ. Der aktuelle TinyCalc-Serienreview dient als konkretes Beispiel. Alle
-Agentenrichtlinien und ihre Quelltemplates wurden synchronisiert.
+Agentenrichtlinien und ihre Quelltemplates wurden synchronisiert. Constitution
+v1.17.3 und ihr Spec-Kit-Spiegel verankern die Regel kanonisch.
 
 English:
 The Level-2 authoring profile now requires a concise Mermaid diagram for three
 or more connected elements when it materially improves clarity. The complete
 German-English text explanation comes first and remains normative. The current
 TinyCalc series review provides a concrete example. All agent guidance files
-and their source templates are synchronized.
+and their source templates are synchronized. Constitution v1.17.3 and its
+Spec Kit mirror bind the rule canonically.
 
 ## Risiken / Risks
 
@@ -43,6 +45,7 @@ and their source templates are synchronized.
 ## Testplan / Test Plan
 
 - Agentenflächen und Quelltemplates auf dieselbe Mermaid-Regel prüfen.
+- Constitution und Spec-Kit-Spiegel auf Bytegleichheit und Evidenzbindung prüfen.
 - Den Intake-Serienreview mit Bash und PowerShell validieren.
 - Markdown, Mermaid-Quellblock, UTF-8 und `git diff --check` prüfen.
 - Projektstatistik deterministisch regenerieren und im Check-only-Modus prüfen.

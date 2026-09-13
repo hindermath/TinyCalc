@@ -26,13 +26,14 @@ Der Serienreview umfasst 13 Ziele. `IR002` ist geschlossen. `IR003` und `IR004`
 bleiben als mittlere Befunde in ihren bereits vorhandenen Intake-Dateien offen.
 Diese beiden Dateien werden korrigiert; anschließend wird die vollständige Serie
 erneut geprüft. Nur ein Review ohne verbleibende Befunde kann den Status `Ready`
-erreichen.
+erreichen. Bleiben Befunde offen, bleibt der Status `NeedsRemediation`.
 
 English:
 The series review covers 13 targets. `IR002` is closed. `IR003` and `IR004`
 remain open as Medium findings in their existing intake files. Those two files
 will be repaired, and then the complete series will be reviewed again. Only a
-review without remaining findings can reach `Ready`.
+review without remaining findings can reach `Ready`. If findings remain, the
+status remains `NeedsRemediation`.
 
 ```mermaid
 flowchart TD
