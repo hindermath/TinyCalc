@@ -86,7 +86,7 @@ reference files, and the PDF plus checksum file.
 | IntakeEvidence | `requirements/intakes/archive/Lastenheft_GSDB-Spec-Kit-Intensivpruefung.005-gsdb-intensive-review.md` | `f4dcb3fac6cb755faed296847ffd40170f0d008fa3640e5e5fa5bc38e4af5375` | Current; branchgestempelter bindender Scope / branch-stamped binding scope |
 | IntakeEvidence | `requirements/intakes/series-archive/tinycalc-delivery/20260913-reference-lifecycle-repair/manifest.json` | `586424d2424b31f16c1461583affb3b0204886ccca0e79fb59af7759842b6703` | Current; GSDB `Completed`, kein `declaredEligible` / no `declaredEligible` |
 | IntakeEvidence | `requirements/intakes/series/tinycalc-delivery/intake-review-request.json` | `daf3027245df1d4681305746e771787c19d80d18c647dac5776b7e7eb5f2608d` | Current; Review-Anforderung / review request |
-| IntakeEvidence | `requirements/intakes/series/tinycalc-delivery/intake-review-result.json` | `22bb15b3016d31f2dfcc65aff0a4979e2eac18af998c1a8be58440f6e293757b` | Current; `Ready` |
+| IntakeEvidence | `requirements/intakes/series/tinycalc-delivery/intake-review-result.json` | `22bb15b3016d31f2dfcc65aff0a4979e2eac18af998c1a8be58440f6e293757b` | Current; `NeedsRemediation` |
 | IntakeEvidence | `requirements/intakes/series/tinycalc-delivery/intake-review-report.md` | `3d4fb75133879d359d3f2c7846bf445b9cbadba5c43478498dc0bbca650d31e9` | Current; lesbare Review-Sicht / readable review view |
 | ProjectEvidence | `docs/security/secure-development/2026-09-05-tinycalc-rl-se-self-assessment/baseline.json` | `f8339c12b46e0787a441b127e9002b16e8861eeb3544b741ab3550d79fb69f6d` | Revalidated; Gate `baseline` |
 | ProjectEvidence | `docs/security/secure-development/2026-09-05-tinycalc-rl-se-self-assessment/assessment-matrix.json` | `804b7308968e1aa0984a5b678b977a5a5dc631a15bce5812fbeae0636bf7554c` | Revalidated; 157 Feature-004-Zeilen |
@@ -128,7 +128,7 @@ paths. A hash proves content, not automatic control fulfilment.
 | ProjectEvidence | `docs/security/cloud-autonomy-applicability.md` | `398a07285563cf0a9c6b555771ed7672d68a24a170045d236feeb75a87130009` | Revalidated; BSI-C3A-Disposition |
 | ProjectEvidence | `docs/security/asvs-verification.md` | `bb1cbaadfde55dfe863fe04c9ab3b5de062769ccc1ed1970991bc0641d935c07` | Revalidated; ASVS-N/A und Trigger |
 | ProjectEvidence | `docs/security/arc42-security.md` | `eb28c797c53a2eca5cc8902ade176a9f854d8f63f58d66f482a09d7cf7e31a57` | Revalidated; arc42 Section 8 |
-| ProjectEvidence | `AGENTS.md` | `77013c031f5c8be0ec1fc2c8c72ca3e54d9652765e4edcc0b9f35e9a51476c37` | Revalidated; Repository-Governance |
+| ProjectEvidence | `AGENTS.md` | `0ac493a91f8cfda084b4962077bde84516c80be7ac1913ef386758382257c164` | Revalidated; Repository-Governance |
 | ProjectEvidence | `.specify/presets/.registry` | `8b1f5085f0573b95bab983aabdc59fd7f80b32c71a4a2355cbf64af9cfc10978` | Revalidated; 13 installierte Presets |
 | ProjectEvidence | `specs/004-rl-se-self-assessment/autonomous-run-evidence.md` | `d3ec4b95b39d12693a0d549760fa096078e22533ce412068b5f182416b81bece` | Revalidated; Feature-004-Laufevidenz |
 | ProjectEvidence | `docs/security/samm-assessment.md` | `c6036128766f4aabb43ca32631db0a2c4b86f35b2c6d947296525cfa87c569e9` | Revalidated; OWASP-SAMM-Disposition |
