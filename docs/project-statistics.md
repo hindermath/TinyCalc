@@ -558,6 +558,12 @@ runtime evidence.*
 
 | 2026-09-13 | Autorisierte Receipt-Erneuerung / Authorized receipt renewal | Zwei byte-identische Intake-Archive, zwei Receipt-Nachfolger, zwei Operationen und zwei Einzelreviews; kanonischer Generator-Backport auf Authoring 0.3.4. 15 Artefaktpruefungen und 36 Negativ-Fixtures bestanden; zwei bestehende Medium-Referenzbefunde bleiben vor Produktausfuehrung offen. Kein Produktcode geaendert. / Two receipt successors and scoped reviews preserve content; canonical compatibility backport, 15 artifact checks and 36 fixtures pass, two Medium business findings remain open. |
 | 2026-09-13 | Intake-Referenz- und Lifecycle-Korrektur / Intake reference and lifecycle repair | Zwei IR001-Befunde behoben; vier Completed-Mitglieder bytegleich archiviert, vier Receipt-Nachfolger und eine neue Serie. Zwei Einzelreviews Ready; Gesamtserie mit drei neuen Medium-Lernendenbefunden NeedsRemediation. Lokale Alignment-/Renderer-Logik folgt dem kanonischen Manifest; 51 Regressionen sowie Bash-/PowerShell-Evidence. Kein Produktcode; 80/125 Zeilen je Tag als bestehende Referenzen, sichtbares Arbeitsfenster 2026-09-13; GeneratedUpdate der Statistik. / Two reference repairs, preserved archive lineage and truthful full-series review; helper regression coverage, unchanged product code. |
+| 2026-09-13 | IR002-Lernendenklarheit aktualisiert / IR002 learner clarity updated | Eine sichtbare Agentensitzung auf Branch `codex/intake-ir002-learner-clarity`. Vorkenntnisse und acht Erstbegriffe wurden deutsch-englisch auf CEFR-B2-Niveau ergaenzt; Scope-, Kommentar-, Review- und Akzeptanzregeln liegen nun gleichwertig in beiden Sprachen vor. Intake- und Serienvorgaenger sowie der veraltete Gesamtreview sind byteidentisch archiviert; Reihenfolge, neun Hard Gates, vier Wurzeln, Lifecycle und LocalImplementation-Grenze bleiben unveraendert. Umfang vor Statistik-Selbstnachweis: `0` Produktionscode-Zeilen, `0` Testcode-Zeilen und `+1237 / -522 = 715` Dokumentations-, Governance- und Evidence-Zeilen netto einschliesslich Archivevidenz. Konservative Referenz: `8.9` Arbeitstage, ca. `69.7` Stunden und `0.4` Monate; Thorsten-Solo-Referenz: `5.7` Arbeitstage, ca. `44.6` Stunden und `0.3` Monate. Gegen einen sichtbaren Aktivtag sind `8.9x` und `5.7x` blended repository speedup beziehungsweise Lieferdichte, keine Stoppuhrmessung. Authoring-, Serien- und Gesamt-Alignment-Validatoren bestanden in Bash und PowerShell; der Folge-Review bleibt absichtlich ausstehend. NIST SSDF, CWE Top 25 und WCAG 2.2 AA gelten; ASVS, SBOM/VEX/SLSA, Produkt-AI-SBOM und Zero Trust sind fuer diese reine Intake-Aktualisierung begruendet `N/A`. Kein Produkt-Build oder DocFX-Lauf, keine Remote-Aktion. *One visible session added bilingual CEFR-B2 prerequisites, first-use terms, and equivalent normative rules. The 715 net documentation and evidence lines correspond to 8.9 conservative or 5.7 Thorsten-solo days as delivery-density estimates; product code and runtime remain unchanged, while the successor review is intentionally pending.* |
+| 2026-09-13 | Didaktisches Kommentar-Intake einzeln geprueft / Didactic comment intake reviewed individually | Dieselbe sichtbare Agentensitzung auf Branch `codex/intake-ir002-learner-clarity`. Der hashgebundene Single-Review pruefte ein Ziel und keine Worker. Ergebnis `NeedsRemediation`: Der Kern von `IR002` ist behoben, aber `API`, `Runtime`, `A11Y`, `CEFR B2` und `Spec Kit` benoetigen noch kurze deutsch-englische Erst-Erklaerungen; ein Medium-Befund, keine Critical-/High-/Low-Befunde, Risiken oder offenen Fragen. Umfang vor Statistik-Selbstnachweis: `0` Produktionscode-Zeilen, `0` Testcode-Zeilen und `131` neue Dokumentations-/Review-Evidence-Zeilen. Konservative Referenz: `1.6` Arbeitstage, ca. `12.8` Stunden und `0.08` Monate; Thorsten-Solo-Referenz: `1.0` Arbeitstage, ca. `8.2` Stunden und `0.05` Monate. Gegen einen sichtbaren Aktivtag sind `1.6x` und `1.0x` blended repository speedup beziehungsweise Lieferdichte, keine Stoppuhrmessung. Review-Resultat bestand den Bash- und PowerShell-Validator; kein Feature, Build, DocFX-Lauf oder Remote-Vorgang wurde gestartet. *The hash-bound Single review covers one target and no workers. One Medium learner-clarity remainder keeps the outcome at NeedsRemediation; 131 evidence lines correspond to 1.6 conservative or 1.0 Thorsten-solo days as delivery-density estimates. No feature or remote action started.* |
+| 2026-09-13 | IR002-Restbefund repariert und neu geprueft / IR002 residual finding repaired and re-reviewed | Dieselbe sichtbare Agentensitzung auf Branch `codex/intake-ir002-learner-clarity`. API, Runtime-Verhalten, A11Y, CEFR B2 und der minimale geregelte Spec-Kit-Ablauf wurden kurz und gleichwertig deutsch-englisch erklaert. Intake-, Receipt- und Serienvorgaenger sind byteidentisch archiviert; Scope, Nicht-Ziele, Reihenfolge, neun Hard Gates, vier Wurzeln, Lifecycle und `LocalImplementation` blieben unveraendert. Der vollstaendige neue Single-Re-Review supersediert Review `417516f8-a708-453b-8eda-3416bb42bd58` mit Ergebnis `Ready`: ein Ziel, keine Worker, Befunde, akzeptierten Risiken oder offenen Fragen. Umfang vor Statistik-Selbstnachweis: `0` Produktionscode-Zeilen, `0` Testcode-Zeilen und `+861 / -55 = 806` Dokumentations-, Governance- und Evidence-Zeilen netto einschliesslich Archivevidenz. Konservative Referenz: `10.1` Arbeitstage, ca. `78.6` Stunden und `0.47` Monate; Thorsten-Solo-Referenz: `6.4` Arbeitstage, ca. `50.3` Stunden und `0.30` Monate. Gegen einen sichtbaren Aktivtag sind `10.1x` und `6.4x` blended repository speedup beziehungsweise Lieferdichte, keine Stoppuhrmessung. Authoring-, Serien-, Alignment- und Re-Review-Validatoren bestanden in Bash und PowerShell; kein Produkt-Build, DocFX-Lauf, Feature oder Remote-Vorgang. *The narrow residual repair adds five bilingual explanations and preserves every delivery boundary. The complete Single re-review is Ready with no findings; 806 net governance and evidence lines correspond to 10.1 conservative or 6.4 Thorsten-solo days as delivery-density estimates, including preserved archives.* |
+| 2026-09-13 | TinyCalc-Gesamtserie nach IR002-Reparatur neu geprueft / TinyCalc full series re-reviewed after IR002 repair | Dieselbe sichtbare Agentensitzung auf Branch `codex/intake-ir002-learner-clarity`. Der vollstaendige hashgebundene Serienreview umfasst `13` Ziele, `4` Wurzeln, `9` verbindliche Hard Gates und keine Worker. `IR002` ist durch den erfolgreichen Single-Re-Review geschlossen; `IR003` und `IR004` bleiben als zwei mittlere Befunde zur Lernendenklarheit in den bereits vorhandenen Secure-Development- und Sandbox-Intakes offen. Ergebnis `NeedsRemediation`: keine Critical-, High- oder Low-Befunde, keine akzeptierten Risiken und keine offenen Fragen. Umfang vor Statistik-Selbstnachweis: `0` Produktionscode-Zeilen, `0` Testcode-Zeilen und `348` neue Review- und Evidence-Zeilen. Konservative Referenz: `4.4` Arbeitstage, ca. `33.9` Stunden und `0.20` Monate; Thorsten-Solo-Referenz: `2.8` Arbeitstage, ca. `21.7` Stunden und `0.13` Monate. Gegen einen sichtbaren Aktivtag sind `4.4x` und `2.8x` blended repository speedup beziehungsweise Lieferdichte, keine Stoppuhrmessung. Request und Resultat bestanden die Bash- und PowerShell-Validatoren; kein Feature, Build, DocFX-Lauf oder Remote-Vorgang wurde gestartet. *The complete hash-bound series review covers 13 targets, four roots, nine binding hard gates, and no workers. IR002 is closed while two Medium learner-clarity findings remain in the existing IR003 and IR004 intakes. The 348 new review-evidence lines correspond to 4.4 conservative or 2.8 Thorsten-solo days as delivery-density estimates.* |
+
+| 2026-09-13 | Autorisierte Whitespace-Lieferkorrektur / Authorized whitespace delivery repair | Sechs Markdown-Zeilenumbrüche in drei noch uncommitteten Intake-Snapshots ersetzt; 21 Dokument-/Belegdateien kausal neu hashgebunden, Originalbytes verlustfrei mit SHA-256/Base64 gesichert. Frühere Bytegleichheitsangaben beziehen sich auf die gesicherten Originale, die lesbaren Archive sind normalisierte Kopien. Ein neuer vollständiger Einzelreview Ready; Serienstatus weiterhin NeedsRemediation mit IR003/IR004. 0 Produktionscode- und 0 Testcode-Änderungen; vorhandene Bash-/PowerShell-Validatoren bestanden. Sichtbares Arbeitsfenster 2026-09-13 auf codex/intake-ir002-learner-clarity; Referenzen 80/125 Zeilen je Arbeitstag, keine zusätzliche manuelle Aufwandsschätzung. UpdateRequired; Statistikblock generiert aus Git. / Six Markdown breaks normalized with lossless original evidence; a fresh Single review passes while unrelated series findings remain open. No product or test code changed; existing cross-shell validators passed. |
 
 ## Statistikprofil-1-Archiv / Statistics Profile 1 Archive
 Basis dieses Schlussblocks sind die aktuell dokumentierten Snapshot- und
@@ -722,27 +728,27 @@ Profil 2 verwendet Git-getrackte Textdateien und sichtbare Git-Aktivitaet. Die W
 
 | Kennzahl / Metric | Wert / Value |
 |---|---:|
-| Textbasis / Text base | 199848 lines |
-| Textdateien / Text files | 1250 |
+| Textbasis / Text base | 202267 lines |
+| Textdateien / Text files | 1281 |
 | Beobachtbarer Zeitraum / Observable period | 2025-09-21..2026-09-13 |
 | Aktivtage / Active days | 81 |
-| Relevante Commits / Relevant commits | 239 |
-| Zeilen je Aktivtag / Lines per active day | 2467.3 |
+| Relevante Commits / Relevant commits | 240 |
+| Zeilen je Aktivtag / Lines per active day | 2497.1 |
 | Peak-Tag im Fenster / Peak day in window | 2026-06-17 / 27058 |
 | Peak-Woche im Fenster / Peak week in window | 2026-07-19 / 33387 |
 | Laengste Serie / Longest streak | 8 days |
-| Speedup vs. 80 lines/day | 30.8x |
-| Speedup vs. 125 lines/day | 19.7x |
-| Methodik / Methodology | v2; source `47f61717f9ad` |
+| Speedup vs. 80 lines/day | 31.2x |
+| Speedup vs. 125 lines/day | 20.0x |
+| Methodik / Methodology | v2; source `f44d91372428` |
 
 ### Artefaktmix / Artifact Mix
 
 ```text
 Produktiv / Production          [#...................]   1.4% | 2830
-Tests                           [#...................]   4.2% | 8338
-Dokumentation / Documentation   [###############.....]  74.5% | 148893
-Skripte / Scripts               [##..................]  11.6% | 23219
-Konfiguration / Configuration   [#...................]   6.8% | 13553
+Tests                           [#...................]   4.1% | 8338
+Dokumentation / Documentation   [###############.....]  73.9% | 149489
+Skripte / Scripts               [##..................]  11.5% | 23219
+Konfiguration / Configuration   [##..................]   7.6% | 15376
 Daten und Medien / Data and media [....................]   0.0% | 0
 Sonstiger Text / Other text     [#...................]   1.5% | 3015
 ```
@@ -876,8 +882,8 @@ Die festen Slots halten den Phasenvergleich auch bei fehlenden oder spaeter erga
 
 ```text
 Scale: 0..50x
-80 lines/day       [############........] 30.8x
-125 lines/day      [########............] 19.7x
+80 lines/day       [############........] 31.2x
+125 lines/day      [########............] 20.0x
 ```
 
 Die Faktoren vergleichen sichtbare Lieferdichte mit den dokumentierten manuellen Referenzen. Sie messen keine Arbeitszeit.
@@ -890,7 +896,7 @@ Die Faktoren vergleichen sichtbare Lieferdichte mit den dokumentierten manuellen
 Scale: 0..5000 lines/day
 Experienced manual [#...................] 80
 Thorsten solo      [#...................] 125
-Visible repository [##########..........] 2467.3
+Visible repository [##########..........] 2497.1
 ```
 
 Die gemeinsame Skala vergleicht Referenzen und sichtbare Lieferdichte. Sie schreibt die Git-Aktivitaet keiner Person oder KI pauschal zu.
@@ -916,6 +922,6 @@ DE: Das Fenster beginnt am 2025-09-21 und endet am 2026-09-13. Es enthaelt 81 ak
 | 2026-06 | 37273 |
 | 2026-07 | 74031 |
 | 2026-08 | 26210 |
-| 2026-09 | 57370 |
+| 2026-09 | 59963 |
 
 <!-- project-statistics-v2:end -->

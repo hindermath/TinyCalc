@@ -1,0 +1,82 @@
+{
+  "schemaVersion": "1.1",
+  "reviewId": "417516f8-a708-453b-8eda-3416bb42bd58",
+  "mode": "Single",
+  "status": "NeedsRemediation",
+  "policy": "level2-lastenheft",
+  "reviewedAt": "2026-09-13T17:23:37Z",
+  "repository": {
+    "root": ".",
+    "head": "ff4dd1d6ead85b678be41098b652720c4db48fc3"
+  },
+  "requestEvidence": {
+    "path": "specs/intake-review-remediation/20260913/didactic-inline-code-comment-hardening/request.json",
+    "normalizedSha256": "395f74d4413cf39033db8329ed86eb2fbb31699c99016b346451ab6e563adbe2"
+  },
+  "targets": [
+    {
+      "path": "requirements/intakes/active/Lastenheft_Didactic-Inline-Code-Comment-Hardening.md",
+      "role": "Primary",
+      "normalizedSha256": "9c2db073ff7e3dc34b2667d2f2574bfbb1354a44e1d8a47ac929dc1c3b36aed9",
+      "gitBlob": "1b88da3e1284b5a1bf6977dcf60616ff261a04a5"
+    }
+  ],
+  "findings": [
+    {
+      "id": "IR002",
+      "severity": "Medium",
+      "category": "LearnerClarity",
+      "target": "requirements/intakes/active/Lastenheft_Didactic-Inline-Code-Comment-Hardening.md",
+      "disposition": "Partially remediated; add short German-first and English-second explanations for the remaining normative learner and workflow terms without changing scope, order or delivery authority.",
+      "owner": "Thorsten Hindermann",
+      "evidence": "Section 2 now explains Formula, Cell, Recalc, Textoverflow, Range, XML comments, DocFX, TUI and proof paths. Sections 1, 3, 4, 6 and the readiness/prompt blocks still use API, Runtime, A11Y, CEFR B2 and Spec Kit as normative or execution-relevant terms without a first-use explanation for first-year learners.",
+      "reevaluationTrigger": "After the five residual terms and the minimal Spec Kit handoff are explained bilingually, before Specify or autonomous execution."
+    }
+  ],
+  "questions": [],
+  "acceptedRisks": [],
+  "operatorExceptions": [],
+  "coverage": {
+    "individual": [
+      "requirements/intakes/active/Lastenheft_Didactic-Inline-Code-Comment-Hardening.md"
+    ],
+    "series": [],
+    "workers": []
+  },
+  "summary": {
+    "critical": 0,
+    "high": 0,
+    "medium": 1,
+    "low": 0
+  },
+  "supersedes": "N/A",
+  "reviewBoundary": {
+    "receiptPath": "specs/intake-authoring-receipts/didactic-inline-code-comment-hardening.json",
+    "receiptNormalizedSha256": "ef01fc9030cff340575776b62c3d9a5c3252bae9033822a94f618840a2109f42",
+    "sourceSeriesReviewId": "6b8925ec-2e33-45d5-b04f-04f947d26737",
+    "sourceSeriesFindingId": "IR002",
+    "sourceSeriesReviewSuperseded": true,
+    "checked": [
+      "Identity, audience, goal, scope and non-goals",
+      "Prior knowledge, first-use terminology and bilingual CEFR-B2 readability",
+      "Atomic comment rules, review model and measurable evidence",
+      "Dependencies, ordering, lifecycle and delivery authority through the current receipt and manifest",
+      "Security, privacy, accessibility, platform and supply-chain applicability",
+      "Prompt alignment, UTF-8 text, secret exposure and text-first accessibility"
+    ],
+    "applicability": {
+      "NIST_SSDF": "Applicable Level-2 baseline; no product code is changed by this review.",
+      "CWE_Top_25": "Applicable Level-2 review baseline; no executable boundary is changed.",
+      "WCAG_2_2_AA": "Applicable to learner-facing text structure and language equivalence.",
+      "privacy": "N/A: comment-only requirements do not introduce personal-data processing.",
+      "platform": "N/A: comment-only requirements do not change runtime platform behaviour.",
+      "OWASP_ASVS": "N/A: no web, API, HTTP or authentication service is introduced.",
+      "SBOM_VEX_SLSA": "N/A: no release, dependency or build artefact is produced.",
+      "AI_SBOM": "N/A: AI is development tooling only, not a product component.",
+      "ZeroTrust": "N/A: no distributed or remote-service boundary is introduced."
+    },
+    "seriesEffect": "This Single review does not restore or supersede the pending full-series review and does not evaluate IR003 or IR004.",
+    "productExecution": "Not started",
+    "nextAction": "$speckit-intake-repair specs/intake-review-remediation/20260913/didactic-inline-code-comment-hardening/result.json"
+  }
+}

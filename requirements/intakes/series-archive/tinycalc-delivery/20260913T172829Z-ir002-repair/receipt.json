@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "documentType": "IntakeSeriesReceipt",
+  "receiptId": "f20694e9-c9f2-4676-83ab-4ddf441c7f1d",
+  "seriesId": "5b4523b4-d946-4091-9cbc-11825af94332",
+  "generator": {
+    "preset": "intake-sequencing-governance",
+    "version": "0.2.6"
+  },
+  "createdAt": "2026-09-13T17:10:49Z",
+  "operation": {
+    "authorityEvidence": "$speckit-intake-update requirements/intakes/active/Lastenheft_Didactic-Inline-Code-Comment-Hardening.md; causal series hash update only, with order, dependencies and lifecycle preserved.",
+    "type": "Update",
+    "operationId": "1ba4aa34-9d36-48ac-b7e2-ddf1b1e7f329"
+  },
+  "status": "Ready",
+  "manifest": {
+    "path": "requirements/intakes/series/tinycalc-delivery/manifest.json",
+    "normalizedSha256": "09c14e212bc31330b44098d02cb1cc0ae1b9a413c458347a3be45faf6b51a9b7"
+  },
+  "supersedes": {
+    "receiptNormalizedSha256": "fcffe8ec29e77014afcd65d95b637298255e2a4c0a6cc7a3c4fc42f1c7472485",
+    "receiptPath": "requirements/intakes/series-archive/tinycalc-delivery/20260913T171049Z-ir002-update/receipt.json",
+    "manifestArchiveSha256": "7f63fd533af811ffba744a8bc32c9f25d7c4ae13fe9b582b20df91a014366587",
+    "manifestArchivePath": "requirements/intakes/series-archive/tinycalc-delivery/20260913T171049Z-ir002-update/manifest.json"
+  },
+  "tombstone": {
+    "path": "N/A",
+    "normalizedSha256": "N/A"
+  },
+  "nextAction": "$speckit-intake-review requirements/intakes/series/tinycalc-delivery/manifest.json"
+}

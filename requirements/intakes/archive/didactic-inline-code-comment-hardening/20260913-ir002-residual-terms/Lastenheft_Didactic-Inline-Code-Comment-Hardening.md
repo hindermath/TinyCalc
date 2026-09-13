@@ -23,14 +23,9 @@ Lernende sollen einfache C#-Methoden, Bedingungen und Schleifen lesen koennen. S
 - **Neuberechnung (Recalc)** bedeutet, dass TinyCalc Formeln nach einer Aenderung erneut auswertet und abhaengige Ergebnisse aktualisiert.
 - **Textueberlauf (Textoverflow)** bedeutet, dass langer Zelltext optisch in freie Nachbarzellen hineinragt, ohne deren gespeicherten Inhalt zu veraendern.
 - Ein **Bereich (Range)** ist eine zusammenhaengende Gruppe von Zellen.
-- Das **Laufzeitverhalten (Runtime-Verhalten)** beschreibt, was das ausgefuehrte Programm tut. Dieser Kommentar-Lauf darf es nicht veraendern.
-- Eine **Programmierschnittstelle (API)** sind oeffentlich nutzbare Typen und Funktionen, ueber die andere Programmteile TinyCalc verwenden.
 - **XML-Kommentare** sind strukturierte C#-Dokumentationskommentare fuer oeffentliche APIs. **DocFX** erzeugt daraus die API-Dokumentation.
 - Eine **TUI** ist eine textbasierte Benutzeroberflaeche im Terminal.
-- **A11Y** ist eine Kurzform fuer Barrierefreiheit. Die Zeichen zwischen `A` und `Y` werden durch die Zahl `11` ersetzt.
-- **CEFR B2** bezeichnet ein mittleres Sprachniveau des Gemeinsamen Europaeischen Referenzrahmens. Texte auf diesem Niveau sollen klar und ohne unnoetig komplizierte Saetze verstaendlich sein.
 - Ein **Proof-Pfad** ist der dokumentierte Test- oder Evidence-Weg, mit dem eine Aussage nachvollziehbar belegt wird.
-- **Spec Kit** ist der geregelte Arbeitsablauf, der dieses Lastenheft schrittweise in Spezifikation, Plan, Aufgaben und Umsetzung ueberfuehrt. Jeder Schritt benoetigt seine eigene Freigabe oder die zuvor festgelegte Ausfuehrungsberechtigung.
 
 English:
 Learners should be able to read simple C# methods, conditions, and loops. No specialist knowledge of spreadsheet engines, Terminal.Gui, or DocFX is required. The following terms apply throughout this document:
@@ -40,14 +35,9 @@ Learners should be able to read simple C# methods, conditions, and loops. No spe
 - **Recalculation (Recalc)** means that TinyCalc evaluates formulas again after a change and updates dependent results.
 - **Text overflow** means that long cell text is displayed across empty neighbouring cells without changing their stored content.
 - A **range** is a connected group of cells.
-- **Runtime behaviour** describes what the running program does. This comment-only run must not change it.
-- An **application programming interface (API)** is the set of public types and functions through which other program parts use TinyCalc.
 - **XML comments** are structured C# documentation comments for public APIs. **DocFX** uses them to generate the API documentation.
 - A **TUI** is a text-based user interface in a terminal.
-- **A11Y** is a short form of accessibility. The number `11` replaces the letters between `A` and `Y`.
-- **CEFR B2** is an intermediate language level in the Common European Framework of Reference. Text at this level should be clear and understandable without unnecessarily complex sentences.
 - A **proof path** is the documented test or evidence route that makes a statement verifiable.
-- **Spec Kit** is the governed workflow that turns this intake into a specification, plan, tasks, and implementation step by step. Each step needs its own approval or previously defined execution authority.
 
 ## 3. Scope
 

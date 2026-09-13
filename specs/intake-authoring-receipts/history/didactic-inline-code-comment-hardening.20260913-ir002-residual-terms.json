@@ -1,22 +1,22 @@
 {
   "schemaVersion": "2.0",
   "documentType": "IntakeReceipt",
-  "receiptId": "fd3667ea-9958-48c6-864f-0c0753007535",
+  "receiptId": "5df0d3c1-ed13-490d-b034-d74159ac3a0f",
   "intakeId": "38c0a42c-96b8-45fb-a3f0-3501eca07ab4",
   "generator": {
     "preset": "intake-authoring-governance",
     "version": "0.3.4"
   },
-  "createdAt": "2026-09-13T17:28:29Z",
+  "createdAt": "2026-09-13T17:10:49Z",
   "operation": {
-    "operationId": "6ad7011d-e755-4342-90ee-7f2cf697a159",
+    "operationId": "3be01c7c-45b2-4214-a158-99b3a753c4cd",
     "type": "Update",
-    "authorityEvidence": "$speckit-intake-repair specs/intake-review-remediation/20260913/didactic-inline-code-comment-hardening/result.json"
+    "authorityEvidence": "$speckit-intake-update requirements/intakes/active/Lastenheft_Didactic-Inline-Code-Comment-Hardening.md"
   },
   "status": "ReadyForReview",
   "target": {
     "path": "requirements/intakes/active/Lastenheft_Didactic-Inline-Code-Comment-Hardening.md",
-    "normalizedSha256": "460abc8142179cc40e1d0cfe07928260456088205b3200e7ca6c6e10818e46da"
+    "normalizedSha256": "9c2db073ff7e3dc34b2667d2f2574bfbb1354a44e1d8a47ac929dc1c3b36aed9"
   },
   "sources": [
     {
@@ -25,7 +25,7 @@
       "kind": "File",
       "label": "Byte-identical immediately preceding intake",
       "location": "Repository",
-      "path": "requirements/intakes/archive/didactic-inline-code-comment-hardening/20260913-ir002-residual-terms/Lastenheft_Didactic-Inline-Code-Comment-Hardening.md",
+      "path": "requirements/intakes/archive/didactic-inline-code-comment-hardening/20260913-ir002-learner-clarity/Lastenheft_Didactic-Inline-Code-Comment-Hardening.md",
       "requestedUrl": "N/A",
       "finalUrl": "N/A",
       "retrievedAt": "N/A",
@@ -36,7 +36,7 @@
       "lastModified": "N/A",
       "redirectChain": [],
       "rawSha256": "N/A",
-      "normalizedSha256": "9c2db073ff7e3dc34b2667d2f2574bfbb1354a44e1d8a47ac929dc1c3b36aed9",
+      "normalizedSha256": "e94557366921be0efcc3a7eb4cf653ce798a8058d55969ee0de5d1b2d0bb00a6",
       "gitBlob": "N/A",
       "proofBoundary": "Immutable predecessor archive; normalized SHA-256"
     },
@@ -44,9 +44,9 @@
       "sourceId": "SRC002",
       "order": 2,
       "kind": "File",
-      "label": "Current Single review finding IR002",
+      "label": "Explicitly authorized IR002 update proposal",
       "location": "Repository",
-      "path": "specs/intake-review-remediation/20260913/didactic-inline-code-comment-hardening/result.json",
+      "path": "specs/intake-authoring-operations/3be01c7c-45b2-4214-a158-99b3a753c4cd/proposal.json",
       "requestedUrl": "N/A",
       "finalUrl": "N/A",
       "retrievedAt": "N/A",
@@ -57,17 +57,17 @@
       "lastModified": "N/A",
       "redirectChain": [],
       "rawSha256": "N/A",
-      "normalizedSha256": "1292ded281946419b99d8065633bbceaf4571d7179d089d3cb26060eb281412e",
+      "normalizedSha256": "b5049beb8ded0e4c9240c24a59cc262b5a1607f1bd6e14cdcea0e5e2af02a434",
       "gitBlob": "N/A",
-      "proofBoundary": "Hash-bound NeedsRemediation result authorizing only the documented residual repair"
+      "proofBoundary": "Current explicit authority and bounded change plan"
     },
     {
       "sourceId": "SRC003",
       "order": 3,
       "kind": "File",
-      "label": "Explicitly authorized IR002 repair proposal",
+      "label": "Superseded full-series review containing IR002",
       "location": "Repository",
-      "path": "specs/intake-authoring-operations/6ad7011d-e755-4342-90ee-7f2cf697a159/proposal.json",
+      "path": "requirements/intakes/series-archive/tinycalc-delivery/20260913T171049Z-review/intake-review-result.json",
       "requestedUrl": "N/A",
       "finalUrl": "N/A",
       "retrievedAt": "N/A",
@@ -78,9 +78,9 @@
       "lastModified": "N/A",
       "redirectChain": [],
       "rawSha256": "N/A",
-      "normalizedSha256": "954786e7efbb2c477bf3aedeef47e29e71a050d60e59977d2f959d8a9f69c0a2",
+      "normalizedSha256": "e084f2f6c85653776aa3d8b602488fee43b27b65dbeae5ee2d9972680da1a1fd",
       "gitBlob": "N/A",
-      "proofBoundary": "Current explicit repair authority and bounded change plan"
+      "proofBoundary": "Byte-identical archived review evidence; only finding IR002 is in scope"
     }
   ],
   "profile": "level2-lastenheft",
@@ -98,21 +98,14 @@
       "status": "Answered",
       "question": "Welche Delivery Authority gilt?",
       "answer": "LocalImplementation",
-      "evidence": "The repair command grants intake modification and re-review authority only."
+      "evidence": "The current command grants intake-update authority only."
     },
     {
       "id": "IAD003",
       "status": "Answered",
-      "question": "Welche inhaltliche Aenderung war im ersten Update autorisiert?",
-      "answer": "IR002 learner-clarity corrections for prior knowledge, first-use terminology and equivalent German-English normative rules.",
-      "evidence": "Superseded receipt and archived full-series review finding IR002."
-    },
-    {
-      "id": "IAD004",
-      "status": "Answered",
-      "question": "Welche Restkorrektur ist autorisiert?",
-      "answer": "Only bilingual first-use explanations for API, runtime behaviour, A11Y, CEFR B2 and the minimal governed Spec Kit handoff.",
-      "evidence": "Current explicit repair command and Single review 417516f8-a708-453b-8eda-3416bb42bd58."
+      "question": "Welche inhaltliche Aenderung ist autorisiert?",
+      "answer": "Only IR002 learner-clarity corrections: explicit prior knowledge, first-use terminology and equivalent German-English normative rules.",
+      "evidence": "Current user command and archived series review finding IR002."
     }
   ],
   "openDecisionIds": [],
@@ -124,14 +117,14 @@
     "autonomousInvocation": "$speckit-autonomous"
   },
   "deliveryAuthority": "LocalImplementation",
-  "authorityEvidence": "The user explicitly authorized repair of the current review finding. No commit, push, pull request, merge, bypass, provider, product implementation or follow-up-feature authority is granted.",
+  "authorityEvidence": "The user explicitly requested this intake update. No commit, push, pull request, merge, bypass, provider, product implementation or follow-up-feature authority is granted.",
   "promptState": "Enabled",
   "provenanceMode": "Supersession",
   "supersedes": {
-    "receiptPath": "specs/intake-authoring-receipts/history/didactic-inline-code-comment-hardening.20260913-ir002-residual-terms.json",
-    "targetNormalizedSha256": "9c2db073ff7e3dc34b2667d2f2574bfbb1354a44e1d8a47ac929dc1c3b36aed9",
-    "archiveTargetPath": "requirements/intakes/archive/didactic-inline-code-comment-hardening/20260913-ir002-residual-terms/Lastenheft_Didactic-Inline-Code-Comment-Hardening.md",
-    "archiveReceiptPath": "specs/intake-authoring-receipts/history/didactic-inline-code-comment-hardening.20260913-ir002-residual-terms.json"
+    "receiptPath": "specs/intake-authoring-receipts/history/didactic-inline-code-comment-hardening.20260913-ir002-learner-clarity.json",
+    "targetNormalizedSha256": "e94557366921be0efcc3a7eb4cf653ce798a8058d55969ee0de5d1b2d0bb00a6",
+    "archiveTargetPath": "requirements/intakes/archive/didactic-inline-code-comment-hardening/20260913-ir002-learner-clarity/Lastenheft_Didactic-Inline-Code-Comment-Hardening.md",
+    "archiveReceiptPath": "specs/intake-authoring-receipts/history/didactic-inline-code-comment-hardening.20260913-ir002-learner-clarity.json"
   },
   "legacyAdoption": {
     "evidenceType": "N/A",
@@ -139,7 +132,7 @@
     "priorGitBlob": "N/A"
   },
   "updateAuthorized": true,
-  "updateAuthorityEvidence": "$speckit-intake-repair specs/intake-review-remediation/20260913/didactic-inline-code-comment-hardening/result.json",
+  "updateAuthorityEvidence": "$speckit-intake-update requirements/intakes/active/Lastenheft_Didactic-Inline-Code-Comment-Hardening.md",
   "series": {
     "seriesId": "5b4523b4-d946-4091-9cbc-11825af94332",
     "manifestPath": "requirements/intakes/series/tinycalc-delivery/manifest.json",
