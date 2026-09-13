@@ -1,0 +1,135 @@
+{
+  "schemaVersion": "1.1",
+  "reviewId": "6b8925ec-2e33-45d5-b04f-04f947d26737",
+  "mode": "Series",
+  "policy": "tinycalc-delivery-v1",
+  "targets": [
+    {
+      "path": "requirements/intakes/archive/Lastenheft_Constitution_Change.002-constitution-change.md",
+      "role": "Primary"
+    },
+    {
+      "path": "requirements/intakes/archive/Lastenheft_TerminalGui_Migration.003-terminalgui-migration.md",
+      "role": "OrderedMember"
+    },
+    {
+      "path": "requirements/intakes/active/Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md",
+      "role": "OrderedMember"
+    },
+    {
+      "path": "requirements/intakes/active/Lastenheft_A11Y_TUI.md",
+      "role": "OrderedMember"
+    },
+    {
+      "path": "requirements/intakes/active/Lastenheft_Rename_MicroCalc_TinyCalc.md",
+      "role": "OrderedMember"
+    },
+    {
+      "path": "requirements/intakes/active/Lastenheft_Didactic-Inline-Code-Comment-Hardening.md",
+      "role": "OrderedMember"
+    },
+    {
+      "path": "requirements/intakes/active/Lastenheft_Secure-Development-Hardening.md",
+      "role": "OrderedMember"
+    },
+    {
+      "path": "requirements/intakes/active/Lastenheft_PL0-Zellfunktionen_V1.md",
+      "role": "OrderedMember"
+    },
+    {
+      "path": "requirements/intakes/active/Lastenheft_Legacy-Kompatibilitaet_V1.md",
+      "role": "OrderedMember"
+    },
+    {
+      "path": "requirements/intakes/active/Lastenheft_Formelkopie-und-Tabellenoperationen_V1.md",
+      "role": "OrderedMember"
+    },
+    {
+      "path": "requirements/intakes/active/Lastenheft_Sandbox-gestuetzte-Secure-Development-Haertung.md",
+      "role": "OrderedMember"
+    },
+    {
+      "path": "requirements/intakes/archive/Lastenheft_RL-SE-Checklist-Selbstpruefung.004-rl-se-self-assessment.md",
+      "role": "OrderedMember"
+    },
+    {
+      "path": "requirements/intakes/archive/Lastenheft_GSDB-Spec-Kit-Intensivpruefung.005-gsdb-intensive-review.md",
+      "role": "OrderedMember"
+    }
+  ],
+  "series": {
+    "roots": [
+      "requirements/intakes/archive/Lastenheft_Constitution_Change.002-constitution-change.md",
+      "requirements/intakes/active/Lastenheft_Sandbox-gestuetzte-Secure-Development-Haertung.md",
+      "requirements/intakes/archive/Lastenheft_RL-SE-Checklist-Selbstpruefung.004-rl-se-self-assessment.md",
+      "requirements/intakes/archive/Lastenheft_GSDB-Spec-Kit-Intensivpruefung.005-gsdb-intensive-review.md"
+    ],
+    "orderedTargetPaths": [
+      "requirements/intakes/archive/Lastenheft_Constitution_Change.002-constitution-change.md",
+      "requirements/intakes/archive/Lastenheft_TerminalGui_Migration.003-terminalgui-migration.md",
+      "requirements/intakes/active/Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md",
+      "requirements/intakes/active/Lastenheft_A11Y_TUI.md",
+      "requirements/intakes/active/Lastenheft_Rename_MicroCalc_TinyCalc.md",
+      "requirements/intakes/active/Lastenheft_Didactic-Inline-Code-Comment-Hardening.md",
+      "requirements/intakes/active/Lastenheft_Secure-Development-Hardening.md",
+      "requirements/intakes/active/Lastenheft_PL0-Zellfunktionen_V1.md",
+      "requirements/intakes/active/Lastenheft_Legacy-Kompatibilitaet_V1.md",
+      "requirements/intakes/active/Lastenheft_Formelkopie-und-Tabellenoperationen_V1.md",
+      "requirements/intakes/active/Lastenheft_Sandbox-gestuetzte-Secure-Development-Haertung.md",
+      "requirements/intakes/archive/Lastenheft_RL-SE-Checklist-Selbstpruefung.004-rl-se-self-assessment.md",
+      "requirements/intakes/archive/Lastenheft_GSDB-Spec-Kit-Intensivpruefung.005-gsdb-intensive-review.md"
+    ],
+    "dependencies": [
+      {
+        "kind": "HardCompletionGate",
+        "from": "requirements/intakes/archive/Lastenheft_Constitution_Change.002-constitution-change.md",
+        "to": "requirements/intakes/archive/Lastenheft_TerminalGui_Migration.003-terminalgui-migration.md"
+      },
+      {
+        "kind": "HardCompletionGate",
+        "from": "requirements/intakes/archive/Lastenheft_TerminalGui_Migration.003-terminalgui-migration.md",
+        "to": "requirements/intakes/active/Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md"
+      },
+      {
+        "kind": "HardCompletionGate",
+        "from": "requirements/intakes/active/Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md",
+        "to": "requirements/intakes/active/Lastenheft_A11Y_TUI.md"
+      },
+      {
+        "kind": "HardCompletionGate",
+        "from": "requirements/intakes/active/Lastenheft_A11Y_TUI.md",
+        "to": "requirements/intakes/active/Lastenheft_Rename_MicroCalc_TinyCalc.md"
+      },
+      {
+        "kind": "HardCompletionGate",
+        "from": "requirements/intakes/active/Lastenheft_Rename_MicroCalc_TinyCalc.md",
+        "to": "requirements/intakes/active/Lastenheft_Didactic-Inline-Code-Comment-Hardening.md"
+      },
+      {
+        "kind": "HardCompletionGate",
+        "from": "requirements/intakes/active/Lastenheft_Didactic-Inline-Code-Comment-Hardening.md",
+        "to": "requirements/intakes/active/Lastenheft_Secure-Development-Hardening.md"
+      },
+      {
+        "kind": "HardCompletionGate",
+        "from": "requirements/intakes/active/Lastenheft_Secure-Development-Hardening.md",
+        "to": "requirements/intakes/active/Lastenheft_PL0-Zellfunktionen_V1.md"
+      },
+      {
+        "kind": "HardCompletionGate",
+        "from": "requirements/intakes/active/Lastenheft_PL0-Zellfunktionen_V1.md",
+        "to": "requirements/intakes/active/Lastenheft_Legacy-Kompatibilitaet_V1.md"
+      },
+      {
+        "kind": "HardCompletionGate",
+        "from": "requirements/intakes/active/Lastenheft_Legacy-Kompatibilitaet_V1.md",
+        "to": "requirements/intakes/active/Lastenheft_Formelkopie-und-Tabellenoperationen_V1.md"
+      }
+    ]
+  },
+  "campaign": {
+    "manifestPath": "N/A",
+    "workers": [],
+    "operatorExceptions": []
+  }
+}

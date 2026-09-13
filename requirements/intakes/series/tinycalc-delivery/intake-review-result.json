@@ -1,0 +1,259 @@
+{
+  "schemaVersion": "1.1",
+  "reviewId": "6b8925ec-2e33-45d5-b04f-04f947d26737",
+  "mode": "Series",
+  "status": "NeedsRemediation",
+  "policy": "tinycalc-delivery-v1",
+  "reviewedAt": "2026-09-13T14:43:20Z",
+  "repository": {
+    "root": ".",
+    "head": "d46930e454d449f7d1c36698242e704441a01b2a"
+  },
+  "requestEvidence": {
+    "path": "requirements/intakes/series/tinycalc-delivery/intake-review-request.json",
+    "normalizedSha256": "5a2658c9874d63eda019c05e5b0ad0ef99379ae83fc35218c9d5015c86042b7b"
+  },
+  "targets": [
+    {
+      "role": "Primary",
+      "gitBlob": "e5baf4a877153692acdc9aed7035afe3999a4acc",
+      "path": "requirements/intakes/archive/Lastenheft_Constitution_Change.002-constitution-change.md",
+      "normalizedSha256": "04c4e1ba93d626463829a07f33b5591a6417b6aeaf89e805b637ab1bf5c26a0a"
+    },
+    {
+      "role": "OrderedMember",
+      "gitBlob": "d960bf119005a5d3d09860da90be7d5bbfa22d5a",
+      "path": "requirements/intakes/archive/Lastenheft_TerminalGui_Migration.003-terminalgui-migration.md",
+      "normalizedSha256": "01db3bd8f2dc375fe1400a91580ce1a906dfc446c12fb8ad011419fe50fee94d"
+    },
+    {
+      "role": "OrderedMember",
+      "gitBlob": "1eaa9cea1dda5682822cd5059d7c67171cf1fda8",
+      "path": "requirements/intakes/active/Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md",
+      "normalizedSha256": "aa237aa218a08bbe2e99a9004bc7af9d5859984be01011cfbab575f996dfc482"
+    },
+    {
+      "role": "OrderedMember",
+      "gitBlob": "0df114b71d4632cdcfc3a47f92407d96fc1d628f",
+      "path": "requirements/intakes/active/Lastenheft_A11Y_TUI.md",
+      "normalizedSha256": "820e10c7229720fbda87360b9ee1abf6ac907aa2b27a1d9dc42bfa7b110a2a01"
+    },
+    {
+      "role": "OrderedMember",
+      "gitBlob": "f51099cfdc20fabd3677268ca689a961ffa7532a",
+      "path": "requirements/intakes/active/Lastenheft_Rename_MicroCalc_TinyCalc.md",
+      "normalizedSha256": "89d40b7ca04e2a753670351bd0eb5b7e2bf3234f1792572eb46f19e9affd87e5"
+    },
+    {
+      "role": "OrderedMember",
+      "gitBlob": "3ce75f97523d4fa29c4be73eae93d33b816bf3e4",
+      "path": "requirements/intakes/active/Lastenheft_Didactic-Inline-Code-Comment-Hardening.md",
+      "normalizedSha256": "1cc552828fbfff244d9665e0d9f06e632b4dac4575d35d763213968fea2e646e"
+    },
+    {
+      "role": "OrderedMember",
+      "gitBlob": "1743f04ce55a48c91003502b68ea065d83cebf1f",
+      "path": "requirements/intakes/active/Lastenheft_Secure-Development-Hardening.md",
+      "normalizedSha256": "d3e7688032d657270e186d6ca4e91fed0873bd5f753e26c173e4546ac138a39b"
+    },
+    {
+      "role": "OrderedMember",
+      "gitBlob": "951771df81541c9cfd63e762695f433c6f6228cf",
+      "path": "requirements/intakes/active/Lastenheft_PL0-Zellfunktionen_V1.md",
+      "normalizedSha256": "0a82eb5c07c1412b089cc2895df63b89923d10a4bc8df611af596ef56511ca83"
+    },
+    {
+      "role": "OrderedMember",
+      "gitBlob": "4e1c47eeca8c74b095347986a8fbb2c5679e1e59",
+      "path": "requirements/intakes/active/Lastenheft_Legacy-Kompatibilitaet_V1.md",
+      "normalizedSha256": "2e6a8036d18e7d3ed7360623f841a31411d245c5acf1441f0fe9d5877fc475b1"
+    },
+    {
+      "role": "OrderedMember",
+      "gitBlob": "0a58acdf2f4ba308c287abd9cc99a770c1e3ab3d",
+      "path": "requirements/intakes/active/Lastenheft_Formelkopie-und-Tabellenoperationen_V1.md",
+      "normalizedSha256": "3bf64c36fde0c6e109f3e331d2595a06232deb275b3a8eb65a5136e0fd27aec8"
+    },
+    {
+      "role": "OrderedMember",
+      "gitBlob": "3b8cea9ca05e23dcdad5ac665d9bb42e336d9658",
+      "path": "requirements/intakes/active/Lastenheft_Sandbox-gestuetzte-Secure-Development-Haertung.md",
+      "normalizedSha256": "3669d72d727ceeff5510dde789f9c9c1ddf815bad9c55d5377378959f102f2a2"
+    },
+    {
+      "role": "OrderedMember",
+      "gitBlob": "0cd87941bb49e73b11aa15ec7b529bc36788b245",
+      "path": "requirements/intakes/archive/Lastenheft_RL-SE-Checklist-Selbstpruefung.004-rl-se-self-assessment.md",
+      "normalizedSha256": "96a5ef9c414d55c69ad117509d41f056f10d005824890bd5a2867eaf8ab948da"
+    },
+    {
+      "role": "OrderedMember",
+      "gitBlob": "1df4cd2af93098ab1bb0e95de9e10d2811273210",
+      "path": "requirements/intakes/archive/Lastenheft_GSDB-Spec-Kit-Intensivpruefung.005-gsdb-intensive-review.md",
+      "normalizedSha256": "f4dcb3fac6cb755faed296847ffd40170f0d008fa3640e5e5fa5bc38e4af5375"
+    }
+  ],
+  "findings": [
+    {
+      "target": "requirements/intakes/active/Lastenheft_Didactic-Inline-Code-Comment-Hardening.md",
+      "risk": "First-year and English-reading learners may miss prerequisites or interpret normative rules differently",
+      "reevaluationTrigger": "After explicit learner-documentation correction and before downstream execution",
+      "disposition": "Open; separate content update for this additional review finding before executing the affected intake",
+      "id": "IR002",
+      "category": "LearnerClarity",
+      "evidence": "Sections 1-5: no explicit assumed prior knowledge; Formula, Recalc, Textoverflow, XML and DocFX are used without first-use learner explanations. Normative comment-review rules lack an English equivalent.",
+      "severity": "Medium",
+      "owner": "Thorsten Hindermann"
+    },
+    {
+      "target": "requirements/intakes/active/Lastenheft_Secure-Development-Hardening.md",
+      "risk": "First-year and English-reading learners may miss prerequisites or interpret normative rules differently",
+      "reevaluationTrigger": "After explicit learner-documentation correction and before downstream execution",
+      "disposition": "Open; separate content update for this additional review finding before executing the affected intake",
+      "id": "IR003",
+      "category": "LearnerClarity",
+      "evidence": "Sections 1-9: assumed prior knowledge is absent; MSL, Trust Boundaries, SBOM, SLSA and other security terminology are not introduced for first-year readers. English text covers handoff prompts, not the normative review/acceptance sections.",
+      "severity": "Medium",
+      "owner": "Thorsten Hindermann"
+    },
+    {
+      "target": "requirements/intakes/active/Lastenheft_Sandbox-gestuetzte-Secure-Development-Haertung.md",
+      "risk": "First-year and English-reading learners may miss prerequisites or interpret normative rules differently",
+      "reevaluationTrigger": "After explicit learner-documentation correction and before downstream execution",
+      "disposition": "Open; separate content update for this additional review finding before executing the affected intake",
+      "id": "IR004",
+      "category": "LearnerClarity",
+      "evidence": "Project context, inputs and requirements: no explicit assumed prior knowledge; mounts, tokens, caches and SBOM are not explained on first use. English goal/context excerpts do not cover the detailed normative requirements and acceptance criteria.",
+      "severity": "Medium",
+      "owner": "Thorsten Hindermann"
+    }
+  ],
+  "questions": [],
+  "acceptedRisks": [],
+  "operatorExceptions": [],
+  "coverage": {
+    "individual": [
+      "requirements/intakes/archive/Lastenheft_Constitution_Change.002-constitution-change.md",
+      "requirements/intakes/archive/Lastenheft_TerminalGui_Migration.003-terminalgui-migration.md",
+      "requirements/intakes/active/Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md",
+      "requirements/intakes/active/Lastenheft_A11Y_TUI.md",
+      "requirements/intakes/active/Lastenheft_Rename_MicroCalc_TinyCalc.md",
+      "requirements/intakes/active/Lastenheft_Didactic-Inline-Code-Comment-Hardening.md",
+      "requirements/intakes/active/Lastenheft_Secure-Development-Hardening.md",
+      "requirements/intakes/active/Lastenheft_PL0-Zellfunktionen_V1.md",
+      "requirements/intakes/active/Lastenheft_Legacy-Kompatibilitaet_V1.md",
+      "requirements/intakes/active/Lastenheft_Formelkopie-und-Tabellenoperationen_V1.md",
+      "requirements/intakes/active/Lastenheft_Sandbox-gestuetzte-Secure-Development-Haertung.md",
+      "requirements/intakes/archive/Lastenheft_RL-SE-Checklist-Selbstpruefung.004-rl-se-self-assessment.md",
+      "requirements/intakes/archive/Lastenheft_GSDB-Spec-Kit-Intensivpruefung.005-gsdb-intensive-review.md"
+    ],
+    "series": [
+      "13 targets, four roots, nine unchanged binding dependency edges; archived predecessor endpoints retained",
+      "Four Completed archives, nine active members and one explicit preferred Eligible target; no execution authority",
+      "Semantic functional acceptance -> A11Y -> rename handoffs; additive later PL/0, legacy and sheet contracts",
+      "Security/Privacy/A11Y/platform and source/prompt boundaries; dated external delivery evidence is not a current integration gate"
+    ],
+    "workers": []
+  },
+  "summary": {
+    "critical": 0,
+    "high": 0,
+    "medium": 3,
+    "low": 0
+  },
+  "supersedes": "05b0ee98-6bd1-420c-a4bc-3ae15e59f1c4",
+  "reviewBoundary": {
+    "authority": "Thorsten Hindermann: Bitte ausfuehren, referring explicitly to IR001 reference repairs, RIG017 archive/manifest/receipt consistency and full-series review. DeliveryMode MergeAndSync with Admin-Bypass. No downstream product execution.",
+    "manifest": {
+      "path": "requirements/intakes/series/tinycalc-delivery/manifest.json",
+      "normalizedSha256": "1a4773e80900cd98979c9536704d361f03ce74fe6765501acebefce8545b2d0e"
+    },
+    "checked": [
+      "Identity, audience and prior knowledge",
+      "Bilingual CEFR-B2 text and first-use terminology",
+      "Goal, scope, non-goals, atomic requirements, measurable acceptance",
+      "DAG, roots, lifecycle, gaps, overlap and handoffs",
+      "Security/privacy, A11Y, platforms and supply chain",
+      "Source freshness, identity, paths, prompts and delivery boundaries"
+    ],
+    "nextAction": "Correct IR002-IR004 under a scoped intake update, then repeat full-series review; no product execution",
+    "closedFindings": [
+      "IR001 in two targets",
+      "RIG017 placement in all four Completed targets",
+      "RIG017 missing preferred Eligible state"
+    ],
+    "individualNotes": [
+      {
+        "path": "requirements/intakes/archive/Lastenheft_Constitution_Change.002-constitution-change.md",
+        "note": "Constitution: historical bilingual/XML/TDD requirements preserved as completed evidence; old prompts and original wording are not executable instructions."
+      },
+      {
+        "path": "requirements/intakes/archive/Lastenheft_TerminalGui_Migration.003-terminalgui-migration.md",
+        "note": "Terminal.Gui: historical migration version/API snapshots preserved; current successor intakes use execution-time pins and do not repeat migration."
+      },
+      {
+        "path": "requirements/intakes/active/Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md",
+        "note": "TUI acceptance: complete offered capability union, immutable contract IDs, measurable success/cancel/error coverage and impact gates; repaired semantic references."
+      },
+      {
+        "path": "requirements/intakes/active/Lastenheft_A11Y_TUI.md",
+        "note": "A11Y: keyboard/text/focus, PTY/VoiceOver and DocFX evidence are explicit; functional acceptance precedes this work and rename follows it."
+      },
+      {
+        "path": "requirements/intakes/active/Lastenheft_Rename_MicroCalc_TinyCalc.md",
+        "note": "Rename: live inventory, atomic project identities, historical allowlist and JSON compatibility preserved; repaired functional/A11Y references."
+      },
+      {
+        "path": "requirements/intakes/active/Lastenheft_Didactic-Inline-Code-Comment-Hardening.md",
+        "note": "Didactic comments: runtime changes excluded, moderate why-comments and explicit dispositions; learner prerequisites and terminology need repair (IR002)."
+      },
+      {
+        "path": "requirements/intakes/active/Lastenheft_Secure-Development-Hardening.md",
+        "note": "Secure development: bounded later applicability/evidence review, explicit risk and human authority boundaries; prerequisites and bilingual normative coverage need repair (IR003)."
+      },
+      {
+        "path": "requirements/intakes/active/Lastenheft_PL0-Zellfunktionen_V1.md",
+        "note": "PL/0: qualified pure integer functions, strict profile and bounded VM; package delivery evidence is dated, integration pin/locked restore/contract tests remain execution prerequisites."
+      },
+      {
+        "path": "requirements/intakes/active/Lastenheft_Legacy-Kompatibilitaet_V1.md",
+        "note": "Legacy: two evidenced MCS dialects, bounded atomic import, compiler-authentic fixtures, BCD excluded, JSON canonical and later structural operations separate."
+      },
+      {
+        "path": "requirements/intakes/active/Lastenheft_Formelkopie-und-Tabellenoperationen_V1.md",
+        "note": "Formula copy: immutable snapshot/AST reference changes, complete records for structural shifts, REF errors, previews, confirmation and atomic rollback."
+      },
+      {
+        "path": "requirements/intakes/active/Lastenheft_Sandbox-gestuetzte-Secure-Development-Haertung.md",
+        "note": "Sandbox: mount/write/token boundaries and applicability evidence, no image mutation or automatic hardening; learner prerequisites and terminology need repair (IR004)."
+      },
+      {
+        "path": "requirements/intakes/archive/Lastenheft_RL-SE-Checklist-Selbstpruefung.004-rl-se-self-assessment.md",
+        "note": "RL-SE: completed evidence classification and human-only boundaries retained; archived bytes are not rewritten to current learner templates."
+      },
+      {
+        "path": "requirements/intakes/archive/Lastenheft_GSDB-Spec-Kit-Intensivpruefung.005-gsdb-intensive-review.md",
+        "note": "GSDB: completed intensive-review scope and evidence/human-only boundaries retained; not a substitute for pending product acceptance."
+      }
+    ],
+    "singleReviews": [
+      {
+        "supersedes": "a41a4041-adc7-4779-b065-129a587eb0eb",
+        "reviewId": "c8e38e2e-afe7-4272-a79a-153d8e7e5eff",
+        "priorResultPath": "specs/intake-review-renewals/20260913/tui-funktionsabnahme-und-regressionsvertrag/result.json",
+        "resultPath": "specs/intake-review-remediation/20260913/tui-funktionsabnahme-und-regressionsvertrag/result.json",
+        "status": "Ready",
+        "priorResultNormalizedSha256": "cb12fdc7f68e832a38ec75347924dc7cdfa10d4386ac626db279d5b8400e2d2a"
+      },
+      {
+        "supersedes": "ccbf5823-5d41-4191-907a-91bb33838d6c",
+        "reviewId": "3e049bcb-d556-4d18-818a-196b1f59e329",
+        "priorResultPath": "specs/intake-review-renewals/20260913/rename-microcalc-tinycalc/result.json",
+        "resultPath": "specs/intake-review-remediation/20260913/rename-microcalc-tinycalc/result.json",
+        "status": "Ready",
+        "priorResultNormalizedSha256": "bce64eae29b3abf7d6a02eb602ffedf9896f3582e3d18fb6f0a48dd7f47bbf90"
+      }
+    ],
+    "historicalTargets": "Four completed archives are reviewed as immutable lineage; their dated wording and old prompts do not authorize re-execution"
+  }
+}

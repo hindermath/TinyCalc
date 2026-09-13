@@ -1,0 +1,61 @@
+{
+  "schemaVersion": "1.1",
+  "reviewId": "3e049bcb-d556-4d18-818a-196b1f59e329",
+  "mode": "Single",
+  "status": "Ready",
+  "policy": "level2-lastenheft",
+  "reviewedAt": "2026-09-13T14:43:20Z",
+  "repository": {
+    "root": ".",
+    "head": "d46930e454d449f7d1c36698242e704441a01b2a"
+  },
+  "requestEvidence": {
+    "path": "specs/intake-review-remediation/20260913/rename-microcalc-tinycalc/request.json",
+    "normalizedSha256": "84f36400666bbdb3a93bd2fbddf856336e41eff66c59a11d7b21d6146a569bd3"
+  },
+  "targets": [
+    {
+      "role": "Primary",
+      "gitBlob": "f51099cfdc20fabd3677268ca689a961ffa7532a",
+      "path": "requirements/intakes/active/Lastenheft_Rename_MicroCalc_TinyCalc.md",
+      "normalizedSha256": "89d40b7ca04e2a753670351bd0eb5b7e2bf3234f1792572eb46f19e9affd87e5"
+    }
+  ],
+  "findings": [],
+  "questions": [],
+  "acceptedRisks": [],
+  "operatorExceptions": [],
+  "coverage": {
+    "individual": [
+      "requirements/intakes/active/Lastenheft_Rename_MicroCalc_TinyCalc.md"
+    ],
+    "series": [],
+    "workers": []
+  },
+  "summary": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+  },
+  "supersedes": "ccbf5823-5d41-4191-907a-91bb33838d6c",
+  "reviewBoundary": {
+    "receiptPath": "specs/intake-authoring-receipts/rename-microcalc-tinycalc.json",
+    "nextAction": "Review full current series",
+    "checked": [
+      "Identity, audience and prior knowledge",
+      "Bilingual CEFR-B2 text and first-use terminology",
+      "Goal, scope, non-goals, atomic requirements, measurable acceptance",
+      "DAG, roots, lifecycle, gaps, overlap and handoffs",
+      "Security/privacy, A11Y, platforms and supply chain",
+      "Source freshness, identity, paths, prompts and delivery boundaries"
+    ],
+    "receiptNormalizedSha256": "46e95467a050fcc213d1b498c6de3f71dbbc7527fde4ddbd058fd1eefe162935",
+    "closedFindings": [
+      "IR001"
+    ],
+    "closure": "Stable semantic intake names replace stale Feature-004/005 labels; acceptance scope and LocalImplementation prompts preserved",
+    "authority": "Thorsten Hindermann: Bitte ausfuehren, referring explicitly to IR001 reference repairs, RIG017 archive/manifest/receipt consistency and full-series review. DeliveryMode MergeAndSync with Admin-Bypass. No downstream product execution.",
+    "productExecution": "Not started"
+  }
+}

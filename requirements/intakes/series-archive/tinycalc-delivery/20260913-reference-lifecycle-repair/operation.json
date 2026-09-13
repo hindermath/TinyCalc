@@ -1,0 +1,37 @@
+{
+  "schemaVersion": "1.0",
+  "documentType": "IntakeSeriesOperation",
+  "operationId": "5415a66a-8944-411d-9914-9b090cb6bb5b",
+  "seriesId": "5b4523b4-d946-4091-9cbc-11825af94332",
+  "type": "Update",
+  "status": "Published",
+  "authorityEvidence": "Thorsten explicitly approved the Feature 005 autonomous run and DeliveryMode MergeAndSync with formal-only Admin-Bypass. The causal closeout is limited to the branch-qualified GSDB Lastenheft rename, one tinycalc-delivery series update, preserved predecessor archives, lifecycle evidence, and one evidence-only closeout pull request. No successor intake or feature is selected or started.",
+  "proposalNormalizedSha256": "586424d2424b31f16c1461583affb3b0204886ccca0e79fb59af7759842b6703",
+  "preparedPaths": [
+    "requirements/intakes/series/tinycalc-delivery/manifest.json",
+    "requirements/intakes/series/tinycalc-delivery/receipt.json",
+    "requirements/intakes/series/tinycalc-delivery/operation.json",
+    "requirements/intakes/series/tinycalc-delivery/order.md",
+    "Lastenheft_Abarbeitungsreihenfolge.md",
+    "specs/intake-authoring-receipts/gsdb-spec-kit-intensivpruefung.json",
+    "requirements/intakes/series-archive/tinycalc-delivery/20260906T151949Z/manifest.json",
+    "requirements/intakes/series-archive/tinycalc-delivery/20260906T151949Z/receipt.json"
+  ],
+  "validation": {
+    "bash": "Pass",
+    "powerShell": "Pass"
+  },
+  "publication": {
+    "status": "Published",
+    "publishedPaths": [
+      "requirements/intakes/series/tinycalc-delivery/manifest.json",
+      "requirements/intakes/series/tinycalc-delivery/receipt.json",
+      "requirements/intakes/series/tinycalc-delivery/operation.json",
+      "requirements/intakes/series/tinycalc-delivery/order.md",
+      "Lastenheft_Abarbeitungsreihenfolge.md",
+      "specs/intake-authoring-receipts/gsdb-spec-kit-intensivpruefung.json",
+      "requirements/intakes/series-archive/tinycalc-delivery/20260906T151949Z/manifest.json",
+      "requirements/intakes/series-archive/tinycalc-delivery/20260906T151949Z/receipt.json"
+    ]
+  }
+}

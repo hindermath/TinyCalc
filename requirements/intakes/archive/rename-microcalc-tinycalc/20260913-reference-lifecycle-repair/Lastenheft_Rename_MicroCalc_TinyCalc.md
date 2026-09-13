@@ -152,7 +152,7 @@ archives, repository location, packages, or dependencies.*
 - **R-RN-TC-07:** Bestehende JSON-Dateien vor dem Rename laden unverändert,
   lassen sich erneut speichern und behalten dieselbe fachliche Bedeutung.
 - **R-RN-TC-08:** Der vollständige aktive Produktvertrag einschließlich
-  Funktionsmatrix aus `Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md` und A11Y-Gates aus `Lastenheft_A11Y_TUI.md` besteht nach dem
+  Feature-004-Funktionsmatrix und Feature-005-A11Y-Gates besteht nach dem
   Rename auf demselben Commit.
 - **R-RN-TC-09:** Linux-/Windows-CI, macOS-PTY/VoiceOver sowie
   DocFX/axe/lynx bestehen gemäß `ReleaseCloseout`-Matrix.
@@ -168,18 +168,6 @@ archives, repository location, packages, or dependencies.*
 changes, historical preservation, JSON compatibility, complete regression,
 cross-platform A11Y, documentation integrity, drift scanning, and
 version-neutral dependency handling.*
-
-Die Funktionsmatrix ist durch [TUI-Funktionsabnahme und Regressionsvertrag](Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md)
-gebunden; die Barrierefreiheits-Gates durch [A11Y TUI](Lastenheft_A11Y_TUI.md).
-Diese fachlichen Intake-Namen bleiben verbindlich, auch wenn spaeter andere
-Feature-Nummern vergeben werden. Feature 004 (RL-SE) und Feature 005 (GSDB)
-sind eigenstaendige Governance-Nachweise, keine Funktions- oder A11Y-Abnahme.
-
-*The functional matrix is defined by the linked TUI acceptance and regression
-intake; accessibility gates are defined by the linked A11Y TUI intake.
-These semantic intake names remain binding independently of future feature
-numbers. Features 004 (RL-SE) and 005 (GSDB) are separate governance evidence,
-not functional or accessibility acceptance.*
 
 ## Qualität, Sicherheit und Governance / Quality, Security And Governance
 

@@ -228,27 +228,15 @@ execution-time resolution of exact repository-approved dependency pins.*
 supply-chain evidence, WCAG 2.2 AA, bilingual CEFR-B2 delivery, and observable
 red-green-refactor evidence.*
 
-Die Funktionsmatrix ist durch [TUI-Funktionsabnahme und Regressionsvertrag](Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md)
-gebunden; die Barrierefreiheits-Gates durch [A11Y TUI](Lastenheft_A11Y_TUI.md).
-Diese fachlichen Intake-Namen bleiben verbindlich, auch wenn spaeter andere
-Feature-Nummern vergeben werden. Feature 004 (RL-SE) und Feature 005 (GSDB)
-sind eigenstaendige Governance-Nachweise, keine Funktions- oder A11Y-Abnahme.
-
-*The functional matrix is defined by the linked TUI acceptance and regression
-intake; accessibility gates are defined by the linked A11Y TUI intake.
-These semantic intake names remain binding independently of future feature
-numbers. Features 004 (RL-SE) and 005 (GSDB) are separate governance evidence,
-not functional or accessibility acceptance.*
-
 ## Verbindliche Regressions- und Impact-Matrix / Binding Regression And Impact Matrix
 
 | Impact | Pflichtnachweise |
 |---|---|
 | `NoFunctionalImpact` | Vertragsdrift und betroffene Dokumentationsvalidatoren; bei DocFX-Inhalt zusätzlich DocFX, axe und lynx |
 | `FunctionalImpact` | vollständiger automatisierter aktiver Produktvertrag bei jedem PR und Push sowie Linux- und Windows-CI |
-| `A11yImpact` | `FunctionalImpact` plus vollständige A11Y-Gates aus `Lastenheft_A11Y_TUI.md`, macOS-PTY und VoiceOver |
+| `A11yImpact` | `FunctionalImpact` plus vollständige Feature-005-A11Y-Gates, macOS-PTY und VoiceOver |
 | `TestInfrastructureImpact` | vollständige Matrix, damit eine Teständerung ihren eigenen Nachweis nicht unbemerkt schwächt |
-| `ReleaseCloseout` | Funktionsmatrix aus `Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md`, A11Y-Gates aus `Lastenheft_A11Y_TUI.md`, DocFX/axe/lynx, macOS-PTY/VoiceOver und Linux-/Windows-CI auf demselben Commit |
+| `ReleaseCloseout` | Feature-004-Funktionsmatrix, Feature-005-A11Y-Gates, DocFX/axe/lynx, macOS-PTY/VoiceOver und Linux-/Windows-CI auf demselben Commit |
 
 Größere TUI-, Formel-, Datei-, Hilfe-, Dependency-, Rename- oder
 Releaseänderungen sind mindestens `FunctionalImpact + A11yImpact`.

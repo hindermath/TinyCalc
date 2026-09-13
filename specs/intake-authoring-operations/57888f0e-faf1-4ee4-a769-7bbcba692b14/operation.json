@@ -1,0 +1,46 @@
+{
+  "schemaVersion": "1.0",
+  "documentType": "IntakeOperation",
+  "operationId": "57888f0e-faf1-4ee4-a769-7bbcba692b14",
+  "type": "Update",
+  "status": "Completed",
+  "createdAt": "2026-09-13T14:39:58Z",
+  "authorityEvidence": "Thorsten Hindermann: Bitte ausfuehren, referring explicitly to IR001 reference repairs, RIG017 archive/manifest/receipt consistency and full-series review. DeliveryMode MergeAndSync with Admin-Bypass. No downstream product execution.",
+  "proposalPath": "docs/maintenance/tinycalc-intake-remediation-proposal.json",
+  "proposalNormalizedSha256": "21a53ac4f5b7ab9a344a52ad47f4f7d82ae96169d5b6a239774221b4714066e8",
+  "approval": {
+    "approvedAt": "2026-09-13T14:39:58Z",
+    "approved": true,
+    "approvedBy": "Thorsten Hindermann",
+    "evidence": "Thorsten Hindermann: Bitte ausfuehren, referring explicitly to IR001 reference repairs, RIG017 archive/manifest/receipt consistency and full-series review. DeliveryMode MergeAndSync with Admin-Bypass. No downstream product execution."
+  },
+  "stagingDirectory": ".",
+  "intendedTargets": [
+    "requirements/intakes/active/Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md",
+    "specs/intake-authoring-receipts/tui-funktionsabnahme-und-regressionsvertrag.json",
+    "requirements/intakes/archive/tui-funktionsabnahme-und-regressionsvertrag/20260913-reference-lifecycle-repair/Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md",
+    "specs/intake-authoring-receipts/history/tui-funktionsabnahme-und-regressionsvertrag.20260913-reference-lifecycle-repair.json",
+    "docs/maintenance/tinycalc-intake-remediation-proposal.json"
+  ],
+  "validatedTargets": [
+    "requirements/intakes/active/Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md",
+    "specs/intake-authoring-receipts/tui-funktionsabnahme-und-regressionsvertrag.json",
+    "requirements/intakes/archive/tui-funktionsabnahme-und-regressionsvertrag/20260913-reference-lifecycle-repair/Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md",
+    "specs/intake-authoring-receipts/history/tui-funktionsabnahme-und-regressionsvertrag.20260913-reference-lifecycle-repair.json",
+    "docs/maintenance/tinycalc-intake-remediation-proposal.json"
+  ],
+  "publishedTargets": [
+    "requirements/intakes/active/Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md",
+    "specs/intake-authoring-receipts/tui-funktionsabnahme-und-regressionsvertrag.json",
+    "requirements/intakes/archive/tui-funktionsabnahme-und-regressionsvertrag/20260913-reference-lifecycle-repair/Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md",
+    "specs/intake-authoring-receipts/history/tui-funktionsabnahme-und-regressionsvertrag.20260913-reference-lifecycle-repair.json",
+    "docs/maintenance/tinycalc-intake-remediation-proposal.json"
+  ],
+  "rollbackBoundary": "Discard isolated uncommitted preparation on validation failure; byte-identical predecessors retained",
+  "failure": {
+    "class": "N/A",
+    "message": "N/A"
+  },
+  "nextAction": "$speckit-intake-review requirements/intakes/active/Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md",
+  "publicationBoundary": "Validated isolated Git worktree, published atomically as a single commit; original main synchronized after merge"
+}
