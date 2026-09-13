@@ -49,6 +49,17 @@ flowchart TD
     G -- "Ja / Yes" --> I["NeedsRemediation"]
 ```
 
+**Textalternative DE:** Der Serienreview umfasst 13 Ziele. `IR002` ist
+geschlossen; `IR003` und `IR004` bleiben offen und führen gemeinsam zur
+Reparatur der vorhandenen Intakes. Danach wird die vollständige Serie erneut
+geprüft. Ohne verbleibende Befunde lautet das Ergebnis `Ready`; andernfalls
+bleibt es `NeedsRemediation`.
+
+**Text alternative EN:** The series review covers 13 targets. `IR002` is
+closed; `IR003` and `IR004` remain open and jointly lead to repair of the
+existing intakes. The complete series is then reviewed again. With no findings
+remaining, the result is `Ready`; otherwise, it remains `NeedsRemediation`.
+
 ## Abdeckung und Grenzen / Coverage and Boundaries
 
 Es wurden 13 Ziele und keine Worker geprueft. Befunde: 0 Critical, 0 High, 2 Medium und 0 Low. Es gibt keine akzeptierten Risiken und keine offenen Fragen. Schema-2.0-Konfiguration, BCP-47-Sprache, Namensprofil, vier Rollen, sechs Collections, Receipt-/Zielhashes, DAG, Lifecycle, Handoffs, Security, Privacy, A11Y, Plattform, Supply Chain, Evidence, Prompt-Grenzen und textbasierte Zugaenglichkeit wurden geprueft. Der Review startet kein Feature und erteilt keine Remote-Berechtigung.
