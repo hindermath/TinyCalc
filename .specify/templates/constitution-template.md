@@ -58,18 +58,6 @@ und zielen auf CEFR B2. Status, Abhängigkeiten, Entscheidungen und nächste
 Schritte bleiben text-first und soweit anwendbar nach WCAG 2.2 Level AA
 zugänglich.
 
-Für Lastenhefte, die nach dem Profil
-`.specify/templates/intake-authoring-level2-lastenheft-profile.md` erstellt oder
-gepflegt werden, gilt: Wenn mindestens drei zusammenhängende Abhängigkeiten,
-Zustände, Übergaben, Verzweigungen oder geordnete Schritte wesentlich von einer
-Visualisierung profitieren, folgt direkt nach der vollständigen text-first-
-Erklärung ein knappes Mermaid-Diagramm. Das Diagramm bleibt ergänzend; sein
-lesbarer Markdown-Quelltext wird versioniert und darf keine Information tragen,
-die im Begleittext fehlt. Unmittelbar darunter fasst eine kurze Textalternative
-die wesentlichen Beziehungen und gegebenenfalls Entscheidungszweige auf Deutsch
-zuerst und Englisch danach zusammen. Ein einfaches Intake ohne wesentlichen
-Klarheitsgewinn dokumentiert `N/A`.
-
 Öffentliche APIs erhalten vollständige XML-Dokumentation mit `<summary>` und
 allen fachlich anwendbaren `<param>`, `<returns>` und `<exception>`-Elementen;
 lokale Variablen sind keine XML-Dokumentationsziele. Eine aktive CS1591-
@@ -83,25 +71,13 @@ Prozent Coverage und das Ziel 80 Prozent.
 
 *Learner-facing and user-facing text is German first and English second at
 CEFR B2. Status, dependencies, decisions, and next actions remain text-first
-and accessible under WCAG 2.2 Level AA where applicable.*
-
-*For requirement documents created or maintained under
-`.specify/templates/intake-authoring-level2-lastenheft-profile.md`, if three or
-more connected dependencies, states, handoffs, branches, or ordered steps
-materially benefit from visualization, a concise Mermaid diagram follows the
-complete text-first explanation. The diagram remains supplementary; its
-readable Markdown source is version-controlled and carries no information that
-is absent from the accompanying text. A short text alternative immediately
-below summarizes the essential relationships and, where applicable, decision
-branches in German first and English second. A simple intake without material
-clarity gain records `N/A`.*
-
-*Public APIs receive complete XML documentation with `<summary>` and every
-applicable `<param>`, `<returns>`, and `<exception>`; local variables are not XML
-documentation targets, and CS1591 is not globally suppressed. Non-trivial logic
-uses moderate bilingual why-comments. Features and bug fixes provide
-red-green-refactor evidence. Text-only work needs a justified, re-evaluated
-`N/A`; changed product code has a 70% coverage minimum and an 80% target.*
+and accessible under WCAG 2.2 Level AA where applicable. Public APIs receive
+complete XML documentation with `<summary>` and every applicable `<param>`,
+`<returns>`, and `<exception>`; local variables are not XML documentation
+targets, and CS1591 is not globally suppressed. Non-trivial logic uses moderate
+bilingual why-comments. Features and bug fixes provide red-green-refactor
+evidence. Text-only work needs a justified, re-evaluated `N/A`; changed product
+code has a 70% coverage minimum and an 80% target.*
 
 ## Governance
 <!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->

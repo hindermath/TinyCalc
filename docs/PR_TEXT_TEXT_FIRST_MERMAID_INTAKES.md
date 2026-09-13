@@ -15,24 +15,27 @@ supplementary, version-controlled Mermaid diagrams was missing.
 ## Lösung / Solution
 
 Deutsch:
-Das Level-2-Autorenprofil verlangt bei mindestens drei zusammenhängenden
-Elementen ein knappes Mermaid-Diagramm, wenn es die Verständlichkeit verbessert.
-Die vollständige deutsch-englische Textbeschreibung steht zuerst und bleibt
-normativ. Eine kurze Textalternative direkt unter dem Diagramm fasst die
-wesentlichen Beziehungen auf Deutsch zuerst und Englisch danach zusammen. Der
-aktuelle TinyCalc-Serienreview dient als konkretes Beispiel. Alle
+Aufbauend auf der durch PR #83 eingeführten allgemeinen Mermaid-Regel präzisiert
+das Level-2-Autorenprofil die barrierefreie Reihenfolge. Die vollständige
+deutsch-englische Textbeschreibung steht zuerst und bleibt normativ. Direkt
+danach folgt bei hilfreichen Abläufen, Zuständen oder Abhängigkeiten ein knappes,
+versionskontrolliertes Mermaid-Diagramm, dessen Quelltext keine zusätzliche
+Information trägt. Eine kurze Textalternative direkt unter dem Diagramm fasst
+die wesentlichen Beziehungen auf Deutsch zuerst und Englisch danach zusammen.
+Der aktuelle TinyCalc-Serienreview dient als konkretes Beispiel. Alle
 Agentenrichtlinien und ihre Quelltemplates wurden synchronisiert. Constitution
-v1.17.4 und ihr Spec-Kit-Spiegel verankern die Regel kanonisch.
+v1.18.1 und ihr Spec-Kit-Spiegel verankern die Präzisierung kanonisch.
 
 English:
-The Level-2 authoring profile now requires a concise Mermaid diagram for three
-or more connected elements when it materially improves clarity. The complete
-German-English text explanation comes first and remains normative. The current
-TinyCalc series review provides a concrete example. A short German-first,
-English-second text alternative immediately below the diagram summarizes the
-essential relationships. All agent guidance files and their source templates
-are synchronized. Constitution v1.17.4 and its Spec Kit mirror bind the rule
-canonically.
+Building on the general Mermaid rule introduced by PR #83, the Level-2 authoring
+profile specifies the accessible order. The complete German-English text
+explanation comes first and remains normative. A concise, version-controlled
+Mermaid diagram follows directly when workflows, states, or dependencies benefit
+from it, and its source carries no additional information. A short German-first,
+English-second text alternative immediately below summarizes the essential
+relationships. The current TinyCalc series review provides a concrete example.
+All agent guidance files and source templates are synchronized. Constitution
+v1.18.1 and its Spec Kit mirror canonically bind the refinement.
 
 ## Risiken / Risks
 
@@ -40,9 +43,9 @@ canonically.
   Begleittext verhindert Informationsverlust. / Mermaid support may be absent
   in some Markdown renderers. The complete accompanying text prevents loss of
   information.
-- Einfache Lastenhefte werden nicht mit unnötigen Diagrammen belastet; fehlender
-  Mehrwert wird als `N/A` dokumentiert. / Simple requirement documents do not
-  receive unnecessary diagrams; missing material benefit is recorded as `N/A`.
+- Einfache Lastenhefte werden nicht mit unnötigen Diagrammen belastet; die
+  Nichtanwendung wird kurz begründet. / Simple requirement documents do not
+  receive unnecessary diagrams; omission is briefly justified.
 - Keine Produkt-, Runtime- oder Abhängigkeitsänderung. / No product, runtime, or
   dependency change.
 

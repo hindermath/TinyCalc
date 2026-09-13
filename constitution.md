@@ -1,15 +1,24 @@
+<!-- Mermaid text-alternative refinement 2026-09-13: 1.18.0 -> 1.18.1 (patch: precise placement and text-first equivalence).
+Updated: constitution, agent guidance, intake/workflow templates and project rule. Removed: none. No deferred placeholders. -->
+<!-- Mermaid/report Sync Impact 2026-09-13: 1.17.2 -> 1.18.0 (minor: new mandatory governance).
+Added: Mermaid and feature completion reports. Removed: none. Updated: agent guidance, intake profile,
+spec/plan/tasks templates and completion-report-template.md. No deferred placeholders. /
+Neue Pflichten, keine entfernten Regeln; abhaengige Vorlagen synchron gepflegt. -->
 <!--
-Sync Impact Report
-Version change: 1.17.2 -> 1.17.4
+Historical Sync Impact Report (superseded by the 2026-09-13 Mermaid/report amendment)
+Version change: 1.17.1 -> 1.17.2
 Modified principles:
-- TinyCalc Level-2 addendum: require a bilingual text alternative directly below supplementary Mermaid diagrams and align the no-diagram-only-information boundary.
+- Spec Kit preset governance: pin autonomous-run-governance v0.4.4 and require exact staged-candidate validation.
+- None; Security-First remains Principle I and the shared Home Baseline remains unchanged
 Added sections:
-- None
+- Didaktische und sprachliche Klarheit / Pedagogical and Linguistic Clarity (TinyCalc Level-2 addendum only)
 Removed sections:
 - None
 Templates requiring updates:
 - ✅ .specify/templates/constitution-template.md
-- ✅ .specify/templates/intake-authoring-level2-lastenheft-profile.md
+- ✅ .specify/templates/plan-template.md
+- ✅ .specify/templates/spec-template.md
+- ✅ .specify/templates/tasks-template.md
 - ✅ scripts/templates/AGENTS.md.tmpl
 - ✅ scripts/templates/CLAUDE.md.tmpl
 - ✅ scripts/templates/GEMINI.md.tmpl
@@ -25,7 +34,7 @@ Follow-up TODOs:
 - None
 -->
 
-# Constitution v1.17.4
+# Constitution v1.18.1
 
 # home-baseline Constitution
 
@@ -894,7 +903,7 @@ Community/catalog coordination is tracked in `github/spec-kit#2362`.
 `.github/copilot-instructions.md` for per-agent operational guidance. This
 constitution is the authoritative policy layer above all agent-specific files.
 
-**Version**: 1.17.4 | **Ratified**: 2026-03-31 | **Last Amended**: 2026-09-13
+**Version**: 1.18.1 | **Ratified**: 2026-03-31 | **Last Amended**: 2026-09-13
 
 <!-- EN: constitution.md placeholder
 [DE-Zusammenfassung: constitution.md beschreibt die Prinzipien und Standards für alle home-baseline Workspaces.]
@@ -916,18 +925,6 @@ Beide Sprachblöcke zielen auf CEFR B2. Status, Abhängigkeiten, Entscheidungen
 und nächste Schritte bleiben textuell vollständig und soweit anwendbar nach
 WCAG 2.2 Level AA für Braillezeilen, Screenreader und Textbrowser nutzbar.
 
-Für Lastenhefte, die nach dem Profil
-`.specify/templates/intake-authoring-level2-lastenheft-profile.md` erstellt oder
-gepflegt werden, gilt: Wenn mindestens drei zusammenhängende Abhängigkeiten,
-Zustände, Übergaben, Verzweigungen oder geordnete Schritte wesentlich von einer
-Visualisierung profitieren, folgt direkt nach der vollständigen text-first-
-Erklärung ein knappes Mermaid-Diagramm. Das Diagramm bleibt ergänzend; sein
-lesbarer Markdown-Quelltext wird versioniert und darf keine Information tragen,
-die im Begleittext fehlt. Unmittelbar darunter fasst eine kurze Textalternative
-die wesentlichen Beziehungen und gegebenenfalls Entscheidungszweige auf Deutsch
-zuerst und Englisch danach zusammen. Ein einfaches Intake ohne wesentlichen
-Klarheitsgewinn dokumentiert `N/A`.
-
 Öffentliche C#-Typen und -Mitglieder erhalten vollständige XML-Dokumentation:
 `<summary>` sowie fachlich anwendbare `<param>`, `<returns>` und `<exception>`.
 Lokale Variablen besitzen keine XML-Dokumentationsfläche. CS1591 bleibt eine
@@ -946,17 +943,6 @@ ist, gelten mindestens 70 Prozent Coverage und das Ziel von 80 Prozent.
 language blocks target CEFR B2. Status, dependencies, decisions, and next
 actions remain complete in text and, where applicable, meet WCAG 2.2 Level AA
 for Braille displays, screen readers, and text browsers.*
-
-*For requirement documents created or maintained under
-`.specify/templates/intake-authoring-level2-lastenheft-profile.md`, if three or
-more connected dependencies, states, handoffs, branches, or ordered steps
-materially benefit from visualization, a concise Mermaid diagram follows the
-complete text-first explanation. The diagram remains supplementary; its
-readable Markdown source is version-controlled and carries no information that
-is absent from the accompanying text. A short text alternative immediately
-below summarizes the essential relationships and, where applicable, decision
-branches in German first and English second. A simple intake without material
-clarity gain records `N/A`.*
 
 *Public C# types and members receive complete XML documentation: `<summary>`
 and every technically applicable `<param>`, `<returns>`, and `<exception>`.
@@ -978,3 +964,46 @@ Das Repository verwendet Statistikmethodik 2 mit reproduzierbarer JSON-Konfigura
 
 *The repository uses Statistics Methodology 2 with reproducible JSON configuration, ASCII-only charts, exact values, and bilingual text alternatives. The generated block in `docs/project-statistics.md` remains the final top-level section. Verified phase slots stay stable; otherwise monthly volume is shown. Historical Profile 1 content is archived and not rewritten.*
 <!-- statistics-profile-2-governance:end -->
+
+<!-- BEGIN spec-kit-diagrams-completion -->
+## Mermaid und Spec-Kit-Abschlussbericht / Mermaid and Spec Kit completion report
+
+Neue Lastenhefte enthalten bei hilfreichen Abläufen, Zuständen oder Abhängigkeiten
+lesbaren Mermaid-Quelltext im versionierten Markdown. Das Diagramm folgt
+unmittelbar nach der vollständigen deutsch-englischen text-first-Erklärung; sein
+Quelltext darf keine Information tragen, die im Begleittext fehlt. Direkt
+darunter fasst eine kurze Textalternative die wesentlichen Beziehungen und
+gegebenenfalls Entscheidungszweige auf Deutsch zuerst und Englisch danach
+zusammen. Bei einfachen Inhalten die Nichtanwendung kurz begründen. Diagramme
+bilden die verbindlichen Text-/Manifestquellen ab; Farbe allein trägt keine
+Bedeutung.
+Nach jedem vollständig abgeschlossenen Spec-Kit-Feature-Lauf den vollständigen
+Ergebnisbericht im Chat anzeigen und im Feature-Verzeichnis als
+`completion-report.md` versionieren. Einzelne Planungs-/Status-/Review-Kommandos
+lösen keinen solchen Bericht aus; blockierte oder pausierte Läufe als
+Zwischenbericht kennzeichnen. Vorlage: `.specify/templates/completion-report-template.md`;
+Regel: `docs/spec-kit-diagrams-and-completion-reports.md`.
+Ergebnis, Tests, Dokumentation, Git-gebundene Umfangszahlen, Verlauf und Restpunkte
+belegen. Programmlogik von generierter Evidence, Git-Wandzeit von aktiver
+Arbeitszeit und bestandene von ausgefallenen Prüfungen unterscheiden. Finale
+Merge-/Sync-Evidence im Chat und bestehenden Closeout-Nachweis ergänzen; keine
+zusätzlichen Commits allein für selbstreferenzielle Berichts-/Statistikwerte.
+Diese Projektregel und lokale Vorlagen bei Spec-Kit-Updates erhalten.
+
+*New intakes use readable, versioned Mermaid Markdown for useful workflows,
+states or dependencies. The diagram follows immediately after the complete
+German-first/English-second text-first explanation; its source carries no
+information absent from the accompanying text. A short text alternative directly
+below summarizes the essential relationships and, where applicable, decision
+branches in German first and English second. Justify omission for simple content.
+Diagrams reflect authoritative text/manifests and never rely on color alone.
+After each completed feature run, show the full outcome report in chat and
+version completion-report.md in the feature directory using the shared template
+and rule above. Individual planning/status/review commands do not trigger it;
+paused/blocked runs receive interim reports. Evidence outcomes, tests, docs,
+Git-bound counts, delivery history and remaining work. Distinguish code from
+volume generated as evidence, elapsed from active time, and passed from failed
+checks. Add final merge/sync proof in chat and existing closeout evidence, without
+commits solely for self-referential counts or IDs. Preserve local rules/templates
+across Spec Kit updates.*
+<!-- END spec-kit-diagrams-completion -->
