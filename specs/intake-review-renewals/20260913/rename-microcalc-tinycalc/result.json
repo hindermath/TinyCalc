@@ -1,0 +1,72 @@
+{
+  "schemaVersion": "1.1",
+  "reviewId": "ccbf5823-5d41-4191-907a-91bb33838d6c",
+  "mode": "Single",
+  "status": "NeedsRemediation",
+  "policy": "level2-lastenheft",
+  "reviewedAt": "2026-09-13T12:58:22.2887190Z",
+  "repository": {
+    "root": ".",
+    "head": "58fd6f552fd6f82ccdb522aa5026a0462f5e9917"
+  },
+  "requestEvidence": {
+    "normalizedSha256": "7ea52270c984a6fb556c3df0b7a4357822c438cd82e13dbd4931362d196deea1",
+    "path": "specs/intake-review-renewals/20260913/rename-microcalc-tinycalc/request.json"
+  },
+  "targets": [
+    {
+      "gitBlob": "14cb6dba225f49787163e1cf32fe1f1bb92d01e5",
+      "path": "requirements/intakes/active/Lastenheft_Rename_MicroCalc_TinyCalc.md",
+      "role": "Primary",
+      "normalizedSha256": "49642f8486493627b6ebc30454423e33fdad748ed6d434943a78aa79e6440f1c"
+    }
+  ],
+  "findings": [
+    {
+      "disposition": "Open; preserve intake bytes under the approved receipt-only scope; repair references before downstream execution",
+      "category": "ReferenceConsistency",
+      "evidence": "Intake names Feature-004 functional and Feature-005 A11Y gates, while current specs/004-rl-se-self-assessment and specs/005-gsdb-intensive-review identify different features. Semantic functional/A11Y requirements remain explicit; fixed feature-number references need a separately scoped correction.",
+      "reevaluationTrigger": "Before specifying or executing this intake, or after an explicitly approved reference correction",
+      "id": "IR001",
+      "target": "requirements/intakes/active/Lastenheft_Rename_MicroCalc_TinyCalc.md",
+      "owner": "Thorsten Hindermann",
+      "severity": "Medium"
+    }
+  ],
+  "questions": [],
+  "acceptedRisks": [],
+  "operatorExceptions": [],
+  "coverage": {
+    "individual": [
+      "requirements/intakes/active/Lastenheft_Rename_MicroCalc_TinyCalc.md"
+    ],
+    "series": [],
+    "workers": []
+  },
+  "summary": {
+    "critical": 0,
+    "high": 0,
+    "medium": 1,
+    "low": 0
+  },
+  "supersedes": "N/A",
+  "reviewBoundary": {
+    "checked": [
+      "Identity, audience and prior knowledge",
+      "German-first/English-second readability and first-use terminology",
+      "Goal, scope, non-goals, atomic requirements and measurable acceptance",
+      "Dependency order and current series binding",
+      "Security, privacy, accessibility, platform and supply-chain applicability",
+      "Prompt and delivery-authority boundaries",
+      "References and absence of credentials or unnecessary personal data"
+    ],
+    "historicalReviewDisposition": "Prior full-series review was already explicitly superseded on 2026-09-05; its archived bytes and supersession record remain unchanged",
+    "fullSeriesReview": "Still pending; this Single review does not replace a Series review",
+    "unchangedTarget": true,
+    "historicalSupersessionPath": "requirements/intakes/series-archive/tinycalc-delivery/20260905T185700Z-review/superseded-review.json",
+    "nextAction": "Resolve IR001 under a separately scoped intake update before downstream execution; no Specify or autonomous run started",
+    "receiptNormalizedSha256": "ae9fcb108d32b21d33b5092cb0dd848692a5798679ce446a5093bc3428eebd88",
+    "receiptPath": "specs/intake-authoring-receipts/rename-microcalc-tinycalc.json",
+    "receiptId": "f4079254-7449-468e-83d0-113e09395397"
+  }
+}

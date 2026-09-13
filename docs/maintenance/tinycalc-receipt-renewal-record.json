@@ -1,0 +1,91 @@
+{
+  "preparedAt": "2026-09-13T12:48:39.987878Z",
+  "status": "Completed",
+  "sourceHead": "58fd6f552fd6f82ccdb522aa5026a0462f5e9917",
+  "scope": "Two authoring receipts and individual reviews only; existing full-series review remains pending",
+  "records": [
+    {
+      "archiveReceipt": "specs/intake-authoring-receipts/history/rename-microcalc-tinycalc.20260913-receipt-renewal.json",
+      "operationRoot": "specs/intake-authoring-operations/0869482c-c6a8-4faf-9a41-a05aa7f4a55c",
+      "archiveTarget": "requirements/intakes/archive/rename-microcalc-tinycalc/20260913-receipt-renewal/Lastenheft_Rename_MicroCalc_TinyCalc.md",
+      "slug": "rename-microcalc-tinycalc",
+      "targetRawSha256": "49642f8486493627b6ebc30454423e33fdad748ed6d434943a78aa79e6440f1c",
+      "entry": {
+        "previousReceiptId": "cbb11a6e-0b5c-4b47-a49c-37648ba16cb6",
+        "driftIntroducedByRollout": false,
+        "intakeId": "b4f18668-0276-45ee-8a6f-16a8bd8b833d",
+        "readmeCurrentSha256": "f616050f682899c224591707bdcfb713e8709c295355f8fd24cce44f46193a40",
+        "target": {
+          "path": "requirements/intakes/active/Lastenheft_Rename_MicroCalc_TinyCalc.md",
+          "normalizedSha256": "49642f8486493627b6ebc30454423e33fdad748ed6d434943a78aa79e6440f1c"
+        },
+        "readmeRecordedSha256": "4e6f8d362549e650937de17bb5d257ce5d0ced6149a0012ede8923333a9e1c50",
+        "proposedOperationId": "0869482c-c6a8-4faf-9a41-a05aa7f4a55c",
+        "receiptRawSha256": "ce8a85e5f42626b9b2ee1b109ca49a4826ce9bff750ed3118bd8798a513eab21",
+        "receiptPath": "specs/intake-authoring-receipts/rename-microcalc-tinycalc.json",
+        "proposedReviewId": "ccbf5823-5d41-4191-907a-91bb33838d6c",
+        "readmeBeforeRolloutSha256": "f616050f682899c224591707bdcfb713e8709c295355f8fd24cce44f46193a40",
+        "proposedReceiptId": "f4079254-7449-468e-83d0-113e09395397"
+      },
+      "reviewResult": "specs/intake-review-renewals/20260913/rename-microcalc-tinycalc/result.json",
+      "reviewOutcome": "NeedsRemediation",
+      "reviewFinding": "IR001: stale fixed feature-number references; separate pre-existing business finding"
+    },
+    {
+      "archiveReceipt": "specs/intake-authoring-receipts/history/tui-funktionsabnahme-und-regressionsvertrag.20260913-receipt-renewal.json",
+      "operationRoot": "specs/intake-authoring-operations/069d1a52-bf1e-4861-b2f4-fece81d376c6",
+      "archiveTarget": "requirements/intakes/archive/tui-funktionsabnahme-und-regressionsvertrag/20260913-receipt-renewal/Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md",
+      "slug": "tui-funktionsabnahme-und-regressionsvertrag",
+      "targetRawSha256": "f7b72c2abbd55d197cbc3cee5050f189868656ae0cff8b8745fa430535632d40",
+      "entry": {
+        "previousReceiptId": "fa3e818c-350d-497c-8216-31230ae57c67",
+        "driftIntroducedByRollout": false,
+        "intakeId": "40e85866-18d3-4cc8-b667-a1de8da44b10",
+        "readmeCurrentSha256": "f616050f682899c224591707bdcfb713e8709c295355f8fd24cce44f46193a40",
+        "target": {
+          "path": "requirements/intakes/active/Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md",
+          "normalizedSha256": "f7b72c2abbd55d197cbc3cee5050f189868656ae0cff8b8745fa430535632d40"
+        },
+        "readmeRecordedSha256": "4e6f8d362549e650937de17bb5d257ce5d0ced6149a0012ede8923333a9e1c50",
+        "proposedOperationId": "069d1a52-bf1e-4861-b2f4-fece81d376c6",
+        "receiptRawSha256": "32cf121e269cfae9512675a5b69eb482de1c8422b2ef3151914a02f2e4dc8900",
+        "receiptPath": "specs/intake-authoring-receipts/tui-funktionsabnahme-und-regressionsvertrag.json",
+        "proposedReviewId": "a41a4041-adc7-4779-b065-129a587eb0eb",
+        "readmeBeforeRolloutSha256": "f616050f682899c224591707bdcfb713e8709c295355f8fd24cce44f46193a40",
+        "proposedReceiptId": "1f2e8e2e-cdda-4fab-a498-a878f52770c2"
+      },
+      "reviewResult": "specs/intake-review-renewals/20260913/tui-funktionsabnahme-und-regressionsvertrag/result.json",
+      "reviewOutcome": "NeedsRemediation",
+      "reviewFinding": "IR001: stale fixed feature-number references; separate pre-existing business finding"
+    }
+  ],
+  "owner": "Thorsten Hindermann",
+  "authority": "Thorsten Hindermann explicitly approved the prepared two-receipt renewal and required reviews: Fuer TinyCalc genehmigt. Current MergeAndSync with Admin-Bypass applies to this maintenance delivery only; no downstream product implementation is started or authorized by these receipts.",
+  "documentationImpact": "UpdateRequired",
+  "schemaVersion": 1,
+  "generatorCompatibilityBackport": {
+    "reevaluation": "Before next authoring patch release or next receipt generation in another consumer",
+    "owner": "Thorsten Hindermann",
+    "canonicalCommit": "9ae4e1be4761e3ba8db85421907bb7eeb1f12b03",
+    "scope": "Three explicitly recorded local overlay files; existing public tag and other consumer versions unchanged",
+    "releaseVersion": "0.3.4",
+    "pullRequest": "https://github.com/hindermath/spec-kit-preset-intake-authoring-governance/pull/9",
+    "followUp": "Publish canonical correction in the next general authoring patch and evaluate wider adoption separately"
+  },
+  "validation": {
+    "targetAndArchiveRawHashes": "Matched",
+    "mediumFindings": 2,
+    "reviewOutcome": "NeedsRemediation",
+    "fullSeriesReview": "Still pending; no fabricated full-series approval",
+    "negativeFixtures": "10 legacy and 26 linked cases passed",
+    "shells": [
+      "Bash first",
+      "PowerShell"
+    ],
+    "productCodeChanged": false,
+    "individualReviews": 2,
+    "receiptAndSeriesArtifactChecks": 15,
+    "artifactFindings": 0,
+    "criticalOrHighFindings": 0
+  }
+}

@@ -1,0 +1,128 @@
+# Intake-Lifecycle-Flottenrollout / Intake lifecycle fleet rollout
+
+Datum: 2026-09-13. Owner: Repository Maintainer (Thorsten Hindermann).
+
+DE: Die vorhandenen Intake-Presets werden auf Authoring 0.3.2, Review 0.2.2
+und Sequencing 0.2.4 aktualisiert. Die optionalen Profilbindungen verwenden
+dieselben Releases. Die Standard-Achtermatrix und andere Presets bleiben erhalten.
+Die Installation fuehrt keine Intakes aus und verschiebt keine fachlichen Dateien.
+Completed-Ziele gehoeren ins konfigurierte Archiv; ausfuehrbare Ziele in die
+aktive Collection. Physischer Aktivbestand und aktive Serienziele werden getrennt
+gezaehlt. Historische Receipts brauchen eine eindeutige Archiv-/Hashbindung.
+
+EN: Existing intake presets are updated to Authoring 0.3.2, Review 0.2.2 and
+Sequencing 0.2.4. Optional profiles bind the same releases; the standard eight
+and other presets remain unchanged. Installation neither executes intakes nor
+moves requirements. Completed members belong in the configured archive and
+executable members in the active collection. Physical active inventory and active
+series membership are separate counts. Historical receipts require unique
+archive/hash evidence.
+
+## Evidence und Dokumentationsauswirkung / Evidence and documentation impact
+
+[intake-lifecycle-fleet-rollout.json](intake-lifecycle-fleet-rollout.json) erfasst
+Paketbasis, lokale Erweiterungen und Pruefergebnisse. Technische Gates, Review-
+Befunde und der exakte PR-Head werden vor Merge geprueft. Der ausdrueckliche
+Auftrag umfasst MergeAndSync mit Admin-Bypass nach technischen Gates; er
+behauptet keine unabhaengige menschliche Freigabe und keine Produktkonformitaet.
+
+Entscheidung: UpdateRequired. Zielgruppen: Maintainer und Agenten; Leserpfad:
+aktuelle Preset-/Agent-Guidance, dieses Dokument, JSON, PR-Gates. Kanonische
+Quellen: veroeffentlichte Preset-Tags und bestehende optionale Profile. DE/EN
+stehen gemeinsam hier; Darstellung ist textorientiert und ohne Farbabhaengigkeit.
+Distribution: repository-lokale Presets und Evidence, verwaltete Profilkopien.
+Die Level-0-Profilkonfiguration wird separat ueber den geprueften Home-Runtime-
+Sync verteilt; Preset-Verzeichnisse werden nicht nach Home kopiert. Statistik
+folgt der vorhandenen Repository-Konfiguration. Re-Evaluation bei Versions-,
+Profil-, Lifecycle- oder lokaler Erweiterungsdrift.
+
+The linked JSON records released package provenance, local extensions and
+validation results. Technical gates, review findings and the exact PR head are
+checked before the authorized MergeAndSync/admin-bypass delivery. This does not
+claim independent human approval or product conformity. Documentation impact is
+UpdateRequired, owned by the maintainer, with colocated German/English text.
+Reassess after version, profile, lifecycle or local-extension changes.
+
+## GSDB-Versionsbindung / GSDB version binding
+
+Die aktuelle GSDB-Matrix und ihr Validator verwenden die drei neuen Patch-Versionen.
+Vier Quellenbindungen wurden nach Inhaltspruefung erneuert: drei Preset-Manifeste
+und die Registry. Die Preset-Zuordnung bleibt Applicable; Standardmatrix,
+Checklistenzuordnungen, Statusentscheidungen und menschliche Freigaben werden
+nicht erweitert. Die CL-12-06-Registry-Evidence belegt weiterhin die vorhandene
+Installation. Der separate Lifecycle-Bestandsbefund bleibt sichtbar.
+
+The current GSDB matrix and validator bind the three new patch versions. Four
+source bindings were revalidated: the three preset manifests and the registry.
+Preset applicability, standard-matrix membership, checklist mappings and status
+or human-approval decisions remain unchanged. CL-12-06 registry evidence continues
+to prove installation. The separate project lifecycle finding remains visible.
+
+## Korrigierter Patchstand / Corrected patch releases
+
+Die Flottenreviews deckten physische Collection-Aliase und Receipt-Pfadfluchten
+auf. Die zentral korrigierten Releases sind Authoring 0.3.4, Review 0.2.3 und
+Sequencing 0.2.6. Negative Tests reproduzierten die Befunde vor der Korrektur;
+anschliessend bestehen die nativen Release-Suiten auf macOS, Linux und Windows.
+Die aktuellen Profile, Source-Locks und vorhandenen Bootstrap-/Agent-Vorlagen
+verwenden diese Versionen. Die mitgelieferten verschachtelten Workflows sind
+Quellmetadaten der Presets und aktivieren keine Verbraucher-Jobs; die technischen
+PR-Gates stammen aus den Root-Workflows des jeweiligen Verbraucher-Repositories.
+
+Fleet review found physical collection aliases and receipt path escapes. The
+centrally corrected releases are Authoring 0.3.4, Review 0.2.3 and Sequencing 0.2.6.
+Shipped JSON templates are parsed and their generator versions checked in native CI. Negative tests reproduced the findings before correction; native release suites
+then pass on macOS, Linux and Windows. Existing profiles, source locks and
+bootstrap/agent templates bind these versions. Packaged nested workflows are
+preset-source metadata, not consumer jobs; consumer PR gates use root workflows.
+
+Documentation Impact remains UpdateRequired. Re-evaluation includes portability,
+physical path aliases, source/hash bindings and local overlays. Project lifecycle
+inventory findings remain separate from successful package/regression checks.
+
+Historischer Renderer / Historical renderer: render-requirements-intake-governance.mjs
+rekonstruiert vorhandene Migrations-Receipts mit festen IDs und Zeitstempeln. Seine
+Generatorwerte Authoring 0.2.1 / Sequencing 0.2.3 bezeichnen deren urspruengliche
+Erzeugung und bleiben erhalten. Neue Operationen verwenden die installierten
+Vorlagen mit 0.3.4 / 0.2.6. Es wurde kein historisches Receipt umgeschrieben.
+The local renderer replays existing migration receipts with fixed IDs/timestamps;
+its original generator labels remain historical provenance. New operations use
+the current installed templates. This clarification changes no generated bytes.
+
+## Receipt-Erneuerung 2026-09-13 / Receipt renewal
+
+Die zwei ausdruecklich freigegebenen Receipt-Nachfolger erneuern README-
+Quellfrische und Provenance. Vorherige Receipt-/Intake-Bytes sind unveraendert
+archiviert; IDs, aktive Inhalte, Namen, Reihenfolge und Abhaengigkeiten bleiben
+erhalten. Zwei neue Operationen und zwei Einzelreviews sind gebunden in
+[Renewal evidence](tinycalc-receipt-renewal-record.json).
+
+Die Authoring-Quelle korrigiert in PR 9 die fehlerhafte Generator-Allowlist.
+TinyCalc uebernimmt genau die zwei Wrapper und den Lifecycle-Test aus Commit
+9ae4e1be4761e3ba8db85421907bb7eeb1f12b03 als dokumentierten Backport auf 0.3.4.
+Die Registry-Version und die oeffentlichen ZIPs bleiben unveraendert; der
+Paketnachweis kennzeichnet die drei Abweichungen ausdruecklich als lokale
+Erweiterungen. Ein allgemeiner Folgepatch bleibt Aufgabe der kanonischen Quelle.
+
+Beide Einzelreviews haben Ergebnis NeedsRemediation (je ein Medium-Befund):
+Die festen Feature-004-/005-Verweise bezeichnen inzwischen RL-SE/GSDB statt
+Funktions-/A11Y-Abnahme. Das ist vor Produktausfuehrung gesondert zu korrigieren.
+Die Gesamtserie bleibt reviewpflichtig; keine neue Produktfreigabe wird erteilt.
+
+The two explicitly approved receipt successors renew README source freshness
+and provenance while preserving intake bytes, IDs, names and order. Prior
+receipt/target bytes are archived. Two operations and two Single reviews are
+recorded in the linked evidence. TinyCalc backports exactly two validators and
+the lifecycle test from canonical authoring commit
+9ae4e1be4761e3ba8db85421907bb7eeb1f12b03 (PR 9). Registry version 0.3.4 and
+published ZIPs remain unchanged; all three deviations are declared overlays.
+Both reviews report NeedsRemediation for stale fixed feature-number references;
+they do not grant product execution or replace the pending full-series review.
+
+Documentation Impact: UpdateRequired. Owner: Thorsten Hindermann. Audience:
+maintainers and reviewers. Canonical source: receipt/operation/review JSON and
+public authoring PR 9. Navigation: this maintenance document and PR description.
+Class: source-only evidence; DE/EN in the same files. Text-first reports;
+macOS Bash/PowerShell and native source CI. No Home sync. Re-evaluate before
+downstream execution or the next public authoring patch. Existing business
+lifecycle findings remain separate from package and receipt validation.

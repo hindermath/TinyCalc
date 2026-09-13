@@ -1,0 +1,13 @@
+{
+  "previousReceiptId": "cbb11a6e-0b5c-4b47-a49c-37648ba16cb6",
+  "previousTargetNormalizedSha256": "49642f8486493627b6ebc30454423e33fdad748ed6d434943a78aa79e6440f1c",
+  "authorityEvidence": "Thorsten Hindermann explicitly approved the prepared two-receipt renewal and required reviews: Fuer TinyCalc genehmigt. Current MergeAndSync with Admin-Bypass applies to this maintenance delivery only; no downstream product implementation is started or authorized by these receipts.",
+  "scopePreserved": true,
+  "approved": true,
+  "target": "requirements/intakes/active/Lastenheft_Rename_MicroCalc_TinyCalc.md",
+  "previousReceiptRawSha256": "ce8a85e5f42626b9b2ee1b109ca49a4826ce9bff750ed3118bd8798a513eab21",
+  "proposalId": "0869482c-c6a8-4faf-9a41-a05aa7f4a55c",
+  "type": "Update",
+  "schemaVersion": "1.0",
+  "change": "Renew only README source freshness and receipt provenance; intake bytes, IDs, scope, order and dependencies remain unchanged"
+}

@@ -1,0 +1,43 @@
+{
+  "schemaVersion": "1.0",
+  "documentType": "IntakeOperation",
+  "operationId": "069d1a52-bf1e-4861-b2f4-fece81d376c6",
+  "type": "Update",
+  "status": "Completed",
+  "createdAt": "2026-09-13T12:48:39.987878Z",
+  "authorityEvidence": "Thorsten Hindermann explicitly approved the prepared two-receipt renewal and required reviews: Fuer TinyCalc genehmigt. Current MergeAndSync with Admin-Bypass applies to this maintenance delivery only; no downstream product implementation is started or authorized by these receipts.",
+  "proposalPath": "specs/intake-authoring-operations/069d1a52-bf1e-4861-b2f4-fece81d376c6/proposal.json",
+  "proposalNormalizedSha256": "575de423dd12145d681a043a7e0fb46e92ba79006279e87ed5eadf65df5bc757",
+  "approval": {
+    "approvedAt": "2026-09-13T12:48:39.987878Z",
+    "evidence": "Thorsten Hindermann explicitly approved the prepared two-receipt renewal and required reviews: Fuer TinyCalc genehmigt. Current MergeAndSync with Admin-Bypass applies to this maintenance delivery only; no downstream product implementation is started or authorized by these receipts.",
+    "approvedBy": "Thorsten Hindermann",
+    "approved": true
+  },
+  "stagingDirectory": ".",
+  "intendedTargets": [
+    "specs/intake-authoring-receipts/tui-funktionsabnahme-und-regressionsvertrag.json",
+    "requirements/intakes/archive/tui-funktionsabnahme-und-regressionsvertrag/20260913-receipt-renewal/Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md",
+    "specs/intake-authoring-receipts/history/tui-funktionsabnahme-und-regressionsvertrag.20260913-receipt-renewal.json",
+    "specs/intake-authoring-operations/069d1a52-bf1e-4861-b2f4-fece81d376c6/proposal.json"
+  ],
+  "validatedTargets": [
+    "specs/intake-authoring-receipts/tui-funktionsabnahme-und-regressionsvertrag.json",
+    "requirements/intakes/archive/tui-funktionsabnahme-und-regressionsvertrag/20260913-receipt-renewal/Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md",
+    "specs/intake-authoring-receipts/history/tui-funktionsabnahme-und-regressionsvertrag.20260913-receipt-renewal.json",
+    "specs/intake-authoring-operations/069d1a52-bf1e-4861-b2f4-fece81d376c6/proposal.json"
+  ],
+  "publishedTargets": [
+    "specs/intake-authoring-receipts/tui-funktionsabnahme-und-regressionsvertrag.json",
+    "requirements/intakes/archive/tui-funktionsabnahme-und-regressionsvertrag/20260913-receipt-renewal/Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md",
+    "specs/intake-authoring-receipts/history/tui-funktionsabnahme-und-regressionsvertrag.20260913-receipt-renewal.json",
+    "specs/intake-authoring-operations/069d1a52-bf1e-4861-b2f4-fece81d376c6/proposal.json"
+  ],
+  "rollbackBoundary": "Discard isolated preparation on failure. Prior target and receipt retained byte-for-byte; no intake content, series order or product changes.",
+  "failure": {
+    "class": "N/A",
+    "message": "N/A"
+  },
+  "nextAction": "Address IR001 from specs/intake-review-renewals/20260913/tui-funktionsabnahme-und-regressionsvertrag/result.json before downstream intake execution; no product run started",
+  "publicationBoundary": "Validated isolated Git worktree; delivery branch receives the complete commit by fast-forward after validation. Target content remains byte-identical."
+}
