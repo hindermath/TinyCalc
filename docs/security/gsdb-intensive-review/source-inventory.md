@@ -128,7 +128,7 @@ paths. A hash proves content, not automatic control fulfilment.
 | ProjectEvidence | `docs/security/cloud-autonomy-applicability.md` | `398a07285563cf0a9c6b555771ed7672d68a24a170045d236feeb75a87130009` | Revalidated; BSI-C3A-Disposition |
 | ProjectEvidence | `docs/security/asvs-verification.md` | `bb1cbaadfde55dfe863fe04c9ab3b5de062769ccc1ed1970991bc0641d935c07` | Revalidated; ASVS-N/A und Trigger |
 | ProjectEvidence | `docs/security/arc42-security.md` | `eb28c797c53a2eca5cc8902ade176a9f854d8f63f58d66f482a09d7cf7e31a57` | Revalidated; arc42 Section 8 |
-| ProjectEvidence | `AGENTS.md` | `2e6a741c8629ee8cfdc1bd10cef6b5e7c1e834c65147db572035e867033005e1` | Revalidated; Repository-Governance |
+| ProjectEvidence | `AGENTS.md` | `063b06daa3c8d8373c26526d3f0d7edfc9fa66db661230289fb141b1b7c9ebc5` | Revalidated; Repository-Governance |
 | ProjectEvidence | `.specify/presets/.registry` | `8b1f5085f0573b95bab983aabdc59fd7f80b32c71a4a2355cbf64af9cfc10978` | Revalidated; 13 installierte Presets |
 | ProjectEvidence | `specs/004-rl-se-self-assessment/autonomous-run-evidence.md` | `d3ec4b95b39d12693a0d549760fa096078e22533ce412068b5f182416b81bece` | Revalidated; Feature-004-Laufevidenz |
 | ProjectEvidence | `docs/security/samm-assessment.md` | `c6036128766f4aabb43ca32631db0a2c4b86f35b2c6d947296525cfa87c569e9` | Revalidated; OWASP-SAMM-Disposition |

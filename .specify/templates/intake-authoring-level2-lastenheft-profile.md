@@ -29,3 +29,11 @@ Apply repository security, privacy, architecture, A11Y, agent-parity,
 cross-platform, statistics, and evidence rules. Use text-first WCAG 2.2 AA
 where applicable. The Autonomous prompt defaults to `LocalImplementation`
 and grants no remote, bypass, secret, provider, or follow-up-feature authority.
+
+When three or more connected dependencies, states, handoffs, branches, or
+ordered steps materially benefit from visualization, include one concise
+Mermaid diagram immediately after the complete German-first/English-second
+text explanation. Mermaid remains supplementary: keep its readable Markdown
+source version-controlled, and encode no status, order, decision, or next
+action only in the diagram. Record `N/A` when a simple intake gains no material
+clarity from a diagram.
