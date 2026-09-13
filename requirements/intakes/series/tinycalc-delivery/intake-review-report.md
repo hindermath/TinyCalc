@@ -31,8 +31,8 @@ erreichen.
 English:
 The series review covers 13 targets. `IR002` is closed. `IR003` and `IR004`
 remain open as Medium findings in their existing intake files. Those two files
-are repaired, and then the complete series is reviewed again. Only a review
-without remaining findings can reach `Ready`.
+will be repaired, and then the complete series will be reviewed again. Only a
+review without remaining findings can reach `Ready`.
 
 ```mermaid
 flowchart TD
@@ -42,8 +42,8 @@ flowchart TD
     A --> D["IR004 offen / open<br/>Sandbox hardening"]
     C --> E["Bestehende Intakes reparieren / Repair existing intakes"]
     D --> E
-    E --> F["Gesamte Serie neu pruefen / Re-review complete series"]
-    F --> G{"Befunde uebrig? / Findings remain?"}
+    E --> F["Gesamte Serie neu prüfen / Re-review complete series"]
+    F --> G{"Befunde übrig? / Findings remain?"}
     G -- "Nein / No" --> H["Ready"]
     G -- "Ja / Yes" --> I["NeedsRemediation"]
 ```

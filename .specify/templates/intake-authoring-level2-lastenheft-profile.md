@@ -30,10 +30,19 @@ cross-platform, statistics, and evidence rules. Use text-first WCAG 2.2 AA
 where applicable. The Autonomous prompt defaults to `LocalImplementation`
 and grants no remote, bypass, secret, provider, or follow-up-feature authority.
 
+Wenn mindestens drei zusammenhängende Abhängigkeiten, Zustände, Übergaben,
+Verzweigungen oder geordnete Schritte wesentlich von einer Visualisierung
+profitieren, folgt direkt nach der vollständigen deutsch-englischen
+text-first-Erklärung ein knappes Mermaid-Diagramm. Mermaid bleibt ergänzend:
+Der lesbare Markdown-Quelltext wird versioniert, und kein Status, keine
+Reihenfolge, Entscheidung oder nächste Aktion darf nur im Diagramm stehen.
+Bei einem einfachen Intake ohne wesentlichen Klarheitsgewinn wird `N/A`
+dokumentiert.
+
 When three or more connected dependencies, states, handoffs, branches, or
 ordered steps materially benefit from visualization, include one concise
 Mermaid diagram immediately after the complete German-first/English-second
-text explanation. Mermaid remains supplementary: keep its readable Markdown
-source version-controlled, and encode no status, order, decision, or next
-action only in the diagram. Record `N/A` when a simple intake gains no material
-clarity from a diagram.
+text-first explanation. Mermaid remains supplementary: keep its readable
+Markdown source version-controlled, and encode no status, order, decision, or
+next action only in the diagram. Record `N/A` when a simple intake gains no
+material clarity from a diagram.
