@@ -1,4 +1,4 @@
-# PR: Text-first Mermaid diagrams for requirement documents
+# PR: Text-first-Mermaid-Diagramme für Lastenhefte / Text-first Mermaid diagrams for requirement documents
 
 ## Problem / Problem
 

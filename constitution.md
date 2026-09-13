@@ -9,9 +9,7 @@ Removed sections:
 - None
 Templates requiring updates:
 - ✅ .specify/templates/constitution-template.md
-- ✅ .specify/templates/plan-template.md
-- ✅ .specify/templates/spec-template.md
-- ✅ .specify/templates/tasks-template.md
+- ✅ .specify/templates/intake-authoring-level2-lastenheft-profile.md
 - ✅ scripts/templates/AGENTS.md.tmpl
 - ✅ scripts/templates/CLAUDE.md.tmpl
 - ✅ scripts/templates/GEMINI.md.tmpl
