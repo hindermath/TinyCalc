@@ -146,6 +146,17 @@ jq '.presetAssessments[0].mappedChecklistIds |= .[1:]' \
   "$production_assessment" >"$fixture_root/preset-checklist-drift.json"
 assert_parity_failure "$fixture_root/preset-checklist-drift.json" GSDB008
 
+# DE: Installation ist keine Sicherheitswirkung und ändert nicht die Standardmatrix.
+# EN: Installation is not security effectiveness and does not change the standard matrix.
+jq '.presetAssessments |= map(select(.presetId != "project-statistics-governance"))' \
+  "$production_assessment" >"$fixture_root/missing-statistics-preset.json"
+assert_parity_failure "$fixture_root/missing-statistics-preset.json" GSDB001
+for mutation in '.version = "0.0.0"' '.priority = 90' '.mappedChecklistIds = ["CL-01-01"]' '.standardMatrixMember = true'; do
+  jq "(.presetAssessments[] | select(.presetId == \"project-statistics-governance\")) |= ($mutation)" \
+    "$production_assessment" >"$fixture_root/statistics-drift.json"
+  assert_parity_failure "$fixture_root/statistics-drift.json" GSDB008
+done
+
 jq '.findings[0].sourceReferences |= .[1:]' \
   "$production_assessment" >"$fixture_root/production-finding-drift.json"
 assert_parity_failure "$fixture_root/production-finding-drift.json" GSDB009

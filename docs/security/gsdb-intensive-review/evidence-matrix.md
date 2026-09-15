@@ -23,6 +23,10 @@ acknowledged; integration into the decision contract remains open.
 - Implementation / Umsetzung: Fulfilled 21, Partly Fulfilled 62, Not Assessed 74
 - Human-only: 42; open findings / offene Befunde: 13
 
+[Statistik-Pilot-Nachprüfung vom 15.09.2026](statistics-pilot-follow-up-2026-09-15.md):
+88 Quellen und 14 Presets; alle folgenden Kontrollzustände unverändert.
+/ Statistics pilot follow-up: 88 sources and 14 presets; all control states below unchanged.
+
 ## 157 checklist rows / 157 Checklistenzeilen
 
 | ID | Applicability | Implementation | Stage | Human-only | Severity | Finding |

@@ -1,6 +1,23 @@
 # Preset-Zuordnung / Preset Mapping
 
-## Ergebnis / Result
+## Aktuelle Ergänzung vom 15.09.2026 / Current addition of 2026-09-15
+
+Das optionale 14er-Pilotprofil ergänzt `project-statistics-governance` v0.1.0,
+aktiviert mit Priorität 90. Die Standard-Achtermatrix und die bisherigen
+13 Installationen bleiben unverändert. Die neue GSDB-Zeile gehört zur Klasse
+`NotInStandardMatrix` und ausschließlich zum Dokumentations-/Statistik-Gate 025;
+keine Sicherheitskontrolle wird als durch Statistik erfüllt ausgewiesen.
+
+The optional fourteen-preset pilot adds enabled project-statistics-governance
+v0.1.0 at priority 90. The standard eight and thirteen prior installations are
+unchanged. The new assessment belongs to NotInStandardMatrix and only to
+documentation/statistics gate 025, with no security-control fulfilment claim.
+
+[Nachprüfung, Quellen und Tests / Follow-up, sources and tests](statistics-pilot-follow-up-2026-09-15.md).
+Die folgenden datierten Abschnitte dokumentieren frühere Prüfstände.
+The dated sections below record earlier assessments.
+
+## Ergebnis vom 06.09.2026 / Result of 2026-09-06
 
 **DE:** Am 6. September 2026 waren 13 Presets installiert und aktiviert. Acht
 bilden die verbindliche Standardmatrix. Fünf zusätzliche Presets bleiben

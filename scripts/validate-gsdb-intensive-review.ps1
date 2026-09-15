@@ -79,6 +79,9 @@ $script:ExpectedPresets = [ordered]@{
     'isaqb-architecture-governance' = @{ Version = '0.2.2'; Priority = 30; Standard = $true; Families = @('CL-02', 'CL-04'); Gates = @('010') }
     'model-routing-governance' = @{ Version = '0.1.4'; Priority = 'NotInStandardMatrix'; Standard = $false; Families = @('CL-09', 'CL-12'); Gates = @('001', '002') }
     'parallel-autonomous-run-governance' = @{ Version = '0.2.6'; Priority = 80; Standard = $true; Families = @('CL-09', 'CL-12'); Gates = @('033') }
+    # DE: Statistik belegt Dokumentationspflege, nicht die Erfüllung von Sicherheitskontrollen.
+    # EN: Statistics support documentation maintenance, not fulfilment of security controls.
+    'project-statistics-governance' = @{ Version = '0.1.0'; Priority = 'NotInStandardMatrix'; Standard = $false; Families = @(); Gates = @('025') }
     'secure-development-assurance-governance' = @{ Version = '0.1.3'; Priority = 'NotInStandardMatrix'; Standard = $false; Families = @('CL-01', 'CL-02', 'CL-03', 'CL-04', 'CL-05', 'CL-06', 'CL-07', 'CL-08', 'CL-09', 'CL-10', 'CL-11', 'CL-12'); Gates = @('003', '004', '005', '006', '007', '008', '009', '010', '011', '012', '013', '014', '015', '016', '017', '018', '026') }
     'security-governance' = @{ Version = '0.6.2'; Priority = 10; Standard = $true; Families = @('CL-01', 'CL-03', 'CL-05', 'CL-07', 'CL-08'); Gates = @('008', '009', '010', '011', '012', '013', '014', '015', '016', '017', '018', '024') }
 }
@@ -615,7 +618,7 @@ function Assert-GsdbMappings {
 
     $PresetIds = @($Document.presetAssessments.presetId)
     $ExpectedIds = @($script:ExpectedPresets.Keys | Sort-Object)
-    if ($PresetIds.Count -ne 13 -or @($PresetIds | Select-Object -Unique).Count -ne 13 -or
+    if ($PresetIds.Count -ne $ExpectedIds.Count -or @($PresetIds | Select-Object -Unique).Count -ne $ExpectedIds.Count -or
         (($PresetIds | Sort-Object) -join "`n") -cne ($ExpectedIds -join "`n")) {
         Stop-GsdbValidation -Code 'GSDB008' -Message 'installed preset coverage is incomplete.'
     }
@@ -778,7 +781,7 @@ function Assert-GsdbSummary {
         [int]$Summary.openFindingTotal -ne $OpenFindings.Count -or
         -not (Assert-GsdbMapEquals -Actual $Summary.findingsBySeverity -Expected $ExpectedSeverity) -or
         [int]$Summary.sourceInventoryTotal -ne @($Document.sourceInventory).Count -or
-        [int]$Summary.presetTotal -ne 13 -or
+        [int]$Summary.presetTotal -ne $script:ExpectedPresets.Count -or
         [int]$Summary.standardPresetTotal -ne 8 -or
         [int]$Summary.externalDutyTotal -ne @($Document.externalDuties).Count -or
         [int]$Summary.missingIds -ne 0 -or [int]$Summary.duplicateIds -ne 0 -or

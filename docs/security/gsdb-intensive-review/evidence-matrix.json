@@ -179,6 +179,21 @@
       "findingIds": []
     },
     {
+      "sourceId": "PRESET-project-statistics-governance",
+      "sourceClass": "Preset",
+      "path": ".specify/presets/project-statistics-governance/preset.yml",
+      "version": "0.1.0",
+      "reviewedAt": "2026-09-15",
+      "normalizedSha256": "5359a8ef0d576fd9afb3b34a70ec41adbb665abcc29394750d5d94689037ef4c",
+      "scope": {
+        "de": "Optionaler Statistik-Pilot: Installations- und Dokumentationszuordnung, keine Wirksamkeits- oder Freigabeaussage.",
+        "en": "Optional statistics pilot: installation and documentation mapping, no effectiveness or approval claim."
+      },
+      "freshness": "Current",
+      "locator": "id: \"project-statistics-governance\"",
+      "findingIds": []
+    },
+    {
       "sourceId": "PRESET-secure-development-assurance-governance",
       "sourceClass": "Preset",
       "path": ".specify/presets/secure-development-assurance-governance/preset.yml",
@@ -1248,8 +1263,8 @@
       "sourceClass": "ProjectEvidence",
       "path": "AGENTS.md",
       "version": "Current",
-      "reviewedAt": "2026-09-12",
-      "normalizedSha256": "499dac0296e8300246dfc2048a82068b1425efe1f481532b3152aac9eeb6fd48",
+      "reviewedAt": "2026-09-15",
+      "normalizedSha256": "7564434b92b2d96b44724199492fc18dda46f2598484ca628c96925fe5b35021",
       "scope": {
         "de": "Zeilenspezifischer aktueller Nachweis aus AGENTS.md; der Hash beweist Inhalt, nicht automatisch Erfuellung.",
         "en": "Current row-specific evidence from AGENTS.md; the hash proves content, not automatic fulfilment."
@@ -1263,8 +1278,8 @@
       "sourceClass": "ProjectEvidence",
       "path": ".specify/presets/.registry",
       "version": "Current",
-      "reviewedAt": "2026-09-13",
-      "normalizedSha256": "7dd98cd3b9528435deea2875334a1519f8521e0d5ef6d6147cc458d5e400eddd",
+      "reviewedAt": "2026-09-15",
+      "normalizedSha256": "2186bf44b3ef1f7f425b9c4da9d53133a66099af11b8818bbcedb7a0152429d6",
       "scope": {
         "de": "Zeilenspezifischer aktueller Nachweis aus .specify/presets/.registry; der Hash beweist Inhalt, nicht automatisch Erfuellung.",
         "en": "Current row-specific evidence from .specify/presets/.registry; the hash proves content, not automatic fulfilment."
@@ -13190,6 +13205,46 @@
       }
     },
     {
+      "presetId": "project-statistics-governance",
+      "version": "0.1.0",
+      "priority": "NotInStandardMatrix",
+      "standardMatrixMember": false,
+      "applicability": "Applicable",
+      "mappedChecklistIds": [],
+      "mappedGateIds": ["GSDB-GATE-025"],
+      "evidence": [
+        {
+          "path": ".specify/presets/project-statistics-governance/preset.yml",
+          "locator": "id: \"project-statistics-governance\"",
+          "observedAt": "2026-09-15",
+          "freshness": "Current",
+          "availability": "Existing",
+          "supports": {
+            "de": "project-statistics-governance ist am Locator id: \"project-statistics-governance\" als optionales Preset inventarisiert. Dies belegt die Dokumentationszuordnung, nicht die Erfüllung einer Sicherheitskontrolle.",
+            "en": "project-statistics-governance is inventoried at locator id: \"project-statistics-governance\" as an optional preset. This supports the documentation mapping, not fulfilment of a security control."
+          }
+        }
+      ],
+      "rationale": {
+        "de": "Priorität 90 im optionalen 14er-Pilotprofil; nicht Teil der Standard-Achtermatrix. Gate 025 betrifft Dokumentations- und Statistikpflege. Keine rückwirkende Feature-005-Ausführung oder neue Messung.",
+        "en": "Priority 90 in the optional fourteen-preset pilot, outside the standard eight. Gate 025 covers documentation and statistics maintenance. No retroactive Feature 005 execution or new measurement."
+      },
+      "owner": "Thorsten Hindermann",
+      "reviewer": "Codex (technical follow-up; not independent human approval)",
+      "followUp": {
+        "de": "Getrennten Messkontext erst unter eigenem Auftrag initialisieren und praktisch prüfen.",
+        "en": "Initialize and exercise a separate measurement context only under its own authority."
+      },
+      "reevaluationTrigger": {
+        "de": "Preset-, Profil-, Quellen- oder Statistik-Konfigurationsänderung; vor erster Pilotmessung.",
+        "en": "Preset, profile, source or statistics configuration changes; before the first pilot measurement."
+      },
+      "residualRisk": {
+        "de": "Git-Volumen und Aktivität beweisen weder Sicherheit noch Qualität, Lernerfolg oder KI-Zeitersparnis. Praktische Pilotabnahme bleibt offen.",
+        "en": "Git volume and activity prove neither security nor quality, learner attainment or AI time savings. Practical pilot acceptance remains open."
+      }
+    },
+    {
       "presetId": "secure-development-assurance-governance",
       "version": "0.1.3",
       "priority": "NotInStandardMatrix",
@@ -14069,8 +14124,8 @@
       "High": 7,
       "Medium": 6
     },
-    "sourceInventoryTotal": 87,
-    "presetTotal": 13,
+    "sourceInventoryTotal": 88,
+    "presetTotal": 14,
     "standardPresetTotal": 8,
     "externalDutyTotal": 16,
     "missingIds": 0,
