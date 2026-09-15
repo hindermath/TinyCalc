@@ -134,6 +134,7 @@
     }
   ],
   "excludedPaths": [
+    "docs/project-statistics-pilot/*",
     "Directory.Build.props",
     "Lastenheft_Abarbeitungsreihenfolge.md",
     "docs/documentation-impact/rl-se-self-assessment.json",
