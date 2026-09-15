@@ -14,6 +14,28 @@ control is fulfilled. `Current` means newly read during the Feature 005
 preflight. `Revalidated` means older evidence was checked again for current
 path, hash, scope, and locator.
 
+## Nachprüfung Statistik-Pilot / Statistics pilot follow-up
+
+Am 15.09.2026 wurden `AGENTS.md` und `.specify/presets/.registry` erneut
+inhaltlich geprüft und das Statistik-Preset-Manifest ergänzt. Die kanonische
+JSON-Matrix enthält jetzt 88 Quellen. Die historischen Inventarzeilen unten
+bleiben als früherer Prüfstand erhalten; diese Tabelle nennt die Änderungen.
+Keine bestehende Kontrollbewertung wurde dadurch aufgewertet.
+
+On 2026-09-15, guidance and registry were reviewed again and the statistics
+manifest was added. The canonical JSON matrix now contains 88 sources.
+Historical rows below are retained; this table records the changed bindings,
+without upgrading any control assessment.
+
+| Quelle / Source | Aktueller normalisierter SHA-256 / Current normalized SHA-256 |
+|---|---|
+| `AGENTS.md` | `7564434b92b2d96b44724199492fc18dda46f2598484ca628c96925fe5b35021` |
+| `.specify/presets/.registry` | `2186bf44b3ef1f7f425b9c4da9d53133a66099af11b8818bbcedb7a0152429d6` |
+| `.specify/presets/project-statistics-governance/preset.yml` v0.1.0 | `5359a8ef0d576fd9afb3b34a70ec41adbb665abcc29394750d5d94689037ef4c` |
+
+Begründung und Grenzen / rationale and limits:
+[Gezielte Nachprüfung / Bounded follow-up](statistics-pilot-follow-up-2026-09-15.md).
+
 ## Kontrollierte GSDB-Basis / Controlled GSDB Baseline
 
 Das Manifest `docs/secure-development/baseline-manifest.json` hat Version

@@ -14,6 +14,14 @@ in the approved fourteen-preset profile. All thirteen existing presets remain
 unchanged. This records installation only, not measurements or field acceptance.
 Commit, push, PR and merge remain pending; operational assignment follows delivery.
 
+Fortschreibung / follow-up: Die ausdrücklich genehmigte
+[GSDB-Nachprüfung vom 15.09.2026](../security/gsdb-intensive-review/statistics-pilot-follow-up-2026-09-15.md)
+ergänzt das 14. Preset und die geprüften Quellenbindungen. Die obige
+Installationsaufnahme bleibt historisch; Lieferung und Checks werden in
+[PR #85](https://github.com/hindermath/TinyCalc/pull/85) nachgewiesen.
+/ The authorized GSDB follow-up adds the fourteenth preset and reviewed source
+bindings. The installation snapshot above is historical; PR #85 records delivery and checks.
+
 ## Quelle und Bindung / Source and binding
 
 - [Projekttracking / Project tracking](https://github.com/hindermath/TinyCalc/issues/84)

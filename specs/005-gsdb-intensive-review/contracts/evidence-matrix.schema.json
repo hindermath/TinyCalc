@@ -107,7 +107,7 @@
               "sourceClass"
             ]
           },
-          "minContains": 13
+          "minContains": 14
         }
       ]
     },
@@ -127,8 +127,8 @@
     },
     "presetAssessments": {
       "type": "array",
-      "minItems": 13,
-      "maxItems": 13,
+      "minItems": 14,
+      "maxItems": 14,
       "items": {
         "$ref": "#/$defs/presetAssessment"
       }
@@ -779,7 +779,8 @@
             "intake-review-governance",
             "intake-sequencing-governance",
             "autonomous-run-governance",
-            "parallel-autonomous-run-governance"
+            "parallel-autonomous-run-governance",
+            "project-statistics-governance"
           ]
         },
         "version": {
@@ -1004,7 +1005,7 @@
           "minimum": 30
         },
         "presetTotal": {
-          "const": 13
+          "const": 14
         },
         "standardPresetTotal": {
           "const": 8

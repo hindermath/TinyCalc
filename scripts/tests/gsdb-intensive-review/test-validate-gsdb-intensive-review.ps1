@@ -230,6 +230,27 @@ try {
     }
     Assert-GsdbFailure -Assessment $PresetChecklistDrift -ExpectedCode 'GSDB008'
 
+    # DE: Der optionale Pilot darf weder fehlen noch Sicherheitswirkung vortäuschen.
+    # EN: The optional pilot must neither disappear nor imply security effectiveness.
+    $MissingStatistics = Copy-GsdbProductionAssessment -Name 'missing-statistics-preset' -Mutate {
+        param($Document)
+        $Document.presetAssessments = @($Document.presetAssessments | Where-Object presetId -ne 'project-statistics-governance')
+    }
+    Assert-GsdbFailure -Assessment $MissingStatistics -ExpectedCode 'GSDB001'
+    foreach ($Mutation in @('Version', 'Priority', 'ControlClaim', 'StandardMatrix')) {
+        $StatisticsDrift = Copy-GsdbProductionAssessment -Name "statistics-$Mutation" -Mutate {
+            param($Document)
+            $Preset = $Document.presetAssessments | Where-Object presetId -eq 'project-statistics-governance'
+            switch ($Mutation) {
+                'Version' { $Preset.version = '0.0.0' }
+                'Priority' { $Preset.priority = 90 }
+                'ControlClaim' { $Preset.mappedChecklistIds = @('CL-01-01') }
+                'StandardMatrix' { $Preset.standardMatrixMember = $true }
+            }
+        }
+        Assert-GsdbFailure -Assessment $StatisticsDrift -ExpectedCode 'GSDB008'
+    }
+
     $FindingDrift = Copy-GsdbProductionAssessment -Name 'finding-reciprocity' -Mutate {
         param($Document)
         $Document.findings[0].sourceReferences = @($Document.findings[0].sourceReferences | Select-Object -Skip 1)
