@@ -97,7 +97,7 @@ reference files, and the PDF plus checksum file.
 | Workflow | `.github/workflows/agent-secret-scan.yml` | `2e604000c7c18c64420c3553f0db35e18222bafd9324a90295126667e567ada2` | Current; Secret-Scan |
 | Workflow | `.github/workflows/gitleaks.yml` | `825705909c0a7c4f1b3844c73f30c46bc684a736adb959892add3f53897c8a8a` | Current; gitleaks |
 | Workflow | `.github/workflows/homogeneity-check.yml` | `408c5ec7a8eaf5f6a269368032e0d32527cd5d3487d27b2a33467c971dd6a47b` | Current; Ubuntu/macOS/Windows |
-| Workflow | `.github/workflows/powershell-analysis.yml` | `8d1a3b78cd161d630cbad34fc122305ecdb9cae5dc321b1a0c561d774e5d97b8` | Current; PSScriptAnalyzer |
+| Workflow | `.github/workflows/powershell-analysis.yml` | `b23a5fac56348ee846e997c017e97ab6c61f290f78f40250bb8bccd2685b3b1e` | Current; PSScriptAnalyzer; scheduling reviewed 2026-09-20 |
 | Workflow | `.github/workflows/requirements-intake-governance.yml` | `b3c36af60db78839159b3a6dd714c090792b38e8c4a957f4ec8a38f47116a752` | Current; Intake-Parität |
 | Validator | `scripts/validate-rl-se-assessment.ps1` | `9012e1f8aabd02d53428fed0a6ad1ee42eb753210b856542e2c9fd383faa744d` | Revalidated; Feature-004-Vertrag / Feature 004 contract |
 | Validator | `scripts/validate-rl-se-assessment.sh` | `724cb09c551b9c3f806b03dff07edaf7350a838295ffe9cfb63b7a5d4fe9fcdc` | Revalidated; Bash-Partner |

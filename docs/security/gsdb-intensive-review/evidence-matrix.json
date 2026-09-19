@@ -858,8 +858,8 @@
       "sourceClass": "Workflow",
       "path": ".github/workflows/powershell-analysis.yml",
       "version": "Unversioned",
-      "reviewedAt": "2026-09-06",
-      "normalizedSha256": "8d1a3b78cd161d630cbad34fc122305ecdb9cae5dc321b1a0c561d774e5d97b8",
+      "reviewedAt": "2026-09-20",
+      "normalizedSha256": "b23a5fac56348ee846e997c017e97ab6c61f290f78f40250bb8bccd2685b3b1e",
       "scope": {
         "de": "Diese Quelle wird nur für ihren benannten TinyCalc-Prüfumfang verwendet.",
         "en": "This source is used only for its named TinyCalc assessment scope."
