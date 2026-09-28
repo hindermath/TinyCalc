@@ -1,12 +1,15 @@
 # Intake Authoring Governance Preset
 
-Aktuelle Version / Current version: **0.3.4**. Dieser Patch schliesst physische
-Collection-Aliase und unbekannte Lifecycle-Zustaende aus. Authoring prueft auch
-bestehende Receipt-Ziele und Quellen vor dem Lesen gegen die Repository-Grenze.
+Aktuelle Version / Current version: **0.3.5**. Dieser Patch veroeffentlicht die
+Korrektur fuer Receipts der eigenen Generatorversion. Beide Validatoren
+akzeptieren die aktuelle Vorlage und bekannte Schema-2-Generatoren, darunter
+0.3.4; unbekannte Versionen und unzulaessige Schema-Kombinationen bleiben gesperrt.
 
-This patch rejects physical collection aliases and unknown lifecycle states.
-Authoring also checks existing receipt targets and sources for repository
-containment before reading. Earlier feature versions below describe history.
+This patch publishes current-generator receipt compatibility. Both validators
+accept the shipped template and known schema-2 generators, including 0.3.4,
+while rejecting unknown versions and invalid schema/version combinations.
+Earlier physical-boundary and lifecycle hardening remains unchanged.
+See [generator compatibility](docs/generator-version-compatibility.md).
 See [boundary hardening](docs/lifecycle-boundary-hardening.md).
 
 Optional, stackable intake-authoring governance for GitHub Spec Kit. Version
@@ -64,7 +67,7 @@ and freshness without writing.*
 
 ```bash
 specify preset add \
-  --from https://github.com/hindermath/spec-kit-preset-intake-authoring-governance/archive/refs/tags/v0.3.4.zip \
+  --from https://github.com/hindermath/spec-kit-preset-intake-authoring-governance/archive/refs/tags/v0.3.5.zip \
   --priority 64
 specify preset list
 specify preset info intake-authoring-governance
@@ -447,6 +450,8 @@ with active series members. RIG017 reports lifecycle mismatches without moving
 files or granting repair authority.*
 
 Pruefnachweis und Release-Grenzen / Validation and release boundaries: [Lifecycle evidence](docs/completed-series-lifecycle.md).
+
+Generator-Kompatibilitaet / Generator compatibility: [Current release validation](docs/generator-version-compatibility.md).
 
 ## Historische Authoring-Receipts / Historical Authoring Receipts
 

@@ -572,6 +572,8 @@ runtime evidence.*
 
 | 2026-09-18 | Statistik-Feldtest TinyCalc / TinyCalc statistics field test | Separater UTC-Pilot fuer Project Statistics Governance v0.1.0: eigene Konfiguration, native Linux-/Windows-CI und Quellen-/Encoding-/Read-only-Pruefung. Bestehende Profil-2-Statistik und Referenzen 80/125 bleiben erhalten; keine Produktcode-, Runtime-, API- oder Buildversionsaenderung. Sichtbares Arbeitsfenster: eine Agentensitzung; keine Arbeitszeit- oder KI-Produktivitaetsmessung. UpdateRequired fuer Pilotdokumentation/CI, separate GeneratedUpdate fuer Statistik. Technische Ergebnisse und Freigabegrenzen im [Pilotbericht](project-statistics-pilot/README.md). / Separate reproducible field test, without product changes or inferred human acceptance; exact Git-bound volume is rendered below. |
 
+| 2026-09-28 | Authoring v0.3.5 / Authoring v0.3.5 | Veröffentlichtes Paket ersetzt den Drei-Dateien-Backport; 13 übrige Presets erhalten, Quellenbindung und installierte Regression geprüft. Keine Produkt-/API-/Buildversionsänderung. Bestehende Methodiken und Referenzen 80/125 unverändert. / Published package replaces the three-file backport; other presets preserved; no product change. [Nachweis / Evidence](maintenance/intake-authoring-v035.md). |
+
 ## Statistikprofil-1-Archiv / Statistics Profile 1 Archive
 Basis dieses Schlussblocks sind die aktuell dokumentierten Snapshot- und
 Phasenwerte aus den Abschnitten `## Gesamtstand des Repositories` und
