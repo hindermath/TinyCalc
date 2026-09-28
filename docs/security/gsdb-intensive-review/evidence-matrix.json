@@ -92,9 +92,9 @@
       "sourceId": "PRESET-intake-authoring-governance",
       "sourceClass": "Preset",
       "path": ".specify/presets/intake-authoring-governance/preset.yml",
-      "version": "0.3.4",
-      "reviewedAt": "2026-09-13",
-      "normalizedSha256": "3c934d29268fd284aa8641b491d6725cda54480c19065482dc7d270bf27f0186",
+      "version": "0.3.5",
+      "reviewedAt": "2026-09-28",
+      "normalizedSha256": "74a5bd0afc28ab4b3a997b2831278dcd215171552cac9877095fd08176a4591f",
       "scope": {
         "de": "Diese Quelle wird nur für ihren benannten TinyCalc-Prüfumfang verwendet.",
         "en": "This source is used only for its named TinyCalc assessment scope."
@@ -1278,8 +1278,8 @@
       "sourceClass": "ProjectEvidence",
       "path": ".specify/presets/.registry",
       "version": "Current",
-      "reviewedAt": "2026-09-15",
-      "normalizedSha256": "2186bf44b3ef1f7f425b9c4da9d53133a66099af11b8818bbcedb7a0152429d6",
+      "reviewedAt": "2026-09-28",
+      "normalizedSha256": "6e7cd819a136bafb3c8fcf2a1ccb9c06e200f3014dfc3bbc519439a5625d2e9f",
       "scope": {
         "de": "Zeilenspezifischer aktueller Nachweis aus .specify/presets/.registry; der Hash beweist Inhalt, nicht automatisch Erfuellung.",
         "en": "Current row-specific evidence from .specify/presets/.registry; the hash proves content, not automatic fulfilment."
@@ -12760,7 +12760,7 @@
     },
     {
       "presetId": "intake-authoring-governance",
-      "version": "0.3.4",
+      "version": "0.3.5",
       "priority": "NotInStandardMatrix",
       "standardMatrixMember": false,
       "applicability": "Applicable",
@@ -12804,18 +12804,18 @@
         {
           "path": ".specify/presets/intake-authoring-governance/preset.yml",
           "locator": "id: \"intake-authoring-governance\"",
-          "observedAt": "2026-09-13",
+          "observedAt": "2026-09-28",
           "freshness": "Revalidated",
           "availability": "Existing",
           "supports": {
-            "de": "intake-authoring-governance ist durch .specify/presets/intake-authoring-governance/preset.yml am exakten Locator 'id: \"intake-authoring-governance\"' belegt. Der am 2026-09-13 als Revalidated geprüfte Inhalt stützt ausschließlich die Einstufung Applicable.",
-            "en": "intake-authoring-governance is bound to .specify/presets/intake-authoring-governance/preset.yml at the exact locator 'id: \"intake-authoring-governance\"'. The content observed on 2026-09-13 as Revalidated supports only the Applicable disposition."
+            "de": "intake-authoring-governance ist durch .specify/presets/intake-authoring-governance/preset.yml am exakten Locator 'id: \"intake-authoring-governance\"' belegt. Der am 2026-09-28 als Revalidated geprüfte Inhalt stützt ausschließlich die Einstufung Applicable.",
+            "en": "intake-authoring-governance is bound to .specify/presets/intake-authoring-governance/preset.yml at the exact locator 'id: \"intake-authoring-governance\"'. The content observed on 2026-09-28 as Revalidated supports only the Applicable disposition."
           }
         }
       ],
       "rationale": {
-        "de": "intake-authoring-governance 0.3.4 ist am exakten Preset-Locator inventarisiert und auf 29 Checklistenzeilen sowie 3 Feature-Gates abgebildet.",
-        "en": "intake-authoring-governance 0.3.4 is inventoried at its exact preset locator and mapped to 29 checklist rows and 3 feature gates."
+        "de": "intake-authoring-governance 0.3.5 ist am exakten Preset-Locator inventarisiert und auf 29 Checklistenzeilen sowie 3 Feature-Gates abgebildet.",
+        "en": "intake-authoring-governance 0.3.5 is inventoried at its exact preset locator and mapped to 29 checklist rows and 3 feature gates."
       },
       "owner": "Spec Kit governance role",
       "reviewer": "Independent technical review role",

@@ -14,6 +14,17 @@ control is fulfilled. `Current` means newly read during the Feature 005
 preflight. `Revalidated` means older evidence was checked again for current
 path, hash, scope, and locator.
 
+## Nachprüfung Authoring v0.3.5 / Authoring v0.3.5 follow-up
+
+Am 28.09.2026 wurden ausschließlich Authoring-Manifest und Registry erneut
+geprüft und gebunden. Ältere Tabellen behalten ihren datierten Prüfstand.
+Aktuelle Hashes, Umfang und Grenzen stehen in der
+[gezielten Nachprüfung](authoring-v035-follow-up-2026-09-28.md).
+
+On 2026-09-28, only the Authoring manifest and registry were reviewed and rebound.
+Older tables retain their dated state. See the bounded follow-up above for
+current hashes, scope and unchanged acceptance boundaries.
+
 ## Nachprüfung Statistik-Pilot / Statistics pilot follow-up
 
 Am 15.09.2026 wurden `AGENTS.md` und `.specify/presets/.registry` erneut

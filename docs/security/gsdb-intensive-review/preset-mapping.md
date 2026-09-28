@@ -1,6 +1,17 @@
 # Preset-Zuordnung / Preset Mapping
 
-## Aktuelle Ergänzung vom 15.09.2026 / Current addition of 2026-09-15
+## Nachprüfung vom 28.09.2026 / Follow-up of 2026-09-28
+
+Authoring ist auf v0.3.5 gebunden; Priorität 64, optionale Matrixklasse,
+29 CL-09/CL-12-Zuordnungen und Gates 001/032/033 bleiben unverändert.
+Keine Kontrollbewertung oder menschliche Freigabe wird aufgewertet.
+[Technische Nachprüfung / Technical follow-up](authoring-v035-follow-up-2026-09-28.md).
+
+Authoring is bound to v0.3.5; priority 64, optional matrix classification,
+29 CL-09/CL-12 mappings and gates 001/032/033 remain unchanged. No control
+assessment or human approval is upgraded. Dated sections below are historical.
+
+## Ergänzung vom 15.09.2026 / Addition of 2026-09-15
 
 Das optionale 14er-Pilotprofil ergänzt `project-statistics-governance` v0.1.0,
 aktiviert mit Priorität 90. Die Standard-Achtermatrix und die bisherigen
