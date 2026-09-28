@@ -251,6 +251,28 @@ try {
         Assert-GsdbFailure -Assessment $StatisticsDrift -ExpectedCode 'GSDB008'
     }
 
+    # DE: Ein Patch-Upgrade erneuert konkrete Bindungen, nicht die Fehlertoleranz.
+    # EN: A patch upgrade refreshes exact bindings, not validation tolerance.
+    foreach ($OldSource in @(
+        @{ Path = '.specify/presets/intake-authoring-governance/preset.yml'; Hash = '3c934d29268fd284aa8641b491d6725cda54480c19065482dc7d270bf27f0186' },
+        @{ Path = '.specify/presets/.registry'; Hash = '2186bf44b3ef1f7f425b9c4da9d53133a66099af11b8818bbcedb7a0152429d6' }
+    )) {
+        $StaleAuthoringSource = Copy-GsdbProductionAssessment -Name ('authoring-source-' + [guid]::NewGuid()) -Mutate {
+            param($Document)
+            $Source = $Document.sourceInventory | Where-Object path -CEQ $OldSource.Path
+            $Source.normalizedSha256 = $OldSource.Hash
+        }
+        Assert-GsdbFailure -Assessment $StaleAuthoringSource -ExpectedCode 'GSDB002'
+    }
+    foreach ($WrongVersion in @('0.3.4', '99.0.0')) {
+        $AuthoringVersionDrift = Copy-GsdbProductionAssessment -Name "authoring-version-$WrongVersion" -Mutate {
+            param($Document)
+            $Preset = $Document.presetAssessments | Where-Object presetId -CEQ 'intake-authoring-governance'
+            $Preset.version = $WrongVersion
+        }
+        Assert-GsdbFailure -Assessment $AuthoringVersionDrift -ExpectedCode 'GSDB008'
+    }
+
     $FindingDrift = Copy-GsdbProductionAssessment -Name 'finding-reciprocity' -Mutate {
         param($Document)
         $Document.findings[0].sourceReferences = @($Document.findings[0].sourceReferences | Select-Object -Skip 1)

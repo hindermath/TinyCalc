@@ -19,7 +19,15 @@ Risiko, Documentation Impact und konkrete lokale Tests stehen im
 einschließlich Produkt-Build/-Tests bleibt vor Merge verpflichtend.
 Keine neue interaktive Produktabnahme wird behauptet.
 
+Die gezielte GSDB-Nachprüfung wurde gesondert genehmigt: zwei Quellenbindungen
+und Authoring-Version aktualisieren, Negativtests erweitern, bestehende
+Kontroll-, Produkt-, Risiko- und Releaseentscheidungen erhalten.
+
 See the [integration evidence](maintenance/intake-authoring-v035.md) for risks,
 documentation impact and exact local tests. Native PR CI, including product
 build/tests, remains mandatory before merge; no new interactive acceptance
 is claimed. MergeAndSync/admin bypass never replaces successful technical CI.
+
+The separately authorized bounded GSDB follow-up updates two source bindings
+and the Authoring version, adds negative tests and preserves existing control,
+product, risk and release decisions.

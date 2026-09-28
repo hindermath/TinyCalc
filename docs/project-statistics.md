@@ -574,6 +574,8 @@ runtime evidence.*
 
 | 2026-09-28 | Authoring v0.3.5 / Authoring v0.3.5 | Veröffentlichtes Paket ersetzt den Drei-Dateien-Backport; 13 übrige Presets erhalten, Quellenbindung und installierte Regression geprüft. Keine Produkt-/API-/Buildversionsänderung. Bestehende Methodiken und Referenzen 80/125 unverändert. / Published package replaces the three-file backport; other presets preserved; no product change. [Nachweis / Evidence](maintenance/intake-authoring-v035.md). |
 
+| 2026-09-28 | GSDB-Nachprüfung Authoring v0.3.5 / GSDB follow-up | Genehmigte technische Nachprüfung: zwei Quellenbindungen und exakte Version aktualisiert, vier Negativfälle ergänzt; Kontroll-, Risiko- und Freigabedispositionen erhalten. Keine Produktänderung. / Authorized technical follow-up preserves dispositions and adds four negative cases. [Nachweis / Evidence](security/gsdb-intensive-review/authoring-v035-follow-up-2026-09-28.md). |
+
 ## Statistikprofil-1-Archiv / Statistics Profile 1 Archive
 Basis dieses Schlussblocks sind die aktuell dokumentierten Snapshot- und
 Phasenwerte aus den Abschnitten `## Gesamtstand des Repositories` und

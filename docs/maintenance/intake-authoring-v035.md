@@ -82,6 +82,12 @@ N/A; existing security and acceptance decisions remain unchanged.
 
 ## Dokumentation und Statistik / Documentation and statistics
 
+Die anschließend ausdrücklich genehmigte [GSDB-Nachprüfung](../security/gsdb-intensive-review/authoring-v035-follow-up-2026-09-28.md)
+führt die beiden betroffenen Quellenbindungen und die exakte Versionskonstante
+fort; bestehende Kontroll- und Freigabeentscheidungen bleiben erhalten.
+The subsequently authorized bounded GSDB follow-up updates the two affected
+source bindings and exact version constant without changing control or approval decisions.
+
 Documentation Impact: `UpdateRequired`. Zielgruppe / audience: Maintainer.
 Leserpfad / reader path: PR → [PR-Beschreibung / PR description](../PR_TEXT_AUTHORING_V035.md)
 → dieser Nachweis / this evidence → unveränderliches Release / immutable release.
