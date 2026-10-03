@@ -4,6 +4,14 @@
     Maintains WinGet packages for agentic development.
 
 .DESCRIPTION
+    Pandoc und Typst CLI sind Pflichtwerkzeuge fuer lokale Dokumentkonvertierung
+    und PDF-Satz. Die VS-Code-Erweiterung myriad-dreamin.tinymist ist Pflicht;
+    das separate Tinymist-Systempaket bleibt optional (-IncludeOptional).
+
+    Pandoc and Typst CLI are required for local document conversion and PDF
+    typesetting. The myriad-dreamin.tinymist VS Code extension is required;
+    the standalone Tinymist system package remains optional (-IncludeOptional).
+
     Reads scripts/config/winget-apps-registry.json, updates WinGet metadata,
     upgrades installed packages, installs missing required packages, and reports
     drift between installed WinGet packages and the registry. Every WinGet
@@ -51,7 +59,8 @@
     pwsh -NoProfile -File scripts/maintain-agentic-winget-apps.ps1 -CompareOnly
 
 .NOTES
-    Exit codes: 0 = current/success, 2 = operational or contradictory package
+    Exit codes: 0 = current/success, 1 = required package/CLI/extension drift,
+    2 = operational or contradictory package
     status, 75 = DEFERRED_ADMIN_REQUIRED. Package detection and summary reduce
     observations to exactly one final status per canonical package ID.
 #>
@@ -114,6 +123,7 @@ if (-not $wingetCommand) {
 }
 $script:WingetDeferred = $false
 $script:WingetFailed = $false
+$script:RequiredDrift = $false
 $script:PackageObservations = [Collections.Generic.List[object]]::new()
 
 $registryData = Get-Content -Path $Registry -Raw | ConvertFrom-Json
@@ -362,12 +372,22 @@ function Compare-HBVSCodeRegistry {
         Write-Host 'vscode_cli: unavailable'
         Write-Host 'missing_on_machine.vscode_extensions'
         $allVSCodeExtensionIds | ForEach-Object { Write-Host "  - $_" }
+        if (@($vscodeRegistryData.extensions | Where-Object scope -eq 'required').Count -gt 0) {
+            $script:RequiredDrift = $true
+        }
         return
     }
 
     $installed = @(Get-HBVSCodeInstalledExtensionIds -Cli $codeCli)
     $registry = @($allVSCodeExtensionIds | ForEach-Object { $_.ToLowerInvariant() } | Sort-Object -Unique)
     $missingOnMachine = @($registry | Where-Object { $installed -notcontains $_ })
+    # Optional editor additions are visible but do not fail the required baseline.
+    $requiredExtensions = @($vscodeRegistryData.extensions |
+        Where-Object scope -eq 'required' |
+        ForEach-Object { $_.id.ToLowerInvariant() })
+    if (@($missingOnMachine | Where-Object { $_ -in $requiredExtensions }).Count -gt 0) {
+        $script:RequiredDrift = $true
+    }
 
     if ($missingOnMachine.Count -gt 0) {
         Write-Host 'missing_on_machine.vscode_extensions'
@@ -574,6 +594,7 @@ function Compare-HBCLIScope {
     )
 
     if ($missing.Count -gt 0) {
+        if ($Scope -eq 'required') { $script:RequiredDrift = $true }
         Write-Host $Label
         $missing | ForEach-Object { Write-Host "  - $_" }
     } else {
@@ -677,6 +698,7 @@ $optionalMissing = @(
         ForEach-Object { $_.CanonicalId }
 )
 if ($requiredMissing.Count -gt 0) {
+    $script:RequiredDrift = $true
     Write-Host 'missing_on_machine.required.packages'
     $requiredMissing | ForEach-Object { Write-Host "  - $_" }
 } else {
@@ -717,4 +739,5 @@ if ($LASTEXITCODE -notin @(0, $null)) { $script:WingetFailed = $true }
 
 if ($script:WingetFailed) { exit 2 }
 if ($script:WingetDeferred) { exit 75 }
+if ($script:RequiredDrift) { exit 1 }
 exit 0

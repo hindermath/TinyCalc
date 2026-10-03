@@ -4,7 +4,15 @@
 
 Repository: TinyCalc, Level 2
 
-Stand: 2026-09-05
+Stand: 2026-10-03
+
+Aktueller technischer Quellenstand: [Governance-Nachlauf](../maintenance/coordinated-governance-oct03.md).
+DS-GVO, KI-VO, CRA, NIS2 und DORA fuer Produkt, Werkzeuge und Organisation
+getrennt pruefen; unbekannte Anwendbarkeit bleibt Open. Ausbildungszweck und
+AI-SBOM N/A sind keine pauschale Ausnahme. Datierte Freigaben bleiben historisch.
+EN: The linked follow-up supplies current bindings, not new legal approval.
+Assess product, tooling and organisation separately; education and AI-SBOM N/A
+are no blanket exemptions. Preserve unknown as Open and dated decisions.
 
 Constitution: Principles XII–XVIII
 
@@ -46,7 +54,7 @@ Screenreadern und auf Braillezeilen verständlich.
 
 Der barrierearme Leserpfad beginnt bei der [vollständigen GSDB-Evidenzmatrix](gsdb-intensive-review/evidence-matrix.md).
 Danach folgen das [Quelleninventar mit Hashbindungen](gsdb-intensive-review/source-inventory.md),
-die [Zuordnung aller 13 Presets](gsdb-intensive-review/preset-mapping.md) und
+die [Zuordnung aller 14 Presets](gsdb-intensive-review/preset-mapping.md) und
 die [offenen Befunde mit Ownern und Folgeschritten](gsdb-intensive-review/open-findings.md).
 Ergänzend dokumentieren die [regulatorische Vorprüfung](regulatory-applicability.md),
 die [Cloud-Autonomie-Prüfung](cloud-autonomy-applicability.md) und die
@@ -54,7 +62,7 @@ die [Cloud-Autonomie-Prüfung](cloud-autonomy-applicability.md) und die
 Human-only-Grenzen. Die JSON-Matrix bleibt die kanonische Maschinenquelle.
 
 The accessible Feature 005 reader path starts with the complete GSDB evidence
-matrix, then continues to the hashed source inventory, all 13 preset mappings,
+matrix, then continues to the hashed source inventory, all 14 preset mappings,
 and actionable open findings. Separate regulatory, cloud-autonomy, and
 cloud-assurance records preserve Human-only decisions. The JSON matrix remains
 the canonical machine-readable source.

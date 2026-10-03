@@ -9,24 +9,24 @@ Git-bound inventory and activity; not a measure of quality, learning performance
 
 | Kennzahl / Metric | Wert / Value |
 | --- | --- |
-| Textdateien / Text files | 1385 |
-| Textzeilen / Text lines | 221573 |
-| Aktivtage / Active days | 84 |
-| Stichtag / As of | 2026-09-28 |
+| Textdateien / Text files | 1408 |
+| Textzeilen / Text lines | 226462 |
+| Aktivtage / Active days | 85 |
+| Stichtag / As of | 2026-10-03 |
 | Fensterbeginn / Window start | 2025-10-05 |
 | Zeitzone / Time zone | UTC |
 
 Quellrevision / Source revision:
-0f4d981ab1cb0cd8bee033c46396b090c0cf6d8d
+9f09f2bf7f58ef90aabafac460d530e904088849
 
 ### Artefakte / Artifacts
 
 | Kategorie / Category | Dateien / Files | Zeilen / Lines |
 | --- | ---: | ---: |
 | Production | 20 | 2830 |
-| Tests | 63 | 9683 |
-| Documentation | 1000 | 157545 |
-| Scripts | 121 | 28892 |
+| Tests | 63 | 9889 |
+| Documentation | 1022 | 161907 |
+| Scripts | 122 | 29213 |
 | Configuration | 171 | 19608 |
 | DataMedia | 0 | 0 |
 | Other | 10 | 3015 |
@@ -52,11 +52,11 @@ Sa/Sa  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 4 0 0 4 0 0 0 2 0
 Wochen / Weeks 27..52 | 2026-04-05..2026-10-03
 So/Su  0 2 0 0 0 0 0 0 0 0 4 0 0 0 1 4 4 0 4 0 0 4 4 4 3 0
 Mo/Mo  0 1 4 0 4 0 0 0 0 0 0 0 3 1 4 0 0 0 0 2 0 0 0 0 0 3
-Di/Tu  0 0 0 0 3 0 0 3 0 0 0 0 2 0 3 4 4 0 0 0 0 4 3 4 0 -
-Mi/We  0 0 3 0 2 0 0 0 2 0 4 0 2 0 0 2 4 0 0 0 0 0 0 0 0 -
-Do/Th  0 0 0 4 0 0 0 1 0 4 1 0 0 0 1 4 0 0 4 0 0 3 0 0 0 -
-Fr/Fr  0 2 4 0 0 0 4 2 2 0 4 2 3 4 4 4 1 0 0 0 0 4 4 2 0 -
-Sa/Sa  0 0 0 0 0 0 0 1 0 0 3 0 4 4 0 4 2 0 4 0 4 4 4 4 2 -
+Di/Tu  0 0 0 0 3 0 0 3 0 0 0 0 2 0 3 4 4 0 0 0 0 4 3 4 0 0
+Mi/We  0 0 3 0 2 0 0 0 2 0 4 0 2 0 0 2 4 0 0 0 0 0 0 0 0 0
+Do/Th  0 0 0 4 0 0 0 1 0 4 1 0 0 0 1 4 0 0 4 0 0 3 0 0 0 0
+Fr/Fr  0 2 4 0 0 0 4 2 2 0 4 2 3 4 4 4 1 0 0 0 0 4 4 2 0 0
+Sa/Sa  0 0 0 0 0 0 0 1 0 0 3 0 4 4 0 4 2 0 4 0 4 4 4 4 2 4
 ```
 
 | Datum / Date | Hinzu / Added | Entfernt / Removed |
@@ -145,6 +145,7 @@ Sa/Sa  0 0 0 0 0 0 0 1 0 0 3 0 4 4 0 4 2 0 4 0 4 4 4 4 2 -
 | 2026-09-20 | 1415 | 31 |
 | 2026-09-26 | 145 | 14 |
 | 2026-09-28 | 484 | 103 |
+| 2026-10-03 | 5474 | 585 |
 
 ### Abdeckung / Coverage
 

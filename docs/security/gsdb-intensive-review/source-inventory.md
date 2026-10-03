@@ -1,5 +1,15 @@
 # Quelleninventar der GSDB-Intensivprüfung / GSDB Intensive Review Source Inventory
 
+## Nachpruefung 2026-10-03 / Follow-up 2026-10-03
+
+DE: Aktuelle technische Versionen und Hashbindungen stehen im
+[koordinierten Nachlauf](../../maintenance/coordinated-governance-oct03.md).
+Alle datierten Tabellen unten bleiben historische Evidence; keine
+Kontrollbewertung oder menschliche Freigabe wird aufgewertet.
+EN: The linked follow-up supplies current technical versions and hashes.
+Dated tables below remain historical; no control disposition or human approval
+is upgraded. The JSON matrix is the current machine-readable source.
+
 ## Zweck / Purpose
 
 **DE:** Dieses Inventar bindet die am 6. September 2026 tatsächlich gelesenen

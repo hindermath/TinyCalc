@@ -1,5 +1,15 @@
 # Preset-Zuordnung / Preset Mapping
 
+## Nachpruefung 2026-10-03 / Follow-up 2026-10-03
+
+DE: Aktuelle technische Versionen und Hashbindungen stehen im
+[koordinierten Nachlauf](../../maintenance/coordinated-governance-oct03.md).
+Alle datierten Tabellen unten bleiben historische Evidence; keine
+Kontrollbewertung oder menschliche Freigabe wird aufgewertet.
+EN: The linked follow-up supplies current technical versions and hashes.
+Dated tables below remain historical; no control disposition or human approval
+is upgraded. The JSON matrix is the current machine-readable source.
+
 ## Nachprüfung vom 28.09.2026 / Follow-up of 2026-09-28
 
 Authoring ist auf v0.3.5 gebunden; Priorität 64, optionale Matrixklasse,

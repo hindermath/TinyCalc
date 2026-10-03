@@ -145,6 +145,55 @@ sources. The Homebrew registry contains top-level packages
 (`brew leaves --installed-on-request`) and macOS casks, not transitive
 dependencies. `xquartz` is intentionally excluded.*
 
+## Dokumentwerkzeuge (Document tools)
+
+Pandoc und Typst CLI sind Pflichtwerkzeuge. Nach der Paketpflege werden
+`pandoc --version` und `typst --version` geprueft. Homebrew installiert
+`pandoc` und `typst`; Linux ohne Homebrew verwendet apt fuer Pandoc und bei
+fehlendem Typst den [offiziellen Cargo-Build](https://github.com/typst/typst#installation)
+mit `cargo install --locked typst-cli`. Dafuer muss eine kompatible
+Rust-Toolchain vorhanden sein (die Releases Typst 0.15.1 und Tinymist 0.15.8
+benoetigen Rust 1.92). Der Cargo-Installationspfad wird nur im
+Wartungsprozess an PATH angehaengt; Shell-Profile werden nicht geaendert.
+Ein Buildfehler oder eine weiterhin fehlende CLI bleibt ein Pflichtbefund.
+Vorhandene Cargo-Installationen werden nicht automatisch neu gebaut.
+
+Die Community-Erweiterung Tinymist Typst (`myriad-dreamin.tinymist`) ist in
+VS Code Pflicht und verwaltet ihren Language Server selbst. Das separate
+Systempaket `tinymist` bleibt optional, etwa fuer andere Editoren. Es wird
+nur mit `--include-optional` nachinstalliert: ueber Homebrew oder auf Linux
+ohne Homebrew mit `cargo install --locked tinymist-cli`. Eine fehlende optionale
+CLI blockiert den Pflichtstatus nicht. Vorschau und Vergleich installieren
+keine Dokumentwerkzeuge.
+
+*Pandoc and Typst CLI are required and checked with `--version` after package
+maintenance. Homebrew provides both; Linux without Homebrew uses apt for
+Pandoc and the official `cargo install --locked typst-cli` build when Typst
+is missing. A compatible Rust toolchain is required (Typst 0.15.1 and Tinymist
+0.15.8 require Rust 1.92). The Cargo installation
+path is appended only within the maintenance process; shell profiles stay
+unchanged. Build failures or a still-missing CLI remain required findings.
+Existing Cargo installations are not automatically rebuilt. The community
+Tinymist Typst extension (`myriad-dreamin.tinymist`) is required in VS Code
+and manages its own language server. Standalone `tinymist` remains optional
+and is installed only with `--include-optional`, through Homebrew or a locked
+Cargo build on Linux without Homebrew. Its absence does not block required
+status. Preview and comparison do not install document tools.*
+
+PDF-Smoke-Test in einem temporaeren Verzeichnis / PDF smoke test in a temporary
+directory:
+
+```bash
+pandoc input.md --standalone --to typst --output input.typ
+typst compile input.typ output.pdf
+```
+
+Die erzeugte PDF-Datei belegt die Konvertierung und Kompilierung. Die
+Barrierefreiheit der Ausgabe benoetigt eine eigene inhaltliche Pruefung.
+
+*The generated PDF proves conversion and compilation. Output accessibility
+requires a separate semantic review.*
+
 ## Optionen / Options
 
 | Option | Bedeutung / Meaning |
@@ -180,6 +229,8 @@ bash scripts/maintain-agentic-brew-apps.sh --allow-admin-prompts
 | `2` | Parameter-, Registry- oder Betriebsvertrag ist ungueltig / Invalid input or operational contract |
 
 ## Abschlusskriterien / Closeout Criteria
+
+- `pandoc --version` und `typst --version` funktionieren; `myriad-dreamin.tinymist` ist installiert. / Both document CLIs work and the required Typst extension is installed.
 
 - `gitleaks version` funktioniert.
 - `syft version` und `specify --version` funktionieren.

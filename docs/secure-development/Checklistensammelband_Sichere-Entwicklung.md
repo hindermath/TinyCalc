@@ -2,9 +2,9 @@
 
 > **GENERATED FILE / GENERIERTE DATEI:** Nicht manuell bearbeiten. Der Sammelband wird aus den zwölf Dateien unter `checklisten/` erzeugt. / Do not edit manually. This compendium is generated from the twelve files under `checklisten/`.
 
-**Baseline-Version / Baseline version:** 3.2.0
-**Dokumentversion / Document version:** 2.2.0
-**Stand / Date:** 2026-07-19
+**Baseline-Version / Baseline version:** 3.3.0
+**Dokumentversion / Document version:** 2.3.0
+**Stand / Date:** 2026-10-03
 **Quelle / Source:** `baseline-manifest.json` und / and `checklisten/`
 
 ## Zweck / Purpose
@@ -14424,4 +14424,4 @@ Diese Datei ist eine wiederverwendbare Vorlage. Ausgefüllte Projektnachweise we
 
 | Version | Datum / Date | Änderung / Change |
 |---|---|---|
-| 2.2.0 | 2026-07-19 | Aus den zwölf kanonischen Einzelchecklisten der sicheren-Entwicklung-Basis 3.2.0 erzeugt; einheitliches zweiachsiges Statusmodell und klare Trennung zwischen Vorlage und Projektnachweis. / Generated from the twelve canonical individual checklists of secure-development baseline 3.2.0; unified two-axis status model and clear separation between template and project evidence. |
+| 2.3.0 | 2026-10-03 | Aus den zwölf kanonischen Einzelchecklisten der sicheren-Entwicklung-Basis 3.3.0 erzeugt; einheitliches zweiachsiges Statusmodell und klare Trennung zwischen Vorlage und Projektnachweis. / Generated from the twelve canonical individual checklists of secure-development baseline 3.3.0; unified two-axis status model and clear separation between template and project evidence. |

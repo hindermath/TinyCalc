@@ -42,6 +42,22 @@ is insufficient. For `SandboxPreflightBlocked`, inspect the report, explicitly
 publish the reviewed package and pin it in the sandbox image. Maintenance
 never rebuilds or replaces the image automatically.*
 
+Nur auf Windows darf ein Podman-Mount fuer `C:\Users\name\Projects` exakt
+als `/mnt/c/Users/name/Projects` gemeldet werden. Der Laufwerksbuchstabe und
+der vollstaendige Pfad muessen passen; andere Wurzeln, Nachbarverzeichnisse
+und `..` werden nicht durch diese Uebersetzung akzeptiert. Die Linux-Schreibweise
+wird nicht ohne Beachtung der Gross-/Kleinschreibung verglichen.
+macOS- und native Linux-Pfadpruefungen bleiben unveraendert.
+
+*Only on Windows may Podman report `C:\Users\name\Projects` exactly as
+`/mnt/c/Users/name/Projects`. The drive and complete path must match; this
+translation does not accept other roots, sibling directories or `..`.
+Linux spelling is compared case-sensitively. macOS and native Linux path
+checks remain unchanged.*
+
+Nachweis / Evidence:
+[Windows-Podman-Mountpfade](../maintenance/windows-podman-mount-paths-2026-09-26.md).
+
 Nach bestandener Vorprüfung gilt Git-Vertrauen nur für den jeweiligen
 Wartungsprozess und die exakt deklarierten Repository-Pfade. Eine leere
 Vertrauensliste setzt geerbte pauschale Freigaben zurück, bevor die geprüften

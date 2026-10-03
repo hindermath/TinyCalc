@@ -12,6 +12,7 @@ import shlex
 import signal
 import stat
 import subprocess
+import sys
 import tarfile
 import tempfile
 import time
@@ -119,6 +120,7 @@ def run_brew_maintainer(
     *,
     extra: tuple[str, ...] = (),
     environment_updates: dict[str, str] | None = None,
+    skip_vscode: bool = True,
 ) -> subprocess.CompletedProcess[str]:
     result_file = root / "toolchain-result.json"
     environment = os.environ.copy()
@@ -153,7 +155,7 @@ def run_brew_maintainer(
             "--powershell-module-registry",
             str(paths["powershell"]),
             "--skip-upgrade",
-            "--skip-vscode-extensions",
+            *(("--skip-vscode-extensions",) if skip_vscode else ()),
             "--result-file",
             str(result_file),
             *extra,
@@ -484,6 +486,105 @@ class LinuxMaintenanceHardeningTests(unittest.TestCase):
             optional = run_brew_maintainer(root, paths)
             self.assertEqual(optional.returncode, 0, optional.stdout)
             self.assertIn("optional-missing", optional.stdout)
+
+    def test_document_cargo_fallback_modes_and_failure_status(self) -> None:
+        # Exercise the real maintainer with isolated Linux tools. No host package
+        # manager, Cargo cache, editor, or user installation participates.
+        registry = json.loads((REPOSITORY / "scripts/config/required-cli-tools-registry.json").read_text())
+        tools = [tool for tool in registry["tools"] if tool["id"] in {"typst", "tinymist"}]
+        cases = (
+            ("compare", ("--compare-only",), "", False, 1, []),
+            ("preview", ("--dry-run",), "", False, 1, []),
+            ("install", (), "", False, 0, ["typst-cli"]),
+            ("include", ("--include-optional",), "", False, 0, ["typst-cli", "tinymist-cli"]),
+            ("required-failure", (), "typst-cli", False, 1, ["typst-cli"]),
+            ("optional-failure", ("--include-optional",), "tinymist-cli", False, 0, ["typst-cli", "tinymist-cli"]),
+            ("already-present", (), "", True, 0, []),
+        )
+        for name, extra, fail, present, expected_exit, expected_installs in cases:
+            with self.subTest(name=name), tempfile.TemporaryDirectory() as directory:
+                root = Path(directory)
+                paths = empty_registries(root)
+                bin_dir, _, _ = install_fake_brew(root)
+                (bin_dir / "brew").unlink()
+                # Avoid Homebrew inherited through PATH even on macOS test hosts.
+                (bin_dir / "python3").symlink_to(sys.executable)
+                write_executable(bin_dir / "uname", "#!/bin/sh\nprintf 'Linux\\n'\n")
+                write_executable(bin_dir / "apt", "#!/bin/sh\nexit 0\n")
+                cargo_root = root / "cargo"
+                install_log = root / "cargo-install-log"
+                install_log.write_text("")
+                write_executable(bin_dir / "cargo", """#!/usr/bin/env bash
+set -euo pipefail
+[ "$1" = install ] && [ "$2" = --locked ]
+printf '%s\\n' "$3" >> "$HB_TEST_CARGO_LOG"
+[ "$3" != "$HB_TEST_CARGO_FAIL" ] || exit 7
+name="$3"
+[ "$name" != typst-cli ] || name=typst
+[ "$name" != tinymist-cli ] || name=tinymist
+mkdir -p "$CARGO_INSTALL_ROOT/bin"
+printf '#!/bin/sh\\nprintf "document tool fixture\\\\n"\\n' > "$CARGO_INSTALL_ROOT/bin/$name"
+chmod +x "$CARGO_INSTALL_ROOT/bin/$name"
+""")
+                if present:
+                    (cargo_root / "bin").mkdir(parents=True)
+                    write_executable(cargo_root / "bin/typst", "#!/bin/sh\nprintf 'typst fixture\\n'\n")
+                write_json(paths["cli"], {"schemaVersion": 1, "tools": tools})
+                completed = run_brew_maintainer(root, paths, extra=extra, environment_updates={
+                    "PATH": f"{bin_dir}:/usr/bin:/bin",
+                    "CARGO_INSTALL_ROOT": str(cargo_root),
+                    "HB_TEST_CARGO_LOG": str(install_log),
+                    "HB_TEST_CARGO_FAIL": fail,
+                })
+                self.assertEqual(completed.returncode, expected_exit, completed.stdout)
+                self.assertEqual(install_log.read_text().splitlines(), expected_installs)
+                if name == "preview":
+                    self.assertIn("DRY-RUN: cargo install --locked typst-cli", completed.stdout)
+                if name == "install":
+                    repeated = run_brew_maintainer(root, paths, environment_updates={
+                        "PATH": f"{bin_dir}:/usr/bin:/bin",
+                        "CARGO_INSTALL_ROOT": str(cargo_root),
+                        "HB_TEST_CARGO_LOG": str(install_log),
+                        "HB_TEST_CARGO_FAIL": fail,
+                    })
+                    self.assertEqual(repeated.returncode, 0, repeated.stdout)
+                    self.assertEqual(install_log.read_text().splitlines(), expected_installs)
+
+    def test_typst_extension_preview_install_and_detection(self) -> None:
+        for mode, extra, expected_exit in (
+            ("compare", ("--compare-only",), 1),
+            ("preview", ("--dry-run",), 1),
+            ("install", (), 0),
+        ):
+            with self.subTest(mode=mode), tempfile.TemporaryDirectory() as directory:
+                root = Path(directory)
+                paths = empty_registries(root)
+                bin_dir, _, _ = install_fake_brew(root)
+                state = root / "extensions"
+                state.write_text("")
+                write_executable(bin_dir / "code", """#!/usr/bin/env bash
+set -euo pipefail
+case "$1" in
+  --version) printf 'fixture VS Code\\n' ;;
+  --list-extensions) cat "$HB_TEST_EXTENSIONS" ;;
+  --install-extension) printf '%s\\n' "$2" >> "$HB_TEST_EXTENSIONS" ;;
+  *) exit 2 ;;
+esac
+""")
+                write_json(paths["vscode"], {"schemaVersion": 1, "extensions": [
+                    {"id": "myriad-dreamin.tinymist", "scope": "required"}
+                ]})
+                environment = {"HB_TEST_EXTENSIONS": str(state)}
+                completed = run_brew_maintainer(root, paths, extra=extra,
+                    environment_updates=environment, skip_vscode=False)
+                self.assertEqual(completed.returncode, expected_exit, completed.stdout)
+                if mode == "install":
+                    self.assertEqual(state.read_text().splitlines(), ["myriad-dreamin.tinymist"])
+                    repeated = run_brew_maintainer(root, paths, environment_updates=environment, skip_vscode=False)
+                    self.assertEqual(repeated.returncode, 0, repeated.stdout)
+                    self.assertEqual(state.read_text().splitlines(), ["myriad-dreamin.tinymist"])
+                else:
+                    self.assertEqual(state.read_text(), "")
 
     def test_probe_classifies_timeout_capability_and_redacts_paths(self) -> None:
         with tempfile.TemporaryDirectory() as directory:

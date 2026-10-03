@@ -263,6 +263,26 @@ def main():
         return 2
 
 
+def mount_source_matches(source: str, expected: pathlib.PurePath) -> bool:
+    """Accept only the exact host path or its Windows Podman /mnt/<drive> spelling."""
+    if not isinstance(source, str) or not source or any(ord(char) < 32 for char in source):
+        return False
+    if sys.platform == "win32":
+        expected = pathlib.PureWindowsPath(expected)
+        if not expected.is_absolute() or ".." in expected.parts:
+            return False
+        if source.startswith("/"):
+            # Podman's Linux VM reports the Windows bind source via its drive
+            # mount. Do not suffix-match, case-fold Linux paths or accept UNC,
+            # traversal, alternate mount roots or sibling workspace prefixes.
+            if not re.fullmatch(r"[A-Za-z]:", expected.drive):
+                return False
+            return source == "/mnt/" + expected.drive[0].lower() + expected.as_posix()[2:]
+        observed = pathlib.PureWindowsPath(source)
+        return observed.is_absolute() and ".." not in observed.parts and observed == expected
+    return pathlib.Path(source).absolute() == expected
+
+
 class ExecutionContexts:
     def __init__(self, contract: pathlib.Path, home: pathlib.Path, targets: list[dict]):
         self.data = validate_contract(json.loads(contract.read_text(encoding="utf-8")))
@@ -303,7 +323,7 @@ class ExecutionContexts:
             matches = [m for m in info.get("Mounts", []) if m.get("Destination") == mapping["container"]]
             if len(matches) != 1 or matches[0].get("Type") != "bind" or not matches[0].get("RW"):
                 raise ExecutionContextError("Missing writable workspace mount")
-            if pathlib.Path(matches[0]["Source"]).absolute() != self.home / mapping["host"]:
+            if not mount_source_matches(matches[0]["Source"], self.home / mapping["host"]):
                 raise ExecutionContextError("Workspace mount source mismatch")
         return info
 

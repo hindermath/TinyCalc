@@ -1,5 +1,15 @@
 # GSDB-Evidenzmatrix / GSDB Evidence Matrix
 
+## Nachpruefung 2026-10-03 / Follow-up 2026-10-03
+
+DE: Aktuelle technische Versionen und Hashbindungen stehen im
+[koordinierten Nachlauf](../../maintenance/coordinated-governance-oct03.md).
+Alle datierten Tabellen unten bleiben historische Evidence; keine
+Kontrollbewertung oder menschliche Freigabe wird aufgewertet.
+EN: The linked follow-up supplies current technical versions and hashes.
+Dated tables below remain historical; no control disposition or human approval
+is upgraded. The JSON matrix is the current machine-readable source.
+
 ## Deutscher Überblick
 
 Diese Lesesicht bildet exakt 157 kanonische CL-Zeilen ab. `Applicable` beschreibt bekannten Scope, `N/A` eine begründete Nichtanwendbarkeit und `Open` ungeklärte Anwendbarkeit. Erfüllung wird getrennt bewertet. Human-only-Entscheidungen bleiben mit `NotProvided` offen. Die JSON-Datei ist kanonisch; diese Tabelle nutzt keine Farbe als Bedeutungsträger.

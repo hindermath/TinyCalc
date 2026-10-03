@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updated": "2026-09-13",
+  "updated": "2026-10-01",
   "description": "Homebrew top-level package registry for agentic development across the Level-0, Level-1, and Level-2 repositories.",
   "policy": {
     "formulaSource": "brew leaves --installed-on-request",
@@ -42,6 +42,8 @@
     { "name": "sqlite", "scope": "optional", "purpose": "SQLite CLI and library for local database inspection" },
     { "name": "syft", "scope": "required", "purpose": "SBOM generation for supply-chain evidence" },
     { "name": "telnet", "scope": "optional", "purpose": "Legacy plaintext protocol diagnostics on trusted networks only" },
+    { "name": "tinymist", "scope": "optional", "purpose": "Standalone Typst language server for editors outside VS Code; the required VS Code extension manages its own server" },
+    { "name": "typst", "scope": "required", "purpose": "Local document typesetting and PDF compilation" },
     { "name": "uv", "scope": "required", "purpose": "Python package/tool runner and Spec Kit installation support" },
     { "name": "vice", "scope": "optional", "purpose": "C64 emulator for retro projects" }
   ],
