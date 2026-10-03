@@ -33,6 +33,9 @@ def opencode_directory(manifest: dict) -> Path:
     files = manifest.get("files", {})
     if not isinstance(files, dict) or not files:
         raise ValueError("OpenCode integration has no bound files")
+    if any(not isinstance(path, str) or "\\" in path
+           or str(PurePosixPath(path)) != path for path in files):
+        raise ValueError("OpenCode integration requires canonical POSIX string paths")
     # DE: Manifestpfade bleiben POSIX, auch auf einem Windows-Host.
     # EN: Manifest paths use POSIX syntax even on a Windows host.
     parents = {str(PurePosixPath(path).parent) for path in files}
@@ -62,7 +65,9 @@ class SpecKitAgentSurfaceParityTests(unittest.TestCase):
             self.assertEqual(opencode_directory(manifest), REPOSITORY / ".opencode" / namespace)
         for paths in ([], [".opencode/command/a.md", ".opencode/commands/b.md"],
                       ["../command/a.md"], ["/tmp/command/a.md"],
-                      [r".opencode\command\a.md"], [r"C:\tmp\command\a.md"]):
+                      [r".opencode\command\a.md"], [r"C:\tmp\command\a.md"],
+                      [r".opencode/command/nested\child.md"],
+                      [".opencode/command/./a.md"], [42]):
             with self.assertRaises(ValueError):
                 opencode_directory({"files": dict.fromkeys(paths, "hash")})
 
