@@ -225,7 +225,7 @@
           "const": "docs/secure-development/baseline-manifest.json"
         },
         "baselineVersion": {
-          "const": "3.2.0"
+          "const": "3.3.0"
         },
         "manifestNormalizedSha256": {
           "$ref": "#/$defs/digest"

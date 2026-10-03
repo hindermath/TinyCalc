@@ -576,6 +576,8 @@ runtime evidence.*
 
 | 2026-09-28 | GSDB-Nachprüfung Authoring v0.3.5 / GSDB follow-up | Genehmigte technische Nachprüfung: zwei Quellenbindungen und exakte Version aktualisiert, vier Negativfälle ergänzt; Kontroll-, Risiko- und Freigabedispositionen erhalten. Keine Produktänderung. / Authorized technical follow-up preserves dispositions and adds four negative cases. [Nachweis / Evidence](security/gsdb-intensive-review/authoring-v035-follow-up-2026-09-28.md). |
 
+| 2026-10-03 | Koordinierter Governance-Pilot / Coordinated governance pilot | Fuenf veroeffentlichte Presets und Wartungsdateien integriert; technische Baseline-/GSDB-/RL-SE-Quellenbindung aktualisiert, Statusachsen/Findings/menschliche Freigaben erhalten. Restore, Release-Build, 82 xUnit-Tests und TUI-Smoke bestanden. Keine Produkt-API-/Featureimplementierung; Buildzaehler vor Build/Test erhoeht. Bestehende Statistiken werden ohne Methodikaenderung reproduzierbar erneuert; keine Produktivitaetsmessung. / Bounded source-binding refresh and product regression, no feature implementation or new human approval. [Evidence](maintenance/coordinated-governance-oct03.md). |
+
 ## Statistikprofil-1-Archiv / Statistics Profile 1 Archive
 Basis dieses Schlussblocks sind die aktuell dokumentierten Snapshot- und
 Phasenwerte aus den Abschnitten `## Gesamtstand des Repositories` und

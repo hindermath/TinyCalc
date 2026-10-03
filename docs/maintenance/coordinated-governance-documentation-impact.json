@@ -1,0 +1,120 @@
+{
+  "schemaVersion": "1.1",
+  "feature": "coordinated-governance-pilot-oct03",
+  "entries": [
+    {
+      "changeId": "CHG001",
+      "scope": "Five preset updates, maintenance files, project guidance and bounded GSDB/RL-SE source refresh",
+      "decision": "UpdateRequired",
+      "rationale": "Released sources and shared normative version/scope references changed.",
+      "documents": [
+        "README.md",
+        "docs/security/README.md",
+        "docs/maintenance/coordinated-governance-oct03.md",
+        "docs/maintenance/governance-review-and-rollout.md",
+        "docs/security/gsdb-intensive-review/source-inventory.md",
+        "docs/security/gsdb-intensive-review/preset-mapping.md",
+        "docs/security/gsdb-intensive-review/evidence-matrix.md",
+        "docs/security/secure-development/2026-09-05-tinycalc-rl-se-self-assessment/evidence-matrix.md",
+        "constitution.md",
+        ".specify/memory/constitution.md",
+        "AGENTS.md",
+        "CLAUDE.md",
+        "GEMINI.md",
+        ".github/copilot-instructions.md",
+        ".github/agents/copilot-instructions.md"
+      ],
+      "owner": "Thorsten Hindermann",
+      "audiences": [
+        "Maintainers",
+        "Learners",
+        "Agents"
+      ],
+      "readerPaths": [
+        "README -> pilot integration -> source lock -> hand-off"
+      ],
+      "canonicalSource": "Published preset tags, central profile and project-specific guidance",
+      "navigationImpact": "Existing README and environment guide link to the coordinated evidence.",
+      "documentClass": "ActiveSemantic",
+      "languageStrategy": "German first and English second in the same documents.",
+      "languagePartners": [],
+      "platformAndExampleProof": "Local macOS product regression, GSDB/RL-SE and Bash/PowerShell parity; native Linux/Windows delivery CI remains required.",
+      "distributionClass": "sourceOnly",
+      "homeSyncRequired": false,
+      "evidence": "docs/maintenance/coordinated-governance-oct03.md",
+      "risk": "No legal, product, risk or certification approval; future intake freshness/routing/tool gates remain required.",
+      "criticality": "Normal",
+      "reevaluationTrigger": "Source/version change, pilot finding or later product implementation."
+    },
+    {
+      "changeId": "CHG002",
+      "scope": "Existing Profile 2 and existing optional statistics context",
+      "decision": "GeneratedUpdate",
+      "generatedSource": {
+        "path": "docs/project-statistics.config.json",
+        "renderer": "scripts/render-project-statistics.sh and .ps1"
+      },
+      "rationale": "Delivered source/ledger changes require regenerating the existing view; no new optional measurement context or methodology change.",
+      "documents": [
+        "docs/project-statistics.md",
+        "docs/project-statistics-pilot/report.md",
+        "docs/project-statistics-pilot/snapshot.json"
+      ],
+      "owner": "Thorsten Hindermann",
+      "audiences": [
+        "Maintainers",
+        "Learners",
+        "Agents"
+      ],
+      "readerPaths": [
+        "README -> pilot integration -> source lock -> hand-off"
+      ],
+      "canonicalSource": "docs/project-statistics.config.json and Git history",
+      "navigationImpact": "Existing README and environment guide link to the coordinated evidence.",
+      "documentClass": "Generated",
+      "languageStrategy": "German first and English second in the same documents.",
+      "languagePartners": [],
+      "platformAndExampleProof": "Local macOS checks with Bash/PowerShell parity; native project CI required before delivery; product runtime not defined.",
+      "distributionClass": "sourceOnly",
+      "homeSyncRequired": false,
+      "evidence": "docs/maintenance/coordinated-governance-oct03.md",
+      "risk": "Visible Git delivery density is not measured AI productivity or learner quality.",
+      "criticality": "Normal",
+      "reevaluationTrigger": "Source/version change, pilot finding or later product implementation."
+    },
+    {
+      "changeId": "CHG003",
+      "scope": "Controlled baseline compendium",
+      "decision": "GeneratedUpdate",
+      "generatedSource": {
+        "path": "docs/secure-development/baseline-manifest.json",
+        "renderer": "Level-0 scripts/build-secure-development-docs.sh and .ps1 at centralCommit"
+      },
+      "rationale": "Propagate the canonical generated compendium; identical checklist bytes and GSDB compendium validation bind the local content.",
+      "documents": [
+        "docs/secure-development/Checklistensammelband_Sichere-Entwicklung.md"
+      ],
+      "owner": "Thorsten Hindermann",
+      "audiences": [
+        "Maintainers",
+        "Learners",
+        "Agents"
+      ],
+      "readerPaths": [
+        "README -> pilot integration -> source lock -> hand-off"
+      ],
+      "canonicalSource": "docs/project-statistics.config.json and Git history",
+      "navigationImpact": "Existing README and environment guide link to the coordinated evidence.",
+      "documentClass": "Generated",
+      "languageStrategy": "German first and English second in the same documents.",
+      "languagePartners": [],
+      "platformAndExampleProof": "Local macOS checks with Bash/PowerShell parity; native project CI required before delivery; product runtime not defined.",
+      "distributionClass": "sourceOnly",
+      "homeSyncRequired": false,
+      "evidence": "docs/maintenance/coordinated-governance-oct03.md",
+      "risk": "Visible Git delivery density is not measured AI productivity or learner quality.",
+      "criticality": "Normal",
+      "reevaluationTrigger": "Source/version change, pilot finding or later product implementation."
+    }
+  ]
+}

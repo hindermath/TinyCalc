@@ -273,6 +273,34 @@ try {
         Assert-GsdbFailure -Assessment $AuthoringVersionDrift -ExpectedCode 'GSDB008'
     }
 
+    # DE: Alle fuenf alten Release-Bindungen bleiben gesondert blockiert.
+    # EN: Reject each previous release binding independently.
+    foreach ($OldPreset in @(
+        @{ Id = 'architecture-governance'; Version = '0.5.2'; Hash = 'e2dc16bd0a566424dadbdb14a32cae5805d23d5f72e57a3bb3b5e47821882293' },
+        @{ Id = 'intake-authoring-governance'; Version = '0.3.5'; Hash = '74a5bd0afc28ab4b3a997b2831278dcd215171552cac9877095fd08176a4591f' },
+        @{ Id = 'intake-review-governance'; Version = '0.2.3'; Hash = '0fe3aedc8ed9b27a9874eabe28b2f457e2de68610e80e72007871249d62327ce' },
+        @{ Id = 'intake-sequencing-governance'; Version = '0.2.6'; Hash = '8b517455df03fcb23f5e05e4a569a751fe72bedaa6932e669bbe368d00353e48' },
+        @{ Id = 'security-governance'; Version = '0.6.2'; Hash = '356daaedfb3b0275c093d7e522b3e616091c1249a2622e071ae4ff690b5a239d' }
+    )) {
+        $StaleSource = Copy-GsdbProductionAssessment -Name ($OldPreset.Id + '-old-hash') -Mutate {
+            param($Document)
+            $Source = $Document.sourceInventory | Where-Object sourceId -CEQ ('PRESET-' + $OldPreset.Id)
+            $Source.normalizedSha256 = $OldPreset.Hash
+        }
+        Assert-GsdbFailure -Assessment $StaleSource -ExpectedCode 'GSDB002'
+        $StaleVersion = Copy-GsdbProductionAssessment -Name ($OldPreset.Id + '-old-version') -Mutate {
+            param($Document)
+            $Preset = $Document.presetAssessments | Where-Object presetId -CEQ $OldPreset.Id
+            $Preset.version = $OldPreset.Version
+        }
+        Assert-GsdbFailure -Assessment $StaleVersion -ExpectedCode 'GSDB008'
+    }
+    $OldBaseline = Copy-GsdbProductionAssessment -Name 'old-baseline-version' -Mutate {
+        param($Document)
+        $Document.baseline.baselineVersion = '3.2.0'
+    }
+    Assert-GsdbFailure -Assessment $OldBaseline -ExpectedCode 'GSDB001'
+
     $FindingDrift = Copy-GsdbProductionAssessment -Name 'finding-reciprocity' -Mutate {
         param($Document)
         $Document.findings[0].sourceReferences = @($Document.findings[0].sourceReferences | Select-Object -Skip 1)

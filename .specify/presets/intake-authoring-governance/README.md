@@ -1,6 +1,29 @@
 # Intake Authoring Governance Preset
 
-Aktuelle Version / Current version: **0.3.5**. Dieser Patch veroeffentlicht die
+Aktuelle Version / Current version: **0.3.6**. Laufende `Active`-Serien mit
+mindestens einem `Active`-Mitglied bleiben ohne weiteren `Eligible`-Kandidaten
+gueltig; `eligibleCandidate` ist dann `N/A`. `Ready` verlangt weiterhin genau
+einen Kandidaten. Mehrfachkandidaten, Hash-, Pfad- und Abhaengigkeitsfehler
+bleiben gesperrt. Schema, Commands und Prioritaet bleiben gleich.
+
+Running Active series with an Active member may have no additional Eligible
+candidate. The candidate remains N/A; this grants no execution authority.
+Ready still requires exactly one candidate, and all integrity checks remain.
+Coordinated versions: Authoring 0.3.6, Review 0.2.4, Sequencing 0.2.7.
+Each preset remains independently installable; historical evidence is preserved.
+
+Gemeinsame Konfigurationsvalidatoren akzeptieren auch die bereits etablierte,
+leere `Idle`-Serie. `Idle` darf keine Ziele, Wurzeln oder Abhaengigkeiten
+enthalten; DirectoryStrict verlangt zusaetzlich ein leeres aktives Inventar.
+Indizes eigenstaendiger verschachtelter Git-Repositories sind keine Duplikate
+des uebergeordneten Projekts. Gewoehnliche doppelte Indizes bleiben gesperrt.
+
+*The shared validators also accept established empty Idle series, without
+targets, roots or dependencies. DirectoryStrict additionally requires an
+empty active inventory. Nested Git checkouts own their index; ordinary
+duplicate indexes still fail. This aligns all three Intake presets.*
+
+Version **0.3.5** veroeffentlicht die
 Korrektur fuer Receipts der eigenen Generatorversion. Beide Validatoren
 akzeptieren die aktuelle Vorlage und bekannte Schema-2-Generatoren, darunter
 0.3.4; unbekannte Versionen und unzulaessige Schema-Kombinationen bleiben gesperrt.
@@ -67,7 +90,7 @@ and freshness without writing.*
 
 ```bash
 specify preset add \
-  --from https://github.com/hindermath/spec-kit-preset-intake-authoring-governance/archive/refs/tags/v0.3.5.zip \
+  --from https://github.com/hindermath/spec-kit-preset-intake-authoring-governance/archive/refs/tags/v0.3.6.zip \
   --priority 64
 specify preset list
 specify preset info intake-authoring-governance

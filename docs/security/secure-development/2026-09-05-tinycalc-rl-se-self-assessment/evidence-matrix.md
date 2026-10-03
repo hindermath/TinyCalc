@@ -2,11 +2,11 @@
 
 ## Technische Grenze / Technical Boundary
 
-**DE:** Diese repository-interne Bewertung bindet Baseline 3.2.0 und alle 157
+**DE:** Diese repository-interne Bewertung bindet technisch Baseline 3.3.0 und alle 157
 kanonischen Pruefpunkte. Ein technischer Pass ist keine menschliche Freigabe,
 Rechtsberatung oder Aussage ueber organisationsweite Wirksamkeit.
 
-**EN:** This repository-internal assessment binds baseline 3.2.0 and all 157
+**EN:** This repository-internal assessment technically binds baseline 3.3.0 and all 157
 canonical checkpoints. A technical pass is not a human approval, legal advice,
 or a statement of organization-wide effectiveness.
 
@@ -25,6 +25,13 @@ DE-first/EN-second family view and the prioritised follow-up list are completed
 before delivery.
 
 ## Behobener Baseline-Befund / Resolved Baseline Finding
+
+DE: Die technische Bindungsaktualisierung vom 03.10.2026 ist im
+[Governance-Nachlauf](../../../maintenance/coordinated-governance-oct03.md)
+belegt. Die folgende Beschreibung bleibt der historische v0.1.2-Pruefstand;
+Review- und Gate-Freigaben wurden nicht neu erteilt.
+EN: The linked follow-up records the 2026-10-03 technical binding refresh.
+The following description remains historical; no new review/gate approval.
 
 **DE:** Der v0.1.2-Validator erkannte korrekt, dass das Manifest noch aeltere
 Versionsangaben als die kontrollierten Dokumente enthielt. Thorsten hat die

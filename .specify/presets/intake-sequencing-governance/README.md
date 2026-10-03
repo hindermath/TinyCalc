@@ -1,6 +1,18 @@
 # Intake Sequencing Governance
 
-Aktuelle Version / Current version: **0.2.6**. Dieser Patch schliesst physische
+Aktuelle Version / Current version: **0.2.7**. Laufende `Active`-Serien mit
+mindestens einem `Active`-Mitglied bleiben ohne weiteren `Eligible`-Kandidaten
+gueltig; `eligibleCandidate` ist dann `N/A`. `Ready` verlangt weiterhin genau
+einen Kandidaten. Mehrfachkandidaten, Hash-, Pfad- und Abhaengigkeitsfehler
+bleiben gesperrt. Schema, Commands und Prioritaet bleiben gleich.
+
+Running Active series with an Active member may have no additional Eligible
+candidate. The candidate remains N/A; this grants no execution authority.
+Ready still requires exactly one candidate, and all integrity checks remain.
+Coordinated versions: Authoring 0.3.6, Review 0.2.4, Sequencing 0.2.7.
+Each preset remains independently installable; historical evidence is preserved.
+
+Version **0.2.6** schliesst physische
 Collection-Aliase und unbekannte Lifecycle-Zustaende aus. Authoring prueft auch
 bestehende Receipt-Ziele und Quellen vor dem Lesen gegen die Repository-Grenze.
 
@@ -50,7 +62,7 @@ Ein gewöhnlicher zweiter Index im selben Repository bleibt ein Fehler.*
 
 ```bash
 specify preset add \
-  --from https://github.com/hindermath/spec-kit-preset-intake-sequencing-governance/archive/refs/tags/v0.2.6.zip \
+  --from https://github.com/hindermath/spec-kit-preset-intake-sequencing-governance/archive/refs/tags/v0.2.7.zip \
   --priority 66
 ```
 

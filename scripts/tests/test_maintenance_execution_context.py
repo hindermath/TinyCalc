@@ -4,7 +4,7 @@ import importlib.util
 import json
 import os
 import sys
-from pathlib import Path
+from pathlib import Path, PurePosixPath, PureWindowsPath
 import subprocess
 import tempfile
 from types import SimpleNamespace
@@ -35,6 +35,41 @@ def contract():
 
 
 class ExecutionContextTests(unittest.TestCase):
+    def test_windows_mount_accepts_only_exact_native_or_vm_drive_path(self):
+        expected = PureWindowsPath("C:/Users/test user/Projects")
+        with patch.object(context.sys, "platform", "win32"):
+            for source in (str(expected), "C:/Users/test user/Projects", "/mnt/c/Users/test user/Projects"):
+                with self.subTest(source=source):
+                    self.assertTrue(context.mount_source_matches(source, expected))
+            for source in ("/mnt/d/Users/test user/Projects", "/mnt/c/Users/other/Projects",
+                           "/mnt/c/Users/test user/Projects-other", "/mnt/c/Users/test user/Projects/repo",
+                           "/mnt/c/Users/test user/projects", "/mnt/C/Users/test user/Projects",
+                           "/mnt/c/Users/test user/../test user/Projects", "/mnt/c/Users/test user/./Projects",
+                           "/mnt/c//Users/test user/Projects", "/mnt/c/Users/test user/Projects/",
+                           "/c/Users/test user/Projects", "/Users/test user/Projects",
+                           "C:Users/test user/Projects", "Users/test user/Projects",
+                           "C:/Users/test user/../test user/Projects", "", None,
+                           "/mnt/c/Users/test user/Projects\n"):
+                with self.subTest(source=source):
+                    self.assertFalse(context.mount_source_matches(source, expected))
+            self.assertFalse(context.mount_source_matches("/mnt/c/server/share/Projects",
+                                                         PureWindowsPath("//server/share/Projects")))
+
+    def test_vm_translation_is_never_applied_on_macos_or_linux(self):
+        for platform in ("darwin", "linux"):
+            with self.subTest(platform=platform), patch.object(context.sys, "platform", platform):
+                self.assertFalse(context.mount_source_matches("/mnt/c/Users/test/Projects",
+                                                              PureWindowsPath("C:/Users/test/Projects")))
+
+    @unittest.skipIf(os.name == "nt", "Native POSIX path comparison")
+    def test_posix_mount_comparison_remains_exact(self):
+        expected = PurePosixPath("/home/test/Projects")
+        for platform in ("darwin", "linux"):
+            with patch.object(context.sys, "platform", platform):
+                self.assertTrue(context.mount_source_matches(str(expected), expected))
+                self.assertFalse(context.mount_source_matches("/home/test/Projects-other", expected))
+                self.assertFalse(context.mount_source_matches("/home/test/projects", expected))
+
     def test_command_trust_without_global_config_after_recreation(self):
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory).resolve()
@@ -130,6 +165,27 @@ class ExecutionContextTests(unittest.TestCase):
             with patch.object(context.subprocess, "run", side_effect=FileNotFoundError), \
                     self.assertRaises(context.ExecutionContextError):
                 router.inspect()
+
+    @unittest.skipUnless(os.name == "nt", "Native Windows Podman source spelling")
+    def test_windows_inspection_accepts_vm_source_but_rejects_wrong_mount(self):
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            router = self.make_context(root)
+            expected = root / "Projects"
+            source = "/mnt/" + expected.drive[0].lower() + expected.as_posix()[2:]
+            mount = {"Destination": "/projects", "Source": source, "Type": "bind", "RW": True}
+            valid = {"Id": "abc", "Image": "def", "State": {"Running": True},
+                     "Config": {"User": "tester"}, "Mounts": [mount]}
+            response = subprocess.CompletedProcess([], 0, json.dumps([valid]), "")
+            with patch.object(context.subprocess, "run", return_value=response):
+                self.assertEqual(router.inspect()["Id"], "abc")
+            for changes in ({"Source": source + "-other"}, {"Source": source + "/child"},
+                            {"RW": False}, {"Type": "volume"}):
+                response = subprocess.CompletedProcess([], 0, json.dumps([
+                    {**valid, "Mounts": [{**mount, **changes}]}]), "")
+                with patch.object(context.subprocess, "run", return_value=response), \
+                        self.assertRaises(context.ExecutionContextError):
+                    router.inspect()
 
     def test_stopped_wrong_user_wrong_mount_and_changed_identity(self):
         with tempfile.TemporaryDirectory() as directory:

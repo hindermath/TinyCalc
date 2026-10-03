@@ -1,5 +1,11 @@
 # MicroCalc .NET 10 (Terminal.Gui)
 
+DE: Der [Governance-Pilot vom 03.10.2026](docs/maintenance/coordinated-governance-oct03.md)
+bindet fuenf neue Preset-Releases und das genehmigte Wartungspaket. Technische
+Installation ist keine Produkt-, Risiko- oder regulatorische Freigabe.
+EN: The linked pilot binds five released presets and approved maintenance files;
+technical installation grants no product, risk or legal approval.
+
 <!-- learner-a11y-baseline:start -->
 ## Lernenden- und A11Y-Basis / Learner and A11Y Baseline
 

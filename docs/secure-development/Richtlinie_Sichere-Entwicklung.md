@@ -16,7 +16,7 @@ This document is organization-neutral and written as a generic training and revi
 | Feld | Wert |
 |---|---|
 | Titel | Richtlinie zur sicheren Softwareentwicklung |
-| Versionsnummer | 3.2.0 |
+| Versionsnummer | 3.3.0 |
 | Freigabedatum | 19.07.2026 |
 | Inkrafttreten | 19.07.2026 |
 | Dokumentenklassifikation | öffentlich nutzbare Ausbildungs- und Prüfgrundlage |
@@ -485,7 +485,7 @@ Für jedes Entwicklungsprojekt wird bewertet, ob die Software als „Produkt mit
 - SBOM-Pflicht je Release (siehe Abschnitt „Lieferkettentransparenz und Build-Integrität").
 - Dokumentierter Prozess für Schwachstellenoffenlegung und -behandlung einschließlich Frühwarnung nach 24 Stunden, Hauptmeldung nach 72 Stunden und Schlussbericht.
 - Bereitstellung von Sicherheitsupdates innerhalb der gesetzlich vorgegebenen Fristen und über den unterstützten Lebenszyklus hinweg.
-- Dokumentierte Konformitätsbewertung: Selbstbewertung für die Mehrzahl der Produkte; Drittbewertung für kritische beziehungsweise wichtige Produkte gemäß Anhang III/IV der Verordnung.
+- Dokumentierte Konformitaetsbewertung nach Art. 32: Standardprodukte, Anhang III Klasse I/II und Anhang IV getrennt pruefen; Klasse I kann unter den gesetzlichen Voraussetzungen interne Kontrolle nutzen. Keine pauschale Drittbewertung aller wichtigen Produkte behaupten.
 - Kennzeichnung, technische Dokumentation und Konformitätserklärung gemäß CRA-Anforderungen werden vor der Marktbereitstellung erstellt.
 
 Auch außerhalb des formalen CRA-Anwendungsbereichs richtet die nutzende Organisation ihre Praxis an den CRA-Grundprinzipien aus: Secure-by-Design, Secure-by-Default, fortlaufendes Schwachstellenmanagement, Lebenszyklus-Transparenz und SBOM-Verfügbarkeit. Die CRA-Anwendbarkeitsentscheidung wird im Sicherheitsdokumentenbestand des Projekts festgehalten (zum Beispiel im Lieferketten-Evidenz-Dokument oder als S-ADR).
@@ -709,7 +709,7 @@ Die Versionshistorie dokumentiert wesentliche Änderungen dieser Richtlinie gem�
 | Field | Value |
 |---|---|
 | Title | Secure Software Development Guideline |
-| Version | 3.2.0 |
+| Version | 3.3.0 |
 | Release date | 2026-07-19 |
 | Effective date | 2026-07-19 |
 | Document classification | publicly usable training and review baseline |
@@ -1168,6 +1168,41 @@ Related checklist: CL_Schwachstellenoffenlegung (see `Checklistensammelband_Sich
 
 ## EU Cyber Resilience Act (CRA)
 
+### Gemeinsame regulatorische Evidence / Shared regulatory evidence
+
+DE: DS-GVO, KI-VO, CRA, NIS2 und DORA fuer Beispielprodukt, Entwicklungswerkzeuge
+und Organisation getrennt pruefen: Land/Rechtsfassung, Rechtstraeger/Rolle,
+direkte gesetzliche und vertragliche Pflichten, Owner/Reviewer, Quellenstand,
+Evidence, Restrisiko und Wiedervorlage festhalten. Ausbildung und AI-SBOM N/A
+sind keine pauschale Ausnahme. Unbekannte Rollen oder Quellen bleiben Open.
+EN: Assess GDPR, AI Act, CRA, NIS2 and DORA separately for product, tooling and
+organisation. Record jurisdiction, legal role, direct/contractual duties, owner,
+reviewer, source version, evidence, residual risk and due date. Education or
+AI-SBOM N/A is no blanket exemption. Unknown roles or sources remain Open.
+
+DE: NIS2: nationale Umsetzung und EU-24/72-Stunden-Kette pruefen; fuer erhebliche
+Vorfaelle mit Auswirkung auf Vertrauensdienste gilt die besondere 24-Stunden-
+Vorfallmeldung nach Art. 23(4). DORA-Rollen und gleichwertige Pflichten einzeln
+pruefen; normale ICT-Zulieferer erben nicht alle Pflichten der Finanzunternehmen.
+Nach 2025/301: Erstmeldung 4 Stunden nach Einstufung und spaetestens 24 Stunden
+nach Kenntnis; spaetere Einstufung mit eigener 4-Stunden-Regel; Zwischenmeldung
+72 Stunden nach Erstmeldung, Abschluss einen Monat nach letzter Zwischenmeldung.
+EN: Verify national NIS2 implementation and its trust-service exception.
+Assess DORA roles and equivalent obligations individually. Reporting clocks
+use their own trigger and applicable exceptions under Regulation 2025/301.
+
+DE: CRA Art. 14: aktiv ausgenutzte Schwachstelle: 24/72 Stunden nach Kenntnis,
+Abschluss 14 Tage nach verfuegbarer Abhilfe. Schwerwiegender Sicherheitsvorfall:
+24/72 Stunden nach Kenntnis, Abschluss einen Monat nach Vorfallmeldung.
+EN: CRA vulnerability and severe-incident reporting have distinct final clocks:
+14 days after available mitigation versus one month after incident notification.
+
+Quellen / Sources: [CRA](https://eur-lex.europa.eu/eli/reg/2024/2847/oj),
+[NIS2](https://eur-lex.europa.eu/eli/dir/2022/2555/oj),
+[DORA reporting](https://eur-lex.europa.eu/eli/reg_del/2025/301/oj).
+Jahrespruefung und getrennte Rollout-Autoritaet:
+[Governance-Vertrag](../maintenance/governance-review-and-rollout.md).
+
 Each development project is assessed to determine whether the software is a "product with digital elements" under Regulation (EU) 2024/2847 (Cyber Resilience Act, CRA) and is placed on the Union market. This applies commercially, under license, or free of charge for economic purposes. Open-source software can also be affected when provided for economic purposes.
 
 **Binding rules for CRA-applicable products:**
@@ -1175,7 +1210,7 @@ Each development project is assessed to determine whether the software is a "pro
 - SBOM per release.
 - Documented process for vulnerability disclosure and handling, including 24-hour early warning, 72-hour main notification, and final report.
 - Provision of security updates within legal deadlines and over the supported lifecycle.
-- Documented conformity assessment: self-assessment for most products; third-party assessment for critical or important products according to Annex III/IV.
+- Documented conformity assessment under Article 32: distinguish normal products, Annex III class I/II and Annex IV; class I may use internal control under the statutory conditions. Do not claim mandatory third-party assessment for every important product.
 - Marking, technical documentation, and declaration of conformity according to CRA requirements before market provision.
 
 Even outside the formal CRA scope, the project or adopting organization aligns its practice with CRA principles: secure by design, secure by default, continuous vulnerability management, lifecycle transparency, and SBOM availability. The CRA applicability decision is recorded in the project's security documentation, for example in the supply-chain evidence document or as an S-ADR.

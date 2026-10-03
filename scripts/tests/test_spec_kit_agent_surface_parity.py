@@ -27,6 +27,18 @@ def strip_frontmatter(text: str) -> str:
     return normalized.strip()
 
 
+def opencode_directory(manifest: dict) -> Path:
+    # DE: Die versionierte Integration bestimmt den Pfad, nicht lokale Caches.
+    # EN: The tracked integration chooses the path, never machine-local caches.
+    files = manifest.get("files", {})
+    if not isinstance(files, dict) or not files:
+        raise ValueError("OpenCode integration has no bound files")
+    parents = {str(Path(path).parent) for path in files}
+    if len(parents) != 1 or not parents <= {".opencode/command", ".opencode/commands"}:
+        raise ValueError("OpenCode integration has an unsafe or mixed namespace")
+    return REPOSITORY / parents.pop()
+
+
 def command_path(surface: str, command: str) -> Path:
     skill = command.replace(".", "-")
     layouts = {
@@ -34,14 +46,23 @@ def command_path(surface: str, command: str) -> Path:
         "codex": REPOSITORY / ".agents" / "skills" / skill / "SKILL.md",
         "claude": REPOSITORY / ".claude" / "skills" / skill / "SKILL.md",
         "copilot": REPOSITORY / ".github" / "agents" / f"{command}.agent.md",
-        # The tracked OpenCode contract uses the singular ``command`` path.
-        # A machine-local ``commands`` cache must never redirect parity checks.
-        "opencode": REPOSITORY / ".opencode" / "command" / f"{command}.md",
+        "opencode": opencode_directory(read_json(
+            REPOSITORY / ".specify" / "integrations" / "opencode.manifest.json"
+        )) / f"{command}.md",
     }
     return layouts[surface]
 
 
 class SpecKitAgentSurfaceParityTests(unittest.TestCase):
+    def test_opencode_namespace_requires_one_bound_safe_directory(self) -> None:
+        for namespace in ("command", "commands"):
+            manifest = {"files": {f".opencode/{namespace}/speckit.plan.md": "hash"}}
+            self.assertEqual(opencode_directory(manifest), REPOSITORY / ".opencode" / namespace)
+        for paths in ([], [".opencode/command/a.md", ".opencode/commands/b.md"],
+                      ["../command/a.md"], ["/tmp/command/a.md"]):
+            with self.assertRaises(ValueError):
+                opencode_directory({"files": dict.fromkeys(paths, "hash")})
+
     @classmethod
     def setUpClass(cls) -> None:
         cls.registry = read_json(PRESETS / ".registry")["presets"]

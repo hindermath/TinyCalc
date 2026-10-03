@@ -24,8 +24,8 @@ Workspace-Familie ist:
 
 | Preset-ID | Name | Version | Priorität |
 |---|---|---:|---:|
-| `security-governance` | Security Governance | `v0.6.2` | `10` |
-| `architecture-governance` | Architecture Governance | `v0.5.2` | `20` |
+| `security-governance` | Security Governance | `v0.7.0` | `10` |
+| `architecture-governance` | Architecture Governance | `v0.6.1` | `20` |
 | `isaqb-architecture-governance` | iSAQB Architecture Governance | `v0.2.2` | `30` |
 | `a11y-governance` | A11Y Governance | `v0.4.3` | `40` |
 | `cross-platform-governance` | Cross-Platform Governance | `v0.2.2` | `50` |
@@ -34,9 +34,9 @@ Workspace-Familie ist:
 | `parallel-autonomous-run-governance` | Parallel Autonomous Run Governance | `v0.2.6` | `80` |
 
 Optional koennen `model-routing-governance` v0.1.4 mit Prioritaet `61`,
-`intake-authoring-governance` v0.3.5 mit Prioritaet `64`,
-`intake-review-governance` v0.2.3 mit Prioritaet `65` und
-`intake-sequencing-governance` v0.2.6 mit Prioritaet `66` zwischen Agent Parity
+`intake-authoring-governance` v0.3.6 mit Prioritaet `64`,
+`intake-review-governance` v0.2.4 mit Prioritaet `65` und
+`intake-sequencing-governance` v0.2.7 mit Prioritaet `66` zwischen Agent Parity
 und Preset 7 installiert werden. Alle vier bleiben ausserhalb der
 Standard-Achtermatrix.
 Authoring erzeugt aus ausdruecklich benannten geordneten UTF-8-Quellen genau
@@ -179,8 +179,8 @@ zero-write values. A partial proof is not a full regression pass.
 
 | Preset ID | Name | Version | Priority |
 |---|---|---:|---:|
-| `security-governance` | Security Governance | `v0.6.2` | `10` |
-| `architecture-governance` | Architecture Governance | `v0.5.2` | `20` |
+| `security-governance` | Security Governance | `v0.7.0` | `10` |
+| `architecture-governance` | Architecture Governance | `v0.6.1` | `20` |
 | `isaqb-architecture-governance` | iSAQB Architecture Governance | `v0.2.2` | `30` |
 | `a11y-governance` | A11Y Governance | `v0.4.3` | `40` |
 | `cross-platform-governance` | Cross-Platform Governance | `v0.2.2` | `50` |
@@ -189,9 +189,9 @@ zero-write values. A partial proof is not a full regression pass.
 | `parallel-autonomous-run-governance` | Parallel Autonomous Run Governance | `v0.2.6` | `80` |
 
 Optionally install `model-routing-governance` v0.1.4 at priority `61`,
-`intake-authoring-governance` v0.3.5 at priority `64`,
-`intake-review-governance` v0.2.3 at priority `65`, and
-`intake-sequencing-governance` v0.2.6 at priority `66` between Agent Parity and
+`intake-authoring-governance` v0.3.6 at priority `64`,
+`intake-review-governance` v0.2.4 at priority `65`, and
+`intake-sequencing-governance` v0.2.7 at priority `66` between Agent Parity and
 Preset 7. All four remain outside the standard eight. Authoring creates one intake
 and receipt from explicit ordered UTF-8 sources without starting a downstream
 command. Review evaluates that intake independently. Sequencing manages order,
@@ -315,3 +315,23 @@ checks. Add final merge/sync proof in chat and existing closeout evidence, witho
 commits solely for self-referential counts or IDs. Preserve local rules/templates
 across Spec Kit updates.*
 <!-- END spec-kit-diagrams-completion -->
+
+## Governance-Jahrespruefung und Lieferstufen / Annual governance review and delivery stages
+
+DE: Die urspruenglichen sechs Governance-Presets plus Secure Development
+Assurance werden am 3. Oktober jaehrlich geprueft; naechster Termin
+2027-10-03, 10:00 Europe/Berlin. Anlasspruefungen verschieben den Termin nicht.
+Die Automation liest und berichtet nur; Aenderungen brauchen einen Auftrag.
+Lieferung: A Home Baseline/betroffene Home Runtime, B zwei je Vorhaben benannte
+public Level-2-Piloten, C restliche betroffene public Level-2-Verbraucher erst
+nach separatem Auftrag, D restliche betroffene Flotte nach erneutem Auftrag.
+Aktuelle Piloten: Show-CommandTui400 und TinyCalc. Keine implizite Flotten-,
+Werkzeuginstallations-, Produktlauf- oder Community-Autoritaet. Admin-Bypass
+nur nach erfolgreich abgeschlossenen technischen Checks des exakten Heads.
+EN: Review the original six governance presets plus Secure Development
+Assurance annually on 3 October; next due 2027-10-03 at 10:00 Europe/Berlin.
+Event reviews do not reset the date. Automation only reads and reports.
+Deliver central/runtime first, then two named public Level-2 pilots. Remaining
+public Level-2 consumers require a separate request; the remaining affected
+fleet requires another request. No implicit tool, product or community authority.
+See docs/maintenance/governance-review-and-rollout.md in the Level-0 source.

@@ -1,7 +1,7 @@
 # Generischer Leitfaden Sichere Entwicklung / Generic Secure Development Guide
 
-**Stand / Date:** 2026-07-10
-**Baseline-Version / Baseline version:** 3.0.0
+**Stand / Date:** 2026-10-03
+**Baseline-Version / Baseline version:** 3.3.0
 **Zielgruppe / Audience:** Fachinformatik-Auszubildende, Entwickler*innen, Reviewer und KI-Agenten in Level-2-Projekten / IT specialist apprentices, developers, reviewers, and AI agents in level-2 projects
 
 ## Zweck / Purpose

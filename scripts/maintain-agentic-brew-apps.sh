@@ -183,6 +183,12 @@ fi
 }
 
 OS_NAME="$(uname -s)"
+if [ "$OS_NAME" = "Linux" ] && ! command -v brew >/dev/null 2>&1; then
+  # Distro Cargo may be in /usr/bin while cargo install writes to a user bin.
+  # Appending preserves the existing toolchain preference and enables later probes.
+  PATH="$PATH:${CARGO_INSTALL_ROOT:-${CARGO_HOME:-$HOME/.cargo}}/bin"
+  export PATH
+fi
 WORK_DIR="$(mktemp -d)"
 RESULT_ROWS="$WORK_DIR/registry-item-results.tsv"
 ATTEMPTS_FILE="$WORK_DIR/attempts.tsv"
@@ -829,6 +835,28 @@ install_cli_tool() {
   local arg
 
   case "$manager" in
+    cargo)
+      # Package managers own macOS and Homebrew installs. Cargo is only the
+      # Linux fallback; --locked retains upstream's dependency resolution.
+      if [ "$OS_NAME" != "Linux" ] || command -v brew >/dev/null 2>&1; then
+        log "MISSING cli tool: $id (Paketmanager-Installation pruefen / check package-manager installation)"
+        return 0
+      fi
+      while IFS= read -r arg; do
+        install_args+=("$arg")
+      done < <(json_array_items "$install_args_json")
+      log "INSTALL cli tool: $id (locked Cargo build)"
+      mark_attempt cli "$id"
+      if [ "$DRY_RUN" -eq 1 ] || command -v cargo >/dev/null 2>&1; then
+        if ! run_cmd cargo "${install_args[@]}" </dev/null; then
+          mark_failed_attempt cli "$id"
+        fi
+        hash -r
+      else
+        log "SKIP cli tool install: $id (cargo fehlt / cargo missing)"
+        mark_failed_attempt cli "$id"
+      fi
+      ;;
     uv)
       while IFS= read -r arg; do
         install_args+=("$arg")

@@ -3,18 +3,18 @@
   "assessmentId": "rl-se-self-assessment-2026-09-05",
   "baseline": {
     "manifestPath": "docs/secure-development/baseline-manifest.json",
-    "baselineVersion": "3.2.0",
-    "manifestNormalizedSha256": "e7739adbf67b2d0f16273f52839c2cb6d4807753f7246b33bac6969b59355ad3",
+    "baselineVersion": "3.3.0",
+    "manifestNormalizedSha256": "11279e2a66f820f1a58b0a4af0d9e22ec3fbf4a7d298cae798d3f10383c46ed0",
     "documentBindings": [
       {
         "path": "Richtlinie_Sichere-Entwicklung.md",
-        "version": "3.2.0",
-        "normalizedSha256": "bd2947abf2c367a23c3461ea84de50ac5202436c3b15b5c6d9b6bb64318e132e"
+        "version": "3.3.0",
+        "normalizedSha256": "80d1b72f5648e2a948803767dabdfea491ed2c5b936dc8179c081389b32aa469"
       },
       {
         "path": "Checklistensammelband_Sichere-Entwicklung.md",
-        "version": "2.2.0",
-        "normalizedSha256": "ac4ebb80a4954db060074762f99c211930a347bec965902dc08becf608aa0b69"
+        "version": "2.3.0",
+        "normalizedSha256": "701c695b800111684223e597bd463e68889cbce656de258ea6247a88eb6bf164"
       },
       {
         "path": "checklisten/CL_01_Standards-Anwendbarkeit.md",
@@ -387,7 +387,7 @@
       "disposition": "FollowUp",
       "applicability": "Applicable",
       "implementationStatus": "Partly Fulfilled",
-      "rationale": "The explicitly authorised manifest correction now binds baseline 3.2.0 consistently. The matrix records every non-applicable point with a reason and trigger, while the broader standards review remains periodic follow-up work.",
+      "rationale": "The explicitly authorised manifest correction now binds baseline 3.3.0 consistently. The matrix records every non-applicable point with a reason and trigger, while the broader standards review remains periodic follow-up work.",
       "evidence": [
         "docs/secure-development/baseline-manifest.json",
         "docs/secure-development/Richtlinie_Sichere-Entwicklung.md"

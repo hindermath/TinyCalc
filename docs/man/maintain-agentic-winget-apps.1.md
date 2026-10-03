@@ -73,6 +73,40 @@ the installed WinGet version, it uses `winget source update` as a compatible
 fallback. Package IDs are checked with `winget search --id <Id> --exact` before
 installation.*
 
+## Dokumentwerkzeuge (Document tools)
+
+Pandoc (`JohnMacFarlane.Pandoc`) und Typst CLI (`Typst.Typst`) sind
+Pflichtpakete. Nach der Paketpflege werden `pandoc --version` und
+`typst --version` geprueft. Die Community-Erweiterung Tinymist Typst
+(`myriad-dreamin.tinymist`) ist in VS Code Pflicht und verwaltet ihren
+Language Server selbst. Das separate Paket `Myriad-Dreamin.Tinymist` bleibt
+optional und wird nur mit `-IncludeOptional` nachinstalliert. Eine fehlende
+optionale `tinymist`-CLI blockiert den Pflichtstatus nicht.
+`-WhatIf` und `-CompareOnly` installieren keine Dokumentwerkzeuge.
+
+*Pandoc (`JohnMacFarlane.Pandoc`) and Typst CLI (`Typst.Typst`) are required
+packages, checked with `pandoc --version` and `typst --version` after package
+maintenance. The community-maintained Tinymist Typst extension
+(`myriad-dreamin.tinymist`) is required in VS Code and manages its own
+language server. Standalone `Myriad-Dreamin.Tinymist` remains optional and
+is installed only with `-IncludeOptional`. A missing optional `tinymist`
+CLI does not block required status. `-WhatIf` and `-CompareOnly` do not
+install document tools.*
+
+PDF-Smoke-Test in einem temporaeren Verzeichnis / PDF smoke test in a temporary
+directory:
+
+```powershell
+pandoc input.md --standalone --to typst --output input.typ
+typst compile input.typ output.pdf
+```
+
+Die erzeugte PDF-Datei belegt die Konvertierung und Kompilierung. Die
+Barrierefreiheit der Ausgabe benoetigt eine eigene inhaltliche Pruefung.
+
+*The generated PDF proves conversion and compilation. Output accessibility
+requires a separate semantic review.*
+
 ## Optionen / Options
 
 | Option | Bedeutung / Meaning |
@@ -103,12 +137,14 @@ pwsh -NoProfile -File scripts/maintain-agentic-winget-apps.ps1
 | Code | Bedeutung / Meaning |
 |---:|---|
 | `0` | Aktuell oder erfolgreich / Current or successful |
+| `1` | Fehlende oder unbrauchbare Pflichtpakete, CLIs oder Extensions, auch in der Vorschau / Missing or unusable required packages, CLIs, or extensions, including preview |
 | `2` | Betriebsfehler oder widerspruechlicher Paketstatus / Operational error or contradictory package status |
 | `75` | `DEFERRED_ADMIN_REQUIRED`; sicher erneut mit aktueller Autoritaet ausfuehren / safely rerun with current authority |
 
 ## Abschlusskriterien / Closeout Criteria
 
 - `gitleaks version` funktioniert.
+- `pandoc --version` und `typst --version` funktionieren; `myriad-dreamin.tinymist` ist installiert. / Both document CLIs work and the required Typst extension is installed.
 - `syft version` und `specify --version` funktionieren.
 - `codex --version`, `claude --version`, `agy --version` und
   `copilot --help` funktionieren.
