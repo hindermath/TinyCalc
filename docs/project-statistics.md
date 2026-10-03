@@ -578,6 +578,8 @@ runtime evidence.*
 
 | 2026-10-03 | Koordinierter Governance-Pilot / Coordinated governance pilot | Fuenf veroeffentlichte Presets und Wartungsdateien integriert; technische Baseline-/GSDB-/RL-SE-Quellenbindung aktualisiert, Statusachsen/Findings/menschliche Freigaben erhalten. Restore, Release-Build, 82 xUnit-Tests und TUI-Smoke bestanden. Keine Produkt-API-/Featureimplementierung; Buildzaehler vor Build/Test erhoeht. Bestehende Statistiken werden ohne Methodikaenderung reproduzierbar erneuert; keine Produktivitaetsmessung. / Bounded source-binding refresh and product regression, no feature implementation or new human approval. [Evidence](maintenance/coordinated-governance-oct03.md). |
 
+| 2026-10-03 | Portabler Paritaetstest / Portable parity test | PurePosixPath korrigiert den Windows-Separatorvergleich im manifestgebundenen OpenCode-Test; ungueltige Pfade blockieren weiterhin. UpdateRequired fuer Nachweis, GeneratedUpdate fuer bestehende Statistik; kein Produkt-/Evidence-Delta. / Host-independent manifest parsing, unchanged safety gates and existing statistics methodology. |
+
 ## Statistikprofil-1-Archiv / Statistics Profile 1 Archive
 Basis dieses Schlussblocks sind die aktuell dokumentierten Snapshot- und
 Phasenwerte aus den Abschnitten `## Gesamtstand des Repositories` und

@@ -5,7 +5,7 @@ from __future__ import annotations
 
 from collections import Counter
 import json
-from pathlib import Path
+from pathlib import Path, PurePosixPath
 import unittest
 
 
@@ -33,7 +33,9 @@ def opencode_directory(manifest: dict) -> Path:
     files = manifest.get("files", {})
     if not isinstance(files, dict) or not files:
         raise ValueError("OpenCode integration has no bound files")
-    parents = {str(Path(path).parent) for path in files}
+    # DE: Manifestpfade bleiben POSIX, auch auf einem Windows-Host.
+    # EN: Manifest paths use POSIX syntax even on a Windows host.
+    parents = {str(PurePosixPath(path).parent) for path in files}
     if len(parents) != 1 or not parents <= {".opencode/command", ".opencode/commands"}:
         raise ValueError("OpenCode integration has an unsafe or mixed namespace")
     return REPOSITORY / parents.pop()
@@ -59,7 +61,8 @@ class SpecKitAgentSurfaceParityTests(unittest.TestCase):
             manifest = {"files": {f".opencode/{namespace}/speckit.plan.md": "hash"}}
             self.assertEqual(opencode_directory(manifest), REPOSITORY / ".opencode" / namespace)
         for paths in ([], [".opencode/command/a.md", ".opencode/commands/b.md"],
-                      ["../command/a.md"], ["/tmp/command/a.md"]):
+                      ["../command/a.md"], ["/tmp/command/a.md"],
+                      [r".opencode\command\a.md"], [r"C:\tmp\command\a.md"]):
             with self.assertRaises(ValueError):
                 opencode_directory({"files": dict.fromkeys(paths, "hash")})
 
