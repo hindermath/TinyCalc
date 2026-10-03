@@ -578,6 +578,8 @@ runtime evidence.*
 
 | 2026-10-03 | Koordinierter Governance-Pilot / Coordinated governance pilot | Fuenf veroeffentlichte Presets und Wartungsdateien integriert; technische Baseline-/GSDB-/RL-SE-Quellenbindung aktualisiert, Statusachsen/Findings/menschliche Freigaben erhalten. Restore, Release-Build, 82 xUnit-Tests und TUI-Smoke bestanden. Keine Produkt-API-/Featureimplementierung; Buildzaehler vor Build/Test erhoeht. Bestehende Statistiken werden ohne Methodikaenderung reproduzierbar erneuert; keine Produktivitaetsmessung. / Bounded source-binding refresh and product regression, no feature implementation or new human approval. [Evidence](maintenance/coordinated-governance-oct03.md). |
 
+| 2026-10-03 | Portabler Paritaetstest / Portable parity test | PurePosixPath korrigiert den Windows-Separatorvergleich im manifestgebundenen OpenCode-Test; ungueltige Pfade blockieren weiterhin. UpdateRequired fuer Nachweis, GeneratedUpdate fuer bestehende Statistik; kein Produkt-/Evidence-Delta. / Host-independent manifest parsing, unchanged safety gates and existing statistics methodology. |
+
 ## Statistikprofil-1-Archiv / Statistics Profile 1 Archive
 Basis dieses Schlussblocks sind die aktuell dokumentierten Snapshot- und
 Phasenwerte aus den Abschnitten `## Gesamtstand des Repositories` und
@@ -741,25 +743,25 @@ Profil 2 verwendet Git-getrackte Textdateien und sichtbare Git-Aktivitaet. Die W
 
 | Kennzahl / Metric | Wert / Value |
 |---|---:|
-| Textbasis / Text base | 217242 lines |
+| Textbasis / Text base | 217259 lines |
 | Textdateien / Text files | 1368 |
 | Beobachtbarer Zeitraum / Observable period | 2025-10-05..2026-10-03 |
 | Aktivtage / Active days | 87 |
-| Relevante Commits / Relevant commits | 255 |
-| Zeilen je Aktivtag / Lines per active day | 2497.0 |
+| Relevante Commits / Relevant commits | 257 |
+| Zeilen je Aktivtag / Lines per active day | 2497.2 |
 | Peak-Tag im Fenster / Peak day in window | 2026-06-17 / 27058 |
 | Peak-Woche im Fenster / Peak week in window | 2026-07-19 / 33387 |
 | Laengste Serie / Longest streak | 8 days |
 | Speedup vs. 80 lines/day | 31.2x |
 | Speedup vs. 125 lines/day | 20.0x |
-| Methodik / Methodology | v2; source `9f09f2bf7f58` |
+| Methodik / Methodology | v2; source `d4c0deb57c7e` |
 
 ### Artefaktmix / Artifact Mix
 
 ```text
 Produktiv / Production          [#...................]   1.3% | 2830
-Tests                           [#...................]   4.2% | 9206
-Dokumentation / Documentation   [###############.....]  72.8% | 158149
+Tests                           [#...................]   4.2% | 9214
+Dokumentation / Documentation   [###############.....]  72.8% | 158158
 Skripte / Scripts               [###.................]  13.1% | 28448
 Konfiguration / Configuration   [#...................]   7.2% | 15594
 Daten und Medien / Data and media [....................]   0.0% | 0
@@ -909,7 +911,7 @@ Die Faktoren vergleichen sichtbare Lieferdichte mit den dokumentierten manuellen
 Scale: 0..5000 lines/day
 Experienced manual [#...................] 80
 Thorsten solo      [#...................] 125
-Visible repository [##########..........] 2497.0
+Visible repository [##########..........] 2497.2
 ```
 
 Die gemeinsame Skala vergleicht Referenzen und sichtbare Lieferdichte. Sie schreibt die Git-Aktivitaet keiner Person oder KI pauschal zu.
@@ -935,6 +937,6 @@ DE: Das Fenster beginnt am 2025-10-05 und endet am 2026-10-03. Es enthaelt 87 ak
 | 2026-07 | 74031 |
 | 2026-08 | 26210 |
 | 2026-09 | 70997 |
-| 2026-10 | 6053 |
+| 2026-10 | 6080 |
 
 <!-- project-statistics-v2:end -->

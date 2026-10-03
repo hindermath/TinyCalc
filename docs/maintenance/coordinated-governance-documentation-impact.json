@@ -6,7 +6,7 @@
       "changeId": "CHG001",
       "scope": "Five preset updates, maintenance files, project guidance and bounded GSDB/RL-SE source refresh",
       "decision": "UpdateRequired",
-      "rationale": "Released sources and shared normative version/scope references changed.",
+      "rationale": "Released sources and shared normative version/scope references changed; bounded shared-test follow-up uses POSIX manifest parsing independently of host separators, preserving path rejection and all product/evidence decisions.",
       "documents": [
         "README.md",
         "docs/security/README.md",

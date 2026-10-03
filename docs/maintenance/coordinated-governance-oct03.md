@@ -1,5 +1,14 @@
 # Koordinierter Governance-Pilot / Coordinated governance pilot
 
+DE: Technischer Test-Nachlauf: zentrale Windows-CI in Home Baseline #322
+fand einen OS-abhaengigen Namespacevergleich. PurePosixPath wertet jetzt
+getrackte Manifestpfade plattformneutral aus; Backslash-/Drive-Pfade bleiben
+ungueltig. Nur gemeinsamer Test, Nachweis und bestehende Statistikableitungen
+aendern sich. Keine Paket-, Produkt-, Baseline- oder Evidence-Aenderung.
+EN: Bounded follow-up to central #322 parses tracked manifest paths as POSIX
+on every host and rejects backslash/drive paths. Only test, documentation and
+existing statistics change; no product, package or assurance-evidence changes.
+
 Datum / Date: 2026-10-03. Owner: Thorsten Hindermann.
 Technical reviewer: Codex, not an independent human approval.
 Source bindings are current; delivery evidence is recorded in hand-off #92.
