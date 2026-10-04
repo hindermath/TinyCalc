@@ -1,0 +1,221 @@
+{
+  "schemaVersion": "2.0",
+  "documentType": "IntakeReceipt",
+  "receiptId": "dc355aa6-c523-414c-a472-542967ba62ed",
+  "intakeId": "749660e0-3880-4a4a-a0c4-9dd15582d96e",
+  "generator": {
+    "preset": "intake-authoring-governance",
+    "version": "0.3.1"
+  },
+  "createdAt": "2026-09-01T07:17:52Z",
+  "operation": {
+    "operationId": "97c7ee77-1286-4642-92fc-c64982ac18a5",
+    "type": "Update",
+    "authorityEvidence": "The user explicitly requested implementation of the approved intake-only consolidation plan. No product implementation, commit, push, pull request, merge, bypass, provider, or follow-up-feature authority is granted."
+  },
+  "status": "ReadyForReview",
+  "target": {
+    "path": "requirements/intakes/active/Lastenheft_Legacy-Kompatibilitaet_V1.md",
+    "normalizedSha256": "2e6a8036d18e7d3ed7360623f841a31411d245c5acf1441f0fe9d5877fc475b1"
+  },
+  "sources": [
+    {
+      "sourceId": "SRC001",
+      "order": 1,
+      "kind": "File",
+      "label": "Byte-identical prior active intake",
+      "location": "Repository",
+      "path": "requirements/intakes/archive/legacy-kompatibilitaet-v1/20260901T071752Z/Lastenheft_Legacy-Kompatibilitaet_V1.md",
+      "requestedUrl": "N/A",
+      "finalUrl": "N/A",
+      "retrievedAt": "N/A",
+      "httpStatus": "N/A",
+      "contentType": "N/A",
+      "contentLength": "N/A",
+      "etag": "N/A",
+      "lastModified": "N/A",
+      "redirectChain": [],
+      "rawSha256": "N/A",
+      "normalizedSha256": "708b95f6cf3069ae6dbd31e0f11f8c81928791db4550b1a710051fcef438d5f3",
+      "gitBlob": "N/A",
+      "proofBoundary": "Byte-identical repository archive"
+    },
+    {
+      "sourceId": "SRC002",
+      "order": 2,
+      "kind": "Inline",
+      "label": "Approved fixture, legacy-disposition, and BCD-scope decisions",
+      "location": "SnapshotOnly",
+      "path": "N/A",
+      "requestedUrl": "N/A",
+      "finalUrl": "N/A",
+      "retrievedAt": "N/A",
+      "httpStatus": "N/A",
+      "contentType": "N/A",
+      "contentLength": "N/A",
+      "etag": "N/A",
+      "lastModified": "N/A",
+      "redirectChain": [],
+      "rawSha256": "N/A",
+      "normalizedSha256": "a7a36dce17be30c8f49235e326396c24ea32ffbd945c5ab7ef8c91552dbff348",
+      "gitBlob": "N/A",
+      "proofBoundary": "SnapshotOnly"
+    },
+    {
+      "sourceId": "SRC003",
+      "order": 3,
+      "kind": "File",
+      "label": "Historical MicroCalc program source",
+      "location": "Repository",
+      "path": "CALC.PAS",
+      "requestedUrl": "N/A",
+      "finalUrl": "N/A",
+      "retrievedAt": "N/A",
+      "httpStatus": "N/A",
+      "contentType": "N/A",
+      "contentLength": "N/A",
+      "etag": "N/A",
+      "lastModified": "N/A",
+      "redirectChain": [],
+      "rawSha256": "N/A",
+      "normalizedSha256": "9e2e989259d1550ba441adb29ca3f96134ac4a7983ba69a3769b4e8d5956b248",
+      "gitBlob": "37a77807179e266a2889057fefa3861dedd82021",
+      "proofBoundary": "Repository file and normalized SHA-256"
+    },
+    {
+      "sourceId": "SRC004",
+      "order": 4,
+      "kind": "File",
+      "label": "Historical MicroCalc implementation source",
+      "location": "Repository",
+      "path": "CALC.INC",
+      "requestedUrl": "N/A",
+      "finalUrl": "N/A",
+      "retrievedAt": "N/A",
+      "httpStatus": "N/A",
+      "contentType": "N/A",
+      "contentLength": "N/A",
+      "etag": "N/A",
+      "lastModified": "N/A",
+      "redirectChain": [],
+      "rawSha256": "N/A",
+      "normalizedSha256": "cd57d4d7d290f1a255f00364e4a63585225ee22bd048b9a88c3ab8ee8e3154a0",
+      "gitBlob": "c7230de2eaa323d8c1b35f7724b4e9b976aac8a4",
+      "proofBoundary": "Repository file and normalized SHA-256"
+    },
+    {
+      "sourceId": "SRC005",
+      "order": 5,
+      "kind": "File",
+      "label": "Historical MicroCalc help source",
+      "location": "Repository",
+      "path": "CALC.HLP",
+      "requestedUrl": "N/A",
+      "finalUrl": "N/A",
+      "retrievedAt": "N/A",
+      "httpStatus": "N/A",
+      "contentType": "N/A",
+      "contentLength": "N/A",
+      "etag": "N/A",
+      "lastModified": "N/A",
+      "redirectChain": [],
+      "rawSha256": "N/A",
+      "normalizedSha256": "04c8366203c1b4120b73f7e8dc30a9d6be673d0a4de41a7024eee608e646832f",
+      "gitBlob": "32ab848c2b02539b86df454cff94c4cf5c3ee354",
+      "proofBoundary": "Repository file and normalized SHA-256"
+    },
+    {
+      "sourceId": "SRC006",
+      "order": 6,
+      "kind": "File",
+      "label": "Preserved C sharp port baseline",
+      "location": "Repository",
+      "path": "requirements/baseline/PLAN_MICROCALC_CSHARP_DOTNET10.pre-intake-split.2026-07-26.md",
+      "requestedUrl": "N/A",
+      "finalUrl": "N/A",
+      "retrievedAt": "N/A",
+      "httpStatus": "N/A",
+      "contentType": "N/A",
+      "contentLength": "N/A",
+      "etag": "N/A",
+      "lastModified": "N/A",
+      "redirectChain": [],
+      "rawSha256": "N/A",
+      "normalizedSha256": "f49dc38460ca5baa06c06ebe0fc887c20e8ffd1ae6d74eecefd22ed6b6a244e4",
+      "gitBlob": "79cc855c4c17d94f8259c5014cb5cd2f21e10074",
+      "proofBoundary": "Repository file and normalized SHA-256"
+    }
+  ],
+  "profile": "level2-lastenheft",
+  "languagePolicy": "GermanFirstEnglishSecond",
+  "decisions": [
+    {
+      "id": "IAD001",
+      "status": "Answered",
+      "question": "Should legacy parity and structural spreadsheet features share one intake?",
+      "answer": "No. Legacy compatibility is completed first and structural spreadsheet extensions follow separately.",
+      "evidence": "Explicit user decision."
+    },
+    {
+      "id": "IAD002",
+      "status": "Answered",
+      "question": "Which MCS variants are supported?",
+      "answer": "Version 1 imports the evidenced standard and 8087 variants; JSON is the only write format.",
+      "evidence": "Explicit user decision."
+    },
+    {
+      "id": "IAD003",
+      "status": "Answered",
+      "question": "How is historical platform-specific behaviour treated?",
+      "answer": "Useful semantics receive accessible modern paths; obsolete device, path, scan-code, and video mechanics are non-goals.",
+      "evidence": "Approved source comparison."
+    },
+    {
+      "id": "IAD004",
+      "status": "Answered",
+      "question": "What counts as an authentic fixture?",
+      "answer": "A file generated and read back with the original matching compiler toolchain under a reproducible DOS environment is compiler-authentic.",
+      "evidence": "Explicit user selection."
+    },
+    {
+      "id": "IAD005",
+      "status": "Answered",
+      "question": "How is TURBOBCD.COM treated?",
+      "answer": "BCD is excluded from Version 1 because the historical MicroCalc source cannot compile with it; only authentic counter-evidence and an approved intake update can reopen scope.",
+      "evidence": "User-approved result of the BCD research gate and CALC.INC source evidence."
+    }
+  ],
+  "openDecisionIds": [],
+  "questionCount": 5,
+  "agentSurface": {
+    "specifyCanonicalId": "speckit.specify",
+    "specifyInvocation": "$speckit-specify",
+    "autonomousCanonicalId": "speckit.autonomous",
+    "autonomousInvocation": "$speckit-autonomous"
+  },
+  "deliveryAuthority": "LocalImplementation",
+  "authorityEvidence": "The user explicitly requested implementation of the approved intake-only consolidation plan. No product implementation, commit, push, pull request, merge, bypass, provider, or follow-up-feature authority is granted.",
+  "promptState": "Enabled",
+  "provenanceMode": "Supersession",
+  "supersedes": {
+    "receiptPath": "specs/intake-authoring-receipts/history/legacy-kompatibilitaet-v1.20260901T071752Z.json",
+    "targetNormalizedSha256": "708b95f6cf3069ae6dbd31e0f11f8c81928791db4550b1a710051fcef438d5f3",
+    "archiveTargetPath": "requirements/intakes/archive/legacy-kompatibilitaet-v1/20260901T071752Z/Lastenheft_Legacy-Kompatibilitaet_V1.md",
+    "archiveReceiptPath": "specs/intake-authoring-receipts/history/legacy-kompatibilitaet-v1.20260901T071752Z.json"
+  },
+  "legacyAdoption": {
+    "evidenceType": "N/A",
+    "priorTargetNormalizedSha256": "N/A",
+    "priorGitBlob": "N/A"
+  },
+  "updateAuthorized": true,
+  "updateAuthorityEvidence": "The user explicitly requested implementation of the approved intake-only consolidation plan. No product implementation, commit, push, pull request, merge, bypass, provider, or follow-up-feature authority is granted.",
+  "series": {
+    "seriesId": "5b4523b4-d946-4091-9cbc-11825af94332",
+    "manifestPath": "requirements/intakes/series/tinycalc-delivery/manifest.json",
+    "order": 9,
+    "role": "OrderedMember",
+    "supersedesIntakeIds": []
+  },
+  "nextAction": "$speckit-intake-review requirements/intakes/active/Lastenheft_Legacy-Kompatibilitaet_V1.md"
+}

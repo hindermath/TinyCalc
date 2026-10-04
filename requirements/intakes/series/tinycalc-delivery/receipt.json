@@ -1,28 +1,28 @@
 {
   "schemaVersion": "1.0",
   "documentType": "IntakeSeriesReceipt",
-  "receiptId": "a5e57c0f-f778-49a1-ae8e-bb99ea9a7342",
+  "receiptId": "6bb42797-ecda-48d8-a69d-a41470d25531",
   "seriesId": "5b4523b4-d946-4091-9cbc-11825af94332",
   "generator": {
     "preset": "intake-sequencing-governance",
-    "version": "0.2.6"
+    "version": "0.2.7"
   },
-  "createdAt": "2026-09-13T17:28:29Z",
+  "createdAt": "2026-10-03T23:56:45Z",
   "operation": {
-    "authorityEvidence": "$speckit-intake-repair specs/intake-review-remediation/20260913/didactic-inline-code-comment-hardening/result.json; causal series hash update only, with order, dependencies and lifecycle preserved.",
     "type": "Update",
-    "operationId": "398b5798-ddd8-4cdf-bc64-be0c4f8f8174"
+    "operationId": "ac96867f-2f6f-437e-8c2b-0b818404bbfb",
+    "authorityEvidence": "Thorsten explicitly approved the eight bounded language updates, both README bindings, archive/lineage/series evidence and full re-review on 2026-10-04. Current maintenance delivery is MergeAndSync with admin bypass for formal merge rules only. Future intake scope and authority remain unchanged."
   },
   "status": "Ready",
   "manifest": {
     "path": "requirements/intakes/series/tinycalc-delivery/manifest.json",
-    "normalizedSha256": "97cda99469ff71179ccb8eef120666ad245f9507e629bea00d2ec8458360f447"
+    "normalizedSha256": "84f6b7bf93b09bbeb7c187374f9cae1208432ebc5cf4221e7e9767143c3c8b42"
   },
   "supersedes": {
-    "receiptNormalizedSha256": "41c65c93341735eba6eb003760aecd60496fee326c8a524ab1fcecf759c6cc4a",
-    "receiptPath": "requirements/intakes/series-archive/tinycalc-delivery/20260913T172829Z-ir002-repair/receipt.json",
-    "manifestArchiveSha256": "09c14e212bc31330b44098d02cb1cc0ae1b9a413c458347a3be45faf6b51a9b7",
-    "manifestArchivePath": "requirements/intakes/series-archive/tinycalc-delivery/20260913T172829Z-ir002-repair/manifest.json"
+    "receiptPath": "requirements/intakes/series-archive/tinycalc-delivery/20261004-language-repair/receipt.json",
+    "receiptNormalizedSha256": "59cf2382398a26c37987b4a5c2c1d55f47fdab0acce3ee70940dcb4a6b4491f2",
+    "manifestArchiveSha256": "97cda99469ff71179ccb8eef120666ad245f9507e629bea00d2ec8458360f447",
+    "manifestArchivePath": "requirements/intakes/series-archive/tinycalc-delivery/20261004-language-repair/manifest.json"
   },
   "tombstone": {
     "path": "N/A",

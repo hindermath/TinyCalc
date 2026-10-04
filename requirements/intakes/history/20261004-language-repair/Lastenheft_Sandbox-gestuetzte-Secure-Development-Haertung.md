@@ -1,58 +1,9 @@
 <!-- intake-authoring:begin -->
 # Lastenheft: Sandbox-gestuetzte Secure-Development-Haertung
 
-## Lesehilfe und Workflow / Reading Guide and Workflow
-
-Deutsch: Grundlegende Tabellen-, Datei- und Tastaturbedienung genügt zum Einstieg;
-Spec-Kit- oder Security-Erfahrung wird nicht vorausgesetzt. Ein Intake legt den
-Umfang fest. `Specify` erstellt nur `spec.md` (Anforderungen), `plan.md` beschreibt
-den Lösungsweg und `tasks.md` einzelne Schritte. `Autonomous` führt einen separat
-beauftragten Lauf aus. `LocalImplementation` erlaubt lokale Arbeit, keine
-Veröffentlichung. `Eligible` bezeichnet einen Kandidaten, keine Startfreigabe.
-Ein Receipt ist ein Herkunftsnachweis; Evidence ein prüfbarer Beleg und ein Hash
-ein Inhaltsfingerabdruck. Preflight bedeutet Vorprüfung, Gate eine Prüfschranke.
-
-Deutsch: Secure Coding schützt Codepfade, Secure Architecture ihre
-Vertrauensgrenzen (Trust Boundaries). Eine MSL ist eine speichersichere Sprache,
-ersetzt aber keine Eingabeprüfung. I/O heißt Ein-/Ausgabe, Auth Anmeldung und
-Berechtigung, Crypto Kryptografie. Eine Sandbox begrenzt Prozesszugriffe;
-Mounts stellen Host-Dateien bereit, Tokens sind Zugriffsschlüssel, Caches
-Zwischenspeicher. SBOM listet Software, AI-SBOM KI-Komponenten, VEX die
-Betroffenheit von bekannten Schwachstellen, SLSA Build-Herkunft und Integrität.
-NIST SSDF beschreibt sichere Entwicklung, CWE Fehlerarten, STRIDE Bedrohungen,
-CAPEC Angriffsmuster, ASVS Web-Prüfungen, Zero Trust Zugriffe ohne stilles
-Vertrauen, SAMM Security-Reife und Scorecard OSS-Sicherheitspraktiken. C3A/C5
-betreffen Cloud-Autonomie/Nachweise. WCAG AA ist die anwendbare A11Y-Basis;
-CEFR B2 bezeichnet verständliche Sprache. CI automatisiert Prüfungen, DocFX
-erzeugt Dokumentation, axe prüft Barrieren und lynx liest Seiten als Text.
-Ein Lockfile fixiert Abhängigkeiten. Diese Erläuterungen erweitern den Umfang nicht.
-
-English: Basic spreadsheet, file and keyboard use is enough to begin. Prior
-Spec Kit/security experience is not assumed. The intake defines scope. Specify
-creates only spec.md (requirements), plan.md describes the approach and tasks.md
-lists work steps. Autonomous executes a separately requested run.
-LocalImplementation permits local work, not publication. Eligible identifies a
-candidate, not start permission. A receipt records provenance; evidence is
-verifiable proof and a hash a content fingerprint. Preflight means preliminary
-check; a gate is a mandatory checkpoint.
-
-English: Secure coding protects code paths, secure architecture their trust
-boundaries. An MSL is memory-safe but still needs validation. I/O means input/output,
-Auth authentication/authorization and Crypto cryptography. A sandbox limits
-process access; mounts expose host files, tokens are access keys and caches
-store intermediate results. SBOM inventories software, AI-SBOM AI components,
-VEX vulnerability impact and SLSA build origin/integrity. NIST SSDF covers secure
-development, CWE weaknesses, STRIDE threats, CAPEC attack patterns, ASVS web
-verification, Zero Trust access without implicit trust, SAMM security maturity
-and Scorecard OSS practices. C3A/C5 concern cloud autonomy/assurance. WCAG AA is
-the applicable A11Y baseline; CEFR B2 the readability level. CI automates checks,
-DocFX generates documentation, axe checks accessibility and lynx reads pages as
-text. A lockfile fixes dependencies. These explanations add no scope or authority.
-
-
-**Dokumenttyp:** Spec-Kit Intake / Lastenheft\
-**Status:** Vorbereitung fuer spaeteren Spec-Kit-Lauf, kein gestarteter Lauf\
-**Projekt:** TinyCalc\
+**Dokumenttyp:** Spec-Kit Intake / Lastenheft  
+**Status:** Vorbereitung fuer spaeteren Spec-Kit-Lauf, kein gestarteter Lauf  
+**Projekt:** TinyCalc  
 **Zielgruppe:** Fachinformatiker*innen in Ausbildung, Entwickler*innen, Reviewer und KI-Agenten
 
 ## Ziel / Goal
@@ -133,56 +84,6 @@ Beruecksichtige:
 - Dokumentations- und A11Y-Basis: DocFX changes require text-oriented A11Y smoke review; documentation and didactic comments stay DE-first/EN-second at CEFR B2.
 - Keine Secrets, privaten Host-Pfade oder lokalen Nutzerprofile in versionierte Dateien uebernehmen.
 ```
-## Vollständiger englischer Vertragsblock / Complete English Contract
-
-Deutsch: Die Ergänzung übersetzt den vorhandenen Vertrag ohne technische
-Härtung. Die deutschen Regeln und die Serienreihenfolge bleiben verbindlich.
-
-### English: goal, context, inputs and boundaries
-
-Prepare a later run to assess secure, traceable, training-friendly work in/with
-absdd-image-sandbox; this intake executes no hardening. TinyCalc uses .NET 10/C#,
-Terminal.Gui and Pascal parity sources. Baseline: restore/build/test MicroCalc.sln,
-xUnit and non-interactive TUI smoke. DocFX changes require text-oriented A11Y
-smoke; docs/didactic comments stay DE-first/EN-second B2. Statistics baselines
-are manual 80 and Thorsten-solo 125 lines/workday. Agent surfaces: AGENTS, CLAUDE,
-GEMINI, Copilot instructions and Spec Kit.
-Inputs: secure-development guideline; checklist CL_12_Agentische-KI-Sandbox.md;
-Leitlinie_Sichere-Entwicklungs-Sandbox.md under its mitgeltende-dokumente/;
-existing Secure-Development-Hardening intake; eight security/architecture/iSAQB/
-A11Y/cross-platform/agent-parity/autonomous/parallel-autonomous presets;
-and container-images/absdd-image-sandbox context.
-Scope: assess allowed mounts, agent write limits, feasible sandbox build/test/
-docs/smoke, secrets/tokens/profiles/caches/tool data that stay outside the repo,
-later SBOM/dependency/scan/review proof and future docs/security creation/updates.
-Non-goals: no run started by this document, direct code change, automatic
-hardening/security-doc filling, sandbox-image change or claim that all MSL
-toolchains are already installed.
-
-### English: requirements (same numbering)
-
-1. Record Applicable/N/A/Open for all relevant sandbox/security checks.
-2. Name concrete mount/permission/agent/build/test/SBOM/dependency/review evidence.
-3. Explain what belongs in the sandbox versus local execution or CI.
-4. Assess safety without unnecessarily restricting apprentice/developer work.
-5. Use DE/EN, B2 and applicable WCAG 2.2 AA for user-facing docs.
-6. Record open items as follow-ups, never omit them silently.
-
-### English: acceptance, sequence and prompts
-
-Acceptance: future spec/plan/tasks name sandbox applicability/evidence; existing
-Secure Development remains contextual predecessor; no project secrets/private
-host paths enter versioned files; the run explains whether/how the sandbox is
-usable; every non-applicable item has a short N/A rationale in its artifact.
-The manifest retains Sandbox as an independent root; contextual sequencing
-does not introduce a new hard dependency.
-The superseded old prompt is historical. Canonical Specify prepares only this
-specification, considering all stated inputs/baselines and audit-ready
-applicability decisions, without implementation/hardening. Separately requested
-Autonomous stays LocalImplementation: no remote/PR/merge/bypass/secrets/provider/
-follow-up authority is granted.
-
-
 <!-- intake-authoring:prompts -->
 ## Kopierbare Spec-Kit-Prompts / Copy-Ready Spec Kit Prompts
 

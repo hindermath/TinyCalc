@@ -1,0 +1,129 @@
+{
+  "schemaVersion": "1.0",
+  "bindingReviewId": "863726e6-5f9f-4884-8f14-d5eef9c42664",
+  "series": {
+    "afterManifest": "84f6b7bf93b09bbeb7c187374f9cae1208432ebc5cf4221e7e9767143c3c8b42",
+    "roots": 4,
+    "completedCount": 4,
+    "beforeManifest": "97cda99469ff71179ccb8eef120666ad245f9507e629bea00d2ec8458360f447",
+    "hardEdges": 9,
+    "targetCount": 13,
+    "activeCount": 9,
+    "unchanged": "Identities, paths, role, order, roots, edges, lifecycle, Eligible candidate and delivery boundaries"
+  },
+  "authorityEvidence": "Thorsten explicitly approved the eight bounded language updates, both README bindings, archive/lineage/series evidence and full re-review on 2026-10-04. Current maintenance delivery is MergeAndSync with admin bypass for formal merge rules only. Future intake scope and authority remain unchanged.",
+  "readme": {
+    "newNormalizedSha256": "8cdf527d1929f9d71e1b3483cb4c594855b5946fdf190cee5813cd3c25eb2517",
+    "delta": "Only coordinated-governance pilot, Mermaid/outcome-report rule and statistics-pilot links were added; no offered product function or compatibility rule changed.",
+    "oldNormalizedSha256": "f616050f682899c224591707bdcfb713e8709c295355f8fd24cce44f46193a40"
+  },
+  "type": "BoundedLanguageAndSourceRepair",
+  "targets": [
+    {
+      "intakeId": "40e85866-18d3-4cc8-b667-a1de8da44b10",
+      "target": "requirements/intakes/active/Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md",
+      "oldReceiptHash": "f3057247539702307bdd204f189d94d668a182b6e138a4ead434d821f5defb98",
+      "newReceiptHash": "ff340169c837aa6b32c66cfb2141de79a690f42a4e1457b40a85beccf1677c23",
+      "receipt": "specs/intake-authoring-receipts/tui-funktionsabnahme-und-regressionsvertrag.json",
+      "newTargetHash": "c07016800b9e02e56f123ed6af187d0b5fedd22c1689a1b8909fcc6e8f70c6ac",
+      "archiveTarget": "requirements/intakes/history/20261004-language-repair/Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md",
+      "order": 3,
+      "archiveReceipt": "specs/intake-authoring-receipts/history/tui-funktionsabnahme-und-regressionsvertrag.20261004-language-repair.json",
+      "oldTargetHash": "aa237aa218a08bbe2e99a9004bc7af9d5859984be01011cfbab575f996dfc482",
+      "changes": "Language-only additions; original content and executable prompts retained byte-for-byte as a subsequence; no scope, acceptance, status or delivery-authority changes."
+    },
+    {
+      "intakeId": "beb93d96-c7eb-4a45-b87b-fe1c6ebd51c0",
+      "target": "requirements/intakes/active/Lastenheft_A11Y_TUI.md",
+      "oldReceiptHash": "6a2892453458fcd2bc82703d540e7d69115c9bf5fb08522a14716e25458d592e",
+      "newReceiptHash": "3b435e4494c4ea5d33ff4a3a6eae7e697a0e6e5aa15748760bb9f908a66dd5f9",
+      "receipt": "specs/intake-authoring-receipts/a11y-tui.json",
+      "newTargetHash": "7fec8e9dea123fdeb0753119d06c18a8389a24645a541d3b60413166bbcbd6e2",
+      "archiveTarget": "requirements/intakes/history/20261004-language-repair/Lastenheft_A11Y_TUI.md",
+      "order": 4,
+      "archiveReceipt": "specs/intake-authoring-receipts/history/a11y-tui.20261004-language-repair.json",
+      "oldTargetHash": "820e10c7229720fbda87360b9ee1abf6ac907aa2b27a1d9dc42bfa7b110a2a01",
+      "changes": "Language-only additions; original content and executable prompts retained byte-for-byte as a subsequence; no scope, acceptance, status or delivery-authority changes."
+    },
+    {
+      "intakeId": "b4f18668-0276-45ee-8a6f-16a8bd8b833d",
+      "target": "requirements/intakes/active/Lastenheft_Rename_MicroCalc_TinyCalc.md",
+      "oldReceiptHash": "46e95467a050fcc213d1b498c6de3f71dbbc7527fde4ddbd058fd1eefe162935",
+      "newReceiptHash": "abc387a5b1dd9100776dc2d5a9135b23f7450f398ef271302bfc44256e008def",
+      "receipt": "specs/intake-authoring-receipts/rename-microcalc-tinycalc.json",
+      "newTargetHash": "ed761c150526f18c0b1d98d8febac1def260b1890aca6d0a341279dec19985b9",
+      "archiveTarget": "requirements/intakes/history/20261004-language-repair/Lastenheft_Rename_MicroCalc_TinyCalc.md",
+      "order": 5,
+      "archiveReceipt": "specs/intake-authoring-receipts/history/rename-microcalc-tinycalc.20261004-language-repair.json",
+      "oldTargetHash": "89d40b7ca04e2a753670351bd0eb5b7e2bf3234f1792572eb46f19e9affd87e5",
+      "changes": "Language-only additions; original content and executable prompts retained byte-for-byte as a subsequence; no scope, acceptance, status or delivery-authority changes."
+    },
+    {
+      "intakeId": "25157ad2-2db3-45bf-a0e1-8b3dd3c5e82f",
+      "target": "requirements/intakes/active/Lastenheft_Secure-Development-Hardening.md",
+      "oldReceiptHash": "f699779956ebe7bae52aa690e4ffb9837909f6346954d11d20cfc93da6c6f671",
+      "newReceiptHash": "2a484f26f16598d065f16211f299fb8d47f56e69cdf2ab6237eea567d1933b49",
+      "receipt": "specs/intake-authoring-receipts/secure-development-hardening.json",
+      "newTargetHash": "38d57df9cb6431eddf812ca328965f8542d9aab801cdb8b9971cd72351472490",
+      "archiveTarget": "requirements/intakes/history/20261004-language-repair/Lastenheft_Secure-Development-Hardening.md",
+      "order": 7,
+      "archiveReceipt": "specs/intake-authoring-receipts/history/secure-development-hardening.20261004-language-repair.json",
+      "oldTargetHash": "d3e7688032d657270e186d6ca4e91fed0873bd5f753e26c173e4546ac138a39b",
+      "changes": "Language-only additions and three equivalent metadata hard-break spellings (two spaces become Markdown backslash); archive preserves exact predecessor bytes; content, prompts, scope, acceptance and authority unchanged."
+    },
+    {
+      "intakeId": "7474c2ca-2efe-4d05-a359-9af278333007",
+      "target": "requirements/intakes/active/Lastenheft_PL0-Zellfunktionen_V1.md",
+      "oldReceiptHash": "7d367eb5ad243c6b393718e279e16c52e6d193d1d2660fbb9c24a5e567ac0fc5",
+      "newReceiptHash": "13a5971e3a80afeb45091a14295fa26fb88efb5f25ffbf20b032ba10dded9c86",
+      "receipt": "specs/intake-authoring-receipts/pl0-zellfunktionen-v1.json",
+      "newTargetHash": "efa90646d4633f3f925c0d97f14c946f53583d20409ff390db8613bc718b3a88",
+      "archiveTarget": "requirements/intakes/history/20261004-language-repair/Lastenheft_PL0-Zellfunktionen_V1.md",
+      "order": 8,
+      "archiveReceipt": "specs/intake-authoring-receipts/history/pl0-zellfunktionen-v1.20261004-language-repair.json",
+      "oldTargetHash": "0a82eb5c07c1412b089cc2895df63b89923d10a4bc8df611af596ef56511ca83",
+      "changes": "Language-only additions; original content and executable prompts retained byte-for-byte as a subsequence; no scope, acceptance, status or delivery-authority changes."
+    },
+    {
+      "intakeId": "749660e0-3880-4a4a-a0c4-9dd15582d96e",
+      "target": "requirements/intakes/active/Lastenheft_Legacy-Kompatibilitaet_V1.md",
+      "oldReceiptHash": "7035f195514e94275854c49fa3c120f6ced984fc8a0b4a94f8012dce3ec3af7e",
+      "newReceiptHash": "4d7bdc786aa59cfe0ce3cc49b36f735f91a154a8a44ca2200093ddeacab3867a",
+      "receipt": "specs/intake-authoring-receipts/legacy-kompatibilitaet-v1.json",
+      "newTargetHash": "f24a7ff1c6d1bcde8bca45a57133de5b9f6386c4586a079d1ba743f99479863c",
+      "archiveTarget": "requirements/intakes/history/20261004-language-repair/Lastenheft_Legacy-Kompatibilitaet_V1.md",
+      "order": 9,
+      "archiveReceipt": "specs/intake-authoring-receipts/history/legacy-kompatibilitaet-v1.20261004-language-repair.json",
+      "oldTargetHash": "2e6a8036d18e7d3ed7360623f841a31411d245c5acf1441f0fe9d5877fc475b1",
+      "changes": "Language-only additions; original content and executable prompts retained byte-for-byte as a subsequence; no scope, acceptance, status or delivery-authority changes."
+    },
+    {
+      "intakeId": "5f813415-ee1c-42dd-bb0c-7706459d54e9",
+      "target": "requirements/intakes/active/Lastenheft_Formelkopie-und-Tabellenoperationen_V1.md",
+      "oldReceiptHash": "c53e84690282b7b342f0297dd14ffaa21970edfa0c60286135e78ca62eb9e3a6",
+      "newReceiptHash": "9171d97bd88c430b0aa2a7635116a573c458c9eea006967d9b73ac8bc294de17",
+      "receipt": "specs/intake-authoring-receipts/formelkopie-und-tabellenoperationen-v1.json",
+      "newTargetHash": "7890c8e1358e002044b352adc94fcbe2a104f38e5fc1504f6919830de03d2fb4",
+      "archiveTarget": "requirements/intakes/history/20261004-language-repair/Lastenheft_Formelkopie-und-Tabellenoperationen_V1.md",
+      "order": 10,
+      "archiveReceipt": "specs/intake-authoring-receipts/history/formelkopie-und-tabellenoperationen-v1.20261004-language-repair.json",
+      "oldTargetHash": "3bf64c36fde0c6e109f3e331d2595a06232deb275b3a8eb65a5136e0fd27aec8",
+      "changes": "Language-only additions; original content and executable prompts retained byte-for-byte as a subsequence; no scope, acceptance, status or delivery-authority changes."
+    },
+    {
+      "intakeId": "04b7b43a-af45-4d3d-9d6e-95dd4d285a9f",
+      "target": "requirements/intakes/active/Lastenheft_Sandbox-gestuetzte-Secure-Development-Haertung.md",
+      "oldReceiptHash": "c404d97ec14999c3262f44f9c6d37dfdc4a7527918c1fe604c0328c98d620351",
+      "newReceiptHash": "11381dd0c3b6a06b27912b2b5f0fb6edf70d8515b0523114002b2edd3c18300b",
+      "receipt": "specs/intake-authoring-receipts/sandbox-gestuetzte-secure-development-haertung.json",
+      "newTargetHash": "f5ca1db52063f52f53914032fabcc8a1418c77fced607e922454248f17e72a6e",
+      "archiveTarget": "requirements/intakes/history/20261004-language-repair/Lastenheft_Sandbox-gestuetzte-Secure-Development-Haertung.md",
+      "order": 11,
+      "archiveReceipt": "specs/intake-authoring-receipts/history/sandbox-gestuetzte-secure-development-haertung.20261004-language-repair.json",
+      "oldTargetHash": "3669d72d727ceeff5510dde789f9c9c1ddf815bad9c55d5377378959f102f2a2",
+      "changes": "Language-only additions and three equivalent metadata hard-break spellings (two spaces become Markdown backslash); archive preserves exact predecessor bytes; content, prompts, scope, acceptance and authority unchanged."
+    }
+  ],
+  "operationId": "ac96867f-2f6f-437e-8c2b-0b818404bbfb",
+  "mechanicalFormatting": "Security and Sandbox each retain three Markdown hard breaks with backslashes instead of trailing spaces. Invert these six spellings along with removal of additions for byte-exact predecessor reconstruction."
+}

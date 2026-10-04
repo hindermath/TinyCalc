@@ -1,0 +1,73 @@
+{
+  "createdAt": "2026-10-03T23:56:45Z",
+  "documentType": "IntakeOperation",
+  "proposalPath": "specs/intake-authoring-operations/ac96867f-2f6f-437e-8c2b-0b818404bbfb/proposal.json",
+  "proposalNormalizedSha256": "3d3640c35d89e1ef62a047a77a13c2ce35933634305449248ef242a03cf95cae",
+  "operationId": "ac96867f-2f6f-437e-8c2b-0b818404bbfb",
+  "failure": {
+    "class": "N/A",
+    "message": "N/A"
+  },
+  "publishedTargets": [
+    "requirements/intakes/active/Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md",
+    "requirements/intakes/active/Lastenheft_A11Y_TUI.md",
+    "requirements/intakes/active/Lastenheft_Rename_MicroCalc_TinyCalc.md",
+    "requirements/intakes/active/Lastenheft_Secure-Development-Hardening.md",
+    "requirements/intakes/active/Lastenheft_PL0-Zellfunktionen_V1.md",
+    "requirements/intakes/active/Lastenheft_Legacy-Kompatibilitaet_V1.md",
+    "requirements/intakes/active/Lastenheft_Formelkopie-und-Tabellenoperationen_V1.md",
+    "requirements/intakes/active/Lastenheft_Sandbox-gestuetzte-Secure-Development-Haertung.md"
+  ],
+  "type": "Update",
+  "status": "Completed",
+  "nextAction": "$speckit-intake-review requirements/intakes/series/tinycalc-delivery/manifest.json",
+  "approval": {
+    "evidence": "Thorsten explicitly approved the eight bounded language updates, both README bindings, archive/lineage/series evidence and full re-review on 2026-10-04. Current maintenance delivery is MergeAndSync with admin bypass for formal merge rules only. Future intake scope and authority remain unchanged.",
+    "approvedBy": "Thorsten Hindermann",
+    "approvedAt": "2026-10-03T23:56:45Z",
+    "approved": true
+  },
+  "schemaVersion": "1.0",
+  "rollbackBoundary": "All eight updates, archives, receipts and dependent series artifacts are validated in an isolated mirror before active publication. On failed publication restore the exact saved working-tree bytes; never leave a mixed state.",
+  "intendedTargets": [
+    "requirements/intakes/active/Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md",
+    "requirements/intakes/active/Lastenheft_A11Y_TUI.md",
+    "requirements/intakes/active/Lastenheft_Rename_MicroCalc_TinyCalc.md",
+    "requirements/intakes/active/Lastenheft_Secure-Development-Hardening.md",
+    "requirements/intakes/active/Lastenheft_PL0-Zellfunktionen_V1.md",
+    "requirements/intakes/active/Lastenheft_Legacy-Kompatibilitaet_V1.md",
+    "requirements/intakes/active/Lastenheft_Formelkopie-und-Tabellenoperationen_V1.md",
+    "requirements/intakes/active/Lastenheft_Sandbox-gestuetzte-Secure-Development-Haertung.md"
+  ],
+  "authorityEvidence": "Thorsten explicitly approved the eight bounded language updates, both README bindings, archive/lineage/series evidence and full re-review on 2026-10-04. Current maintenance delivery is MergeAndSync with admin bypass for formal merge rules only. Future intake scope and authority remain unchanged.",
+  "stagingDirectory": ".specify/runtime/intake-language-repair-oct04/staging",
+  "validatedTargets": [
+    "requirements/intakes/active/Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md",
+    "requirements/intakes/active/Lastenheft_A11Y_TUI.md",
+    "requirements/intakes/active/Lastenheft_Rename_MicroCalc_TinyCalc.md",
+    "requirements/intakes/active/Lastenheft_Secure-Development-Hardening.md",
+    "requirements/intakes/active/Lastenheft_PL0-Zellfunktionen_V1.md",
+    "requirements/intakes/active/Lastenheft_Legacy-Kompatibilitaet_V1.md",
+    "requirements/intakes/active/Lastenheft_Formelkopie-und-Tabellenoperationen_V1.md",
+    "requirements/intakes/active/Lastenheft_Sandbox-gestuetzte-Secure-Development-Haertung.md"
+  ],
+  "completedAt": "2026-10-04T00:09:11Z",
+  "publicationEvidence": {
+    "fileCount": 47,
+    "scopeProof": "Remove the new reading-guide and English-contract blocks and invert six equivalent metadata hard-break spellings to reconstruct all eight predecessor documents byte-for-byte. Archives, requirements, IDs, DAG, thresholds, prompts and future authority unchanged.",
+    "byteIdentical": true,
+    "rollbackBackup": ".specify/runtime/intake-language-repair-oct04/publication-backup"
+  },
+  "validationEvidence": {
+    "seriesReceipt": "PowerShell and Bash PASS",
+    "productChecks": "N/A locally: no product/API/XML/DocFX/UI change; provider CI and substantive PR review remain required before MergeAndSync",
+    "operation": "PowerShell and Bash PASS before publication; Completed state checked after publication",
+    "seriesManifest": "PowerShell and Bash PASS: 13 targets, 4 roots, 9 hard edges",
+    "negativeFixtures": "10 legacy and 26 linked cases PASS",
+    "configuration": "PowerShell and Bash PASS",
+    "alignment": "Full requirements/receipt alignment and deterministic renderer PASS",
+    "reviewResult": "PowerShell and Bash PASS: Series Ready, 13 targets",
+    "authoringReceipts": "13 PowerShell and 8 changed Bash PASS"
+  },
+  "mechanicalFormatting": "Security and Sandbox each retain three Markdown hard breaks with backslashes instead of trailing spaces. Invert these six spellings along with removal of additions for byte-exact predecessor reconstruction."
+}
