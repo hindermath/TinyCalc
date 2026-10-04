@@ -1,58 +1,9 @@
 <!-- intake-authoring:begin -->
 # Lastenheft: Secure-Development-Hardening
 
-## Lesehilfe und Workflow / Reading Guide and Workflow
-
-Deutsch: Grundlegende Tabellen-, Datei- und Tastaturbedienung genügt zum Einstieg;
-Spec-Kit- oder Security-Erfahrung wird nicht vorausgesetzt. Ein Intake legt den
-Umfang fest. `Specify` erstellt nur `spec.md` (Anforderungen), `plan.md` beschreibt
-den Lösungsweg und `tasks.md` einzelne Schritte. `Autonomous` führt einen separat
-beauftragten Lauf aus. `LocalImplementation` erlaubt lokale Arbeit, keine
-Veröffentlichung. `Eligible` bezeichnet einen Kandidaten, keine Startfreigabe.
-Ein Receipt ist ein Herkunftsnachweis; Evidence ein prüfbarer Beleg und ein Hash
-ein Inhaltsfingerabdruck. Preflight bedeutet Vorprüfung, Gate eine Prüfschranke.
-
-Deutsch: Secure Coding schützt Codepfade, Secure Architecture ihre
-Vertrauensgrenzen (Trust Boundaries). Eine MSL ist eine speichersichere Sprache,
-ersetzt aber keine Eingabeprüfung. I/O heißt Ein-/Ausgabe, Auth Anmeldung und
-Berechtigung, Crypto Kryptografie. Eine Sandbox begrenzt Prozesszugriffe;
-Mounts stellen Host-Dateien bereit, Tokens sind Zugriffsschlüssel, Caches
-Zwischenspeicher. SBOM listet Software, AI-SBOM KI-Komponenten, VEX die
-Betroffenheit von bekannten Schwachstellen, SLSA Build-Herkunft und Integrität.
-NIST SSDF beschreibt sichere Entwicklung, CWE Fehlerarten, STRIDE Bedrohungen,
-CAPEC Angriffsmuster, ASVS Web-Prüfungen, Zero Trust Zugriffe ohne stilles
-Vertrauen, SAMM Security-Reife und Scorecard OSS-Sicherheitspraktiken. C3A/C5
-betreffen Cloud-Autonomie/Nachweise. WCAG AA ist die anwendbare A11Y-Basis;
-CEFR B2 bezeichnet verständliche Sprache. CI automatisiert Prüfungen, DocFX
-erzeugt Dokumentation, axe prüft Barrieren und lynx liest Seiten als Text.
-Ein Lockfile fixiert Abhängigkeiten. Diese Erläuterungen erweitern den Umfang nicht.
-
-English: Basic spreadsheet, file and keyboard use is enough to begin. Prior
-Spec Kit/security experience is not assumed. The intake defines scope. Specify
-creates only spec.md (requirements), plan.md describes the approach and tasks.md
-lists work steps. Autonomous executes a separately requested run.
-LocalImplementation permits local work, not publication. Eligible identifies a
-candidate, not start permission. A receipt records provenance; evidence is
-verifiable proof and a hash a content fingerprint. Preflight means preliminary
-check; a gate is a mandatory checkpoint.
-
-English: Secure coding protects code paths, secure architecture their trust
-boundaries. An MSL is memory-safe but still needs validation. I/O means input/output,
-Auth authentication/authorization and Crypto cryptography. A sandbox limits
-process access; mounts expose host files, tokens are access keys and caches
-store intermediate results. SBOM inventories software, AI-SBOM AI components,
-VEX vulnerability impact and SLSA build origin/integrity. NIST SSDF covers secure
-development, CWE weaknesses, STRIDE threats, CAPEC attack patterns, ASVS web
-verification, Zero Trust access without implicit trust, SAMM security maturity
-and Scorecard OSS practices. C3A/C5 concern cloud autonomy/assurance. WCAG AA is
-the applicable A11Y baseline; CEFR B2 the readability level. CI automates checks,
-DocFX generates documentation, axe checks accessibility and lynx reads pages as
-text. A lockfile fixes dependencies. These explanations add no scope or authority.
-
-
-**Repository:** TinyCalc\
-**Dokumenttyp:** Spec-Kit Intake / Lastenheft\
-**Status:** vorbereitet fuer separaten Spec-Kit-Haertungslauf\
+**Repository:** TinyCalc  
+**Dokumenttyp:** Spec-Kit Intake / Lastenheft  
+**Status:** vorbereitet fuer separaten Spec-Kit-Haertungslauf  
 **Stand:** 2026-06-17
 
 ## 1. Zweck
@@ -181,69 +132,6 @@ Pflichtpunkte:
 
 Erzeuge eine Spezifikation mit Scope, Nicht-Zielen, Anforderungen, Abhaengigkeiten, Akzeptanzkriterien, Risiken, Teststrategie, Evidenzpfaden und offenen Folgepunkten.
 ```
-## Vollständiger englischer Vertragsblock / Complete English Contract
-
-Deutsch: Die englische Fassung ergänzt die Kurztexte. Die deutschen Abschnitte
-bleiben kanonisch; Umfang, Reihenfolge und Abnahme sind unverändert.
-
-### English: purpose, context, inputs and scope
-
-This intake prepares, but does not execute, a later TinyCalc hardening run.
-Check conformance to docs/secure-development, the constitution and installed
-governance presets, identifying missing evidence/hardening. TinyCalc is a
-spreadsheet/Terminal.Gui TUI port with Pascal/MicroCalc parity, calculation,
-files and training docs. Relevant boundaries are validation, formulas/data,
-paths, UI states, output and robust errors. Reusable guidance lives in
-docs/secure-development; project proof stays in docs/security or Spec Kit artifacts.
-Minimum inputs there are Richtlinie_Sichere-Entwicklung.md, checklisten/ and
-Checklistensammelband_Sichere-Entwicklung.md; both constitutions; docs/security;
-installed security, architecture, A11Y, agent-parity, cross-platform and iSAQB
-presets. This minimum list does not replace the current installed preset matrix.
-Scope: sheet/cell/formula/calculation logic; validation/errors/determinism;
-file/import/export paths and diagnostics; TUI keyboard/focus/A11Y; parity where
-security/integrity matters; build/tests/CI; dependency/supply-chain proof;
-docs/examples/training; agent surfaces, Spec Kit artifacts and presets.
-Non-goals: this document starts no run and creates no product logic, tests,
-security implementation proof, feature branch or implementation artifacts.
-Those steps belong to the separately requested later run.
-
-### English: minimum requirements (section 7, same numbering)
-
-1. Select relevant secure-development checklists and justify every selection.
-2. Classify all checks Applicable (applies, with evidence/decision/result),
-   N/A (does not apply, with rationale) or Open (not sufficiently met).
-3. Name concrete Applicable evidence in security docs, tests, code or Spec Kit artifacts.
-4. Explain N/A technically or functionally.
-5. Record risk, follow-up and priority for Open items.
-6. Assess coding and architecture together; memory safety replaces no API,
-   I/O, Auth, Crypto, logging or dependency assessment.
-7. Treat formula/file/UI/persistence boundaries as trust boundaries.
-8. Assess A11Y/didactic-comment rules for TUI, CLI and docs.
-9. Apply supply-chain/SBOM/AI-SBOM/C3A/C5/regulatory checks only where relevant;
-   otherwise record justified N/A, never silent omission.
-10. Produce a traceable overview of results, open risks, accepted residual
-    risks and follow-ups. Recording acceptance grants no acceptance authority.
-
-### English: artifacts, acceptance and readiness
-
-spec.md documents goal/scope/non-goals/inputs; plan.md strategy/presets/evidence;
-tasks.md concrete review/documentation/hardening work; docs/security proof or
-justified N/A; tests/CI only if required by later hardening, with rationale;
-an auditable closeout note records results/open items/residual risks.
-Acceptance: every relevant guidance item visibly addressed; no relevant standard
-silently omitted; all omissions justified N/A; Open items have follow-ups;
-every positive conformance claim has concrete proof; TinyCalc remains buildable
-and testable after later hardening.
-Before Specify, check current state to avoid repeating completed/superseded work.
-Classify Applicable, AlreadySatisfied (proved), N/A, Open or FollowUp (relevant,
-outside this run). Plan only Applicable work and justify N/A/FollowUp. Preserve
-the intake/constitution/agent/guidance/A11Y/B2/didactic rules. Start no other
-intake run or combine intakes without documented justified coupling. The marked
-old prompt is historical, not another command. Canonical Specify creates only
-the matching specification; separately requested Autonomous stays LocalImplementation,
-with no push/PR/merge/bypass/secrets/provider/follow-up authority.
-
-
 <!-- intake-authoring:prompts -->
 ## Kopierbare Spec-Kit-Prompts / Copy-Ready Spec Kit Prompts
 

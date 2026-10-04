@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "documentType": "IntakeSeriesReceipt",
+  "receiptId": "a5e57c0f-f778-49a1-ae8e-bb99ea9a7342",
+  "seriesId": "5b4523b4-d946-4091-9cbc-11825af94332",
+  "generator": {
+    "preset": "intake-sequencing-governance",
+    "version": "0.2.6"
+  },
+  "createdAt": "2026-09-13T17:28:29Z",
+  "operation": {
+    "authorityEvidence": "$speckit-intake-repair specs/intake-review-remediation/20260913/didactic-inline-code-comment-hardening/result.json; causal series hash update only, with order, dependencies and lifecycle preserved.",
+    "type": "Update",
+    "operationId": "398b5798-ddd8-4cdf-bc64-be0c4f8f8174"
+  },
+  "status": "Ready",
+  "manifest": {
+    "path": "requirements/intakes/series/tinycalc-delivery/manifest.json",
+    "normalizedSha256": "97cda99469ff71179ccb8eef120666ad245f9507e629bea00d2ec8458360f447"
+  },
+  "supersedes": {
+    "receiptNormalizedSha256": "41c65c93341735eba6eb003760aecd60496fee326c8a524ab1fcecf759c6cc4a",
+    "receiptPath": "requirements/intakes/series-archive/tinycalc-delivery/20260913T172829Z-ir002-repair/receipt.json",
+    "manifestArchiveSha256": "09c14e212bc31330b44098d02cb1cc0ae1b9a413c458347a3be45faf6b51a9b7",
+    "manifestArchivePath": "requirements/intakes/series-archive/tinycalc-delivery/20260913T172829Z-ir002-repair/manifest.json"
+  },
+  "tombstone": {
+    "path": "N/A",
+    "normalizedSha256": "N/A"
+  },
+  "nextAction": "$speckit-intake-review requirements/intakes/series/tinycalc-delivery/manifest.json"
+}

@@ -31,19 +31,19 @@
     {
       "path": "requirements/intakes/active/Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md",
       "role": "OrderedMember",
-      "normalizedSha256": "c07016800b9e02e56f123ed6af187d0b5fedd22c1689a1b8909fcc6e8f70c6ac",
+      "normalizedSha256": "aa237aa218a08bbe2e99a9004bc7af9d5859984be01011cfbab575f996dfc482",
       "status": "Eligible"
     },
     {
       "path": "requirements/intakes/active/Lastenheft_A11Y_TUI.md",
       "role": "OrderedMember",
-      "normalizedSha256": "7fec8e9dea123fdeb0753119d06c18a8389a24645a541d3b60413166bbcbd6e2",
+      "normalizedSha256": "820e10c7229720fbda87360b9ee1abf6ac907aa2b27a1d9dc42bfa7b110a2a01",
       "status": "Blocked"
     },
     {
       "path": "requirements/intakes/active/Lastenheft_Rename_MicroCalc_TinyCalc.md",
       "role": "OrderedMember",
-      "normalizedSha256": "ed761c150526f18c0b1d98d8febac1def260b1890aca6d0a341279dec19985b9",
+      "normalizedSha256": "89d40b7ca04e2a753670351bd0eb5b7e2bf3234f1792572eb46f19e9affd87e5",
       "status": "Blocked"
     },
     {
@@ -55,31 +55,31 @@
     {
       "path": "requirements/intakes/active/Lastenheft_Secure-Development-Hardening.md",
       "role": "OrderedMember",
-      "normalizedSha256": "38d57df9cb6431eddf812ca328965f8542d9aab801cdb8b9971cd72351472490",
+      "normalizedSha256": "d3e7688032d657270e186d6ca4e91fed0873bd5f753e26c173e4546ac138a39b",
       "status": "Blocked"
     },
     {
       "path": "requirements/intakes/active/Lastenheft_PL0-Zellfunktionen_V1.md",
       "role": "OrderedMember",
-      "normalizedSha256": "efa90646d4633f3f925c0d97f14c946f53583d20409ff390db8613bc718b3a88",
+      "normalizedSha256": "0a82eb5c07c1412b089cc2895df63b89923d10a4bc8df611af596ef56511ca83",
       "status": "Blocked"
     },
     {
       "path": "requirements/intakes/active/Lastenheft_Legacy-Kompatibilitaet_V1.md",
       "role": "OrderedMember",
-      "normalizedSha256": "f24a7ff1c6d1bcde8bca45a57133de5b9f6386c4586a079d1ba743f99479863c",
+      "normalizedSha256": "2e6a8036d18e7d3ed7360623f841a31411d245c5acf1441f0fe9d5877fc475b1",
       "status": "Blocked"
     },
     {
       "path": "requirements/intakes/active/Lastenheft_Formelkopie-und-Tabellenoperationen_V1.md",
       "role": "OrderedMember",
-      "normalizedSha256": "7890c8e1358e002044b352adc94fcbe2a104f38e5fc1504f6919830de03d2fb4",
+      "normalizedSha256": "3bf64c36fde0c6e109f3e331d2595a06232deb275b3a8eb65a5136e0fd27aec8",
       "status": "Blocked"
     },
     {
       "path": "requirements/intakes/active/Lastenheft_Sandbox-gestuetzte-Secure-Development-Haertung.md",
       "role": "OrderedMember",
-      "normalizedSha256": "f5ca1db52063f52f53914032fabcc8a1418c77fced607e922454248f17e72a6e",
+      "normalizedSha256": "3669d72d727ceeff5510dde789f9c9c1ddf815bad9c55d5377378959f102f2a2",
       "status": "Pending"
     },
     {

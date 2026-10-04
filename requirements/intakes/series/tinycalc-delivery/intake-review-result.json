@@ -1,17 +1,17 @@
 {
   "schemaVersion": "1.1",
-  "reviewId": "6ee5f99c-bbd3-4b76-a735-a344ae521a52",
+  "reviewId": "d2c44397-bb36-4557-9e44-5c62313d1e94",
   "mode": "Series",
-  "status": "NeedsRemediation",
+  "status": "Ready",
   "policy": "tinycalc-delivery-v1",
-  "reviewedAt": "2026-09-13T17:42:46Z",
+  "reviewedAt": "2026-10-04T00:13:16Z",
   "repository": {
     "root": ".",
-    "head": "ff4dd1d6ead85b678be41098b652720c4db48fc3"
+    "head": "45f8fb00119302d4a4c24eeccfe340a931f64405"
   },
   "requestEvidence": {
     "path": "requirements/intakes/series/tinycalc-delivery/intake-review-request.json",
-    "normalizedSha256": "55f379db50da2f5b3d57d0922c5521ec4dddd2a03011fb8cc762f72fa557d01f"
+    "normalizedSha256": "1b6594b61814d74823f9d0761e965b6961ba0639fb369c06014d422011a41059"
   },
   "targets": [
     {
@@ -29,20 +29,20 @@
     {
       "path": "requirements/intakes/active/Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md",
       "role": "OrderedMember",
-      "normalizedSha256": "aa237aa218a08bbe2e99a9004bc7af9d5859984be01011cfbab575f996dfc482",
-      "gitBlob": "1eaa9cea1dda5682822cd5059d7c67171cf1fda8"
+      "normalizedSha256": "c07016800b9e02e56f123ed6af187d0b5fedd22c1689a1b8909fcc6e8f70c6ac",
+      "gitBlob": "N/A"
     },
     {
       "path": "requirements/intakes/active/Lastenheft_A11Y_TUI.md",
       "role": "OrderedMember",
-      "normalizedSha256": "820e10c7229720fbda87360b9ee1abf6ac907aa2b27a1d9dc42bfa7b110a2a01",
-      "gitBlob": "0df114b71d4632cdcfc3a47f92407d96fc1d628f"
+      "normalizedSha256": "7fec8e9dea123fdeb0753119d06c18a8389a24645a541d3b60413166bbcbd6e2",
+      "gitBlob": "N/A"
     },
     {
       "path": "requirements/intakes/active/Lastenheft_Rename_MicroCalc_TinyCalc.md",
       "role": "OrderedMember",
-      "normalizedSha256": "89d40b7ca04e2a753670351bd0eb5b7e2bf3234f1792572eb46f19e9affd87e5",
-      "gitBlob": "f51099cfdc20fabd3677268ca689a961ffa7532a"
+      "normalizedSha256": "ed761c150526f18c0b1d98d8febac1def260b1890aca6d0a341279dec19985b9",
+      "gitBlob": "N/A"
     },
     {
       "path": "requirements/intakes/active/Lastenheft_Didactic-Inline-Code-Comment-Hardening.md",
@@ -53,32 +53,32 @@
     {
       "path": "requirements/intakes/active/Lastenheft_Secure-Development-Hardening.md",
       "role": "OrderedMember",
-      "normalizedSha256": "d3e7688032d657270e186d6ca4e91fed0873bd5f753e26c173e4546ac138a39b",
-      "gitBlob": "1743f04ce55a48c91003502b68ea065d83cebf1f"
+      "normalizedSha256": "38d57df9cb6431eddf812ca328965f8542d9aab801cdb8b9971cd72351472490",
+      "gitBlob": "N/A"
     },
     {
       "path": "requirements/intakes/active/Lastenheft_PL0-Zellfunktionen_V1.md",
       "role": "OrderedMember",
-      "normalizedSha256": "0a82eb5c07c1412b089cc2895df63b89923d10a4bc8df611af596ef56511ca83",
-      "gitBlob": "951771df81541c9cfd63e762695f433c6f6228cf"
+      "normalizedSha256": "efa90646d4633f3f925c0d97f14c946f53583d20409ff390db8613bc718b3a88",
+      "gitBlob": "N/A"
     },
     {
       "path": "requirements/intakes/active/Lastenheft_Legacy-Kompatibilitaet_V1.md",
       "role": "OrderedMember",
-      "normalizedSha256": "2e6a8036d18e7d3ed7360623f841a31411d245c5acf1441f0fe9d5877fc475b1",
-      "gitBlob": "4e1c47eeca8c74b095347986a8fbb2c5679e1e59"
+      "normalizedSha256": "f24a7ff1c6d1bcde8bca45a57133de5b9f6386c4586a079d1ba743f99479863c",
+      "gitBlob": "N/A"
     },
     {
       "path": "requirements/intakes/active/Lastenheft_Formelkopie-und-Tabellenoperationen_V1.md",
       "role": "OrderedMember",
-      "normalizedSha256": "3bf64c36fde0c6e109f3e331d2595a06232deb275b3a8eb65a5136e0fd27aec8",
-      "gitBlob": "0a58acdf2f4ba308c287abd9cc99a770c1e3ab3d"
+      "normalizedSha256": "7890c8e1358e002044b352adc94fcbe2a104f38e5fc1504f6919830de03d2fb4",
+      "gitBlob": "N/A"
     },
     {
       "path": "requirements/intakes/active/Lastenheft_Sandbox-gestuetzte-Secure-Development-Haertung.md",
       "role": "OrderedMember",
-      "normalizedSha256": "3669d72d727ceeff5510dde789f9c9c1ddf815bad9c55d5377378959f102f2a2",
-      "gitBlob": "3b8cea9ca05e23dcdad5ac665d9bb42e336d9658"
+      "normalizedSha256": "f5ca1db52063f52f53914032fabcc8a1418c77fced607e922454248f17e72a6e",
+      "gitBlob": "N/A"
     },
     {
       "path": "requirements/intakes/archive/Lastenheft_RL-SE-Checklist-Selbstpruefung.004-rl-se-self-assessment.md",
@@ -93,30 +93,7 @@
       "gitBlob": "1df4cd2af93098ab1bb0e95de9e10d2811273210"
     }
   ],
-  "findings": [
-    {
-      "id": "IR003",
-      "severity": "Medium",
-      "category": "LearnerClarity",
-      "target": "requirements/intakes/active/Lastenheft_Secure-Development-Hardening.md",
-      "risk": "First-year and English-reading learners may miss prerequisites or interpret normative security and acceptance rules differently.",
-      "disposition": "Open; update the existing intake with explicit prior knowledge, first-use explanations and equivalent English normative sections before executing it.",
-      "owner": "Thorsten Hindermann",
-      "evidence": "Sections 1-9 remain unchanged: assumed prior knowledge is absent; MSL, Trust Boundaries, SBOM, SLSA and related security terms are not introduced for first-year readers. English text covers readiness and handoff prompts, not the normative scope, requirements and acceptance sections.",
-      "reevaluationTrigger": "After explicit bilingual learner-documentation correction and before downstream execution of Secure-Development-Hardening."
-    },
-    {
-      "id": "IR004",
-      "severity": "Medium",
-      "category": "LearnerClarity",
-      "target": "requirements/intakes/active/Lastenheft_Sandbox-gestuetzte-Secure-Development-Haertung.md",
-      "risk": "First-year and English-reading learners may miss prerequisites or interpret normative sandbox and acceptance rules differently.",
-      "disposition": "Open; update the existing intake with explicit prior knowledge, first-use explanations and equivalent English normative sections before executing it.",
-      "owner": "Thorsten Hindermann",
-      "evidence": "Project context, inputs, scope, requirements and acceptance remain unchanged: assumed prior knowledge is absent; mounts, tokens, caches and SBOM are not explained on first use. English goal/context excerpts do not cover the detailed normative requirements and acceptance criteria.",
-      "reevaluationTrigger": "After explicit bilingual learner-documentation correction and before downstream execution of the sandbox-supported hardening intake."
-    }
-  ],
+  "findings": [],
   "questions": [],
   "acceptedRisks": [],
   "operatorExceptions": [],
@@ -137,47 +114,62 @@
       "requirements/intakes/archive/Lastenheft_GSDB-Spec-Kit-Intensivpruefung.005-gsdb-intensive-review.md"
     ],
     "series": [
-      "13 current target hashes, four roots and nine binding dependency edges; every target ordered exactly once",
-      "Four Completed archive members, nine active members and exactly one explicit Eligible target; eligibility grants no delivery authority",
-      "Functional acceptance -> A11Y -> rename -> didactic comments -> secure development -> PL/0 -> legacy -> sheet-operation handoffs remain consistent",
-      "IR002 resolved by Ready Single review f560c480-9160-463a-b2c3-bba5ba5d776b; IR003 and IR004 remain isolated learner-clarity findings",
-      "Security, privacy, accessibility, platform, supply-chain, evidence, prompt and LocalImplementation boundaries reviewed"
+      "All 13 members reviewed; eight current bilingual contracts plus five unchanged archive/didactic members re-evaluated against the series handoffs. No campaign, workers=0.",
+      "Identity, audience, assumed knowledge, first-use technical/workflow terms, scope/non-goals, requirements, numeric acceptance, dependencies, security/privacy/A11Y/platform/supply-chain, evidence/references/prompts and authority reviewed.",
+      "German content and executable prompts unchanged; six metadata hard breaks mechanically respelled without semantic change. Full English contracts/workflow added. IR003, IR004, IR005, IR008 resolved.",
+      "README delta reconciled against its prior Git blob; both new source bindings and all archived provenance are explicit. IR007 and IR009 resolved, not ignored.",
+      "Four roots/nine hard edges/13 ordered targets, nine active/four Completed, one Eligible candidate preserved. Readiness does not grant feature-start or remote authority.",
+      "Independent strict UTF-8/hash/receipt/manifest/result validators and governed renderer/negative tests form publication gates; no product/API/XML/TUI changes, no provider-live-release claim."
     ],
     "workers": []
   },
   "summary": {
+    "medium": 0,
     "critical": 0,
     "high": 0,
-    "medium": 2,
     "low": 0
   },
-  "supersedes": "6b8925ec-2e33-45d5-b04f-04f947d26737",
+  "supersedes": "863726e6-5f9f-4884-8f14-d5eef9c42664",
   "reviewBoundary": {
     "manifestPath": "requirements/intakes/series/tinycalc-delivery/manifest.json",
-    "manifestNormalizedSha256": "97cda99469ff71179ccb8eef120666ad245f9507e629bea00d2ec8458360f447",
+    "manifestNormalizedSha256": "84f6b7bf93b09bbeb7c187374f9cae1208432ebc5cf4221e7e9767143c3c8b42",
     "seriesReceiptPath": "requirements/intakes/series/tinycalc-delivery/receipt.json",
-    "seriesReceiptNormalizedSha256": "59cf2382398a26c37987b4a5c2c1d55f47fdab0acce3ee70940dcb4a6b4491f2",
-    "supersededResultPath": "requirements/intakes/series-archive/tinycalc-delivery/20260913T171049Z-review/intake-review-result.json",
-    "supersededResultNormalizedSha256": "e084f2f6c85653776aa3d8b602488fee43b27b65dbeae5ee2d9972680da1a1fd",
+    "seriesReceiptNormalizedSha256": "ec5a1b5dcdc5d39d6468f5daf06ae73721f864d17eb9343ffa1781dc47e606ff",
+    "supersededResultPath": "requirements/intakes/series-archive/tinycalc-delivery/20261004-language-repair/intake-review-result.json",
+    "supersededResultNormalizedSha256": "f76344f4e2c16654362670ee4c8747438d6280ebb39e0dc5616cac194a685c3f",
     "resolvedFindings": [
-      "IR002"
-    ],
-    "remainingFindings": [
+      "IR001",
+      "IR002",
       "IR003",
-      "IR004"
+      "IR004",
+      "IR005",
+      "IR007",
+      "IR008",
+      "IR009"
     ],
+    "remainingFindings": [],
     "didacticSingleReviewPath": "specs/intake-review-remediation/20260913/didactic-inline-code-comment-hardening/20260913T172829Z-recheck/result.json",
     "didacticSingleReviewNormalizedSha256": "7f138bb4ec658d689c9be1c60a0e330702b7b8e70f789d442a8e5c18143bfb27",
     "applicability": {
-      "NIST_SSDF": "Applicable to all Level-2 delivery work.",
-      "CWE_Top_25": "Applicable to all Level-2 delivery work.",
-      "WCAG_2_2_AA": "Applicable to learner-facing documentation, TUI and generated HTML where relevant.",
-      "OWASP_ASVS": "N/A for the current local TUI scope without web, API, HTTP or authentication services.",
-      "SBOM_VEX_SLSA": "Applicable when releasable artefacts, dependencies or CI provenance are produced; otherwise explicitly N/A per feature.",
-      "AI_SBOM": "N/A for current product delivery because AI is development tooling only.",
-      "ZeroTrust": "N/A for the current non-distributed local TUI; reassess if remote services are introduced."
+      "AI_SBOM": "N/A: AI is development tooling, not a product runtime component.",
+      "VEX": "Required when a known evaluated/shipped vulnerability needs disposition; no new component or vulnerability disposition in this review.",
+      "OWASP_ASVS": "N/A: current local TUI has no web/API/HTTP/authentication service; no ASVS level is selected.",
+      "ZeroTrust": "N/A for the local product without distributed/remote-managed services; reassess if topology changes.",
+      "CWE_Top_25": "Applicable: input, file, dependency and code-execution boundaries reviewed at requirements level.",
+      "SBOM": "Applicable to future distributable product artefacts; N/A for this review-only publication without a product release.",
+      "OpenSSF_Scorecard": "Relevant to public OSS/dependency adoption and release; N/A as a newly executed audit because this review adopts/releases no dependency.",
+      "WCAG_2_2_AA": "Applicable where criteria fit: bilingual B2 text, ordered dependencies and diagram text alternative. Product TUI/HTML evidence stays a feature gate.",
+      "NIST_SSDF": "Applicable: Level-2 review process; no product security certification is claimed.",
+      "OWASP_SAMM": "Applicable as a recommended maturity follow-up for this long-lived project, not a new assessment in this review.",
+      "STRIDE_CAPEC": "Feature threat-model context for PL/0 execution, file import and sandbox boundaries; no new architectural flow is introduced here.",
+      "OWASP_CheatSheets_ProactiveControls": "Supporting secure-development context; unchanged feature-specific evidence obligations.",
+      "SLSA": "Recommended for CI/release provenance; no build or release is performed here."
     },
-    "authority": "Review evidence only. No feature, implementation, commit, push, pull request, merge, bypass or provider authority is granted.",
-    "nextAction": "$speckit-intake-repair requirements/intakes/series/tinycalc-delivery/intake-review-result.json"
+    "authority": "Thorsten explicitly approved the eight bounded language updates, both README bindings, archive/lineage/series evidence and full re-review on 2026-10-04. Current maintenance delivery is MergeAndSync with admin bypass for formal merge rules only. Future intake scope and authority remain unchanged.",
+    "nextAction": "$speckit-intake-series-next tinycalc-delivery",
+    "targetMutation": "Eight approved language additions and six equivalent metadata hard-break spellings; byte-identical archives and reversible reconstruction; no scope, acceptance or authority change.",
+    "historicalBoundary": "Completed archives remain historical, not executable targets. IR006 is not a current finding: the series receipt validates on this main revision.",
+    "operationPath": "specs/intake-authoring-operations/ac96867f-2f6f-437e-8c2b-0b818404bbfb/operation.json",
+    "scopeProof": "Remove the new reading-guide and English-contract blocks and invert six equivalent metadata hard-break spellings to reconstruct all eight predecessor documents byte-for-byte. Archives, requirements, IDs, DAG, thresholds, prompts and future authority unchanged."
   }
 }
