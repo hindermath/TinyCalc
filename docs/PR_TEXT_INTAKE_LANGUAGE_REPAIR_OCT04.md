@@ -35,6 +35,9 @@ Rekonstruktion der deutschen Vorgänger begrenzt. Archiv-/Quell-/Hash-Fehler
 werden von beiden Validatorpfaden und vollständiger Ausrichtung geprüft.
 Ein Struktur-PASS ersetzt keine fachliche Prüfung; Ready ist keine Startfreigabe.
 Kein fachliches/technisches/Security-/A11Y-/Evidenz-Gate wird per Admin umgangen.
+Historische relative Links behalten ihren ursprünglichen Basispfad. Ein eigener
+Archiv-Wegweiser verlinkt alle 13 historischen Verträge, drei Feature-Nachweise
+und den Vorgängerreview korrekt, ohne hashgebundene Archivbytes umzuschreiben.
 Keine neuen Secrets, Produktabhängigkeiten oder Datenschutzdaten.
 
 ## Testplan und Nachweise
@@ -80,6 +83,8 @@ Both validator paths, complete alignment, hashes and archives address provenance
 risk. Ready/structural PASS is not feature-start authority. Admin never bypasses
 technical/security/A11Y/evidence/substantive-review failure. No new secrets,
 personal data or product dependencies are added.
+An archive companion maps all 13 old contracts, three feature proofs and the
+preceding review through valid links; hash-bound archives retain original bytes.
 
 Passed in staging: PowerShell/Bash configuration, eight renewed receipts,
 manifest/receipt/review/operation; complete alignment of 13 receipts; exact

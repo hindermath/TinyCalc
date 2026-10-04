@@ -105,6 +105,10 @@ Dieser Review ersetzt `863726e6-5f9f-4884-8f14-d5eef9c42664`. Dessen
 Request, Ergebnis und Bericht sowie Vorgänger-Manifest/-Receipt/-Reihenfolge
 sind unter [20261004-language-repair](../../series-archive/tinycalc-delivery/20261004-language-repair/intake-review-result.json)
 archiviert. Die Operation ist über `reviewBoundary.operationPath` gebunden.
+Gültige historische Verbindungen stehen im ergänzenden
+[Archiv-Wegweiser](../../series-archive/tinycalc-delivery/20261004-language-repair/README.md).
+Die relativen Links der byteidentischen Altdateien behalten ihren ursprünglichen
+Basispfad; der Wegweiser führt zu alten Snapshots, nicht zu neuen Verträgen.
 Die genehmigte Wartungslieferung umfasst auch den unmittelbar vorausgehenden
 Serienreview samt seinem unveränderten Audit-Archiv und Statistikfortschreibung.
 
@@ -177,3 +181,7 @@ waived for future features. Delivery still requires provider CI and substantive
 PR review. The prior review and series artifacts are archived at the linked
 20261004-language-repair path; JSON binds the operation and superseded review.
 Next after maintenance delivery: `$speckit-intake-series-next tinycalc-delivery`.
+
+Use the linked archive navigation for historical contracts and superseded review
+evidence. Original relative links retain their former base; the companion maps
+old snapshots without rewriting hash-bound archive bytes.
