@@ -1,5 +1,8 @@
 # Koordinierter Governance-Pilot / Coordinated governance pilot
 
+Aktueller Ergänzungsnachweis / Current addendum:
+[stabile Assurance-v0.1.3-Veröffentlichung / stable Assurance v0.1.3 publication](assurance-v013-stable-publication.md).
+
 DE: Technischer Test-Nachlauf: zentrale Windows-CI in Home Baseline #322
 fand einen OS-abhaengigen Namespacevergleich. PurePosixPath wertet jetzt
 getrackte Manifestpfade plattformneutral aus; Backslash-/Drive-Pfade bleiben

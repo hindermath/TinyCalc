@@ -585,6 +585,7 @@ runtime evidence.*
 | 2026-10-04 | Genehmigte Intake-Sprach-/Quellenreparatur / Approved intake language/source repair | codex/intake-language-repair-oct04; sichtbares Evidence-Fenster beginnt 2026-10-03T23:56:45Z UTC, unterbrochene Arbeit ohne Stoppuhr-/Dauerbehauptung. 0 Produkt-/0 Testzeilen; 1015 additive Vertrags-/Lesehilfezeilen in acht Intakes, vollstaendiger neuer Serienbericht und PR-Dokumentation; byteidentische Archive und JSON-Lineage sind Governance-Evidence, keine neue Produktimplementierung. Alle sechs Medium-Befunde behoben; neuer 13-Ziel-Review Ready. Beide Validatorpfade, ganze Ausrichtung, Scope-/Archiv-/DAG-Proof und 10 Legacy-/26 Linked-Negativfaelle bestanden. Lieferauftrag MergeAndSync, Admin nur formal; kuenftige Feature-Prompts unveraendert LocalImplementation. Profil 2/ASCII-Trends reproduzierbar erneuert; manuelle Referenzen 80/125 Zeilen je Arbeitstag, 21.5 Tage je Monat und 7.8 Stunden je Tag bleiben unveraendert. / Bounded bilingual maintenance and provenance renewal, no feature start or measured review speedup. [Bericht / Report](../requirements/intakes/series/tinycalc-delivery/intake-review-report.md). |
 
 | 2026-10-04 | Intake-Review-Follow-up / Intake review follow-up | codex/intake-language-repair-oct04; 0 Produkt-/0 Testzeilen. Ergaenzender Archiv-Wegweiser und Bericht-/PR-Verweise machen die historischen Snapshots trotz umgezogener Original-Links erreichbar; hashgebundene Archivbytes bleiben erhalten. Alle lokalen Ziele und unveraenderlichen Git-Ziele des Wegweisers geprueft. Fachliches Provider-Review ohne blockierende Vertragsbefunde; technische Nachweise bleiben eigene Gates. Bestehende 80/125-Zeilen-, 21.5-Tage/Monat- und 7.8-Stunden/Tag-Basen unveraendert; kein neuer Feature-Lauf. / Readable historical navigation, no archive rewriting or feature implementation; no measured speedup. |
+| 2026-10-04 | Stabile Assurance-Veröffentlichung / Stable Assurance publication | codex/assurance-v013-stable-adoption; Dokumentationsübernahme der zentralen v0.1.3-Abnahme, unveränderte Paketbytes und 14er-Matrix. 0 Produkt-/0 Testzeilen, keine neue Produktfreigabe oder Implementierung; vorhandene Statistik-Konfigurationen und Referenzen bleiben erhalten. / Documentation-only adoption; retain packages, decisions and statistics methodology, no measured productivity claim. [Nachweis / Evidence](maintenance/assurance-v013-stable-publication.md). |
 
 ## Statistikprofil-1-Archiv / Statistics Profile 1 Archive
 Basis dieses Schlussblocks sind die aktuell dokumentierten Snapshot- und
@@ -749,25 +750,25 @@ Profil 2 verwendet Git-getrackte Textdateien und sichtbare Git-Aktivitaet. Die W
 
 | Kennzahl / Metric | Wert / Value |
 |---|---:|
-| Textbasis / Text base | 223791 lines |
-| Textdateien / Text files | 1397 |
+| Textbasis / Text base | 223870 lines |
+| Textdateien / Text files | 1398 |
 | Beobachtbarer Zeitraum / Observable period | 2025-10-12..2026-10-04 |
 | Aktivtage / Active days | 88 |
-| Relevante Commits / Relevant commits | 259 |
-| Zeilen je Aktivtag / Lines per active day | 2543.1 |
+| Relevante Commits / Relevant commits | 260 |
+| Zeilen je Aktivtag / Lines per active day | 2544.0 |
 | Peak-Tag im Fenster / Peak day in window | 2026-06-17 / 27058 |
 | Peak-Woche im Fenster / Peak week in window | 2026-07-19 / 33387 |
 | Laengste Serie / Longest streak | 8 days |
 | Speedup vs. 80 lines/day | 31.8x |
-| Speedup vs. 125 lines/day | 20.3x |
-| Methodik / Methodology | v2; source `d89fa5b0de61` |
+| Speedup vs. 125 lines/day | 20.4x |
+| Methodik / Methodology | v2; source `2917ed2f44f4` |
 
 ### Artefaktmix / Artifact Mix
 
 ```text
 Produktiv / Production          [#...................]   1.3% | 2830
 Tests                           [#...................]   4.1% | 9214
-Dokumentation / Documentation   [##############......]  72.4% | 161957
+Dokumentation / Documentation   [##############......]  72.4% | 162036
 Skripte / Scripts               [###.................]  12.7% | 28448
 Konfiguration / Configuration   [##..................]   8.2% | 18327
 Daten und Medien / Data and media [....................]   0.0% | 0
@@ -904,7 +905,7 @@ Die festen Slots halten den Phasenvergleich auch bei fehlenden oder spaeter erga
 ```text
 Scale: 0..50x
 80 lines/day       [#############.......] 31.8x
-125 lines/day      [########............] 20.3x
+125 lines/day      [########............] 20.4x
 ```
 
 Die Faktoren vergleichen sichtbare Lieferdichte mit den dokumentierten manuellen Referenzen. Sie messen keine Arbeitszeit.
@@ -917,7 +918,7 @@ Die Faktoren vergleichen sichtbare Lieferdichte mit den dokumentierten manuellen
 Scale: 0..5000 lines/day
 Experienced manual [#...................] 80
 Thorsten solo      [#...................] 125
-Visible repository [##########..........] 2543.1
+Visible repository [##########..........] 2544.0
 ```
 
 Die gemeinsame Skala vergleicht Referenzen und sichtbare Lieferdichte. Sie schreibt die Git-Aktivitaet keiner Person oder KI pauschal zu.
@@ -943,6 +944,6 @@ DE: Das Fenster beginnt am 2025-10-12 und endet am 2026-10-04. Es enthaelt 88 ak
 | 2026-07 | 74031 |
 | 2026-08 | 26210 |
 | 2026-09 | 70997 |
-| 2026-10 | 14556 |
+| 2026-10 | 14635 |
 
 <!-- project-statistics-v2:end -->
