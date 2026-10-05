@@ -587,6 +587,8 @@ runtime evidence.*
 | 2026-10-04 | Intake-Review-Follow-up / Intake review follow-up | codex/intake-language-repair-oct04; 0 Produkt-/0 Testzeilen. Ergaenzender Archiv-Wegweiser und Bericht-/PR-Verweise machen die historischen Snapshots trotz umgezogener Original-Links erreichbar; hashgebundene Archivbytes bleiben erhalten. Alle lokalen Ziele und unveraenderlichen Git-Ziele des Wegweisers geprueft. Fachliches Provider-Review ohne blockierende Vertragsbefunde; technische Nachweise bleiben eigene Gates. Bestehende 80/125-Zeilen-, 21.5-Tage/Monat- und 7.8-Stunden/Tag-Basen unveraendert; kein neuer Feature-Lauf. / Readable historical navigation, no archive rewriting or feature implementation; no measured speedup. |
 | 2026-10-04 | Stabile Assurance-Veröffentlichung / Stable Assurance publication | codex/assurance-v013-stable-adoption; Dokumentationsübernahme der zentralen v0.1.3-Abnahme, unveränderte Paketbytes und 14er-Matrix. 0 Produkt-/0 Testzeilen, keine neue Produktfreigabe oder Implementierung; vorhandene Statistik-Konfigurationen und Referenzen bleiben erhalten. / Documentation-only adoption; retain packages, decisions and statistics methodology, no measured productivity claim. [Nachweis / Evidence](maintenance/assurance-v013-stable-publication.md). |
 
+| 2026-10-05 | Authoring v0.3.7: technische GSDB-Nachpruefung / Technical GSDB recheck | UpdateRequired: stabiler Patch mit Tag-/Commit-/ZIP-Bindung und unveraenderten anderen Presets; fuenf geaenderte GSDB-Quellen technisch neu gebunden, 157 Kontrollzeilen/16 externe Pflichten/13 Findings und Summen unveraendert. Alte v0.3.6-Presetversion/-Hash blockieren weiterhin. Keine neue Produkt-, Risiko- oder Releasefreigabe. Bestehende Statistik wird nach Quellencommit reproduzierbar gerendert; Methodik unveraendert. / Bounded integration and technical evidence refresh, no human-state promotion or measured productivity claim. [Evidence](maintenance/intake-authoring-v037.md). |
+
 ## Statistikprofil-1-Archiv / Statistics Profile 1 Archive
 Basis dieses Schlussblocks sind die aktuell dokumentierten Snapshot- und
 Phasenwerte aus den Abschnitten `## Gesamtstand des Repositories` und
@@ -739,8 +741,6 @@ The X-axis shows the documented phases `0` to `5`, while the Y-axis shows the
 rough net volume in lines. The chart is intentionally simple and is meant to
 explain quickly the strong early jump and the later decline in visible phase
 volume.
-
-| 2026-10-05 | Authoring v0.3.7: technische GSDB-Nachpruefung / Technical GSDB recheck | UpdateRequired: stabiler Patch mit Tag-/Commit-/ZIP-Bindung und unveraenderten anderen Presets; fuenf geaenderte GSDB-Quellen technisch neu gebunden, 157 Kontrollzeilen/16 externe Pflichten/13 Findings und Summen unveraendert. Alte v0.3.6-Presetversion/-Hash blockieren weiterhin. Keine neue Produkt-, Risiko- oder Releasefreigabe. Bestehende Statistik wird nach Quellencommit reproduzierbar gerendert; Methodik unveraendert. / Bounded integration and technical evidence refresh, no human-state promotion or measured productivity claim. [Evidence](maintenance/intake-authoring-v037.md). |
 
 ## Gesamtstatistik / Overall Statistics
 
