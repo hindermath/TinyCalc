@@ -1,12 +1,23 @@
 # Preset-Zuordnung / Preset Mapping
 
-## Nachpruefung 2026-10-03 / Follow-up 2026-10-03
+## Aktuelle Nachpruefung 2026-10-05 / Current follow-up 2026-10-05
 
-DE: Aktuelle technische Versionen und Hashbindungen stehen im
+DE: Aktuelle Authoring-Version v0.3.7 und Hashbindungen stehen im
+[Authoring-Nachlauf](../../maintenance/intake-authoring-v037.md) und in der
+kanonischen JSON-Matrix. Der nachfolgende Stand vom 3. Oktober ist historisch;
+Kontrollbewertungen und menschliche Freigaben bleiben unveraendert.
+
+EN: Current Authoring v0.3.7 and hash bindings are in the linked follow-up and
+canonical JSON matrix. The October 3 record below is historical; control
+dispositions and human approvals remain unchanged.
+
+## Historische Nachpruefung 2026-10-03 / Historical follow-up 2026-10-03
+
+DE: Die damaligen technischen Versionen und Hashbindungen stehen im
 [koordinierten Nachlauf](../../maintenance/coordinated-governance-oct03.md).
 Alle datierten Tabellen unten bleiben historische Evidence; keine
 Kontrollbewertung oder menschliche Freigabe wird aufgewertet.
-EN: The linked follow-up supplies current technical versions and hashes.
+EN: The linked October 3 follow-up supplies the historical versions and hashes.
 Dated tables below remain historical; no control disposition or human approval
 is upgraded. The JSON matrix is the current machine-readable source.
 

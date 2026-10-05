@@ -47,7 +47,17 @@ and summaries structurally. Preserve the overall review date, human reviewers
 and decisions. Reject the old manifest hash (GSDB002) and assessment version
 (GSDB008); no validation tolerance is weakened.
 
-Pruefplan / Validation: full fourteen-preset checks in both shells; GSDB source,
+DE: Das vollstaendige 14er-Profil wurde in beiden Shells geprueft, ebenso
+GSDB-Quellen, Sammelband, Zuordnungen, Vollpruefung und Negativfaelle sowie RL-SE.
+Installierte Vorlagen, Secret-Scan, PSScriptAnalyzer und Homogeneity bestanden.
+Restore, Release-Build, xUnit und nichtinteraktiver TUI-Smoke pruefen bestehendes
+Verhalten, keine neue Featureabnahme. Buildzaehler vor Build/Test: 29/30.
+Lokal auf macOS: Restore und Release-Build ohne Warnungen/Fehler, 76 Core- und
+sechs TUI-Tests erfolgreich, `SMOKE_OK`. GSDB-Pruefungen und Fixtures bestanden;
+RL-SE meldet `RLSE_VALIDATION_OK` (157/157). Native CI und exakte Merge-Links
+werden im PR festgehalten.
+
+EN: Validation: full fourteen-preset checks in both shells; GSDB source,
 compendium, mapping, full validation and negative fixtures; RL-SE validation;
 installed templates, secret scan, PSScriptAnalyzer and homogeneity. Restore,
 Release build, xUnit tests and non-interactive TUI smoke exercise existing product
@@ -58,10 +68,22 @@ with zero warnings/errors; 76 Core plus six TUI tests passed, smoke returned
 RL-SE returned `RLSE_VALIDATION_OK` (157/157). Native CI and exact merge links
 are recorded in the PR.
 
-Zielgruppe / Audience: maintainers and GSDB reviewers.
-Leserpfad / Reader path: statistics ledger -> this report -> GSDB matrix and PR.
+DE: Zielgruppe sind Maintainer und GSDB-Reviewer. Leserpfad: Statistik-Ledger ->
+dieser Bericht -> GSDB-Matrix und PR. Kanonische Quelle: unveraenderliches
+Preset-Tag und zentrale Matrix; das Projekt verantwortet seine Evidence.
+Dokumentklasse: technische Integration/Nachpruefung. Sprache: DE zuerst, EN
+danach. Distribution: nur dieses Repository; Home Runtime separat in Level 0.
+Wiedervorlage bei Quellendrift oder vor dem naechsten Produktlauf. Statistik-
+methodik bleibt erhalten; Reproduzierbarkeit ist keine KI-Produktivitaetsmessung.
+Unveraenderliche Upstream-Paketdateien, einschliesslich README, bleiben in ihrer
+veroeffentlichten Sprache erhalten; lokale Nachweise sind zweisprachig.
+
+EN: Audience: maintainers and GSDB reviewers.
+Reader path: statistics ledger -> this report -> GSDB matrix and PR.
 Canonical source: immutable preset tag and central matrix; project owns evidence.
 Class: technical integration/revalidation. Language: inline DE-first/EN-second.
 Distribution: repository only; Home Runtime is delivered in Level 0 separately.
 Re-Evaluation: source drift or next product-start preflight. Statistics keep
 their existing methodology; reproducibility is not measured AI productivity.
+Immutable upstream package files, including README, retain their published
+language; locally owned evidence is bilingual.
