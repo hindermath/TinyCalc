@@ -740,6 +740,8 @@ rough net volume in lines. The chart is intentionally simple and is meant to
 explain quickly the strong early jump and the later decline in visible phase
 volume.
 
+| 2026-10-05 | Authoring v0.3.7: technische GSDB-Nachpruefung / Technical GSDB recheck | UpdateRequired: stabiler Patch mit Tag-/Commit-/ZIP-Bindung und unveraenderten anderen Presets; fuenf geaenderte GSDB-Quellen technisch neu gebunden, 157 Kontrollzeilen/16 externe Pflichten/13 Findings und Summen unveraendert. Alte v0.3.6-Presetversion/-Hash blockieren weiterhin. Keine neue Produkt-, Risiko- oder Releasefreigabe. Bestehende Statistik wird nach Quellencommit reproduzierbar gerendert; Methodik unveraendert. / Bounded integration and technical evidence refresh, no human-state promotion or measured productivity claim. [Evidence](maintenance/intake-authoring-v037.md). |
+
 ## Gesamtstatistik / Overall Statistics
 
 <!-- project-statistics-v2:begin -->

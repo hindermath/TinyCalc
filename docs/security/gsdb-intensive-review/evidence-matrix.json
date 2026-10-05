@@ -92,9 +92,9 @@
       "sourceId": "PRESET-intake-authoring-governance",
       "sourceClass": "Preset",
       "path": ".specify/presets/intake-authoring-governance/preset.yml",
-      "version": "0.3.6",
-      "reviewedAt": "2026-10-03",
-      "normalizedSha256": "647920968d4f49290b0b04ed3a7cd3381f0303d21de224c02ed8351c961441ff",
+      "version": "0.3.7",
+      "reviewedAt": "2026-10-05",
+      "normalizedSha256": "3ece036a3aa5921a70501f3ba846e38dfaa8ff3505e79aabc2f6db679c44bcaa",
       "scope": {
         "de": "Diese Quelle wird nur für ihren benannten TinyCalc-Prüfumfang verwendet.",
         "en": "This source is used only for its named TinyCalc assessment scope."
@@ -783,8 +783,8 @@
       "sourceClass": "Constitution",
       "path": "constitution.md",
       "version": "Current",
-      "reviewedAt": "2026-10-03",
-      "normalizedSha256": "76dbcab975bfd643a15f5b246676e6f1720250c2bdc6889f6c43c303fe1c6b14",
+      "reviewedAt": "2026-10-05",
+      "normalizedSha256": "c55d07271d2f3d3dbec886100c9c3cfbe472e31d1f4cbc0b55b8c45fe742638c",
       "scope": {
         "de": "Diese Quelle wird nur für ihren benannten TinyCalc-Prüfumfang verwendet.",
         "en": "This source is used only for its named TinyCalc assessment scope."
@@ -798,8 +798,8 @@
       "sourceClass": "Constitution",
       "path": ".specify/memory/constitution.md",
       "version": "Current",
-      "reviewedAt": "2026-10-03",
-      "normalizedSha256": "76dbcab975bfd643a15f5b246676e6f1720250c2bdc6889f6c43c303fe1c6b14",
+      "reviewedAt": "2026-10-05",
+      "normalizedSha256": "c55d07271d2f3d3dbec886100c9c3cfbe472e31d1f4cbc0b55b8c45fe742638c",
       "scope": {
         "de": "Diese Quelle wird nur für ihren benannten TinyCalc-Prüfumfang verwendet.",
         "en": "This source is used only for its named TinyCalc assessment scope."
@@ -1263,8 +1263,8 @@
       "sourceClass": "ProjectEvidence",
       "path": "AGENTS.md",
       "version": "Current",
-      "reviewedAt": "2026-10-03",
-      "normalizedSha256": "8f17db1ea82d6ee90511c14ecef476f561897e61e2f2135d36ae253a1131c67c",
+      "reviewedAt": "2026-10-05",
+      "normalizedSha256": "adf39d5aefe37a461e67d80216a72819260217ad4080178a89e323a8f5d60afb",
       "scope": {
         "de": "Zeilenspezifischer aktueller Nachweis aus AGENTS.md; der Hash beweist Inhalt, nicht automatisch Erfuellung.",
         "en": "Current row-specific evidence from AGENTS.md; the hash proves content, not automatic fulfilment."
@@ -1278,8 +1278,8 @@
       "sourceClass": "ProjectEvidence",
       "path": ".specify/presets/.registry",
       "version": "Current",
-      "reviewedAt": "2026-10-03",
-      "normalizedSha256": "4fa3e8b8f9671f1f80d36e7991cf7cd45b11dc79108327a75117fb0e5aebe9fb",
+      "reviewedAt": "2026-10-05",
+      "normalizedSha256": "fb82613b210fa1e1e7e81c4dfce995c9f1aa4dcec53b1e357bee24b665c0a9ed",
       "scope": {
         "de": "Zeilenspezifischer aktueller Nachweis aus .specify/presets/.registry; der Hash beweist Inhalt, nicht automatisch Erfuellung.",
         "en": "Current row-specific evidence from .specify/presets/.registry; the hash proves content, not automatic fulfilment."
@@ -12760,7 +12760,7 @@
     },
     {
       "presetId": "intake-authoring-governance",
-      "version": "0.3.6",
+      "version": "0.3.7",
       "priority": "NotInStandardMatrix",
       "standardMatrixMember": false,
       "applicability": "Applicable",
@@ -12814,8 +12814,8 @@
         }
       ],
       "rationale": {
-        "de": "intake-authoring-governance 0.3.6 ist am exakten Preset-Locator inventarisiert und auf 29 Checklistenzeilen sowie 3 Feature-Gates abgebildet.",
-        "en": "intake-authoring-governance 0.3.6 is inventoried at its exact preset locator and mapped to 29 checklist rows and 3 feature gates."
+        "de": "intake-authoring-governance 0.3.7 ist am exakten Preset-Locator inventarisiert und auf 29 Checklistenzeilen sowie 3 Feature-Gates abgebildet.",
+        "en": "intake-authoring-governance 0.3.7 is inventoried at its exact preset locator and mapped to 29 checklist rows and 3 feature gates."
       },
       "owner": "Spec Kit governance role",
       "reviewer": "Independent technical review role",

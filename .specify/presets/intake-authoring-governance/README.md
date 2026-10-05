@@ -1,6 +1,18 @@
 # Intake Authoring Governance Preset
 
-Aktuelle Version / Current version: **0.3.6**. Laufende `Active`-Serien mit
+Aktuelle Version / Current version: **0.3.7**. Der Installationsbefehl steht
+auf einer Zeile und bindet das genaue Release-ZIP, damit die automatische
+Community-Prüfung ihn direkt auswerten kann. Die Generatorvorlage bindet
+0.3.7; bekannte Schema-2-Receipts von 0.3.6 bleiben gültig und unverändert.
+Keine neue Command-, Schema-, Prioritäts- oder Ausführungsberechtigung.
+
+The installation command is a single line bound to the exact release ZIP for
+automatic community validation. The generator template binds 0.3.7 and keeps
+known schema-2 receipts from 0.3.6 valid without rewriting them. No new command,
+schema, priority or execution authority is introduced.
+See [patch validation and documentation](docs/release-0.3.7-validation.md).
+
+Version **0.3.6**: Laufende `Active`-Serien mit
 mindestens einem `Active`-Mitglied bleiben ohne weiteren `Eligible`-Kandidaten
 gueltig; `eligibleCandidate` ist dann `N/A`. `Ready` verlangt weiterhin genau
 einen Kandidaten. Mehrfachkandidaten, Hash-, Pfad- und Abhaengigkeitsfehler
@@ -9,7 +21,7 @@ bleiben gesperrt. Schema, Commands und Prioritaet bleiben gleich.
 Running Active series with an Active member may have no additional Eligible
 candidate. The candidate remains N/A; this grants no execution authority.
 Ready still requires exactly one candidate, and all integrity checks remain.
-Coordinated versions: Authoring 0.3.6, Review 0.2.4, Sequencing 0.2.7.
+Compatible published versions: Authoring 0.3.7, Review 0.2.4, Sequencing 0.2.7.
 Each preset remains independently installable; historical evidence is preserved.
 
 Gemeinsame Konfigurationsvalidatoren akzeptieren auch die bereits etablierte,
@@ -89,9 +101,7 @@ and freshness without writing.*
 ## Install
 
 ```bash
-specify preset add \
-  --from https://github.com/hindermath/spec-kit-preset-intake-authoring-governance/archive/refs/tags/v0.3.6.zip \
-  --priority 64
+specify preset add --from https://github.com/hindermath/spec-kit-preset-intake-authoring-governance/archive/refs/tags/v0.3.7.zip --priority 64
 specify preset list
 specify preset info intake-authoring-governance
 specify preset resolve
