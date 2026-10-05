@@ -254,6 +254,7 @@ try {
     # DE: Ein Patch-Upgrade erneuert konkrete Bindungen, nicht die Fehlertoleranz.
     # EN: A patch upgrade refreshes exact bindings, not validation tolerance.
     foreach ($OldSource in @(
+        @{ Path = '.specify/presets/intake-authoring-governance/preset.yml'; Hash = '647920968d4f49290b0b04ed3a7cd3381f0303d21de224c02ed8351c961441ff' },
         @{ Path = '.specify/presets/intake-authoring-governance/preset.yml'; Hash = '3c934d29268fd284aa8641b491d6725cda54480c19065482dc7d270bf27f0186' },
         @{ Path = '.specify/presets/.registry'; Hash = '2186bf44b3ef1f7f425b9c4da9d53133a66099af11b8818bbcedb7a0152429d6' }
     )) {
@@ -264,7 +265,7 @@ try {
         }
         Assert-GsdbFailure -Assessment $StaleAuthoringSource -ExpectedCode 'GSDB002'
     }
-    foreach ($WrongVersion in @('0.3.4', '99.0.0')) {
+    foreach ($WrongVersion in @('0.3.4', '0.3.6', '99.0.0')) {
         $AuthoringVersionDrift = Copy-GsdbProductionAssessment -Name "authoring-version-$WrongVersion" -Mutate {
             param($Document)
             $Preset = $Document.presetAssessments | Where-Object presetId -CEQ 'intake-authoring-governance'

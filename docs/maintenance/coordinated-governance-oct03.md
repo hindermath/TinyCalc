@@ -1,5 +1,14 @@
 # Koordinierter Governance-Pilot / Coordinated governance pilot
 
+DE: Historischer Lieferstand vom 3. Oktober. Die gemeinsame Quellenbindung wird
+laufend fortgeschrieben; aktuelle Authoring-v0.3.7-Bindung und technische
+Nachpruefung: [Patch-Nachlauf](intake-authoring-v037.md). Die unten beschriebenen
+v0.3.6-Pruefergebnisse behalten ihren historischen Kontext.
+
+EN: Historical October 3 delivery. The shared source lock is maintained over
+time; the linked patch follow-up records current Authoring v0.3.7 and technical
+revalidation. The v0.3.6 results below retain their historical context.
+
 Aktueller Ergänzungsnachweis / Current addendum:
 [stabile Assurance-v0.1.3-Veröffentlichung / stable Assurance v0.1.3 publication](assurance-v013-stable-publication.md).
 
