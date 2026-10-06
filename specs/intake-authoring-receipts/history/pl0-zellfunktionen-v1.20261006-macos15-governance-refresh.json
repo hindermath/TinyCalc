@@ -1,0 +1,180 @@
+{
+  "schemaVersion": "2.0",
+  "documentType": "IntakeReceipt",
+  "receiptId": "a9bd8f4a-cb3d-4780-a50f-ef0c1e8526d3",
+  "intakeId": "7474c2ca-2efe-4d05-a359-9af278333007",
+  "generator": {
+    "version": "0.3.6",
+    "preset": "intake-authoring-governance"
+  },
+  "createdAt": "2026-10-03T23:56:45Z",
+  "operation": {
+    "operationId": "4133f056-3978-4815-ad2a-3d6f13752b5f",
+    "authorityEvidence": "Thorsten explicitly approved the eight bounded language updates, both README bindings, archive/lineage/series evidence and full re-review on 2026-10-04. Current maintenance delivery is MergeAndSync with admin bypass for formal merge rules only. Future intake scope and authority remain unchanged.",
+    "type": "Update"
+  },
+  "status": "ReadyForReview",
+  "target": {
+    "path": "requirements/intakes/active/Lastenheft_PL0-Zellfunktionen_V1.md",
+    "normalizedSha256": "efa90646d4633f3f925c0d97f14c946f53583d20409ff390db8613bc718b3a88"
+  },
+  "sources": [
+    {
+      "etag": "N/A",
+      "path": "requirements/intakes/history/20261004-language-repair/Lastenheft_PL0-Zellfunktionen_V1.md",
+      "finalUrl": "N/A",
+      "kind": "File",
+      "proofBoundary": "Repository file; strict UTF-8 normalized SHA-256; archive preserves predecessor bytes",
+      "lastModified": "N/A",
+      "sourceId": "SRC001",
+      "gitBlob": "N/A",
+      "location": "Repository",
+      "contentType": "N/A",
+      "httpStatus": "N/A",
+      "requestedUrl": "N/A",
+      "redirectChain": [],
+      "normalizedSha256": "0a82eb5c07c1412b089cc2895df63b89923d10a4bc8df611af596ef56511ca83",
+      "contentLength": "N/A",
+      "retrievedAt": "N/A",
+      "label": "First binding source: unchanged predecessor intake",
+      "order": 1,
+      "rawSha256": "N/A"
+    },
+    {
+      "etag": "N/A",
+      "path": "specs/intake-authoring-receipts/history/pl0-zellfunktionen-v1.20261004-language-repair.json",
+      "finalUrl": "N/A",
+      "kind": "File",
+      "proofBoundary": "Repository file; strict UTF-8 normalized SHA-256; archive preserves predecessor bytes",
+      "lastModified": "N/A",
+      "sourceId": "SRC002",
+      "gitBlob": "N/A",
+      "location": "Repository",
+      "contentType": "N/A",
+      "httpStatus": "N/A",
+      "requestedUrl": "N/A",
+      "redirectChain": [],
+      "normalizedSha256": "7d367eb5ad243c6b393718e279e16c52e6d193d1d2660fbb9c24a5e567ac0fc5",
+      "contentLength": "N/A",
+      "retrievedAt": "N/A",
+      "label": "Archived prior receipt preserves the full original ordered source inventory",
+      "order": 2,
+      "rawSha256": "N/A"
+    },
+    {
+      "etag": "N/A",
+      "path": "requirements/intakes/series-archive/tinycalc-delivery/20261004-language-repair/intake-review-result.json",
+      "finalUrl": "N/A",
+      "kind": "File",
+      "proofBoundary": "Repository file; strict UTF-8 normalized SHA-256; archive preserves predecessor bytes",
+      "lastModified": "N/A",
+      "sourceId": "SRC003",
+      "gitBlob": "N/A",
+      "location": "Repository",
+      "contentType": "N/A",
+      "httpStatus": "N/A",
+      "requestedUrl": "N/A",
+      "redirectChain": [],
+      "normalizedSha256": "f76344f4e2c16654362670ee4c8747438d6280ebb39e0dc5616cac194a685c3f",
+      "contentLength": "N/A",
+      "retrievedAt": "N/A",
+      "label": "Binding six-finding review and approved repair boundary",
+      "order": 3,
+      "rawSha256": "N/A"
+    },
+    {
+      "etag": "N/A",
+      "path": "N/A",
+      "finalUrl": "N/A",
+      "kind": "Inline",
+      "proofBoundary": "Exact authority text retained in operation.authorityEvidence and updateAuthorityEvidence",
+      "lastModified": "N/A",
+      "sourceId": "SRC004",
+      "gitBlob": "N/A",
+      "location": "SnapshotOnly",
+      "contentType": "N/A",
+      "httpStatus": "N/A",
+      "requestedUrl": "N/A",
+      "redirectChain": [],
+      "normalizedSha256": "408ec0967f777b7bf13d4a28181edef9b8ea95eedf19b9216d07af21a4360041",
+      "contentLength": "N/A",
+      "retrievedAt": "N/A",
+      "label": "Explicit current approval",
+      "order": 4,
+      "rawSha256": "N/A"
+    }
+  ],
+  "profile": "level2-lastenheft",
+  "languagePolicy": "GermanFirstEnglishSecond",
+  "decisions": [
+    {
+      "id": "IAD001",
+      "status": "Answered",
+      "question": "Are the PL0 scope and TinyPl0 predecessor preserved?",
+      "answer": "Yes. The existing PL0 scope and fail-closed TinyPl0 delivery gate remain unchanged.",
+      "evidence": "Prior intake and archive."
+    },
+    {
+      "id": "IAD002",
+      "status": "Answered",
+      "question": "Is a local project-reference fallback permitted?",
+      "answer": "No. Public pinned TinyPl0 packages and the locked contract gate remain mandatory.",
+      "evidence": "Prior intake and archive."
+    },
+    {
+      "id": "IAD003",
+      "status": "Answered",
+      "question": "Does the intake permanently require one Terminal.Gui version?",
+      "answer": "No. Execution resolves the then-current explicitly approved repository pin and classifies drift.",
+      "evidence": "Explicit prior user decision."
+    },
+    {
+      "id": "IAD004",
+      "status": "Answered",
+      "question": "How does PL0 affect the current product contract?",
+      "answer": "PL0 adds stable PL0 contract IDs before product code and retains regression for every earlier active ID.",
+      "evidence": "Approved intake consolidation plan."
+    },
+    {
+      "id": "IAD005",
+      "status": "Answered",
+      "question": "Which part of the TinyPl0 delivery gate is now satisfied?",
+      "answer": "The external TinyPl0 delivery stage is satisfied by release v0.4.1, source commit edab567e1e7cd3ea8eb8e3bea425b54f24d4b506, successful release run 33757534918, and matching public packages. The TinyCalc technical preflight and internal predecessor remain open and blocking.",
+      "evidence": "GitHub release and workflow snapshots plus the two official NuGet.org version indexes."
+    }
+  ],
+  "openDecisionIds": [],
+  "questionCount": 5,
+  "agentSurface": {
+    "specifyCanonicalId": "speckit.specify",
+    "specifyInvocation": "$speckit-specify",
+    "autonomousCanonicalId": "speckit.autonomous",
+    "autonomousInvocation": "$speckit-autonomous"
+  },
+  "deliveryAuthority": "LocalImplementation",
+  "authorityEvidence": "The user explicitly approved and requested implementation of the PL0 delivery-evidence refresh plan. No commit, push, pull request, merge, bypass, package change, product implementation, or downstream review authority is granted.",
+  "promptState": "Enabled",
+  "provenanceMode": "Supersession",
+  "supersedes": {
+    "receiptNormalizedSha256": "7d367eb5ad243c6b393718e279e16c52e6d193d1d2660fbb9c24a5e567ac0fc5",
+    "archiveTargetPath": "requirements/intakes/history/20261004-language-repair/Lastenheft_PL0-Zellfunktionen_V1.md",
+    "archiveReceiptPath": "specs/intake-authoring-receipts/history/pl0-zellfunktionen-v1.20261004-language-repair.json",
+    "targetNormalizedSha256": "0a82eb5c07c1412b089cc2895df63b89923d10a4bc8df611af596ef56511ca83",
+    "receiptPath": "specs/intake-authoring-receipts/history/pl0-zellfunktionen-v1.20261004-language-repair.json"
+  },
+  "legacyAdoption": {
+    "evidenceType": "N/A",
+    "priorTargetNormalizedSha256": "N/A",
+    "priorGitBlob": "N/A"
+  },
+  "updateAuthorized": true,
+  "updateAuthorityEvidence": "Thorsten explicitly approved the eight bounded language updates, both README bindings, archive/lineage/series evidence and full re-review on 2026-10-04. Current maintenance delivery is MergeAndSync with admin bypass for formal merge rules only. Future intake scope and authority remain unchanged.",
+  "series": {
+    "seriesId": "5b4523b4-d946-4091-9cbc-11825af94332",
+    "manifestPath": "requirements/intakes/series/tinycalc-delivery/manifest.json",
+    "order": 8,
+    "role": "OrderedMember",
+    "supersedesIntakeIds": []
+  },
+  "nextAction": "$speckit-intake-review requirements/intakes/active/Lastenheft_PL0-Zellfunktionen_V1.md"
+}

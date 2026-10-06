@@ -589,6 +589,7 @@ runtime evidence.*
 
 | 2026-10-05 | Authoring v0.3.7: technische GSDB-Nachpruefung / Technical GSDB recheck | UpdateRequired: stabiler Patch mit Tag-/Commit-/ZIP-Bindung und unveraenderten anderen Presets; fuenf geaenderte GSDB-Quellen technisch neu gebunden, 157 Kontrollzeilen/16 externe Pflichten/13 Findings und Summen unveraendert. Alte v0.3.6-Presetversion/-Hash blockieren weiterhin. Keine neue Produkt-, Risiko- oder Releasefreigabe. Bestehende Statistik wird nach Quellencommit reproduzierbar gerendert; Methodik unveraendert. / Bounded integration and technical evidence refresh, no human-state promotion or measured productivity claim. [Evidence](maintenance/intake-authoring-v037.md). |
 | 2026-10-06 | macOS-15 CI runner migration | CI-Matrizen und gemeinsame Guidance auf macOS 15 umgestellt; Linux-/Windows-Auswahl erhalten, Required-Check-Migration und exakte PR-CI als Liefergates. / Migrated CI labels and guidance; preserved other platforms and required exact-head CI proof. |
+| 2026-10-06 | PL/0 macOS-15-Governance-Aktualisierung / PL/0 macOS-15 governance refresh | Branch `codex/pl0-macos15-governance-refresh`; sichtbares Evidence-Fenster beginnt 2026-10-06T12:44:56Z UTC, keine Stoppuhr- oder Gesamtdauerbehauptung. Vor dem Statistik-Selbstnachweis: `0` Produktionscode-, `0` Produkttest- und `+2062 / -587 = 1475` netto Dokumentations-, Governance- und Evidence-Zeilen einschließlich byteidentischer Archive. Arbeitspakete: CI-/Plattformgrenze in AC-009, elf geordnete Intake-Quellen, Intake-/Serien-Lineage, Review-Supersession, PR-Text und Validierung; TinyPl0-Stufe 1, TinyCalc-Preflight, 17 Anforderungen, 12 Abnahmekriterien, Rang 8 und `Blocked` unverändert. Konservative Referenz: `18.4` Arbeitstage, ca. `143.8` Stunden und `0.86` Monate; Thorsten-Solo-Referenz: `11.8` Arbeitstage, ca. `92.0` Stunden und `0.55` Monate. Gegen einen sichtbaren Aktivtag sind `18.4x` und `11.8x` blended repository speedup beziehungsweise Lieferdichte, keine Aufwandmessung. Profil-2-Vorschau: reproduzierbar ausführbar, `DRY_RUN` mit erwarteter Drift; der Schreibmodus bleibt bis zur separat autorisierten sauberen Commit-Grenze gesperrt. Kein Produktlauf, DocFX oder Remote-Vorgang. / Bounded CI-evidence and provenance refresh with byte-identical archives and an intentionally pending independent review. Product/runtime scope is unchanged; reference days and factors are delivery-density comparisons, not measured effort. |
 
 ## Statistikprofil-1-Archiv / Statistics Profile 1 Archive
 Basis dieses Schlussblocks sind die aktuell dokumentierten Snapshot- und
@@ -753,27 +754,27 @@ Profil 2 verwendet Git-getrackte Textdateien und sichtbare Git-Aktivitaet. Die W
 
 | Kennzahl / Metric | Wert / Value |
 |---|---:|
-| Textbasis / Text base | 224618 lines |
-| Textdateien / Text files | 1403 |
+| Textbasis / Text base | 226395 lines |
+| Textdateien / Text files | 1415 |
 | Beobachtbarer Zeitraum / Observable period | 2025-10-12..2026-10-06 |
 | Aktivtage / Active days | 90 |
-| Relevante Commits / Relevant commits | 266 |
-| Zeilen je Aktivtag / Lines per active day | 2495.8 |
+| Relevante Commits / Relevant commits | 267 |
+| Zeilen je Aktivtag / Lines per active day | 2515.5 |
 | Peak-Tag im Fenster / Peak day in window | 2026-06-17 / 27058 |
 | Peak-Woche im Fenster / Peak week in window | 2026-07-19 / 33387 |
 | Laengste Serie / Longest streak | 8 days |
-| Speedup vs. 80 lines/day | 31.2x |
-| Speedup vs. 125 lines/day | 20.0x |
-| Methodik / Methodology | v2; source `f05822679eb3` |
+| Speedup vs. 80 lines/day | 31.4x |
+| Speedup vs. 125 lines/day | 20.1x |
+| Methodik / Methodology | v2; source `28b461c3b5e6` |
 
 ### Artefaktmix / Artifact Mix
 
 ```text
 Produktiv / Production          [#...................]   1.3% | 2830
 Tests                           [#...................]   4.1% | 9215
-Dokumentation / Documentation   [##############......]  72.5% | 162783
-Skripte / Scripts               [###.................]  12.7% | 28448
-Konfiguration / Configuration   [##..................]   8.2% | 18327
+Dokumentation / Documentation   [##############......]  72.3% | 163583
+Skripte / Scripts               [###.................]  12.6% | 28448
+Konfiguration / Configuration   [##..................]   8.5% | 19304
 Daten und Medien / Data and media [....................]   0.0% | 0
 Sonstiger Text / Other text     [#...................]   1.3% | 3015
 ```
@@ -799,7 +800,7 @@ Sa/Sa  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 4 0 0 4 0 0 0 2 0 0
 Wochen / Weeks 27..52 | 2026-04-12..2026-10-10
 So/Su  2 0 0 0 0 0 0 1 0 4 0 0 0 1 4 4 1 4 4 0 4 4 4 4 0 4
 Mo/Mo  1 4 0 4 0 0 0 0 0 0 0 3 1 4 4 0 0 0 2 0 0 0 0 0 3 3
-Di/Tu  0 0 0 3 0 0 3 0 0 0 0 2 0 3 4 4 0 0 0 0 4 3 4 0 0 2
+Di/Tu  0 0 0 3 0 0 3 0 0 0 0 2 0 3 4 4 0 0 0 0 4 3 4 0 0 4
 Mi/We  0 3 0 2 0 0 0 2 0 4 0 2 0 0 2 4 0 0 0 0 0 0 0 0 0 -
 Do/Th  0 0 4 0 0 0 1 0 4 1 0 0 0 1 4 0 0 4 0 0 3 0 0 0 0 -
 Fr/Fr  2 4 0 0 0 4 2 2 0 3 2 3 4 4 4 1 0 0 0 0 4 3 2 0 0 -
@@ -907,8 +908,8 @@ Die festen Slots halten den Phasenvergleich auch bei fehlenden oder spaeter erga
 
 ```text
 Scale: 0..50x
-80 lines/day       [############........] 31.2x
-125 lines/day      [########............] 20.0x
+80 lines/day       [#############.......] 31.4x
+125 lines/day      [########............] 20.1x
 ```
 
 Die Faktoren vergleichen sichtbare Lieferdichte mit den dokumentierten manuellen Referenzen. Sie messen keine Arbeitszeit.
@@ -921,7 +922,7 @@ Die Faktoren vergleichen sichtbare Lieferdichte mit den dokumentierten manuellen
 Scale: 0..5000 lines/day
 Experienced manual [#...................] 80
 Thorsten solo      [#...................] 125
-Visible repository [##########..........] 2495.8
+Visible repository [##########..........] 2515.5
 ```
 
 Die gemeinsame Skala vergleicht Referenzen und sichtbare Lieferdichte. Sie schreibt die Git-Aktivitaet keiner Person oder KI pauschal zu.
@@ -947,6 +948,6 @@ DE: Das Fenster beginnt am 2025-10-12 und endet am 2026-10-06. Es enthaelt 90 ak
 | 2026-07 | 74031 |
 | 2026-08 | 26210 |
 | 2026-09 | 70997 |
-| 2026-10 | 15679 |
+| 2026-10 | 17280 |
 
 <!-- project-statistics-v2:end -->

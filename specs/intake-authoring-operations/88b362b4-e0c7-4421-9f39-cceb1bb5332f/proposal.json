@@ -1,0 +1,10 @@
+{
+  "schemaVersion": "1.0",
+  "proposalId": "76a244cd-6ea3-45ac-8721-60326ee991e9",
+  "type": "Update",
+  "target": "requirements/intakes/active/Lastenheft_PL0-Zellfunktionen_V1.md",
+  "change": "Bind the 6 October 2026 macOS-15 GitHub Actions governance and exact-head CI evidence boundary while preserving PL/0 scope, the satisfied TinyPl0 delivery stage, the open TinyCalc preflight, lifecycle, order, requirements and acceptance cardinalities.",
+  "scopePreserved": true,
+  "approved": true,
+  "authorityEvidence": "Thorsten explicitly requested execution of the approved bounded PL/0 macOS-15 GitHub Actions governance-refresh plan on 2026-10-06. Authority covers local intake, lineage, series, supersession, validation, PR-text and statistics updates only. Stop before independent Intake Review; no product implementation, package change, commit, push, pull request, merge, bypass or fleet rollout is authorized."
+}
