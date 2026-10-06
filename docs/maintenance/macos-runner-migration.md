@@ -43,3 +43,9 @@ Liefernachweise / Delivery evidence: PR-Checks und PR-Beschreibung / PR checks a
 
 Distributionsklasse / Distribution class: sourceOnly. Kein Home-Sync fuer
 dieses Repository / no Home sync for this repository.
+
+Die aktive GSDB-Matrix bindet Homogeneity, PowerShell Analysis und AGENTS.md
+per SHA-256. Die Runner-/Guidance-Aenderung erneuert nur diese drei Hashes;
+Bewertungen, Freigaben und historische Evidence bleiben unveraendert.
+The active GSDB matrix binds these three changed sources by SHA-256. Refresh
+only their hashes; assessment decisions, approvals and historical evidence remain unchanged.

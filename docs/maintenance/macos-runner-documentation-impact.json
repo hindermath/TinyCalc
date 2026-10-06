@@ -4,7 +4,7 @@
   "entries": [
     {
       "changeId": "CHG001",
-      "scope": "Pinned macOS runner labels, current guidance and required-check migration",
+      "scope": "Pinned macOS runner labels, current guidance and required-check migration; refresh three changed live GSDB source hashes without changing assessment decisions",
       "decision": "UpdateRequired",
       "rationale": "GitHub retires macOS 14 on 2026-11-02; current runner guidance must match executable workflows.",
       "documents": [
@@ -13,7 +13,8 @@
         "CLAUDE.md",
         "GEMINI.md",
         ".github/copilot-instructions.md",
-        ".github/agents/copilot-instructions.md"
+        ".github/agents/copilot-instructions.md",
+        "docs/security/gsdb-intensive-review/evidence-matrix.json"
       ],
       "owner": "Repository Maintainer",
       "audiences": [

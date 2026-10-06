@@ -844,7 +844,7 @@
       "path": ".github/workflows/homogeneity-check.yml",
       "version": "Unversioned",
       "reviewedAt": "2026-09-06",
-      "normalizedSha256": "408c5ec7a8eaf5f6a269368032e0d32527cd5d3487d27b2a33467c971dd6a47b",
+      "normalizedSha256": "43913c7567bbaf941769d557381dbcb29f50778f96528abcf887dafe73db949e",
       "scope": {
         "de": "Diese Quelle wird nur für ihren benannten TinyCalc-Prüfumfang verwendet.",
         "en": "This source is used only for its named TinyCalc assessment scope."
@@ -859,7 +859,7 @@
       "path": ".github/workflows/powershell-analysis.yml",
       "version": "Unversioned",
       "reviewedAt": "2026-09-20",
-      "normalizedSha256": "b23a5fac56348ee846e997c017e97ab6c61f290f78f40250bb8bccd2685b3b1e",
+      "normalizedSha256": "b1ce382e088cd875f85a5b69176b01ecd14b0696ce5d9cd18c7e4c5e782a6573",
       "scope": {
         "de": "Diese Quelle wird nur für ihren benannten TinyCalc-Prüfumfang verwendet.",
         "en": "This source is used only for its named TinyCalc assessment scope."
@@ -1264,7 +1264,7 @@
       "path": "AGENTS.md",
       "version": "Current",
       "reviewedAt": "2026-10-05",
-      "normalizedSha256": "adf39d5aefe37a461e67d80216a72819260217ad4080178a89e323a8f5d60afb",
+      "normalizedSha256": "9c881a65d85f9285ec7b976631bc360958793b2bd367ee5a2a3ff6a1b143e2bd",
       "scope": {
         "de": "Zeilenspezifischer aktueller Nachweis aus AGENTS.md; der Hash beweist Inhalt, nicht automatisch Erfuellung.",
         "en": "Current row-specific evidence from AGENTS.md; the hash proves content, not automatic fulfilment."
