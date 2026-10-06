@@ -1,0 +1,32 @@
+{
+  "schemaVersion": "1.0",
+  "documentType": "IntakeSeriesReceipt",
+  "receiptId": "6bb42797-ecda-48d8-a69d-a41470d25531",
+  "seriesId": "5b4523b4-d946-4091-9cbc-11825af94332",
+  "generator": {
+    "preset": "intake-sequencing-governance",
+    "version": "0.2.7"
+  },
+  "createdAt": "2026-10-03T23:56:45Z",
+  "operation": {
+    "type": "Update",
+    "operationId": "ac96867f-2f6f-437e-8c2b-0b818404bbfb",
+    "authorityEvidence": "Thorsten explicitly approved the eight bounded language updates, both README bindings, archive/lineage/series evidence and full re-review on 2026-10-04. Current maintenance delivery is MergeAndSync with admin bypass for formal merge rules only. Future intake scope and authority remain unchanged."
+  },
+  "status": "Ready",
+  "manifest": {
+    "path": "requirements/intakes/series/tinycalc-delivery/manifest.json",
+    "normalizedSha256": "84f6b7bf93b09bbeb7c187374f9cae1208432ebc5cf4221e7e9767143c3c8b42"
+  },
+  "supersedes": {
+    "receiptPath": "requirements/intakes/series-archive/tinycalc-delivery/20261004-language-repair/receipt.json",
+    "receiptNormalizedSha256": "59cf2382398a26c37987b4a5c2c1d55f47fdab0acce3ee70940dcb4a6b4491f2",
+    "manifestArchiveSha256": "97cda99469ff71179ccb8eef120666ad245f9507e629bea00d2ec8458360f447",
+    "manifestArchivePath": "requirements/intakes/series-archive/tinycalc-delivery/20261004-language-repair/manifest.json"
+  },
+  "tombstone": {
+    "path": "N/A",
+    "normalizedSha256": "N/A"
+  },
+  "nextAction": "$speckit-intake-review requirements/intakes/series/tinycalc-delivery/manifest.json"
+}

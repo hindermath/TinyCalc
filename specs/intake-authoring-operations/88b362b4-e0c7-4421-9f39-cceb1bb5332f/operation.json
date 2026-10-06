@@ -1,0 +1,52 @@
+{
+  "schemaVersion": "1.0",
+  "documentType": "IntakeOperation",
+  "operationId": "88b362b4-e0c7-4421-9f39-cceb1bb5332f",
+  "type": "Update",
+  "status": "Completed",
+  "createdAt": "2026-10-06T12:44:56Z",
+  "completedAt": "2026-10-06T12:44:56Z",
+  "authorityEvidence": "Thorsten explicitly requested execution of the approved bounded PL/0 macOS-15 GitHub Actions governance-refresh plan on 2026-10-06. Authority covers local intake, lineage, series, supersession, validation, PR-text and statistics updates only. Stop before independent Intake Review; no product implementation, package change, commit, push, pull request, merge, bypass or fleet rollout is authorized.",
+  "proposalPath": "specs/intake-authoring-operations/88b362b4-e0c7-4421-9f39-cceb1bb5332f/proposal.json",
+  "proposalNormalizedSha256": "db96d23645002792e2330f0e982f841da07b0d39721f8366b4fd8c996c0c8f01",
+  "approval": {
+    "approved": true,
+    "approvedBy": "Thorsten Hindermann",
+    "approvedAt": "2026-10-06T12:44:56Z",
+    "evidence": "Explicit user request: Bitte Plan ausführen."
+  },
+  "stagingDirectory": ".specify/runtime/pl0-macos15-governance-refresh/staging",
+  "intendedTargets": [
+    "requirements/intakes/active/Lastenheft_PL0-Zellfunktionen_V1.md",
+    "specs/intake-authoring-receipts/pl0-zellfunktionen-v1.json",
+    "requirements/intakes/archive/pl0-zellfunktionen-v1/20261006-macos15-governance-refresh/Lastenheft_PL0-Zellfunktionen_V1.md",
+    "specs/intake-authoring-receipts/history/pl0-zellfunktionen-v1.20261006-macos15-governance-refresh.json"
+  ],
+  "validatedTargets": [
+    "requirements/intakes/active/Lastenheft_PL0-Zellfunktionen_V1.md",
+    "specs/intake-authoring-receipts/pl0-zellfunktionen-v1.json",
+    "requirements/intakes/archive/pl0-zellfunktionen-v1/20261006-macos15-governance-refresh/Lastenheft_PL0-Zellfunktionen_V1.md",
+    "specs/intake-authoring-receipts/history/pl0-zellfunktionen-v1.20261006-macos15-governance-refresh.json"
+  ],
+  "publishedTargets": [
+    "requirements/intakes/active/Lastenheft_PL0-Zellfunktionen_V1.md",
+    "specs/intake-authoring-receipts/pl0-zellfunktionen-v1.json",
+    "requirements/intakes/archive/pl0-zellfunktionen-v1/20261006-macos15-governance-refresh/Lastenheft_PL0-Zellfunktionen_V1.md",
+    "specs/intake-authoring-receipts/history/pl0-zellfunktionen-v1.20261006-macos15-governance-refresh.json"
+  ],
+  "rollbackBoundary": "The byte-identical prior PL/0 target and receipt are archived. Roll back to those exact bytes together with the archived series and review triplet if any validator fails; never report a mixed state as current.",
+  "failure": {
+    "class": "N/A",
+    "message": "N/A"
+  },
+  "publicationEvidence": {
+    "byteIdentical": true,
+    "scopeProof": "Only the dated CI and platform evidence boundary, AC-009 precision and matching English text are added. TinyPl0 stage 1, TinyCalc preflight, 17 requirements, 12 acceptance criteria, order, lifecycle and future authority are unchanged.",
+    "fileCount": 4
+  },
+  "validationEvidence": {
+    "authoringReceipt": "PowerShell and Bash PASS before dependent series publication",
+    "productChecks": "N/A: governance documentation only; no product, API, package, XML, TUI or DocFX change"
+  },
+  "nextAction": "$speckit-intake-review requirements/intakes/active/Lastenheft_PL0-Zellfunktionen_V1.md"
+}

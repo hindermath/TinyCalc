@@ -210,11 +210,6 @@ accessible editor and a step debugger are part of version 1.*
   NuGet.org bereit. Diese nachgewiesene Lieferung ist noch kein TinyCalc-Pin;
   die freigegebene Integrationsversion wird erst im technischen Preflight
   ausgewählt und festgeschrieben.
-- Seit dem 6. Oktober 2026 verwendet der Homogenitätsworkflow den fest
-  gepinnten GitHub-Hosted-Runner `macos-15`. Produkt-Build und Produkttests
-  bleiben auf Linux und Windows; Requirements-Intake-Governance verwendet
-  weiterhin `macos-latest`. Erfolgreiche Hosted-CI belegt nur die ausgeführten
-  Jobs und ersetzt keine native TUI-, PTY- oder A11Y-Produktabnahme.
 
 *TinyCalc currently evaluates numbers, cell references, and built-in functions
 as `double`. It has no qualified user-function namespace, worksheet function
@@ -223,11 +218,7 @@ a dated repository snapshot, not a permanent PL/0 requirement. TinyPl0 has
 completed the corresponding delivery intake. Stable release `v0.4.1` provides
 matching public `TinyPl0.Core` and `TinyPl0.Vm` packages on NuGet.org. This
 evidenced delivery is not yet a TinyCalc pin; the approved integration version
-is selected and locked only by the technical preflight. Since 6 October 2026,
-the homogeneity workflow pins GitHub-hosted `macos-15`; product build and tests
-remain on Linux and Windows, while requirements-intake governance retains
-`macos-latest`. Passing hosted CI proves only the jobs that ran, not native TUI,
-PTY, or accessibility product acceptance.*
+is selected and locked only by the technical preflight.*
 
 ## Zielzustand / Target State
 
@@ -382,28 +373,6 @@ contract tests. The internal secure-development predecessor also remains
 blocking. Version `0.4.1` is the evidenced delivery candidate, not a permanent
 normative integration pin.*
 
-### CI- und Plattformnachweis am 6. Oktober 2026 / CI And Platform Evidence On 6 October 2026
-
-- [TinyCalc PR 99](https://github.com/hindermath/TinyCalc/pull/99) migrierte
-  die fest gepinnten macOS-14-Jobs auf `macos-15`. Der Merge-Commit
-  `09156155a571d94e29a2cd27c3d568f0fbcecc7a` ist an den geprüften PR-Head
-  `4e039ba36598312ad25da0dfb85e4c60e2b500c6` gebunden.
-- Nur tatsächlich ausgelöste, am exakten Commit erfolgreiche Jobs zählen als
-  CI-Nachweis. Required-Check-Namen, Runner-Labels und die ausgeführte Matrix
-  werden vor der PL/0-Lieferung erneut gegen die aktuellen Workflows geprüft.
-- Die Runner-Migration ändert weder die erfüllte TinyPl0-Lieferstufe noch
-  Paketversion, Produktplattformen oder PL/0-Scope. Native TUI-, PTY-,
-  VoiceOver- und weitere A11Y-Nachweise bleiben eigene Feature-Gates.
-
-*TinyCalc PR 99 moved explicitly pinned macOS 14 jobs to `macos-15`. Merge
-commit `09156155a571d94e29a2cd27c3d568f0fbcecc7a` is bound to reviewed PR head
-`4e039ba36598312ad25da0dfb85e4c60e2b500c6`. Only jobs that actually ran and
-passed on the exact commit count as CI evidence. Required-check names, runner
-labels, and the executed matrix must be rechecked before PL/0 delivery. This
-runner migration changes neither the satisfied TinyPl0 delivery stage nor the
-package version, product platforms, or PL/0 scope. Native TUI, PTY, VoiceOver,
-and other accessibility evidence remain separate feature gates.*
-
 Der Preflight klassifiziert Terminal.Gui als `Unchanged`, `DependencyDrift`
 oder `Unpinned`. `DependencyDrift` verlangt erneute Build-, vollständige TUI-,
 PTY- und A11Y-Prüfung. `Unpinned` blockiert fail-closed. Der Preflight führt
@@ -480,9 +449,6 @@ barriers.*
   Cross-Repo-Contract-Test.
 - Dependency-Preflight mit aufgelösten TinyPl0- und Terminal.Gui-Versionen,
   Deklarationsquellen, Lockfile-Hash und Driftklassifikation.
-- Exact-Head-CI-Nachweis mit den tatsächlich ausgeführten Jobnamen,
-  Runner-Labels und Plattformen; native TUI-/PTY-/A11Y-Abnahme wird getrennt
-  ausgewiesen und nicht aus einem grünen Hosted-Runner abgeleitet.
 - Aktualisierter maschinenlesbarer Produktvertrag mit neuen `PL0-*`-IDs und
   vollständiger Regression aller bisherigen aktiven IDs.
 - Aktualisierte DocFX-Ausgabe mit Playwright/axe- und lynx-orientierter
@@ -513,9 +479,7 @@ where applicable, and updated project statistics.*
 - **AC-008:** Format-1-Dateien laden unverändert; Format-2-Dateien erhalten
   Quellcode und Funktionsmetadaten über Save/Load-Rundreisen.
 - **AC-009:** Automatisierte Core-, TUI-, Sicherheits- und A11Y-Prüfungen laufen
-  auf den verbindlichen Plattformen am exakten Commit erfolgreich. Der Nachweis
-  nennt tatsächlich ausgeführte Jobs, Runner-Labels und Plattformen; Hosted-CI
-  ersetzt keine erforderliche native TUI-, PTY- oder A11Y-Abnahme.
+  auf den verbindlichen Plattformen erfolgreich.
 - **AC-010:** Dokumentation, Security-Evidenz, Paketnachweise und Statistik sind
   aktuell, zweisprachig und textorientiert prüfbar.
 - **AC-011:** Der Dependency-Preflight erkennt unveränderte, geänderte und
@@ -625,14 +589,6 @@ tests; XML/help/architecture/security; locks/release/SBOM/VEX/SLSA/cross-repo pr
 version/source/lock/drift preflight; full old/new contract; affected DocFX/axe/lynx;
 repository statistics.
 
-The CI evidence boundary dated 6 October 2026 binds TinyCalc PR 99, reviewed
-head `4e039ba36598312ad25da0dfb85e4c60e2b500c6`, and merge commit
-`09156155a571d94e29a2cd27c3d568f0fbcecc7a`. Homogeneity pins `macos-15`;
-product build/tests remain on Linux/Windows and intake governance retains
-`macos-latest`. Before PL/0 delivery, recheck required-check names, runner
-labels, and the jobs that actually ran on the exact commit. Hosted CI is not
-native TUI, PTY, VoiceOver, or accessibility product acceptance.
-
 ### English: acceptance and decisions
 
 - AC-001: Both delivery stages proved; no implementation otherwise.
@@ -643,9 +599,7 @@ native TUI, PTY, VoiceOver, or accessibility product acceptance.
 - AC-006: Each step has consistent instruction/registers/stack/I/O/count; halt/error prevents unintended steps.
 - AC-007: Changed/invalid draft never runs old code.
 - AC-008: Format 1 loads unchanged; format 2 round trips preserve source/metadata.
-- AC-009: Automated Core/TUI/security/A11Y passes binding platforms on the exact
-  commit; evidence names jobs, runner labels, and platforms that actually ran,
-  while hosted CI does not replace required native TUI/PTY/A11Y acceptance.
+- AC-009: Automated Core/TUI/security/A11Y passes binding platforms.
 - AC-010: Docs/security/package/statistics are current, bilingual, text-reviewable.
 - AC-011: Correct unchanged/drift/unpinned classification; drift triggers full TUI/PTY/A11Y, no auto-upgrade.
 - AC-012: All PL0-* and old active IDs pass on one commit without weakened TUI/file/formula/help/A11Y proof.

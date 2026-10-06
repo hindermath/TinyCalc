@@ -1,0 +1,29 @@
+{
+  "schemaVersion": "1.0",
+  "documentType": "SupersededIntakeReviewEvidence",
+  "seriesId": "5b4523b4-d946-4091-9cbc-11825af94332",
+  "supersededReviewId": "d2c44397-bb36-4557-9e44-5c62313d1e94",
+  "supersededStatus": "Ready",
+  "supersededReviewedAt": "2026-10-04T00:13:16Z",
+  "supersededTargetCount": 13,
+  "supersededAt": "2026-10-06T12:44:56Z",
+  "supersedingOperationId": "88b362b4-e0c7-4421-9f39-cceb1bb5332f",
+  "successorReviewId": "N/A",
+  "sourceRevision": "45f8fb00119302d4a4c24eeccfe340a931f64405",
+  "artifacts": [
+    {
+      "path": "requirements/intakes/series-archive/tinycalc-delivery/20261006-macos15-governance-refresh-review/intake-review-request.json",
+      "normalizedSha256": "1b6594b61814d74823f9d0761e965b6961ba0639fb369c06014d422011a41059"
+    },
+    {
+      "path": "requirements/intakes/series-archive/tinycalc-delivery/20261006-macos15-governance-refresh-review/intake-review-result.json",
+      "normalizedSha256": "365ba312a366af55a28e925196fc39ef6f8934d8a64a508f9d7c9d6935eccf5f"
+    },
+    {
+      "path": "requirements/intakes/series-archive/tinycalc-delivery/20261006-macos15-governance-refresh-review/intake-review-report.md",
+      "normalizedSha256": "6ba50f6b732f48145df3b3a6400215af593e2ddef5662a5b306c6ba1b8fa4f26"
+    }
+  ],
+  "proofBoundary": "The prior Ready review is archived and invalidated because the PL/0 intake hash and the bound series-manifest hash changed to bind the 6 October 2026 macOS-15 GitHub Actions governance evidence. No successor review is fabricated in this update. The TinyPl0 delivery stage, TinyCalc preflight, order, lifecycle and product authority remain unchanged.",
+  "nextAction": "$speckit-intake-review requirements/intakes/series/tinycalc-delivery/manifest.json"
+}
