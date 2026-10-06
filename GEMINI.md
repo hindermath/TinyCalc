@@ -246,7 +246,7 @@ The original Pascal files (`CALC.PAS`, `CALC.INC`) and the help file (`CALC.HLP`
 - **Sichtbarkeit:** Öffentliches **Template-Repo** — über „Use this template" nutzbar; kein Fork, keine History-Übertragung
 - **Lizenz:** MIT
 - **Branch-Schutz:** PR-Pflicht auf `main`; Admin (Eigentümer) kann direkt pushen (`enforce_admins: false`)
-- **CI:** ✅ Ubuntu 22.04 · macOS 14 · Windows 2022
+- **CI-Runner:** Ubuntu 22.04 · macOS 15 · Windows 2022
 - **Compliance-Score:** 100 % (25/25 Checks)
 
 ## Bekannte Fallstricke / Known Pitfalls
@@ -600,3 +600,16 @@ need a separate request. Installation grants no product execution authority.
 
 Evidence: [pilot integration](docs/maintenance/coordinated-governance-oct03.md).
 Policy: `docs/maintenance/governance-review-and-rollout.md` in the Level-0 source.
+
+## macOS-CI-Runner / macOS CI runners
+
+Bisherige macOS-14-Jobs verwenden explizit `macos-15`. Die bestehende
+Repository-Auswahl fuer Linux-only-Wartungsjobs bleibt erhalten. Ein gruener
+CI-Lauf beweist nur die ausgefuehrten Checks, keine Produkt-Plattformabnahme.
+Bei Runnerwechseln auch verpflichtende Checknamen und Migrationsvorlagen
+pruefen. Betrieb und Pruefgrenzen: `docs/maintenance/macos-runner-migration.md`.
+
+Existing macOS 14 jobs explicitly use `macos-15`. Keep the existing repository
+selection for Linux-only maintenance jobs. Successful CI proves the executed
+checks, not product platform acceptance. Review required check names and
+migration templates whenever runner labels change. See the linked guide.
