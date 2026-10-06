@@ -45,6 +45,8 @@ new boundary between CI evidence and product-platform acceptance.
 - Neuen Zielhash kausal in Manifest, Receipt und Operation übernehmen.
 - Den bisherigen `Ready`-Review ausdrücklich supersedieren und vor dem
   unabhängigen Serienreview stoppen.
+- Die unveränderte archivierte Reihenfolge durch einen bilingualen
+  Archiv-Wegweiser mit gültigen, unveränderlichen Zielen ergänzen.
 
 - Archive predecessor intake, receipt, series artefacts, and review triplet
   byte-for-byte.
@@ -55,19 +57,22 @@ new boundary between CI evidence and product-platform acceptance.
   operation.
 - Explicitly supersede the prior `Ready` review and stop before independent
   series review.
+- Add a bilingual archive-navigation companion with valid immutable targets
+  while leaving the archived order unchanged.
 
 ## Risiken und Grenzen / Risks and boundaries
 
 - Keine Produktcode-, API-, Paket-, Lockfile-, Assembly-Version- oder
   DocFX-Änderung.
-- Kein Produktlauf, Paketupgrade, Commit, Push, Pull Request, Merge,
-  Admin-Bypass oder Flotten-Rollout in diesem Arbeitspaket.
+- Kein Produktlauf, Paketupgrade oder Flotten-Rollout. Die Remote-Lieferung
+  bleibt auf diese Governance-Artefakte und den geprüften Exact Head begrenzt.
 - NIST SSDF und CWE Top 25 gelten. SBOM/VEX/SLSA bleiben spätere
   Produktliefer-Gates. ASVS, Zero Trust und AI-SBOM sind für diese lokale
   Governance-Dokumentation begründet nicht anwendbar.
 - No product code, API, package, lockfile, assembly-version, or DocFX change.
-  No product run or remote delivery. The update grants no PL/0 implementation
-  authority.
+  No product run, package upgrade, or fleet rollout. Remote delivery is
+  limited to these governance artefacts at the verified exact head. The
+  update grants no PL/0 implementation authority.
 
 ## Testplan / Test plan
 

@@ -9,7 +9,7 @@
   "supersededAt": "2026-10-06T12:44:56Z",
   "supersedingOperationId": "88b362b4-e0c7-4421-9f39-cceb1bb5332f",
   "successorReviewId": "N/A",
-  "sourceRevision": "09156155a571d94e29a2cd27c3d568f0fbcecc7a",
+  "sourceRevision": "45f8fb00119302d4a4c24eeccfe340a931f64405",
   "artifacts": [
     {
       "path": "requirements/intakes/series-archive/tinycalc-delivery/20261006-macos15-governance-refresh-review/intake-review-request.json",
