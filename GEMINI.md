@@ -246,7 +246,7 @@ The original Pascal files (`CALC.PAS`, `CALC.INC`) and the help file (`CALC.HLP`
 - **Sichtbarkeit:** Öffentliches **Template-Repo** — über „Use this template" nutzbar; kein Fork, keine History-Übertragung
 - **Lizenz:** MIT
 - **Branch-Schutz:** PR-Pflicht auf `main`; Admin (Eigentümer) kann direkt pushen (`enforce_admins: false`)
-- **CI:** ✅ Ubuntu 22.04 · macOS 14 · Windows 2022
+- **CI-Runner:** Ubuntu 22.04 · macOS 15 · Windows 2022
 - **Compliance-Score:** 100 % (25/25 Checks)
 
 ## Bekannte Fallstricke / Known Pitfalls
