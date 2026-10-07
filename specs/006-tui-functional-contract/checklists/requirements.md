@@ -37,6 +37,10 @@ Prüfung durch Codex am 2026-10-07: Intake-Hash und aktueller Ready-Serienreview
 
 *Codex reviewed intake/review bindings and complete semantic coverage on 7 October 2026. Technical names are inherited constraints, not newly chosen implementation details. No product acceptance is claimed.*
 
-Regulatorische Anwendbarkeit bleibt `Open` mit Thorsten als Owner und Klärung spätestens im Plan-Gate; dies ist kein unklarer Funktionsumfang. Planung muss qualifizierte Prüfung und die betroffenen Gates aufnehmen. Keine weitere Klärung der bereits beantworteten Intake-Entscheidungen erforderlich. Statistik bleibt aufgrund des auf Spezifikation begrenzten Nutzerauftrags außerhalb dieses Schreibumfangs.
+Clarify am 2026-10-07: Eine Frage gestellt und mit Option A beantwortet. FR-003, SC-001 und das Nachweisobjekt verlangen automatisierte Tests für alle automatisierbaren Funktionswege; begründete menschliche Nachweise sind ergänzend. Die 17 Familien, 17 FR und sechs SC bleiben erhalten. Die Entscheidung steht einmal im Klärungsprotokoll und ist in beiden Sprachen integriert.
 
-*Regulatory applicability is Open with Thorsten as owner and review due at the plan gate; it does not make functional scope ambiguous. Planning must schedule qualified review and affected gates. Accepted intake decisions need no repeated clarification. The specification-only user instruction excludes statistics writes in this invocation.*
+*Clarify asked and resolved one question on 7 October 2026. FR-003, SC-001 and the evidence entity require automation for every automatable functional path with supplementary human assessment. All 17 families, 17 FR and six SC remain intact; the decision is recorded once and integrated bilingually.*
+
+Regulatorischer Quellenabgleich erhält die einzelnen technischen Entscheidungen aus `docs/security/regulatory-applicability.md` vom 2026-09-08. Thorsten klärt verbleibende Human-only-/Werkzeug-/Organisationsfragen und Scope-Änderungen spätestens im Plan-Gate; Planung nimmt Aktualitätsprüfung, qualifizierte Prüfung und betroffene Gates auf. Funktionale Scope-Fragen sind damit geklärt; technische Gestaltung, präzise Evidenzformate und regulatorischer Follow-up gehören in die Planung.
+
+*Preserve individual technical screening decisions from the dated regulatory record. Thorsten owns remaining human-only, tooling, organisation and scope questions at the plan gate. Planning includes freshness and qualified review. Functional scope is clarified; technical design, exact evidence formats and regulatory follow-up belong to planning.*
