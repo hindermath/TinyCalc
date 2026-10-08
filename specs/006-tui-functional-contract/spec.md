@@ -2,8 +2,12 @@
 
 **Feature Branch:** `006-tui-functional-contract`
 **Erstellt / Created:** 2026-10-07
-**Status:** Draft — fachliche Klärung und Anforderungsreview abgeschlossen; Owner-Scope-Entscheidung dokumentiert, PR-Review ausstehend. Keine Implementierungsfreigabe. / Functional clarification and requirements review complete; owner scope recorded, PR review pending. No implementation authority.
+**Status:** Fachliche Klärung, Anforderungsreview und Owner-Planreview abgeschlossen. Thorstens Review vom 2026-10-08 bindet `6693ee58aabdc99e1532cea66cb38dc80bb7deda`; PR #101 gemergt als `541d883127174a178bdb1a1070440253fd23f2b8`. Keine Implementierungsfreigabe oder Produktabnahme. / Functional clarification, requirements review and owner plan review complete at the approved head and merged PR above. No implementation authority or product acceptance.
 **Auftrag / Input:** Vollständiges verbindliches Intake in eine Feature-Spezifikation überführen; ausschließlich Spezifikation, keine Implementierung oder Lieferung. / Convert the complete binding intake into a feature specification; specification only, without implementation or delivery.
+
+**Statusfortschreibung nach PR #101 / Status update after PR #101:** Die unten erhaltenen Aussagen „Owner-/PR-Review ausstehend“ dokumentieren den ursprünglichen Specify-/Clarify-Checkpoint und sind durch den oben gebundenen Review/Merge erledigt. Sie sind kein aktueller Blocker. Produkt-/Preflight-/Abnahmenachweise bleiben unerfüllt; neue Ausführungsautorität bleibt erforderlich.
+
+*Retained pending owner-review statements below describe historical Specify/Clarify checkpoints, superseded by the bound review/merge above. Product, preflight and acceptance proof remain outstanding and execution still needs fresh authority.*
 
 Verbindliche Quelle ist [das TUI-Intake](../../requirements/intakes/active/Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md), normalisierter SHA-256 `c07016800b9e02e56f123ed6af187d0b5fedd22c1689a1b8909fcc6e8f70c6ac`. Ausgangscommit: `0ed043f720386240235010ad0249368244ed26aa`. Serie: `5b4523b4-d946-4091-9cbc-11825af94332`, Position 3, `Eligible`; harter Vorgänger Terminal.Gui-Migration `Completed`. Review `192a2219-0b1e-4a71-a336-502848cf10b0` ist `Ready` mit 13 gebundenen Zielen und null Befunden. Diese Werte wurden beim Specify-Aufruf mit Bash und PowerShell geprüft. Spätere Arbeit muss ihre Aktualität erneut prüfen.
 
