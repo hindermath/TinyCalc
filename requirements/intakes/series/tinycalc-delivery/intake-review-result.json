@@ -1,0 +1,160 @@
+{
+  "schemaVersion": "1.1",
+  "reviewId": "192a2219-0b1e-4a71-a336-502848cf10b0",
+  "mode": "Series",
+  "status": "Ready",
+  "policy": "tinycalc-delivery-v1",
+  "reviewedAt": "2026-10-06T17:23:54Z",
+  "repository": {
+    "root": ".",
+    "head": "0ed043f720386240235010ad0249368244ed26aa"
+  },
+  "requestEvidence": {
+    "path": "requirements/intakes/series/tinycalc-delivery/intake-review-request.json",
+    "normalizedSha256": "b4c54f0d823d1fe6e4a0e5df2b7ca6c0178067d56de5cf606c637f0e6004d8c3"
+  },
+  "targets": [
+    {
+      "path": "requirements/intakes/archive/Lastenheft_Constitution_Change.002-constitution-change.md",
+      "role": "Primary",
+      "normalizedSha256": "04c4e1ba93d626463829a07f33b5591a6417b6aeaf89e805b637ab1bf5c26a0a",
+      "gitBlob": "e5baf4a877153692acdc9aed7035afe3999a4acc"
+    },
+    {
+      "path": "requirements/intakes/archive/Lastenheft_TerminalGui_Migration.003-terminalgui-migration.md",
+      "role": "OrderedMember",
+      "normalizedSha256": "01db3bd8f2dc375fe1400a91580ce1a906dfc446c12fb8ad011419fe50fee94d",
+      "gitBlob": "d960bf119005a5d3d09860da90be7d5bbfa22d5a"
+    },
+    {
+      "path": "requirements/intakes/active/Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md",
+      "role": "OrderedMember",
+      "normalizedSha256": "c07016800b9e02e56f123ed6af187d0b5fedd22c1689a1b8909fcc6e8f70c6ac",
+      "gitBlob": "4ad418e77fe5bdd39fd05c087ee24aeb73e164ef"
+    },
+    {
+      "path": "requirements/intakes/active/Lastenheft_A11Y_TUI.md",
+      "role": "OrderedMember",
+      "normalizedSha256": "7fec8e9dea123fdeb0753119d06c18a8389a24645a541d3b60413166bbcbd6e2",
+      "gitBlob": "f8f2b83c12c20f67fedc9a22a22675b7d86349c1"
+    },
+    {
+      "path": "requirements/intakes/active/Lastenheft_Rename_MicroCalc_TinyCalc.md",
+      "role": "OrderedMember",
+      "normalizedSha256": "ed761c150526f18c0b1d98d8febac1def260b1890aca6d0a341279dec19985b9",
+      "gitBlob": "bb7999fed59d81aa9b449729321fb03b94868724"
+    },
+    {
+      "path": "requirements/intakes/active/Lastenheft_Didactic-Inline-Code-Comment-Hardening.md",
+      "role": "OrderedMember",
+      "normalizedSha256": "460abc8142179cc40e1d0cfe07928260456088205b3200e7ca6c6e10818e46da",
+      "gitBlob": "206acb40849eceac8d79e10f71464a5e533880c4"
+    },
+    {
+      "path": "requirements/intakes/active/Lastenheft_Secure-Development-Hardening.md",
+      "role": "OrderedMember",
+      "normalizedSha256": "38d57df9cb6431eddf812ca328965f8542d9aab801cdb8b9971cd72351472490",
+      "gitBlob": "405ac7184d0f4965143ca8a2854714098c654458"
+    },
+    {
+      "path": "requirements/intakes/active/Lastenheft_PL0-Zellfunktionen_V1.md",
+      "role": "OrderedMember",
+      "normalizedSha256": "72c67c9c4b20ee9e1e9ad89e76b0bd51284eda4f9772c05fa6c0ca92a162f7b0",
+      "gitBlob": "bc0b6621be4dbe27ba882fbc93f69d6eb084ef6b"
+    },
+    {
+      "path": "requirements/intakes/active/Lastenheft_Legacy-Kompatibilitaet_V1.md",
+      "role": "OrderedMember",
+      "normalizedSha256": "f24a7ff1c6d1bcde8bca45a57133de5b9f6386c4586a079d1ba743f99479863c",
+      "gitBlob": "f7f47ff2950c14423815e87f658208673718c232"
+    },
+    {
+      "path": "requirements/intakes/active/Lastenheft_Formelkopie-und-Tabellenoperationen_V1.md",
+      "role": "OrderedMember",
+      "normalizedSha256": "7890c8e1358e002044b352adc94fcbe2a104f38e5fc1504f6919830de03d2fb4",
+      "gitBlob": "0935e0d42877e19cc9b446ca71d34a512d666aff"
+    },
+    {
+      "path": "requirements/intakes/active/Lastenheft_Sandbox-gestuetzte-Secure-Development-Haertung.md",
+      "role": "OrderedMember",
+      "normalizedSha256": "f5ca1db52063f52f53914032fabcc8a1418c77fced607e922454248f17e72a6e",
+      "gitBlob": "10ad652b6579a3f8adbb008a3db88dfec77418be"
+    },
+    {
+      "path": "requirements/intakes/archive/Lastenheft_RL-SE-Checklist-Selbstpruefung.004-rl-se-self-assessment.md",
+      "role": "OrderedMember",
+      "normalizedSha256": "96a5ef9c414d55c69ad117509d41f056f10d005824890bd5a2867eaf8ab948da",
+      "gitBlob": "0cd87941bb49e73b11aa15ec7b529bc36788b245"
+    },
+    {
+      "path": "requirements/intakes/archive/Lastenheft_GSDB-Spec-Kit-Intensivpruefung.005-gsdb-intensive-review.md",
+      "role": "OrderedMember",
+      "normalizedSha256": "f4dcb3fac6cb755faed296847ffd40170f0d008fa3640e5e5fa5bc38e4af5375",
+      "gitBlob": "1df4cd2af93098ab1bb0e95de9e10d2811273210"
+    }
+  ],
+  "findings": [],
+  "questions": [],
+  "acceptedRisks": [],
+  "operatorExceptions": [],
+  "coverage": {
+    "individual": [
+      "requirements/intakes/archive/Lastenheft_Constitution_Change.002-constitution-change.md",
+      "requirements/intakes/archive/Lastenheft_TerminalGui_Migration.003-terminalgui-migration.md",
+      "requirements/intakes/active/Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md",
+      "requirements/intakes/active/Lastenheft_A11Y_TUI.md",
+      "requirements/intakes/active/Lastenheft_Rename_MicroCalc_TinyCalc.md",
+      "requirements/intakes/active/Lastenheft_Didactic-Inline-Code-Comment-Hardening.md",
+      "requirements/intakes/active/Lastenheft_Secure-Development-Hardening.md",
+      "requirements/intakes/active/Lastenheft_PL0-Zellfunktionen_V1.md",
+      "requirements/intakes/active/Lastenheft_Legacy-Kompatibilitaet_V1.md",
+      "requirements/intakes/active/Lastenheft_Formelkopie-und-Tabellenoperationen_V1.md",
+      "requirements/intakes/active/Lastenheft_Sandbox-gestuetzte-Secure-Development-Haertung.md",
+      "requirements/intakes/archive/Lastenheft_RL-SE-Checklist-Selbstpruefung.004-rl-se-self-assessment.md",
+      "requirements/intakes/archive/Lastenheft_GSDB-Spec-Kit-Intensivpruefung.005-gsdb-intensive-review.md"
+    ],
+    "series": [
+      "All 13 targets were reviewed semantically against the installed learner-facing checklist; there is no campaign and there are zero workers.",
+      "Identity, audience, prior knowledge, first-use terms, goals, scope, non-goals, atomic requirements, measurable acceptance, dependencies, evidence, security, privacy, accessibility, platforms, supply chain, prompts, risks and delivery authority were re-evaluated.",
+      "Twelve target hashes are unchanged from review d2c44397-bb36-4557-9e44-5c62313d1e94. The changed PL/0 target was fully re-reviewed for its macOS-15 exact-head CI boundary and unchanged two-stage fail-closed integration gate.",
+      "The 6 October CI statements agree with TinyCalc PR 99 and the current workflow matrices: homogeneity pins macos-15, product build/test remains Linux and Windows, and intake governance retains macos-latest.",
+      "TinyPl0 v0.4.1, source commit edab567e1e7cd3ea8eb8e3bea425b54f24d4b506, release run 33757534918 and matching public TinyPl0.Core/TinyPl0.Vm 0.4.1 packages were live rechecked. This confirms only external stage 1; TinyCalc preflight and the internal predecessor remain blocking.",
+      "The graph has 13 unique ordered targets, four exact zero-indegree roots and nine unique forward hard gates without cycles. Exactly one target is Eligible; eligibility grants no implementation or remote-delivery authority.",
+      "No credentials, unnecessary personal data, hidden binary target, unexplained gap, overlap, terminology drift, unresolved material question or accepted risk was found."
+    ],
+    "workers": []
+  },
+  "summary": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+  },
+  "supersedes": "d2c44397-bb36-4557-9e44-5c62313d1e94",
+  "reviewBoundary": {
+    "manifestPath": "requirements/intakes/series/tinycalc-delivery/manifest.json",
+    "manifestNormalizedSha256": "bccde554dc1ae47c69c4327c6a1e4332bd7f54556e255c75ae5097a541cd71cc",
+    "seriesReceiptPath": "requirements/intakes/series/tinycalc-delivery/receipt.json",
+    "seriesReceiptNormalizedSha256": "1278c3189d307b00546fe3ea4a9f20a9c5cdb3c3fdc4da49b613fd75e53ee5c4",
+    "supersededResultPath": "requirements/intakes/series-archive/tinycalc-delivery/20261006-macos15-governance-refresh-review/intake-review-result.json",
+    "supersededResultNormalizedSha256": "365ba312a366af55a28e925196fc39ef6f8934d8a64a508f9d7c9d6935eccf5f",
+    "changedTargetPath": "requirements/intakes/active/Lastenheft_PL0-Zellfunktionen_V1.md",
+    "changedTargetPredecessorNormalizedSha256": "efa90646d4633f3f925c0d97f14c946f53583d20409ff390db8613bc718b3a88",
+    "applicability": {
+      "NIST_SSDF": "Applicable to the Level-2 review and future secure-development evidence; no product certification is claimed.",
+      "CWE_Top_25": "Applicable to formula, file, dependency, execution and VM input boundaries at requirements level.",
+      "WCAG_2_2_AA": "Applicable where criteria fit the TUI, documentation and evidence; native TUI, PTY, VoiceOver and DocFX proof remains feature-gated.",
+      "SBOM": "Applicable to distributable TinyCalc and TinyPl0 artefacts; the external TinyPl0 release evidence was rechecked without creating a new product release.",
+      "VEX": "Applicable when a known shipped or evaluated vulnerability needs disposition; the bound TinyPl0 release step was rechecked and no new disposition is asserted.",
+      "SLSA": "Target model for CI and published artefact provenance; the bound TinyPl0 provenance step was rechecked.",
+      "AI_SBOM": "N/A because AI is development tooling and not a released or operated TinyCalc runtime component.",
+      "OWASP_ASVS": "N/A because TinyCalc is a local TUI without a web, HTTP, API or authentication service.",
+      "ZeroTrust": "N/A for the local non-distributed product topology; reassess if remote-managed services are added.",
+      "STRIDE_CAPEC": "Applicable to future PL/0 execution, file import, dependency and sandbox trust boundaries; no new architecture flow is introduced by this review.",
+      "OWASP_SAMM": "Recommended maturity context for this long-lived project, not a newly executed assessment.",
+      "OpenSSF_Scorecard": "Supporting public OSS and dependency evidence; no fresh Scorecard audit is claimed."
+    },
+    "authority": "This review publishes readiness evidence only. Every feature intake retains LocalImplementation; no commit, push, pull-request, merge, bypass, package-publication, provider or follow-up-feature authority is granted.",
+    "nextAction": "$speckit-intake-series-next tinycalc-delivery"
+  }
+}

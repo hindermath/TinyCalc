@@ -31,3 +31,31 @@ an economic, market, customer, support, manufacturer, or steward role appears.
 This project-scope decision is not legal advice, conformity, certification, or
 risk acceptance. Other regulatory rows retain their stated dispositions and
 triggers.
+
+## Owner-Scope-Entscheidung Feature 006 / Feature 006 owner scope decision
+
+Am 2026-10-08 bestätigt Thorsten TinyCalc als privates persönliches Projekt und
+weist die zusätzlich im Feature-006-Plan eingeführte externe qualifizierte
+Rollen-/Scope-Review-Pflicht zurück. Diese zusätzliche Prozessschranke entfällt;
+Owner-Review der Planungsdokumente erfolgt im PR. Das Repository ist öffentlich:
+„privat“ beschreibt die persönliche Nutzung, nicht GitHub-Sichtbarkeit.
+
+Die Einzelbewertungen vom 2026-09-08 bleiben datierte Vorprüfung, keine pauschale
+Rechtsbefreiung durch private Nutzung. Produkt, Entwicklungswerkzeuge und eine
+mögliche nutzende Organisation bleiben getrennt. Kommerzielle Nutzung,
+Markt-/Kundenbereitstellung, Organisations-/Betreiberrollen, personenbezogene
+Daten, KI-Runtime und Provideränderungen lösen vor betroffenem Schritt eine
+Neubewertung aus. Technische Security-/Supply-Chain-/Preflight-/A11Y-Gates bleiben
+Pflicht; dieser Dokumentenreview erteilt keine Implementierungs- oder
+Produktfreigabe und kein externes Rechtsgutachten.
+
+On 2026-10-08, Thorsten confirms TinyCalc as a personal private-purpose project
+and rejects the added external qualified role/scope review prerequisite in
+feature 006. Remove that extra process barrier and review the planning documents
+in the PR. The repository remains public; personal use does not mean private
+GitHub visibility. Preserve the dated 2026-09-08 screening, without claiming a
+blanket legal exemption. Keep product, tooling and organisation scopes separate;
+reassess concrete commercial, market/customer, organisational, personal-data,
+runtime-AI or provider changes before affected steps. All technical gates remain
+mandatory. This document decision grants no implementation/product clearance
+and is not an external legal opinion.

@@ -176,7 +176,7 @@ paths. A hash proves content, not automatic control fulfilment.
 | ProjectEvidence | `docs/security/zero-trust-applicability.md` | `24bbd7e6e6893ce694908da44657bcf4613f01a692dc9272203f15a72f6e3a8e` | Revalidated; Zero-Trust-Disposition |
 | ProjectEvidence | `docs/security/sbom/tinycalc-terminalgui.spdx.json` | `3193a0f53e962ccaac8741331203990ba727a7ca0901ef17a8e3403678ffb398` | Revalidated; SPDX-JSON-Wurzel und Paketbeziehungen |
 | ProjectEvidence | `docs/security/cloud-compliance-assurance.md` | `17e0cc59206f2657c60a66cde1cf327f5d3cc34ea36c7a68c5ca92e3f3e609f4` | Revalidated; BSI-C5-Assurance-Disposition |
-| ProjectEvidence | `docs/security/regulatory-applicability.md` | `ef7e0d2a5a3b4ebc97fcb03ac4b051d37ccaf897971649827f1ee9937e4e9b52` | Revalidated; Regulatorik und Datenschutz / regulation and privacy |
+| ProjectEvidence | `docs/security/regulatory-applicability.md` | `78de1b5423a1fbd3b50551dbc2c5f5e2b9528aa35974a62810a08eff08958d70` | Revalidated 2026-10-08; Owner-Scope-Entscheidung Feature 006 / Feature 006 owner scope decision |
 | ProjectEvidence | `docs/security/README.md` | `a5cb6f1c0bf06f01542572a1dc9da06fa655154d496ba7fd2091419a3589f741` | Revalidated; Security-Leserpfad / reader path |
 | ProjectEvidence | `docs/security/dependency-audit.md` | `441e2567712441816448243498112e514dfaa4fcd21cee0ec69ce64335c141c5` | Revalidated; aktueller Paketgraph / current package graph |
 | ProjectEvidence | `docs/security/cloud-autonomy-applicability.md` | `398a07285563cf0a9c6b555771ed7672d68a24a170045d236feeb75a87130009` | Revalidated; BSI-C3A-Disposition |
