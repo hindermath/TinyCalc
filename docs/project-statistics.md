@@ -625,6 +625,8 @@ runtime evidence.*
 
 | 2026-10-08 | Feature 006 Copilot-Synchronisierung und Metadaten / Feature 006 Copilot synchronisation and metadata | Branch `006-tui-functional-contract`; sichtbares Arbeitsfenster ausdrücklich genehmigter Fast-forward von `675e155` auf `0017c1a` sowie Metadatenkorrektur, keine Stoppuhrmessung. Importierte GSDB-Hash-/Frische-/Locator- und englische Governance-Korrekturen erhalten; vollständiger GSDB-Validator über PowerShell/Bash Pass. Authoring-/Serien-/Review-/Alignment-Prüfung über beide Varianten Pass; 17 FR/sechs SC unverändert, keine neue Scope-/Produktentscheidung. `0` Produktionscode-, `0` Produkttest- und `15` netto PR-Dokumentationszeilen vor Statistik-Selbstnachweis (`18` hinzugefügt, `3` entfernt). Versionsfelder im Quellen-Commit auf `1.6.8.30`, nach separat gerenderter Statistik final `1.6.9.30`; Buildzähler 30 unverändert. UTF-8/LF, Secret-, Scope-, Versions- und Diffprüfung; Statistik-Render erst nach sauberem Commit, mit Vorschau und CheckOnly. CI am importierten Remote-Head benötigt GitHub-Aktion; lokale Validator-Pass sind kein CI- oder Produktnachweis. Referenzen 80/125 Zeilen/Arbeitstag bleiben Modellwerte. Aktuelle Autorität Commit/Push/PR-Aktualisierung, kein Merge/Admin-Bypass/Produktlauf/Folgefeature. / Import the reviewed remote fixes by fast-forward, validate governance and refresh version/statistics metadata; update the existing PR without merging or starting implementation. |
 
+| 2026-10-08 | Feature 006 Statistik nach Copilot-Follow-up / Feature 006 statistics after Copilot follow-up | Branch `006-tui-functional-contract`; sichtbares Arbeitsfenster sauberer Vorschau/Render nach Quellen-Commit `3c138b1915dc`, keine Stoppuhrmessung. `0` Produktionscode-/Produkttestzeilen; generierter Ledger vor Selbstnachweis `7` Zeilen hinzugefügt und `7` entfernt, netto `0`. Bestehendes Profil 2/Methodik v2 erhalten; Quellenbindung `3c138b1915dc`, 228056 Textzeilen und 92 Git-aktive Tage. Vorschau DRY_RUN, Render UPDATED, CheckOnly CURRENT; Referenzen 80/125 Zeilen/Tag unverändert, keine neue Produktivitätsbehauptung. Finale Assembly-Felder `1.6.9.30` für neunten Branch-Commit; kein Buildzähleranstieg. Kein Produktlauf, Merge, Admin-Bypass oder Folgefeature; aktualisierten PR weiterhin dem Owner-Review übergeben. / Refresh the existing statistics with clean preview/render/check, source binding and final branch version; retain owner review and no-merge boundaries. |
+
 ## Statistikprofil-1-Archiv / Statistics Profile 1 Archive
 Basis dieses Schlussblocks sind die aktuell dokumentierten Snapshot- und
 Phasenwerte aus den Abschnitten `## Gesamtstand des Repositories` und
@@ -788,25 +790,25 @@ Profil 2 verwendet Git-getrackte Textdateien und sichtbare Git-Aktivitaet. Die W
 
 | Kennzahl / Metric | Wert / Value |
 |---|---:|
-| Textbasis / Text base | 228041 lines |
+| Textbasis / Text base | 228056 lines |
 | Textdateien / Text files | 1427 |
 | Beobachtbarer Zeitraum / Observable period | 2025-10-12..2026-10-08 |
 | Aktivtage / Active days | 92 |
-| Relevante Commits / Relevant commits | 271 |
-| Zeilen je Aktivtag / Lines per active day | 2478.7 |
+| Relevante Commits / Relevant commits | 273 |
+| Zeilen je Aktivtag / Lines per active day | 2478.9 |
 | Peak-Tag im Fenster / Peak day in window | 2026-06-17 / 27058 |
 | Peak-Woche im Fenster / Peak week in window | 2026-07-19 / 33387 |
 | Laengste Serie / Longest streak | 8 days |
 | Speedup vs. 80 lines/day | 31.0x |
 | Speedup vs. 125 lines/day | 19.8x |
-| Methodik / Methodology | v2; source `9f217003d90a` |
+| Methodik / Methodology | v2; source `3c138b1915dc` |
 
 ### Artefaktmix / Artifact Mix
 
 ```text
 Produktiv / Production          [#...................]   1.2% | 2830
 Tests                           [#...................]   4.2% | 9572
-Dokumentation / Documentation   [##############......]  72.3% | 164872
+Dokumentation / Documentation   [##############......]  72.3% | 164887
 Skripte / Scripts               [##..................]  12.5% | 28448
 Konfiguration / Configuration   [##..................]   8.5% | 19304
 Daten und Medien / Data and media [....................]   0.0% | 0
@@ -956,7 +958,7 @@ Die Faktoren vergleichen sichtbare Lieferdichte mit den dokumentierten manuellen
 Scale: 0..5000 lines/day
 Experienced manual [#...................] 80
 Thorsten solo      [#...................] 125
-Visible repository [##########..........] 2478.7
+Visible repository [##########..........] 2478.9
 ```
 
 Die gemeinsame Skala vergleicht Referenzen und sichtbare Lieferdichte. Sie schreibt die Git-Aktivitaet keiner Person oder KI pauschal zu.
@@ -982,6 +984,6 @@ DE: Das Fenster beginnt am 2025-10-12 und endet am 2026-10-08. Es enthaelt 92 ak
 | 2026-07 | 74031 |
 | 2026-08 | 26210 |
 | 2026-09 | 70997 |
-| 2026-10 | 18964 |
+| 2026-10 | 18995 |
 
 <!-- project-statistics-v2:end -->
