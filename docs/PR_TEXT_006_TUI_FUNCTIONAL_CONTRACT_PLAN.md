@@ -19,7 +19,7 @@ dokumentierten privaten persönlichen Projektscope unverhältnismäßig.
 - Owner-Scope-Entscheidung dokumentiert, zusätzliche externe Review-Pflicht
   supersediert. Öffentliches Repository bleibt öffentlich; keine pauschale
   regulatorische N/A-Entscheidung. Anlassprüfung und technische Gates bleiben.
-- Finale Assembly-Felder `1.6.6.30`: Feature 006, sechster Branch-Commit nach
+- Finale Assembly-Felder `1.6.9.30`: Feature 006, neunter Branch-Commit nach
   separatem Statistik-Render; Buildzähler 30 ohne Build/Test unverändert.
 - Statistik-Ledger und vorhandenen Statistikrenderer kontrolliert fortschreiben.
 
@@ -56,11 +56,26 @@ dispositions, concrete-trigger reassessment and technical gates remain intact.
 ### Scope, risks and test plan
 
 Documentation and required version metadata only; no runtime code, tests, CI,
-dependencies, locks, public APIs or DocFX changes. Final version `1.6.6.30` binds
-feature 006 and its sixth commit after statistics, with no build-counter increase. Future product changes
+dependencies, locks, public APIs or DocFX changes. Final version `1.6.9.30` binds
+feature 006 and its ninth commit after statistics, with no build-counter increase. Future product changes
 need test-first regression and dependency/platform/accessibility/security proof.
 PowerShell/Bash governance validators, UTF-8/LF, contract-identity completeness,
 secret scan and diff checks pass. Preview, clean render and check the existing
 statistics output. GitHub checks and owner review are verified separately in
 the PR. Build/test, interactive product checks and UI captures are N/A here.
 No merge, implementation start or next feature is authorised.
+
+## Copilot-Nachprüfung 2026-10-08 / Copilot follow-up
+
+Remote-Commit `0017c1a` korrigiert die GSDB-Hashbindung samt Reviewdatum/Fundstelle
+und den widersprüchlichen englischen Governance-Text. Fast-forward übernommen;
+vollständiger GSDB-Validator und Intake-/Serien-/Review-/Alignment-Validatoren
+über PowerShell und Bash bestanden. Version und Statistik danach nachgeführt.
+Die Korrektur ist Dokument-/Metadatenpflege, keine Wiederaufnahme der zuvor
+supersedierten externen Review-Pflicht oder neue Produktabnahme.
+
+Remote commit `0017c1a` corrects GSDB hashes/freshness/locator metadata and the
+contradictory English governance sentence. Imported by fast-forward; full GSDB
+and intake/series/review/alignment validation pass through PowerShell and Bash.
+Version and statistics are refreshed afterwards. This is documentation/metadata
+maintenance, not renewed external-review requirements or product acceptance.
