@@ -1173,14 +1173,14 @@
       "sourceClass": "ProjectEvidence",
       "path": "docs/security/regulatory-applicability.md",
       "version": "Current",
-      "reviewedAt": "2026-09-06",
-      "normalizedSha256": "ef7e0d2a5a3b4ebc97fcb03ac4b051d37ccaf897971649827f1ee9937e4e9b52",
+      "reviewedAt": "2026-10-08",
+      "normalizedSha256": "78de1b5423a1fbd3b50551dbc2c5f5e2b9528aa35974a62810a08eff08958d70",
       "scope": {
         "de": "Zeilenspezifischer aktueller Nachweis aus docs/security/regulatory-applicability.md; der Hash beweist Inhalt, nicht automatisch Erfuellung.",
         "en": "Current row-specific evidence from docs/security/regulatory-applicability.md; the hash proves content, not automatic fulfilment."
       },
       "freshness": "Revalidated",
-      "locator": "Regulatorische Anwendbarkeit / Regulatory Applicability",
+      "locator": "Owner-Scope-Entscheidung Feature 006 / Feature 006 owner scope decision",
       "findingIds": []
     },
     {
