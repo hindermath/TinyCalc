@@ -627,6 +627,14 @@ runtime evidence.*
 
 | 2026-10-08 | Feature 006 Statistik nach Copilot-Follow-up / Feature 006 statistics after Copilot follow-up | Branch `006-tui-functional-contract`; sichtbares Arbeitsfenster sauberer Vorschau/Render nach Quellen-Commit `3c138b1915dc`, keine Stoppuhrmessung. `0` Produktionscode-/Produkttestzeilen; generierter Ledger vor Selbstnachweis `7` Zeilen hinzugefügt und `7` entfernt, netto `0`. Bestehendes Profil 2/Methodik v2 erhalten; Quellenbindung `3c138b1915dc`, 228056 Textzeilen und 92 Git-aktive Tage. Vorschau DRY_RUN, Render UPDATED, CheckOnly CURRENT; Referenzen 80/125 Zeilen/Tag unverändert, keine neue Produktivitätsbehauptung. Finale Assembly-Felder `1.6.9.30` für neunten Branch-Commit; kein Buildzähleranstieg. Kein Produktlauf, Merge, Admin-Bypass oder Folgefeature; aktualisierten PR weiterhin dem Owner-Review übergeben. / Refresh the existing statistics with clean preview/render/check, source binding and final branch version; retain owner review and no-merge boundaries. |
 
+| 2026-10-08 | Feature 006 Aufgabenliste nach Owner-Planreview / Feature 006 task breakdown after owner plan review | Lokaler Branch `codex/tui-functional-contract-tasks`; Feature `006-tui-functional-contract`, freigegebene Planungsbasis `6693ee5`, PR #101 gemergt als `541d883`. Sichtbares Arbeitsfenster: ausdrücklich beauftragter Tasks-Aufruf und lokale Dokumentprüfung am 2026-10-08, keine Stoppuhrmessung. `0` Produktionscode-, `0` Produkttest- und `200` neue Aufgaben-Dokumentationszeilen vor Ledger-Selbstnachweis; 82 offene Aufgaben in sieben Phasen und vier Stories. Alle 17 Familien, 17 FR/sechs SC, additive IDs, echte Editor-/Dialogwege, Rot–Grün–Refactor, versionsneutraler Preflight, permanente Linux-/Windows-Regression, macOS-PTY/VoiceOver, Security/Architektur/A11Y/Dokumentation und frische Exact-head-Evidenz erhalten. Owner-Planreview erfolgt; keine erneute externe pauschale Rollenprüfung, keine Produktabnahme/Implementierungsautorität. PowerShell-/Bash-Prerequisites mit explizitem Featurekontext und Source-/Series-/Review-Alignment über PowerShell Pass; Aufgabenformat, Abdeckung, UTF-8/LF, Links, Secret- und Diffprüfung lokal prüfen. Referenzen 80/125 Zeilen/Arbeitstag, 7.8 Stunden/Tag und 21.5 Tage/Monat bleiben Modellwerte ohne neue Beschleunigungsbehauptung. Bestehender Statistikrenderer im Vorschau-Modus DRY_RUN, Quellenrevision `3c138b1915dc`, Methodik 2; generierter Block bleibt unverändert bis separat genehmigter sauberer Commit-Grenze. Keine Produktläufe, Paket-/Lock-/Versionsänderungen, Intake-Mutation, Commit, Push, PR, Merge oder Folgefeature. / Create the complete future task breakdown after owner plan review, validate documents locally and preserve every contract and authority boundary; retain the historical generated statistics until an authorised clean render boundary. |
+
+| 2026-10-08 | Feature 006 Analyze-Befunde C1/I1/U1 korrigiert / Feature 006 Analyze findings corrected | Branch `codex/tui-functional-contract-tasks`; sichtbares Arbeitsfenster autorisierter Dokumentkorrekturlauf am 2026-10-08, keine Stoppuhrmessung. `0` Produktionscode-, `0` Produkttest- und `17` netto Dokumentationszeilen vor Ledger-Selbstnachweis (`24` hinzugefügt, `7` entfernt in Spec/Plan/Tasks). C1: additive T014A für kompilierbare rote Producer-Tests vor T015, danach Grün/Refactor. I1: Owner-Planreview/Merge mit freigegebenem Head in aktuellen Statusfeldern, ältere Pending-Aussagen explizit historisch. U1: testseitiger Legacy-UI-Adapter mit begrenzter Reflection auf produktive View-Erzeugung, echte Eingabeinjektion und Infrastruktur-Gate vor T019/T020; keine direkten Fachaktionsaufrufe als UI-Ersatz. Formel-Rot bleibt bis T026–T030, Slice-Grün vor T032. 83 offene Tasks, bisherige IDs und 17 Familien/17 FR/sechs SC erhalten; keine Produktprüfung oder Implementierungsfreigabe. Aufgabenformat, Hash-/Umfangs-/UTF-8-/Link-/Secret-/Diffprüfung und bestehende Source-/Serienreview-Validatoren als lokale Dokumentprüfung; keine behauptete Produktabnahme. Referenzen 80/125 Zeilen/Tag, 7.8 h/Tag, 21.5 Tage/Monat bleiben Modellwerte. Generierter Statistikblock unverändert bis separat genehmigter sauberer Commit-Grenze. Keine Produkt-/Paket-/Lock-/Versions-/Intakeänderung, Builds/Tests, Commits, Pushes, PRs oder Folgefeatures. / Apply the authorised document-only remediation, preserve the complete baseline and stable task IDs, and keep implementation, acceptance and delivery boundaries separate. |
+
+| 2026-10-08 | Feature 006 Tasks-Dokumentationslieferung / Feature 006 task documentation delivery | Branch `codex/tui-functional-contract-tasks`; sichtbares Arbeitsfenster autorisierter Commit-/Push-/MergeAndSync-Auftrag am 2026-10-08, keine Stoppuhrmessung. `0` Produktionscode-, `0` Produkttest- und `44` neue PR-Dokumentationszeilen vor Ledger-Selbstnachweis; vorherige Tasks-/Korrekturzeilen bleiben in ihren historischen Einträgen. Wiederholte read-only Analyze: C1/I1/U1 behoben, 83 eindeutige offene Tasks, 17 FR/sechs SC vollständig zugeordnet, 14 CR und 17 Familien erhalten, keine verbleibenden Befunde; keine Produktnachweise. Lokale Delivery-set-/Secret-/Governance-/Homogenitäts-/Diffprüfung und sauberer Statistik-Render vor Remote-Lieferung; technische PR-Checks und exakten Head vor Merge prüfen. 80/125 Zeilen/Tag, 7.8 h/Tag, 21.5 Tage/Monat bleiben Modellwerte. Admin-Bypass erteilt keine technische Ausnahme, Produktabnahme oder Implementierungsautorität. / Prepare the authorised documentation-only delivery with repeated analysis and exact-head validation; preserve historical scope, manual baselines and all execution boundaries. |
+
+| 2026-10-08 | Feature 006 PR-102-Reviewkorrekturen / Feature 006 PR 102 review corrections | Branch `codex/tui-functional-contract-tasks`; sichtbares Review-Follow-up am 2026-10-08, keine Stoppuhrmessung. `0` Produktionscode- und `0` Produkttestzeilen; vier Dokumente betroffen, `2` netto Planzeilen, je eine Task-/PR-Textzeile ersetzt, vor Ledger-Selbstnachweis. Negative Producer-Fixtures verlangen konkrete fehlerhafte Kandidaten und explizite rote Ablehnungsassertions an isolierter zunächst permissiver Testnaht; fehlendes Bundle oder Ausnahme genügt nicht. PR-Text bindet bereits bestandene lokale Prüfungen mit Pflicht zur Wiederholung nach Folgecommit. 83 offene Tasks und vollständige Baseline bleiben erhalten; keine Produktimplementierung oder Abnahme. Erneute Dokument-/Staging-/Secret-/Statistikprüfung und technische Exact-head-PR-Prüfung vor Merge, 80/125 Zeilen/Tag und 7.8 h/Tag unverändert. / Correct producer negative-red semantics and align versioned validation status without changing product scope or acceptance authority. |
+
 ## Statistikprofil-1-Archiv / Statistics Profile 1 Archive
 Basis dieses Schlussblocks sind die aktuell dokumentierten Snapshot- und
 Phasenwerte aus den Abschnitten `## Gesamtstand des Repositories` und
@@ -790,25 +798,25 @@ Profil 2 verwendet Git-getrackte Textdateien und sichtbare Git-Aktivitaet. Die W
 
 | Kennzahl / Metric | Wert / Value |
 |---|---:|
-| Textbasis / Text base | 228056 lines |
-| Textdateien / Text files | 1427 |
+| Textbasis / Text base | 228319 lines |
+| Textdateien / Text files | 1429 |
 | Beobachtbarer Zeitraum / Observable period | 2025-10-12..2026-10-08 |
 | Aktivtage / Active days | 92 |
-| Relevante Commits / Relevant commits | 273 |
-| Zeilen je Aktivtag / Lines per active day | 2478.9 |
+| Relevante Commits / Relevant commits | 276 |
+| Zeilen je Aktivtag / Lines per active day | 2481.7 |
 | Peak-Tag im Fenster / Peak day in window | 2026-06-17 / 27058 |
 | Peak-Woche im Fenster / Peak week in window | 2026-07-19 / 33387 |
 | Laengste Serie / Longest streak | 8 days |
 | Speedup vs. 80 lines/day | 31.0x |
-| Speedup vs. 125 lines/day | 19.8x |
-| Methodik / Methodology | v2; source `3c138b1915dc` |
+| Speedup vs. 125 lines/day | 19.9x |
+| Methodik / Methodology | v2; source `60ed0668a629` |
 
 ### Artefaktmix / Artifact Mix
 
 ```text
 Produktiv / Production          [#...................]   1.2% | 2830
-Tests                           [#...................]   4.2% | 9572
-Dokumentation / Documentation   [##############......]  72.3% | 164887
+Tests                           [#...................]   4.2% | 9576
+Dokumentation / Documentation   [##############......]  72.3% | 165146
 Skripte / Scripts               [##..................]  12.5% | 28448
 Konfiguration / Configuration   [##..................]   8.5% | 19304
 Daten und Medien / Data and media [....................]   0.0% | 0
@@ -945,7 +953,7 @@ Die festen Slots halten den Phasenvergleich auch bei fehlenden oder spaeter erga
 ```text
 Scale: 0..50x
 80 lines/day       [############........] 31.0x
-125 lines/day      [########............] 19.8x
+125 lines/day      [########............] 19.9x
 ```
 
 Die Faktoren vergleichen sichtbare Lieferdichte mit den dokumentierten manuellen Referenzen. Sie messen keine Arbeitszeit.
@@ -958,7 +966,7 @@ Die Faktoren vergleichen sichtbare Lieferdichte mit den dokumentierten manuellen
 Scale: 0..5000 lines/day
 Experienced manual [#...................] 80
 Thorsten solo      [#...................] 125
-Visible repository [##########..........] 2478.9
+Visible repository [##########..........] 2481.7
 ```
 
 Die gemeinsame Skala vergleicht Referenzen und sichtbare Lieferdichte. Sie schreibt die Git-Aktivitaet keiner Person oder KI pauschal zu.
@@ -984,6 +992,6 @@ DE: Das Fenster beginnt am 2025-10-12 und endet am 2026-10-08. Es enthaelt 92 ak
 | 2026-07 | 74031 |
 | 2026-08 | 26210 |
 | 2026-09 | 70997 |
-| 2026-10 | 18995 |
+| 2026-10 | 19278 |
 
 <!-- project-statistics-v2:end -->
