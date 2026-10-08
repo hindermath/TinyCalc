@@ -26,7 +26,7 @@ Keine Produktimplementierung, Paket-/Lockdateiänderung, öffentliche API, Assem
 - [x] Read-only Analyze: C1/I1/U1 behoben; vollständige Anforderungsabdeckung / Findings resolved; complete requirement-to-task coverage
 - [x] 83 eindeutige Tasks, T001–T082 erhalten, T014A additiv / Unique stable tasks with additive T014A
 - [x] `git diff --check` / Whitespace validation
-- [ ] Delivery-set, Secret-, Governance-, Homogenitäts- und Statistikprüfung vor Lieferung abschließen / Complete local delivery validation
+- [x] Lokale Delivery-set-, Secret-, Governance-, Homogenitäts- und Statistikprüfung bestanden; nach jedem Folgecommit erneut bestätigen / Local delivery validation passed; revalidate after every follow-up commit
 - [ ] Technische PR-Checks am exakten Head prüfen / Verify technical checks at the exact head
 
 Lokale Build-/Test-/Smoke-/Restore-Läufe und Screenshots sind N/A: Produkt und UI bleiben unverändert. Bestehende CI bleibt verbindlich; geplante Produktnachweise werden nicht als ausgeführt behauptet.
