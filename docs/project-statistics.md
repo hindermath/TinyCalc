@@ -621,6 +621,8 @@ runtime evidence.*
 
 | 2026-10-08 | Feature 006 private Scope-Entscheidung und Dokumenten-PR / Feature 006 personal scope decision and documentation PR | Branch `006-tui-functional-contract`; sichtbares Arbeitsfenster Owner-Korrekturauftrag vom 2026-10-08 sowie lokaler Dokumentenabschluss, keine Stoppuhrmessung. `0` Produktionscode-, `0` Produkttest- und `1122` netto Dokumentationszeilen gegenüber HEAD vor Statistik-Selbstnachweis (`1129` hinzugefügt, `7` entfernt; einschließlich bisher uncommittierter Plan-/Checklistenartefakte, ohne Ledger). Zusätzliche externe qualifizierte Rollen-/Scope-Review-Pflicht supersediert; privates persönliches Projekt ausdrücklich von öffentlicher GitHub-Sichtbarkeit getrennt. Historische regulatorische Einzelstatus und konkrete Änderungstrigger bleiben erhalten, keine pauschale Rechtsbefreiung. Alle 36 Anforderungsqualitäts-Punkte Pass; Owner-PR-Review und spätere Produkt-/Security-/Preflight-/Plattform-/A11Y-Nachweise separat. Spec, vollständiger Plan, Forschung, Daten-/Vertragsdesign, Quickstart, Checklisten, regulatorischer Projektnachweis und PR-Text geliefert; kein Produktcode oder Folgefeature. Versionsmetadaten gemäß Branchregel auf `1.6.5.30` für den fünften Commit angeglichen, Buildzähler unverändert. Bash-/PowerShell-Authoring-/Serien-/Review-/Alignment-Prüfungen, UTF-8/LF, Secret-/Scope-/Diffprüfung bestanden; bestehende Statistik zunächst Vorschau, Render nach sauberem Commit und abschließender CheckOnly. 80/125 Zeilen/Arbeitstag bleiben Referenzen ohne neue Produktivitätsbehauptung. Aktuelle Autorität: Commit, Push und PR zur Nutzerprüfung; kein Merge/Admin-Bypass oder Implementierungsstart. / Owner scope supersedes the extra external review barrier; deliver the validated documentation PR for owner review, preserving technical gates and public visibility without implementation or merge. |
 
+| 2026-10-08 | Feature 006 Statistik-Render zur Dokumentenlieferung / Feature 006 statistics render for documentation delivery | Branch `006-tui-functional-contract`; sichtbares Arbeitsfenster sauberer Statistik-Vorschau/Render nach Quellen-Commit `9f217003d90a`, keine Stoppuhrmessung. `0` Produktionscode-, `0` Produkttestzeilen; generierter Ledger vor Selbstnachweis `19` Zeilen hinzugefügt und `19` entfernt, netto `0`. Bestehendes Statistikprofil 2 mit Methodik v2 erhalten, 228041 Textzeilen und 92 Git-aktive Tage aus Quellenbindung; Vorschau DRY_RUN, Render UPDATED und CheckOnly CURRENT. Manuelle Historie und 80/125-Referenzen erhalten, keine neue Produktivitätsbehauptung. Finaler Versionsstand `1.6.6.30` gemäß sechstem Branch-Commit; Buildzähler unverändert. Lieferumfang ausschließlich Dokumente/Versionsmetadaten, Commit/Push/PR zur Owner-Prüfung; kein Merge oder Produktstart. / Clean preview, render and reproducibility check refresh the existing statistics without changing methodology or granting implementation/merge authority. |
+
 ## Statistikprofil-1-Archiv / Statistics Profile 1 Archive
 Basis dieses Schlussblocks sind die aktuell dokumentierten Snapshot- und
 Phasenwerte aus den Abschnitten `## Gesamtstand des Repositories` und
@@ -784,26 +786,26 @@ Profil 2 verwendet Git-getrackte Textdateien und sichtbare Git-Aktivitaet. Die W
 
 | Kennzahl / Metric | Wert / Value |
 |---|---:|
-| Textbasis / Text base | 226919 lines |
-| Textdateien / Text files | 1419 |
-| Beobachtbarer Zeitraum / Observable period | 2025-10-12..2026-10-07 |
-| Aktivtage / Active days | 91 |
-| Relevante Commits / Relevant commits | 270 |
-| Zeilen je Aktivtag / Lines per active day | 2493.6 |
+| Textbasis / Text base | 228041 lines |
+| Textdateien / Text files | 1427 |
+| Beobachtbarer Zeitraum / Observable period | 2025-10-12..2026-10-08 |
+| Aktivtage / Active days | 92 |
+| Relevante Commits / Relevant commits | 271 |
+| Zeilen je Aktivtag / Lines per active day | 2478.7 |
 | Peak-Tag im Fenster / Peak day in window | 2026-06-17 / 27058 |
 | Peak-Woche im Fenster / Peak week in window | 2026-07-19 / 33387 |
 | Laengste Serie / Longest streak | 8 days |
-| Speedup vs. 80 lines/day | 31.2x |
-| Speedup vs. 125 lines/day | 19.9x |
-| Methodik / Methodology | v2; source `a0e59b269a7f` |
+| Speedup vs. 80 lines/day | 31.0x |
+| Speedup vs. 125 lines/day | 19.8x |
+| Methodik / Methodology | v2; source `9f217003d90a` |
 
 ### Artefaktmix / Artifact Mix
 
 ```text
 Produktiv / Production          [#...................]   1.2% | 2830
-Tests                           [#...................]   4.2% | 9488
-Dokumentation / Documentation   [##############......]  72.2% | 163834
-Skripte / Scripts               [###.................]  12.5% | 28448
+Tests                           [#...................]   4.2% | 9572
+Dokumentation / Documentation   [##############......]  72.3% | 164872
+Skripte / Scripts               [##..................]  12.5% | 28448
 Konfiguration / Configuration   [##..................]   8.5% | 19304
 Daten und Medien / Data and media [....................]   0.0% | 0
 Sonstiger Text / Other text     [#...................]   1.3% | 3015
@@ -832,7 +834,7 @@ So/Su  2 0 0 0 0 0 0 1 0 4 0 0 0 1 4 4 1 4 4 0 4 4 4 4 0 4
 Mo/Mo  1 4 0 4 0 0 0 0 0 0 0 3 1 4 4 0 0 0 2 0 0 0 0 0 3 3
 Di/Tu  0 0 0 3 0 0 3 0 0 0 0 2 0 3 4 4 0 0 0 0 4 3 4 0 0 4
 Mi/We  0 3 0 2 0 0 0 2 0 4 0 2 0 0 2 4 0 0 0 0 0 0 0 0 0 3
-Do/Th  0 0 4 0 0 0 1 0 4 1 0 0 0 1 4 0 0 4 0 0 3 0 0 0 0 -
+Do/Th  0 0 4 0 0 0 1 0 4 1 0 0 0 1 4 0 0 4 0 0 3 0 0 0 0 3
 Fr/Fr  2 4 0 0 0 4 2 2 0 3 2 3 4 4 4 1 0 0 0 0 4 3 2 0 0 -
 Sa/Sa  0 0 0 0 0 0 0 0 0 4 0 4 4 0 4 2 0 2 0 3 4 4 0 2 4 -
 ```
@@ -938,8 +940,8 @@ Die festen Slots halten den Phasenvergleich auch bei fehlenden oder spaeter erga
 
 ```text
 Scale: 0..50x
-80 lines/day       [############........] 31.2x
-125 lines/day      [########............] 19.9x
+80 lines/day       [############........] 31.0x
+125 lines/day      [########............] 19.8x
 ```
 
 Die Faktoren vergleichen sichtbare Lieferdichte mit den dokumentierten manuellen Referenzen. Sie messen keine Arbeitszeit.
@@ -952,7 +954,7 @@ Die Faktoren vergleichen sichtbare Lieferdichte mit den dokumentierten manuellen
 Scale: 0..5000 lines/day
 Experienced manual [#...................] 80
 Thorsten solo      [#...................] 125
-Visible repository [##########..........] 2493.6
+Visible repository [##########..........] 2478.7
 ```
 
 Die gemeinsame Skala vergleicht Referenzen und sichtbare Lieferdichte. Sie schreibt die Git-Aktivitaet keiner Person oder KI pauschal zu.
@@ -961,9 +963,9 @@ Die gemeinsame Skala vergleicht Referenzen und sichtbare Lieferdichte. Sie schre
 
 ### Textalternative / Text Alternative
 
-DE: Das Fenster beginnt am 2025-10-12 und endet am 2026-10-07. Es enthaelt 91 aktive und 270 inaktive vergangene Tage. Peak-Tag: 2026-06-17 / 27058. Peak-Woche: 2026-07-19 / 33387. Laengste Serie: 8 Tage (2026-07-19..2026-07-26).
+DE: Das Fenster beginnt am 2025-10-12 und endet am 2026-10-08. Es enthaelt 92 aktive und 270 inaktive vergangene Tage. Peak-Tag: 2026-06-17 / 27058. Peak-Woche: 2026-07-19 / 33387. Laengste Serie: 8 Tage (2026-07-19..2026-07-26).
 
-*EN: The window starts on 2025-10-12 and ends on 2026-10-07. It contains 91 active and 270 inactive elapsed days. Peak day: 2026-06-17 / 27058. Peak week: 2026-07-19 / 33387. Longest streak: 8 days (2026-07-19..2026-07-26).*
+*EN: The window starts on 2025-10-12 and ends on 2026-10-08. It contains 92 active and 270 inactive elapsed days. Peak day: 2026-06-17 / 27058. Peak week: 2026-07-19 / 33387. Longest streak: 8 days (2026-07-19..2026-07-26).*
 
 | Monat / Month | Geaenderte Textzeilen / Changed text lines |
 |---|---:|
@@ -978,6 +980,6 @@ DE: Das Fenster beginnt am 2025-10-12 und endet am 2026-10-07. Es enthaelt 91 ak
 | 2026-07 | 74031 |
 | 2026-08 | 26210 |
 | 2026-09 | 70997 |
-| 2026-10 | 17828 |
+| 2026-10 | 18964 |
 
 <!-- project-statistics-v2:end -->
