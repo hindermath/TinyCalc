@@ -1,20 +1,20 @@
 {
   "schemaVersion": 1,
-  "date": "2026-10-03",
-  "centralCommit": "8aa6fd0ed7b6ebe81c0db3e90e7fdcfd9c4fe59e",
+  "date": "2026-10-10",
+  "centralCommit": "224739c59311f5f0d64a3037135095288c0aa756",
   "maintenanceCommit": "3b3abecdcad7395b97948f4d42578b4a83502cbb",
   "presets": [
     {
       "id": "security-governance",
-      "version": "0.7.0",
-      "commit": "ad0b642db325db6803b33ecd99bc7935b43d2d59",
-      "tagArchiveSha256": "a121ea1f9be7597a40f6f328581f680b8670ea6dc6d9ba8743095ece32af179c"
+      "version": "0.7.1",
+      "commit": "7204bccbdf3565d4dd22424c7fa7a15c6a6e0eb3",
+      "tagArchiveSha256": "c85a4b924e741a3981dc369adc6233b6f323013fb1d46735555038d322cda18a"
     },
     {
       "id": "architecture-governance",
-      "version": "0.6.1",
-      "commit": "21c0f43d1c93455c43e989de965d45c2851e824f",
-      "tagArchiveSha256": "9ea0721e9475e4e955c4b71214adcc96b117ef97f977115446128bd157ed05c6"
+      "version": "0.6.2",
+      "commit": "017e91a24a685e23f176e98c07c9ac8d81487cbb",
+      "tagArchiveSha256": "ebea0ede13e6d72b8d65ae56b08ae28e07b3814aca3f8e9563b6590d0c88a082"
     },
     {
       "id": "intake-authoring-governance",
@@ -30,9 +30,9 @@
     },
     {
       "id": "intake-sequencing-governance",
-      "version": "0.2.7",
-      "commit": "74f6b343b79c93f6fcbfe9db1c111e9eb3aeeee8",
-      "tagArchiveSha256": "5ccaa7fff94fea433fcc4ec960991c945fe8c62ad4b8dbffc1e60a09fee644a4"
+      "version": "0.2.8",
+      "commit": "be69290486175fc8256338200b342bf0e33cbb09",
+      "tagArchiveSha256": "07dbd79f76927136494fe0742b0e8044d7cb2625c9d5d8f61fbe05b1e8d980ac"
     }
   ]
 }
