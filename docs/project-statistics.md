@@ -788,6 +788,8 @@ rough net volume in lines. The chart is intentionally simple and is meant to
 explain quickly the strong early jump and the later decline in visible phase
 volume.
 
+| 2026-10-10 | Drei Preset-Patches und GSDB / Three preset patches and GSDB | UpdateRequired: Security 0.7.1, Architecture 0.6.2 und Sequencing 0.2.8 mit unveraenderlichen Quellen, sieben technischen GSDB-Bindungen und neuen Negativfaellen; alle fachlichen Zustandsachsen und menschlichen Entscheidungen erhalten. Restore, Release-Build, 82 Tests und TUI-Smoke bestanden, vorgeschriebener Buildzaehler 31/32. Bestehende Statistikmethodik unveraendert. / Bounded patch delivery and targeted revalidation, no product run or new acceptance. [Nachweis / Evidence](maintenance/preset-patches-2026-10-10.md). |
+
 ## Gesamtstatistik / Overall Statistics
 
 <!-- project-statistics-v2:begin -->

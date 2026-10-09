@@ -24,8 +24,8 @@ Workspace-Familie ist:
 
 | Preset-ID | Name | Version | Priorität |
 |---|---|---:|---:|
-| `security-governance` | Security Governance | `v0.7.0` | `10` |
-| `architecture-governance` | Architecture Governance | `v0.6.1` | `20` |
+| `security-governance` | Security Governance | `v0.7.1` | `10` |
+| `architecture-governance` | Architecture Governance | `v0.6.2` | `20` |
 | `isaqb-architecture-governance` | iSAQB Architecture Governance | `v0.2.2` | `30` |
 | `a11y-governance` | A11Y Governance | `v0.4.3` | `40` |
 | `cross-platform-governance` | Cross-Platform Governance | `v0.2.2` | `50` |
@@ -36,7 +36,7 @@ Workspace-Familie ist:
 Optional koennen `model-routing-governance` v0.1.4 mit Prioritaet `61`,
 `intake-authoring-governance` v0.3.7 mit Prioritaet `64`,
 `intake-review-governance` v0.2.4 mit Prioritaet `65` und
-`intake-sequencing-governance` v0.2.7 mit Prioritaet `66` zwischen Agent Parity
+`intake-sequencing-governance` v0.2.8 mit Prioritaet `66` zwischen Agent Parity
 und Preset 7 installiert werden. Alle vier bleiben ausserhalb der
 Standard-Achtermatrix.
 Authoring erzeugt aus ausdruecklich benannten geordneten UTF-8-Quellen genau
@@ -179,8 +179,8 @@ zero-write values. A partial proof is not a full regression pass.
 
 | Preset ID | Name | Version | Priority |
 |---|---|---:|---:|
-| `security-governance` | Security Governance | `v0.7.0` | `10` |
-| `architecture-governance` | Architecture Governance | `v0.6.1` | `20` |
+| `security-governance` | Security Governance | `v0.7.1` | `10` |
+| `architecture-governance` | Architecture Governance | `v0.6.2` | `20` |
 | `isaqb-architecture-governance` | iSAQB Architecture Governance | `v0.2.2` | `30` |
 | `a11y-governance` | A11Y Governance | `v0.4.3` | `40` |
 | `cross-platform-governance` | Cross-Platform Governance | `v0.2.2` | `50` |
@@ -191,7 +191,7 @@ zero-write values. A partial proof is not a full regression pass.
 Optionally install `model-routing-governance` v0.1.4 at priority `61`,
 `intake-authoring-governance` v0.3.7 at priority `64`,
 `intake-review-governance` v0.2.4 at priority `65`, and
-`intake-sequencing-governance` v0.2.7 at priority `66` between Agent Parity and
+`intake-sequencing-governance` v0.2.8 at priority `66` between Agent Parity and
 Preset 7. All four remain outside the standard eight. Authoring creates one intake
 and receipt from explicit ordered UTF-8 sources without starting a downstream
 command. Review evaluates that intake independently. Sequencing manages order,

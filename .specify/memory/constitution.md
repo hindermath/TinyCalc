@@ -816,8 +816,8 @@ workspace family consists of:
 
 | Preset | Version | Priority | Scope |
 |---|---:|---:|---|
-| `security-governance` | `v0.7.0` | `10` | secure development, MSL, language-specific secure coding, SSDF, ASVS, SBOM/VEX/SLSA, AI-SBOM, CRA/regulatory applicability |
-| `architecture-governance` | `v0.6.1` | `20` | secure architecture, STRIDE/CAPEC, Zero Trust, SAMM, S-ADR, BSI C3A cloud autonomy, BSI C5 cloud assurance |
+| `security-governance` | `v0.7.1` | `10` | secure development, MSL, language-specific secure coding, SSDF, ASVS, SBOM/VEX/SLSA, AI-SBOM, CRA/regulatory applicability |
+| `architecture-governance` | `v0.6.2` | `20` | secure architecture, STRIDE/CAPEC, Zero Trust, SAMM, S-ADR, BSI C3A cloud autonomy, BSI C5 cloud assurance |
 | `isaqb-architecture-governance` | `v0.2.2` | `30` | general iSAQB/arc42 architecture governance |
 | `a11y-governance` | `v0.4.3` | `40` | WCAG 2.2 AA, bilingual DE/EN, CEFR B2, inclusive artefacts, didactic inline-code-comment review |
 | `cross-platform-governance` | `v0.2.2` | `50` | Bash/PowerShell parity, macOS/Linux/Windows script governance |
@@ -1000,8 +1000,8 @@ across Spec Kit updates.*
 
 ## Governance-Pilot und Liefergrenzen / Governance pilot and delivery boundaries
 
-DE: Das 14er-Profil bindet Security 0.7.0, Architecture 0.6.1 und Intake
-Authoring 0.3.7 / Review 0.2.4 / Sequencing 0.2.7. Produkt, Werkzeuge und
+DE: Das 14er-Profil bindet Security 0.7.1, Architecture 0.6.2 und Intake
+Authoring 0.3.7 / Review 0.2.4 / Sequencing 0.2.8. Produkt, Werkzeuge und
 Organisation werden regulatorisch getrennt bewertet; Ausbildungszweck und
 AI-SBOM N/A ersetzen keine DS-GVO-/KI-VO-Anwendbarkeitspruefung.
 Unbekannte Rollen, Jurisdiktionen oder direkte/vertragliche Pflichten bleiben Open.

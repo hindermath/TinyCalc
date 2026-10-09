@@ -274,6 +274,27 @@ try {
         Assert-GsdbFailure -Assessment $AuthoringVersionDrift -ExpectedCode 'GSDB008'
     }
 
+    # DE: Die drei vorigen Patch-Bindungen muessen jeweils geschlossen scheitern.
+    # EN: Reject each preceding patch hash and version independently.
+    foreach ($OldPatch in @(
+        @{ Id = 'architecture-governance'; Version = '0.6.1'; Hash = '860931928acf952882491f933f2498b4be7bf3a31cc07b4c649c23396b6a0988' },
+        @{ Id = 'security-governance'; Version = '0.7.0'; Hash = '68214a39f7ebbbd949f1965dfe2ba98f960529662339abd106fa8eb366d97c4b' },
+        @{ Id = 'intake-sequencing-governance'; Version = '0.2.7'; Hash = '172de02fac9360821550e719771efa419127b3b14dfae26a32a664a9607e3cbe' }
+    )) {
+        $StalePatchSource = Copy-GsdbProductionAssessment -Name ($OldPatch.Id + '-previous-patch-hash') -Mutate {
+            param($Document)
+            $Source = $Document.sourceInventory | Where-Object sourceId -CEQ ('PRESET-' + $OldPatch.Id)
+            $Source.normalizedSha256 = $OldPatch.Hash
+        }
+        Assert-GsdbFailure -Assessment $StalePatchSource -ExpectedCode 'GSDB002'
+        $StalePatchVersion = Copy-GsdbProductionAssessment -Name ($OldPatch.Id + '-previous-patch-version') -Mutate {
+            param($Document)
+            $Preset = $Document.presetAssessments | Where-Object presetId -CEQ $OldPatch.Id
+            $Preset.version = $OldPatch.Version
+        }
+        Assert-GsdbFailure -Assessment $StalePatchVersion -ExpectedCode 'GSDB008'
+    }
+
     # DE: Alle fuenf alten Release-Bindungen bleiben gesondert blockiert.
     # EN: Reject each previous release binding independently.
     foreach ($OldPreset in @(

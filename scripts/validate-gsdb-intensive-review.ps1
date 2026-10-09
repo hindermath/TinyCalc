@@ -70,12 +70,12 @@ $script:ExpectedFamilyCounts = [ordered]@{
 $script:ExpectedPresets = [ordered]@{
     'a11y-governance' = @{ Version = '0.4.3'; Priority = 40; Standard = $true; Families = @('CL-01'); Gates = @('019', '020', '025') }
     'agent-parity-governance' = @{ Version = '0.4.2'; Priority = 60; Standard = $true; Families = @('CL-09', 'CL-10', 'CL-12'); Gates = @('025', '026') }
-    'architecture-governance' = @{ Version = '0.6.1'; Priority = 20; Standard = $true; Families = @('CL-02', 'CL-04'); Gates = @('010', '015', '016', '017', '018') }
+    'architecture-governance' = @{ Version = '0.6.2'; Priority = 20; Standard = $true; Families = @('CL-02', 'CL-04'); Gates = @('010', '015', '016', '017', '018') }
     'autonomous-run-governance' = @{ Version = '0.4.4'; Priority = 70; Standard = $true; Families = @('CL-05', 'CL-09', 'CL-12'); Gates = @('001', '002', '027', '028', '029', '030', '031', '032', '033') }
     'cross-platform-governance' = @{ Version = '0.2.2'; Priority = 50; Standard = $true; Families = @('CL-05', 'CL-10'); Gates = @('021', '023', '026') }
     'intake-authoring-governance' = @{ Version = '0.3.7'; Priority = 'NotInStandardMatrix'; Standard = $false; Families = @('CL-09', 'CL-12'); Gates = @('001', '032', '033') }
     'intake-review-governance' = @{ Version = '0.2.4'; Priority = 'NotInStandardMatrix'; Standard = $false; Families = @('CL-08', 'CL-09', 'CL-12'); Gates = @('001', '028', '032') }
-    'intake-sequencing-governance' = @{ Version = '0.2.7'; Priority = 'NotInStandardMatrix'; Standard = $false; Families = @('CL-09', 'CL-12'); Gates = @('001', '032', '033') }
+    'intake-sequencing-governance' = @{ Version = '0.2.8'; Priority = 'NotInStandardMatrix'; Standard = $false; Families = @('CL-09', 'CL-12'); Gates = @('001', '032', '033') }
     'isaqb-architecture-governance' = @{ Version = '0.2.2'; Priority = 30; Standard = $true; Families = @('CL-02', 'CL-04'); Gates = @('010') }
     'model-routing-governance' = @{ Version = '0.1.4'; Priority = 'NotInStandardMatrix'; Standard = $false; Families = @('CL-09', 'CL-12'); Gates = @('001', '002') }
     'parallel-autonomous-run-governance' = @{ Version = '0.2.6'; Priority = 80; Standard = $true; Families = @('CL-09', 'CL-12'); Gates = @('033') }
@@ -83,7 +83,7 @@ $script:ExpectedPresets = [ordered]@{
     # EN: Statistics support documentation maintenance, not fulfilment of security controls.
     'project-statistics-governance' = @{ Version = '0.1.0'; Priority = 'NotInStandardMatrix'; Standard = $false; Families = @(); Gates = @('025') }
     'secure-development-assurance-governance' = @{ Version = '0.1.3'; Priority = 'NotInStandardMatrix'; Standard = $false; Families = @('CL-01', 'CL-02', 'CL-03', 'CL-04', 'CL-05', 'CL-06', 'CL-07', 'CL-08', 'CL-09', 'CL-10', 'CL-11', 'CL-12'); Gates = @('003', '004', '005', '006', '007', '008', '009', '010', '011', '012', '013', '014', '015', '016', '017', '018', '026') }
-    'security-governance' = @{ Version = '0.7.0'; Priority = 10; Standard = $true; Families = @('CL-01', 'CL-03', 'CL-05', 'CL-07', 'CL-08'); Gates = @('008', '009', '010', '011', '012', '013', '014', '015', '016', '017', '018', '024') }
+    'security-governance' = @{ Version = '0.7.1'; Priority = 10; Standard = $true; Families = @('CL-01', 'CL-03', 'CL-05', 'CL-07', 'CL-08'); Gates = @('008', '009', '010', '011', '012', '013', '014', '015', '016', '017', '018', '024') }
 }
 
 function Stop-GsdbValidation {

@@ -1,6 +1,15 @@
 # Intake Sequencing Governance
 
-Aktuelle Version / Current version: **0.2.7**. Laufende `Active`-Serien mit
+Aktuelle Version / Current version: **0.2.8**. Der Installationsbefehl steht
+auf einer Zeile und ist direkt vom Community-Validator auswertbar. Die
+Sequencing-Logik ist gegenueber 0.2.7 unveraendert; bestehende Tags und
+Archive bleiben erhalten. Siehe [Patch-Nachweis](docs/release-0.2.8-validation.md).
+
+The installation command is directly parseable on one line by the community
+validator. Sequencing behavior is unchanged from 0.2.7; historical tags and
+archives remain unchanged.
+
+Version **0.2.7**: Laufende `Active`-Serien mit
 mindestens einem `Active`-Mitglied bleiben ohne weiteren `Eligible`-Kandidaten
 gueltig; `eligibleCandidate` ist dann `N/A`. `Ready` verlangt weiterhin genau
 einen Kandidaten. Mehrfachkandidaten, Hash-, Pfad- und Abhaengigkeitsfehler
@@ -61,9 +70,7 @@ Ein gewöhnlicher zweiter Index im selben Repository bleibt ein Fehler.*
 ## Installation
 
 ```bash
-specify preset add \
-  --from https://github.com/hindermath/spec-kit-preset-intake-sequencing-governance/archive/refs/tags/v0.2.7.zip \
-  --priority 66
+specify preset add --from https://github.com/hindermath/spec-kit-preset-intake-sequencing-governance/archive/refs/tags/v0.2.8.zip --priority 66
 ```
 
 ## Commands
