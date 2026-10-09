@@ -53,8 +53,8 @@ Merge/Sync werden mit ihren tatsaechlichen Ergebnissen im PR dokumentiert.
 
 EN: Local GSDB full/source/compendium/mapping checks and RL-SE 157/157 passed.
 Restore and Release build had no warnings/errors; 76 Core and six TUI tests
-passed, smoke returned SMOKE_OK. Increment the required build counter to 31/32
-before build/test without product API changes. Package/negative tests, both-shell
+passed, smoke returned SMOKE_OK. The required build counter was incremented to
+31/32 before build/test without product API changes. Package/negative tests, both-shell
 fourteen-preset checks, secret scan, static analysis, homogeneity and statistics
 are delivery gates; record actual exact-head CI and merge/sync in the PR.
 
