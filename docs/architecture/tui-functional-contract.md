@@ -6,7 +6,10 @@ Feature 006, Implementierungscheckpoint 2026-10-10, lokaler Branch
 `006-tui-functional-contract`, Basis `ffc3d56a8975341a686ff6985570369abefcfd2a`.
 Verbindlich sind Intake, genehmigte Spec/Plan und 83 Tasks; keine neue öffentliche
 API, Laufzeit, Produktabhängigkeit oder Produktdateiformat. Implementierung und
-unabhängige Abnahme sind verschiedene Zustände.
+unabhängige Abnahme sind verschiedene Zustände. Der
+[unabhängige Architektur-/Securityreview](../security/secure-development/006-tui-functional-contract/independent-review.md)
+einschließlich JSON-/DocFX-Korrekturprüfung wurde am 2026-10-10 durchgeführt.
+Human-/Owner-Abnahme und finale Headbindung bleiben getrennt.
 
 ```text
 Anwendende -> produktive Terminal.Gui-Views -> interne TuiSession -> Core
@@ -43,7 +46,8 @@ nach vollständigen ausgeführten Assertions; Skip/Timeout sind kein Pass.
 Risiken/Schulden: Terminal.Gui-Prozesszustand erfordert weiterhin serielle Tests;
 historische Reflection ist entfernt. Framework-Injektion beweist keinen realen
 Terminaltreiber oder VoiceOver. Der echte macOS-Vollvertrag ist lokal gebunden,
-natives Linux/Windows, Human-Evidenz und unabhängiger Review sind noch offen.
+natives Linux/Windows ist am dokumentierten PR-Testmerge grün. Finale gemeinsame
+Headbindung und Human-/Owner-Evidenz bleiben offen; Quell-/Delta-Review ist erfolgt.
 Zeitgrenzen 30/180/5 Sekunden werden
 als Fehlergrenzen, nicht als Produkt-SLA behandelt. Eigene temporäre Ressourcen
 dürfen bereinigt werden, fremde Prozesse und Dateien nie.
@@ -69,7 +73,10 @@ binding. Strict schemas, independent obligations and atomic producer output
 support evidence integrity. Skip/timeout never counts as pass. Serialized
 framework tests and separate native/PTY/human evidence
 are explicit costs and proof boundaries. Full acceptance and independent review
-remain pending; the 30/180/5-second limits govern only owned infrastructure.
+remain separate from the completed independent source/delta review. Native CI
+passes at its recorded testmerge, not a later final head. Human/owner acceptance
+and final common-head binding remain pending. The 30/180/5-second limits govern
+only owned infrastructure.
 
 Related: [ADR](adr/006-internal-session-evidence.md),
 [contract](../contracts/tui/README.md),

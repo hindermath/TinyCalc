@@ -11,14 +11,14 @@ Bedienperson bleiben getrennte Rollen. Wiedervorlage: vor Feature-006-Abnahme.
 | Stabile Nachweis-ID | Anforderung | Tatsächlicher Stand / nächste Aktion |
 |---|---|---|
 | A11Y-CALC-01 | vollständige kontextuelle Tasten | DE/EN-Portreferenz und klare historische Einordnung in Hilfe; finale menschliche Durchsicht offen |
-| A11Y-CALC-02 | sichtbares Erfolg/Abbruch/Fehler-Feedback | 364 lokale Pfade grün, konkrete Zustands-/Textassertions; native Vollmatrix offen |
+| A11Y-CALC-02 | sichtbares Erfolg/Abbruch/Fehler-Feedback | 364 Pfade auch in nativer Linux-/Windows-CI grün; finale gemeinsame Headbindung offen |
 | A11Y-CALC-03 | strukturierte lesbare Hilfe | Seiten, Textscrolling, P/N, Prev/Next, Tab/Shift-Tab, Esc/Close; Hilfe-Fokusregression nach echtem Rot behoben |
 | A11Y-CALC-04 | neutraler Pin-/Lock-Preflight | AlreadySatisfied nur für freigegebenen unveränderten Graph; 58 Policyfälle grün, kein Upgrade |
 | A11Y-CALC-05 | Kontrast und nicht nur Farbe | echte PTY-Größen 80x24/120x40, Textkontrast ≥4,5; Auswahl zusätzlich Zelladresse/Klammern; reale VoiceOver-/Fokusabnahme offen |
 | A11Y-CALC-06 | logischer Fokus/OK/Cancel | reale Dialogtests grün; Hilfe-Text und Buttons besitzen expliziten Fokusumlauf; menschliche Gesamtprüfung offen |
 | A11Y-CALC-07 | reale PTY-Bedienpfade | ergänzender echter 80x24-Prozess: Navigation, Bearbeitung, Palette, Recalculate, Load/Fehler, Hilfe und Rücksetzung grün |
 | A11Y-CALC-08 | menschliches VoiceOver | **Open**; Thorsten/benannte Bedienperson, keine synthetische Ersatzfreigabe |
-| A11Y-CALC-09 | DocFX + Playwright/axe + lynx | **Open**; fehlende HTML-Seitensprache aus vorherigem Lauf ist kein Pass; aktuelle Prüfung separat dokumentieren |
+| A11Y-CALC-09 | DocFX + Playwright/axe + lynx | [Automatisierte Stichprobe grün](006-docfx-axe.md); fünf Seiten, Sprache/Main/Text, null automatische Verstöße oder fehlende Artikelziele; manuelle Fälle/finale Bindung offen |
 | A11Y-CALC-10 | additive ID-/Regressionsbindung | Zuordnung hier bleibt erhalten; finale Gate-/Commitbindung und alle alten aktiven IDs vor Abnahme prüfen |
 
 Die IDs sind Nachweisanker, keine neue Feature- oder Serienpromotion. TERM-001,

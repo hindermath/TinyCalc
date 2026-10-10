@@ -43,10 +43,31 @@ function Resolve-TuiInputPath {
     return $Full
 }
 
+function Read-TuiBoundedText {
+    param([string]$Path)
+    $Limit=20971520
+    $Stream=[IO.File]::Open($Path,[IO.FileMode]::Open,[IO.FileAccess]::Read,[IO.FileShare]::Read)
+    $Bytes=$null
+    try {
+        if($Stream.Length -gt $Limit){throw 'InvalidInputSize'}
+        $Bytes=[IO.MemoryStream]::new([int]$Stream.Length)
+        $Buffer=[byte[]]::new(65536)
+        # DE: Auch Wachstum nach dem Öffnen begrenzen; Digest und Parser erhalten denselben Snapshot.
+        # EN: Also bound growth after opening; digest and parser receive the same snapshot.
+        while(($Count=$Stream.Read($Buffer,0,$Buffer.Length)) -gt 0){
+            if($Bytes.Length+$Count -gt $Limit){throw 'InvalidInputSize'}
+            $Bytes.Write($Buffer,0,$Count)
+        }
+        $Text=[Text.UTF8Encoding]::new($false,$true).GetString($Bytes.GetBuffer(),0,[int]$Bytes.Length)
+        if($Text.StartsWith([string][char]0xfeff,[StringComparison]::Ordinal)){$Text=$Text.Substring(1)}
+        return $Text
+    }
+    finally{if($null -ne $Bytes){$Bytes.Dispose()};$Stream.Dispose()}
+}
+
 function Read-TuiJsonInput {
-    param([string]$Path, [string]$SchemaPath = '')
-    if ((Get-Item -LiteralPath $Path -Force).Length -gt 20971520) { throw 'InvalidInputSize' }
-    $Json = [IO.File]::ReadAllText($Path, [Text.UTF8Encoding]::new($false, $true))
+    param([string]$Path, [string]$SchemaPath = '', [ref]$RawJson)
+    $Json = Read-TuiBoundedText $Path
     # DE: Kanonisierung verwirft doppelte Schlüssel vor dem PowerShell-Deserialisieren.
     # EN: Canonical validation rejects duplicate keys before PowerShell deserialization.
     $null = Get-TuiCanonicalDigest $Json
@@ -55,7 +76,9 @@ function Read-TuiJsonInput {
     # EN: Recent PowerShell versions otherwise coerce ISO timestamps into culture-dependent DateTime values.
     $Parameters = @{ InputObject=$Json; AsHashtable=$true; Depth=80 }
     if ((Get-Command ConvertFrom-Json).Parameters.ContainsKey('DateKind')) { $Parameters.DateKind = 'String' }
-    return ConvertFrom-Json @Parameters
+    $Parsed=ConvertFrom-Json @Parameters
+    if($null -ne $RawJson){$RawJson.Value=$Json}
+    return $Parsed
 }
 
 function Test-TuiHistoricalArtifact {

@@ -25,7 +25,9 @@ Eigenes `TestResults/launcher-parity.log` wird mit den nativen Artefakten
 hochgeladen; Fehlerstatus propagiert unverändert. Bis der jeweilige aktuelle
 Run erfolgreich beendet ist, bleibt dieser Plattformnachweis Open. Ein grüner
 Workflow-Strukturtest oder geplantes Uploadziel ist kein Ausführungsnachweis.
-T064 bleibt für vollständige native/finale Parität offen. Der neue Workflow-
+Der [ausgewertete Run 38077169518](../../specs/006-tui-functional-contract/evidence/platforms/native-ci-38077169518.md)
+hat beide nativen Launcher-Prüfungen tatsächlich bestanden; die Originalhashes
+sind dort gebunden. T064 bleibt für finale gemeinsame Parität offen. Der neue Workflow-
 Ablehnungsfall war zuerst rot; danach bestehen sieben Guards einschließlich
 sechs Abschwächungen. Das belegt Schutzlogik, nicht native Ausführung.
 

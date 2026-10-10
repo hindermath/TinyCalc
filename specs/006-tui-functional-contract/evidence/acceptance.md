@@ -10,7 +10,7 @@ Completion-Erklärung. Specify/Plan/Tasks und Folgefeatures werden nicht gestart
 |---|---|---|
 | SC-001 | Lokal 364/364 automatisierte Pfade, 462 serialisierte unabhängige Assertions; [macOS](platforms/macos/local-build105.md) | vollständige 1.092 Tupel, native Plattformen und finale Bindung |
 | SC-002 | Ungefilterte Solution 669 Pass/0 Fail/0 Skip, minimale test-first Produktfixes | null offene In-Scope-Fehler unabhängig bestätigen, gemeinsamer finaler Commit |
-| SC-003 | Echte macOS-PTY-Sitzungen 80x24/120x40; Linux/Windows-CI mit Capture/Test/Collect/Upload implementiert | native vollständige Resultate und dieselbe finale Vertrags-/Headbindung |
+| SC-003 | Echte macOS-PTY-Sitzungen 80x24/120x40; [native CI](platforms/native-ci-38077169518.md) je 671 Pass, 364 Pfade, 462 Assertions | dieselbe finale Vertrags-/Headbindung über alle Plattformen |
 | SC-004 | Negative Dokument-/Test-/Quellen-/Klassen-/Hash-/Historienfixtures und öffentliche Datei-Integration grün | finale unabhängige Beurteilung, keine Fixture als Produktbeleg zählen |
 | SC-005 | 58 Pin-/Impact-/Historienfälle grün, vier genehmigte Locks unverändert, null Upgrades | keine offene Paketfreigabe; spätere Updates brauchen separaten genehmigten Plan |
 | SC-006 | Partial-/Skip-/wrong-class-/Unit-/Smoke-only-Schutz, identische zero-write Vorschau | vollständige Gate-Dateien mit echten Review-/Human-/Providerartefakten |
@@ -27,13 +27,13 @@ Verbleibende Pflichtentscheidungen/Nachweise, Owner Thorsten:
    [A11Y-Zuordnung und Ablauf](../../../docs/accessibility/006-tui-functional-contract.md):
    Person, Datum, OS/Terminal/VoiceOver, Head/Revision, Beobachtung und Befund
    erfassen. Automation kann diese Pflicht nicht übernehmen.
-2. Bereits angefragte eng begrenzte Freigabe für einen unabhängigen read-only
-   Review-Agenten oder Benennung eines tatsächlichen unabhängigen Reviewers.
-   Selbstreview ist kein unabhängiger Security-/Architektur-/Produktreview.
-3. Bereits angefragte temporäre, versionierte axe-Toolinstallation außerhalb
-   des Repositories oder ein vorhandener echter axe-Nachweis. Keine Produkt-
-   NuGet-Abhängigkeit wird dafür ergänzt. T073 bleibt einschließlich zweier
-   historischer fehlender API-Namespace-Linkziele offen.
+2. Unabhängiger read-only Review ausdrücklich genehmigt und
+   [durchgeführt](../../../docs/security/secure-development/006-tui-functional-contract/independent-review.md).
+   JSON-Lesegrenze nach echtem Rot korrigiert; Delta unabhängig geprüft.
+3. Temporäre axe-Umgebung ausdrücklich genehmigt und
+   [ausgeführt](../../../docs/accessibility/006-docfx-axe.md). Fünf Seiten ohne
+   automatische Verstöße oder fehlende Artikel-Linkziele nach gezielter Korrektur;
+   manuelle axe-Prüffälle bleiben als solche erhalten. Kein NuGet-Upgrade.
 4. Nach vollständiger technischer und unabhängiger Abnahme: separate Owner-
    Produktentscheidung. Der erfolgte Owner-Planreview ersetzt sie nicht.
 
@@ -52,10 +52,12 @@ prove rejection strength, not native, human or independent product acceptance.
 Final native results, one actual head/revision, independent reviews and complete
 gate artefacts remain mandatory; historical results are never relabelled.
 
-The owner must provide actual human VoiceOver evidence, approve the requested
-bounded independent reviewer and temporary external axe tooling or supply real
-equivalent evidence, then make the separate product-acceptance decision.
-The API sample still has two missing historical namespace targets. Deferred
+The owner must still provide actual human VoiceOver evidence and later the
+separate product-acceptance decision. Independent read-only review and temporary
+external axe tooling were expressly approved and executed. The JSON resource
+boundary and DocFX failures were corrected with targeted proof. Five sampled
+pages have no automatic axe violations or missing article targets; manual
+review items remain explicit. Final common-head proof is still due. Deferred
 Claude provider failure is not a pass. Keep the PR draft until material gates
 close; formal-rule bypass cannot replace them. No intake promotion, package
 upgrade or follow-up feature is authorised by this interim assessment.

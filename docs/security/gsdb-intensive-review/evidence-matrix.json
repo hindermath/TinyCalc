@@ -1114,7 +1114,7 @@
       "path": "docs/security/security-checklist.md",
       "version": "Current",
       "reviewedAt": "2026-10-10",
-      "normalizedSha256": "ca095adcb41eb14ad1cd58d36504cca581d74fdc2500d2f965b96164fa816c39",
+      "normalizedSha256": "a4585b163f0d553a5703fdf66d2754ac86974b24a6b62813cddd18191fe12b32",
       "scope": {
         "de": "Zeilenspezifischer aktueller Nachweis aus docs/security/security-checklist.md; der Hash beweist Inhalt, nicht automatisch Erfuellung.",
         "en": "Current row-specific evidence from docs/security/security-checklist.md; the hash proves content, not automatic fulfilment."

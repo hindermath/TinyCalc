@@ -2,6 +2,26 @@
 
 ## Deutscher Nachweisblock
 
+### Nachtrag 2026-10-10: native CI und genehmigte Reviews
+
+Jetzt 70/83 Tasks technisch nachgewiesen. T057/T058: der
+[ausgewertete native Run](platforms/native-ci-38077169518.md) liefert je
+Linux/Windows 671 Pass, null Fail/Skip, 364 Pfade und 462 Assertions.
+Provider-Head und tatsächlicher PR-Testmerge sind getrennt gebunden.
+T067/T071: [unabhängiger Quell-/Delta-Review](../../../docs/security/secure-development/006-tui-functional-contract/independent-review.md)
+durchgeführt. Ein JSON-Ressourcenfehler wurde nach echtem Rot korrigiert;
+1092-Tupel-/Zero-write-Kompatibilität, 12 öffentliche Policy- und 8 Pfadchecks
+bleiben nach der Änderung grün. Ein technischer GSDB-Quellhash wurde erneuert,
+ohne Kontrollstatus oder menschliche Freigabe aufzuwerten.
+T073: [DocFX/axe/lynx](../../../docs/accessibility/006-docfx-axe.md), fünf Seiten
+ohne automatische Verstöße oder fehlende Artikel-Linkziele. Manuelle Fälle
+sowie VoiceOver bleiben offen. Die folgenden älteren Absätze sind historische
+Zwischenstände, nicht die aktuelle Behauptung fehlender Reviewer-Autorität.
+
+Die 13 verbleibenden Tasks betreffen finale gemeinsame Plattform-/Headbindung,
+Story-/Quickstart-/Lieferprovenienz, Human-/Owner-Abnahme sowie bedingten
+Lieferabschluss/Archivierung. Keine Completed-/Accepted-Behauptung, kein Merge.
+
 2026-10-10, Feature 006, Basis `8115513d803b`. Dieser Zwischenbericht ist kein
 Completion-Report und keine Produktabnahme. Die [macOS-Vollbelege](platforms/macos/local-build105.md)
 und [Coverage](coverage.md) schließen T060–T062/T066 lokal: tatsächliche Binary,
@@ -44,6 +64,14 @@ Claude-Providerfehler bleibt ausdrücklich zurückgestellt, nicht bestanden.
 Admin-Bypass darf keine dieser materiellen Pflichten ersetzen.
 
 ## English evidence block
+
+Current addendum: 70/83 tasks evidenced. Actual native CI passes 671 tests and 364
+paths per OS, with testmerge and feature head separately bound. Independent
+source/delta review is complete; the resource-cap correction retains actual
+red/green and full validator compatibility. Five DocFX samples pass automatic
+axe/link/text checks. Manual cases, human VoiceOver, owner acceptance and final
+common-head delivery obligations remain open. Historical paragraphs below are
+not fresh blockers or current authority claims. No feature completion or merge.
 
 This interim checkpoint is not completion or product acceptance. The linked
 actual macOS run and coverage close the local terminal/coverage work with 669

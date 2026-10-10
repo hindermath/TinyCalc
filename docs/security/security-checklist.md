@@ -4,12 +4,16 @@
 
 Deutsch, 2026-10-10: Die [technische Selbstprüfung](secure-development/006-tui-functional-contract/review.md)
 ordnet aktuelle Code-/Pfad-/JSON-/TRX-/Prozessgrenzen zu. 669 lokale Tests und
-364 Pfade grün; unabhängiger Review, Human-A11Y und finale native Providerbelege
-bleiben Open. Vier genehmigte Locks sind vorhanden. Die folgenden Feature-003-
+364 Pfade grün; der [unabhängige Quell-/Delta-Review](secure-development/006-tui-functional-contract/independent-review.md)
+ist durchgeführt, einschließlich Rot–Grün-Korrektur der JSON-Lesegrenze.
+Native CI liefert je Plattform 671 Pass; Human-A11Y und finale gemeinsame
+Headbindung bleiben Open. Vier genehmigte Locks sind vorhanden. Die folgenden Feature-003-
 Status sind historische Nachweise, keine aktuelle Locklücke oder neue Freigabe.
 
 English: Current actual controls are linked above. Local tests/paths pass;
-independent/human/final native provider gates remain Open. Four approved locks
+independent source/delta review is complete, including the corrected JSON read
+boundary. Native CI passes 671 tests per platform; human/final-head gates remain
+Open. Four approved locks
 now exist; historical Feature-003 status does not grant current acceptance.
 
 ## Deutscher Prüfblock

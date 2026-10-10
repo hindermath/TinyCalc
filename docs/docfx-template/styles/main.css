@@ -1,0 +1,27 @@
+/* DE: Das helle Standard-Template benötigt dunklere Links und Syntaxfarben.
+   EN: The light default template needs darker links and syntax colours. */
+a,
+.toc .nav > li > a,
+.toc .nav > li.active > a {
+  color: #145a86;
+}
+
+pre code,
+pre code [class*="hljs-"] {
+  color: #243b53;
+}
+
+/* DE: Navigation erhält echte Ziele statt nur größerer unsichtbarer Abstände.
+   EN: Navigation gets actual larger targets, not just invisible spacing. */
+.toc .nav > li > a:not(.sidetoc-expand) {
+  min-height: 24px;
+  padding-top: 3px;
+  padding-bottom: 3px;
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+  outline: 3px solid #145a86;
+  outline-offset: 2px;
+}

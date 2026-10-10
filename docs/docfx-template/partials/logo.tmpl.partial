@@ -1,0 +1,5 @@
+{{!DE: Sichtbarer Text bleibt nach der SVG-Ersetzung ein zugänglicher Linkname.}}
+{{!EN: Visible text preserves the accessible link name after SVG replacement.}}
+<a class="navbar-brand" href="{{_appLogoUrl}}{{^_appLogoUrl}}{{_rel}}README.html{{/_appLogoUrl}}" aria-label="{{_appName}}">
+  <span>{{_appName}}</span>
+</a>

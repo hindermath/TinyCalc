@@ -47,3 +47,15 @@ feature branch with a draft PR. Merge requires complete technical, platform,
 security, accessibility, evidence and product acceptance; bypass applies only to
 formal merge rules. No series promotion, intake archival or follow-up feature.
 Optional commit hooks remain disabled.
+
+## Zusätzliche begrenzte Freigaben / Additional bounded approvals
+
+Deutsch, 2026-10-10: Thorsten hat die temporäre versionierte axe-Prüfumgebung
+außerhalb des Repositories und einen unabhängigen read-only Review-Agenten
+ausdrücklich genehmigt. Keine Produkt-/NuGet-Upgrades, dauerhafte Codex-Settings,
+VoiceOver-Ersatznachweise oder Owner-Produktabnahme sind darin enthalten.
+
+English: Thorsten explicitly authorised temporary version-pinned external axe
+tooling and one independent read-only reviewer. This does not authorise product
+package upgrades, persistent Codex settings, synthetic human evidence or owner
+product acceptance.

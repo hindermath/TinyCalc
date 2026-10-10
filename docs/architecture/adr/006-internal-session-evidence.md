@@ -2,9 +2,10 @@
 
 ## Deutscher Entscheidungsblock
 
-Status: umgesetzt nach Owner-genehmigtem Plan; unabhängiger Review offen.
+Status: umgesetzt; unabhängiger Quell-/Delta-Review durchgeführt, keine Produktabnahme.
 Datum 2026-10-10; Feature 006, LocalImplementation. Evidenzverantwortlich:
-Feature-Entwicklung. Unabhängiger Reviewer noch nicht beauftragt/erfasst.
+Feature-Entwicklung. Reviewer `independent_closeout_review`, ausdrücklich
+genehmigt; [Nachweis](../../security/secure-development/006-tui-functional-contract/independent-review.md).
 Grundlagen: Constitution Schichtentrennung, XII/XIII, ISO A.8.27/A.8.28.
 
 Kontext: Engine- oder Smoke-Tests beweisen keine angebotenen Editor-/Dialogwege.

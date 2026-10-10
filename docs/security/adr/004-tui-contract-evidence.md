@@ -5,7 +5,8 @@
 Feature 006, Phase Implement, 2026-10-10, Branch `006-tui-functional-contract`.
 Basis `ffc3d56a8975341a686ff6985570369abefcfd2a`; spätere Lieferautorität ist
 in der Feature-Evidence dokumentiert, kein materieller Gate-Bypass.
-Status implementiert nach genehmigtem Plan; unabhängiger Review Open, Owner
+Status implementiert; [unabhängiger Quell-/Delta-Review](../secure-development/006-tui-functional-contract/independent-review.md)
+durchgeführt, keine Owner-Produktabnahme. Owner
 Feature-Entwicklung, Trigger vor Abnahme. ISO A.8.27/A.8.28, Constitution XII–XVIII,
 SSDF/CWE sind anwendbar. Dieses Dokument ist keine Auditierung oder Zertifizierung.
 
@@ -28,14 +29,14 @@ Gesamtfreigabe wurden verworfen. Restrisiken: kompromittierter Registry-/Runner-
 oder Reviewer-Kontext; daher SBOM/Provenance, datierter Audit und unabhängige
 Abnahme. ASVS/Produkt-AI-SBOM/Zero Trust bleiben im lokalen Scope begründet N/A;
 KI ist Entwicklungswerkzeug, kein ausgelieferter Dienst. VEX bei konkretem Fund.
-Human-A11Y, native Plattformen und Secure-Development-Review bleiben offen.
+Human-A11Y und finale gemeinsame Plattform-/Headbindung bleiben offen.
 
 ## English security block
 
 The feature's proposed implementation decision separates keyboard/formula,
 file/help, registry and evidence trust boundaries. SSDF/CWE, ISO A.8.27/A.8.28 and
-the named constitution principles apply. Independent review remains Open before
-acceptance; no certification is claimed.
+the named constitution principles apply. Independent source/delta review is
+documented separately; human and owner acceptance remain open. No certification is claimed.
 
 Use strict local schemas, safe rooted paths, source/pin/head hashes, independent
 obligations and actual assertions. The validator never executes JSON commands,
@@ -46,4 +47,4 @@ two layers. Staged load validation and atomic application require test-first
 proof of an actual defect. Registry/runner/reviewer compromise remains residual
 risk addressed by audit, provenance and independent acceptance. Local-product
 ASVS/AI-SBOM/Zero Trust are N/A with their existing scope triggers; VEX is
-conditional. Native platforms, human accessibility and secure review remain open.
+conditional. Final common-head platform binding and human acceptance remain open.

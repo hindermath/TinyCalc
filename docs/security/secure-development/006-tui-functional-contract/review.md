@@ -3,7 +3,10 @@
 ## Deutscher Prüfblock
 
 Stand 2026-10-10. Owner Thorsten; technische Selbstprüfung durch die
-Feature-Entwicklung, **kein unabhängiger Review und keine Risikoakzeptanz**.
+Feature-Entwicklung, **keine Risikoakzeptanz**. Der gesondert genehmigte
+[unabhängige Review](independent-review.md) ist einschließlich gezielter
+Korrekturprüfung durchgeführt; dieser ältere Selbstprüfblock wird dadurch
+nicht selbst zum unabhängigen Gutachten.
 SSDF/CWE Top 25, C# Secure Coding, Constitution XII/XIII und ISO A.8.27/A.8.28
 gelten. STRIDE/CAPEC-153/-538 bleiben im Bedrohungsmodell zugeordnet.
 
@@ -35,16 +38,19 @@ Applicable/Open-Bewertungen; kein neues Rechtsgutachten oder Zertifikat.
 Trigger sind eine neue Produkt-, Daten-, Netzwerk-, Identitäts-, Cloud-, KI-
 oder Providergrenze. Owner prüft den Trigger vor dem betroffenen Schritt.
 
-Offen vor Abnahme: unabhängiger Security-/Architekturreview, finale native
-Plattformbelege, menschliche A11Y und genaue Release-Provenance. Eine frühere
+Unabhängiger Security-/Architekturreview und Korrekturprüfung sind dokumentiert.
+Offen vor Abnahme: finale gemeinsame Plattformbindung, menschliche A11Y,
+Owner-Produktabnahme und genaue Release-Provenance. Eine frühere
 authentifizierte Feed-URL wurde aus lokaler Konfiguration/eigenen Logs entfernt;
 Tool-/Chatverlauf lässt sich hier nicht löschen. Erneuerung betroffener externer
 Zugangsdaten bleibt Owner-Folgeaktion; keine vertraulichen Werte werden übernommen.
 
 ## English review block
 
-This is the implementation team's technical checkpoint, not independent review,
-risk acceptance or certification. The table maps actual controls and proof to
+This is the implementation team's technical checkpoint, not risk acceptance or
+certification. The separately linked independent source/delta review is complete;
+it does not retrospectively turn this self-review into an independent opinion.
+The table maps actual controls and proof to
 input, file, JSON, path, TRX, historical test-first, process, disclosure and
 supply-chain boundaries. Local execution passed 669 tests and all 364 paths;
 policy, semantic, provenance and workflow guards passed their stated cases.
@@ -54,6 +60,7 @@ Local product ASVS, runtime AI-SBOM, distributed Zero Trust and cloud C3A/C5
 remain N/A for the documented technical scope. CI/tool providers retain their
 separate applicability and Open decisions. New service/data/identity/cloud/AI
 or provider boundaries reopen review before the affected action. Independent
-reviews, final native/human proof and release provenance remain Open. The prior
+review is documented; final common-head/human proof, owner acceptance and release
+provenance remain Open. The prior
 feed credential incident has no secret in this evidence; local removal cannot
 delete chat/tool history or replace owner credential rotation.

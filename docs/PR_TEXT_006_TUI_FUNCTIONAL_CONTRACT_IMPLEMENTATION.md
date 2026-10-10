@@ -1,69 +1,67 @@
-# Feature 006: vollständige lokale Implementierung / Complete local implementation
+# Feature 006: TUI-Funktionsvertrag / TUI functional contract
 
 ## Deutscher Überblick
 
-**Draft – noch nicht mergefähig, kein Feature-Abschluss.** 65/83 Tasks
-vollständig nachgewiesen. [Abschlussfortschritt](../specs/006-tui-functional-contract/evidence/closure-checkpoint.md)
-und [macOS-Vollbeleg](../specs/006-tui-functional-contract/evidence/platforms/macos/local-build105.md)
-trennen lokale Automation von finaler Plattform-, Human- und Produktabnahme.
+**Draft – nicht mergefähig, keine Produktabnahme.** 70/83 Tasks nachgewiesen.
+[Abschlussfortschritt](../specs/006-tui-functional-contract/evidence/closure-checkpoint.md)
+trennt tatsächliche Implementierung von Human- und endgültiger Lieferabnahme.
 
-Problem: bestätigte Formel-, Anzeige-, Tastatur-, Hilfe- und Load-Integritätsdefekte
-sowie fehlende unabhängige Vertrags-/Evidenzinfrastruktur.
-Lösung: test-first Produktkorrekturen, interne echte Session, unveränderte vier
-Locks, vollständige unabhängige Orakel, reale PTY-Beobachtung und fail-closed
-read-only Vertragsprüfung. Alle 17 Familien und 364 Pfade bleiben erhalten.
+Problem: bestätigte Formel-, Anzeige-, Tastatur-, Hilfe- und Load-Defekte sowie
+fehlende unabhängige Vertrags-/Evidenzinfrastruktur.
+Lösung: test-first Produktkorrekturen, interne reale Session, vier unveränderte
+Locks, unabhängige Orakel, echte macOS-PTY und fail-closed read-only Validator.
+Alle 17 Familien und 364 Pfade bleiben erhalten.
 
-- Lokale Solution Build 105: Core 217 + TUI 452 = 669 Pass, null Fail/Skip.
-- Ein gemeinsamer tatsächlicher macOS-Lauf: 364 Pfade, 462 serialisierte Assertions.
-- Geänderte ausführbare Produktzeilen: 488/503 = 97,02 %, Collector zurückgenommen.
-- Synthetische 1.092-Tupel-Prüfung/WhatIf: identisch und schreibfrei; kein Produktbeleg.
-- Schema-, Pfad-, Klassen-/TRX-/Hash-, Pin-/Impact-/Historien-/Workflowguards vorhanden.
-- Native vollständige Linux/Windows-Läufe, finale Headbindung, VoiceOver,
-  unabhängige Reviews und Owner-Produktabnahme bleiben Open.
+- Historischer macOS-Build 105: 669 Pass, null Fail/Skip, 364 Pfade,
+  462 Assertions, Changed-Line-Coverage 488/503 = 97,02 %.
+- [Native CI 38077169518](../specs/006-tui-functional-contract/evidence/platforms/native-ci-38077169518.md):
+  je Linux/Windows 671 Pass, null Fail/Skip, 364 Pfade, 462 Assertions.
+  Feature-Head und tatsächlich ausgeführter PR-Testmerge sind getrennt gebunden.
+- [Unabhängiger Quell-/Delta-Review](security/secure-development/006-tui-functional-contract/independent-review.md)
+  durchgeführt; JSON-Lesegrenze nach echtem Rot korrigiert. Danach vollständige
+  synthetische 1092-Tupel-/Zero-write-Integration und gezielte Policy-/Pfadtests grün.
+- [DocFX/axe/lynx](accessibility/006-docfx-axe.md): gezielte Linknamen-/Kontrast-/
+  Zielgrößen-/Namespace-Korrekturen; fünf Seiten ohne automatische Verstöße oder
+  fehlende Artikelziele. Manuelle Prüffälle bleiben ausdrücklich offen.
 
-Produkt-/Testprojekte: MicroCalc.Core, MicroCalc.Tui und beide vorhandenen Tests.
-Keine neue öffentliche C#-API, Paketupgrades oder Produktabhängigkeiten.
-Konfiguration: vier genehmigte Locks ohne Auflösungsdrift, native CI-Collector-
-Integration und DocFX-Sprach-/Publikationskorrektur. Intakes/Serien unverändert.
-TUI-Captures: gehashte Roh-/Textoriginale im lokalen macOS-Nachweis; keine
-synthetischen Screenshots als native oder menschliche Belege ausgeben.
-
-Testplan / Gatezuordnung:
-
-| Gate | Tatsächliche Ausführung / nächster Pflichtnachweis |
+| Gate | Tatsächlicher Nachweis / verbleibende Grenze |
 |---|---|
-| Lokale Funktion/PTY | macOS 27.0 arm64, Feature-006-local-build105; vollständiges dotnet test mit Coverage und TRX, danach collect-tui-contract-evidence.ps1 |
-| Native Linux/Windows | ci.yml, build-test-Matrix auf ubuntu-latest/windows-latest; Capture → vollständiges dotnet test ohne Filter → Collect → Upload; aktueller Lieferhead noch ausstehend |
-| Validator/Preview | PowerShell/Bash/Cmdlet, synthetische vollständige Fixtures und manipulierte echte Belegkopien; keine Produkt-/Providerstarts |
-| Dokumentation | DocFX 106: null Fehler/88 Warnungen; fünf Playwright-ARIA-Seiten und drei Lynx-Texte; axe/abschließende Publikationsprüfung offen |
-| Human-A11Y/Review | VoiceOver mit Mensch sowie unabhängige Security-/Architektur-/Produktprüfung und getrennte Owner-Abnahme ausstehend |
+| Funktion/PTY | macOS Build 105, reale Binary, 80x24/120x40, vollständige Suite/Collector; kein neuer finaler Head |
+| Native Linux/Windows | ci.yml, build-test auf ubuntu-latest/windows-latest; Capture → ungefiltertes dotnet test → Collect → Upload; originale TRX/Bundles und Digests ausgewertet |
+| Launcher | beide nativen Jobs: pwsh -NoProfile -File scripts/tests/tui-contract/test-launchers.ps1, echte Logs; finale gemeinsame Parität offen |
+| Smoke | beide nativen Jobs: dotnet run --no-build --configuration Release --project src/MicroCalc.Tui/MicroCalc.Tui.csproj -- --smoke |
+| Validator | synthetische vollständige Fixtures/WhatIf, unveränderte Repositorybytes; kein nativer Produkt- oder Human-Pass |
+| Dokumentation | DocFX 115 null Fehler/83 bestehende Warnungen; fünf Playwright/axe/ARIA- und lynx-Stichproben; spätere Textänderungen/finale Bindung gesondert |
+| Human/Owner | echte VoiceOver-Bedienung und getrennte Produktentscheidung ausstehend |
+| Lieferung | finale gemeinsame Head-/Vertragsbindung, aktuelle Lieferprovenienz und sauber gebundene Statistik ausstehend |
 
-Risiken: Validator konsumiert nicht vertrauenswürdige JSON-/Datei-/Git-Evidenz.
-Symlink-/Traversal-Abwehr, strikte Schemas, atomare Ausgabe, Zeit-/Klassen-/Hash-
-Bindung und historische Test-first-Provenienz begrenzen Fälschungen; Selbstreview
-ist kein unabhängiger Review. Historische beziehungsweise nicht finale Ergebnisse
-werden nicht auf einen neuen Commit umetikettiert. Claude-Providerfehler ist auf
-Ownerwunsch zurückgestellt, nicht bestanden. DeliveryMode MergeAndSync bleibt
-genehmigt; Admin-Bypass betrifft ausschließlich formale Regeln, keine offenen
-materiellen Gates. Keine Folgefeatures oder NuGet-Upgrades in diesem PR.
+Projekte: MicroCalc.Core, MicroCalc.Tui und beide vorhandenen Tests.
+Keine neue öffentliche C#-API, Paketupgrades oder Produktabhängigkeiten.
+TUI-Captures bleiben gehashte Roh-/Textoriginale, keine synthetische Human-Evidenz.
+Nur ein technischer GSDB-Quellhash wurde nach Checklistenfortschreibung erneuert;
+Kontrollbewertungen, regulatorische Entscheidungen, Intakes und Serie unverändert.
+
+Risiken: untrusted JSON-/Datei-/Git-Evidenz verlangt strikte Grenzen. Neuer
+begrenzter Streamleser bindet Parser und Digest an denselben Snapshot.
+Coverage enthält derzeit alle neun geänderten Produktdateien; vollständig
+fehlende Instrumentierung wäre künftig separat zu erkennen. Human-A11Y und
+Owner-Abnahme bleiben Pflicht. Historische Resultate werden nicht umetikettiert.
+Claude-Providerfehler ist zurückgestellt, nicht bestanden. MergeAndSync und
+Admin-Bypass sind nur für formale Regeln genehmigt; kein materielles Gate umgehen.
+Kein Folgefeature und kein NuGet-Update in diesem PR.
 
 ## English overview
 
-This draft records complete local implementation, not feature acceptance:
-65 of 83 tasks are fully evidenced. One actual macOS run passes 669 tests with
-all 364 mandatory paths, 462 serialized independent assertions and 97.02%
-changed executable-line coverage. Linked records retain real commands, captures,
-run hashes and working-tree bindings. Synthetic full-validator fixtures and
-zero-write preview are infrastructure proof, not native product acceptance.
+Draft only: 70/83 tasks evidenced, not accepted or merge-ready. Actual native
+Linux/Windows jobs each pass 671 tests and all 364 paths, with original bytes,
+digests, provider head and testmerge distinctly recorded. Historical macOS
+coverage/PTY proof is not relabelled to that head.
 
-Core/TUI/tests/docs change without new public APIs, package upgrades or product
-dependencies. Approved locks retain the original resolution. CI collects full
-native Linux/Windows proof; DocFX language/publication changes support the
-learner reading path. Native final-head runs, human VoiceOver, independent
-security/architecture/product review and owner acceptance remain Open.
-
-The table maps gates to actual runners and commands rather than green job names.
-Untrusted file/JSON/Git proof requires strict boundary checking; self-review is
-not independent review. Old or dirty-tree evidence is never relabelled to a new
-head. MergeAndSync and formal-rule bypass do not waive material gates. Deferred
-Claude failure is not a pass. Preserve intake states and continue only Feature 006.
+Independent source/delta review is complete. The actual JSON resource-limit
+bug was corrected test-first, retaining complete validator/zero-write proof.
+The bounded DocFX overlay fixes sampled name/contrast/target/link failures;
+five pages have no automatic axe violations or missing article targets.
+Manual checks, real human VoiceOver, owner acceptance, final common-head proof
+and delivery provenance remain mandatory. No public API, product dependency,
+package graph, intake state or follow-up feature changed. Formal-rule admin
+bypass never replaces material gates; deferred Claude failure is not a pass.

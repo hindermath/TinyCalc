@@ -99,8 +99,10 @@ function Test-TinyCalcContract {
     function Read-Input([string]$Path, [string]$SchemaName = '') {
         $Safe = Resolve-TuiInputPath -Path $Path -RepositoryRoot $Root -EvidenceRoot $EvidenceRoot
         $Schema = if ($SchemaName) { Join-Path $Root "docs/contracts/tui/$SchemaName.schema.json" } else { '' }
-        $InputJson[$Path] = [IO.File]::ReadAllText($Safe, [Text.UTF8Encoding]::new($false, $true))
-        return Read-TuiJsonInput -Path $Safe -SchemaPath $Schema
+        $Raw=$null
+        $Parsed=Read-TuiJsonInput -Path $Safe -SchemaPath $Schema -RawJson ([ref]$Raw)
+        $InputJson[$Path]=$Raw
+        return $Parsed
     }
     function Check-Artifact($Reference) {
         if ($Reference -is [Collections.IDictionary]) { $Reference = $Reference.path + '#sha256=' + $Reference.sha256 }
@@ -143,7 +145,7 @@ function Test-TinyCalcContract {
             if (-not (Test-Json -Json ($Mapping | ConvertTo-Json -Depth 15) -SchemaFile (Join-Path $Root 'docs/contracts/tui/source-mapping.schema.json') -ErrorAction SilentlyContinue)) { throw 'InvalidSchema' }
             $Path = Resolve-TuiInputPath -Path $Mapping.sourcePath -RepositoryRoot $Root -RelativeOnly
             if ((Get-FileHash $Path).Hash.ToLowerInvariant() -cne $Mapping.sourceHash -or
-                -not [IO.File]::ReadAllText($Path).Contains($Mapping.anchor, [StringComparison]::Ordinal)) {
+                -not (Read-TuiBoundedText $Path).Contains($Mapping.anchor, [StringComparison]::Ordinal)) {
                 Add-InputFinding SourceDrift $Mapping.sourcePath
             }
             foreach ($Id in $Mapping.capabilityRefs) { if ($Id -cnotin $C.capabilities.id) { Add-InputFinding MissingObligation 'source-map-reference' } }
@@ -188,15 +190,16 @@ function Test-TinyCalcContract {
         foreach ($Finding in @(Test-TuiContractHistory $Previous $C $Authorities $Additions)) { $Findings.Add($Finding) }
         foreach ($Finding in @(Test-TuiSourceOffers $B $C $S)) { $Findings.Add($Finding) }
         $CatalogPath = Resolve-TuiInputPath -Path 'docs/contracts/tui/catalog.md' -RepositoryRoot $Root -RelativeOnly
-        if ([IO.File]::ReadAllText($CatalogPath) -cne (Get-TuiContractCatalog $C)) { Add-InputFinding CatalogDrift 'docs/contracts/tui/catalog.md' }
+        if ((Read-TuiBoundedText $CatalogPath) -cne (Get-TuiContractCatalog $C)) { Add-InputFinding CatalogDrift 'docs/contracts/tui/catalog.md' }
         if ($Findings.Count) { throw 'ContractPreflightViolation' }
         $EvidencePath = Resolve-TuiInputPath -Path $Evidence -RepositoryRoot $Root -EvidenceRoot $EvidenceRoot
         if (-not (Get-Item $EvidencePath).PSIsContainer) { throw 'InvalidEvidenceDirectory' }
         $PayloadDigests = @{}
         $Bundles = @(Get-ChildItem -LiteralPath $EvidencePath -File -Filter '*.bundle.json' | Sort-Object Name | ForEach-Object {
             $Safe = Resolve-TuiInputPath -Path $_.FullName -RepositoryRoot $Root -EvidenceRoot $EvidenceRoot
-            $Bundle = Read-TuiJsonInput $Safe (Join-Path $Root 'docs/contracts/tui/evidence-bundle.schema.json')
-            $PayloadDigests[$Bundle.runId] = Get-TuiCanonicalDigest ([IO.File]::ReadAllText($Safe)) -ExcludeRootProperty payloadDigest
+            $Raw=$null
+            $Bundle = Read-TuiJsonInput $Safe (Join-Path $Root 'docs/contracts/tui/evidence-bundle.schema.json') -RawJson ([ref]$Raw)
+            $PayloadDigests[$Bundle.runId] = Get-TuiCanonicalDigest $Raw -ExcludeRootProperty payloadDigest
             $Bundle
         })
         $Binding = @{ commit = $Head[0]; workingTreeDigest = $Digests.workingTree; contractDigest = $Digests.contract; pinDecisionDigest = $Digests.pin; payloadDigests = $PayloadDigests }
@@ -216,7 +219,7 @@ function Test-TinyCalcContract {
                 foreach ($Artifact in $Result.artifactRefs) { $null = Check-Artifact $Artifact }
                 $TestFile = ($Result.testRef -split '#', 2)[0]
                 $TestPath = Resolve-TuiInputPath -Path $TestFile -RepositoryRoot $Root -RelativeOnly
-                if (-not [IO.File]::ReadAllText($TestPath).Contains('Assert.', [StringComparison]::Ordinal)) { Add-InputFinding TestWeakening $Result.pathId }
+                if (-not (Read-TuiBoundedText $TestPath).Contains('Assert.', [StringComparison]::Ordinal)) { Add-InputFinding TestWeakening $Result.pathId }
             }
         }
         if ([IO.Path]::IsPathRooted($GateEvidence) -or '..' -in ($GateEvidence -split '[/\\]')) { throw 'UnsafePath' }

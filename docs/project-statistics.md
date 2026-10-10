@@ -816,32 +816,36 @@ English: The native follow-up correction also adds 37 net platform-evidence docu
 
 | 2026-10-10 | Feature 006 Hosted-I/O-Isolation / Hosted I/O isolation | Branch `006-tui-functional-contract`, Basis `bed41f1`; sichtbares CI-/Korrekturfenster 20:37–20:46 Europe/Berlin, keine Arbeitszeitmessung. `0` Produktionscode-, `18` C#-Test- und `25` Dokumentationszeilen netto vor Statistik-/Versionspflege. Windows tatsächlich Core 217 Pass, TUI 443 Pass/11 Fail/null Skip: fremde Terminalantworten beeinflussen Fixturegröße auch im ANSI-Modus. Dokumentierten Framework-Hook ausschließlich in serialisierten Buffer-Tests setzen, ursprüngliche Umgebungsvariable/Größenmodus bei Fehler/Dispose wiederherstellen; echte separate macOS-Prozess-PTYs und Human-Anforderungen erhalten. Build 114 zwei echte rote Restaurierungsfälle, Build 115 sieben gezielte Fälle grün. Keine Paketänderung, keine Produktdefault-Änderung oder abgeschwächte Assertion; native Vollabnahme bleibt offen. Referenzen 80/125 Zeilen/Arbeitstag, 7.8 h/Tag und 21.5 Tage/Monat bleiben Modelle. / Isolate controlled framework tests from hosted console I/O with the documented scoped hook and actual targeted red/green proof. |
 
+| 2026-10-10 | Feature 006 unabhängiger Review, native CI und DocFX / Independent review, native CI and DocFX | Branch `006-tui-functional-contract`, Basis `6a1154d`; sichtbares Review-/Korrekturfenster 21:13–21:35 Europe/Berlin, keine Arbeitszeitmessung. Snapshot vor dieser Ledger-/Versionspflege: `0` Produktionscode-/C#-Testzeilen, Testskript `+39/-0`, Infrastruktur `+81/-12`, Dokumentation/Verträge `+395/-97`; spätere Nachweisergänzung in derselben Lieferung separat im Git-Diff sichtbar. 70/83 Tasks nachgewiesen. Tatsächlicher Linux-/Windows-CI-Lauf 38077169518 je 671 Pass, null Fail/Skip, 364 Pfade/462 Assertions; PR-Testmerge und Feature-Head getrennt gebunden. Genehmigter unabhängiger Quell-/Architekturreview abgeschlossen; echte JSON-Lesegrenze test-first korrigiert, vollständige synthetische 1092-Tupel-/Zero-write-Integration und gezielte Policy-/Pfadtests grün. Temporäres externes axe 4.13.0, kleiner DocFX-Overlay-Fix und fünf reale axe/ARIA/lynx-Stichproben grün, manuelle Fälle erhalten. Keine neue Produktabhängigkeit oder Paketaktualisierung. Historische macOS-Evidenz bleibt historisch; VoiceOver, getrennte Ownerabnahme und finale gemeinsame Head-/Lieferbindung offen. Basen 80/125 Zeilen/Arbeitstag, 7.8 h/Tag und 21.5 Tage/Monat bleiben Modelle. / Record actual independent review, native provider results and targeted accessibility fixes without claiming human or final release acceptance. |
+
 ## Gesamtstatistik / Overall Statistics
 
-Deutsch: Lokaler Feature-006-Zwischenstand: 65/83 Tasks vollständig nachgewiesen;
+Deutsch: Lokaler Feature-006-Zwischenstand: 70/83 Tasks vollständig nachgewiesen;
 364/364 unterschiedliche Pfade und 462 serialisierte Assertions stammen aus
 einem tatsächlichen macOS-Vollvertrag. 669 Tests grün, Changed-Line-Coverage
-97,02 %. Es fehlen keine lokalen Pfade; finale Plattform-, Human- und Review-
-Gates bleiben ausdrücklich offen, kein finaler Commit-/Produktabnahmenachweis.
-Die folgende
-generierte Gesamtstatistik einschließlich ASCII-Trends bleibt historisch an ihre
-angegebene Git-Quelle gebunden. Vorschau vom 2026-10-10: DRY_RUN, Quelle
-`8115513d803b`; Schreiben erst an genehmigter sauberer Commit-Grenze.
+97,02 %. Zusätzlich tatsächliche Linux-/Windows-CI mit je 671 Tests, 364 Pfaden
+und 462 Assertions sowie unabhängiger Quellreview und fünf DocFX-Stichproben.
+Die getrennten Belege sind noch keine finale gemeinsame Headbindung. Human-
+und finale Liefergates bleiben offen, kein Produktabnahmenachweis. Die folgende
+generierte Gesamtstatistik einschließlich ASCII-Trends bleibt an ihre angegebene
+Git-Quelle gebunden und wird nur an einer sauberen Commit-Grenze fortgeschrieben.
 
-English: The local Feature-006 checkpoint fully evidences 65 of 83 tasks.
+English: The local Feature-006 checkpoint fully evidences 70 of 83 tasks.
 One actual macOS full run supplies all 364 paths, 462 serialized assertions and
 669 passing tests, with 97.02% changed-line coverage. No local paths are missing;
-final platform, human and review gates remain Open, not final product acceptance. Generated
+Native Linux/Windows each pass 671 tests and all paths; independent source review
+and five DocFX samples are complete. Separate results are not final common-head
+proof. Human and final delivery gates remain Open, not final product acceptance. Generated
 totals and ASCII trends below remain bound to their stated historical Git source.
-The current preview is DRY_RUN at `8115513d803b`; write only at the authorised
-clean commit boundary, without bypassing the dirty-worktree guard.
+Write only at the authorised clean commit boundary, without bypassing the
+dirty-worktree guard.
 
 ```text
 Feature 006: complete local path proof, not acceptance
 Paths  [####################] 364 / 364 locally proved
 Open   [....................]   0 / 364 local paths
-Tasks  [###############.....]  65 /  83 fully evidenced
-Final native/human/review acceptance: OPEN
+Tasks  [#################...]  70 /  83 fully evidenced
+Native CI: PASS; final common-head/human acceptance: OPEN
 ```
 
 Deutsch: Die Balken sind grobe textuelle Anteile. Die Zahlen benennen den Stand;
