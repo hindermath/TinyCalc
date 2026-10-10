@@ -36,12 +36,12 @@ internal sealed class LegacyProgramUiAdapter : IDisposable
             new { Address = $"{column}{row}", Cell = _session.SnapshotAt(new CellAddress(column, row)) })).ToArray(),
     });
 
-    internal LegacyProgramUiAdapter()
+    internal LegacyProgramUiAdapter(int width = 120, int height = 40)
     {
         App = Application.Create().Init(DriverRegistry.Names.ANSI);
         try
         {
-            App.Screen = new System.Drawing.Rectangle(0, 0, 120, 40);
+            App.Screen = new System.Drawing.Rectangle(0, 0, width, height);
             _session = new TuiSession(App);
         }
         catch

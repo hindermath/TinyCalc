@@ -17,12 +17,15 @@ Validator -> liest Vertrag + Quellen + Nachweise; startet keine Befehle
 ```
 
 Die Core-Schicht bleibt unabhängig von TUI und Evidenz. `Program` besitzt
-Start/Smoke; nach dem Legacy-Rot wird eine interne instanzgebundene Session
-extrahiert. Sie besitzt Views und Ressourcen, nicht alternative Test-Fachlogik.
-Vorher ruft ausschließlich ein testseitiger Adapter `BuildWindow`/`RefreshUi`
-über begrenzte Reflection auf. Eingaben laufen über Framework-Injektion, nie
-direkt über HandleKey, Editor- oder Engine-Aktionen. Read-only Beobachtung und
-definierter Setup/Reset sind zulässig. Die Session-Extraktion entfernt Reflection.
+Start/Smoke. Nach echtem Legacy-Rot wurde dieselbe UI als interne instanzgebundene
+Session extrahiert; der aktuelle Adapter verwendet keine Reflection mehr.
+Sie besitzt Views und Ressourcen, nicht alternative Test-Fachlogik. Eingaben
+laufen über Framework-Injektion, nie direkt über HandleKey, Editor- oder
+Engine-Aktionen. Read-only Beobachtung und definierter Setup/Reset bleiben zulässig.
+Auf macOS umschließt `TerminalStateLease` App und Session: Zustand vor Init lesen,
+Treiber/Views abbauen, Zustand zurückgeben und späte ProcessExit-Rücksetzung
+danach erneut absichern. Nur feste `/bin/stty`-Argumente und begrenzte Prozesse;
+kein erratenes natives Strukturformat oder aus JSON ausgeführter Befehl.
 
 Qualitätsziele: vollständige angebotene Funktion, Datenintegrität bei Abbruch
 und Fehler, zugängliche Bedienung, reproduzierbare Nachweise, sichere begrenzte
@@ -37,10 +40,11 @@ werden per Hash gebunden. Ein lokaler Arbeitsbaumdigest ersetzt keinen finalen
 Commit. Producer schreiben außerhalb des read-only Validators atomar und nur
 nach vollständigen ausgeführten Assertions; Skip/Timeout sind kein Pass.
 
-Risiken/Schulden: aktuelle statische Program-Zustände erfordern serielle Tests;
-vorübergehende Reflection ist auf T016/T019 begrenzt. Framework-Injektion
-beweist keinen realen Terminaltreiber oder VoiceOver. Plattform-/Human-Evidenz
-und unabhängiger Review sind noch offen. Zeitgrenzen 30/180/5 Sekunden werden
+Risiken/Schulden: Terminal.Gui-Prozesszustand erfordert weiterhin serielle Tests;
+historische Reflection ist entfernt. Framework-Injektion beweist keinen realen
+Terminaltreiber oder VoiceOver. Der echte macOS-Vollvertrag ist lokal gebunden,
+natives Linux/Windows, Human-Evidenz und unabhängiger Review sind noch offen.
+Zeitgrenzen 30/180/5 Sekunden werden
 als Fehlergrenzen, nicht als Produkt-SLA behandelt. Eigene temporäre Ressourcen
 dürfen bereinigt werden, fremde Prozesse und Dateien nie.
 
@@ -51,17 +55,19 @@ public APIs, runtime dependencies or product formats. Core remains independent
 of TUI/evidence. The diagram separates real product interaction, independent
 source obligations, actual assertion results and a read-only validator.
 
-Before extraction, a test-only adapter uses narrow reflection only for existing
-view construction/refresh and read-only observation. Framework input exercises
-real controls; no direct business actions substitute for interaction. After
-legacy functional red, an internal instance-owned session replaces static
-ownership and removes reflection while preserving behaviour.
+Actual legacy functional red preceded internal session extraction. The current
+adapter no longer uses reflection. Framework input exercises the same product
+controls; no direct business actions substitute for interaction. On macOS an
+outer terminal lease captures configuration before driver init, restores it
+after app/session disposal and registers a final restore after late driver
+exit hooks. Fixed stty arguments, owned processes and bounded deadlines avoid
+native-layout guesses or execution of evidence-controlled commands.
 
 Quality scenarios cover atomic failed loads, cancellation without output,
 missing/weak tests blocking proof, minimum-size usability and exact final-head
 binding. Strict schemas, independent obligations and atomic producer output
 support evidence integrity. Skip/timeout never counts as pass. Serialized
-framework tests, temporary reflection and separate native/PTY/human evidence
+framework tests and separate native/PTY/human evidence
 are explicit costs and proof boundaries. Full acceptance and independent review
 remain pending; the 30/180/5-second limits govern only owned infrastructure.
 

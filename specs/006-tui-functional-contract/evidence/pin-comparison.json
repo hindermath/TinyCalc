@@ -1,0 +1,6 @@
+{
+  "graphDigest": "554ddf503535f55c021c44f4cc787289feed22767a1c86c674d786906c2f34f2",
+  "approvalDigest": "641f3ebe7ce5b8faa03402c5f33ffeedb4f8c3c020483e8abadd29568f9ea08a",
+  "outcome": "Pass",
+  "artifactRef": "specs/006-tui-functional-contract/evidence/dependency-preflight.md#sha256=0dd0a2ad2c7146d3fb17c8272fb6d8c6704069558c4db133165247b3934cf94b"
+}

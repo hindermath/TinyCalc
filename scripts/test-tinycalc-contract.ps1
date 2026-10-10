@@ -1,4 +1,3 @@
-#Requires -Version 7
 <#
 .SYNOPSIS
 DE: Prüft den vollständigen TUI-Vertrag ausschließlich lesend.
@@ -8,9 +7,28 @@ DE: Keine Installation, Tests, Produktstarts oder Provideraktionen. Exit 0 best�
 nur gültige gebundene Nachweise, keine Produktabnahme oder Lieferfreigabe.
 EN: Never installs, tests, starts the product or contacts a provider. Exit zero
 confirms valid bound evidence, not product acceptance or delivery authority.
+.PARAMETER RepositoryRoot
+DE: Explizite Repository-Lesewurzel. EN: Explicit repository read boundary.
+.PARAMETER Contract
+DE: Vertragsdatei innerhalb erlaubter Wurzeln. EN: Contract file within allowed roots.
+.PARAMETER SourceMap
+DE: Zuordnung der geprüften Quellangebote. EN: Mapping of reviewed source offers.
+.PARAMETER Evidence
+DE: Verzeichnis gebundener Bundles und Gate-Proofs. EN: Bound bundle and gate-proof directory.
+.PARAMETER PinDecision
+DE: Paketentscheidung mit Freigabe-/Vergleichsbindung. EN: Package decision with approval/comparison binding.
+.PARAMETER ImpactDecision
+DE: Änderungsentscheidung; Pflichtgates bleiben erhalten. EN: Change decision; mandatory gates remain required.
+.PARAMETER EvidenceRoot
+DE: Zusätzliche ausdrücklich erlaubte Lesewurzel. EN: Additional explicitly allowed read boundary.
+.PARAMETER GateEvidence
+DE: Relativer Gate-Dateiname im Evidenzverzeichnis. EN: Relative gate filename in the evidence directory.
+.PARAMETER Json
+DE: Maschinenlesbare Ausgabe ohne Farben. EN: Machine-readable output without colours.
 .EXAMPLE
 ./scripts/test-tinycalc-contract.ps1 -RepositoryRoot . -Evidence tests/results -Json -WhatIf
 #>
+#Requires -Version 7
 [CmdletBinding(SupportsShouldProcess)]
 param(
     [string]$RepositoryRoot = (Join-Path $PSScriptRoot '..'),
@@ -28,6 +46,9 @@ $ErrorActionPreference = 'Stop'
 . (Join-Path $PSScriptRoot 'lib/tui-contract/CanonicalJson.ps1')
 . (Join-Path $PSScriptRoot 'lib/tui-contract/SafeInputs.ps1')
 . (Join-Path $PSScriptRoot 'lib/tui-contract/Semantics.ps1')
+. (Join-Path $PSScriptRoot 'lib/tui-contract/Decisions.ps1')
+. (Join-Path $PSScriptRoot 'lib/tui-contract/Catalog.ps1')
+. (Join-Path $PSScriptRoot 'lib/tui-contract/Execution.ps1')
 
 <#
 .SYNOPSIS
@@ -35,8 +56,20 @@ DE: Vollständige lesende Prüfung ohne Freigabe- oder Schreibwirkung.
 EN: Complete read-only validation without approval or write effects.
 .PARAMETER RepositoryRoot
 DE: Explizite Repository-Lesewurzel. EN: Explicit repository read boundary.
+.PARAMETER Contract
+DE: Vertragsdatei innerhalb erlaubter Wurzeln. EN: Contract file within allowed roots.
+.PARAMETER SourceMap
+DE: Zuordnung der geprüften Quellangebote. EN: Mapping of reviewed source offers.
 .PARAMETER Evidence
 DE: Verzeichnis gebundener Bundles und Gate-Proofs. EN: Bound bundle and gate-proof directory.
+.PARAMETER PinDecision
+DE: Paketentscheidung mit Freigabe-/Vergleichsbindung. EN: Package decision with approval/comparison binding.
+.PARAMETER ImpactDecision
+DE: Änderungsentscheidung; Pflichtgates bleiben erhalten. EN: Change decision; mandatory gates remain required.
+.PARAMETER EvidenceRoot
+DE: Zusätzliche ausdrücklich erlaubte Lesewurzel. EN: Additional explicitly allowed read boundary.
+.PARAMETER GateEvidence
+DE: Relativer Gate-Dateiname im Evidenzverzeichnis. EN: Relative gate filename in the evidence directory.
 .EXAMPLE
 Test-TinyCalcContract -RepositoryRoot . -Evidence tests/results -WhatIf
 #>
@@ -115,14 +148,48 @@ function Test-TinyCalcContract {
             }
             foreach ($Id in $Mapping.capabilityRefs) { if ($Id -cnotin $C.capabilities.id) { Add-InputFinding MissingObligation 'source-map-reference' } }
         }
-        if (-not $P.approvalRef -or $P.state -eq 'Blocked') { throw 'BlockedPreflight' }
-        foreach ($Lock in $P.lockRefs) {
-            $Path = Resolve-TuiInputPath -Path $Lock.path -RepositoryRoot $Root -RelativeOnly
-            if ((Get-FileHash $Path).Hash.ToLowerInvariant() -cne $Lock.sha256) { Add-InputFinding PinDrift $Lock.path }
+        $Graph = Get-TuiResolvedPinGraph $Root $P
+        $null = Resolve-TuiInputPath -Path $P.approvalRef -RepositoryRoot $Root -EvidenceRoot $EvidenceRoot -RelativeOnly
+        $Approval = Read-Input $P.approvalRef pin-approval
+        $null = Check-Artifact $Approval.approvalRef
+        $Comparison = $null
+        if ($P.comparisonEvidence) {
+            if ([IO.Path]::IsPathRooted($P.comparisonEvidence) -or '..' -in ($P.comparisonEvidence -split '[/\\]')) { throw 'UnsafePath' }
+            if (Test-Path -LiteralPath (Join-Path $Root $P.comparisonEvidence) -PathType Leaf) {
+                $Comparison = Read-Input $P.comparisonEvidence pin-comparison
+                $null = Check-Artifact $Comparison.artifactRef
+                $Comparison.artifactVerified = $true
+            }
         }
-        if ($P.lockRefs.Count -ne 4 -or $P.declarationRefs.Count -ne 4) { throw 'BlockedPreflight' }
-        foreach ($Declaration in $P.declarationRefs) { $null = Resolve-TuiInputPath -Path $Declaration -RepositoryRoot $Root -RelativeOnly }
-        $Gates = @(@($P.requiredGates) + @($I.requiredGates) | Sort-Object -Unique)
+        $PinPolicy = Get-TuiPinPolicy $P $Graph $Approval $Comparison
+        $ImpactPolicy = Get-TuiImpactPolicy $I $PinPolicy.state
+        $Gates = @(@($PinPolicy.requiredGates) + @($ImpactPolicy.requiredGates) + @($P.requiredGates) + @($I.requiredGates) | Sort-Object -Unique)
+        if ($PinPolicy.state -eq 'Blocked') { throw 'BlockedPreflight' }
+        if ($P.state -cne $PinPolicy.state) { Add-InputFinding PinStateMismatch 'pin-decision' }
+        $History = Read-Input 'docs/contracts/tui/history.json' contract-history
+        $HistoricalJson = @(& git -C $Root show ($History.commit + ':docs/contracts/tui/product-contract.json') 2>$null) -join "`n"
+        if ($LASTEXITCODE -ne 0 -or (Get-TuiCanonicalDigest $HistoricalJson) -cne $History.contractDigest) { throw 'InvalidHistory' }
+        $Previous = ConvertFrom-Json -AsHashtable -InputObject $HistoricalJson
+        $Authorities = @()
+        foreach ($Authority in $History.authorities) {
+            $null = Check-Artifact $Authority.approvalRef
+            $Authority.approvalVerified = $true
+            $Authorities += $Authority
+        }
+        $Additions=@()
+        if($History.Contains('additions')){
+            foreach($Addition in $History.additions){
+                $RedPath=Check-Artifact $Addition.redExecutionRef
+                $TestSourcePath=Check-Artifact $Addition.testSourceRef
+                $Addition.proofVerified=Test-TuiAdditionExecutionProof $Root $History.commit $Addition $RedPath $TestSourcePath
+                $Additions+=$Addition
+            }
+        }
+        foreach ($Finding in @(Test-TuiContractHistory $Previous $C $Authorities $Additions)) { $Findings.Add($Finding) }
+        foreach ($Finding in @(Test-TuiSourceOffers $B $C $S)) { $Findings.Add($Finding) }
+        $CatalogPath = Resolve-TuiInputPath -Path 'docs/contracts/tui/catalog.md' -RepositoryRoot $Root -RelativeOnly
+        if ([IO.File]::ReadAllText($CatalogPath) -cne (Get-TuiContractCatalog $C)) { Add-InputFinding CatalogDrift 'docs/contracts/tui/catalog.md' }
+        if ($Findings.Count) { throw 'ContractPreflightViolation' }
         $EvidencePath = Resolve-TuiInputPath -Path $Evidence -RepositoryRoot $Root -EvidenceRoot $EvidenceRoot
         if (-not (Get-Item $EvidencePath).PSIsContainer) { throw 'InvalidEvidenceDirectory' }
         $PayloadDigests = @{}
@@ -135,7 +202,11 @@ function Test-TinyCalcContract {
         $Binding = @{ commit = $Head[0]; workingTreeDigest = $Digests.workingTree; contractDigest = $Digests.contract; pinDecisionDigest = $Digests.pin; payloadDigests = $PayloadDigests }
         foreach ($Finding in @(Test-TuiEvidenceModel -Baseline $B -Contract $C -Bundles $Bundles -Binding $Binding)) { $Findings.Add($Finding) }
         foreach ($Bundle in $Bundles) {
+            $ExecutionPath = Check-Artifact $Bundle.executionProofRef
+            $Executions = @(Read-TuiTrxExecution $ExecutionPath)
             foreach ($Result in $Bundle.results) {
+                $ExecutionFailure = Test-TuiExecutedResult $Result $Executions
+                if ($ExecutionFailure) { Add-InputFinding $ExecutionFailure $Result.pathId }
                 $ProofPath = Check-Artifact $Result.assertionProofRef
                 $Proof = Read-TuiJsonInput $ProofPath
                 foreach ($Key in @('capabilityId','pathId','scenarioKind','testRef','startedAt','finishedAt','assertions')) {
@@ -175,14 +246,32 @@ function Test-TinyCalcContract {
     }
     catch {
         $Code = [string]$_.Exception.Message
-        if ($Code -notin @('UnsafePath','InvalidInputSize','InvalidSchema','InvalidRepository','BlockedPreflight','InvalidEvidenceDirectory','InvalidArtifactReference','ArtifactDigestMismatch')) { $Code = 'InvalidInput' }
-        $Findings.Add([pscustomobject]@{ code = $Code; sourceRef = 'inputs' })
-        $ExitCode = 2
+        if ($Code -ceq 'ContractPreflightViolation') { $ExitCode = 1 }
+        else {
+            if ($Code -notin @('UnsafePath','InvalidInputSize','InvalidSchema','InvalidRepository','InvalidHistory','BlockedPreflight','InvalidEvidenceDirectory','InvalidArtifactReference','ArtifactDigestMismatch')) { $Code = 'InvalidInput' }
+            $Findings.Add([pscustomobject]@{ code = $Code; sourceRef = 'inputs' })
+            $ExitCode = 2
+        }
+    }
+    # DE: Auch schema-valide IDs können fremden Text tragen. Die Ausgabe erlaubt deshalb nur
+    # logische IDs/Tupel und relative Repo-Referenzen, keine ungeprüften Diagnosetexte.
+    # EN: Even schema-valid IDs can carry hostile text. Output therefore permits only logical
+    # IDs/tuples and relative repository references, never unchecked diagnostic text.
+    $PublicFindings = foreach ($Finding in $Findings) {
+        $Ref = [string]$Finding.sourceRef
+        $Logical = $Ref -cmatch '^[A-Za-z0-9_.:-]+(?:\|[A-Za-z0-9_.:-]+)*$' -and $Ref -notmatch '^[A-Za-z]:'
+        $Relative = $Ref -cmatch '^(?:docs|src|tests|scripts|requirements|specs)/[A-Za-z0-9_./-]+$' -and '..' -notin ($Ref -split '/')
+        if ($Ref.Length -gt 512 -or (-not $Logical -and -not $Relative)) { $Ref = 'inputs' }
+        [pscustomobject]@{ code = $Finding.code; sourceRef = $Ref }
+    }
+    $PublicGates = foreach ($Gate in $Gates) {
+        if ($Gate.Length -le 128 -and $Gate -cmatch '^[A-Za-z][A-Za-z0-9]+$') { $Gate }
+        else { 'InvalidGateReference' }
     }
     return [pscustomobject][ordered]@{
         status = if ($ExitCode -eq 0) { 'Valid' } elseif ($ExitCode -eq 1) { 'Violation' } else { 'Blocked' }
-        exitCode = $ExitCode; findings = @($Findings | Sort-Object code, sourceRef -Unique)
-        requiredGates = @($Gates); counts = $Counts; inputDigests = $Digests
+        exitCode = $ExitCode; findings = @($PublicFindings | Sort-Object code, sourceRef -Unique)
+        requiredGates = @($PublicGates | Sort-Object -Unique); counts = $Counts; inputDigests = $Digests
     }
 }
 

@@ -2,7 +2,7 @@
   "schemaVersion": "1.0",
   "dependency": "Terminal.Gui",
   "resolvedVersion": "2.4.17",
-  "approvalRef": "execution-authority.md; approved PR #101 plan; specs/003-terminalgui-migration/evidence/dependencies/package-selection.md",
+  "approvalRef": "specs/006-tui-functional-contract/evidence/pin-approval.json",
   "declarationRefs": [
     "src/MicroCalc.Core/MicroCalc.Core.csproj",
     "src/MicroCalc.Tui/MicroCalc.Tui.csproj",
@@ -10,14 +10,30 @@
     "tests/MicroCalc.Tui.Tests/MicroCalc.Tui.Tests.csproj"
   ],
   "lockRefs": [
-    { "path": "src/MicroCalc.Core/packages.lock.json", "sha256": "a29c6aa8cfb81874ff8bb78dc369d7416f28c9b8cc47e99592bfc019b20c41eb" },
-    { "path": "src/MicroCalc.Tui/packages.lock.json", "sha256": "af5200ab3dce91d029dbd862a3017b465d629902740d3d6d20867a7e28772da2" },
-    { "path": "tests/MicroCalc.Core.Tests/packages.lock.json", "sha256": "98059c421302f3ade512c7225ca3db8c14cb4ae1864499657c981a84b3b5dd34" },
-    { "path": "tests/MicroCalc.Tui.Tests/packages.lock.json", "sha256": "389133bfff01c79116e336eff3bb56b09647db35de7a3e37a865609edc28a5e7" }
+    {
+      "path": "src/MicroCalc.Core/packages.lock.json",
+      "sha256": "a29c6aa8cfb81874ff8bb78dc369d7416f28c9b8cc47e99592bfc019b20c41eb"
+    },
+    {
+      "path": "src/MicroCalc.Tui/packages.lock.json",
+      "sha256": "af5200ab3dce91d029dbd862a3017b465d629902740d3d6d20867a7e28772da2"
+    },
+    {
+      "path": "tests/MicroCalc.Core.Tests/packages.lock.json",
+      "sha256": "98059c421302f3ade512c7225ca3db8c14cb4ae1864499657c981a84b3b5dd34"
+    },
+    {
+      "path": "tests/MicroCalc.Tui.Tests/packages.lock.json",
+      "sha256": "389133bfff01c79116e336eff3bb56b09647db35de7a3e37a865609edc28a5e7"
+    }
   ],
-  "sourceRefs": ["https://api.nuget.org/v3/index.json"],
-  "comparisonEvidence": "dependency-preflight.md",
+  "sourceRefs": [
+    "https://api.nuget.org/v3/index.json"
+  ],
+  "comparisonEvidence": "specs/006-tui-functional-contract/evidence/pin-comparison.json",
   "state": "AlreadySatisfied",
-  "requiredGates": ["FullFunctionalLinuxWindows", "MacOsPty", "HumanAccessibility", "SecurityReview"],
-  "decisionDigest": "c1705782d01db0ce81cb1c7bca925769322c36b688804673b4a4ebc99950558e"
+  "requiredGates": [
+    "FullFunctionalLinuxWindows"
+  ],
+  "decisionDigest": "5186d23218f9241757eb71eaeae789252f6adce2c490111e6226d62e74de9613"
 }

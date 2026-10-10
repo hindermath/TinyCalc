@@ -42,6 +42,14 @@ Driftverletzung. Exit 2: fehlende/ungültige Inputs oder blockierter Preflight.
 Kein Exit erteilt unabhängige Produktabnahme, Owner-Freigabe oder Lieferautorität.
 Eine fehlende Plattform ist weder N/A noch ein erfolgreicher lokaler Ersatzlauf.
 
+Pinentscheidung: `approvalRef` nennt eine strikte `pin-approval`-Datei;
+`comparisonEvidence` eine optionale `pin-comparison`-Datei. Deren Artefaktreferenzen
+binden exakte Dateien mit `#sha256=...`. Vier echte Projektdeklarationen und Locks
+werden versionsneutral verglichen. Ohne genehmigte kohärente Quellen Blocked;
+ohne passenden belegten Vergleich Drift mit vollständiger zusätzlicher Matrix.
+Die Historie `docs/contracts/tui/history.json` bindet den vorherigen Git-Blob;
+`catalog.md` muss exakt der read-only Ableitung entsprechen. Keine Netzwerkabfrage.
+
 ## English manual
 
 Both launchers use the same PowerShell 7 engine and the `Test-TinyCalcContract`
@@ -67,3 +75,9 @@ roots. Output contains no ANSI, raw exceptions, secrets or private absolute path
 Exit 0 means valid complete evidence, 1 means a violation and 2 means blocked or
 invalid inputs. None grants acceptance or delivery authority; missing platforms
 cannot be relabelled as N/A or substituted by local unit tests.
+
+Pin approval/comparison files have strict schemas and hash-bound artifact refs.
+Read all four actual declarations and locks without a prescribed version.
+Unapproved/incoherent sources block; missing valid comparison demands full drift
+proof. History binds an existing Git blob, and catalogue bytes must match their
+read-only derivation. These checks never contact a registry or provider.

@@ -2,7 +2,7 @@
 
 ## Deutscher Entscheidungsblock
 
-Status: geplanter Entwurf aus Owner-genehmigtem Plan; Umsetzung/Review offen.
+Status: umgesetzt nach Owner-genehmigtem Plan; unabhängiger Review offen.
 Datum 2026-10-10; Feature 006, LocalImplementation. Evidenzverantwortlich:
 Feature-Entwicklung. Unabhängiger Reviewer noch nicht beauftragt/erfasst.
 Grundlagen: Constitution Schichtentrennung, XII/XIII, ISO A.8.27/A.8.28.
@@ -32,8 +32,8 @@ oder Prozessänderung. Noch keine Produktabnahme oder externe Zertifizierung.
 
 ## English decision block
 
-This implementation design follows the owner-approved plan; implementation and
-independent review remain open. Actual legacy-view input tests precede internal
+This implementation follows the owner-approved plan; independent review remains
+open. Actual legacy-view input tests preceded internal
 session extraction. The same product controls remain in use, Core stays free
 of evidence dependencies, and an independent source catalog defines obligations.
 Complete assertion-backed tuples permit atomic producer output; a read-only

@@ -48,7 +48,8 @@ internal static class UiContractActions
         Assert.True(matches.Length == 1, $"Button {text}; actual buttons: {string.Join(" | ", buttons.Select(button => button.Text.ToString()))}");
         var button = matches[0];
         for (var i = 0; !button.HasFocus && i < 40; i++) ui.Send(Key.Tab);
-        Assert.True(button.HasFocus);
+        Assert.True(button.HasFocus, $"Button {text} did not gain focus; " + string.Join(" | ",
+            buttons.Select(view => $"{view.Text}:focus={view.HasFocus}:canFocus={view.CanFocus}:enabled={view.Enabled}:tab={view.TabStop}")));
     }
 
     internal static void SelectMenu(LegacyProgramUiAdapter ui, string text)

@@ -2,13 +2,6 @@ name: ci
 
 on:
   push:
-    branches:
-      - main
-      - codex/**
-      - claude/**
-      - gemini/**
-      - copilot/**
-      - pencode/**
   pull_request:
 
 jobs:
@@ -80,8 +73,24 @@ jobs:
       - name: Build
         run: dotnet build MicroCalc.sln --configuration Release --no-restore
 
+      - name: Capture native execution binding
+        shell: pwsh
+        run: ./scripts/collect-tui-contract-evidence.ps1 -Action Capture
+
       - name: Test
-        run: dotnet test MicroCalc.sln --configuration Release --no-build
+        run: dotnet test MicroCalc.sln --configuration Release --no-build --logger trx --results-directory tests/MicroCalc.Tui.Tests/TestResults/native-ci
+
+      - name: Bind full native TUI contract
+        shell: pwsh
+        run: ./scripts/collect-tui-contract-evidence.ps1 -Action Collect
+
+      - name: Upload native execution evidence
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02 # v4.6.2
+        with:
+          name: tui-contract-${{ runner.os }}
+          path: tests/MicroCalc.Tui.Tests/TestResults/
+          if-no-files-found: error
 
       - name: Smoke
         shell: pwsh

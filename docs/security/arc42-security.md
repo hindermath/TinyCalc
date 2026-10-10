@@ -6,8 +6,9 @@
 
 Implementierungsdesign 2026-10-10; Review/Abnahme Open. Tastatur/Formel-, Datei-,
 Paket- und Evidenzvalidierung bleiben an expliziten Grenzen. Core übernimmt keine
-Test-/Providerlogik. Interne Session besitzt App/Views und garantiert Dispose;
-serielle Tests setzen statischen Legacy-Zustand nur im Setup zurück.
+Test-/Providerlogik. Der Aufrufer besitzt die App; die interne Session besitzt
+ihre Views und den Blattzustand. Reflection und statischer Legacy-Reset sind
+entfernt; Framework-Sitzungen bleiben wegen Prozesszustand seriell.
 
 Evidenz-JSON ist Datenformat, nie Befehlsquelle. Read-only Validator prüft
 strukturierte lokale Inputs, Duplikate, unbekannte Felder, Pfad-/Symlinkausbruch,

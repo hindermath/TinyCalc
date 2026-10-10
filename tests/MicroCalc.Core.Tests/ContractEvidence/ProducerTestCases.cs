@@ -7,7 +7,8 @@ internal static class ProducerTestCases
     internal static readonly string[] RequiredTuples = ["EDIT-001|accept|linux|Success", "EDIT-001|cancel|linux|Cancel"];
     internal static readonly EvidenceProducer.Context Context = new(new string('c', 40), new string('d', 64),
         new string('a', 64), new string('e', 64), "linux", "isolated-fixture", "isolated-fixture-not-acceptance",
-        "producer-unit-fixture", new Dictionary<string, string> { ["dotnet"] = Environment.Version.ToString() });
+        "producer-unit-fixture", new Dictionary<string, string> { ["dotnet"] = Environment.Version.ToString() },
+        "fixture-only/execution.trx#sha256=" + new string('a', 64));
 
     internal static JsonObject Candidate()
     {
@@ -29,8 +30,8 @@ internal static class ProducerTestCases
             ["assertions"] = new JsonArray(new JsonObject
             {
                 ["id"] = "independent-state-comparison",
-                ["expected"] = "unchanged",
-                ["actual"] = "unchanged",
+                ["expected"] = new JsonObject { ["focus"] = "Grid" },
+                ["actual"] = new JsonObject { ["focus"] = "Grid" },
                 ["passed"] = true,
             }),
         }).ToArray()),
@@ -53,7 +54,7 @@ internal static class ProducerTestCases
             case "Skipped": results[0]!["outcome"] = "Skipped"; break;
             case "Timeout": candidate["exitCode"] = 124; break;
             case "DigestMismatch": candidate["contractDigest"] = new string('b', 64); break;
-            case "FailedAssertion": results[0]!["assertions"]![0]!["actual"] = "changed"; break;
+            case "FailedAssertion": results[0]!["assertions"]![0]!["actual"]!["focus"] = "Help"; break;
             case "ForgedExpectedDigest": candidate["contractDigest"] = new string('b', 64); candidate["expectedContractDigest"] = new string('b', 64); break;
             case "UnexecutedAssertions": results[0]!["assertions"]![0]!["expected"] = null; results[0]!["assertions"]![0]!["actual"] = null; break;
             default: throw new ArgumentException("Unknown isolated fixture", nameof(fault));

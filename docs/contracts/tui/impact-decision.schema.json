@@ -25,13 +25,9 @@
     "classes": {
       "type": "array",
       "items": {
-        "enum": [
-          "NoFunctionalImpact",
-          "FunctionalImpact",
-          "A11yImpact",
-          "TestInfrastructureImpact",
-          "ReleaseCloseout"
-        ]
+        "type": "string",
+        "minLength": 1,
+        "description": "Known classes follow the specification; unknown labels conservatively require functional and accessibility proof."
       }
     },
     "changedPaths": {

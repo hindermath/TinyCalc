@@ -3,8 +3,9 @@
 ## Deutscher Sicherheitsblock
 
 Feature 006, Phase Implement, 2026-10-10, Branch `006-tui-functional-contract`.
-Basis `ffc3d56a8975341a686ff6985570369abefcfd2a`, kein PR/Commit-Auftrag.
-Status Entwurf nach genehmigtem Plan; unabhängiger Review Open, Owner
+Basis `ffc3d56a8975341a686ff6985570369abefcfd2a`; spätere Lieferautorität ist
+in der Feature-Evidence dokumentiert, kein materieller Gate-Bypass.
+Status implementiert nach genehmigtem Plan; unabhängiger Review Open, Owner
 Feature-Entwicklung, Trigger vor Abnahme. ISO A.8.27/A.8.28, Constitution XII–XVIII,
 SSDF/CWE sind anwendbar. Dieses Dokument ist keine Auditierung oder Zertifizierung.
 

@@ -1,5 +1,17 @@
 # Sicherheits-Checkliste: TinyCalc Feature 003
 
+## Feature 006: aktueller Prüfstand / Current checkpoint
+
+Deutsch, 2026-10-10: Die [technische Selbstprüfung](secure-development/006-tui-functional-contract/review.md)
+ordnet aktuelle Code-/Pfad-/JSON-/TRX-/Prozessgrenzen zu. 669 lokale Tests und
+364 Pfade grün; unabhängiger Review, Human-A11Y und finale native Providerbelege
+bleiben Open. Vier genehmigte Locks sind vorhanden. Die folgenden Feature-003-
+Status sind historische Nachweise, keine aktuelle Locklücke oder neue Freigabe.
+
+English: Current actual controls are linked above. Local tests/paths pass;
+independent/human/final native provider gates remain Open. Four approved locks
+now exist; historical Feature-003 status does not grant current acceptance.
+
 ## Deutscher Prüfblock
 
 ### Laufnachweis

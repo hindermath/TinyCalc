@@ -16,6 +16,9 @@ Lernreferenz erhalten. Für den aktuellen Port gelten diese Präzisierungen:
   verwirft ohne Daten-/Dateiänderung. Höchstens 70 Zeichen je Zelle.
 - Palette: Q/L/S/R/P/F/A für Quit/Load/Save/Recalculate/Print/Format/AutoCalc.
   Die Laufzeithilfe wird aus CALC.HLP beziehungsweise Resources/CALC.HLP geladen.
+- Ctrl-Q beendet im Raster; Clear und Help stehen im Menü. In Dialogen wechseln
+  Tab/Shift-Tab zwischen den Eingaben und Aktionen. In der Hilfe blättern P/N
+  oder Prev/Next, Pfeile scrollen den Text, Esc/Close kehrt zum Raster zurück.
 - Potenzen binden rechts und stärker als Vorzeichen: 2^3^2=512, -2^2=-4,
   (-2)^2=4, 2^-2=0.25. FACT nur für ganze Zahlen 0..33, mit FACT(0)=1.
 - SIN/COS und ARCTAN nutzen Bogenmaß; LN Basis e, LOG Basis 10, beide nur für
@@ -41,6 +44,9 @@ these binding clarifications for the current port:
   data or files. Cell contents have a seventy-character limit.
 - Palette Q/L/S/R/P/F/A select Quit/Load/Save/Recalculate/Print/Format/AutoCalc.
   Runtime help loads CALC.HLP or Resources/CALC.HLP.
+- Ctrl-Q quits from the grid; Clear and Help are menu actions. Tab/Shift-Tab
+  moves between dialog inputs/actions. In help, P/N or Prev/Next changes pages,
+  arrows scroll text and Esc/Close returns to the grid.
 - Powers associate right before signs, using the four examples above. FACT
   accepts only integers 0–33, with FACT(0)=1. SIN/COS and ARCTAN use radians;
   LN is base e, LOG base ten, both for positive arguments. Domain/non-finite

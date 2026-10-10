@@ -1,10 +1,26 @@
 {
   "schemaVersion": "1.0",
-  "revision": 1,
+  "revision": 2,
   "mappings": [
     {
+      "sourcePath": "src/MicroCalc.Tui/Program.cs",
+      "sourceHash": "1a4f417e5c45bdb8e902bf960d2f8d666976a71145d09e2fc983725170ca2ab0",
+      "anchor": "TerminalStateLease.Capture",
+      "offerKind": "Substantive",
+      "capabilityRefs": ["APP-001", "TERM-001"],
+      "defectRef": null
+    },
+    {
+      "sourcePath": "src/MicroCalc.Tui/TerminalStateLease.cs",
+      "sourceHash": "a0b82a167920af9d53d1aedd2b85b1e9116607d5a524d225647b1eb78af374ec",
+      "anchor": "RegisterFinalRestore",
+      "offerKind": "Substantive",
+      "capabilityRefs": ["APP-001", "TERM-001"],
+      "defectRef": null
+    },
+    {
       "sourcePath": "src/MicroCalc.Tui/TuiSession.cs",
-      "sourceHash": "f0249b32c3e22cf373f3229902faa069d3e08c58b07f7994fbed2752c69a168d",
+      "sourceHash": "af2c8f9f7759a3e475a9c1515be6daaba5ebdfddef54302004fda76acb7e2c68",
       "anchor": "BuildWindow",
       "offerKind": "Substantive",
       "capabilityRefs": [
@@ -16,7 +32,7 @@
     },
     {
       "sourcePath": "src/MicroCalc.Tui/TuiSession.cs",
-      "sourceHash": "f0249b32c3e22cf373f3229902faa069d3e08c58b07f7994fbed2752c69a168d",
+      "sourceHash": "af2c8f9f7759a3e475a9c1515be6daaba5ebdfddef54302004fda76acb7e2c68",
       "anchor": "HandleKey",
       "offerKind": "Substantive",
       "capabilityRefs": [
@@ -32,7 +48,7 @@
     },
     {
       "sourcePath": "src/MicroCalc.Tui/TuiSession.cs",
-      "sourceHash": "f0249b32c3e22cf373f3229902faa069d3e08c58b07f7994fbed2752c69a168d",
+      "sourceHash": "af2c8f9f7759a3e475a9c1515be6daaba5ebdfddef54302004fda76acb7e2c68",
       "anchor": "BuildMenu",
       "offerKind": "Substantive",
       "capabilityRefs": [
@@ -45,7 +61,7 @@
     },
     {
       "sourcePath": "src/MicroCalc.Tui/TuiSession.cs",
-      "sourceHash": "f0249b32c3e22cf373f3229902faa069d3e08c58b07f7994fbed2752c69a168d",
+      "sourceHash": "af2c8f9f7759a3e475a9c1515be6daaba5ebdfddef54302004fda76acb7e2c68",
       "anchor": "PromptText",
       "offerKind": "Substantive",
       "capabilityRefs": [
@@ -57,7 +73,7 @@
     },
     {
       "sourcePath": "src/MicroCalc.Tui/TuiSession.cs",
-      "sourceHash": "f0249b32c3e22cf373f3229902faa069d3e08c58b07f7994fbed2752c69a168d",
+      "sourceHash": "af2c8f9f7759a3e475a9c1515be6daaba5ebdfddef54302004fda76acb7e2c68",
       "anchor": "ShowHelp",
       "offerKind": "Substantive",
       "capabilityRefs": [
@@ -94,7 +110,7 @@
     },
     {
       "sourcePath": "src/MicroCalc.Tui/Resources/CALC.HLP",
-      "sourceHash": "76182c6bfda4f0b3edb8d21357c85d6f1ac20af22ae904845f0e4711b6cd0ba6",
+      "sourceHash": "4f123445cd98683002db74406de3dc6cbd35928dd51c0d88c1871f77b848bde2",
       "anchor": "Summary of MicroCalc",
       "offerKind": "Substantive",
       "capabilityRefs": [
@@ -110,7 +126,7 @@
     },
     {
       "sourcePath": "src/MicroCalc.Tui/Resources/CALC.HLP",
-      "sourceHash": "76182c6bfda4f0b3edb8d21357c85d6f1ac20af22ae904845f0e4711b6cd0ba6",
+      "sourceHash": "4f123445cd98683002db74406de3dc6cbd35928dd51c0d88c1871f77b848bde2",
       "anchor": "Summary of commands",
       "offerKind": "Substantive",
       "capabilityRefs": [
@@ -123,7 +139,7 @@
     },
     {
       "sourcePath": "src/MicroCalc.Tui/Resources/CALC.HLP",
-      "sourceHash": "76182c6bfda4f0b3edb8d21357c85d6f1ac20af22ae904845f0e4711b6cd0ba6",
+      "sourceHash": "4f123445cd98683002db74406de3dc6cbd35928dd51c0d88c1871f77b848bde2",
       "anchor": "EXAMPLES",
       "offerKind": "Substantive",
       "capabilityRefs": [
@@ -136,7 +152,7 @@
     },
     {
       "sourcePath": "CALC.HLP",
-      "sourceHash": "76182c6bfda4f0b3edb8d21357c85d6f1ac20af22ae904845f0e4711b6cd0ba6",
+      "sourceHash": "4f123445cd98683002db74406de3dc6cbd35928dd51c0d88c1871f77b848bde2",
       "anchor": "Summary of MicroCalc",
       "offerKind": "Substantive",
       "capabilityRefs": [
@@ -152,7 +168,7 @@
     },
     {
       "sourcePath": "CALC.HLP",
-      "sourceHash": "76182c6bfda4f0b3edb8d21357c85d6f1ac20af22ae904845f0e4711b6cd0ba6",
+      "sourceHash": "4f123445cd98683002db74406de3dc6cbd35928dd51c0d88c1871f77b848bde2",
       "anchor": "Summary of commands",
       "offerKind": "Substantive",
       "capabilityRefs": [
@@ -165,7 +181,7 @@
     },
     {
       "sourcePath": "CALC.HLP",
-      "sourceHash": "76182c6bfda4f0b3edb8d21357c85d6f1ac20af22ae904845f0e4711b6cd0ba6",
+      "sourceHash": "4f123445cd98683002db74406de3dc6cbd35928dd51c0d88c1871f77b848bde2",
       "anchor": "EXAMPLES",
       "offerKind": "Substantive",
       "capabilityRefs": [
@@ -178,7 +194,7 @@
     },
     {
       "sourcePath": "docs/help/microcalc-help.md",
-      "sourceHash": "fcc4316f26135dae7853c5e3bbcc404732e8e36b68cea2990931f0a1b81d2063",
+      "sourceHash": "b01ba655dfc6298abb35d7d5801bb10b660e5e0fa072ba1deb03b9ec18aa11fc",
       "anchor": "Page 1",
       "offerKind": "Substantive",
       "capabilityRefs": [
@@ -189,7 +205,7 @@
     },
     {
       "sourcePath": "docs/help/microcalc-help.md",
-      "sourceHash": "fcc4316f26135dae7853c5e3bbcc404732e8e36b68cea2990931f0a1b81d2063",
+      "sourceHash": "b01ba655dfc6298abb35d7d5801bb10b660e5e0fa072ba1deb03b9ec18aa11fc",
       "anchor": "Page 2",
       "offerKind": "Substantive",
       "capabilityRefs": [
@@ -200,7 +216,7 @@
     },
     {
       "sourcePath": "docs/help/microcalc-help.md",
-      "sourceHash": "fcc4316f26135dae7853c5e3bbcc404732e8e36b68cea2990931f0a1b81d2063",
+      "sourceHash": "b01ba655dfc6298abb35d7d5801bb10b660e5e0fa072ba1deb03b9ec18aa11fc",
       "anchor": "Page 3",
       "offerKind": "Substantive",
       "capabilityRefs": [
@@ -211,7 +227,7 @@
     },
     {
       "sourcePath": "docs/help/microcalc-help.md",
-      "sourceHash": "fcc4316f26135dae7853c5e3bbcc404732e8e36b68cea2990931f0a1b81d2063",
+      "sourceHash": "b01ba655dfc6298abb35d7d5801bb10b660e5e0fa072ba1deb03b9ec18aa11fc",
       "anchor": "Page 4",
       "offerKind": "Substantive",
       "capabilityRefs": [
@@ -224,7 +240,7 @@
     },
     {
       "sourcePath": "docs/help/microcalc-help.md",
-      "sourceHash": "fcc4316f26135dae7853c5e3bbcc404732e8e36b68cea2990931f0a1b81d2063",
+      "sourceHash": "b01ba655dfc6298abb35d7d5801bb10b660e5e0fa072ba1deb03b9ec18aa11fc",
       "anchor": "Page 5",
       "offerKind": "Substantive",
       "capabilityRefs": [
@@ -237,7 +253,7 @@
     },
     {
       "sourcePath": "docs/help/microcalc-help.md",
-      "sourceHash": "fcc4316f26135dae7853c5e3bbcc404732e8e36b68cea2990931f0a1b81d2063",
+      "sourceHash": "b01ba655dfc6298abb35d7d5801bb10b660e5e0fa072ba1deb03b9ec18aa11fc",
       "anchor": "Page 6",
       "offerKind": "Substantive",
       "capabilityRefs": [
@@ -250,7 +266,7 @@
     },
     {
       "sourcePath": "docs/help/microcalc-help.md",
-      "sourceHash": "fcc4316f26135dae7853c5e3bbcc404732e8e36b68cea2990931f0a1b81d2063",
+      "sourceHash": "b01ba655dfc6298abb35d7d5801bb10b660e5e0fa072ba1deb03b9ec18aa11fc",
       "anchor": "Page 7",
       "offerKind": "Substantive",
       "capabilityRefs": [
@@ -261,7 +277,7 @@
     },
     {
       "sourcePath": "docs/help/microcalc-help.md",
-      "sourceHash": "fcc4316f26135dae7853c5e3bbcc404732e8e36b68cea2990931f0a1b81d2063",
+      "sourceHash": "b01ba655dfc6298abb35d7d5801bb10b660e5e0fa072ba1deb03b9ec18aa11fc",
       "anchor": "Page 8",
       "offerKind": "Substantive",
       "capabilityRefs": [
@@ -271,7 +287,7 @@
     },
     {
       "sourcePath": "src/MicroCalc.Tui/Program.cs",
-      "sourceHash": "40fc696dcf6a5e958fe5949a0c4953ee8e5b8b0f1e5a1616aca56eff96fb2671",
+      "sourceHash": "1a4f417e5c45bdb8e902bf960d2f8d666976a71145d09e2fc983725170ca2ab0",
       "anchor": "RunSmokeMode",
       "offerKind": "Substantive",
       "capabilityRefs": [
@@ -282,7 +298,7 @@
     },
     {
       "sourcePath": "CALC.HLP",
-      "sourceHash": "76182c6bfda4f0b3edb8d21357c85d6f1ac20af22ae904845f0e4711b6cd0ba6",
+      "sourceHash": "4f123445cd98683002db74406de3dc6cbd35928dd51c0d88c1871f77b848bde2",
       "anchor": "Aktueller Port: Bedienung (DE)",
       "offerKind": "Substantive",
       "capabilityRefs": [
@@ -299,7 +315,7 @@
     },
     {
       "sourcePath": "CALC.HLP",
-      "sourceHash": "76182c6bfda4f0b3edb8d21357c85d6f1ac20af22ae904845f0e4711b6cd0ba6",
+      "sourceHash": "4f123445cd98683002db74406de3dc6cbd35928dd51c0d88c1871f77b848bde2",
       "anchor": "Aktueller Port: Formeln (DE)",
       "offerKind": "Substantive",
       "capabilityRefs": [
@@ -312,7 +328,7 @@
     },
     {
       "sourcePath": "src/MicroCalc.Tui/Resources/CALC.HLP",
-      "sourceHash": "76182c6bfda4f0b3edb8d21357c85d6f1ac20af22ae904845f0e4711b6cd0ba6",
+      "sourceHash": "4f123445cd98683002db74406de3dc6cbd35928dd51c0d88c1871f77b848bde2",
       "anchor": "Aktueller Port: Bedienung (DE)",
       "offerKind": "Substantive",
       "capabilityRefs": [
@@ -329,7 +345,7 @@
     },
     {
       "sourcePath": "src/MicroCalc.Tui/Resources/CALC.HLP",
-      "sourceHash": "76182c6bfda4f0b3edb8d21357c85d6f1ac20af22ae904845f0e4711b6cd0ba6",
+      "sourceHash": "4f123445cd98683002db74406de3dc6cbd35928dd51c0d88c1871f77b848bde2",
       "anchor": "Aktueller Port: Formeln (DE)",
       "offerKind": "Substantive",
       "capabilityRefs": [

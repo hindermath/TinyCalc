@@ -58,6 +58,19 @@ function Read-TuiJsonInput {
     return ConvertFrom-Json @Parameters
 }
 
+function Test-TuiHistoricalArtifact {
+    param([string]$RepositoryRoot,[string]$Commit,[string]$RelativePath)
+    if($Commit -cnotmatch '^[a-f0-9]{40}$' -or $RelativePath -cnotmatch '^[A-Za-z0-9_./-]+$' -or
+        [IO.Path]::IsPathRooted($RelativePath) -or '..' -in ($RelativePath -split '/')){return $false}
+    try{$Path=Resolve-TuiInputPath $RelativePath $RepositoryRoot -RelativeOnly}catch{return $false}
+    # DE: Git-Blob-Identität bindet die bereits SHA-256-geprüften Bytes an den historischen Commit, ohne Checkout.
+    # EN: Git blob identity binds the SHA-256-checked bytes to the historical commit without checking it out.
+    $Previous=@(& git -C $RepositoryRoot rev-parse ($Commit+':'+$RelativePath) 2>$null)
+    if($LASTEXITCODE -ne 0 -or $Previous.Count -ne 1 -or $Previous[0] -cnotmatch '^[a-f0-9]{40}$'){return $false}
+    $Current=@(& git -C $RepositoryRoot hash-object -- $Path 2>$null)
+    return $LASTEXITCODE -eq 0 -and $Current.Count -eq 1 -and $Current[0] -ceq $Previous[0]
+}
+
 function Get-TuiWorkingTreeDigest {
     param([string]$RepositoryRoot)
     $Files = @(& git -C $RepositoryRoot -c core.quotepath=false ls-files --cached --others --exclude-standard)

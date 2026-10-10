@@ -1,5 +1,17 @@
 # Zero-Trust-Anwendbarkeit: TinyCalc Feature 003
 
+## Feature 006: Produkt und Delivery / Product and delivery
+
+Deutsch, 2026-10-10: Produkt-Zero-Trust bleibt N/A ohne verteilten Dienst,
+Remoteverwaltung oder Dienstidentität. Eigene Testprozesse sind keine neue
+Remotegrenze. Repository/CI/Reviewer bleiben anwendbare Delivery-Grenzen mit
+Head-Bindung, Least Privilege und Secret-Scans. Owner Thorsten; neue Netzwerk-,
+Cloud-, Identitäts- oder Providergrenze öffnet Review. Keine Zertifizierung.
+
+English: Local product Zero Trust remains N/A. Owned test child processes add
+no remote service. Repository/CI/reviewer delivery boundaries remain applicable;
+new network/cloud/identity/provider boundaries reopen review, not certification.
+
 ## Deutscher Prüfblock
 
 | Feld | Wert |

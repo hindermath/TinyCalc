@@ -42,8 +42,8 @@ function Test-TuiEvidenceModel {
     foreach ($Capability in $Contract.capabilities) {
         if ($Capabilities.ContainsKey($Capability.id)) { Add-Finding DuplicateObligation $Capability.id }
         $Capabilities[$Capability.id] = $Capability
-        if (-not $Capability.mandatory -or $Capability.status -notin @('Active', 'Deprecated')) { continue }
-        if (@(Compare-Object @('linux','windows','macos') @($Capability.platforms)).Count -ne 0) { Add-Finding MissingObligation ($Capability.id + ':platforms') }
+        $Active = $Capability.mandatory -and $Capability.status -in @('Active', 'Deprecated')
+        if ($Active -and @(Compare-Object @('linux','windows','macos') @($Capability.platforms)).Count -ne 0) { Add-Finding MissingObligation ($Capability.id + ':platforms') }
         foreach ($Path in $Capability.paths) {
             if ($Paths.ContainsKey($Path.pathId)) { Add-Finding DuplicateObligation $Path.pathId }
             $Paths[$Path.pathId] = @{ capability = $Capability; path = $Path }
@@ -69,7 +69,7 @@ function Test-TuiEvidenceModel {
                 }
             }
             foreach ($Platform in $Capability.platforms) {
-                if ($Path.automatable) { $null = $Required.Add("$($Capability.id)|$($Path.pathId)|$Platform|$($Path.scenarioKind)") }
+                if ($Active -and $Path.automatable) { $null = $Required.Add("$($Capability.id)|$($Path.pathId)|$Platform|$($Path.scenarioKind)") }
             }
         }
     }
@@ -99,7 +99,11 @@ function Test-TuiEvidenceModel {
         }
         if ($Bundle.exitCode -ne 0) { Add-Finding RunFailure $Bundle.platform }
         $RunStart = Read-Time $Bundle.startedAt; $RunEnd = Read-Time $Bundle.finishedAt
-        if ($null -eq $RunStart -or $null -eq $RunEnd -or $RunEnd -lt $RunStart -or ($RunEnd - $RunStart).TotalSeconds -gt 180) {
+        # DE: Ein Plattformbundle enthält viele isolierte Sitzungen, nicht eine einzige 180-Sekunden-Sitzung.
+        # EN: A platform bundle contains many isolated sessions, not one single 180-second session.
+        # DE: Adapter begrenzen jede Sitzung auf 180 Sekunden; jede gebundene Pfadausführung unten auf 30.
+        # EN: Adapters bound each session to 180 seconds; each bound path execution below remains limited to 30.
+        if ($null -eq $RunStart -or $null -eq $RunEnd -or $RunEnd -lt $RunStart) {
             Add-Finding InvalidTiming $Bundle.platform
         }
         foreach ($Result in $Bundle.results) {
@@ -120,8 +124,10 @@ function Test-TuiEvidenceModel {
                 Add-Finding InvalidTiming $Result.pathId
             }
             if ($Result.assertions.Count -eq 0) { Add-Finding MissingAssertions $Result.pathId; continue }
-            $Expected = @{}
+            $Expected = @{}; $Observed = @{}
+            $AssertionIds = [Collections.Generic.HashSet[string]]::new([StringComparer]::Ordinal)
             foreach ($Assertion in $Result.assertions) {
+                if (-not $AssertionIds.Add($Assertion.id)) { Add-Finding DuplicateAssertion $Result.pathId }
                 if ($Assertion.passed -ne $true -or -not (Same-Observation $Assertion.expected $Assertion.actual $Result.pathId)) {
                     Add-Finding FailedAssertion $Result.pathId
                 }
@@ -132,7 +138,17 @@ function Test-TuiEvidenceModel {
                         Add-Finding OracleDrift $Result.pathId
                     }
                     $Expected[$Key] = $Assertion.expected[$Key]
+                    if ($Observed.ContainsKey($Key) -and (Get-TuiCanonicalDigest (ConvertTo-Json -InputObject $Observed[$Key] -Depth 40)) -cne
+                        (Get-TuiCanonicalDigest (ConvertTo-Json -InputObject $Assertion.actual[$Key] -Depth 40))) { Add-Finding FailedAssertion $Result.pathId }
+                    if ($Assertion.actual.Contains($Key)) { $Observed[$Key] = $Assertion.actual[$Key] }
                 }
+            }
+            # DE: Jede zusätzliche echte Assertion muss im Gesamtzustand erhalten bleiben, nicht nur das Minimalorakel.
+            # EN: Preserve every additional real assertion in the merged state, not only the minimum contract oracle.
+            foreach ($Key in $Observed.Keys) {
+                if (-not $Result.observedState.Contains($Key)) { Add-Finding MissingObservation $Result.pathId }
+                elseif ((Get-TuiCanonicalDigest (ConvertTo-Json -InputObject $Observed[$Key] -Depth 40)) -cne
+                    (Get-TuiCanonicalDigest (ConvertTo-Json -InputObject $Result.observedState[$Key] -Depth 40))) { Add-Finding FailedAssertion $Result.pathId }
             }
             $RequiredState = @{ focus = $Path.focusAfter }
             foreach ($Key in $Path.expectedState.Keys) {

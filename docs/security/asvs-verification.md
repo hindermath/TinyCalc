@@ -1,5 +1,16 @@
 # ASVS-Anwendbarkeit: TinyCalc Feature 003
 
+## Feature 006: technischer Scope / Technical scope
+
+Deutsch, 2026-10-10: Produkt-ASVS bleibt N/A. Interne TUI-Session und lokale
+read-only Vertragsprüfung führen keinen Web-/HTTP-/API-/Auth-Dienst ein.
+Kein ASVS-Level/Zertifikat behauptet. Owner Thorsten; neue solche Fläche
+verlangt vor Umsetzung Level, Scope und Evidenz. Unabhängiger Review bleibt Open.
+
+English: Product ASVS remains N/A for the local technical scope, without a
+claimed level/certification. A new web/HTTP/API/auth service requires scope,
+level and evidence before implementation. Independent review remains separate.
+
 ## Deutscher Prüfblock
 
 | Feld | Wert |

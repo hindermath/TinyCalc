@@ -1,5 +1,36 @@
 # Supply-Chain-Evidenz: TinyCalc Feature 003
 
+## Feature 006: lokaler Build 105 / Local build 105
+
+Deutsch, 2026-10-10: Der aktuelle unveränderte Paketgraph ist in vier genehmigten
+Locks gebunden. Der heutige NuGet.org-Audit nennt null bekannte CVEs; die
+24 ausgelieferten NUSPEC-Hashes/Lizenzen stimmen mit dem geprüften Graph überein
+(23 MIT, einmal BSD-2-Clause). Neuere Pakete sind Wartungshinweise, keine
+Upgradefreigabe. [Preflight](../../specs/006-tui-functional-contract/evidence/dependency-preflight.md)
+und [Coverage-/Binarybindung](../../specs/006-tui-functional-contract/evidence/coverage.md)
+bezeichnen lokale Originale, nicht finale Providerabnahme.
+
+Syft 1.51.0 erzeugte `TestResults/006-build105.spdx.json` aus dem tatsächlichen
+Releaseoutput mit Source-Name TinyCalc und Version 1.6.1.105: SPDX 2.3, 29 Einträge,
+Exit 0, SHA-256 `80f9578567b0103d0baac9e9a3b4ac01c3a926b07ebee6ce978f2ea91b95c1b9`.
+Das ist die Build-105-SBOM; frühere SBOMs bleiben historisch. Bei neuem Build/
+Head muss die finale Bindung erneuert werden. SLSA/Provider-Provenance bleibt
+**Open**, kein attestiierter Build oder Zertifikat behauptet.
+
+Produkt-AI-SBOM ist N/A: KI wird nur als Entwicklungswerkzeug eingesetzt, kein
+Modell/Dataset/Inferenzdienst ausgeliefert. VEX ist am Prüftag N/A ohne bekannten
+Fund; neue Advisory-/Graph-/Lizenz-/KI-Runtime-Änderung öffnet die Prüfung.
+Owner Thorsten; unabhängiger Supply-Chain-Review vor Produktabnahme.
+
+English: Four approved locks preserve the unchanged graph. Today's NuGet.org
+audit found no known vulnerabilities; all 24 shipped NUSPEC/license hashes match
+(23 MIT, one BSD-2-Clause). Available updates grant no upgrade authority. Syft
+generated a dated SPDX-2.3 Build-105 SBOM with 29 entries and the hash above.
+Old SBOMs are historical, not current. Final provider/head provenance remains
+Open, without attestation/certification claims. Runtime AI-SBOM is N/A for
+development-tool-only AI; VEX is N/A without a known finding. A new build/head,
+advisory, graph, licence or runtime-AI change reopens review before acceptance.
+
 ## Deutscher Prüfblock
 
 ### Laufnachweis und Geltungsbereich

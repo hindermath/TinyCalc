@@ -1,4 +1,5 @@
 using MicroCalc.Core.Model;
+using System.Text.Json.Nodes;
 
 namespace MicroCalc.Tui.Tests;
 
@@ -11,8 +12,9 @@ public sealed class TuiNavigationContractTests
         {
             var direction = name is "Up" or "Ctrl-E" ? "up" : name is "Down" or "Ctrl-X" or "Ctrl-J" ? "down"
                 : name is "Left" or "Ctrl-S" or "Ctrl-A" ? "left" : "right";
-            yield return [name, "B2", direction switch { "up" => "B1", "down" => "B3", "left" => "A2", _ => "C2" }, "interior"];
-            yield return [name, direction switch { "up" => "B1", "down" => "B21", "left" => "A2", _ => "G2" },
+            var prefix = $"NAV-{direction.ToUpperInvariant()}-{name.ToLowerInvariant()}-";
+            yield return [prefix + "interior", name, "B2", direction switch { "up" => "B1", "down" => "B3", "left" => "A2", _ => "C2" }, "interior"];
+            yield return [prefix + "edge", name, direction switch { "up" => "B1", "down" => "B21", "left" => "A2", _ => "G2" },
                 direction switch { "up" => "B21", "down" => "B1", "left" => "G1", _ => "A3" }, "edge"];
         }
     }
@@ -20,18 +22,28 @@ public sealed class TuiNavigationContractTests
     [Theory]
     [MemberData(nameof(Cases))]
     [Trait("Contract", "Navigation")]
-    public void EveryAlias_MovesInsideHistoricalGrid(string name, string from, string expected, string boundary)
+    public void EveryAlias_MovesInsideHistoricalGrid(string id, string name, string from, string expected, string boundary)
     {
         Assert.Contains(boundary, new[] { "interior", "edge" });
+        var proof = new ExecutedPathProof(id);
         using var adapter = new LegacyProgramUiAdapter();
-        adapter.Run(ui => UiContractActions.NavigateTo(ui, Parse(from)),
+        adapter.Run(ui => { proof.BeginExecution(); UiContractActions.NavigateTo(ui, Parse(from)); },
             ui => ui.Send(UiContractActions.KeyNamed(name)), ui =>
             {
                 Assert.Equal(Parse(expected), ui.Address);
                 Assert.StartsWith(expected + "  ", ui.StatusText);
                 Assert.Same(ui.Root, ui.CurrentView);
                 Assert.Equal(string.Empty, ui.CurrentCell.Contents);
+                Assert.True(proof.Observe("independent-navigation-oracle", new JsonObject
+                {
+                    ["selection"] = expected, ["focus"] = "Grid", ["contents"] = string.Empty,
+                }, new JsonObject
+                {
+                    ["selection"] = ui.Address.ToString(), ["focus"] = ReferenceEquals(ui.Root, ui.CurrentView) ? "Grid" : "Other",
+                    ["contents"] = ui.CurrentCell.Contents,
+                }).Accepted);
             });
+        Assert.NotNull(proof.Complete(adapter.GridText, adapter.StatusText));
     }
 
     private static CellAddress Parse(string value) => new(value[0], int.Parse(value[1..], System.Globalization.CultureInfo.InvariantCulture));

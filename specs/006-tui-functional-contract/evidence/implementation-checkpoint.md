@@ -1,5 +1,24 @@
 # Implementierungs-Zwischenstand / Implementation checkpoint
 
+## Aktuelle Fortsetzung / Current continuation
+
+Der historische Stand unten bleibt nachvollziehbar. Aktuell sind alle 364
+Pflichtpfade in einem tatsächlichen lokalen macOS-Lauf belegt: 669 Tests grün,
+null Fail/Skip, 462 serialisierte Assertions. Changed-Line-Coverage 97,02 %.
+[Vollbeleg](platforms/macos/local-build105.md), [Coverage](coverage.md),
+[Dokumentationswirkung](documentation-impact.md) und
+[A11Y-Zuordnung](../../../docs/accessibility/006-tui-functional-contract.md)
+trennen technische Automation von menschlicher Prüfung und finaler Lieferung.
+Native Linux-/Windows-Läufe, VoiceOver, unabhängige Reviews und Owner-Abnahme
+bleiben verpflichtend. Keine Pakete aktualisiert, kein Folgefeature gestartet.
+
+*The historical checkpoint below remains intact. A single real local macOS run
+now proves all 364 mandatory paths with 669 passing tests and 462 serialized
+assertions. Changed-line coverage reaches 97.02%. Linked evidence distinguishes
+automation from human and final-delivery proof. Native Linux/Windows, VoiceOver,
+independent reviews and owner acceptance remain mandatory. No package upgrades
+or follow-up feature are included.*
+
 ## Deutscher Status
 
 2026-10-10, Branch `006-tui-functional-contract`. **Kein Feature-Abschluss.**

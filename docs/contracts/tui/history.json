@@ -1,0 +1,22 @@
+{
+  "schemaVersion": "1.0",
+  "commit": "8115513d803bae4914f84df98ce36491752e1df4",
+  "contractDigest": "244088f1b13cd8055c892379292093d76c3f56561d45440864e674c7795f604f",
+  "authorities": [
+    {
+      "id": "006-focus-correction-20261010",
+      "affectedIds": ["APP-001", "EDIT-001", "CELL-001", "DIALOG-001"],
+      "affectedPathIds": [
+        "APP-smoke-ok", "APP-smoke-fail", "EDIT-slash-division",
+        "DIALOG-editor-enter", "DIALOG-editor-ok", "DIALOG-editor-esc", "DIALOG-editor-cancel",
+        "CELL-empty", "CELL-text", "CELL-number", "CELL-formula", "CELL-flags", "CELL-overflow",
+        "CELL-width-min", "CELL-width-max", "CELL-decimals-scientific", "CELL-decimals-min", "CELL-decimals-max",
+        "CELL-locked-formula", "CELL-invalid-input"
+      ],
+      "kind": "BreakingChange",
+      "approvalRef": "specs/006-tui-functional-contract/evidence/focus-correction-authority.md#sha256=a90c584da3bcc6fb105ef56b01aebd9b5dfbbd3fa7d49e3fdf5791f4611f7c6b",
+      "date": "2026-10-10",
+      "successorIds": []
+    }
+  ]
+}

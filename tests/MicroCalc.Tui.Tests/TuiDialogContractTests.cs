@@ -12,14 +12,21 @@ public sealed class TuiDialogContractTests
     public static IEnumerable<object[]> Cases()
     {
         foreach (var dialog in new[] { "Editor", "Load", "Save", "PrintFile", "PrintMargin", "FormatDecimals", "FormatWidth", "FormatFrom", "FormatTo", "Clear", "Palette" })
-            foreach (var action in new[] { "Enter", "Button", "Esc", "Cancel" }) yield return [dialog, action];
+            foreach (var action in new[] { "Enter", "Button", "Esc", "Cancel" })
+            {
+                var suffix = action switch { "Button" when dialog == "Clear" => "yes", "Button" => "ok", "Cancel" when dialog == "Clear" => "no", _ => action.ToLowerInvariant() };
+                yield return [$"DIALOG-{dialog.ToLowerInvariant()}-{suffix}", dialog, action];
+            }
     }
 
     [Theory]
     [MemberData(nameof(Cases))]
     [Trait("Contract", "Dialog")]
-    public void EveryDialogStage_ConfirmsOrCancelsWithoutPartialEffects(string kind, string action)
+    public void EveryDialogStage_ConfirmsOrCancelsWithoutPartialEffects(string id, string kind, string action)
     {
+        var proof = new ExecutedPathProof(id);
+        var grid = string.Empty;
+        var status = string.Empty;
         using var directory = new OwnedContractDirectory();
         var jsonPath = Path.Combine(directory.Path, "sheet.json");
         var printPath = Path.Combine(directory.Path, "sheet.lst");
@@ -28,7 +35,7 @@ public sealed class TuiDialogContractTests
         using var adapter = new LegacyProgramUiAdapter();
         var steps = new List<Action<LegacyProgramUiAdapter>>
         {
-            ui => ui.Send(new Key('7')), ui => ui.Send(Key.Enter),
+            ui => { proof.BeginExecution(); ui.Send(new Key('7')); }, ui => ui.Send(Key.Enter),
             ui => ui.Send(new Key('/')), ui => UiContractActions.SelectButton(ui, "Auto"),
         };
         string? before = null;
@@ -82,6 +89,15 @@ public sealed class TuiDialogContractTests
                 Assert.IsType<Dialog>(ui.CurrentView);
                 Assert.Equal(before, ui.Snapshot);
                 Assert.Equal(filesBefore, Files(directory.Path));
+                var next = kind switch { "PrintFile" => "PrintMargin", "FormatDecimals" => "FormatWidth", "FormatWidth" => "FormatFrom", _ => "FormatTo" };
+                // DE: Die Folgestufe wird am sichtbaren Feldtitel geprüft, nicht aus der Vertragsdatei abgeleitet.
+                // EN: Verify the next stage from its visible field label, not from contract data.
+                var text = string.Join(" ", LegacyProgramUiAdapter.Descendants(ui.CurrentView!).Select(view => view.Text.ToString()));
+                Assert.Contains(kind switch { "PrintFile" => "margin", "FormatDecimals" => "width", "FormatWidth" => "From", _ => "To" }, text, StringComparison.OrdinalIgnoreCase);
+                Assert.True(UiContractActions.Input(ui).HasFocus);
+                Assert.True(proof.Observe("staged-prompt", new System.Text.Json.Nodes.JsonObject { ["focus"] = next },
+                    new System.Text.Json.Nodes.JsonObject { ["focus"] = UiPathObservation.Focus(ui) }).Accepted);
+                grid = ui.GridText; status = ui.StatusText;
                 ui.Send(Key.Esc);
             });
         steps.Add(ui =>
@@ -91,7 +107,13 @@ public sealed class TuiDialogContractTests
                 Assert.Equal(before, ui.Snapshot);
             if (cancel || stagedSuccess || kind is "Editor" or "Load" or "Clear" or "Palette" || kind.StartsWith("Format", StringComparison.Ordinal))
                 Assert.Equal(filesBefore, Files(directory.Path));
-            if (cancel || stagedSuccess) return;
+            if (cancel)
+            {
+                UiPathObservation.Record(proof, ui, "Grid", before: before + filesBefore, after: ui.Snapshot + Files(directory.Path));
+                grid = ui.GridText; status = ui.StatusText;
+                return;
+            }
+            if (stagedSuccess) return;
             switch (kind)
             {
                 case "Editor": Assert.Equal("9", ui.CurrentCell.Contents); Assert.Equal(9, ui.CurrentCell.Value); break;
@@ -105,8 +127,11 @@ public sealed class TuiDialogContractTests
                 case "Clear": Assert.Equal(string.Empty, ui.CurrentCell.Contents); Assert.True(ui.AutoCalc); break;
                 case "Palette": Assert.Equal("Recalculate abgeschlossen.", ui.MessageText); break;
             }
+            UiPathObservation.Record(proof, ui, "Grid");
+            grid = ui.GridText; status = ui.StatusText;
         });
         adapter.Run(steps.ToArray());
+        Assert.NotNull(proof.Complete(grid, status));
     }
 
     private static string Files(string root) => JsonSerializer.Serialize(Directory.GetFiles(root).Order(StringComparer.Ordinal)

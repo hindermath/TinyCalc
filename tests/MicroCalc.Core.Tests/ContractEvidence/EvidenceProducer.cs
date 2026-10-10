@@ -3,6 +3,7 @@ using System.Text.Encodings.Web;
 using System.Text.Json;
 using System.Text.Json.Nodes;
 using System.Security.Cryptography;
+using System.Globalization;
 
 namespace MicroCalc.ContractEvidence;
 
@@ -11,7 +12,7 @@ internal static class EvidenceProducer
     internal sealed record Decision(bool Accepted, string Code);
     internal sealed record Context(string Commit, string WorkingTreeDigest, string ContractDigest,
         string PinDecisionDigest, string Platform, string Runner, string Job, string Command,
-        IReadOnlyDictionary<string, string> ToolVersions);
+        IReadOnlyDictionary<string, string> ToolVersions, string ExecutionProofRef);
 
     internal static Decision Validate(JsonObject candidate, IReadOnlyCollection<string> requiredTuples, Context context)
     {
@@ -44,15 +45,30 @@ internal static class EvidenceProducer
                 return new(false, "InvalidTiming");
             if (node["assertions"] is not JsonArray assertions || assertions.Count == 0)
                 return new(false, "MissingAssertions");
+            var ids = new HashSet<string>(StringComparer.Ordinal);
+            var expectedState = new JsonObject();
+            var actualState = new JsonObject();
             foreach (var assertion in assertions)
             {
                 // DE: Ein behauptetes Pass-Flag genügt nicht; unabhängige Soll-/Ist-Werte müssen übereinstimmen.
                 // EN: A claimed pass flag is insufficient; independent expected/actual observations must agree.
                 if (assertion?["id"]?.GetValue<string>() is not { Length: > 0 }
                     || assertion["expected"] is null || assertion["actual"] is null
-                    || assertion["passed"]?.GetValue<bool>() != true
-                    || !JsonNode.DeepEquals(assertion?["expected"], assertion?["actual"]))
+                    || assertion["passed"]?.GetValue<bool>() != true)
                     return new(false, "FailedAssertion");
+                if (!ids.Add(assertion["id"]!.GetValue<string>())) return new(false, "DuplicateAssertion");
+                if (assertion["expected"] is not JsonObject expected || assertion["actual"] is not JsonObject observed
+                    || !TypedObservation(expected) || !TypedObservation(observed)) return new(false, "MissingObservation");
+                if (!SameObservation(expected, observed, parts[1]) || !expected.Select(pair => pair.Key)
+                    .ToHashSet(StringComparer.Ordinal).SetEquals(observed.Select(pair => pair.Key))) return new(false, "FailedAssertion");
+                foreach (var pair in expected)
+                {
+                    if ((expectedState.ContainsKey(pair.Key) && !JsonNode.DeepEquals(expectedState[pair.Key], pair.Value))
+                        || (actualState.ContainsKey(pair.Key) && !JsonNode.DeepEquals(actualState[pair.Key], observed[pair.Key])))
+                        return new(false, "ConflictingObservation");
+                    expectedState[pair.Key] = pair.Value?.DeepClone();
+                    actualState[pair.Key] = observed[pair.Key]?.DeepClone();
+                }
             }
         }
         if (!actual.SetEquals(requiredTuples))
@@ -87,7 +103,7 @@ internal static class EvidenceProducer
                 ["assertionProofRef"] = item["assertionProofRef"]!.DeepClone(),
                 ["assertions"] = assertions, ["startedAt"] = item["startedAt"]!.DeepClone(),
                 ["finishedAt"] = item["finishedAt"]!.DeepClone(),
-                ["observedState"] = Observation(item["assertions"]![0]!["actual"]!),
+                ["observedState"] = MergeActual(item["assertions"]!.AsArray()),
                 ["artifactRefs"] = item["artifactRefs"]!.DeepClone(),
             });
         }
@@ -98,6 +114,7 @@ internal static class EvidenceProducer
             ["contractDigest"] = context.ContractDigest, ["pinDecisionDigest"] = context.PinDecisionDigest,
             ["platform"] = context.Platform, ["runner"] = context.Runner, ["job"] = context.Job,
             ["command"] = context.Command, ["toolVersions"] = JsonSerializer.SerializeToNode(context.ToolVersions),
+            ["executionProofRef"] = context.ExecutionProofRef,
             ["startedAt"] = startedAt, ["finishedAt"] = finishedAt, ["exitCode"] = 0, ["results"] = results,
         };
         bundle["payloadDigest"] = CanonicalDigest(bundle);
@@ -130,6 +147,70 @@ internal static class EvidenceProducer
     private static JsonObject Observation(JsonNode node) => node is JsonObject state
         ? (JsonObject)state.DeepClone()
         : new JsonObject { ["descriptionEn"] = node.GetValue<string>() };
+
+    private static JsonObject MergeActual(JsonArray assertions)
+    {
+        var observed = new JsonObject();
+        foreach (var assertion in assertions)
+            foreach (var pair in assertion!["actual"]!.AsObject()) observed[pair.Key] = pair.Value?.DeepClone();
+        return observed;
+    }
+
+    internal static bool SameObservation(JsonObject expected, JsonObject actual, string pathId)
+    {
+        foreach (var pair in expected)
+        {
+            if (!actual.ContainsKey(pair.Key)) return false;
+            if (pair.Key != "value")
+            {
+                if (!JsonNode.DeepEquals(pair.Value, actual[pair.Key])) return false;
+                continue;
+            }
+            if (!Number(pair.Value, out var left) || !Number(actual[pair.Key], out var right)) return false;
+            var tolerance = pathId == "FUNC-LEGACY-fact-upper" ? Math.Abs(left) * 1e-14
+                : new[] { "sin-", "cos-", "arctan-", "ln-", "exp-", "average-", "round-" }
+                    .Any(part => pathId.Contains(part, StringComparison.Ordinal)) ? 1e-12 : 0;
+            if (Math.Abs(left - right) > tolerance) return false;
+        }
+        return true;
+    }
+
+    private static bool Number(JsonNode? node, out double number)
+    {
+        number = 0;
+        return node?.GetValueKind() == JsonValueKind.Number
+            && double.TryParse(node.ToJsonString(), NumberStyles.Float, CultureInfo.InvariantCulture, out number)
+            && double.IsFinite(number);
+    }
+
+    internal static bool TypedObservation(JsonObject observation)
+    {
+        if (observation.Count == 0) return false;
+        foreach (var pair in observation)
+        {
+            var kind = pair.Value?.GetValueKind();
+            var valid = pair.Key switch
+            {
+                "value" => Number(pair.Value, out _),
+                "error" or "autoCalc" => kind is JsonValueKind.True or JsonValueKind.False,
+                "selection" or "focus" => kind == JsonValueKind.String && pair.Value!.GetValue<string>().Length > 0,
+                "contents" => kind == JsonValueKind.String,
+                "dialog" => pair.Value is null || kind == JsonValueKind.String,
+                "status" => pair.Value is JsonValue value && value.TryGetValue<int>(out var status) && status >= 0,
+                "preservedFields" => pair.Value is JsonArray array && array.All(item => item is JsonValue text
+                    && text.TryGetValue<string>(out var field) && field.Length > 0),
+                "cells" => pair.Value is JsonObject cells && cells.All(cell => CellName(cell.Key)
+                    && cell.Value?.GetValueKind() == JsonValueKind.String),
+                _ => false,
+            };
+            if (!valid) return false;
+        }
+        return true;
+    }
+
+    private static bool CellName(string name) => name.Length is 2 or 3 && name[0] is >= 'A' and <= 'G'
+        && int.TryParse(name.AsSpan(1), NumberStyles.None, CultureInfo.InvariantCulture, out var row)
+        && row is >= 1 and <= 21 && name[1..] == row.ToString(CultureInfo.InvariantCulture);
 
     internal static string CanonicalDigest(JsonObject value, string excludeRootProperty = "")
     {

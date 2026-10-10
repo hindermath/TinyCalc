@@ -13,11 +13,21 @@ internal static class Program
             return;
         }
 
-        // DE: Eine App und eine Session bilden den Lebenszyklus; Dialoge teilen dieselbe App.
-        // EN: One app and one session form the lifecycle; dialogs share that same app.
-        using IApplication app = Application.Create().Init();
-        using var session = new TuiSession(app);
-        app.Run(session.Root);
+        try
+        {
+            // DE: Die äußere Lease überlebt App und Session, damit macOS seinen Zustand zuletzt zurückerhält.
+            // EN: The outer lease outlives app and session so macOS receives its original state last.
+            using var terminal = TerminalStateLease.Capture();
+            using IApplication app = Application.Create().Init();
+            using var session = new TuiSession(app);
+            try { app.Run(session.Root); }
+            finally { terminal?.RegisterFinalRestore(); }
+        }
+        catch (Exception error) when (error is IOException or InvalidDataException)
+        {
+            Console.Error.WriteLine("Terminalzustand konnte nicht sicher wiederhergestellt werden. / Could not safely restore terminal state.");
+            Environment.ExitCode = 1;
+        }
     }
 
     private static void RunSmokeMode()

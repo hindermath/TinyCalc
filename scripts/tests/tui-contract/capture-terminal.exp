@@ -1,0 +1,108 @@
+#!/usr/bin/expect -f
+# DE: Testadapter für einen eigenen PTY-Prozess; keine Befehle aus Evidence ausführen.
+# EN: Test adapter for one owned PTY process; never execute commands from evidence.
+if {$argc != 5 && $argc != 6} { exit 2 }
+lassign $argv binary output columns rows dotnet scenario
+if {$scenario eq ""} { set scenario standard }
+if {$scenario ne "standard" && $scenario ne "accessibility"} { exit 2 }
+if {![string is integer -strict $columns] || ![string is integer -strict $rows] ||
+    $columns < 80 || $columns > 120 || $rows < 24 || $rows > 40} { exit 2 }
+set timeout 5
+set env(TERM) xterm-256color
+set env(COLORTERM) truecolor
+log_user 0
+spawn -noecho /bin/sh -c {stty rows "$1" cols "$2"; output=$3; shift 3; cd "$output" || exit 2; stty -g > "$output/stty-before.txt"; "$@"; result=$?; stty -g > "$output/stty-after.txt"; printf '\nPTY_RESTORED|%s\n' "$result"; exit "$result"} -- $rows $columns $output $dotnet $binary
+set owned [exp_pid]
+fconfigure $spawn_id -encoding binary -translation binary
+set raw [open [file join $output trace.bin] wb]
+set transcript ""
+set answered [dict create]
+proc collect {seconds} {
+    global spawn_id raw transcript answered rows columns timeout
+    set timeout 1
+    set deadline [expr {[clock milliseconds] + $seconds * 1000}]
+    while {[clock milliseconds] < $deadline} {
+        expect {
+            -re {.+} {
+                set chunk $expect_out(buffer)
+                puts -nonewline $raw $chunk
+                flush $raw
+                append transcript $chunk
+                # DE: Antworten simulieren nur das Terminalprotokoll, niemals Produktzustand.
+                # EN: Replies simulate only the terminal protocol, never product state.
+                foreach {query response} [list "\033\[6n" "\033\[1;1R" "\033\[0c" "\033\[?1;2c" "\033\[c" "\033\[?1;2c" "\033\[18t" "\033\[8;${rows};${columns}t" "\033\[?u" "\033\[?0u" "\033\[>0c" "\033\[>0;136;0c" "\033\]10;?\007" "\033\]10;rgb:ffff/ffff/ffff\007" "\033\]11;?\007" "\033\]11;rgb:0000/0000/0000\007"] {
+                    set from 0
+                    if {[dict exists $answered $query]} { set from [dict get $answered $query] }
+                    set position [string first $query $transcript $from]
+                    while {$position >= 0} {
+                        send -- $response
+                        set from [expr {$position + [string length $query]}]
+                        dict set answered $query $from
+                        set position [string first $query $transcript $from]
+                    }
+                }
+                if {[string length $transcript] > 20971520} { error "TraceLimit" }
+            }
+            timeout {}
+            eof { return 1 }
+        }
+    }
+    return 0
+}
+proc checkpoint {name} {
+    global transcript output
+    set file [open [file join $output $name.bin] wb]
+    puts -nonewline $file $transcript
+    close $file
+}
+set failed [catch {
+    if {[collect 3]} { error "EarlyExit" }
+    checkpoint grid
+    if {$scenario eq "accessibility"} {
+        send -- "\033\[C"
+        if {[collect 1]} { error "NavigationExit" }
+        checkpoint navigation
+        send -- "/"
+        if {[collect 1]} { error "CommandsExit" }
+        checkpoint commands
+        send -- "r"
+        if {[collect 1]} { error "RecalculateExit" }
+        checkpoint recalculated
+        send -- "/"
+        if {[collect 1]} { error "LoadCommandsExit" }
+        send -- "l"
+        if {[collect 1]} { error "FileDialogExit" }
+        checkpoint file-dialog
+        send -- "\r"
+        if {[collect 1]} { error "FileErrorExit" }
+        checkpoint file-error
+        send -- "\033h"
+        if {[collect 1]} { error "HelpMenuExit" }
+        send -- "\r"
+        if {[collect 1]} { error "HelpExit" }
+        checkpoint help
+        send -- "\033"
+        if {[collect 1]} { error "HelpCloseExit" }
+    }
+    send -- "7"
+    if {[collect 2]} { error "EditorExit" }
+    checkpoint editor
+    send -- "\r"
+    if {[collect 2]} { error "CommitExit" }
+    checkpoint committed
+    send -- "\021"
+    if {![collect 5]} { error "QuitTimeout" }
+    checkpoint restored
+    set status [wait]
+    if {[lindex $status 2] != 0 || [lindex $status 3] != 0} { error "ProductFailure" }
+    close $raw
+} message]
+if {$failed} {
+    # DE: Nur die beim Spawn erhaltene Prozessgruppe beenden; maximal fünf Sekunden Bereinigung.
+    # EN: Stop only the process group obtained at spawn; cleanup is bounded to five seconds.
+    catch {exec /bin/kill -TERM -- -$owned}
+    catch {close $raw}
+    catch {close -i $spawn_id}
+    puts stderr "PTY_CAPTURE_FAIL:$message"
+    exit 1
+}

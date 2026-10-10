@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "pin-comparison",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["graphDigest", "approvalDigest", "outcome", "artifactRef"],
+  "properties": {
+    "graphDigest": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+    "approvalDigest": { "type": "string", "pattern": "^[a-f0-9]{64}$" },
+    "outcome": { "enum": ["Pass", "Fail"] },
+    "artifactRef": { "type": "string", "pattern": "^.+#sha256=[a-f0-9]{64}$" }
+  }
+}

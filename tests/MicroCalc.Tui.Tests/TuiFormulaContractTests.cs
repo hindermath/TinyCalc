@@ -1,5 +1,6 @@
 using MicroCalc.ContractEvidence;
 using MicroCalc.Core.Model;
+using System.Text.Json.Nodes;
 using Terminal.Gui.Input;
 
 namespace MicroCalc.Tui.Tests;
@@ -17,7 +18,8 @@ public sealed class TuiFormulaContractTests
         var offer = FormulaContractCases.Find(id);
         var expression = FormulaContractCases.Expression(offer);
         var error = offer.GetProperty("scenarioKind").GetString() == "Error";
-        var steps = new List<Action<LegacyProgramUiAdapter>>();
+        var proof = new ExecutedPathProof(id);
+        var steps = new List<Action<LegacyProgramUiAdapter>> { _ => proof.BeginExecution() };
         foreach (var cell in offer.GetProperty("setup").GetProperty("cells").EnumerateObject())
         {
             Assert.True(CellAddress.TryParse(cell.Name, out var address));
@@ -48,8 +50,30 @@ public sealed class TuiFormulaContractTests
                 Assert.Contains("[", ui.GridText.Split(Environment.NewLine)[1]);
                 Assert.Contains("AutoCalc: ON", ui.StatusText);
             }
+            // DE: Unabhängige Assertions gehen vor dem Belegschreiben; tatsächliche UI-Werte werden nicht glattgezogen.
+            // EN: Independent assertions precede proof writing; actual UI values are never rounded into the oracle.
+            var expectedState = new JsonObject
+            {
+                ["error"] = error, ["value"] = error ? 7 : offer.GetProperty("oracle").GetDouble(),
+                ["contents"] = error ? "7" : expression,
+            };
+            var actualState = new JsonObject
+            {
+                ["error"] = ui.MessageText.Contains("Fehler an Position", StringComparison.Ordinal),
+                ["value"] = ui.CurrentCell.Value, ["contents"] = ui.CurrentCell.Contents,
+            };
+            Assert.True(proof.Observe("independent-formula-oracle", expectedState, actualState).Accepted);
+            Assert.True(proof.Observe("real-ui-state", new JsonObject
+            {
+                ["focus"] = "Grid", ["selection"] = "A1", ["autoCalc"] = true,
+            }, new JsonObject
+            {
+                ["focus"] = ReferenceEquals(ui.Root, ui.CurrentView) ? "Grid" : "Other",
+                ["selection"] = ui.Address.ToString(), ["autoCalc"] = ui.AutoCalc,
+            }).Accepted);
         });
         using var adapter = new LegacyProgramUiAdapter();
         adapter.Run(steps.ToArray());
+        Assert.NotNull(proof.Complete(adapter.GridText, adapter.StatusText));
     }
 }

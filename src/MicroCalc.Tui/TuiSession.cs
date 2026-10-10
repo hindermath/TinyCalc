@@ -83,6 +83,9 @@ internal sealed class TuiSession : IDisposable
         };
 
         var menu = BuildMenu(app);
+        // DE: Die Standard-Menüfarbe erreicht im echten Terminal keinen lesbaren Textkontrast.
+        // EN: The default menu color does not provide readable text contrast in a real terminal.
+        menu.SetScheme(GridColorScheme.Create());
 
         // Diese Migration bewahrt den bestehenden Nur-Lese-Textvertrag ohne zusätzliches Editor-Paket.
         // This migration preserves the existing read-only text contract without an extra editor package.
@@ -203,6 +206,15 @@ internal sealed class TuiSession : IDisposable
         try
         {
             action();
+            RefreshUi();
+        }
+        catch (FileNotFoundException ex)
+        {
+            // DE: Der interne Absolutpfad verdeckt im schmalen Terminal den relevanten Dateinamen.
+            // EN: The internal absolute path hides the relevant filename in a narrow terminal.
+            var name = new string(Path.GetFileName(ex.FileName ?? string.Empty)
+                .Select(character => char.IsControl(character) ? '_' : character).Take(30).ToArray());
+            _message = $"Datei fehlt / File missing: {name}";
             RefreshUi();
         }
         catch (Exception ex)
@@ -422,9 +434,12 @@ internal sealed class TuiSession : IDisposable
         using var dialog = new Dialog
         {
             Title = "Help",
-            Width = 90,
-            Height = 28,
+            // DE: Auch bei 80x24 müssen Titel und Schließen-Aktion innerhalb des Terminals bleiben.
+            // EN: At 80x24, the title and close action must remain inside the terminal too.
+            Width = Dim.Func(_ => Math.Min(90, Math.Max(1, app.Screen.Width - 2))),
+            Height = Dim.Func(_ => Math.Min(28, Math.Max(1, app.Screen.Height - 2))),
         };
+        dialog.SetScheme(GridColorScheme.Create());
 
         // Die Hilfe bleibt absichtlich eine einfache Nur-Lese-Ansicht innerhalb des genehmigten Paketumfangs.
         // Help intentionally remains a simple read-only view within the approved package scope.
@@ -439,7 +454,10 @@ internal sealed class TuiSession : IDisposable
             WordWrap = false,
             Multiline = true,
             Text = help[page],
-            CanFocus = false,
+            // DE: Kleine Fenster benötigen Tastaturscrolling statt unsichtbar abgeschnittener Hilfetexte.
+            // EN: Small windows need keyboard scrolling instead of invisibly clipped help text.
+            CanFocus = true,
+            TabKeyAddsTab = false,
         };
 #pragma warning restore CS0618
 
@@ -495,8 +513,20 @@ internal sealed class TuiSession : IDisposable
         dialog.AddButton(nextButton);
         dialog.AddButton(closeButton);
 
-        dialog.KeyDown += (_, key) =>
+        void HandleHelpKey(object? sender, Key key)
         {
+            if (key == Key.Tab || key == Key.Tab.WithShift)
+            {
+                // DE: Text und Dialog-Buttons liegen in getrennten Framework-Gruppen; der Fokus darf nicht im Text kreisen.
+                // EN: Text and dialog buttons belong to separate framework groups; focus must not cycle inside the text.
+                View[] order = [textView, prevButton, nextButton, closeButton];
+                var current = Array.FindIndex(order, view => view.HasFocus);
+                var direction = key == Key.Tab ? 1 : -1;
+                order[(current + direction + order.Length) % order.Length].SetFocus();
+                key.Handled = true;
+                return;
+            }
+
             if (key == Key.Esc)
             {
                 app.RequestStop();
@@ -526,7 +556,12 @@ internal sealed class TuiSession : IDisposable
 
                 key.Handled = true;
             }
-        };
+        }
+
+        // DE: Der fokussierte Text darf P/N und Escape nicht vor den Dialogaktionen verbrauchen.
+        // EN: Focused help text must not consume P/N or Escape before the dialog actions.
+        textView.KeyDown += HandleHelpKey;
+        dialog.KeyDown += HandleHelpKey;
 
         UpdatePage();
         app.Run(dialog);
@@ -541,6 +576,7 @@ internal sealed class TuiSession : IDisposable
             Width = 70,
             Height = 8,
         };
+        dialog.SetScheme(GridColorScheme.Create());
 
         var prompt = new Label
         {
@@ -557,6 +593,7 @@ internal sealed class TuiSession : IDisposable
             Y = 1,
             Width = Dim.Fill(2),
         };
+        textField.SetScheme(GridColorScheme.Create());
 
         if (title.StartsWith("Edit ", StringComparison.Ordinal))
         {

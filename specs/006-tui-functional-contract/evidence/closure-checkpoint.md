@@ -1,0 +1,68 @@
+# Lokaler Abschlussfortschritt / Local closeout progress
+
+## Deutscher Nachweisblock
+
+2026-10-10, Feature 006, Basis `8115513d803b`. Dieser Zwischenbericht ist kein
+Completion-Report und keine Produktabnahme. Die [macOS-Vollbelege](platforms/macos/local-build105.md)
+und [Coverage](coverage.md) schließen T060–T062/T066 lokal: tatsächliche Binary,
+beide Terminalgrößen, sichtbarer Text statt Escape-grep, Fokus/Kontrast,
+Terminal-Abfragen, begrenzte eigene Bereinigung, 669 Pass, null Fail/Skip,
+364 Pfade und 97,02 % geänderte ausführbare Produktzeilen.
+
+T056: Workflow-Guards prüfen vollständige PR-/Push-Trigger und fehlende oder
+gefilterte Vollvertragssteps. Sechs Fälle einschließlich fünf absichtlicher
+Abschwächungen bestanden; dies ist kein nativer CI-Produktlauf.
+T069/T070: ASVS, Produkt-AI-SBOM, Zero Trust und C3A/C5 bleiben scopebezogen N/A
+mit Triggern; Toolanbieter, regulatorische Einzelbewertungen, SAMM/OpenSSF/OWASP
+und Restrisiken bleiben getrennt dokumentiert. Acht technische GSDB-Quellhashes
+für tatsächlich geänderte Dateien wurden erneuert; GSDB Validate ist grün.
+Hashfrische erteilt keine neue menschliche oder regulatorische Freigabe.
+
+T074: Die nichttrivialen Grenzen in Session, TerminalStateLease, atomaren
+Schreibern, Pfadauflösung, historischer Git-Bindung, Collector und Validator
+verwenden kurze DE-/EN-Warumkommentare. Sie erklären Besitz/Bereinigung,
+beweisbare Beobachtung, Digestgrenzen und Fail-closed-Verhalten statt Code zu
+wiederholen. Keine neue öffentliche C#-API oder globale Warnungsunterdrückung.
+T075: Presetmatrix, Registry und Agentenflächen sind unverändert. Gemeinsame
+Regeländerung N/A; Trigger wäre eine echte Runtime-/Toolchain-/Governanceänderung.
+Die lokale Produktarbeit aktualisiert keine Presets oder Intake-Zustände.
+
+DocFX Build 106 ist erfolgreich, null Fehler/88 Warnungen. Die neue Seitensprache
+`de` wurde in fünf tatsächlichen HTML-Seiten mit Playwright geprüft; die
+ARIA-Snapshots und Lynx-Texte sind lesbar. `role="main"` ist vorhanden; ein
+fehlendes semantisches `main`-Element allein ist kein fehlender Landmark-Beleg.
+axe, neue gebrochene Publikationslinks und Human-A11Y bleiben gesondert offen.
+Ein automatischer Textcheck ersetzt weder WCAG-Vollkonformität noch VoiceOver.
+
+Offen mit Owner Thorsten/Feature-Entwicklung: native Linux/Windows und finale
+Headbindung (T057–T064/T081), finale Storyabnahme, unabhängiger Security-/Architektur-/Produktreview,
+VoiceOver, Owner-Produktabnahme, finale Lieferprovenienz und sauber gebundene
+Statistik. Aktion: technische Nachweise vervollständigen, zulässigen Draft-
+Stand veröffentlichen und menschliche Nachweise an tatsächlicher finaler Basis
+erbringen. Wiedervorlage: vor ReadyForIndependentReview/Accepted/Merge.
+Claude-Providerfehler bleibt ausdrücklich zurückgestellt, nicht bestanden.
+Admin-Bypass darf keine dieser materiellen Pflichten ersetzen.
+
+## English evidence block
+
+This interim checkpoint is not completion or product acceptance. The linked
+actual macOS run and coverage close the local terminal/coverage work with 669
+passing tests, all 364 paths and 97.02% changed executable-line coverage. Six
+workflow guards, including five deliberate weakenings, prove enforcement logic,
+not native CI execution. Eight source hashes were technically renewed after
+actual documentation changes; GSDB validation passes without new human approval.
+
+Scoped non-applicability, supplier obligations and supporting maturity/security
+references retain their triggers and owners. Concise bilingual comments explain
+resource ownership, proof boundaries and fail-closed decisions. Presets,
+registry, shared agent rules, intake states and package versions are unchanged.
+
+DocFX build 106 passes with 88 warnings and no errors. Five real HTML pages have
+the configured German language, readable ARIA snapshots and Lynx text; role-based
+main landmarks are present. axe, broken publication links and human VoiceOver
+remain distinct open checks. Native final-head results, historical-addition
+integration, independent reviews, owner acceptance, final provenance and clean
+statistics binding remain due before acceptance/merge. Historical additions are
+now technically bound by the eleven-case [US4 proof](story-us4.md), not a new
+product acceptance. Formal-rule bypass does
+not waive these requirements; deferred Claude failure is not a pass.

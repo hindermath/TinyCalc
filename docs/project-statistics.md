@@ -639,6 +639,10 @@ runtime evidence.*
 
 | 2026-10-10 | Feature 006 Implementierungs-Zwischenstand / Implementation checkpoint | Branch `006-tui-functional-contract`, Basis `ffc3d56`; sichtbares Arbeitsfenster 2026-10-10 bis 16:30 Europe/Berlin, keine Stoppuhrmessung. Vor dieser Ledger-/Lieferergänzung: 94 betroffene Dateien, netto `91` Produktionscode-, `1748` Test-, `21994` Dokumentations-/Vertrags-, `1036` Infrastruktur- und `616` generierte Lockzeilen. Session-Verschiebung ist keine entsprechende Neuentwicklung; großer JSON-Anteil ist keine manuelle Schreibzeit. 39/83 Tasks nachgewiesen; echte test-first Formel-/TUI-/Load-Korrekturen, 580 grüne Solution-Tests (Core 217/TUI 363), 28 semantische und acht Pfadsicherheitsfixtures sowie synthetische 1092-Tupel-Dateiprüfung mit identischer schreibfreier Preview. Native vollständige Vertragsläufe, PTY, menschliche VoiceOver-Abnahme, Coverage und finale unabhängige Gates offen. DocFX erfolgreich, 84 Warnungen; repräsentative ARIA-/Lynx-Textprüfung durchgeführt, fehlendes HTML-lang dokumentiert, kein WCAG-Pass. Commit/Push nun ausdrücklich genehmigt; Draft-Zwischenstand, kein Merge oder Featureabschluss. Statistikvorschau Exit 0/DRY_RUN, Methodik 2, Quelle `ea8d99052656`; historischen generierten Git-Block im schmutzigen Arbeitsbaum nicht überschrieben. Basen 80/125 Zeilen/Arbeitstag, 7.8 h/Tag, 21.5 Tage/Monat bleiben Referenzmodelle; keine neue Beschleunigungsbehauptung. / Save the partial implementation and real local proof without claiming platform or product acceptance; preserve historical generated statistics and distinguish generated volume from manual effort. |
 
+| 2026-10-10 | Feature 006 Validator-/Policy-Fortsetzung / Validator and policy continuation | Branch `006-tui-functional-contract`, Basis `8115513`; sichtbares lokales Fortsetzungsfenster 2026-10-10 nach 16:30 Europe/Berlin, keine Stoppuhrmessung. Snapshot vor Ledger und abschließendem Statussatz: 24 betroffene Dateien, netto `0` Produktionscode-, `0` C#-Test-, `280` Testskript-, `305` Infrastruktur- und `1350` Dokumentations-/Vertragszeilen. Davon 1100 generierte Katalogzeilen; keine entsprechende manuelle Schreibzeit. Nun 50/83 Tasks nachgewiesen. Policy zunächst 44/50 rot, danach 51 grün; Katalog zunächst 12/15 rot, danach 15 grün. Öffentliche Bindungs-/Ausgabeschutzfälle, echte PowerShell-/Bash-/Cmdlet-/Help-/Preview-Parität und vollständige synthetische 1092-Tupel-Dateiprüfung grün, null Repository-Schreibzugriffe. Vier GSDB-Quellbindungen nach additivem Diff erneuert; GSDB001–010 grün, keine neue Human-/Security-Abnahme. C# unverändert, 580 vorher grüne Tests nicht pauschal wiederholt. T043/T049, vollständige neue-ID-/Rot-Bindung, CI-Producer, native Plattform-/PTY-/VoiceOver-/Coverage-/Review-Abnahme bleiben offen. Claude-Providerfehler auf Nutzerwunsch zurückgestellt, nicht als Pass gewertet. Statistikvorschau Exit 0/DRY_RUN, Methodik 2, Quelle `8115513d803b`; generierte Trends bleiben bis genehmigter sauberer Commit-Grenze historisch, kein Dirty-Guard-Bypass. Basen 80/125 Zeilen/Tag, 7.8 h/Tag, 21.5 Tage/Monat bleiben Modelle ohne neue Beschleunigungsbehauptung. Kein Commit/Push/Merge, keine Intake-/Serienmutation oder Folgefeatures in diesem Paket. / Record the local partial proof and generated volume honestly; preserve all outstanding acceptance gates and defer generated statistics to an authorised clean boundary. |
+
+| 2026-10-10 | Feature 006 echte UI-Beleganbindung / Real UI proof binding | Branch `006-tui-functional-contract`, Basis `8115513`; sichtbares Testfenster 17:17–17:43 Europe/Berlin, Dokumentation anschließend, keine Arbeitszeitmessung. Kumulativer Arbeitsbaum-Snapshot gegen diese Basis vor Ledger-Ergänzung: netto `0` Produktionscode-, `508` C#-Test-, `472` Testskript-, `317` Infrastruktur- und `1495` Dokumentations-/Vertragszeilen, davon weiterhin 1100 generierte Katalogzeilen. Nicht zusätzlich zum vorherigen Arbeitsbaum-Snapshot zählen. Neuer Schwerpunkt: echte Assertions, atomare Teilbelege, typisierte vollständige Zustandszusammenführung, sichere eigene Ausgabepfade und TRX-/Klassen-/Zeit-/Hashbindung. Schreiber zuerst 6/9 rot, Producer zusätzlich 5/5 rot, danach 46 gezielte Producer-Tests grün; drei neue Semantikfälle rot, danach 31 grün. Build 71: 140 Pass einschließlich 124 UI-Pfaden; Build 72: 16 Ausgabeguards; Build 73: 111 Editorpfade, jeweils null Fail/Skip. Insgesamt 235 unterschiedliche Teilpfade und 333 serialisierte Assertions aus getrennten Zwischenläufen, keine finale Versions-/Plattformbindung. Fünf manipulierte Originalkopien korrekt verworfen; zusätzlicher Testklassen-Bypass rot/grün, Inputs/Repositorybytes unverändert. 50/83 Tasks bleiben vollständig nachgewiesen; vollständige Story-/Producer-/CI-/PTY-/Human-/Review-Gates offen, kein pauschaler 580-Test-Neulauf. Repository-Profil-2-Vorschau Exit 0/DRY_RUN, Quelle `8115513d803b`; generische Preset-Konfiguration nicht passend, keine Migration und kein Dirty-Guard-Bypass. Generierte Statistik bleibt bis sauberer autorisierter Grenze historisch. Basen 80/125 Zeilen/Tag, 7.8 h/Tag und 21.5 Tage/Monat unverändert, keine neue Beschleunigungsbehauptung. Kein Commit/Push/Merge oder Folgefeature. / Record real partial proof and cumulative volume without double-counting, measured-effort claims or replacing outstanding acceptance. |
+
 ## Statistikprofil-1-Archiv / Statistics Profile 1 Archive
 Basis dieses Schlussblocks sind die aktuell dokumentierten Snapshot- und
 Phasenwerte aus den Abschnitten `## Gesamtstand des Repositories` und
@@ -794,7 +798,41 @@ volume.
 
 | 2026-10-10 | Drei Preset-Patches und GSDB / Three preset patches and GSDB | UpdateRequired: Security 0.7.1, Architecture 0.6.2 und Sequencing 0.2.8 mit unveraenderlichen Quellen, sieben technischen GSDB-Bindungen und neuen Negativfaellen; alle fachlichen Zustandsachsen und menschlichen Entscheidungen erhalten. Restore, Release-Build, 82 Tests und TUI-Smoke bestanden, vorgeschriebener Buildzaehler 31/32. Bestehende Statistikmethodik unveraendert. / Bounded patch delivery and targeted revalidation, no product run or new acceptance. [Nachweis / Evidence](maintenance/preset-patches-2026-10-10.md). |
 
+| 2026-10-10 | Feature 006 lokaler Vollvertrag und Abschlussfortschritt / Local full contract and closeout progress | Branch `006-tui-functional-contract`, Basis `8115513`; sichtbares Testfenster Build 105 19:30:42–19:34:00 Europe/Berlin, Dokumentations-/Validatorfortsetzung bis 20:00, keine Arbeitszeitmessung. Kumulativer Arbeitsbaum-Snapshot gegen diese Basis vor dieser Ledger-Ergänzung: netto `122` Produktionscode-, `1476` C#-Test-, `815` Testskript-, `651` Infrastruktur- und `2324` Dokumentations-/Vertragszeilen; nicht zusätzlich zu früheren Arbeitsbaum-Snapshots zählen. Darin 1100 generierte Katalogzeilen und strukturiertes JSON, keine entsprechende manuelle Schreibzeit. 65/83 Tasks nachgewiesen. Ungefilterte Solution 669 Pass (Core 217/TUI 452), null Fail/Skip; ein tatsächlicher macOS-Lauf bindet 364/364 Pfade und 462 serialisierte Assertions. Changed-Line-Coverage 488/503 = 97.02%, Collector bytegleich zurückgenommen. Hilfe-/PTY-Defekte test-first korrigiert; neue Historienintegration erst 10/11 rot, danach 11/11 grün; 58 Policy-/8 TRX-Guards und öffentliche synthetische 1092-Tupel-/Zero-write-Integration grün. GSDB001–010 nach technischen Quellenhashupdates grün; keine Human-Freigabe daraus abgeleitet. DocFX 106 null Fehler/88 Warnungen, Seitensprache in fünf echten Seiten und ARIA/Lynx geprüft; axe/native finale Plattform-/VoiceOver-/unabhängige Review-/Ownerabnahme offen. Kein Paketupgrade oder Folgefeature. Basen 80/125 Zeilen/Arbeitstag, 7.8 h/Tag und 21.5 Tage/Monat bleiben Modelle, keine neue Beschleunigungsbehauptung. Profil-2-Render erst an genehmigter sauberer Commit-Grenze, kein Dirty-Guard-Bypass. / Record complete actual local coverage and bounded validator proof without double-counting generated volume or claiming final platform/human/product acceptance. |
+
 ## Gesamtstatistik / Overall Statistics
+
+Deutsch: Lokaler Feature-006-Zwischenstand: 65/83 Tasks vollständig nachgewiesen;
+364/364 unterschiedliche Pfade und 462 serialisierte Assertions stammen aus
+einem tatsächlichen macOS-Vollvertrag. 669 Tests grün, Changed-Line-Coverage
+97,02 %. Es fehlen keine lokalen Pfade; finale Plattform-, Human- und Review-
+Gates bleiben ausdrücklich offen, kein finaler Commit-/Produktabnahmenachweis.
+Die folgende
+generierte Gesamtstatistik einschließlich ASCII-Trends bleibt historisch an ihre
+angegebene Git-Quelle gebunden. Vorschau vom 2026-10-10: DRY_RUN, Quelle
+`8115513d803b`; Schreiben erst an genehmigter sauberer Commit-Grenze.
+
+English: The local Feature-006 checkpoint fully evidences 65 of 83 tasks.
+One actual macOS full run supplies all 364 paths, 462 serialized assertions and
+669 passing tests, with 97.02% changed-line coverage. No local paths are missing;
+final platform, human and review gates remain Open, not final product acceptance. Generated
+totals and ASCII trends below remain bound to their stated historical Git source.
+The current preview is DRY_RUN at `8115513d803b`; write only at the authorised
+clean commit boundary, without bypassing the dirty-worktree guard.
+
+```text
+Feature 006: complete local path proof, not acceptance
+Paths  [####################] 364 / 364 locally proved
+Open   [....................]   0 / 364 local paths
+Tasks  [###############.....]  65 /  83 fully evidenced
+Final native/human/review acceptance: OPEN
+```
+
+Deutsch: Die Balken sind grobe textuelle Anteile. Die Zahlen benennen den Stand;
+Teilbelege ersetzen keine vollständige Plattform-, Human- oder Reviewabnahme.
+
+English: Bars show approximate text-only proportions; the numbers define the
+state. Partial proof never replaces complete platform, human or review acceptance.
 
 <!-- project-statistics-v2:begin -->
 

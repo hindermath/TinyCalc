@@ -1,5 +1,22 @@
 # OWASP-SAMM-Review: TinyCalc
 
+## Feature 006: Fortschreibung / Update
+
+Deutsch, 2026-10-10: Verbesserungen sind unabhängiger Nenner, echte UI-/PTY-
+Assertions, Fail-closed-Driftprüfung, Locks und permanente Vollregression.
+Kein neuer organisationsweiter SAMM-Reifegrad. Unabhängige Abnahme, native
+Providerbelege und menschliche A11Y bleiben Open; Owner Thorsten, Wiedervorlage
+vor Abnahme. OpenSSF Scorecard und OWASP Cheat Sheets/Proactive Controls sind
+ergänzende Referenzen, kein Gate-Ersatz. Historische Scorecarddaten werden nicht
+als aktuelle Messung umgedeutet. Runner-/Registry-Kompromittierung, manipulierte
+Evidenz und alternde Snapshots bleiben Restrisiken, keine Risikoakzeptanz.
+
+English: Concrete improvements are independent obligations, actual UI/PTY proof,
+fail-closed drift checks, locks and permanent regression, not a new SAMM rating.
+Independent/native/human acceptance remains Open. OpenSSF/OWASP references do
+not replace gates or relabel historical measurements; compromise, forgery and
+stale snapshots remain explicit residual risks, not accepted risks.
+
 ## Deutscher Prüfblock
 
 ### Laufnachweis und Entscheidung
