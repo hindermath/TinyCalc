@@ -1,5 +1,20 @@
 # Lokaler Abschlussfortschritt / Local closeout progress
 
+## Aktueller Abschlussauftrag 11.10.2026 / Current closeout authority
+
+[Produktabnahme](human-acceptance-20261011.md), native vollständige Prüfserie,
+Storynachweise und Supply Chain sind jetzt vorhanden. Die folgenden Open-
+Absätze sind historische Zwischenstände. [Verbindlicher Lieferabschluss](delivery-closeout.md)
+benennt die wenigen verbleibenden finalen Ausführungs-/Providergrenzen.
+T076/T078/T079/T081/T082 bleiben im eingefrorenen getrackten Taskstand offen,
+bis der ignorierte Runtime-/Provider-Abschluss ihren tatsächlichen Vollzug
+belegt. Keine weitere Commit-Schleife nur für Abschlussmarkierungen.
+
+*Actual human acceptance and complete native candidate proof supersede old
+pending statements. Final execution-only tasks close in ignored runtime/provider
+evidence after the immutable delivery head passes, not through predicted passes
+or repeated self-referential commits.*
+
 ## Deutscher Nachweisblock
 
 ### Nachtrag 2026-10-10: native CI und genehmigte Reviews

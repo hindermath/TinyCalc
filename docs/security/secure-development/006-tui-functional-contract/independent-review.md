@@ -1,5 +1,27 @@
 # Unabhängiger Review-Nachweis / Independent review evidence
 
+## Abschlussdisposition 11.10.2026 / Closeout disposition
+
+Der genehmigte unabhängige Reviewer prüfte zusätzlich das reine Dokumentations-/
+Versionsdelta `a9759f5..737348d` sowie die tatsächliche kopierte Releaseausgabe
+mit 51 Dateien, macOS-Originale, 671 Tests/364 Pfade/462 Assertions, SBOM und
+24 Lizenzbindungen read-only: kein neuer konkreter Korrekturbedarf.
+Die [Humanabnahme](../../../../specs/006-tui-functional-contract/evidence/human-acceptance-20261011.md)
+liegt jetzt vor; ursprüngliche Reviewrevisionen werden nicht umetikettiert.
+
+Die Feature-Anforderungen benennen fachliche Security-/Architektur-/unabhängige
+Review-Gates, keinen bestimmten Provider. Diese tatsächlichen Reviews erfüllen
+den fachlichen Umfang. Der zusätzliche Claude-Providerjob bleibt Nicht-Pass,
+keine fachliche Zustimmung. Nur eine danach verbleibende formale zusätzliche
+Provider-/Approvalregel ist vom aktuellen Admin-Auftrag erfasst; offene
+fachliche Befunde oder zusätzliche materielle Remote-Anforderungen nicht.
+
+*The separately approved reviewer verified the documentation/version-only
+candidate delta and actual frozen output/evidence without new actionable issues.
+Human acceptance is now present. Substantive review obligations are fulfilled
+by actual independent reviews, not a provider name. Claude execution failure
+remains a non-pass; formal-rule authority never waives substantive findings.*
+
 ## Deutscher Nachweis
 
 2026-10-10. Thorsten hat einen unabhängigen read-only Review-Agenten ausdrücklich

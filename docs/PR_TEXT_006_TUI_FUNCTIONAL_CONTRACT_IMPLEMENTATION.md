@@ -1,74 +1,77 @@
 # Feature 006: TUI-Funktionsvertrag / TUI functional contract
 
-## Deutscher Überblick
+## Problem und Lösung / Problem and solution
 
-**Draft – nicht mergefähig, keine Produktabnahme.** 70/83 Tasks nachgewiesen.
-[Abschlussfortschritt](../specs/006-tui-functional-contract/evidence/closure-checkpoint.md)
-trennt tatsächliche Implementierung von Human- und endgültiger Lieferabnahme.
+Bestätigte Formel-, Anzeige-, Dialog-, Datei- und Hilfefehler wurden test-first
+korrigiert. Interne reale Session, unabhängige Orakel, echte PTY, vollständiger
+Vertrag und fail-closed read-only Validator liefern überprüfbare Nachweise.
+17 Familien, 364 Pfade je OS, keine neue öffentliche C#-API oder Paketupgrades.
 
-[Eingefrorene technische Übergabe](../specs/006-tui-functional-contract/evidence/voiceover-candidate.md)
-bindet die kommende vollständige Prüfserie separat an ihren unveränderten
-Commit und eine kopierte Release-Binary. Das lokale Laufmanifest protokolliert
-nur tatsächlich abgeschlossene Ergebnisse; Human/Owner bleibt offen.
- / The frozen technical handover binds actual execution to an unchanged commit
-and copied release output without claiming human or owner acceptance.
+*Test-first corrections cover actual UI/domain defects. The internal real session,
+independent oracles, PTY, complete contract and read-only validator preserve all
+17 families and 364 paths per OS without public API or dependency upgrades.*
 
-Problem: bestätigte Formel-, Anzeige-, Tastatur-, Hilfe- und Load-Defekte sowie
-fehlende unabhängige Vertrags-/Evidenzinfrastruktur.
-Lösung: test-first Produktkorrekturen, interne reale Session, vier unveränderte
-Locks, unabhängige Orakel, echte macOS-PTY und fail-closed read-only Validator.
-Alle 17 Familien und 364 Pfade bleiben erhalten.
+## Tatsächliche Abnahme / Actual acceptance
 
-- Historischer macOS-Build 105: 669 Pass, null Fail/Skip, 364 Pfade,
-  462 Assertions, Changed-Line-Coverage 488/503 = 97,02 %.
-- [Native CI 38077169518](../specs/006-tui-functional-contract/evidence/platforms/native-ci-38077169518.md):
-  je Linux/Windows 671 Pass, null Fail/Skip, 364 Pfade, 462 Assertions.
-  Feature-Head und tatsächlich ausgeführter PR-Testmerge sind getrennt gebunden.
-- [Unabhängiger Quell-/Delta-Review](security/secure-development/006-tui-functional-contract/independent-review.md)
-  durchgeführt; JSON-Lesegrenze nach echtem Rot korrigiert. Danach vollständige
-  synthetische 1092-Tupel-/Zero-write-Integration und gezielte Policy-/Pfadtests grün.
-- [DocFX/axe/lynx](accessibility/006-docfx-axe.md): gezielte Linknamen-/Kontrast-/
-  Zielgrößen-/Namespace-Korrekturen; fünf Seiten ohne automatische Verstöße oder
-  fehlende Artikelziele. Manuelle Prüffälle bleiben ausdrücklich offen.
+- Prüfstand 737348debf6807d2d8b49e620d2dc068b62bf731, Binary 1.6.17.116, Vertragsrevision 2.
+- Je macOS/Linux/Windows: 671 Pass, 0 Fail/Skip, 364 Pfade, 462 Assertions; insgesamt 1092 native Tupel.
+- Changed-line-Coverage 488/503 = 97,02 %; unveränderte Produktquellen seit 22ec768, kein umetikettierter Coverage-Lauf.
+- Thorsten: F01–F14 Pass bei 134x27/80x24, VoiceOver V1–V6 Pass bei verifiziertem 120x40, zusätzlich 80x24 insgesamt Pass; HTML H1–H4 je angeforderter Seite Pass, keine gemeldeten Befunde.
+- [Menschlicher Nachweis](../specs/006-tui-functional-contract/evidence/human-acceptance-20261011.md), [Abnahme](../specs/006-tui-functional-contract/evidence/acceptance.md), [Lieferabschluss](../specs/006-tui-functional-contract/evidence/delivery-closeout.md), [Abschlussbericht](../specs/006-tui-functional-contract/completion-report.md).
 
-| Gate | Tatsächlicher Nachweis / verbleibende Grenze |
+*The immutable tested candidate has complete native and separate human proof.
+Later delivery documentation/version metadata is not relabelled as human testing.
+Final exact-head execution must pass before merge.*
+
+## Gate-Zuordnung und Testplan / Gate mapping and test plan
+
+| Gate | Workflow / Job / Runner / tatsächlicher Command |
 |---|---|
-| Funktion/PTY | macOS Build 105, reale Binary, 80x24/120x40, vollständige Suite/Collector; kein neuer finaler Head |
-| Native Linux/Windows | ci.yml, build-test auf ubuntu-latest/windows-latest; Capture → ungefiltertes dotnet test → Collect → Upload; originale TRX/Bundles und Digests ausgewertet |
-| Launcher | beide nativen Jobs: pwsh -NoProfile -File scripts/tests/tui-contract/test-launchers.ps1, echte Logs; finale gemeinsame Parität offen |
-| Smoke | beide nativen Jobs: dotnet run --no-build --configuration Release --project src/MicroCalc.Tui/MicroCalc.Tui.csproj -- --smoke |
-| Validator | synthetische vollständige Fixtures/WhatIf, unveränderte Repositorybytes; kein nativer Produkt- oder Human-Pass |
-| Dokumentation | DocFX 115 null Fehler/83 bestehende Warnungen; fünf Playwright/axe/ARIA- und lynx-Stichproben; spätere Textänderungen/finale Bindung gesondert |
-| Human/Owner | echte VoiceOver-Bedienung und getrennte Produktentscheidung ausstehend |
-| Lieferung | finale gemeinsame Head-/Vertragsbindung, aktuelle Lieferprovenienz und sauber gebundene Statistik ausstehend |
+| vollständige native Funktion / full native function | ci.yml, build-test, ubuntu-latest/windows-latest: Capture → ungefiltertes dotnet test MicroCalc.sln --configuration Release --no-build --logger trx --results-directory tests/MicroCalc.Tui.Tests/TestResults/native-ci → Collect → Upload |
+| macOS/PTY | lokal macOS 27 arm64: Capture → dotnet test MicroCalc.sln --configuration Release --no-restore --logger trx --results-directory tests/MicroCalc.Tui.Tests/TestResults/native-ci → Collect; reale 80x24/120x40 |
+| Launcher/Hilfe/Zero-write | dieselben nativen Jobs und lokales macOS: pwsh -NoProfile -File scripts/tests/tui-contract/test-launchers.ps1; Bash zusätzlich macOS/Linux |
+| Smoke | native Jobs/lokal: tatsächliche Release-Binary --smoke, exakt SMOKE_OK |
+| Vollvertrag und Gatebindung | lokal pwsh -NoProfile -File scripts/test-tinycalc-contract.ps1 -RepositoryRoot . -Evidence tests/MicroCalc.Tui.Tests/TestResults/delivery-gates-final -Json; gleiche CLI/WhatIf-/Bash-/Cmdlet-Ergebnisse, null Schreibwirkung |
+| Security/Architektur | unabhängiger read-only Quell-/Delta-Review, versiegelter Securityscan, C006-01 test-first behoben; keine Provider-Namensbindung der fachlichen Gates |
+| Supply Chain | tatsächliche finale SPDX-SBOM, vierprojektiger NuGet.org-CVE-Audit, 24 unveränderte Lizenzen, vier Lockhashes, tatsächliche Provider-/Head-/Tool-/Output-Provenienz |
+| Dokumentation/A11Y | docfx build docfx.json → temporäre versionsgebundene axe/ARIA-/Linkprüfung → lynx; separate tatsächliche menschliche Abnahme |
+| Secrets/Governance | Agent Secret Scan, Gitleaks, Homogeneity, Linked intake native proof, GSDB-Quellbindungen; echte aktuelle Outcomes prüfen |
 
-Projekte: MicroCalc.Core, MicroCalc.Tui und beide vorhandenen Tests.
-Keine neue öffentliche C#-API, Paketupgrades oder Produktabhängigkeiten.
-TUI-Captures bleiben gehashte Roh-/Textoriginale, keine synthetische Human-Evidenz.
-Nur ein technischer GSDB-Quellhash wurde nach Checklistenfortschreibung erneuert;
-Kontrollbewertungen, regulatorische Entscheidungen, Intakes und Serie unverändert.
+Projekte: MicroCalc.Core, MicroCalc.Tui und beide vorhandenen Testprojekte.
+Konfigurationsimpact: vier genehmigte Locks, CI-Vollvertragsbindung und begrenztes
+DocFX-Overlay. Paketgraph unverändert. TUI-Captures sind gehashte reale Roh-/Text-
+Originale, keine synthetischen Screenshots oder Humanfreigaben.
+Statistik am sauberen Commit gerendert; technische GSDB-SRC-067-Hashfortschreibung
+ändert weder historische Kontrollbewertungen noch menschliche Risikoannahmen.
 
-Risiken: untrusted JSON-/Datei-/Git-Evidenz verlangt strikte Grenzen. Neuer
-begrenzter Streamleser bindet Parser und Digest an denselben Snapshot.
-Coverage enthält derzeit alle neun geänderten Produktdateien; vollständig
-fehlende Instrumentierung wäre künftig separat zu erkennen. Human-A11Y und
-Owner-Abnahme bleiben Pflicht. Historische Resultate werden nicht umetikettiert.
-Claude-Providerfehler ist zurückgestellt, nicht bestanden. MergeAndSync und
-Admin-Bypass sind nur für formale Regeln genehmigt; kein materielles Gate umgehen.
-Kein Folgefeature und kein NuGet-Update in diesem PR.
+*The table identifies actual commands and runner obligations, not just check
+names. Full original execution, strict evidence binding, documentation and human
+proof stay separate. No API, package graph, intake or regulatory scope expansion.*
 
-## English overview
+## Risiken und Liefergrenzen / Risks and delivery boundaries
 
-Draft only: 70/83 tasks evidenced, not accepted or merge-ready. Actual native
-Linux/Windows jobs each pass 671 tests and all 364 paths, with original bytes,
-digests, provider head and testmerge distinctly recorded. Historical macOS
-coverage/PTY proof is not relabelled to that head.
+Untrusted Datei-/JSON-/TRX-/Git-Evidenz braucht Pfad-, Größen-, UTF-8-, Hash- und
+Zeitgrenzen. Der begrenzte Streamleser bindet Parser/Digest an denselben Snapshot.
+Die unveränderte neun-Dateien-Coverage wird historisch nachvollziehbar verwendet.
+axe-Stichproben sind kein Voll-WCAG-Zertifikat; zwei alte Statistiklinks liegen
+außerhalb des DocFX-Inhaltsumfangs. Keine signierte SLSA-Attestierung behauptet.
 
-Independent source/delta review is complete. The actual JSON resource-limit
-bug was corrected test-first, retaining complete validator/zero-write proof.
-The bounded DocFX overlay fixes sampled name/contrast/target/link failures;
-five pages have no automatic axe violations or missing article targets.
-Manual checks, real human VoiceOver, owner acceptance, final common-head proof
-and delivery provenance remain mandatory. No public API, product dependency,
-package graph, intake state or follow-up feature changed. Formal-rule admin
-bypass never replaces material gates; deferred Claude failure is not a pass.
+Claude-Providerfehler bleibt **Nicht-Pass**, ausdrücklich zurückgestellt.
+Die fachlichen Security-/Architektur-/unabhängigen Review-Gates sind durch
+tatsächliche separate Reviews erfüllt. Nur eine verbleibende formale zusätzliche
+Provider-Status-/Approvalregel darf der genehmigte Admin-Bypass überbrücken;
+kein fachlich fehlgeschlagener Check, offener Reviewbefund oder fehlender Nachweis.
+
+DeliveryMode MergeAndSync ist aktuell ausdrücklich genehmigt. Bis die finale
+Lieferhead-Prüfung wirklich abgeschlossen ist bleibt der PR Draft; danach
+Provider-Mergecommit/Trailer unmittelbar read-only prüfen, main nur Fast-Forward.
+Ignorierter Runtime-Nachweis und dieser PR dokumentieren T076/T078/T079/T081/T082
+nach tatsächlicher Erfüllung, ohne selbstreferenzielle neue Commit-Schleife.
+T082: nur Archivierungsprüfung, kein Rename aktiver hashgebundener Intakes ohne
+separaten Lifecycle-Auftrag. Kein Folgefeature und kein NuGet-Update.
+
+*Admin bypass is limited to formal duplicate provider/approval rules after all
+substantive checks and independent reviews pass. A provider error remains a
+non-pass, never a fabricated successful review. Freeze and validate final head,
+verify actual merge/trailer, fast-forward main and stop. No follow-up feature,
+silent intake promotion, dependency upgrade or signed-attestation claim.*

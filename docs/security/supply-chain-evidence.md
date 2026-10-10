@@ -1,5 +1,35 @@
 # Supply-Chain-Evidenz: TinyCalc Feature 003
 
+## Feature 006: geprüfter Kandidat und Lieferbindung / Candidate and delivery binding
+
+11.10.2026: Prüfcommit `737348debf6807d2d8b49e620d2dc068b62bf731`, Binary
+`1.6.17.116`. Syft 1.51.0: tatsächlicher kopierter Releaseoutput, SPDX 2.3,
+29 Einträge, SHA-256
+`49586aa8cc9b8cbe2554906f2db3a120484cbc6d044d1e805b2660de814bbeca`.
+Aktueller expliziter NuGet.org-Audit über alle vier Projekte: null bekannte
+Schwachstellen; SHA-256
+`5a512fe3f66fb021353733e412c987ca854944f06c9ffc0a2d57a52274fd29e1`.
+24 ausgelieferte NUSPEC-/Lizenzbindungen stimmen unverändert überein, 23 MIT
+und einmal BSD-2-Clause. Vier genehmigte Paketlocks unverändert; kein Upgrade.
+Originale: `TestResults/006-candidate.spdx.json`,
+`006-candidate-vulnerabilities.json`, `006-candidate-licenses.json`.
+
+[Push-CI 38086468591](https://github.com/hindermath/TinyCalc/actions/runs/38086468591)
+bindet denselben Head und tatsächliche Linux-/Windows-Builds/Tests/Uploads.
+Lokales Manifest bindet Werkzeuge, Commands, 51 kopierte Release-Dateien und
+ihre SHA-256. Tatsächliche Provenienz, **keine signierte Attestierung und kein
+zugesicherter SLSA-Level**. Die neue endgültige Lieferbinary erhält eigene
+SBOM-/Audit-/Providerbindung im [Lieferabschluss](../../specs/006-tui-functional-contract/evidence/delivery-closeout.md)
+und ignorierten `delivery-manifest.json`; historische SBOMs bleiben historisch.
+VEX am Auditdatum N/A ohne Fund; AI-SBOM N/A bei reinen Entwicklungswerkzeugen.
+Neue Advisory-/Graph-/Lizenz-/Runtime-KI-Änderungen öffnen die Prüfung erneut.
+
+*The immutable candidate has an actual 29-entry SPDX SBOM, four-project registry
+audit without known findings, 24 unchanged licence bindings and provider/source/
+command/output-hash provenance. Final delivery output receives its own evidence.
+No signed attestation or SLSA level is claimed; dated VEX and runtime AI-SBOM
+non-applicability retain their change triggers. No dependencies are upgraded.*
+
 ## Feature 006: lokaler Build 105 / Local build 105
 
 Deutsch, 2026-10-10: Der aktuelle unveränderte Paketgraph ist in vier genehmigten

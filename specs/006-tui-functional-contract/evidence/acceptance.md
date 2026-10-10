@@ -1,4 +1,36 @@
-# Abnahme: Zwischenstand, nicht Accepted / Interim acceptance, not Accepted
+# Produktabnahme und Liefergrenze / Product acceptance and delivery boundary
+
+## Aktueller Abschlussstand 11.10.2026 / Current closeout state
+
+Die folgenden älteren Zwischenstände bleiben historische Belege. Maßgeblich
+sind jetzt [Thorstens tatsächliche Produkt-/VoiceOver-/HTML-Abnahme](human-acceptance-20261011.md)
+auf dem eingefrorenen Prüfstand und der [Lieferabschluss](delivery-closeout.md).
+Keine erneute Specify-/Plan-/Tasks-Phase und kein Folgefeature.
+
+| Kriterium | Tatsächlich belegtes Ergebnis |
+|---|---|
+| SC-001 | 17 Familien, 364 Pfade je nativem OS, 1092 Tupel und 1386 Assertions insgesamt; keine Filter-/Skip-Lücke |
+| SC-002 | Je OS 671 Pass/0 Fail/0 Skip, echte test-first Produktfixes, unabhängiger Review und Owner: keine offenen In-Scope-Produktfehler |
+| SC-003 | Linux/Windows Push-CI 38086468591 und macOS exakt 737348d; echte PTY 80x24/120x40; separater Humanlauf |
+| SC-004 | Echte Rot-Grün-Provenienz und vollständige negative Validator-/Historien-/Source-/Hash-Integration; Fixtures zählen nicht als Produkttupel |
+| SC-005 | Vier unveränderte genehmigte Locks, kohärenter Graph, keine Upgrades; ausschließlich veraltete Autoritätsreferenz erneuert |
+| SC-006 | Fail-closed Vollmatrix-/Gateprüfung, schreibfreie Launcher/WhatIf; finaler tatsächlicher Gate-Exit am Lieferhead bleibt erforderlich |
+
+Owner-Produktabnahme: **Accepted für den unveränderten Prüfstand 737348d,
+Binary 1.6.17.116, Revision 2**. Funktion, VoiceOver und HTML sind tatsächlich
+von Thorsten gemeldet, nicht durch Automation ersetzt. Fachlicher unabhängiger
+Review ist erfüllt. Der zusätzliche Claude-Providerfehler bleibt Nicht-Pass;
+ein etwaiger formaler Providercheck-Bypass ersetzt keinen fachlichen Review.
+
+T081/finaler Merge-/Sync-Nachweis bleibt bis zur tatsächlichen Ausführung offen.
+Die ignorierten Runtime-Originale und PR #104 erfassen dessen Abschluss am
+eingefrorenen Lieferhead, ohne selbstreferenzielle neue Belegcommits.
+
+*The historical interim assessment below is superseded by actual owner acceptance
+of the unchanged frozen candidate, complete native proof and independent review.
+All six criteria are mapped above. Final exact-head technical validation and
+merge/sync are still required. Preserve human and historical execution bindings;
+runtime originals and PR #104 record actual completion without a commit loop.*
 
 ## Deutscher Bewertungsblock
 

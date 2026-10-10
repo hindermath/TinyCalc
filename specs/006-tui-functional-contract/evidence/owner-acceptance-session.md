@@ -1,5 +1,18 @@
 # Produktabnahme vorbereiten / Prepare product acceptance
 
+## Ausführung abgeschlossen / Session completed
+
+Die [menschliche Abnahme vom 10./11.10.2026](human-acceptance-20261011.md)
+belegt F01–F14, VoiceOver V1–V6 und HTML H1–H4 auf dem eingefrorenen Prüfstand.
+Die folgende Anleitung bleibt als tatsächlich verwendeter Ablauf erhalten,
+nicht als weiterhin fehlende Humanfreigabe. [Lieferabschluss](delivery-closeout.md)
+trennt den erfüllten unabhängigen fachlichen Review vom zusätzlichen fehlerhaften
+Claude-Providerjob: Nicht-Pass, kein Ersatz fachlicher Prüfung durch Bypass.
+
+*The actual human session is complete. Preserve the procedure and frozen test
+binding; final delivery and provider-status disposition remain separate from
+successful substantive independent review and owner acceptance.*
+
 ## Deutscher Ablauf
 
 Stand: 2026-10-10. Feature 006, PR #104. **Vorbereitet, nicht durchgeführt und

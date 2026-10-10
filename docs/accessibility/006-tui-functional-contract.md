@@ -1,5 +1,29 @@
 # Feature 006: A11Y-Nachweisgrenzen / Accessibility proof boundaries
 
+## Tatsächlicher Abnahmestand 11.10.2026 / Actual acceptance state
+
+[Thorstens menschlicher Nachweis](../../specs/006-tui-functional-contract/evidence/human-acceptance-20261011.md)
+schließt A11Y-CALC-08 und die menschlichen Anteile von 01/05/06/09: VoiceOver
+27, Terminal 2.15, macOS 27.0.1, Safari 27.0.1, 11.10.2026 00:14:48
+Europe/Berlin, Prüfcommit 737348d, Binary 1.6.17.116, Vertragsrevision 2.
+V1–V6 Pass bei verifiziertem 120x40; 80x24 insgesamt Pass. F01–F14 und
+HTML H1–H4 Pass, keine gemeldeten Befunde. Keine erfundenen gesprochenen Zitate.
+
+01/03: vollständige DE/EN-Hilfe plus Bedienlauf. 02/06: echte unabhängige
+Dialog-/Zustands-/Fokusassertions in 364 Pfaden je OS. 04: unveränderte vier
+Locks und genehmigter Graph. 05/07: reale PTY 80x24/120x40 mit Text-/Kontrast-/
+Fokusnachweisen; Auswahl zusätzlich Adresse/Klammern, nicht nur Farbe.
+09: DocFX/axe/ARIA/lynx plus separate menschliche HTML-Stichprobe; visuelles
+H4 ist keine numerische Messung. 10: unveränderte Pflicht-IDs und finale
+Gatebindung gemäß [Lieferabschluss](../../specs/006-tui-functional-contract/evidence/delivery-closeout.md).
+Die folgende Vorbereitung ist historisch. Kein Voll-WCAG-Zertifikat und kein
+Abschluss des späteren eigenständigen A11Y-Features.
+
+*Actual human evidence closes the human requirements on the frozen candidate.
+The ten stable anchors retain their separate automated, PTY, documentation and
+human proof. Final delivery binding remains required; no relabelling, numeric
+H4 measurement, full-site certification or later-feature completion is claimed.*
+
 ## Deutscher Prüfblock
 
 Verbindlich bleibt das verlinkte [A11Y-Intake](../../requirements/intakes/active/Lastenheft_A11Y_TUI.md).

@@ -1,5 +1,18 @@
 # Eingefrorener VoiceOver-Prüfstand / Frozen VoiceOver candidate
 
+## Abgeschlossene menschliche Prüfung / Completed human session
+
+Prüfcommit `737348debf6807d2d8b49e620d2dc068b62bf731`, Binary `1.6.17.116`,
+Revision 2: [Thorstens tatsächliche Abnahme](human-acceptance-20261011.md).
+V1–V6 und ergänzende manuelle HTML-Prüfung Pass, keine gemeldeten Befunde.
+Die kopierte Binary bleibt unverändert; spätere Abschlussdokumentation wird
+nicht als erneut menschlich geprüft ausgegeben. Die folgende Vorbereitung ist
+historisch, [finale Liefergates](delivery-closeout.md) bleiben getrennt.
+
+*The frozen candidate's actual human session and owner acceptance are complete.
+Keep the copied binary unchanged and final delivery gates distinct; the pending
+session wording below records historical preparation, not a fresh blocker.*
+
 ## Deutscher Nachweisrahmen
 
 Thorstens Auftrag vom 2026-10-10 verlangt den technischen Abschluss und eine

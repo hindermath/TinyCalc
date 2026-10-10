@@ -1,5 +1,25 @@
 # DocFX: gezielte Rot–Grün-Prüfung / Targeted red–green checks
 
+## Abschlussstichprobe / Closeout sample
+
+Die spätere Kandidatenprüfung auf 737348d erweitert die Stichprobe auf sechs
+Seiten gemäß [menschlichem Prüfprotokoll](../../specs/006-tui-functional-contract/evidence/human-acceptance-20261011.md).
+DocFX: null Fehler, 83 bestehende Warnungen; axe/ARIA: null automatische
+Verstöße, Sprache `de`, je ein Main-Landmark; sechs lesbare Lynx-Ausgaben.
+Originale `TestResults/006-candidate-axe.json` und `006-candidate-docfx.log`
+sind im lokalen Manifest gehasht. Thorsten meldet H1–H4 je angeforderter Seite
+Pass ohne Befunde. axe-incomplete bleibt transparent, H4 ist visuell.
+Zwei historische Statistik-Markdownlinks liegen außerhalb des generierten
+Site-Inhalts; vorhandene Repoquellen, kein allseitiger Link-/WCAG-Pass.
+Der endgültige Dokumentationsdelta erhält eine eigene technische Stichprobe
+gemäß [Lieferabschluss](../../specs/006-tui-functional-contract/evidence/delivery-closeout.md).
+
+*The later six-page candidate sample passes automatic axe/ARIA/text checks,
+and the owner reports the requested manual checks passing. Preserve incomplete
+items and two historical site-content link gaps explicitly; neither visual H4
+nor a sample proves full-site conformance. Final changed documentation gets its
+own technical binding without relabelling the human session.*
+
 ## Deutscher Nachweis
 
 2026-10-10, Feature 006, T073. Thorsten genehmigte die temporäre axe-Prüfumgebung

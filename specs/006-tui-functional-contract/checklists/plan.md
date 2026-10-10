@@ -15,7 +15,7 @@ Prüftag / Review date: 2026-10-07. Reviewer: Codex, technischer Autorenabgleich
 - [x] Keine Implementierung, Produktprüfung, Commit-/Remoteaktion oder Folgefeature. / Planning-only scope preserved.
 - [x] PowerShell-/Bash-Prerequisites erkennen Research, Datenmodell, Contracts und Quickstart; Serienreview aktuell Ready, Manifest 13 Ziele/4 Wurzeln/9 Abhängigkeiten. / Both prerequisite and source-binding variants pass.
 - [x] Owner-Entscheidung zum privaten Projektscope und Planreview bestätigt: zusätzliche externe Review-Pflicht supersediert; PR #101 genehmigt und gemergt. Keine allgemeine rechtliche Freistellung oder Produktabnahme. / Owner scope decision and approved plan review supersede the added external review prerequisite, not legal applicability or product acceptance.
-- [ ] Aktuelle Pin-/Lock-/Plattform-/Abnahmeevidenz in späterer Umsetzung erhoben. / Future execution proof not collected.
+- [x] Aktuelle Pin-/Lock-/Plattform-/Abnahmeevidenz erhoben: [native Kandidatenserie und Humanabnahme](../evidence/delivery-closeout.md); finale Lieferhead-Prüfung bleibt separat verpflichtend. / Current candidate execution proof collected; final delivery-head validation remains mandatory.
 
 **Ergebnis zum ursprünglichen Prüftag 2026-10-07:** Technischer Aufgabenentwurf möglich; Plan-Gate damals Open. Der aktuelle Stand folgt unten. Das verbleibende offene Kästchen bezeichnet künftige Ausführungsnachweise, keine erneute Planfreigabe. / Historical planning result; see the current status below. The remaining unchecked item records future execution proof, not renewed planning approval.
 

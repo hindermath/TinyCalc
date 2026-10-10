@@ -1,5 +1,18 @@
 # US1: lokale vollständige Tabellenwege / Complete local spreadsheet paths
 
+## Vollständiger nativer Abschluss / Complete native closeout
+
+11.10.2026: Die [unveränderte Prüfserie 737348d](delivery-closeout.md) belegt
+alle 264 US1-Pfade separat auf macOS, Linux und Windows, insgesamt 792 Tupel.
+Jeder vollständige ungefilterte Lauf enthält die echten sichtbaren Zustände,
+Core-Orakel und unabhängigen Assertions. [Menschliche Abnahme](human-acceptance-20261011.md)
+ist ergänzend erfolgt. Die folgenden lokalen Zwischenstände sind historisch;
+finale Lieferhead-Bindung wird gesondert im Runtime-Nachweis erfasst.
+
+*All 264 US1 paths pass in each full native run, 792 tuples overall, on the
+immutable candidate. Visible state, independent oracles and human acceptance
+are retained; final delivery-head binding remains separately required.*
+
 ## Deutscher Nachweis
 
 Der [ungefilterte lokale Vollvertrag](platforms/macos/local-build105.md) enthält

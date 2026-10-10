@@ -1,5 +1,20 @@
 # Native Scriptparität / Native script parity
 
+## Abgeschlossene native Kandidatenprüfung / Completed native candidate proof
+
+11.10.2026: macOS auf 737348d und Linux/Windows im tatsächlichen
+[Push-Run 38086468591](https://github.com/hindermath/TinyCalc/actions/runs/38086468591)
+haben `pwsh -NoProfile -File scripts/tests/tui-contract/test-launchers.ps1`
+mit Exit 0 ausgeführt. Linux/macOS schließen Bash normal/dry-run ein;
+Windows PowerShell normal/WhatIf/Cmdlet/Hilfe. Die Originale und ihre Hashes
+sind im [Liefernachweis](../../specs/006-tui-functional-contract/evidence/delivery-closeout.md)
+und `voiceover-candidate.json` erhalten. Finale Lieferhead-Parität wird separat
+ausgeführt, ohne historische Ergebnisse umzubenennen.
+
+*All three actual native candidate launcher checks passed, including applicable
+Bash, PowerShell, cmdlet, help and zero-write parity. Preserve their original
+binding and record final delivery execution separately.*
+
 ## Deutscher Nachweisblock
 
 Feature 006, Stand 2026-10-10. [Vertragsleitfaden](../contracts/tui/README.md)

@@ -1,5 +1,18 @@
 # US2: lokale Befehls-, Datei- und Dialogwege / Local commands, files and dialogs
 
+## Vollständiger nativer Abschluss / Complete native closeout
+
+11.10.2026: Die [unveränderte Prüfserie 737348d](delivery-closeout.md) belegt
+alle 92 US2-Pfade separat auf macOS, Linux und Windows, insgesamt 276 Tupel.
+Die Originale enthalten Datei-/Blattintegrität, Zustand, sichtbare Meldungen
+und Fokus; keine unbeabsichtigten Teilwirkungen. [Thorstens Abnahme](human-acceptance-20261011.md)
+ersetzt keinen dieser automatisierten Pfade. Ältere lokale Open-Aussagen sind
+historisch; finale Lieferhead-Bindung bleibt im Runtime-Nachweis erforderlich.
+
+*Every full native run passes all 92 independent US2 paths, 276 tuples overall,
+with file/state/focus integrity. Separate human acceptance is complete; original
+and final delivery execution bindings remain distinct.*
+
 ## Deutscher Nachweis
 
 Der [ungefilterte lokale Vollvertrag](platforms/macos/local-build105.md) enthält

@@ -1039,7 +1039,7 @@
       "path": "docs/security/supply-chain-evidence.md",
       "version": "Current",
       "reviewedAt": "2026-10-10",
-      "normalizedSha256": "830ced82284513b823db31ac6bf6fd597163702234f280e4ceec94ee542e3ecc",
+      "normalizedSha256": "daf99c959d93d40de5b9922136ba2f49f2c52c74a2da16ad0001dfbe8ebd160b",
       "scope": {
         "de": "Zeilenspezifischer aktueller Nachweis aus docs/security/supply-chain-evidence.md; der Hash beweist Inhalt, nicht automatisch Erfuellung.",
         "en": "Current row-specific evidence from docs/security/supply-chain-evidence.md; the hash proves content, not automatic fulfilment."
