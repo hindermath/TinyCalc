@@ -78,3 +78,28 @@ failures are reserved-name collisions, corrected with distinct native-prefixed
 phase names rather than a weaker security check. Real local red/green tests now
 exercise publication and restoration from both size modes: seven targeted cases
 pass in build 113. Fresh complete native proof remains mandatory.
+
+## Hosted-I/O-Isolation / Hosted I/O isolation
+
+Deutsch: [Lauf 38076466855](https://github.com/hindermath/TinyCalc/actions/runs/38076466855),
+Head `bed41f1852cfd530d1c229121a503269af603318`: Windows Core 217 Pass,
+TUI 443 Pass/11 Fail/null Skip; die Größenantwort des Hosted-Terminals bleibt
+wirksam. Der Größenmodus allein genügt nicht. Der gepinnte
+[dokumentierte Framework-Testhook](https://github.com/tui-cs/Terminal.Gui/blob/d0a0ed9b150d3fc8aacf4ab07b7f7d91264fe6d6/Terminal.Gui/Drivers/Driver.cs)
+`DisableRealDriverIO=1` isoliert ausschließlich die serialisierten Framework-
+Sessions vom fremden Terminal. Reale Views, Buffer, Layout und injizierte
+Tastaturereignisse bleiben aktiv; dies ist ausdrücklich keine physische PTY-
+oder VoiceOver-Evidenz. Ursprüngliche Umgebungsvariable und Größenmodus werden
+bei Init-Fehler und Dispose wiederhergestellt. Echte macOS-Prozess-PTYs laufen
+separat ohne diesen Hook. Build 114: zwei Restaurierungsfälle rot; Build 115:
+sieben gezielte Publikations-/Restaurierungs-/Ablehnungsfälle grün, null Fail/Skip.
+Originale ignoriert unter `TestResults/006-native-io114-red.*` und
+`006-native-io115-green.*`; neuer nativer Vollbeleg bleibt erforderlich.
+
+English: Actual Windows CI shows that ANSI mode alone does not isolate hosted
+terminal size replies. Use the pinned framework's documented buffer-only I/O
+test hook only inside serialised framework sessions and restore both original
+settings after failure/disposal. Keep actual framework views/rendering/input;
+do not claim physical PTY or human evidence. Separate real macOS process PTYs
+do not use this hook. Two genuine red cases become seven targeted green cases
+in build 115, with zero failures/skips. Fresh full native proof remains due.

@@ -16,6 +16,7 @@ internal sealed class LegacyProgramUiAdapter : IDisposable
 {
     private readonly TuiSession _session;
     private readonly SizeDetectionMode _originalSizeDetection;
+    private readonly string? _originalRealDriverIo;
     private readonly Stopwatch _elapsed = Stopwatch.StartNew();
     private Exception? _failure;
     private TimeSpan _lastStep;
@@ -40,11 +41,15 @@ internal sealed class LegacyProgramUiAdapter : IDisposable
     internal LegacyProgramUiAdapter(int width = 120, int height = 40)
     {
         _originalSizeDetection = Driver.SizeDetection;
+        _originalRealDriverIo = Environment.GetEnvironmentVariable("DisableRealDriverIO");
         IApplication? initializingApp = null;
         try
         {
             // DE: Im Test die gesetzte ANSI-Größe nutzen, nicht die fremde Hosted-Konsole abfragen; Originalmodus danach wiederherstellen.
             // EN: Use the configured ANSI size in tests rather than polling the host console; restore the original mode afterwards.
+            // DE: Der dokumentierte Framework-Testhook isoliert den Buffer von Hosted-Terminalantworten; echte Prozess-PTYs nutzen ihn nicht.
+            // EN: The documented framework test hook isolates the buffer from hosted-terminal replies; real process PTYs do not use it.
+            Environment.SetEnvironmentVariable("DisableRealDriverIO", "1");
             Driver.SizeDetection = SizeDetectionMode.AnsiQuery;
             initializingApp = Application.Create();
             App = initializingApp.Init(DriverRegistry.Names.ANSI);
@@ -54,7 +59,7 @@ internal sealed class LegacyProgramUiAdapter : IDisposable
         catch
         {
             try { initializingApp?.Dispose(); }
-            finally { Driver.SizeDetection = _originalSizeDetection; }
+            finally { RestoreTerminalConfiguration(); }
             throw;
         }
     }
@@ -147,8 +152,13 @@ internal sealed class LegacyProgramUiAdapter : IDisposable
         finally
         {
             try { App.Dispose(); }
-            finally { Driver.SizeDetection = _originalSizeDetection; }
+            finally { RestoreTerminalConfiguration(); }
         }
     }
 
+    private void RestoreTerminalConfiguration()
+    {
+        Driver.SizeDetection = _originalSizeDetection;
+        Environment.SetEnvironmentVariable("DisableRealDriverIO", _originalRealDriverIo);
+    }
 }

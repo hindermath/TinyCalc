@@ -814,6 +814,8 @@ Deutsch: Zur nativen Folgekorrektur gehören zusätzlich netto 37 Dokumentations
 
 English: The native follow-up correction also adds 37 net platform-evidence documentation lines, excluding generated statistics and version fields.
 
+| 2026-10-10 | Feature 006 Hosted-I/O-Isolation / Hosted I/O isolation | Branch `006-tui-functional-contract`, Basis `bed41f1`; sichtbares CI-/Korrekturfenster 20:37–20:46 Europe/Berlin, keine Arbeitszeitmessung. `0` Produktionscode-, `18` C#-Test- und `25` Dokumentationszeilen netto vor Statistik-/Versionspflege. Windows tatsächlich Core 217 Pass, TUI 443 Pass/11 Fail/null Skip: fremde Terminalantworten beeinflussen Fixturegröße auch im ANSI-Modus. Dokumentierten Framework-Hook ausschließlich in serialisierten Buffer-Tests setzen, ursprüngliche Umgebungsvariable/Größenmodus bei Fehler/Dispose wiederherstellen; echte separate macOS-Prozess-PTYs und Human-Anforderungen erhalten. Build 114 zwei echte rote Restaurierungsfälle, Build 115 sieben gezielte Fälle grün. Keine Paketänderung, keine Produktdefault-Änderung oder abgeschwächte Assertion; native Vollabnahme bleibt offen. Referenzen 80/125 Zeilen/Arbeitstag, 7.8 h/Tag und 21.5 Tage/Monat bleiben Modelle. / Isolate controlled framework tests from hosted console I/O with the documented scoped hook and actual targeted red/green proof. |
+
 ## Gesamtstatistik / Overall Statistics
 
 Deutsch: Lokaler Feature-006-Zwischenstand: 65/83 Tasks vollständig nachgewiesen;

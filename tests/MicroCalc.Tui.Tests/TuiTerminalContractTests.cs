@@ -52,19 +52,27 @@ public sealed class TuiTerminalContractTests
     public void FrameworkTerminal_RestoresOriginalSizeDetection(SizeDetectionMode configured)
     {
         var original = Driver.SizeDetection;
+        var originalIo = Environment.GetEnvironmentVariable("DisableRealDriverIO");
         try
         {
             Driver.SizeDetection = configured;
+            Environment.SetEnvironmentVariable("DisableRealDriverIO", "contract-test-original");
             using (var adapter = new LegacyProgramUiAdapter(80, 24))
                 adapter.Run(ui =>
                 {
                     Assert.Equal(SizeDetectionMode.AnsiQuery, Driver.SizeDetection);
+                    Assert.Equal("1", Environment.GetEnvironmentVariable("DisableRealDriverIO"));
                     Assert.Equal(80, ui.App.Driver!.Cols);
                     Assert.Equal(24, ui.App.Driver.Rows);
                 });
             Assert.Equal(configured, Driver.SizeDetection);
+            Assert.Equal("contract-test-original", Environment.GetEnvironmentVariable("DisableRealDriverIO"));
         }
-        finally { Driver.SizeDetection = original; }
+        finally
+        {
+            Driver.SizeDetection = original;
+            Environment.SetEnvironmentVariable("DisableRealDriverIO", originalIo);
+        }
     }
 
     [Fact]
