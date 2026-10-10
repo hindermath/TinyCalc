@@ -1,5 +1,85 @@
 # Changelog
 
+## [0.5.0](https://github.com/hindermath/TinyCalc/compare/v0.4.0...v0.5.0) (2026-10-10)
+
+
+### Features / Neue Funktionen
+
+* complete local TUI contract evidence and safeguards ([22ec768](https://github.com/hindermath/TinyCalc/commit/22ec7683ca333d749009bec22d6262e77e86c912))
+* complete TUI functional contract ([#104](https://github.com/hindermath/TinyCalc/issues/104)) ([946e392](https://github.com/hindermath/TinyCalc/commit/946e392151fcaba5db0d76cf2974e055ba616e66))
+* **tui:** preserve functional contract implementation checkpoint ([8115513](https://github.com/hindermath/TinyCalc/commit/8115513d803bae4914f84df98ce36491752e1df4))
+
+
+### Bug Fixes / Fehlerbehebungen
+
+* align review evidence and governance text ([0017c1a](https://github.com/hindermath/TinyCalc/commit/0017c1aadb55835bd503f2825d71a2b33147032e))
+* avoid automatic PowerShell variable in evidence binding ([1cc9eff](https://github.com/hindermath/TinyCalc/commit/1cc9eff81bea3ad46565bbe35f5537621a4e7028))
+* bind direct intake proofs to exact identity ([e292514](https://github.com/hindermath/TinyCalc/commit/e292514f7526d1b522f4fdb0e6fc9a67787552fc))
+* bound contract reads and record independent closeout evidence ([5c86d2b](https://github.com/hindermath/TinyCalc/commit/5c86d2bc1a1f9fb772e20172e76426dbf73615ad))
+* **governance:** adopt authoring v0.3.7 with bounded GSDB recheck ([75dac30](https://github.com/hindermath/TinyCalc/commit/75dac3096ee5457f75786fcea427eb643a3a0f29))
+* **governance:** adopt Authoring v0.3.7 with bounded GSDB recheck ([74adb73](https://github.com/hindermath/TinyCalc/commit/74adb7338631bb0273201caad0c7a9c5c4416f09))
+
+
+### Documentation / Dokumentation
+
+* add complete TUI functional contract task breakdown ([12eb3e2](https://github.com/hindermath/TinyCalc/commit/12eb3e2a8627e9229cbad902b3d38dab6cfd61dd))
+* address PL/0 governance review findings ([4e46d9c](https://github.com/hindermath/TinyCalc/commit/4e46d9c9931f4228e5872f392a6ae2ea122276e6))
+* align ledger rows and refresh changed source bindings ([3cffc1f](https://github.com/hindermath/TinyCalc/commit/3cffc1fd383bd6789b30ffd93cfda77ae12e254b))
+* bind statistics for frozen VoiceOver candidate ([737348d](https://github.com/hindermath/TinyCalc/commit/737348debf6807d2d8b49e620d2dc068b62bf731))
+* bind statistics to administrative renderer repair ([0ac3b2a](https://github.com/hindermath/TinyCalc/commit/0ac3b2a3820247fadd52e6a2f18783c10ac6ce2b))
+* clarify automated TUI acceptance evidence ([a0e59b2](https://github.com/hindermath/TinyCalc/commit/a0e59b269a7f3a29c8c88e8b7118d00baf6ebadb))
+* close feature 006 intake and series lifecycle ([07ac8eb](https://github.com/hindermath/TinyCalc/commit/07ac8eb50cc1246c3ed5917f339d12a1e40f1883))
+* close feature 006 intake and series lifecycle ([#105](https://github.com/hindermath/TinyCalc/issues/105)) ([ade6927](https://github.com/hindermath/TinyCalc/commit/ade6927f5b16cfe14575261646a80e0c8a51733c))
+* complete TUI functional contract tasks and resolve analysis findings ([5dbb7f9](https://github.com/hindermath/TinyCalc/commit/5dbb7f94bb0b0c48f9e980632d2f4fb1c88bc40f))
+* correct runner status and generated evidence metadata ([f058226](https://github.com/hindermath/TinyCalc/commit/f05822679eb3e654e6c417dc8bf29ef02342048f))
+* ensure producer rejection tests start red ([60ed066](https://github.com/hindermath/TinyCalc/commit/60ed0668a629d32f1f26881c9d36cb7e5fc9fe7e))
+* **evidence:** align completed build-counter statement in English ([ea8d990](https://github.com/hindermath/TinyCalc/commit/ea8d990526560c1a314b2dc9047815829e721012))
+* finalize TUI contract plan for personal project review ([9f21700](https://github.com/hindermath/TinyCalc/commit/9f217003d90a1783a25228cd5edfb05350077870))
+* **governance:** align current GSDB reader views and bilingual proof ([0569a4a](https://github.com/hindermath/TinyCalc/commit/0569a4a23040004b35a2d8ffa6782dd5ec4d9f84))
+* prepare frozen feature 006 VoiceOver candidate ([e75932e](https://github.com/hindermath/TinyCalc/commit/e75932eb5215d07afe5958b761de300d166aa1ae))
+* reconcile Copilot follow-up delivery metadata ([3c138b1](https://github.com/hindermath/TinyCalc/commit/3c138b1915dc87846f43c4832705baa8cb5353c0))
+* record feature 006 acceptance and delivery closeout ([12db77c](https://github.com/hindermath/TinyCalc/commit/12db77c4d17dcf89cbcf16fb1a12dfcbed8fdf8b))
+* refresh feature 006 administrative statistics binding ([9c9f70f](https://github.com/hindermath/TinyCalc/commit/9c9f70f2b98dff901b381f4b91bfcfeedda8ee28))
+* refresh feature 006 statistics at clean boundary ([6124d76](https://github.com/hindermath/TinyCalc/commit/6124d7673cd48cb5b9cb3c54b48a2a7b4fb7f03f))
+* refresh final feature 006 statistics binding ([6a86182](https://github.com/hindermath/TinyCalc/commit/6a86182d86c6b80d29029eac8e1f71f344a6b261))
+* refresh PL/0 CI governance evidence ([0ed043f](https://github.com/hindermath/TinyCalc/commit/0ed043f720386240235010ad0249368244ed26aa))
+* refresh PL/0 CI governance evidence ([c67b30f](https://github.com/hindermath/TinyCalc/commit/c67b30f1a1e7c53d5af8140a30dfd0faae4d0e0a))
+* refresh statistics after Copilot review fixes ([6693ee5](https://github.com/hindermath/TinyCalc/commit/6693ee58aabdc99e1532cea66cb38dc80bb7deda))
+* refresh statistics after deterministic fixture fix ([6c2f11e](https://github.com/hindermath/TinyCalc/commit/6c2f11e30954b2f3b717eed5c3bb48f64686a4db))
+* refresh statistics after feature specification ([6e0ab7a](https://github.com/hindermath/TinyCalc/commit/6e0ab7a0f3138d4db0307c75ec41437beaf752bc))
+* refresh statistics after independent closeout review ([a9759f5](https://github.com/hindermath/TinyCalc/commit/a9759f544fe47a5a3759ccc829ac319d1513e219))
+* refresh statistics after native fixture correction ([bed41f1](https://github.com/hindermath/TinyCalc/commit/bed41f1852cfd530d1c229121a503269af603318))
+* refresh statistics after producer review correction ([056b4cb](https://github.com/hindermath/TinyCalc/commit/056b4cb6a69d0c1fe1b8ba10154b812ac38a8e65))
+* refresh statistics after scoped terminal isolation ([6a1154d](https://github.com/hindermath/TinyCalc/commit/6a1154d4887e7e8e42f08365245dede0982145c1))
+* refresh statistics after TUI clarification ([de65e8d](https://github.com/hindermath/TinyCalc/commit/de65e8db85f3bc7fb4361aa0c49a894938ce3e56))
+* refresh statistics after TUI task planning ([2e1e009](https://github.com/hindermath/TinyCalc/commit/2e1e0098cfe7743e77cf01924bfdc719b3c18f8b))
+* refresh statistics at native parity boundary ([891d99f](https://github.com/hindermath/TinyCalc/commit/891d99f0287697400513bc03c6ebcb3f36705a8d))
+* refresh statistics for TUI contract task delivery ([fa0c751](https://github.com/hindermath/TinyCalc/commit/fa0c7514b205616e49671bf7cbee9ee8bbe07ca4))
+* render statistics after documentation review ([4e039ba](https://github.com/hindermath/TinyCalc/commit/4e039ba36598312ad25da0dfb85e4c60e2b500c6))
+* render statistics after governance review fixes ([ee74630](https://github.com/hindermath/TinyCalc/commit/ee74630d81b93d6d1e4c417a3448a3e0ce721fbb))
+* render statistics after GSDB source rebind ([557dafa](https://github.com/hindermath/TinyCalc/commit/557dafa1050e4bcacb7fbc2704b6ac074d6e9e36))
+* render statistics for macOS runner migration ([0c6d8ea](https://github.com/hindermath/TinyCalc/commit/0c6d8ea5953fd4a5bd0966f9a1d0dafb50e5384a))
+* render statistics for PL/0 governance refresh ([8e11974](https://github.com/hindermath/TinyCalc/commit/8e1197498893e1365e90d911e7b5f06460f4dbb3))
+* render statistics for TUI planning review ([675e155](https://github.com/hindermath/TinyCalc/commit/675e15572544099b28ea39ba81c854e8e2fdfb84))
+* resolve TUI contract analysis findings and prepare delivery ([db07ead](https://github.com/hindermath/TinyCalc/commit/db07eadefb0d8edb40dfa26df6a46e57d8579d44))
+* specify TUI acceptance and record intake review ([a0bfd37](https://github.com/hindermath/TinyCalc/commit/a0bfd37402e9a34e83068f05a2822688344b1a55))
+* **statistics:** account for bilingual review correction ([14a3dc1](https://github.com/hindermath/TinyCalc/commit/14a3dc1caca6d782485d972a83f1cf4ebb53b09a))
+* **statistics:** bind bilingual review correction snapshot ([715be0c](https://github.com/hindermath/TinyCalc/commit/715be0c4dba1f1376d0ab8af50c1466c5ac3c71c))
+* **statistics:** bind reproducible GSDB patch snapshot ([3e98c47](https://github.com/hindermath/TinyCalc/commit/3e98c47283176d8cfbbe80dacc47dd93e2043d43))
+* **statistics:** bind reviewed GSDB documentation snapshot ([b470c2d](https://github.com/hindermath/TinyCalc/commit/b470c2d98b85a38a276ad3b2331623e02421a479))
+* **statistics:** keep rollout entry in chronological update ledger ([3d688de](https://github.com/hindermath/TinyCalc/commit/3d688dec39a4b33b1fa1a4681e56dc8c5caf8f88))
+* **statistics:** refresh authoring and GSDB pilot delivery ([0706101](https://github.com/hindermath/TinyCalc/commit/0706101f4714be51d6aa78bb8eaeaac37f5696bb))
+* **statistics:** refresh reproducible preset integration snapshot ([17eabc2](https://github.com/hindermath/TinyCalc/commit/17eabc251b7d0b183e512750723d52f094761c93))
+* **statistics:** refresh reviewed GSDB documentation ([0152999](https://github.com/hindermath/TinyCalc/commit/01529998e41d82662e482c8ab7415e8c30898116))
+* **statistics:** render bounded three-preset integration ([157e2a5](https://github.com/hindermath/TinyCalc/commit/157e2a514df80ab70ea971f49c38724885775c75))
+* TUI-Vertragsplanung und privater Projektscope ([541d883](https://github.com/hindermath/TinyCalc/commit/541d883127174a178bdb1a1070440253fd23f2b8))
+
+
+### Maintenance / Wartung
+
+* **presets:** adopt three patches and revalidate GSDB bindings ([58452b1](https://github.com/hindermath/TinyCalc/commit/58452b190e46d64d7b4177fd39b718e632b46847))
+* **presets:** adopt three patches with targeted GSDB revalidation ([ffc3d56](https://github.com/hindermath/TinyCalc/commit/ffc3d56a8975341a686ff6985570369abefcfd2a))
+
 ## [0.4.0](https://github.com/hindermath/TinyCalc/compare/v0.3.0...v0.4.0) (2026-10-04)
 
 
