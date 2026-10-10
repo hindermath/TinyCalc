@@ -5,6 +5,7 @@ using MicroCalc.ContractEvidence;
 using Terminal.Gui.Input;
 using Terminal.Gui.Views;
 using Terminal.Gui.Drawing;
+using Terminal.Gui.Drivers;
 
 namespace MicroCalc.Tui.Tests;
 
@@ -29,6 +30,16 @@ public sealed class TuiTerminalContractTests
     [InlineData(120, 40)]
     public void FrameworkTerminal_UsesActualRenderedBufferAndInput(int width, int height)
         => VerifyFramework($"TERM-{width}x{height}-contrast", width, height, "contrast", false);
+
+    [Fact]
+    public void FrameworkTerminal_RestoresOriginalAnsiRegistration()
+    {
+        Assert.True(DriverRegistry.TryGetDriver(DriverRegistry.Names.ANSI, out var original));
+        using (var adapter = new LegacyProgramUiAdapter(80, 24))
+            adapter.Run(ui => Assert.Equal(80, ui.App.Driver!.Cols));
+        Assert.True(DriverRegistry.TryGetDriver(DriverRegistry.Names.ANSI, out var restored));
+        Assert.Same(original, restored);
+    }
 
     [Fact]
     [Trait("Contract", "MacOsAccessibilitySupplement")]

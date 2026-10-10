@@ -15,6 +15,7 @@ namespace MicroCalc.Tui.Tests;
 internal sealed class LegacyProgramUiAdapter : IDisposable
 {
     private readonly TuiSession _session;
+    private readonly DriverRegistry.DriverDescriptor _originalAnsiDescriptor;
     private readonly Stopwatch _elapsed = Stopwatch.StartNew();
     private Exception? _failure;
     private TimeSpan _lastStep;
@@ -38,15 +39,24 @@ internal sealed class LegacyProgramUiAdapter : IDisposable
 
     internal LegacyProgramUiAdapter(int width = 120, int height = 40)
     {
-        App = Application.Create().Init(DriverRegistry.Names.ANSI);
+        if (!DriverRegistry.TryGetDriver(DriverRegistry.Names.ANSI, out var descriptor) || descriptor is null)
+            throw new InvalidOperationException("The approved ANSI driver is unavailable.");
+        _originalAnsiDescriptor = descriptor;
+        // DE: Die echte ANSI-Implementierung behalten; nur die Testgröße darf nicht von der Hosted-Konsole überschrieben werden.
+        // EN: Keep the real ANSI implementation; only the fixture size must not be overwritten by the hosted console.
+        DriverRegistry.Register(descriptor with { CreateFactory = () => new AnsiComponentFactory(sizeMonitor: new FixedTerminalSize(width, height)) });
+        IApplication? initializingApp = null;
         try
         {
+            initializingApp = Application.Create();
+            App = initializingApp.Init(DriverRegistry.Names.ANSI);
             App.Screen = new System.Drawing.Rectangle(0, 0, width, height);
             _session = new TuiSession(App);
         }
         catch
         {
-            App.Dispose();
+            try { initializingApp?.Dispose(); }
+            finally { DriverRegistry.Register(_originalAnsiDescriptor); }
             throw;
         }
     }
@@ -138,7 +148,24 @@ internal sealed class LegacyProgramUiAdapter : IDisposable
         try { _session.Dispose(); }
         finally
         {
-            App.Dispose();
+            try { App.Dispose(); }
+            finally { DriverRegistry.Register(_originalAnsiDescriptor); }
         }
+    }
+
+    private sealed class FixedTerminalSize(int width, int height) : ISizeMonitor
+    {
+        public bool InitialSizeReceived => true;
+        public int InitialCursorRow => 0;
+        public event EventHandler<SizeChangedEventArgs>? SizeChanged;
+
+        public void Initialize(IDriver? driver)
+        {
+            ArgumentNullException.ThrowIfNull(driver);
+            driver.SetScreenSize(width, height);
+            SizeChanged?.Invoke(this, new SizeChangedEventArgs(new System.Drawing.Size(width, height)));
+        }
+
+        public bool Poll() => false;
     }
 }
