@@ -4,6 +4,9 @@ obj/
 *.suo
 .DS_Store
 TestResults/
+/api/
+/_site/
+/.cache/
 .idea
 
 # Local AI agent state and secrets

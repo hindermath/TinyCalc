@@ -1,0 +1,231 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "interaction-path",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "pathId",
+    "input",
+    "context",
+    "scenarioKind",
+    "scenarioApplicability",
+    "sourceSemanticsRef",
+    "preconditions",
+    "steps",
+    "expectedState",
+    "expectedText",
+    "allowedMutations",
+    "focusAfter",
+    "testRefs",
+    "automatable",
+    "humanSupplementReason"
+  ],
+  "properties": {
+    "pathId": {
+      "type": "string",
+      "minLength": 1
+    },
+    "input": {
+      "type": "string"
+    },
+    "context": {
+      "type": "string",
+      "minLength": 1
+    },
+    "scenarioKind": {
+      "enum": [
+        "Success",
+        "Cancel",
+        "Error"
+      ]
+    },
+    "scenarioApplicability": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "Success",
+        "Cancel",
+        "Error"
+      ],
+      "properties": {
+        "Success": {
+          "type": "string",
+          "minLength": 1
+        },
+        "Cancel": {
+          "type": "string",
+          "minLength": 1
+        },
+        "Error": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "sourceSemanticsRef": {
+      "type": "string",
+      "minLength": 1
+    },
+    "preconditions": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "value": {
+          "type": "number"
+        },
+        "error": {
+          "type": "boolean"
+        },
+        "selection": {
+          "type": "string",
+          "minLength": 1
+        },
+        "contents": {
+          "type": "string"
+        },
+        "status": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "autoCalc": {
+          "type": "boolean"
+        },
+        "focus": {
+          "type": "string",
+          "minLength": 1
+        },
+        "dialog": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "descriptionDe": {
+          "type": "string",
+          "minLength": 1
+        },
+        "descriptionEn": {
+          "type": "string",
+          "minLength": 1
+        },
+        "preservedFields": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "cells": {
+          "type": "object",
+          "patternProperties": {
+            "^[A-G](?:[1-9]|1[0-9]|2[01])$": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        }
+      }
+    },
+    "steps": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "expectedState": {
+      "type": "object",
+      "additionalProperties": false,
+      "properties": {
+        "value": {
+          "type": "number"
+        },
+        "error": {
+          "type": "boolean"
+        },
+        "selection": {
+          "type": "string",
+          "minLength": 1
+        },
+        "contents": {
+          "type": "string"
+        },
+        "status": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "autoCalc": {
+          "type": "boolean"
+        },
+        "focus": {
+          "type": "string",
+          "minLength": 1
+        },
+        "dialog": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "descriptionDe": {
+          "type": "string",
+          "minLength": 1
+        },
+        "descriptionEn": {
+          "type": "string",
+          "minLength": 1
+        },
+        "preservedFields": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "cells": {
+          "type": "object",
+          "patternProperties": {
+            "^[A-G](?:[1-9]|1[0-9]|2[01])$": {
+              "type": "string"
+            }
+          },
+          "additionalProperties": false
+        }
+      }
+    },
+    "expectedText": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "allowedMutations": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "focusAfter": {
+      "type": "string",
+      "minLength": 1
+    },
+    "testRefs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "automatable": {
+      "type": "boolean"
+    },
+    "humanSupplementReason": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  }
+}

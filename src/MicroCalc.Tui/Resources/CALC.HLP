@@ -128,10 +128,10 @@ Note: to use scientific notation use the the F command and enter minus one
 The following are examples of valid cell formulas:
 
 (A1+(B2-C7))  subtract cell C7 from B2 and add the result to cell A1
-(A1>A23)    the sum of cells:  A1,A2,A3..A23
+(A1>A21)    the sum of cells:  A1,A2,A3..A21
 (A1>B5)     the sum of cells:  A1..A5 and B1..B5
 
-The formulas may be as complicated as you want: 
+Formulas may combine these operations within 70 characters:
 
 (SIN(A1)*COS(A2)/((1.2*A8)+LN(FACT(A8)+8.9E-3))+(C1>C5))
 
@@ -145,6 +145,68 @@ then be restored.
    --> CALCDEMO was created using TURBO.COM, so      <--
    --> the format of the real numbers are not the    <--
    --> same as if you are using TURBO-87.COM.        <--
-
-
+.PA
+Aktueller Port: Bedienung (DE)
+Raster A1:G21; am Rand laeuft die Auswahl im Raster um.
+Oben: Pfeil/Ctrl-E. Unten: Pfeil/Ctrl-X/Ctrl-J.
+Rechts: Pfeil/Ctrl-D/Ctrl-M/Enter/Ctrl-G.
+Links: Pfeil/Ctrl-S/Ctrl-A.
+Esc bearbeitet vorhandenen Inhalt; ASCII 32..126 startet neu.
+Raster-/ oeffnet die Palette; Editor-/ bleibt Text/Division.
+Editor: Ctrl-S/D links/rechts, Ctrl-A/F Anfang/Ende.
+DEL/Ctrl-G loeschen links/rechts; Ctrl-V/Ins schaltet den Modus.
+Enter uebernimmt OK; Esc/Cancel verwirft ohne Teilwirkung.
+In der Palette: Q/L/S/R/P/F/A fuer die bisherigen Befehle.
+JSON ist das Dateiformat; kein .MCS-Import in diesem Port.
+Print schreibt Text; Abbruch des Randprompts schreibt nichts.
+Lokale Implementierung: Plattform-/Produktabnahme noch offen.
+.PA
+Aktueller Port: Formeln (DE)
+Potenzen binden rechts und vor Vorzeichen:
+2^3^2=512; -2^2=-4; (-2)^2=4; 2^-2=0.25.
+Division und Subtraktion binden links. Maximal 70 Zeichen.
+FACT akzeptiert nur ganze Zahlen 0..33; FACT(0)=1.
+SIN/COS und ARCTAN verwenden Bogenmass.
+LN hat Basis e, LOG Basis 10; Argumente muessen positiv sein.
+Nur endliche reelle Ergebnisse sind gueltig.
+MIN/MAX/AVERAGE ohne numerische Zellen ergeben 0.
+COUNT zaehlt nur Zahlen; COUNT(A1>A1) zaehlt eine Zahl.
+IF nutzt =, <>, <, <=, >=, >. A1>B1 bleibt eine Bereichssumme.
+Zellvergleich: IF(A1-B1>0,1,0).
+ROUND rundet Halbwerte weg von null.
+Praezision: Rohwert nichtnegativ, abschneiden, dann 0..15.
+15.9 wird 15; 16, -0.5 und -1 sind Fehler, kein Clamp.
+Fehlerhaftes Load ersetzt keine Teile des vorhandenen Blatts.
+.PA
+Current port: interaction (EN)
+Grid A1:G21; edge selection wraps within this grid.
+Up: arrow/Ctrl-E. Down: arrow/Ctrl-X/Ctrl-J.
+Right: arrow/Ctrl-D/Ctrl-M/Enter/Ctrl-G.
+Left: arrow/Ctrl-S/Ctrl-A.
+Esc edits existing contents; ASCII 32..126 starts new contents.
+Grid / opens the palette; editor / remains text/division.
+Editor: Ctrl-S/D left/right, Ctrl-A/F start/end.
+DEL/Ctrl-G delete left/right; Ctrl-V/Ins toggles editing mode.
+Enter accepts OK; Esc/Cancel discards without partial effects.
+Palette Q/L/S/R/P/F/A select the existing commands.
+Files use JSON; this port has no .MCS import.
+Print exports text; cancelling the margin prompt writes nothing.
+Local implementation: platform/product acceptance remains open.
+.PA
+Current port: formulas (EN)
+Powers associate right and bind before signs:
+2^3^2=512; -2^2=-4; (-2)^2=4; 2^-2=0.25.
+Division and subtraction associate left. Limit: 70 characters.
+FACT accepts only integers 0..33; FACT(0)=1.
+SIN/COS and ARCTAN use radians.
+LN is base e, LOG base ten; arguments must be positive.
+Only finite real results are valid.
+MIN/MAX/AVERAGE with no numeric cells return zero.
+COUNT counts numbers; COUNT(A1>A1) counts one numeric cell.
+IF uses =, <>, <, <=, >=, >. A1>B1 remains a range sum.
+Compare cell values with IF(A1-B1>0,1,0).
+ROUND rounds midpoints away from zero.
+Precision: nonnegative raw value, truncate, then allow 0..15.
+15.9 becomes 15; 16, -0.5 and -1 are errors, never clamped.
+Invalid Load never partially replaces the existing worksheet.
 

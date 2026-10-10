@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "1.0",
+  "cases": [
+    { "id": "missing-id", "mutation": "remove required capability", "expectedExit": 1, "expectedCode": "MissingObligation" },
+    { "id": "duplicate-id", "mutation": "duplicate capability/path ID", "expectedExit": 1, "expectedCode": "DuplicateObligation" },
+    { "id": "unknown-field", "mutation": "add unexpected schema property", "expectedExit": 2, "expectedCode": "InvalidSchema" },
+    { "id": "unknown-version", "mutation": "set schemaVersion to unsupported value", "expectedExit": 2, "expectedCode": "InvalidSchema" },
+    { "id": "wrong-source", "mutation": "change source bytes without approved mapping", "expectedExit": 1, "expectedCode": "SourceDrift" },
+    { "id": "path-parent", "mutation": "set artifact path to ../outside.json", "expectedExit": 2, "expectedCode": "UnsafePath" },
+    { "id": "path-symlink", "mutation": "resolve artifact through escaping symlink", "expectedExit": 2, "expectedCode": "UnsafePath" },
+    { "id": "wrong-digest", "mutation": "change payload without recomputing digest", "expectedExit": 1, "expectedCode": "DigestMismatch" },
+    { "id": "coordinated-deletion", "mutation": "remove path from contract and tests but retain intake baseline", "expectedExit": 1, "expectedCode": "MissingObligation" },
+    { "id": "skipped", "mutation": "mark an obligation Skipped", "expectedExit": 1, "expectedCode": "UnexecutedObligation" },
+    { "id": "weakened", "mutation": "remove executed assertions", "expectedExit": 1, "expectedCode": "MissingAssertions" },
+    { "id": "wrong-head", "mutation": "bind evidence to another commit", "expectedExit": 1, "expectedCode": "StaleCommit" }
+  ]
+}

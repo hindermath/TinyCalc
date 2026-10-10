@@ -1,0 +1,97 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "impact-decision",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "classes",
+    "changedPaths",
+    "reason",
+    "requiredGates",
+    "reviewer",
+    "interactionTimeoutSeconds",
+    "sessionTimeoutSeconds",
+    "cleanupTimeoutSeconds",
+    "toleranceRef",
+    "decisionDigest"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "enum": [
+        "1.0"
+      ]
+    },
+    "classes": {
+      "type": "array",
+      "items": {
+        "enum": [
+          "NoFunctionalImpact",
+          "FunctionalImpact",
+          "A11yImpact",
+          "TestInfrastructureImpact",
+          "ReleaseCloseout"
+        ]
+      }
+    },
+    "changedPaths": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "reason": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "de",
+        "en"
+      ],
+      "properties": {
+        "de": {
+          "type": "string",
+          "minLength": 1
+        },
+        "en": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "requiredGates": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "reviewer": {
+      "type": "string",
+      "minLength": 1
+    },
+    "interactionTimeoutSeconds": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 30
+    },
+    "sessionTimeoutSeconds": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 180
+    },
+    "cleanupTimeoutSeconds": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 5
+    },
+    "toleranceRef": {
+      "type": "string",
+      "minLength": 1
+    },
+    "decisionDigest": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    }
+  }
+}

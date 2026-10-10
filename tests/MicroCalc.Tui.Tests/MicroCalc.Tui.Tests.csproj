@@ -28,4 +28,8 @@
     <ProjectReference Include="..\..\src\MicroCalc.Tui\MicroCalc.Tui.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Compile Include="../MicroCalc.Core.Tests/ContractEvidence/*.cs" Link="ContractEvidence/%(Filename)%(Extension)" />
+  </ItemGroup>
+
 </Project>

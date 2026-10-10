@@ -23,7 +23,7 @@ public sealed class PromptButtonDefaultsTests
         dialog.AddButton(ok);
         dialog.AddButton(cancel);
 
-        Program.SetPromptButtonDefaults(dialog, ok, cancel);
+        TuiSession.SetPromptButtonDefaults(dialog, ok, cancel);
         var enterCommands = textField.KeyBindings.GetCommands(Key.Enter);
         var handled = textField.InvokeCommand(Command.Accept);
 

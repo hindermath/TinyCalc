@@ -72,20 +72,40 @@ public static class SpreadsheetJsonStorage
     public static void Load(string path, MicroCalcEngine engine)
     {
         var json = File.ReadAllText(path);
-        var doc = JsonSerializer.Deserialize<SpreadsheetDocument>(json)
-                  ?? throw new InvalidDataException("Datei konnte nicht gelesen werden.");
+        SpreadsheetDocument doc;
+        try
+        {
+            doc = JsonSerializer.Deserialize<SpreadsheetDocument>(json)
+                  ?? throw new InvalidDataException("Datei enthält kein gültiges Tabellen-Dokument.");
+        }
+        catch (JsonException exception)
+        {
+            throw new InvalidDataException("Datei enthält kein gültiges Tabellen-JSON.", exception);
+        }
+
+        if (doc.Cells is null || doc.Cells.Count > SpreadsheetSpec.ColumnCount * SpreadsheetSpec.RowCount)
+            throw new InvalidDataException("Ungültige Zellliste.");
+        var addresses = new HashSet<CellAddress>();
+        var staged = new List<(CellAddress Address, CellDocument Data)>();
+        // DE: Alle Datensätze prüfen, bevor das bestehende Blatt verändert wird; Fehler dürfen keine Teilübernahme hinterlassen.
+        // EN: Validate every record before changing the existing sheet; failures must not leave partial replacement.
+        foreach (var item in doc.Cells)
+        {
+            if (item is null || !CellAddress.TryParse(item.Address, out var address) || !addresses.Add(address)
+                || ((int)item.Status & ~63) != 0 || !double.IsFinite(item.Value)
+                || item.Decimals is < -1 or > 11 || item.FieldWidth is < 1 or > 20
+                || (item.Contents?.Length ?? 0) > SpreadsheetSpec.CellInputLimit)
+                throw new InvalidDataException("Ungültiger oder doppelter Zell-Datensatz.");
+            staged.Add((address, item));
+        }
 
         engine.Clear();
         engine.SetAutoCalc(doc.AutoCalc);
 
-        foreach (var item in doc.Cells)
+        foreach (var entry in staged)
         {
-            if (!CellAddress.TryParse(item.Address, out var address))
-            {
-                continue;
-            }
-
-            var cell = engine.Sheet.GetCell(address);
+            var item = entry.Data;
+            var cell = engine.Sheet.GetCell(entry.Address);
             cell.Status = item.Status;
             cell.Contents = item.Contents ?? string.Empty;
             cell.Value = item.Value;
@@ -98,7 +118,7 @@ public static class SpreadsheetJsonStorage
     {
         public bool AutoCalc { get; set; }
 
-        public List<CellDocument> Cells { get; set; } = [];
+        public List<CellDocument>? Cells { get; set; }
     }
 
     private sealed class CellDocument

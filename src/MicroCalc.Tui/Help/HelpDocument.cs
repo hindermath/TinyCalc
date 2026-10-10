@@ -13,6 +13,12 @@ internal sealed class HelpDocument
 
     public string this[int index] => _pages[index];
 
+    internal static string ResolveBundledPath(string baseDirectory)
+    {
+        var direct = Path.Combine(baseDirectory, "CALC.HLP");
+        return File.Exists(direct) ? direct : Path.Combine(baseDirectory, "Resources", "CALC.HLP");
+    }
+
     public static HelpDocument Load(string path)
     {
         if (!File.Exists(path))

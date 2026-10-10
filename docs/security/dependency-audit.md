@@ -218,3 +218,47 @@ not a new online-registry scan. The unchanged graph also binds the prior
 online result with zero known findings. No local Dependabot, Renovate, or
 central Dependency-Track ingestion was found. Any known critical CVE blocks
 delivery.
+
+## Feature-006-Preflight 2026-10-10 / Feature 006 preflight 2026-10-10
+
+### Deutscher Prüfblock
+
+Auf dem lokalen Implementierungsbranch wurde ausschließlich NuGet.org verwendet.
+Die vier ausdrücklich genehmigten Lockdateien binden dieselben Paket-IDs und
+Versionen wie der frühere geprüfte Graph: Core 0, TUI 24, Core.Tests 14,
+Tui.Tests 38. Locked Restore erfolgreich; keine automatischen Upgrades oder
+neuen Abhängigkeiten. Die aktuelle Online-Abfrage mit `--vulnerable
+--include-transitive --no-restore --source https://api.nuget.org/v3/index.json`
+endet mit Exit 0 und meldet in keinem Projekt einen bekannten Fund.
+
+Die Outdated-Abfrage derselben Quelle endet ebenfalls mit Exit 0 und nennt
+neuere Versionen, unter anderem Terminal.Gui 2.5.0 und Markdig 1.4.0. Keine
+dieser Wartungsinformationen autorisiert einen Versionswechsel. Die 24
+ausgelieferten NUSPEC-Dateien stimmen bytegenau mit den historischen Lizenzhashes
+überein: 23 MIT, eine BSD-2-Clause, null unbekannte oder unvereinbare Lizenzen.
+Nachweise, Befehle und Lockhashes:
+[Paket-Preflight](../../specs/006-tui-functional-contract/evidence/dependency-preflight.md).
+
+T008: Im Repository keine Dependabot-/Renovate-Konfiguration und kein
+genehmigter Dependency-Track-Endpoint gefunden. Status Open, Owner
+Repository-Maintenance/Thorsten, bestehender Zieltermin 2026-12-31. Aktion:
+separaten genehmigten Automatisierungs-/Endpoint-Scope festlegen; Trigger bei
+Paket-, Registry-, Advisory-, SDK- oder Releaseänderung. Kein Dienst, Konto,
+Server oder neuer Provider eingerichtet. Diese dispositionierte Pflegelücke
+ersetzt keinen aktuellen CVE-/Lizenznachweis und ist keine technische Ausnahme.
+
+### English review block
+
+The authorized four locks preserve the reviewed package graph exactly, with
+0/24/14/38 packages per project. Locked restore and live vulnerability/outdated
+queries against NuGet.org exited zero. No known vulnerable package was reported.
+Newer versions are maintenance signals, not upgrade authority. All 24 shipped
+NUSPEC hashes and licences match the historical approval: 23 MIT and one
+BSD-2-Clause, with no unknown or incompatible licence. The linked preflight
+records commands and lock hashes; the authenticated user source was excluded.
+
+No repository update automation or approved Dependency-Track endpoint was found.
+The existing Open maintenance action remains owned by Thorsten/repository
+maintenance, due 2026-12-31 and reopened by package/source/advisory/SDK/release
+changes. A separate approved scope must select automation or ingestion; no
+service or provider was installed. This disposition never waives a material gate.

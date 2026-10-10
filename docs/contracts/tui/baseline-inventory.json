@@ -1,0 +1,3722 @@
+{
+  "schemaVersion": "1.0",
+  "revision": 1,
+  "originCommit": "ffc3d56a8975341a686ff6985570369abefcfd2a",
+  "intakeHash": "c07016800b9e02e56f123ed6af187d0b5fedd22c1689a1b8909fcc6e8f70c6ac",
+  "semanticsRef": "specs/006-tui-functional-contract/spec.md",
+  "semanticsHash": "684dd5ac160ef3f7883c4a7a176e76c153bcd6e73114a6b070113c35a62c216f",
+  "sources": [
+    {
+      "path": "src/MicroCalc.Tui/Program.cs",
+      "sha256": "18e089937a1103ff4c85678a2f3c32c4e57c1df141c10d137992fccaa78d40a2",
+      "anchor": "BuildWindow / HandleKey / BuildMenu / PromptText / ShowHelp"
+    },
+    {
+      "path": "README.md",
+      "sha256": "8cdf527d1929f9d71e1b3483cb4c594855b5946fdf190cee5813cd3c25eb2517",
+      "anchor": "Funktionsumfang der Portierung"
+    },
+    {
+      "path": "src/MicroCalc.Tui/Resources/CALC.HLP",
+      "sha256": "b185b491e29cb0f0cd8dbad823353b614d8da0ee3dc463c657e29971219a2b3a",
+      "anchor": "Summary of MicroCalc / Summary of commands / EXAMPLES"
+    },
+    {
+      "path": "CALC.HLP",
+      "sha256": "b185b491e29cb0f0cd8dbad823353b614d8da0ee3dc463c657e29971219a2b3a",
+      "anchor": "Summary of MicroCalc / Summary of commands / EXAMPLES"
+    },
+    {
+      "path": "docs/help/microcalc-help.md",
+      "sha256": "c6ba22dcb82b17f17b052a33b7ebc541b8cf759203a2eddedeaf247f456026f3",
+      "anchor": "Page 1 / Page 2 / Page 3 / Page 4 / Page 5 / Page 6 / Page 7 / Page 8"
+    }
+  ],
+  "families": [
+    "APP",
+    "GRID",
+    "NAV-UP",
+    "NAV-DOWN",
+    "NAV-RIGHT",
+    "NAV-LEFT",
+    "EDIT",
+    "CELL",
+    "OP",
+    "REF",
+    "FUNC-LEGACY",
+    "FUNC-EXT",
+    "CMD",
+    "FILE",
+    "HELP",
+    "DIALOG",
+    "TERM"
+  ],
+  "offers": [
+    {
+      "id": "APP-interactive-start",
+      "family": "APP",
+      "context": "Application",
+      "input": "interactive-start",
+      "scenarioKind": "Success",
+      "oracle": "interactive-start",
+      "setup": {}
+    },
+    {
+      "id": "APP-smoke-ok",
+      "family": "APP",
+      "context": "Application",
+      "input": "smoke-ok",
+      "scenarioKind": "Success",
+      "oracle": "SMOKE_OK; exit 0",
+      "setup": {}
+    },
+    {
+      "id": "APP-smoke-fail",
+      "family": "APP",
+      "context": "Application",
+      "input": "smoke-fail",
+      "scenarioKind": "Error",
+      "oracle": "SMOKE_FAIL; exit 1; bounded explanation",
+      "setup": {}
+    },
+    {
+      "id": "APP-ordered-quit",
+      "family": "APP",
+      "context": "Application",
+      "input": "ordered-quit",
+      "scenarioKind": "Success",
+      "oracle": "ordered-quit",
+      "setup": {}
+    },
+    {
+      "id": "APP-terminal-restoration",
+      "family": "APP",
+      "context": "Application",
+      "input": "terminal-restoration",
+      "scenarioKind": "Success",
+      "oracle": "terminal-restoration",
+      "setup": {}
+    },
+    {
+      "id": "GRID-bounds-A1-G21",
+      "family": "GRID",
+      "context": "Grid",
+      "input": "observe",
+      "scenarioKind": "Success",
+      "oracle": "bounds-A1-G21",
+      "setup": {}
+    },
+    {
+      "id": "GRID-headers-A-G-01-21",
+      "family": "GRID",
+      "context": "Grid",
+      "input": "observe",
+      "scenarioKind": "Success",
+      "oracle": "headers-A-G-01-21",
+      "setup": {}
+    },
+    {
+      "id": "GRID-active-cell",
+      "family": "GRID",
+      "context": "Grid",
+      "input": "observe",
+      "scenarioKind": "Success",
+      "oracle": "active-cell",
+      "setup": {}
+    },
+    {
+      "id": "GRID-type-status",
+      "family": "GRID",
+      "context": "Grid",
+      "input": "observe",
+      "scenarioKind": "Success",
+      "oracle": "type-status",
+      "setup": {}
+    },
+    {
+      "id": "GRID-autocalc-status",
+      "family": "GRID",
+      "context": "Grid",
+      "input": "observe",
+      "scenarioKind": "Success",
+      "oracle": "autocalc-status",
+      "setup": {}
+    },
+    {
+      "id": "GRID-edge-render",
+      "family": "GRID",
+      "context": "Grid",
+      "input": "observe",
+      "scenarioKind": "Success",
+      "oracle": "edge-render",
+      "setup": {}
+    },
+    {
+      "id": "NAV-UP-up-interior",
+      "family": "NAV-UP",
+      "context": "Grid",
+      "input": "Up",
+      "scenarioKind": "Success",
+      "oracle": "selection=B1",
+      "setup": {
+        "selection": "B2"
+      }
+    },
+    {
+      "id": "NAV-UP-up-edge",
+      "family": "NAV-UP",
+      "context": "Grid",
+      "input": "Up",
+      "scenarioKind": "Success",
+      "oracle": "selection=B21",
+      "setup": {
+        "selection": "B1"
+      }
+    },
+    {
+      "id": "NAV-UP-ctrl-e-interior",
+      "family": "NAV-UP",
+      "context": "Grid",
+      "input": "Ctrl-E",
+      "scenarioKind": "Success",
+      "oracle": "selection=B1",
+      "setup": {
+        "selection": "B2"
+      }
+    },
+    {
+      "id": "NAV-UP-ctrl-e-edge",
+      "family": "NAV-UP",
+      "context": "Grid",
+      "input": "Ctrl-E",
+      "scenarioKind": "Success",
+      "oracle": "selection=B21",
+      "setup": {
+        "selection": "B1"
+      }
+    },
+    {
+      "id": "NAV-DOWN-down-interior",
+      "family": "NAV-DOWN",
+      "context": "Grid",
+      "input": "Down",
+      "scenarioKind": "Success",
+      "oracle": "selection=B3",
+      "setup": {
+        "selection": "B2"
+      }
+    },
+    {
+      "id": "NAV-DOWN-down-edge",
+      "family": "NAV-DOWN",
+      "context": "Grid",
+      "input": "Down",
+      "scenarioKind": "Success",
+      "oracle": "selection=B1",
+      "setup": {
+        "selection": "B21"
+      }
+    },
+    {
+      "id": "NAV-DOWN-ctrl-x-interior",
+      "family": "NAV-DOWN",
+      "context": "Grid",
+      "input": "Ctrl-X",
+      "scenarioKind": "Success",
+      "oracle": "selection=B3",
+      "setup": {
+        "selection": "B2"
+      }
+    },
+    {
+      "id": "NAV-DOWN-ctrl-x-edge",
+      "family": "NAV-DOWN",
+      "context": "Grid",
+      "input": "Ctrl-X",
+      "scenarioKind": "Success",
+      "oracle": "selection=B1",
+      "setup": {
+        "selection": "B21"
+      }
+    },
+    {
+      "id": "NAV-DOWN-ctrl-j-interior",
+      "family": "NAV-DOWN",
+      "context": "Grid",
+      "input": "Ctrl-J",
+      "scenarioKind": "Success",
+      "oracle": "selection=B3",
+      "setup": {
+        "selection": "B2"
+      }
+    },
+    {
+      "id": "NAV-DOWN-ctrl-j-edge",
+      "family": "NAV-DOWN",
+      "context": "Grid",
+      "input": "Ctrl-J",
+      "scenarioKind": "Success",
+      "oracle": "selection=B1",
+      "setup": {
+        "selection": "B21"
+      }
+    },
+    {
+      "id": "NAV-RIGHT-right-interior",
+      "family": "NAV-RIGHT",
+      "context": "Grid",
+      "input": "Right",
+      "scenarioKind": "Success",
+      "oracle": "selection=C2",
+      "setup": {
+        "selection": "B2"
+      }
+    },
+    {
+      "id": "NAV-RIGHT-right-edge",
+      "family": "NAV-RIGHT",
+      "context": "Grid",
+      "input": "Right",
+      "scenarioKind": "Success",
+      "oracle": "selection=A3",
+      "setup": {
+        "selection": "G2"
+      }
+    },
+    {
+      "id": "NAV-RIGHT-ctrl-d-interior",
+      "family": "NAV-RIGHT",
+      "context": "Grid",
+      "input": "Ctrl-D",
+      "scenarioKind": "Success",
+      "oracle": "selection=C2",
+      "setup": {
+        "selection": "B2"
+      }
+    },
+    {
+      "id": "NAV-RIGHT-ctrl-d-edge",
+      "family": "NAV-RIGHT",
+      "context": "Grid",
+      "input": "Ctrl-D",
+      "scenarioKind": "Success",
+      "oracle": "selection=A3",
+      "setup": {
+        "selection": "G2"
+      }
+    },
+    {
+      "id": "NAV-RIGHT-ctrl-m-interior",
+      "family": "NAV-RIGHT",
+      "context": "Grid",
+      "input": "Ctrl-M",
+      "scenarioKind": "Success",
+      "oracle": "selection=C2",
+      "setup": {
+        "selection": "B2"
+      }
+    },
+    {
+      "id": "NAV-RIGHT-ctrl-m-edge",
+      "family": "NAV-RIGHT",
+      "context": "Grid",
+      "input": "Ctrl-M",
+      "scenarioKind": "Success",
+      "oracle": "selection=A3",
+      "setup": {
+        "selection": "G2"
+      }
+    },
+    {
+      "id": "NAV-RIGHT-enter-interior",
+      "family": "NAV-RIGHT",
+      "context": "Grid",
+      "input": "Enter",
+      "scenarioKind": "Success",
+      "oracle": "selection=C2",
+      "setup": {
+        "selection": "B2"
+      }
+    },
+    {
+      "id": "NAV-RIGHT-enter-edge",
+      "family": "NAV-RIGHT",
+      "context": "Grid",
+      "input": "Enter",
+      "scenarioKind": "Success",
+      "oracle": "selection=A3",
+      "setup": {
+        "selection": "G2"
+      }
+    },
+    {
+      "id": "NAV-RIGHT-ctrl-g-interior",
+      "family": "NAV-RIGHT",
+      "context": "Grid",
+      "input": "Ctrl-G",
+      "scenarioKind": "Success",
+      "oracle": "selection=C2",
+      "setup": {
+        "selection": "B2"
+      }
+    },
+    {
+      "id": "NAV-RIGHT-ctrl-g-edge",
+      "family": "NAV-RIGHT",
+      "context": "Grid",
+      "input": "Ctrl-G",
+      "scenarioKind": "Success",
+      "oracle": "selection=A3",
+      "setup": {
+        "selection": "G2"
+      }
+    },
+    {
+      "id": "NAV-LEFT-left-interior",
+      "family": "NAV-LEFT",
+      "context": "Grid",
+      "input": "Left",
+      "scenarioKind": "Success",
+      "oracle": "selection=A2",
+      "setup": {
+        "selection": "B2"
+      }
+    },
+    {
+      "id": "NAV-LEFT-left-edge",
+      "family": "NAV-LEFT",
+      "context": "Grid",
+      "input": "Left",
+      "scenarioKind": "Success",
+      "oracle": "selection=G1",
+      "setup": {
+        "selection": "A2"
+      }
+    },
+    {
+      "id": "NAV-LEFT-ctrl-s-interior",
+      "family": "NAV-LEFT",
+      "context": "Grid",
+      "input": "Ctrl-S",
+      "scenarioKind": "Success",
+      "oracle": "selection=A2",
+      "setup": {
+        "selection": "B2"
+      }
+    },
+    {
+      "id": "NAV-LEFT-ctrl-s-edge",
+      "family": "NAV-LEFT",
+      "context": "Grid",
+      "input": "Ctrl-S",
+      "scenarioKind": "Success",
+      "oracle": "selection=G1",
+      "setup": {
+        "selection": "A2"
+      }
+    },
+    {
+      "id": "NAV-LEFT-ctrl-a-interior",
+      "family": "NAV-LEFT",
+      "context": "Grid",
+      "input": "Ctrl-A",
+      "scenarioKind": "Success",
+      "oracle": "selection=A2",
+      "setup": {
+        "selection": "B2"
+      }
+    },
+    {
+      "id": "NAV-LEFT-ctrl-a-edge",
+      "family": "NAV-LEFT",
+      "context": "Grid",
+      "input": "Ctrl-A",
+      "scenarioKind": "Success",
+      "oracle": "selection=G1",
+      "setup": {
+        "selection": "A2"
+      }
+    },
+    {
+      "id": "EDIT-existing",
+      "family": "EDIT",
+      "context": "Grid",
+      "input": "Esc",
+      "scenarioKind": "Success",
+      "oracle": "Editor seeded with existing Contents; focus input",
+      "setup": {}
+    },
+    {
+      "id": "EDIT-ascii-32",
+      "family": "EDIT",
+      "context": "Grid",
+      "input": " ",
+      "scenarioKind": "Success",
+      "oracle": "Editor seeded with exact character; focus input",
+      "setup": {}
+    },
+    {
+      "id": "EDIT-ascii-33",
+      "family": "EDIT",
+      "context": "Grid",
+      "input": "!",
+      "scenarioKind": "Success",
+      "oracle": "Editor seeded with exact character; focus input",
+      "setup": {}
+    },
+    {
+      "id": "EDIT-ascii-34",
+      "family": "EDIT",
+      "context": "Grid",
+      "input": "\"",
+      "scenarioKind": "Success",
+      "oracle": "Editor seeded with exact character; focus input",
+      "setup": {}
+    },
+    {
+      "id": "EDIT-ascii-35",
+      "family": "EDIT",
+      "context": "Grid",
+      "input": "#",
+      "scenarioKind": "Success",
+      "oracle": "Editor seeded with exact character; focus input",
+      "setup": {}
+    },
+    {
+      "id": "EDIT-ascii-36",
+      "family": "EDIT",
+      "context": "Grid",
+      "input": "$",
+      "scenarioKind": "Success",
+      "oracle": "Editor seeded with exact character; focus input",
+      "setup": {}
+    },
+    {
+      "id": "EDIT-ascii-37",
+      "family": "EDIT",
+      "context": "Grid",
+      "input": "%",
+      "scenarioKind": "Success",
+      "oracle": "Editor seeded with exact character; focus input",
+      "setup": {}
+    },
+    {
+      "id": "EDIT-ascii-38",
+      "family": "EDIT",
+      "context": "Grid",
+      "input": "&",
+      "scenarioKind": "Success",
+      "oracle": "Editor seeded with exact character; focus input",
+      "setup": {}
+    },
+    {
+      "id": "EDIT-ascii-39",
+      "family": "EDIT",
+      "context": "Grid",
+      "input": "'",
+      "scenarioKind": "Success",
+      "oracle": "Editor seeded with exact character; focus input",
+      "setup": {}
+    },
+    {
+      "id": "EDIT-ascii-40",
+      "family": "EDIT",
+      "context": "Grid",
+      "input": "(",
+      "scenarioKind": "Success",
+      "oracle": "Editor seeded with exact character; focus input",
+      "setup": {}
+    },
+    {
+      "id": "EDIT-ascii-41",
+      "family": "EDIT",
+      "context": "Grid",
+      "input": ")",
+      "scenarioKind": "Success",
+      "oracle": "Editor seeded with exact character; focus input",
+      "setup": {}
+    },
+    {
+      "id": "EDIT-ascii-42",
+      "family": "EDIT",
+      "context": "Grid",
+      "input": "*",
+      "scenarioKind": "Success",
+      "oracle": "Editor seeded with exact character; focus input",
+      "setup": {}
+    },
+    {
+      "id": "EDIT-ascii-43",
+      "family": "EDIT",
+      "context": "Grid",
+      "input": "+",
+      "scenarioKind": "Success",
+      "oracle": "Editor seeded with exact character; focus input",
+      "setup": {}
+    },
+    {
+      "id": "EDIT-ascii-44",
+      "family": "EDIT",
+      "context": "Grid",
+      "input": ",",
+      "scenarioKind": "Success",
+      "oracle": "Editor seeded with exact character; focus input",
+      "setup": {}
+    },
+    {
+      "id": "EDIT-ascii-45",
+      "family": "EDIT",
+      "context": "Grid",
+      "input": "-",
+      "scenarioKind": "Success",
+      "oracle": "Editor seeded with exact character; focus input",
+      "setup": {}
+    },
+    {
+      "id": "EDIT-ascii-46",
+      "family": "EDIT",
+      "context": "Grid",
+      "input": ".",
+      "scenarioKind": "Success",
+      "oracle": "Editor seeded with exact character; focus input",
+      "setup": {}
+    },
+    {
+      "id": "EDIT-ascii-47",
+      "family": "EDIT",
+      "context": "Grid",
+      "input": "/",
+      "scenarioKind": "Success",
+      "oracle": "redraw and command palette; no editor",
+      "setup": {}
+    },
+    {
+      "id": "EDIT-ascii-48",
+      "family": "EDIT",
+      "context": "Grid",
+      "input": "0",
+      "scenarioKind": "Success",
+      "oracle": "Editor seeded with exact character; focus input",
+      "setup": {}
+    },
+    {
+      "id": "EDIT-ascii-49",
+      "family": "EDIT",
+      "context": "Grid",
+      "input": "1",
+      "scenarioKind": "Success",
+      "oracle": "Editor seeded with exact character; focus input",
+      "setup": {}
+    },
+    {
+      "id": "EDIT-ascii-50",
+      "family": "EDIT",
+      "context": "Grid",
+      "input": "2",
+      "scenarioKind": "Success",
+      "oracle": "Editor seeded with exact character; focus input",
+      "setup": {}
+    },
+    {
+      "id": "EDIT-ascii-51",
+      "family": "EDIT",
+      "context": "Grid",
+      "input": "3",
+      "scenarioKind": "Success",
+      "oracle": "Editor seeded with exact character; focus input",
+      "setup": {}
+    },
+    {
+      "id": "EDIT-ascii-52",
+      "family": "EDIT",
+      "context": "Grid",
+      "input": "4",
+      "scenarioKind": "Success",
+      "oracle": "Editor seeded with exact character; focus input",
+      "setup": {}
+    },
+    {
+      "id": "EDIT-ascii-53",
+      "family": "EDIT",
+      "context": "Grid",
+      "input": "5",
+      "scenarioKind": "Success",
+      "oracle": "Editor seeded with exact character; focus input",
+      "setup": {}
+    },
+    {
+      "id": "EDIT-ascii-54",
+      "family": "EDIT",
+      "context": "Grid",
+      "input": "6",
+      "scenarioKind": "Success",
+      "oracle": "Editor seeded with exact character; focus input",
+      "setup": {}
+    },
+    {
+      "id": "EDIT-ascii-55",
+      "family": "EDIT",
+      "context": "Grid",
+      "input": "7",
+      "scenarioKind": "Success",
+      "oracle": "Editor seeded with exact character; focus input",
+      "setup": {}
+    },
+    {
+      "id": "EDIT-ascii-56",
+      "family": "EDIT",
+      "context": "Grid",
+      "input": "8",
+      "scenarioKind": "Success",
+      "oracle": "Editor seeded with exact character; focus input",
+      "setup": {}
+    },
+    {
+      "id": "EDIT-ascii-57",
+      "family": "EDIT",
+      "context": "Grid",
+      "input": "9",
+      "scenarioKind": "Success",
+      "oracle": "Editor seeded with exact character; focus input",
+      "setup": {}
+    },
+    {
+      "id": "EDIT-ascii-58",
+      "family": "EDIT",
+      "context": "Grid",
+      "input": ":",
+      "scenarioKind": "Success",
+      "oracle": "Editor seeded with exact character; focus input",
+      "setup": {}
+    },
+    {
+      "id": "EDIT-ascii-59",
+      "family": "EDIT",
+      "context": "Grid",
+      "input": ";",
+      "scenarioKind": "Success",
+      "oracle": "Editor seeded with exact character; focus input",
+      "setup": {}
+    },
+    {
+      "id": "EDIT-ascii-60",
+      "family": "EDIT",
+      "context": "Grid",
+      "input": "<",
+      "scenarioKind": "Success",
+      "oracle": "Editor seeded with exact character; focus input",
+      "setup": {}
+    },
+    {
+      "id": "EDIT-ascii-61",
+      "family": "EDIT",
+      "context": "Grid",
+      "input": "=",
+      "scenarioKind": "Success",
+      "oracle": "Editor seeded with exact character; focus input",
+      "setup": {}
+    },
+    {
+      "id": "EDIT-ascii-62",
+      "family": "EDIT",
+      "context": "Grid",
+      "input": ">",
+      "scenarioKind": "Success",
+      "oracle": "Editor seeded with exact character; focus input",
+      "setup": {}
+    },
+    {
+      "id": "EDIT-ascii-63",
+      "family": "EDIT",
+      "context": "Grid",
+      "input": "?",
+      "scenarioKind": "Success",
+      "oracle": "Editor seeded with exact character; focus input",
+      "setup": {}
+    },
+    {
+      "id": "EDIT-ascii-64",
+      "family": "EDIT",
+      "context": "Grid",
+      "input": "@",
+      "scenarioKind": "Success",
+      "oracle": "Editor seeded with exact character; focus input",
+      "setup": {}
+    },
+    {
+      "id": "EDIT-ascii-65",
+      "family": "EDIT",
+      "context": "Grid",
+      "input": "A",
+      "scenarioKind": "Success",
+      "oracle": "Editor seeded with exact character; focus input",
+      "setup": {}
+    },
+    {
+      "id": "EDIT-ascii-66",
+      "family": "EDIT",
+      "context": "Grid",
+      "input": "B",
+      "scenarioKind": "Success",
+      "oracle": "Editor seeded with exact character; focus input",
+      "setup": {}
+    },
+    {
+      "id": "EDIT-ascii-67",
+      "family": "EDIT",
+      "context": "Grid",
+      "input": "C",
+      "scenarioKind": "Success",
+      "oracle": "Editor seeded with exact character; focus input",
+      "setup": {}
+    },
+    {
+      "id": "EDIT-ascii-68",
+      "family": "EDIT",
+      "context": "Grid",
+      "input": "D",
+      "scenarioKind": "Success",
+      "oracle": "Editor seeded with exact character; focus input",
+      "setup": {}
+    },
+    {
+      "id": "EDIT-ascii-69",
+      "family": "EDIT",
+      "context": "Grid",
+      "input": "E",
+      "scenarioKind": "Success",
+      "oracle": "Editor seeded with exact character; focus input",
+      "setup": {}
+    },
+    {
+      "id": "EDIT-ascii-70",
+      "family": "EDIT",
+      "context": "Grid",
+      "input": "F",
+      "scenarioKind": "Success",
+      "oracle": "Editor seeded with exact character; focus input",
+      "setup": {}
+    },
+    {
+      "id": "EDIT-ascii-71",
+      "family": "EDIT",
+      "context": "Grid",
+      "input": "G",
+      "scenarioKind": "Success",
+      "oracle": "Editor seeded with exact character; focus input",
+      "setup": {}
+    },
+    {
+      "id": "EDIT-ascii-72",
+      "family": "EDIT",
+      "context": "Grid",
+      "input": "H",
+      "scenarioKind": "Success",
+      "oracle": "Editor seeded with exact character; focus input",
+      "setup": {}
+    },
+    {
+      "id": "EDIT-ascii-73",
+      "family": "EDIT",
+      "context": "Grid",
+      "input": "I",
+      "scenarioKind": "Success",
+      "oracle": "Editor seeded with exact character; focus input",
+      "setup": {}
+    },
+    {
+      "id": "EDIT-ascii-74",
+      "family": "EDIT",
+      "context": "Grid",
+      "input": "J",
+      "scenarioKind": "Success",
+      "oracle": "Editor seeded with exact character; focus input",
+      "setup": {}
+    },
+    {
+      "id": "EDIT-ascii-75",
+      "family": "EDIT",
+      "context": "Grid",
+      "input": "K",
+      "scenarioKind": "Success",
+      "oracle": "Editor seeded with exact character; focus input",
+      "setup": {}
+    },
+    {
+      "id": "EDIT-ascii-76",
+      "family": "EDIT",
+      "context": "Grid",
+      "input": "L",
+      "scenarioKind": "Success",
+      "oracle": "Editor seeded with exact character; focus input",
+      "setup": {}
+    },
+    {
+      "id": "EDIT-ascii-77",
+      "family": "EDIT",
+      "context": "Grid",
+      "input": "M",
+      "scenarioKind": "Success",
+      "oracle": "Editor seeded with exact character; focus input",
+      "setup": {}
+    },
+    {
+      "id": "EDIT-ascii-78",
+      "family": "EDIT",
+      "context": "Grid",
+      "input": "N",
+      "scenarioKind": "Success",
+      "oracle": "Editor seeded with exact character; focus input",
+      "setup": {}
+    },
+    {
+      "id": "EDIT-ascii-79",
+      "family": "EDIT",
+      "context": "Grid",
+      "input": "O",
+      "scenarioKind": "Success",
+      "oracle": "Editor seeded with exact character; focus input",
+      "setup": {}
+    },
+    {
+      "id": "EDIT-ascii-80",
+      "family": "EDIT",
+      "context": "Grid",
+      "input": "P",
+      "scenarioKind": "Success",
+      "oracle": "Editor seeded with exact character; focus input",
+      "setup": {}
+    },
+    {
+      "id": "EDIT-ascii-81",
+      "family": "EDIT",
+      "context": "Grid",
+      "input": "Q",
+      "scenarioKind": "Success",
+      "oracle": "Editor seeded with exact character; focus input",
+      "setup": {}
+    },
+    {
+      "id": "EDIT-ascii-82",
+      "family": "EDIT",
+      "context": "Grid",
+      "input": "R",
+      "scenarioKind": "Success",
+      "oracle": "Editor seeded with exact character; focus input",
+      "setup": {}
+    },
+    {
+      "id": "EDIT-ascii-83",
+      "family": "EDIT",
+      "context": "Grid",
+      "input": "S",
+      "scenarioKind": "Success",
+      "oracle": "Editor seeded with exact character; focus input",
+      "setup": {}
+    },
+    {
+      "id": "EDIT-ascii-84",
+      "family": "EDIT",
+      "context": "Grid",
+      "input": "T",
+      "scenarioKind": "Success",
+      "oracle": "Editor seeded with exact character; focus input",
+      "setup": {}
+    },
+    {
+      "id": "EDIT-ascii-85",
+      "family": "EDIT",
+      "context": "Grid",
+      "input": "U",
+      "scenarioKind": "Success",
+      "oracle": "Editor seeded with exact character; focus input",
+      "setup": {}
+    },
+    {
+      "id": "EDIT-ascii-86",
+      "family": "EDIT",
+      "context": "Grid",
+      "input": "V",
+      "scenarioKind": "Success",
+      "oracle": "Editor seeded with exact character; focus input",
+      "setup": {}
+    },
+    {
+      "id": "EDIT-ascii-87",
+      "family": "EDIT",
+      "context": "Grid",
+      "input": "W",
+      "scenarioKind": "Success",
+      "oracle": "Editor seeded with exact character; focus input",
+      "setup": {}
+    },
+    {
+      "id": "EDIT-ascii-88",
+      "family": "EDIT",
+      "context": "Grid",
+      "input": "X",
+      "scenarioKind": "Success",
+      "oracle": "Editor seeded with exact character; focus input",
+      "setup": {}
+    },
+    {
+      "id": "EDIT-ascii-89",
+      "family": "EDIT",
+      "context": "Grid",
+      "input": "Y",
+      "scenarioKind": "Success",
+      "oracle": "Editor seeded with exact character; focus input",
+      "setup": {}
+    },
+    {
+      "id": "EDIT-ascii-90",
+      "family": "EDIT",
+      "context": "Grid",
+      "input": "Z",
+      "scenarioKind": "Success",
+      "oracle": "Editor seeded with exact character; focus input",
+      "setup": {}
+    },
+    {
+      "id": "EDIT-ascii-91",
+      "family": "EDIT",
+      "context": "Grid",
+      "input": "[",
+      "scenarioKind": "Success",
+      "oracle": "Editor seeded with exact character; focus input",
+      "setup": {}
+    },
+    {
+      "id": "EDIT-ascii-92",
+      "family": "EDIT",
+      "context": "Grid",
+      "input": "\\",
+      "scenarioKind": "Success",
+      "oracle": "Editor seeded with exact character; focus input",
+      "setup": {}
+    },
+    {
+      "id": "EDIT-ascii-93",
+      "family": "EDIT",
+      "context": "Grid",
+      "input": "]",
+      "scenarioKind": "Success",
+      "oracle": "Editor seeded with exact character; focus input",
+      "setup": {}
+    },
+    {
+      "id": "EDIT-ascii-94",
+      "family": "EDIT",
+      "context": "Grid",
+      "input": "^",
+      "scenarioKind": "Success",
+      "oracle": "Editor seeded with exact character; focus input",
+      "setup": {}
+    },
+    {
+      "id": "EDIT-ascii-95",
+      "family": "EDIT",
+      "context": "Grid",
+      "input": "_",
+      "scenarioKind": "Success",
+      "oracle": "Editor seeded with exact character; focus input",
+      "setup": {}
+    },
+    {
+      "id": "EDIT-ascii-96",
+      "family": "EDIT",
+      "context": "Grid",
+      "input": "`",
+      "scenarioKind": "Success",
+      "oracle": "Editor seeded with exact character; focus input",
+      "setup": {}
+    },
+    {
+      "id": "EDIT-ascii-97",
+      "family": "EDIT",
+      "context": "Grid",
+      "input": "a",
+      "scenarioKind": "Success",
+      "oracle": "Editor seeded with exact character; focus input",
+      "setup": {}
+    },
+    {
+      "id": "EDIT-ascii-98",
+      "family": "EDIT",
+      "context": "Grid",
+      "input": "b",
+      "scenarioKind": "Success",
+      "oracle": "Editor seeded with exact character; focus input",
+      "setup": {}
+    },
+    {
+      "id": "EDIT-ascii-99",
+      "family": "EDIT",
+      "context": "Grid",
+      "input": "c",
+      "scenarioKind": "Success",
+      "oracle": "Editor seeded with exact character; focus input",
+      "setup": {}
+    },
+    {
+      "id": "EDIT-ascii-100",
+      "family": "EDIT",
+      "context": "Grid",
+      "input": "d",
+      "scenarioKind": "Success",
+      "oracle": "Editor seeded with exact character; focus input",
+      "setup": {}
+    },
+    {
+      "id": "EDIT-ascii-101",
+      "family": "EDIT",
+      "context": "Grid",
+      "input": "e",
+      "scenarioKind": "Success",
+      "oracle": "Editor seeded with exact character; focus input",
+      "setup": {}
+    },
+    {
+      "id": "EDIT-ascii-102",
+      "family": "EDIT",
+      "context": "Grid",
+      "input": "f",
+      "scenarioKind": "Success",
+      "oracle": "Editor seeded with exact character; focus input",
+      "setup": {}
+    },
+    {
+      "id": "EDIT-ascii-103",
+      "family": "EDIT",
+      "context": "Grid",
+      "input": "g",
+      "scenarioKind": "Success",
+      "oracle": "Editor seeded with exact character; focus input",
+      "setup": {}
+    },
+    {
+      "id": "EDIT-ascii-104",
+      "family": "EDIT",
+      "context": "Grid",
+      "input": "h",
+      "scenarioKind": "Success",
+      "oracle": "Editor seeded with exact character; focus input",
+      "setup": {}
+    },
+    {
+      "id": "EDIT-ascii-105",
+      "family": "EDIT",
+      "context": "Grid",
+      "input": "i",
+      "scenarioKind": "Success",
+      "oracle": "Editor seeded with exact character; focus input",
+      "setup": {}
+    },
+    {
+      "id": "EDIT-ascii-106",
+      "family": "EDIT",
+      "context": "Grid",
+      "input": "j",
+      "scenarioKind": "Success",
+      "oracle": "Editor seeded with exact character; focus input",
+      "setup": {}
+    },
+    {
+      "id": "EDIT-ascii-107",
+      "family": "EDIT",
+      "context": "Grid",
+      "input": "k",
+      "scenarioKind": "Success",
+      "oracle": "Editor seeded with exact character; focus input",
+      "setup": {}
+    },
+    {
+      "id": "EDIT-ascii-108",
+      "family": "EDIT",
+      "context": "Grid",
+      "input": "l",
+      "scenarioKind": "Success",
+      "oracle": "Editor seeded with exact character; focus input",
+      "setup": {}
+    },
+    {
+      "id": "EDIT-ascii-109",
+      "family": "EDIT",
+      "context": "Grid",
+      "input": "m",
+      "scenarioKind": "Success",
+      "oracle": "Editor seeded with exact character; focus input",
+      "setup": {}
+    },
+    {
+      "id": "EDIT-ascii-110",
+      "family": "EDIT",
+      "context": "Grid",
+      "input": "n",
+      "scenarioKind": "Success",
+      "oracle": "Editor seeded with exact character; focus input",
+      "setup": {}
+    },
+    {
+      "id": "EDIT-ascii-111",
+      "family": "EDIT",
+      "context": "Grid",
+      "input": "o",
+      "scenarioKind": "Success",
+      "oracle": "Editor seeded with exact character; focus input",
+      "setup": {}
+    },
+    {
+      "id": "EDIT-ascii-112",
+      "family": "EDIT",
+      "context": "Grid",
+      "input": "p",
+      "scenarioKind": "Success",
+      "oracle": "Editor seeded with exact character; focus input",
+      "setup": {}
+    },
+    {
+      "id": "EDIT-ascii-113",
+      "family": "EDIT",
+      "context": "Grid",
+      "input": "q",
+      "scenarioKind": "Success",
+      "oracle": "Editor seeded with exact character; focus input",
+      "setup": {}
+    },
+    {
+      "id": "EDIT-ascii-114",
+      "family": "EDIT",
+      "context": "Grid",
+      "input": "r",
+      "scenarioKind": "Success",
+      "oracle": "Editor seeded with exact character; focus input",
+      "setup": {}
+    },
+    {
+      "id": "EDIT-ascii-115",
+      "family": "EDIT",
+      "context": "Grid",
+      "input": "s",
+      "scenarioKind": "Success",
+      "oracle": "Editor seeded with exact character; focus input",
+      "setup": {}
+    },
+    {
+      "id": "EDIT-ascii-116",
+      "family": "EDIT",
+      "context": "Grid",
+      "input": "t",
+      "scenarioKind": "Success",
+      "oracle": "Editor seeded with exact character; focus input",
+      "setup": {}
+    },
+    {
+      "id": "EDIT-ascii-117",
+      "family": "EDIT",
+      "context": "Grid",
+      "input": "u",
+      "scenarioKind": "Success",
+      "oracle": "Editor seeded with exact character; focus input",
+      "setup": {}
+    },
+    {
+      "id": "EDIT-ascii-118",
+      "family": "EDIT",
+      "context": "Grid",
+      "input": "v",
+      "scenarioKind": "Success",
+      "oracle": "Editor seeded with exact character; focus input",
+      "setup": {}
+    },
+    {
+      "id": "EDIT-ascii-119",
+      "family": "EDIT",
+      "context": "Grid",
+      "input": "w",
+      "scenarioKind": "Success",
+      "oracle": "Editor seeded with exact character; focus input",
+      "setup": {}
+    },
+    {
+      "id": "EDIT-ascii-120",
+      "family": "EDIT",
+      "context": "Grid",
+      "input": "x",
+      "scenarioKind": "Success",
+      "oracle": "Editor seeded with exact character; focus input",
+      "setup": {}
+    },
+    {
+      "id": "EDIT-ascii-121",
+      "family": "EDIT",
+      "context": "Grid",
+      "input": "y",
+      "scenarioKind": "Success",
+      "oracle": "Editor seeded with exact character; focus input",
+      "setup": {}
+    },
+    {
+      "id": "EDIT-ascii-122",
+      "family": "EDIT",
+      "context": "Grid",
+      "input": "z",
+      "scenarioKind": "Success",
+      "oracle": "Editor seeded with exact character; focus input",
+      "setup": {}
+    },
+    {
+      "id": "EDIT-ascii-123",
+      "family": "EDIT",
+      "context": "Grid",
+      "input": "{",
+      "scenarioKind": "Success",
+      "oracle": "Editor seeded with exact character; focus input",
+      "setup": {}
+    },
+    {
+      "id": "EDIT-ascii-124",
+      "family": "EDIT",
+      "context": "Grid",
+      "input": "|",
+      "scenarioKind": "Success",
+      "oracle": "Editor seeded with exact character; focus input",
+      "setup": {}
+    },
+    {
+      "id": "EDIT-ascii-125",
+      "family": "EDIT",
+      "context": "Grid",
+      "input": "}",
+      "scenarioKind": "Success",
+      "oracle": "Editor seeded with exact character; focus input",
+      "setup": {}
+    },
+    {
+      "id": "EDIT-ascii-126",
+      "family": "EDIT",
+      "context": "Grid",
+      "input": "~",
+      "scenarioKind": "Success",
+      "oracle": "Editor seeded with exact character; focus input",
+      "setup": {}
+    },
+    {
+      "id": "EDIT-slash-literal",
+      "family": "EDIT",
+      "context": "Editor",
+      "input": "/",
+      "scenarioKind": "Success",
+      "oracle": "insert slash literal",
+      "setup": {}
+    },
+    {
+      "id": "EDIT-slash-division",
+      "family": "EDIT",
+      "context": "Editor",
+      "input": "(8/2) Enter",
+      "scenarioKind": "Success",
+      "oracle": "numeric value 4",
+      "setup": {}
+    },
+    {
+      "id": "EDIT-accept",
+      "family": "EDIT",
+      "context": "Editor",
+      "input": "Enter",
+      "scenarioKind": "Success",
+      "oracle": "commit current input; close dialog; focus Grid",
+      "setup": {}
+    },
+    {
+      "id": "EDIT-cancel",
+      "family": "EDIT",
+      "context": "Editor",
+      "input": "Esc",
+      "scenarioKind": "Cancel",
+      "oracle": "preserve complete sheet/flags/formats/selection/autocalc; focus Grid",
+      "setup": {}
+    },
+    {
+      "id": "EDIT-ctrl-s-interior",
+      "family": "EDIT",
+      "context": "Editor",
+      "input": "Ctrl-S",
+      "scenarioKind": "Success",
+      "oracle": "left; interior boundary; exact Contents/caret/mode",
+      "setup": {}
+    },
+    {
+      "id": "EDIT-ctrl-s-edge",
+      "family": "EDIT",
+      "context": "Editor",
+      "input": "Ctrl-S",
+      "scenarioKind": "Success",
+      "oracle": "left; edge boundary; exact Contents/caret/mode",
+      "setup": {}
+    },
+    {
+      "id": "EDIT-ctrl-d-interior",
+      "family": "EDIT",
+      "context": "Editor",
+      "input": "Ctrl-D",
+      "scenarioKind": "Success",
+      "oracle": "right; interior boundary; exact Contents/caret/mode",
+      "setup": {}
+    },
+    {
+      "id": "EDIT-ctrl-d-edge",
+      "family": "EDIT",
+      "context": "Editor",
+      "input": "Ctrl-D",
+      "scenarioKind": "Success",
+      "oracle": "right; edge boundary; exact Contents/caret/mode",
+      "setup": {}
+    },
+    {
+      "id": "EDIT-ctrl-a-interior",
+      "family": "EDIT",
+      "context": "Editor",
+      "input": "Ctrl-A",
+      "scenarioKind": "Success",
+      "oracle": "home; interior boundary; exact Contents/caret/mode",
+      "setup": {}
+    },
+    {
+      "id": "EDIT-ctrl-a-edge",
+      "family": "EDIT",
+      "context": "Editor",
+      "input": "Ctrl-A",
+      "scenarioKind": "Success",
+      "oracle": "home; edge boundary; exact Contents/caret/mode",
+      "setup": {}
+    },
+    {
+      "id": "EDIT-ctrl-f-interior",
+      "family": "EDIT",
+      "context": "Editor",
+      "input": "Ctrl-F",
+      "scenarioKind": "Success",
+      "oracle": "end; interior boundary; exact Contents/caret/mode",
+      "setup": {}
+    },
+    {
+      "id": "EDIT-ctrl-f-edge",
+      "family": "EDIT",
+      "context": "Editor",
+      "input": "Ctrl-F",
+      "scenarioKind": "Success",
+      "oracle": "end; edge boundary; exact Contents/caret/mode",
+      "setup": {}
+    },
+    {
+      "id": "EDIT-del-interior",
+      "family": "EDIT",
+      "context": "Editor",
+      "input": "DEL",
+      "scenarioKind": "Success",
+      "oracle": "delete-left; interior boundary; exact Contents/caret/mode",
+      "setup": {}
+    },
+    {
+      "id": "EDIT-del-edge",
+      "family": "EDIT",
+      "context": "Editor",
+      "input": "DEL",
+      "scenarioKind": "Success",
+      "oracle": "delete-left; edge boundary; exact Contents/caret/mode",
+      "setup": {}
+    },
+    {
+      "id": "EDIT-ctrl-g-interior",
+      "family": "EDIT",
+      "context": "Editor",
+      "input": "Ctrl-G",
+      "scenarioKind": "Success",
+      "oracle": "delete-right; interior boundary; exact Contents/caret/mode",
+      "setup": {}
+    },
+    {
+      "id": "EDIT-ctrl-g-edge",
+      "family": "EDIT",
+      "context": "Editor",
+      "input": "Ctrl-G",
+      "scenarioKind": "Success",
+      "oracle": "delete-right; edge boundary; exact Contents/caret/mode",
+      "setup": {}
+    },
+    {
+      "id": "EDIT-ctrl-v-interior",
+      "family": "EDIT",
+      "context": "Editor",
+      "input": "Ctrl-V",
+      "scenarioKind": "Success",
+      "oracle": "toggle-insert; interior boundary; exact Contents/caret/mode",
+      "setup": {}
+    },
+    {
+      "id": "EDIT-ctrl-v-edge",
+      "family": "EDIT",
+      "context": "Editor",
+      "input": "Ctrl-V",
+      "scenarioKind": "Success",
+      "oracle": "toggle-insert; edge boundary; exact Contents/caret/mode",
+      "setup": {}
+    },
+    {
+      "id": "EDIT-ins-interior",
+      "family": "EDIT",
+      "context": "Editor",
+      "input": "Ins",
+      "scenarioKind": "Success",
+      "oracle": "toggle-insert; interior boundary; exact Contents/caret/mode",
+      "setup": {}
+    },
+    {
+      "id": "EDIT-ins-edge",
+      "family": "EDIT",
+      "context": "Editor",
+      "input": "Ins",
+      "scenarioKind": "Success",
+      "oracle": "toggle-insert; edge boundary; exact Contents/caret/mode",
+      "setup": {}
+    },
+    {
+      "id": "CELL-empty",
+      "family": "CELL",
+      "context": "Editor",
+      "input": "empty",
+      "scenarioKind": "Success",
+      "oracle": "empty visible cell/status and independent domain oracle",
+      "setup": {}
+    },
+    {
+      "id": "CELL-text",
+      "family": "CELL",
+      "context": "Editor",
+      "input": "text",
+      "scenarioKind": "Success",
+      "oracle": "text visible cell/status and independent domain oracle",
+      "setup": {}
+    },
+    {
+      "id": "CELL-number",
+      "family": "CELL",
+      "context": "Editor",
+      "input": "number",
+      "scenarioKind": "Success",
+      "oracle": "number visible cell/status and independent domain oracle",
+      "setup": {}
+    },
+    {
+      "id": "CELL-formula",
+      "family": "CELL",
+      "context": "Editor",
+      "input": "formula",
+      "scenarioKind": "Success",
+      "oracle": "formula visible cell/status and independent domain oracle",
+      "setup": {}
+    },
+    {
+      "id": "CELL-flags",
+      "family": "CELL",
+      "context": "Editor",
+      "input": "flags",
+      "scenarioKind": "Success",
+      "oracle": "flags visible cell/status and independent domain oracle",
+      "setup": {}
+    },
+    {
+      "id": "CELL-overflow",
+      "family": "CELL",
+      "context": "Editor",
+      "input": "overflow",
+      "scenarioKind": "Success",
+      "oracle": "overflow visible cell/status and independent domain oracle",
+      "setup": {}
+    },
+    {
+      "id": "CELL-width-min",
+      "family": "CELL",
+      "context": "Editor",
+      "input": "width-min",
+      "scenarioKind": "Success",
+      "oracle": "width-min visible cell/status and independent domain oracle",
+      "setup": {}
+    },
+    {
+      "id": "CELL-width-max",
+      "family": "CELL",
+      "context": "Editor",
+      "input": "width-max",
+      "scenarioKind": "Success",
+      "oracle": "width-max visible cell/status and independent domain oracle",
+      "setup": {}
+    },
+    {
+      "id": "CELL-decimals-scientific",
+      "family": "CELL",
+      "context": "Editor",
+      "input": "decimals-scientific",
+      "scenarioKind": "Success",
+      "oracle": "decimals-scientific visible cell/status and independent domain oracle",
+      "setup": {}
+    },
+    {
+      "id": "CELL-decimals-min",
+      "family": "CELL",
+      "context": "Editor",
+      "input": "decimals-min",
+      "scenarioKind": "Success",
+      "oracle": "decimals-min visible cell/status and independent domain oracle",
+      "setup": {}
+    },
+    {
+      "id": "CELL-decimals-max",
+      "family": "CELL",
+      "context": "Editor",
+      "input": "decimals-max",
+      "scenarioKind": "Success",
+      "oracle": "decimals-max visible cell/status and independent domain oracle",
+      "setup": {}
+    },
+    {
+      "id": "CELL-locked-formula",
+      "family": "CELL",
+      "context": "Editor",
+      "input": "locked-formula",
+      "scenarioKind": "Success",
+      "oracle": "locked-formula visible cell/status and independent domain oracle",
+      "setup": {}
+    },
+    {
+      "id": "CELL-invalid-input",
+      "family": "CELL",
+      "context": "Editor",
+      "input": "invalid-input",
+      "scenarioKind": "Error",
+      "oracle": "invalid-input visible cell/status and independent domain oracle",
+      "setup": {}
+    },
+    {
+      "id": "OP-power-right",
+      "family": "OP",
+      "context": "Editor",
+      "input": "(2^3^2) Enter",
+      "scenarioKind": "Success",
+      "oracle": 512,
+      "setup": {
+        "cells": {},
+        "selection": "A1"
+      }
+    },
+    {
+      "id": "OP-sign-after-power",
+      "family": "OP",
+      "context": "Editor",
+      "input": "(-2^2) Enter",
+      "scenarioKind": "Success",
+      "oracle": -4,
+      "setup": {
+        "cells": {},
+        "selection": "A1"
+      }
+    },
+    {
+      "id": "OP-parenthesized-sign",
+      "family": "OP",
+      "context": "Editor",
+      "input": "((-2)^2) Enter",
+      "scenarioKind": "Success",
+      "oracle": 4,
+      "setup": {
+        "cells": {},
+        "selection": "A1"
+      }
+    },
+    {
+      "id": "OP-negative-exponent",
+      "family": "OP",
+      "context": "Editor",
+      "input": "(2^-2) Enter",
+      "scenarioKind": "Success",
+      "oracle": 0.25,
+      "setup": {
+        "cells": {},
+        "selection": "A1"
+      }
+    },
+    {
+      "id": "OP-positive-sign",
+      "family": "OP",
+      "context": "Editor",
+      "input": "(+2^2) Enter",
+      "scenarioKind": "Success",
+      "oracle": 4,
+      "setup": {
+        "cells": {},
+        "selection": "A1"
+      }
+    },
+    {
+      "id": "OP-division-left",
+      "family": "OP",
+      "context": "Editor",
+      "input": "(8/4/2) Enter",
+      "scenarioKind": "Success",
+      "oracle": 1,
+      "setup": {
+        "cells": {},
+        "selection": "A1"
+      }
+    },
+    {
+      "id": "OP-subtraction-left",
+      "family": "OP",
+      "context": "Editor",
+      "input": "(5-2-1) Enter",
+      "scenarioKind": "Success",
+      "oracle": 2,
+      "setup": {
+        "cells": {},
+        "selection": "A1"
+      }
+    },
+    {
+      "id": "OP-add",
+      "family": "OP",
+      "context": "Editor",
+      "input": "(2+3) Enter",
+      "scenarioKind": "Success",
+      "oracle": 5,
+      "setup": {
+        "cells": {},
+        "selection": "A1"
+      }
+    },
+    {
+      "id": "OP-multiply",
+      "family": "OP",
+      "context": "Editor",
+      "input": "(2*3) Enter",
+      "scenarioKind": "Success",
+      "oracle": 6,
+      "setup": {
+        "cells": {},
+        "selection": "A1"
+      }
+    },
+    {
+      "id": "OP-parentheses",
+      "family": "OP",
+      "context": "Editor",
+      "input": "((2+3)*4) Enter",
+      "scenarioKind": "Success",
+      "oracle": 20,
+      "setup": {
+        "cells": {},
+        "selection": "A1"
+      }
+    },
+    {
+      "id": "OP-divide-zero",
+      "family": "OP",
+      "context": "Editor",
+      "input": "(1/0) Enter",
+      "scenarioKind": "Error",
+      "oracle": "Error",
+      "setup": {
+        "cells": {},
+        "selection": "A1"
+      }
+    },
+    {
+      "id": "OP-power-domain",
+      "family": "OP",
+      "context": "Editor",
+      "input": "((-1)^0.5) Enter",
+      "scenarioKind": "Error",
+      "oracle": "Error",
+      "setup": {
+        "cells": {},
+        "selection": "A1"
+      }
+    },
+    {
+      "id": "OP-overflow",
+      "family": "OP",
+      "context": "Editor",
+      "input": "(1e308*1e308) Enter",
+      "scenarioKind": "Error",
+      "oracle": "Error",
+      "setup": {
+        "cells": {},
+        "selection": "A1"
+      }
+    },
+    {
+      "id": "OP-syntax",
+      "family": "OP",
+      "context": "Editor",
+      "input": "(2+) Enter",
+      "scenarioKind": "Error",
+      "oracle": "Error",
+      "setup": {
+        "cells": {},
+        "selection": "A1"
+      }
+    },
+    {
+      "id": "REF-single",
+      "family": "REF",
+      "context": "Editor",
+      "input": "(B1) Enter",
+      "scenarioKind": "Success",
+      "oracle": 7,
+      "setup": {
+        "cells": {
+          "B1": "7"
+        },
+        "selection": "A1"
+      }
+    },
+    {
+      "id": "REF-range",
+      "family": "REF",
+      "context": "Editor",
+      "input": "(B1>C2) Enter",
+      "scenarioKind": "Success",
+      "oracle": 10,
+      "setup": {
+        "cells": {
+          "B1": "1",
+          "B2": "2",
+          "C1": "3",
+          "C2": "4"
+        },
+        "selection": "A1"
+      }
+    },
+    {
+      "id": "REF-empty",
+      "family": "REF",
+      "context": "Editor",
+      "input": "(B1) Enter",
+      "scenarioKind": "Success",
+      "oracle": 0,
+      "setup": {
+        "cells": {},
+        "selection": "A1"
+      }
+    },
+    {
+      "id": "REF-text",
+      "family": "REF",
+      "context": "Editor",
+      "input": "(B1) Enter",
+      "scenarioKind": "Success",
+      "oracle": 0,
+      "setup": {
+        "cells": {
+          "B1": "text"
+        },
+        "selection": "A1"
+      }
+    },
+    {
+      "id": "REF-cycle",
+      "family": "REF",
+      "context": "Editor",
+      "input": "(A1) Enter",
+      "scenarioKind": "Error",
+      "oracle": "Error",
+      "setup": {
+        "cells": {},
+        "selection": "A1"
+      }
+    },
+    {
+      "id": "REF-invalid",
+      "family": "REF",
+      "context": "Editor",
+      "input": "(H22) Enter",
+      "scenarioKind": "Error",
+      "oracle": "Error",
+      "setup": {
+        "cells": {},
+        "selection": "A1"
+      }
+    },
+    {
+      "id": "FUNC-LEGACY-abs",
+      "family": "FUNC-LEGACY",
+      "context": "Editor",
+      "input": "(ABS(-2)) Enter",
+      "scenarioKind": "Success",
+      "oracle": 2,
+      "setup": {
+        "cells": {},
+        "selection": "A1"
+      }
+    },
+    {
+      "id": "FUNC-LEGACY-abs-zero",
+      "family": "FUNC-LEGACY",
+      "context": "Editor",
+      "input": "(ABS(0)) Enter",
+      "scenarioKind": "Success",
+      "oracle": 0,
+      "setup": {
+        "cells": {},
+        "selection": "A1"
+      }
+    },
+    {
+      "id": "FUNC-LEGACY-abs-invalid",
+      "family": "FUNC-LEGACY",
+      "context": "Editor",
+      "input": "(ABS()) Enter",
+      "scenarioKind": "Error",
+      "oracle": "Error",
+      "setup": {
+        "cells": {},
+        "selection": "A1"
+      }
+    },
+    {
+      "id": "FUNC-LEGACY-sqrt",
+      "family": "FUNC-LEGACY",
+      "context": "Editor",
+      "input": "(SQRT(4)) Enter",
+      "scenarioKind": "Success",
+      "oracle": 2,
+      "setup": {
+        "cells": {},
+        "selection": "A1"
+      }
+    },
+    {
+      "id": "FUNC-LEGACY-sqrt-zero",
+      "family": "FUNC-LEGACY",
+      "context": "Editor",
+      "input": "(SQRT(0)) Enter",
+      "scenarioKind": "Success",
+      "oracle": 0,
+      "setup": {
+        "cells": {},
+        "selection": "A1"
+      }
+    },
+    {
+      "id": "FUNC-LEGACY-sqrt-domain",
+      "family": "FUNC-LEGACY",
+      "context": "Editor",
+      "input": "(SQRT(-1)) Enter",
+      "scenarioKind": "Error",
+      "oracle": "Error",
+      "setup": {
+        "cells": {},
+        "selection": "A1"
+      }
+    },
+    {
+      "id": "FUNC-LEGACY-sqr",
+      "family": "FUNC-LEGACY",
+      "context": "Editor",
+      "input": "(SQR(3)) Enter",
+      "scenarioKind": "Success",
+      "oracle": 9,
+      "setup": {
+        "cells": {},
+        "selection": "A1"
+      }
+    },
+    {
+      "id": "FUNC-LEGACY-sqr-zero",
+      "family": "FUNC-LEGACY",
+      "context": "Editor",
+      "input": "(SQR(0)) Enter",
+      "scenarioKind": "Success",
+      "oracle": 0,
+      "setup": {
+        "cells": {},
+        "selection": "A1"
+      }
+    },
+    {
+      "id": "FUNC-LEGACY-sqr-overflow",
+      "family": "FUNC-LEGACY",
+      "context": "Editor",
+      "input": "(SQR(1e308)) Enter",
+      "scenarioKind": "Error",
+      "oracle": "Error",
+      "setup": {
+        "cells": {},
+        "selection": "A1"
+      }
+    },
+    {
+      "id": "FUNC-LEGACY-sin-zero",
+      "family": "FUNC-LEGACY",
+      "context": "Editor",
+      "input": "(SIN(0)) Enter",
+      "scenarioKind": "Success",
+      "oracle": 0,
+      "setup": {
+        "cells": {},
+        "selection": "A1"
+      }
+    },
+    {
+      "id": "FUNC-LEGACY-sin-half-pi",
+      "family": "FUNC-LEGACY",
+      "context": "Editor",
+      "input": "(SIN(1.5707963267948966)) Enter",
+      "scenarioKind": "Success",
+      "oracle": 1,
+      "setup": {
+        "cells": {},
+        "selection": "A1"
+      }
+    },
+    {
+      "id": "FUNC-LEGACY-sin-invalid",
+      "family": "FUNC-LEGACY",
+      "context": "Editor",
+      "input": "(SIN()) Enter",
+      "scenarioKind": "Error",
+      "oracle": "Error",
+      "setup": {
+        "cells": {},
+        "selection": "A1"
+      }
+    },
+    {
+      "id": "FUNC-LEGACY-cos-zero",
+      "family": "FUNC-LEGACY",
+      "context": "Editor",
+      "input": "(COS(0)) Enter",
+      "scenarioKind": "Success",
+      "oracle": 1,
+      "setup": {
+        "cells": {},
+        "selection": "A1"
+      }
+    },
+    {
+      "id": "FUNC-LEGACY-cos-half-pi",
+      "family": "FUNC-LEGACY",
+      "context": "Editor",
+      "input": "(COS(1.5707963267948966)) Enter",
+      "scenarioKind": "Success",
+      "oracle": 0,
+      "setup": {
+        "cells": {},
+        "selection": "A1"
+      }
+    },
+    {
+      "id": "FUNC-LEGACY-cos-invalid",
+      "family": "FUNC-LEGACY",
+      "context": "Editor",
+      "input": "(COS()) Enter",
+      "scenarioKind": "Error",
+      "oracle": "Error",
+      "setup": {
+        "cells": {},
+        "selection": "A1"
+      }
+    },
+    {
+      "id": "FUNC-LEGACY-arctan-zero",
+      "family": "FUNC-LEGACY",
+      "context": "Editor",
+      "input": "(ARCTAN(0)) Enter",
+      "scenarioKind": "Success",
+      "oracle": 0,
+      "setup": {
+        "cells": {},
+        "selection": "A1"
+      }
+    },
+    {
+      "id": "FUNC-LEGACY-arctan-one",
+      "family": "FUNC-LEGACY",
+      "context": "Editor",
+      "input": "(ARCTAN(1)) Enter",
+      "scenarioKind": "Success",
+      "oracle": 0.7853981633974483,
+      "setup": {
+        "cells": {},
+        "selection": "A1"
+      }
+    },
+    {
+      "id": "FUNC-LEGACY-arctan-invalid",
+      "family": "FUNC-LEGACY",
+      "context": "Editor",
+      "input": "(ARCTAN()) Enter",
+      "scenarioKind": "Error",
+      "oracle": "Error",
+      "setup": {
+        "cells": {},
+        "selection": "A1"
+      }
+    },
+    {
+      "id": "FUNC-LEGACY-ln-one",
+      "family": "FUNC-LEGACY",
+      "context": "Editor",
+      "input": "(LN(1)) Enter",
+      "scenarioKind": "Success",
+      "oracle": 0,
+      "setup": {
+        "cells": {},
+        "selection": "A1"
+      }
+    },
+    {
+      "id": "FUNC-LEGACY-ln-exp",
+      "family": "FUNC-LEGACY",
+      "context": "Editor",
+      "input": "(LN(EXP(1))) Enter",
+      "scenarioKind": "Success",
+      "oracle": 1,
+      "setup": {
+        "cells": {},
+        "selection": "A1"
+      }
+    },
+    {
+      "id": "FUNC-LEGACY-ln-zero",
+      "family": "FUNC-LEGACY",
+      "context": "Editor",
+      "input": "(LN(0)) Enter",
+      "scenarioKind": "Error",
+      "oracle": "Error",
+      "setup": {
+        "cells": {},
+        "selection": "A1"
+      }
+    },
+    {
+      "id": "FUNC-LEGACY-ln-negative",
+      "family": "FUNC-LEGACY",
+      "context": "Editor",
+      "input": "(LN(-1)) Enter",
+      "scenarioKind": "Error",
+      "oracle": "Error",
+      "setup": {
+        "cells": {},
+        "selection": "A1"
+      }
+    },
+    {
+      "id": "FUNC-LEGACY-log-one",
+      "family": "FUNC-LEGACY",
+      "context": "Editor",
+      "input": "(LOG(1)) Enter",
+      "scenarioKind": "Success",
+      "oracle": 0,
+      "setup": {
+        "cells": {},
+        "selection": "A1"
+      }
+    },
+    {
+      "id": "FUNC-LEGACY-log-hundred",
+      "family": "FUNC-LEGACY",
+      "context": "Editor",
+      "input": "(LOG(100)) Enter",
+      "scenarioKind": "Success",
+      "oracle": 2,
+      "setup": {
+        "cells": {},
+        "selection": "A1"
+      }
+    },
+    {
+      "id": "FUNC-LEGACY-log-zero",
+      "family": "FUNC-LEGACY",
+      "context": "Editor",
+      "input": "(LOG(0)) Enter",
+      "scenarioKind": "Error",
+      "oracle": "Error",
+      "setup": {
+        "cells": {},
+        "selection": "A1"
+      }
+    },
+    {
+      "id": "FUNC-LEGACY-log-negative",
+      "family": "FUNC-LEGACY",
+      "context": "Editor",
+      "input": "(LOG(-1)) Enter",
+      "scenarioKind": "Error",
+      "oracle": "Error",
+      "setup": {
+        "cells": {},
+        "selection": "A1"
+      }
+    },
+    {
+      "id": "FUNC-LEGACY-exp-zero",
+      "family": "FUNC-LEGACY",
+      "context": "Editor",
+      "input": "(EXP(0)) Enter",
+      "scenarioKind": "Success",
+      "oracle": 1,
+      "setup": {
+        "cells": {},
+        "selection": "A1"
+      }
+    },
+    {
+      "id": "FUNC-LEGACY-exp-one",
+      "family": "FUNC-LEGACY",
+      "context": "Editor",
+      "input": "(EXP(1)) Enter",
+      "scenarioKind": "Success",
+      "oracle": 2.718281828459045,
+      "setup": {
+        "cells": {},
+        "selection": "A1"
+      }
+    },
+    {
+      "id": "FUNC-LEGACY-exp-overflow",
+      "family": "FUNC-LEGACY",
+      "context": "Editor",
+      "input": "(EXP(1000)) Enter",
+      "scenarioKind": "Error",
+      "oracle": "Error",
+      "setup": {
+        "cells": {},
+        "selection": "A1"
+      }
+    },
+    {
+      "id": "FUNC-LEGACY-fact-zero",
+      "family": "FUNC-LEGACY",
+      "context": "Editor",
+      "input": "(FACT(0)) Enter",
+      "scenarioKind": "Success",
+      "oracle": 1,
+      "setup": {
+        "cells": {},
+        "selection": "A1"
+      }
+    },
+    {
+      "id": "FUNC-LEGACY-fact-five",
+      "family": "FUNC-LEGACY",
+      "context": "Editor",
+      "input": "(FACT(5)) Enter",
+      "scenarioKind": "Success",
+      "oracle": 120,
+      "setup": {
+        "cells": {},
+        "selection": "A1"
+      }
+    },
+    {
+      "id": "FUNC-LEGACY-fact-upper",
+      "family": "FUNC-LEGACY",
+      "context": "Editor",
+      "input": "(FACT(33)) Enter",
+      "scenarioKind": "Success",
+      "oracle": 8.683317618811886e+36,
+      "setup": {
+        "cells": {},
+        "selection": "A1"
+      }
+    },
+    {
+      "id": "FUNC-LEGACY-fact-invalid-0",
+      "family": "FUNC-LEGACY",
+      "context": "Editor",
+      "input": "(FACT(0.5)) Enter",
+      "scenarioKind": "Error",
+      "oracle": "Error",
+      "setup": {
+        "cells": {},
+        "selection": "A1"
+      }
+    },
+    {
+      "id": "FUNC-LEGACY-fact-invalid-1",
+      "family": "FUNC-LEGACY",
+      "context": "Editor",
+      "input": "(FACT(-0.5)) Enter",
+      "scenarioKind": "Error",
+      "oracle": "Error",
+      "setup": {
+        "cells": {},
+        "selection": "A1"
+      }
+    },
+    {
+      "id": "FUNC-LEGACY-fact-invalid-2",
+      "family": "FUNC-LEGACY",
+      "context": "Editor",
+      "input": "(FACT(-1)) Enter",
+      "scenarioKind": "Error",
+      "oracle": "Error",
+      "setup": {
+        "cells": {},
+        "selection": "A1"
+      }
+    },
+    {
+      "id": "FUNC-LEGACY-fact-invalid-3",
+      "family": "FUNC-LEGACY",
+      "context": "Editor",
+      "input": "(FACT(33.9)) Enter",
+      "scenarioKind": "Error",
+      "oracle": "Error",
+      "setup": {
+        "cells": {},
+        "selection": "A1"
+      }
+    },
+    {
+      "id": "FUNC-LEGACY-fact-invalid-4",
+      "family": "FUNC-LEGACY",
+      "context": "Editor",
+      "input": "(FACT(34)) Enter",
+      "scenarioKind": "Error",
+      "oracle": "Error",
+      "setup": {
+        "cells": {},
+        "selection": "A1"
+      }
+    },
+    {
+      "id": "FUNC-EXT-min-empty",
+      "family": "FUNC-EXT",
+      "context": "Editor",
+      "input": "(MIN(B1>B3)) Enter",
+      "scenarioKind": "Success",
+      "oracle": 0,
+      "setup": {
+        "cells": {},
+        "selection": "A1"
+      }
+    },
+    {
+      "id": "FUNC-EXT-min-mixed",
+      "family": "FUNC-EXT",
+      "context": "Editor",
+      "input": "(MIN(B1>B3)) Enter",
+      "scenarioKind": "Success",
+      "oracle": 2,
+      "setup": {
+        "cells": {
+          "B1": "2",
+          "B2": "text",
+          "B3": "4"
+        },
+        "selection": "A1"
+      }
+    },
+    {
+      "id": "FUNC-EXT-min-single",
+      "family": "FUNC-EXT",
+      "context": "Editor",
+      "input": "(MIN(B1)) Enter",
+      "scenarioKind": "Success",
+      "oracle": 42,
+      "setup": {
+        "cells": {
+          "B1": "42"
+        },
+        "selection": "A1"
+      }
+    },
+    {
+      "id": "FUNC-EXT-min-invalid",
+      "family": "FUNC-EXT",
+      "context": "Editor",
+      "input": "(MIN(H22)) Enter",
+      "scenarioKind": "Error",
+      "oracle": "Error",
+      "setup": {
+        "cells": {},
+        "selection": "A1"
+      }
+    },
+    {
+      "id": "FUNC-EXT-max-empty",
+      "family": "FUNC-EXT",
+      "context": "Editor",
+      "input": "(MAX(B1>B3)) Enter",
+      "scenarioKind": "Success",
+      "oracle": 0,
+      "setup": {
+        "cells": {},
+        "selection": "A1"
+      }
+    },
+    {
+      "id": "FUNC-EXT-max-mixed",
+      "family": "FUNC-EXT",
+      "context": "Editor",
+      "input": "(MAX(B1>B3)) Enter",
+      "scenarioKind": "Success",
+      "oracle": 4,
+      "setup": {
+        "cells": {
+          "B1": "2",
+          "B2": "text",
+          "B3": "4"
+        },
+        "selection": "A1"
+      }
+    },
+    {
+      "id": "FUNC-EXT-max-single",
+      "family": "FUNC-EXT",
+      "context": "Editor",
+      "input": "(MAX(B1)) Enter",
+      "scenarioKind": "Success",
+      "oracle": 42,
+      "setup": {
+        "cells": {
+          "B1": "42"
+        },
+        "selection": "A1"
+      }
+    },
+    {
+      "id": "FUNC-EXT-max-invalid",
+      "family": "FUNC-EXT",
+      "context": "Editor",
+      "input": "(MAX(H22)) Enter",
+      "scenarioKind": "Error",
+      "oracle": "Error",
+      "setup": {
+        "cells": {},
+        "selection": "A1"
+      }
+    },
+    {
+      "id": "FUNC-EXT-average-empty",
+      "family": "FUNC-EXT",
+      "context": "Editor",
+      "input": "(AVERAGE(B1>B3)) Enter",
+      "scenarioKind": "Success",
+      "oracle": 0,
+      "setup": {
+        "cells": {},
+        "selection": "A1"
+      }
+    },
+    {
+      "id": "FUNC-EXT-average-mixed",
+      "family": "FUNC-EXT",
+      "context": "Editor",
+      "input": "(AVERAGE(B1>B3)) Enter",
+      "scenarioKind": "Success",
+      "oracle": 3,
+      "setup": {
+        "cells": {
+          "B1": "2",
+          "B2": "text",
+          "B3": "4"
+        },
+        "selection": "A1"
+      }
+    },
+    {
+      "id": "FUNC-EXT-average-single",
+      "family": "FUNC-EXT",
+      "context": "Editor",
+      "input": "(AVERAGE(B1)) Enter",
+      "scenarioKind": "Success",
+      "oracle": 42,
+      "setup": {
+        "cells": {
+          "B1": "42"
+        },
+        "selection": "A1"
+      }
+    },
+    {
+      "id": "FUNC-EXT-average-invalid",
+      "family": "FUNC-EXT",
+      "context": "Editor",
+      "input": "(AVERAGE(H22)) Enter",
+      "scenarioKind": "Error",
+      "oracle": "Error",
+      "setup": {
+        "cells": {},
+        "selection": "A1"
+      }
+    },
+    {
+      "id": "FUNC-EXT-count-mixed",
+      "family": "FUNC-EXT",
+      "context": "Editor",
+      "input": "(COUNT(B1>B3)) Enter",
+      "scenarioKind": "Success",
+      "oracle": 2,
+      "setup": {
+        "cells": {
+          "B1": "2",
+          "B2": "text",
+          "B3": "4"
+        },
+        "selection": "A1"
+      }
+    },
+    {
+      "id": "FUNC-EXT-count-empty",
+      "family": "FUNC-EXT",
+      "context": "Editor",
+      "input": "(COUNT(B1>B3)) Enter",
+      "scenarioKind": "Success",
+      "oracle": 0,
+      "setup": {
+        "cells": {},
+        "selection": "A1"
+      }
+    },
+    {
+      "id": "FUNC-EXT-count-single",
+      "family": "FUNC-EXT",
+      "context": "Editor",
+      "input": "(COUNT(B1>B1)) Enter",
+      "scenarioKind": "Success",
+      "oracle": 1,
+      "setup": {
+        "cells": {
+          "B1": "7"
+        },
+        "selection": "A1"
+      }
+    },
+    {
+      "id": "FUNC-EXT-count-text",
+      "family": "FUNC-EXT",
+      "context": "Editor",
+      "input": "(COUNT(B1>B3)) Enter",
+      "scenarioKind": "Success",
+      "oracle": 0,
+      "setup": {
+        "cells": {
+          "B1": "one",
+          "B2": "two",
+          "B3": "three"
+        },
+        "selection": "A1"
+      }
+    },
+    {
+      "id": "FUNC-EXT-count-invalid",
+      "family": "FUNC-EXT",
+      "context": "Editor",
+      "input": "(COUNT(H22)) Enter",
+      "scenarioKind": "Error",
+      "oracle": "Error",
+      "setup": {
+        "cells": {},
+        "selection": "A1"
+      }
+    },
+    {
+      "id": "FUNC-EXT-if-relation-0",
+      "family": "FUNC-EXT",
+      "context": "Editor",
+      "input": "(IF(2=1,10,20)) Enter",
+      "scenarioKind": "Success",
+      "oracle": 20,
+      "setup": {
+        "cells": {},
+        "selection": "A1"
+      }
+    },
+    {
+      "id": "FUNC-EXT-if-equal-0",
+      "family": "FUNC-EXT",
+      "context": "Editor",
+      "input": "(IF(1=1,10,20)) Enter",
+      "scenarioKind": "Success",
+      "oracle": 10,
+      "setup": {
+        "cells": {},
+        "selection": "A1"
+      }
+    },
+    {
+      "id": "FUNC-EXT-if-relation-1",
+      "family": "FUNC-EXT",
+      "context": "Editor",
+      "input": "(IF(2<>1,10,20)) Enter",
+      "scenarioKind": "Success",
+      "oracle": 10,
+      "setup": {
+        "cells": {},
+        "selection": "A1"
+      }
+    },
+    {
+      "id": "FUNC-EXT-if-equal-1",
+      "family": "FUNC-EXT",
+      "context": "Editor",
+      "input": "(IF(1<>1,10,20)) Enter",
+      "scenarioKind": "Success",
+      "oracle": 20,
+      "setup": {
+        "cells": {},
+        "selection": "A1"
+      }
+    },
+    {
+      "id": "FUNC-EXT-if-relation-2",
+      "family": "FUNC-EXT",
+      "context": "Editor",
+      "input": "(IF(2<1,10,20)) Enter",
+      "scenarioKind": "Success",
+      "oracle": 20,
+      "setup": {
+        "cells": {},
+        "selection": "A1"
+      }
+    },
+    {
+      "id": "FUNC-EXT-if-equal-2",
+      "family": "FUNC-EXT",
+      "context": "Editor",
+      "input": "(IF(1<1,10,20)) Enter",
+      "scenarioKind": "Success",
+      "oracle": 20,
+      "setup": {
+        "cells": {},
+        "selection": "A1"
+      }
+    },
+    {
+      "id": "FUNC-EXT-if-relation-3",
+      "family": "FUNC-EXT",
+      "context": "Editor",
+      "input": "(IF(2<=1,10,20)) Enter",
+      "scenarioKind": "Success",
+      "oracle": 20,
+      "setup": {
+        "cells": {},
+        "selection": "A1"
+      }
+    },
+    {
+      "id": "FUNC-EXT-if-equal-3",
+      "family": "FUNC-EXT",
+      "context": "Editor",
+      "input": "(IF(1<=1,10,20)) Enter",
+      "scenarioKind": "Success",
+      "oracle": 10,
+      "setup": {
+        "cells": {},
+        "selection": "A1"
+      }
+    },
+    {
+      "id": "FUNC-EXT-if-relation-4",
+      "family": "FUNC-EXT",
+      "context": "Editor",
+      "input": "(IF(2>=1,10,20)) Enter",
+      "scenarioKind": "Success",
+      "oracle": 10,
+      "setup": {
+        "cells": {},
+        "selection": "A1"
+      }
+    },
+    {
+      "id": "FUNC-EXT-if-equal-4",
+      "family": "FUNC-EXT",
+      "context": "Editor",
+      "input": "(IF(1>=1,10,20)) Enter",
+      "scenarioKind": "Success",
+      "oracle": 10,
+      "setup": {
+        "cells": {},
+        "selection": "A1"
+      }
+    },
+    {
+      "id": "FUNC-EXT-if-relation-5",
+      "family": "FUNC-EXT",
+      "context": "Editor",
+      "input": "(IF(2>1,10,20)) Enter",
+      "scenarioKind": "Success",
+      "oracle": 10,
+      "setup": {
+        "cells": {},
+        "selection": "A1"
+      }
+    },
+    {
+      "id": "FUNC-EXT-if-equal-5",
+      "family": "FUNC-EXT",
+      "context": "Editor",
+      "input": "(IF(1>1,10,20)) Enter",
+      "scenarioKind": "Success",
+      "oracle": 20,
+      "setup": {
+        "cells": {},
+        "selection": "A1"
+      }
+    },
+    {
+      "id": "FUNC-EXT-if-cell-comparison",
+      "family": "FUNC-EXT",
+      "context": "Editor",
+      "input": "(IF(B1-C1>0,1,0)) Enter",
+      "scenarioKind": "Success",
+      "oracle": 1,
+      "setup": {
+        "cells": {
+          "B1": "7",
+          "C1": "3"
+        },
+        "selection": "A1"
+      }
+    },
+    {
+      "id": "FUNC-EXT-if-range-boundary",
+      "family": "FUNC-EXT",
+      "context": "Editor",
+      "input": "(IF(B1>C1,1,0)) Enter",
+      "scenarioKind": "Error",
+      "oracle": "Error",
+      "setup": {
+        "cells": {
+          "B1": "7",
+          "C1": "3"
+        },
+        "selection": "A1"
+      }
+    },
+    {
+      "id": "FUNC-EXT-if-no-relation",
+      "family": "FUNC-EXT",
+      "context": "Editor",
+      "input": "(IF(1,2,3)) Enter",
+      "scenarioKind": "Error",
+      "oracle": "Error",
+      "setup": {
+        "cells": {},
+        "selection": "A1"
+      }
+    },
+    {
+      "id": "FUNC-EXT-round-positive",
+      "family": "FUNC-EXT",
+      "context": "Editor",
+      "input": "(ROUND(2.5,0)) Enter",
+      "scenarioKind": "Success",
+      "oracle": 3,
+      "setup": {
+        "cells": {},
+        "selection": "A1"
+      }
+    },
+    {
+      "id": "FUNC-EXT-round-negative",
+      "family": "FUNC-EXT",
+      "context": "Editor",
+      "input": "(ROUND(-2.5,0)) Enter",
+      "scenarioKind": "Success",
+      "oracle": -3,
+      "setup": {
+        "cells": {},
+        "selection": "A1"
+      }
+    },
+    {
+      "id": "FUNC-EXT-round-truncate",
+      "family": "FUNC-EXT",
+      "context": "Editor",
+      "input": "(ROUND(3.14,1.7)) Enter",
+      "scenarioKind": "Success",
+      "oracle": 3.1,
+      "setup": {
+        "cells": {},
+        "selection": "A1"
+      }
+    },
+    {
+      "id": "FUNC-EXT-round-upper",
+      "family": "FUNC-EXT",
+      "context": "Editor",
+      "input": "(ROUND(1.25,15)) Enter",
+      "scenarioKind": "Success",
+      "oracle": 1.25,
+      "setup": {
+        "cells": {},
+        "selection": "A1"
+      }
+    },
+    {
+      "id": "FUNC-EXT-round-upper-fraction",
+      "family": "FUNC-EXT",
+      "context": "Editor",
+      "input": "(ROUND(1.25,15.9)) Enter",
+      "scenarioKind": "Success",
+      "oracle": 1.25,
+      "setup": {
+        "cells": {},
+        "selection": "A1"
+      }
+    },
+    {
+      "id": "FUNC-EXT-round-too-large",
+      "family": "FUNC-EXT",
+      "context": "Editor",
+      "input": "(ROUND(1,16)) Enter",
+      "scenarioKind": "Error",
+      "oracle": "Error",
+      "setup": {
+        "cells": {},
+        "selection": "A1"
+      }
+    },
+    {
+      "id": "FUNC-EXT-round-negative-fraction",
+      "family": "FUNC-EXT",
+      "context": "Editor",
+      "input": "(ROUND(1,-0.5)) Enter",
+      "scenarioKind": "Error",
+      "oracle": "Error",
+      "setup": {
+        "cells": {},
+        "selection": "A1"
+      }
+    },
+    {
+      "id": "FUNC-EXT-round-negative-precision",
+      "family": "FUNC-EXT",
+      "context": "Editor",
+      "input": "(ROUND(1,-1)) Enter",
+      "scenarioKind": "Error",
+      "oracle": "Error",
+      "setup": {
+        "cells": {},
+        "selection": "A1"
+      }
+    },
+    {
+      "id": "FUNC-EXT-round-overflow-precision",
+      "family": "FUNC-EXT",
+      "context": "Editor",
+      "input": "(ROUND(1,1e308)) Enter",
+      "scenarioKind": "Error",
+      "oracle": "Error",
+      "setup": {
+        "cells": {},
+        "selection": "A1"
+      }
+    },
+    {
+      "id": "CMD-load-menu",
+      "family": "CMD",
+      "context": "Menu",
+      "input": "Load",
+      "scenarioKind": "Success",
+      "oracle": "execute Load through actual control; observe effect",
+      "setup": {}
+    },
+    {
+      "id": "CMD-load-palette",
+      "family": "CMD",
+      "context": "Palette",
+      "input": "Load",
+      "scenarioKind": "Success",
+      "oracle": "execute Load through actual control; observe effect",
+      "setup": {}
+    },
+    {
+      "id": "CMD-save-menu",
+      "family": "CMD",
+      "context": "Menu",
+      "input": "Save",
+      "scenarioKind": "Success",
+      "oracle": "execute Save through actual control; observe effect",
+      "setup": {}
+    },
+    {
+      "id": "CMD-save-palette",
+      "family": "CMD",
+      "context": "Palette",
+      "input": "Save",
+      "scenarioKind": "Success",
+      "oracle": "execute Save through actual control; observe effect",
+      "setup": {}
+    },
+    {
+      "id": "CMD-recalculate-menu",
+      "family": "CMD",
+      "context": "Menu",
+      "input": "Recalculate",
+      "scenarioKind": "Success",
+      "oracle": "execute Recalculate through actual control; observe effect",
+      "setup": {}
+    },
+    {
+      "id": "CMD-recalculate-palette",
+      "family": "CMD",
+      "context": "Palette",
+      "input": "Recalculate",
+      "scenarioKind": "Success",
+      "oracle": "execute Recalculate through actual control; observe effect",
+      "setup": {}
+    },
+    {
+      "id": "CMD-print-menu",
+      "family": "CMD",
+      "context": "Menu",
+      "input": "Print",
+      "scenarioKind": "Success",
+      "oracle": "execute Print through actual control; observe effect",
+      "setup": {}
+    },
+    {
+      "id": "CMD-print-palette",
+      "family": "CMD",
+      "context": "Palette",
+      "input": "Print",
+      "scenarioKind": "Success",
+      "oracle": "execute Print through actual control; observe effect",
+      "setup": {}
+    },
+    {
+      "id": "CMD-format-menu",
+      "family": "CMD",
+      "context": "Menu",
+      "input": "Format",
+      "scenarioKind": "Success",
+      "oracle": "execute Format through actual control; observe effect",
+      "setup": {}
+    },
+    {
+      "id": "CMD-format-palette",
+      "family": "CMD",
+      "context": "Palette",
+      "input": "Format",
+      "scenarioKind": "Success",
+      "oracle": "execute Format through actual control; observe effect",
+      "setup": {}
+    },
+    {
+      "id": "CMD-autocalc-menu",
+      "family": "CMD",
+      "context": "Menu",
+      "input": "AutoCalc",
+      "scenarioKind": "Success",
+      "oracle": "execute AutoCalc through actual control; observe effect",
+      "setup": {}
+    },
+    {
+      "id": "CMD-autocalc-palette",
+      "family": "CMD",
+      "context": "Palette",
+      "input": "AutoCalc",
+      "scenarioKind": "Success",
+      "oracle": "execute AutoCalc through actual control; observe effect",
+      "setup": {}
+    },
+    {
+      "id": "CMD-help-menu",
+      "family": "CMD",
+      "context": "Menu",
+      "input": "Help",
+      "scenarioKind": "Success",
+      "oracle": "execute Help through actual control; observe effect",
+      "setup": {}
+    },
+    {
+      "id": "CMD-help-palette",
+      "family": "CMD",
+      "context": "Palette",
+      "input": "Help",
+      "scenarioKind": "Success",
+      "oracle": "execute Help through actual control; observe effect",
+      "setup": {}
+    },
+    {
+      "id": "CMD-clear-menu",
+      "family": "CMD",
+      "context": "Menu",
+      "input": "Clear",
+      "scenarioKind": "Success",
+      "oracle": "execute Clear through actual control; observe effect",
+      "setup": {}
+    },
+    {
+      "id": "CMD-clear-palette",
+      "family": "CMD",
+      "context": "Palette",
+      "input": "Clear",
+      "scenarioKind": "Success",
+      "oracle": "execute Clear through actual control; observe effect",
+      "setup": {}
+    },
+    {
+      "id": "CMD-quit-menu",
+      "family": "CMD",
+      "context": "Menu",
+      "input": "Quit",
+      "scenarioKind": "Success",
+      "oracle": "execute Quit through actual control; observe effect",
+      "setup": {}
+    },
+    {
+      "id": "CMD-quit-palette",
+      "family": "CMD",
+      "context": "Palette",
+      "input": "Quit",
+      "scenarioKind": "Success",
+      "oracle": "execute Quit through actual control; observe effect",
+      "setup": {}
+    },
+    {
+      "id": "CMD-ctrl-q",
+      "family": "CMD",
+      "context": "Grid",
+      "input": "Ctrl-Q",
+      "scenarioKind": "Success",
+      "oracle": "ordered application stop",
+      "setup": {}
+    },
+    {
+      "id": "CMD-letter-q",
+      "family": "CMD",
+      "context": "Palette",
+      "input": "Q",
+      "scenarioKind": "Success",
+      "oracle": "execute Quit; not grid text interception",
+      "setup": {}
+    },
+    {
+      "id": "CMD-letter-l",
+      "family": "CMD",
+      "context": "Palette",
+      "input": "L",
+      "scenarioKind": "Success",
+      "oracle": "execute Load; not grid text interception",
+      "setup": {}
+    },
+    {
+      "id": "CMD-letter-s",
+      "family": "CMD",
+      "context": "Palette",
+      "input": "S",
+      "scenarioKind": "Success",
+      "oracle": "execute Save; not grid text interception",
+      "setup": {}
+    },
+    {
+      "id": "CMD-letter-r",
+      "family": "CMD",
+      "context": "Palette",
+      "input": "R",
+      "scenarioKind": "Success",
+      "oracle": "execute Recalculate; not grid text interception",
+      "setup": {}
+    },
+    {
+      "id": "CMD-letter-p",
+      "family": "CMD",
+      "context": "Palette",
+      "input": "P",
+      "scenarioKind": "Success",
+      "oracle": "execute Print; not grid text interception",
+      "setup": {}
+    },
+    {
+      "id": "CMD-letter-f",
+      "family": "CMD",
+      "context": "Palette",
+      "input": "F",
+      "scenarioKind": "Success",
+      "oracle": "execute Format; not grid text interception",
+      "setup": {}
+    },
+    {
+      "id": "CMD-letter-a",
+      "family": "CMD",
+      "context": "Palette",
+      "input": "A",
+      "scenarioKind": "Success",
+      "oracle": "execute AutoCalc; not grid text interception",
+      "setup": {}
+    },
+    {
+      "id": "FILE-roundtrip",
+      "family": "FILE",
+      "context": "FileDialog",
+      "input": "roundtrip",
+      "scenarioKind": "Success",
+      "oracle": "roundtrip; preserve state/old file on failure",
+      "setup": {}
+    },
+    {
+      "id": "FILE-missing-load",
+      "family": "FILE",
+      "context": "FileDialog",
+      "input": "missing-load",
+      "scenarioKind": "Error",
+      "oracle": "missing-load; preserve state/old file on failure",
+      "setup": {}
+    },
+    {
+      "id": "FILE-malformed-load",
+      "family": "FILE",
+      "context": "FileDialog",
+      "input": "malformed-load",
+      "scenarioKind": "Error",
+      "oracle": "malformed-load; preserve state/old file on failure",
+      "setup": {}
+    },
+    {
+      "id": "FILE-partial-invalid-load",
+      "family": "FILE",
+      "context": "FileDialog",
+      "input": "partial-invalid-load",
+      "scenarioKind": "Error",
+      "oracle": "partial-invalid-load; preserve state/old file on failure",
+      "setup": {}
+    },
+    {
+      "id": "FILE-print-zero-margin",
+      "family": "FILE",
+      "context": "FileDialog",
+      "input": "print-zero-margin",
+      "scenarioKind": "Success",
+      "oracle": "print-zero-margin; preserve state/old file on failure",
+      "setup": {}
+    },
+    {
+      "id": "FILE-print-positive-margin",
+      "family": "FILE",
+      "context": "FileDialog",
+      "input": "print-positive-margin",
+      "scenarioKind": "Success",
+      "oracle": "print-positive-margin; preserve state/old file on failure",
+      "setup": {}
+    },
+    {
+      "id": "FILE-print-invalid-margin",
+      "family": "FILE",
+      "context": "FileDialog",
+      "input": "print-invalid-margin",
+      "scenarioKind": "Success",
+      "oracle": "print-invalid-margin; preserve state/old file on failure",
+      "setup": {}
+    },
+    {
+      "id": "FILE-save-io-error",
+      "family": "FILE",
+      "context": "FileDialog",
+      "input": "save-io-error",
+      "scenarioKind": "Error",
+      "oracle": "save-io-error; preserve state/old file on failure",
+      "setup": {}
+    },
+    {
+      "id": "FILE-print-io-error",
+      "family": "FILE",
+      "context": "FileDialog",
+      "input": "print-io-error",
+      "scenarioKind": "Error",
+      "oracle": "print-io-error; preserve state/old file on failure",
+      "setup": {}
+    },
+    {
+      "id": "HELP-resource",
+      "family": "HELP",
+      "context": "Help",
+      "input": "resource",
+      "scenarioKind": "Success",
+      "oracle": "resource; correct page/footer and return focus",
+      "setup": {}
+    },
+    {
+      "id": "HELP-prev-p",
+      "family": "HELP",
+      "context": "Help",
+      "input": "prev-p",
+      "scenarioKind": "Success",
+      "oracle": "prev-p; correct page/footer and return focus",
+      "setup": {}
+    },
+    {
+      "id": "HELP-prev-uppercase-p",
+      "family": "HELP",
+      "context": "Help",
+      "input": "prev-P",
+      "scenarioKind": "Success",
+      "oracle": "prev-P; correct page/footer and return focus",
+      "setup": {}
+    },
+    {
+      "id": "HELP-next-n",
+      "family": "HELP",
+      "context": "Help",
+      "input": "next-n",
+      "scenarioKind": "Success",
+      "oracle": "next-n; correct page/footer and return focus",
+      "setup": {}
+    },
+    {
+      "id": "HELP-next-uppercase-n",
+      "family": "HELP",
+      "context": "Help",
+      "input": "next-N",
+      "scenarioKind": "Success",
+      "oracle": "next-N; correct page/footer and return focus",
+      "setup": {}
+    },
+    {
+      "id": "HELP-prev-button",
+      "family": "HELP",
+      "context": "Help",
+      "input": "prev-button",
+      "scenarioKind": "Success",
+      "oracle": "prev-button; correct page/footer and return focus",
+      "setup": {}
+    },
+    {
+      "id": "HELP-next-button",
+      "family": "HELP",
+      "context": "Help",
+      "input": "next-button",
+      "scenarioKind": "Success",
+      "oracle": "next-button; correct page/footer and return focus",
+      "setup": {}
+    },
+    {
+      "id": "HELP-first-boundary",
+      "family": "HELP",
+      "context": "Help",
+      "input": "first-boundary",
+      "scenarioKind": "Success",
+      "oracle": "first-boundary; correct page/footer and return focus",
+      "setup": {}
+    },
+    {
+      "id": "HELP-last-boundary",
+      "family": "HELP",
+      "context": "Help",
+      "input": "last-boundary",
+      "scenarioKind": "Success",
+      "oracle": "last-boundary; correct page/footer and return focus",
+      "setup": {}
+    },
+    {
+      "id": "HELP-esc-close",
+      "family": "HELP",
+      "context": "Help",
+      "input": "esc-close",
+      "scenarioKind": "Cancel",
+      "oracle": "esc-close; correct page/footer and return focus",
+      "setup": {}
+    },
+    {
+      "id": "HELP-close-button",
+      "family": "HELP",
+      "context": "Help",
+      "input": "close-button",
+      "scenarioKind": "Success",
+      "oracle": "close-button; correct page/footer and return focus",
+      "setup": {}
+    },
+    {
+      "id": "HELP-missing-resource",
+      "family": "HELP",
+      "context": "Help",
+      "input": "missing-resource",
+      "scenarioKind": "Error",
+      "oracle": "missing-resource; correct page/footer and return focus",
+      "setup": {}
+    },
+    {
+      "id": "HELP-damaged-resource",
+      "family": "HELP",
+      "context": "Help",
+      "input": "damaged-resource",
+      "scenarioKind": "Error",
+      "oracle": "damaged-resource; correct page/footer and return focus",
+      "setup": {}
+    },
+    {
+      "id": "DIALOG-editor-enter",
+      "family": "DIALOG",
+      "context": "Editor",
+      "input": "Enter",
+      "scenarioKind": "Success",
+      "oracle": "confirm intended operation only; return to initiating context",
+      "setup": {}
+    },
+    {
+      "id": "DIALOG-editor-ok",
+      "family": "DIALOG",
+      "context": "Editor",
+      "input": "OK",
+      "scenarioKind": "Success",
+      "oracle": "confirm intended operation only; return to initiating context",
+      "setup": {}
+    },
+    {
+      "id": "DIALOG-editor-esc",
+      "family": "DIALOG",
+      "context": "Editor",
+      "input": "Esc",
+      "scenarioKind": "Cancel",
+      "oracle": "no sheet/format/flag/selection/autocalc/file mutation; Grid focus",
+      "setup": {}
+    },
+    {
+      "id": "DIALOG-editor-cancel",
+      "family": "DIALOG",
+      "context": "Editor",
+      "input": "Cancel",
+      "scenarioKind": "Cancel",
+      "oracle": "no sheet/format/flag/selection/autocalc/file mutation; Grid focus",
+      "setup": {}
+    },
+    {
+      "id": "DIALOG-load-enter",
+      "family": "DIALOG",
+      "context": "Load",
+      "input": "Enter",
+      "scenarioKind": "Success",
+      "oracle": "confirm intended operation only; return to initiating context",
+      "setup": {}
+    },
+    {
+      "id": "DIALOG-load-ok",
+      "family": "DIALOG",
+      "context": "Load",
+      "input": "OK",
+      "scenarioKind": "Success",
+      "oracle": "confirm intended operation only; return to initiating context",
+      "setup": {}
+    },
+    {
+      "id": "DIALOG-load-esc",
+      "family": "DIALOG",
+      "context": "Load",
+      "input": "Esc",
+      "scenarioKind": "Cancel",
+      "oracle": "no sheet/format/flag/selection/autocalc/file mutation; Grid focus",
+      "setup": {}
+    },
+    {
+      "id": "DIALOG-load-cancel",
+      "family": "DIALOG",
+      "context": "Load",
+      "input": "Cancel",
+      "scenarioKind": "Cancel",
+      "oracle": "no sheet/format/flag/selection/autocalc/file mutation; Grid focus",
+      "setup": {}
+    },
+    {
+      "id": "DIALOG-save-enter",
+      "family": "DIALOG",
+      "context": "Save",
+      "input": "Enter",
+      "scenarioKind": "Success",
+      "oracle": "confirm intended operation only; return to initiating context",
+      "setup": {}
+    },
+    {
+      "id": "DIALOG-save-ok",
+      "family": "DIALOG",
+      "context": "Save",
+      "input": "OK",
+      "scenarioKind": "Success",
+      "oracle": "confirm intended operation only; return to initiating context",
+      "setup": {}
+    },
+    {
+      "id": "DIALOG-save-esc",
+      "family": "DIALOG",
+      "context": "Save",
+      "input": "Esc",
+      "scenarioKind": "Cancel",
+      "oracle": "no sheet/format/flag/selection/autocalc/file mutation; Grid focus",
+      "setup": {}
+    },
+    {
+      "id": "DIALOG-save-cancel",
+      "family": "DIALOG",
+      "context": "Save",
+      "input": "Cancel",
+      "scenarioKind": "Cancel",
+      "oracle": "no sheet/format/flag/selection/autocalc/file mutation; Grid focus",
+      "setup": {}
+    },
+    {
+      "id": "DIALOG-printfile-enter",
+      "family": "DIALOG",
+      "context": "PrintFile",
+      "input": "Enter",
+      "scenarioKind": "Success",
+      "oracle": "stage input only; next prompt PrintMargin; no sheet or file mutation",
+      "setup": {}
+    },
+    {
+      "id": "DIALOG-printfile-ok",
+      "family": "DIALOG",
+      "context": "PrintFile",
+      "input": "OK",
+      "scenarioKind": "Success",
+      "oracle": "stage input only; next prompt PrintMargin; no sheet or file mutation",
+      "setup": {}
+    },
+    {
+      "id": "DIALOG-printfile-esc",
+      "family": "DIALOG",
+      "context": "PrintFile",
+      "input": "Esc",
+      "scenarioKind": "Cancel",
+      "oracle": "no sheet/format/flag/selection/autocalc/file mutation; Grid focus",
+      "setup": {}
+    },
+    {
+      "id": "DIALOG-printfile-cancel",
+      "family": "DIALOG",
+      "context": "PrintFile",
+      "input": "Cancel",
+      "scenarioKind": "Cancel",
+      "oracle": "no sheet/format/flag/selection/autocalc/file mutation; Grid focus",
+      "setup": {}
+    },
+    {
+      "id": "DIALOG-printmargin-enter",
+      "family": "DIALOG",
+      "context": "PrintMargin",
+      "input": "Enter",
+      "scenarioKind": "Success",
+      "oracle": "confirm intended operation only; return to initiating context",
+      "setup": {}
+    },
+    {
+      "id": "DIALOG-printmargin-ok",
+      "family": "DIALOG",
+      "context": "PrintMargin",
+      "input": "OK",
+      "scenarioKind": "Success",
+      "oracle": "confirm intended operation only; return to initiating context",
+      "setup": {}
+    },
+    {
+      "id": "DIALOG-printmargin-esc",
+      "family": "DIALOG",
+      "context": "PrintMargin",
+      "input": "Esc",
+      "scenarioKind": "Cancel",
+      "oracle": "no sheet/format/flag/selection/autocalc/file mutation; Grid focus",
+      "setup": {}
+    },
+    {
+      "id": "DIALOG-printmargin-cancel",
+      "family": "DIALOG",
+      "context": "PrintMargin",
+      "input": "Cancel",
+      "scenarioKind": "Cancel",
+      "oracle": "no sheet/format/flag/selection/autocalc/file mutation; Grid focus",
+      "setup": {}
+    },
+    {
+      "id": "DIALOG-formatdecimals-enter",
+      "family": "DIALOG",
+      "context": "FormatDecimals",
+      "input": "Enter",
+      "scenarioKind": "Success",
+      "oracle": "stage input only; next prompt FormatWidth; no sheet or file mutation",
+      "setup": {}
+    },
+    {
+      "id": "DIALOG-formatdecimals-ok",
+      "family": "DIALOG",
+      "context": "FormatDecimals",
+      "input": "OK",
+      "scenarioKind": "Success",
+      "oracle": "stage input only; next prompt FormatWidth; no sheet or file mutation",
+      "setup": {}
+    },
+    {
+      "id": "DIALOG-formatdecimals-esc",
+      "family": "DIALOG",
+      "context": "FormatDecimals",
+      "input": "Esc",
+      "scenarioKind": "Cancel",
+      "oracle": "no sheet/format/flag/selection/autocalc/file mutation; Grid focus",
+      "setup": {}
+    },
+    {
+      "id": "DIALOG-formatdecimals-cancel",
+      "family": "DIALOG",
+      "context": "FormatDecimals",
+      "input": "Cancel",
+      "scenarioKind": "Cancel",
+      "oracle": "no sheet/format/flag/selection/autocalc/file mutation; Grid focus",
+      "setup": {}
+    },
+    {
+      "id": "DIALOG-formatwidth-enter",
+      "family": "DIALOG",
+      "context": "FormatWidth",
+      "input": "Enter",
+      "scenarioKind": "Success",
+      "oracle": "stage input only; next prompt FormatFrom; no sheet or file mutation",
+      "setup": {}
+    },
+    {
+      "id": "DIALOG-formatwidth-ok",
+      "family": "DIALOG",
+      "context": "FormatWidth",
+      "input": "OK",
+      "scenarioKind": "Success",
+      "oracle": "stage input only; next prompt FormatFrom; no sheet or file mutation",
+      "setup": {}
+    },
+    {
+      "id": "DIALOG-formatwidth-esc",
+      "family": "DIALOG",
+      "context": "FormatWidth",
+      "input": "Esc",
+      "scenarioKind": "Cancel",
+      "oracle": "no sheet/format/flag/selection/autocalc/file mutation; Grid focus",
+      "setup": {}
+    },
+    {
+      "id": "DIALOG-formatwidth-cancel",
+      "family": "DIALOG",
+      "context": "FormatWidth",
+      "input": "Cancel",
+      "scenarioKind": "Cancel",
+      "oracle": "no sheet/format/flag/selection/autocalc/file mutation; Grid focus",
+      "setup": {}
+    },
+    {
+      "id": "DIALOG-formatfrom-enter",
+      "family": "DIALOG",
+      "context": "FormatFrom",
+      "input": "Enter",
+      "scenarioKind": "Success",
+      "oracle": "stage input only; next prompt FormatTo; no sheet or file mutation",
+      "setup": {}
+    },
+    {
+      "id": "DIALOG-formatfrom-ok",
+      "family": "DIALOG",
+      "context": "FormatFrom",
+      "input": "OK",
+      "scenarioKind": "Success",
+      "oracle": "stage input only; next prompt FormatTo; no sheet or file mutation",
+      "setup": {}
+    },
+    {
+      "id": "DIALOG-formatfrom-esc",
+      "family": "DIALOG",
+      "context": "FormatFrom",
+      "input": "Esc",
+      "scenarioKind": "Cancel",
+      "oracle": "no sheet/format/flag/selection/autocalc/file mutation; Grid focus",
+      "setup": {}
+    },
+    {
+      "id": "DIALOG-formatfrom-cancel",
+      "family": "DIALOG",
+      "context": "FormatFrom",
+      "input": "Cancel",
+      "scenarioKind": "Cancel",
+      "oracle": "no sheet/format/flag/selection/autocalc/file mutation; Grid focus",
+      "setup": {}
+    },
+    {
+      "id": "DIALOG-formatto-enter",
+      "family": "DIALOG",
+      "context": "FormatTo",
+      "input": "Enter",
+      "scenarioKind": "Success",
+      "oracle": "confirm intended operation only; return to initiating context",
+      "setup": {}
+    },
+    {
+      "id": "DIALOG-formatto-ok",
+      "family": "DIALOG",
+      "context": "FormatTo",
+      "input": "OK",
+      "scenarioKind": "Success",
+      "oracle": "confirm intended operation only; return to initiating context",
+      "setup": {}
+    },
+    {
+      "id": "DIALOG-formatto-esc",
+      "family": "DIALOG",
+      "context": "FormatTo",
+      "input": "Esc",
+      "scenarioKind": "Cancel",
+      "oracle": "no sheet/format/flag/selection/autocalc/file mutation; Grid focus",
+      "setup": {}
+    },
+    {
+      "id": "DIALOG-formatto-cancel",
+      "family": "DIALOG",
+      "context": "FormatTo",
+      "input": "Cancel",
+      "scenarioKind": "Cancel",
+      "oracle": "no sheet/format/flag/selection/autocalc/file mutation; Grid focus",
+      "setup": {}
+    },
+    {
+      "id": "DIALOG-clear-enter",
+      "family": "DIALOG",
+      "context": "Clear",
+      "input": "Enter on focused Yes",
+      "scenarioKind": "Success",
+      "oracle": "clear the worksheet only after explicit Yes focus; return to grid",
+      "setup": {}
+    },
+    {
+      "id": "DIALOG-clear-yes",
+      "family": "DIALOG",
+      "context": "Clear",
+      "input": "Yes",
+      "scenarioKind": "Success",
+      "oracle": "confirm intended operation only; return to initiating context",
+      "setup": {}
+    },
+    {
+      "id": "DIALOG-clear-esc",
+      "family": "DIALOG",
+      "context": "Clear",
+      "input": "Esc",
+      "scenarioKind": "Cancel",
+      "oracle": "no sheet/format/flag/selection/autocalc/file mutation; Grid focus",
+      "setup": {}
+    },
+    {
+      "id": "DIALOG-clear-no",
+      "family": "DIALOG",
+      "context": "Clear",
+      "input": "No",
+      "scenarioKind": "Cancel",
+      "oracle": "no sheet/format/flag/selection/autocalc/file mutation; Grid focus",
+      "setup": {}
+    },
+    {
+      "id": "DIALOG-palette-enter",
+      "family": "DIALOG",
+      "context": "Palette",
+      "input": "Enter on focused Recalc",
+      "scenarioKind": "Success",
+      "oracle": "execute selected Recalc command only; return to grid",
+      "setup": {}
+    },
+    {
+      "id": "DIALOG-palette-ok",
+      "family": "DIALOG",
+      "context": "Palette",
+      "input": "Recalc button",
+      "scenarioKind": "Success",
+      "oracle": "execute selected Recalc command only; return to grid",
+      "setup": {}
+    },
+    {
+      "id": "DIALOG-palette-esc",
+      "family": "DIALOG",
+      "context": "Palette",
+      "input": "Esc",
+      "scenarioKind": "Cancel",
+      "oracle": "no sheet/format/flag/selection/autocalc/file mutation; Grid focus",
+      "setup": {}
+    },
+    {
+      "id": "DIALOG-palette-cancel",
+      "family": "DIALOG",
+      "context": "Palette",
+      "input": "Cancel",
+      "scenarioKind": "Cancel",
+      "oracle": "no sheet/format/flag/selection/autocalc/file mutation; Grid focus",
+      "setup": {}
+    },
+    {
+      "id": "TERM-80x24-visible-grid",
+      "family": "TERM",
+      "context": "Terminal",
+      "input": "80x24",
+      "scenarioKind": "Success",
+      "oracle": "visible-grid actual PTY state",
+      "setup": {}
+    },
+    {
+      "id": "TERM-80x24-focus",
+      "family": "TERM",
+      "context": "Terminal",
+      "input": "80x24",
+      "scenarioKind": "Success",
+      "oracle": "focus actual PTY state",
+      "setup": {}
+    },
+    {
+      "id": "TERM-80x24-contrast",
+      "family": "TERM",
+      "context": "Terminal",
+      "input": "80x24",
+      "scenarioKind": "Success",
+      "oracle": "contrast actual PTY state",
+      "setup": {}
+    },
+    {
+      "id": "TERM-80x24-restore",
+      "family": "TERM",
+      "context": "Terminal",
+      "input": "80x24",
+      "scenarioKind": "Success",
+      "oracle": "restore actual PTY state",
+      "setup": {}
+    },
+    {
+      "id": "TERM-120x40-visible-grid",
+      "family": "TERM",
+      "context": "Terminal",
+      "input": "120x40",
+      "scenarioKind": "Success",
+      "oracle": "visible-grid actual PTY state",
+      "setup": {}
+    },
+    {
+      "id": "TERM-120x40-focus",
+      "family": "TERM",
+      "context": "Terminal",
+      "input": "120x40",
+      "scenarioKind": "Success",
+      "oracle": "focus actual PTY state",
+      "setup": {}
+    },
+    {
+      "id": "TERM-120x40-contrast",
+      "family": "TERM",
+      "context": "Terminal",
+      "input": "120x40",
+      "scenarioKind": "Success",
+      "oracle": "contrast actual PTY state",
+      "setup": {}
+    },
+    {
+      "id": "TERM-120x40-restore",
+      "family": "TERM",
+      "context": "Terminal",
+      "input": "120x40",
+      "scenarioKind": "Success",
+      "oracle": "restore actual PTY state",
+      "setup": {}
+    }
+  ],
+  "tombstones": []
+}

@@ -1,5 +1,35 @@
 # Sicherheits-Querschnittskonzepte: TinyCalc
 
+## Feature 006: querschnittliche Schutzregeln / Cross-cutting protection
+
+### Deutscher Konzeptblock
+
+Implementierungsdesign 2026-10-10; Review/Abnahme Open. Tastatur/Formel-, Datei-,
+Paket- und Evidenzvalidierung bleiben an expliziten Grenzen. Core übernimmt keine
+Test-/Providerlogik. Interne Session besitzt App/Views und garantiert Dispose;
+serielle Tests setzen statischen Legacy-Zustand nur im Setup zurück.
+
+Evidenz-JSON ist Datenformat, nie Befehlsquelle. Read-only Validator prüft
+strukturierte lokale Inputs, Duplikate, unbekannte Felder, Pfad-/Symlinkausbruch,
+Quell-/Pin-/Head-/Digestfrische und vollständige Assertions. Producer verwenden
+atomare Veröffentlichung; Timeout/Skip/Teilresultat bedeutet keine Freigabe.
+Fehlertexte dürfen keine Secrets, Stacktraces oder privaten Pfade veröffentlichen.
+Keine zusätzliche Netzwerk-/Auth-/Kryptoschicht im lokalen Produkt; Hashing schützt
+Evidenzbindung, ist keine Signatur oder Zugriffskontrolle. Locks und NuGet.org-Audit
+ergänzen spätere SBOM/Provenance. Eigene Testprozesse/Dateien eng begrenzt bereinigen.
+
+### English concept block
+
+This design separates explicit input/file/package/evidence boundaries without
+adding test/provider logic to Core. Session ownership and disposal support safe
+serialized tests. Evidence JSON never supplies executable commands. A read-only
+validator checks strict structure, safe paths, freshness and complete assertions;
+atomic producers reject partial/skipped/timed-out proof. End-user errors exclude
+secrets, private paths and stack traces. Hashing binds evidence but is not a
+signature or access control. Local-product network/auth/crypto services are N/A;
+locks/audit support later supply-chain proof. Independent review and acceptance
+remain open; cleanup touches only owned resources.
+
 ## Deutscher Prüfblock
 
 ### Laufnachweis

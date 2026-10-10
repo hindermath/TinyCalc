@@ -1,0 +1,384 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "evidence-bundle",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "runId",
+    "commit",
+    "workingTreeDigest",
+    "contractDigest",
+    "pinDecisionDigest",
+    "platform",
+    "runner",
+    "job",
+    "command",
+    "toolVersions",
+    "startedAt",
+    "finishedAt",
+    "exitCode",
+    "payloadDigest",
+    "results"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "enum": [
+        "1.0"
+      ]
+    },
+    "runId": {
+      "type": "string",
+      "format": "uuid"
+    },
+    "commit": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{40}$"
+    },
+    "workingTreeDigest": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "contractDigest": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "pinDecisionDigest": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "platform": {
+      "enum": [
+        "linux",
+        "windows",
+        "macos"
+      ]
+    },
+    "runner": {
+      "type": "string",
+      "minLength": 1
+    },
+    "job": {
+      "type": "string",
+      "minLength": 1
+    },
+    "command": {
+      "type": "string",
+      "minLength": 1
+    },
+    "toolVersions": {
+      "type": "object",
+      "minProperties": 1,
+      "additionalProperties": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "startedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "finishedAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "exitCode": {
+      "type": "integer"
+    },
+    "payloadDigest": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "results": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "capabilityId",
+          "pathId",
+          "scenarioKind",
+          "kind",
+          "outcome",
+          "testRef",
+          "assertionProofRef",
+          "assertions",
+          "startedAt",
+          "finishedAt",
+          "observedState",
+          "artifactRefs"
+        ],
+        "properties": {
+          "capabilityId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "pathId": {
+            "type": "string",
+            "minLength": 1
+          },
+          "scenarioKind": {
+            "enum": [
+              "Success",
+              "Cancel",
+              "Error"
+            ]
+          },
+          "kind": {
+            "enum": [
+              "Automated",
+              "HumanSupplement"
+            ]
+          },
+          "outcome": {
+            "enum": [
+              "Pass",
+              "Fail",
+              "Skipped",
+              "NotAssessed"
+            ]
+          },
+          "testRef": {
+            "type": "string",
+            "minLength": 1
+          },
+          "assertionProofRef": {
+            "type": "string",
+            "minLength": 1
+          },
+          "assertions": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "id",
+                "expected",
+                "actual",
+                "passed"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "expected": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "value": {
+                      "type": "number"
+                    },
+                    "error": {
+                      "type": "boolean"
+                    },
+                    "selection": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "contents": {
+                      "type": "string"
+                    },
+                    "status": {
+                      "type": "integer",
+                      "minimum": 0
+                    },
+                    "autoCalc": {
+                      "type": "boolean"
+                    },
+                    "focus": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "dialog": {
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    },
+                    "descriptionDe": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "descriptionEn": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "preservedFields": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "minLength": 1
+                      }
+                    },
+                    "cells": {
+                      "type": "object",
+                      "patternProperties": {
+                        "^[A-G](?:[1-9]|1[0-9]|2[01])$": {
+                          "type": "string"
+                        }
+                      },
+                      "additionalProperties": false
+                    }
+                  }
+                },
+                "actual": {
+                  "type": "object",
+                  "additionalProperties": false,
+                  "properties": {
+                    "value": {
+                      "type": "number"
+                    },
+                    "error": {
+                      "type": "boolean"
+                    },
+                    "selection": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "contents": {
+                      "type": "string"
+                    },
+                    "status": {
+                      "type": "integer",
+                      "minimum": 0
+                    },
+                    "autoCalc": {
+                      "type": "boolean"
+                    },
+                    "focus": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "dialog": {
+                      "type": [
+                        "string",
+                        "null"
+                      ]
+                    },
+                    "descriptionDe": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "descriptionEn": {
+                      "type": "string",
+                      "minLength": 1
+                    },
+                    "preservedFields": {
+                      "type": "array",
+                      "items": {
+                        "type": "string",
+                        "minLength": 1
+                      }
+                    },
+                    "cells": {
+                      "type": "object",
+                      "patternProperties": {
+                        "^[A-G](?:[1-9]|1[0-9]|2[01])$": {
+                          "type": "string"
+                        }
+                      },
+                      "additionalProperties": false
+                    }
+                  }
+                },
+                "passed": {
+                  "type": "boolean"
+                }
+              }
+            }
+          },
+          "startedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "finishedAt": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "observedState": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+              "value": {
+                "type": "number"
+              },
+              "error": {
+                "type": "boolean"
+              },
+              "selection": {
+                "type": "string",
+                "minLength": 1
+              },
+              "contents": {
+                "type": "string"
+              },
+              "status": {
+                "type": "integer",
+                "minimum": 0
+              },
+              "autoCalc": {
+                "type": "boolean"
+              },
+              "focus": {
+                "type": "string",
+                "minLength": 1
+              },
+              "dialog": {
+                "type": [
+                  "string",
+                  "null"
+                ]
+              },
+              "descriptionDe": {
+                "type": "string",
+                "minLength": 1
+              },
+              "descriptionEn": {
+                "type": "string",
+                "minLength": 1
+              },
+              "preservedFields": {
+                "type": "array",
+                "items": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "cells": {
+                "type": "object",
+                "patternProperties": {
+                  "^[A-G](?:[1-9]|1[0-9]|2[01])$": {
+                    "type": "string"
+                  }
+                },
+                "additionalProperties": false
+              }
+            }
+          },
+          "artifactRefs": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "additionalProperties": false,
+              "required": [
+                "path",
+                "sha256"
+              ],
+              "properties": {
+                "path": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "sha256": {
+                  "type": "string",
+                  "pattern": "^[a-f0-9]{64}$"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
