@@ -77,6 +77,17 @@ jobs:
         shell: pwsh
         run: ./scripts/collect-tui-contract-evidence.ps1 -Action Capture
 
+      - name: Validate native launcher and zero-write parity
+        shell: pwsh
+        run: |
+          $directory = 'tests/MicroCalc.Tui.Tests/TestResults'
+          New-Item -ItemType Directory -Force -Path $directory | Out-Null
+          $log = Join-Path $directory 'launcher-parity.log'
+          & pwsh -NoProfile -File ./scripts/tests/tui-contract/test-launchers.ps1 > $log 2>&1
+          $result = $LASTEXITCODE
+          Get-Content -LiteralPath $log
+          exit $result
+
       - name: Test
         run: dotnet test MicroCalc.sln --configuration Release --no-build --logger trx --results-directory tests/MicroCalc.Tui.Tests/TestResults/native-ci
 

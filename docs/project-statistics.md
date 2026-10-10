@@ -806,6 +806,8 @@ volume.
 
 | 2026-10-10 | Feature 006 Windows-Größenfixture / Windows size fixture | Branch `006-tui-functional-contract`, Basis `1cc9eff`; sichtbares CI-/Korrekturfenster 20:08–20:17 Europe/Berlin, keine Arbeitszeitmessung. `0` Produktionscode-, `38` C#-Testzeilen netto vor Statistik-/Versionspflege, zusätzlich 43 Dokumentationszeilen im Plattformnachweis. Windows tatsächlich Core 217 grün, TUI 441 grün/11 rot/null Skip wegen 120x30 Hosted-Konsole statt Fixturegrößen; Linux Fail-fast-Abbruch kein Pass. Testadapter nutzt reale gepinnte ANSI-Implementierung mit öffentlicher Größenmonitor-Injektion und stellt ursprüngliche Registrierung wieder her. Build 108 drei gezielte Tests grün mit Nullabilitywarnung; Signatur an Interface angeglichen, Build 109 drei grün ohne Warnung. Kein Produktfix, kein Paketupgrade, keine Assertion-/Größenabsenkung oder globale Unterdrückung. Native finale Vollbelege bleiben offen; unveränderte lokale Produktsuite nicht pauschal wiederholt. Referenzen 80/125 Zeilen/Arbeitstag, 7.8 h/Tag und 21.5 Tage/Monat unverändert. / Correct actual Windows fixture drift through supported test-only size injection and targeted checks; retain real native acceptance requirements. |
 
+| 2026-10-10 | Feature 006 native Launcher-Parität / Native launcher parity | Branch `006-tui-functional-contract`, Basis `1f4960b`; sichtbare Fortsetzung 20:17–20:24 Europe/Berlin, keine Arbeitszeitmessung. `0` Produktionscode-/C#-Testzeilen, `15` Infrastruktur- und `1` Testskriptzeile netto, `45` neue Dokumentationszeilen vor Statistik-/Versionspflege. Native CI führt vorhandenen Launcher-/WhatIf-/Zero-write-Vertrag auf Windows und Linux aus und bewahrt das tatsächliche Protokoll. Neue Workflow-Abschwächung zunächst rot, danach positiver Fall plus sechs Negativfälle grün. Dies ist noch kein nativer Ausführungsnachweis. Paketdeklarationen und materielle Abnahmegrenzen unverändert; keine Wiederholung der unveränderten Produktsuite. Referenzen 80/125 Zeilen/Arbeitstag, 7.8 h/Tag und 21.5 Tage/Monat bleiben Modelle. / Add actual native launcher execution and a targeted red/green workflow guard without claiming future provider results. |
+
 ## Gesamtstatistik / Overall Statistics
 
 Deutsch: Lokaler Feature-006-Zwischenstand: 65/83 Tasks vollständig nachgewiesen;
@@ -848,25 +850,25 @@ Profil 2 verwendet Git-getrackte Textdateien und sichtbare Git-Aktivitaet. Die W
 
 | Kennzahl / Metric | Wert / Value |
 |---|---:|
-| Textbasis / Text base | 259576 lines |
-| Textdateien / Text files | 1555 |
+| Textbasis / Text base | 259657 lines |
+| Textdateien / Text files | 1556 |
 | Beobachtbarer Zeitraum / Observable period | 2025-10-12..2026-10-10 |
 | Aktivtage / Active days | 93 |
-| Relevante Commits / Relevant commits | 282 |
-| Zeilen je Aktivtag / Lines per active day | 2791.1 |
-| Peak-Tag im Fenster / Peak day in window | 2026-10-10 / 34505 |
-| Peak-Woche im Fenster / Peak week in window | 2026-10-04 / 47703 |
+| Relevante Commits / Relevant commits | 283 |
+| Zeilen je Aktivtag / Lines per active day | 2792.0 |
+| Peak-Tag im Fenster / Peak day in window | 2026-10-10 / 34592 |
+| Peak-Woche im Fenster / Peak week in window | 2026-10-04 / 47790 |
 | Laengste Serie / Longest streak | 8 days |
 | Speedup vs. 80 lines/day | 34.9x |
 | Speedup vs. 125 lines/day | 22.3x |
-| Methodik / Methodology | v2; source `1cc9eff81bea` |
+| Methodik / Methodology | v2; source `1f4960b53d51` |
 
 ### Artefaktmix / Artifact Mix
 
 ```text
 Produktiv / Production          [#...................]   1.2% | 3118
-Tests                           [#...................]   5.5% | 14393
-Dokumentation / Documentation   [###############.....]  73.1% | 189782
+Tests                           [#...................]   5.6% | 14431
+Dokumentation / Documentation   [###############.....]  73.1% | 189825
 Skripte / Scripts               [##..................]  11.4% | 29596
 Konfiguration / Configuration   [##..................]   7.5% | 19594
 Daten und Medien / Data and media [....................]   0.0% | 0
@@ -1016,7 +1018,7 @@ Die Faktoren vergleichen sichtbare Lieferdichte mit den dokumentierten manuellen
 Scale: 0..5000 lines/day
 Experienced manual [#...................] 80
 Thorsten solo      [#...................] 125
-Visible repository [###########.........] 2791.1
+Visible repository [###########.........] 2792.0
 ```
 
 Die gemeinsame Skala vergleicht Referenzen und sichtbare Lieferdichte. Sie schreibt die Git-Aktivitaet keiner Person oder KI pauschal zu.
@@ -1025,9 +1027,9 @@ Die gemeinsame Skala vergleicht Referenzen und sichtbare Lieferdichte. Sie schre
 
 ### Textalternative / Text Alternative
 
-DE: Das Fenster beginnt am 2025-10-12 und endet am 2026-10-10. Es enthaelt 93 aktive und 271 inaktive vergangene Tage. Peak-Tag: 2026-10-10 / 34505. Peak-Woche: 2026-10-04 / 47703. Laengste Serie: 8 Tage (2026-07-19..2026-07-26).
+DE: Das Fenster beginnt am 2025-10-12 und endet am 2026-10-10. Es enthaelt 93 aktive und 271 inaktive vergangene Tage. Peak-Tag: 2026-10-10 / 34592. Peak-Woche: 2026-10-04 / 47790. Laengste Serie: 8 Tage (2026-07-19..2026-07-26).
 
-*EN: The window starts on 2025-10-12 and ends on 2026-10-10. It contains 93 active and 271 inactive elapsed days. Peak day: 2026-10-10 / 34505. Peak week: 2026-10-04 / 47703. Longest streak: 8 days (2026-07-19..2026-07-26).*
+*EN: The window starts on 2025-10-12 and ends on 2026-10-10. It contains 93 active and 271 inactive elapsed days. Peak day: 2026-10-10 / 34592. Peak week: 2026-10-04 / 47790. Longest streak: 8 days (2026-07-19..2026-07-26).*
 
 | Monat / Month | Geaenderte Textzeilen / Changed text lines |
 |---|---:|
@@ -1042,6 +1044,6 @@ DE: Das Fenster beginnt am 2025-10-12 und endet am 2026-10-10. Es enthaelt 93 ak
 | 2026-07 | 74031 |
 | 2026-08 | 26210 |
 | 2026-09 | 70997 |
-| 2026-10 | 53783 |
+| 2026-10 | 53870 |
 
 <!-- project-statistics-v2:end -->

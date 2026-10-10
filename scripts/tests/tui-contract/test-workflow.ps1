@@ -18,8 +18,9 @@ foreach($Mutation in @(
     @{from='windows-latest';to='ubuntu-latest';code='MissingNativePlatform'},
     @{from='dotnet test MicroCalc.sln';to='dotnet test MicroCalc.sln --filter Contract=Formula';code='MissingFullExecution'},
     @{from='collect-tui-contract-evidence.ps1';to='not-the-collector.ps1';code='MissingUnconditionalBinding'},
-    @{from='if-no-files-found: error';to='if-no-files-found: ignore';code='MissingProofUpload'}
+    @{from='if-no-files-found: error';to='if-no-files-found: ignore';code='MissingProofUpload'},
+    @{from='test-launchers.ps1';to='not-the-launchers.ps1';code='MissingNativeLauncherParity'}
 )){
     if($Mutation.code -notin @(Test-TuiWorkflowContract ($Text.Replace($Mutation.from,$Mutation.to)))){throw ('Weakening accepted: '+$Mutation.code)}
 }
-Write-Output 'WORKFLOW_PASS: unconditional push/PR, native matrix, unfiltered full execution, binding/upload and five rejected weakenings. No CI acceptance.'
+Write-Output 'WORKFLOW_PASS: unconditional push/PR, native matrix, full execution, binding/upload/parity and six rejected weakenings. No CI acceptance.'

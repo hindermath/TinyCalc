@@ -13,5 +13,9 @@ function Test-TuiWorkflowContract {
     if(-not $Collector.Success -or $Collector.Groups['body'].Value -match '(?m)^        (if|continue-on-error):' -or
         $Collector.Groups['body'].Value -notmatch 'collect-tui-contract-evidence\.ps1'){$Failures.Add('MissingUnconditionalBinding')}
     if($Text -notmatch 'actions/upload-artifact@' -or $Text -notmatch 'if-no-files-found: error'){$Failures.Add('MissingProofUpload')}
+    $Parity=[regex]::Match($Text,'(?ms)^      - name: Validate native launcher and zero-write parity\r?\n(?<body>.*?)(?=^      - |\z)')
+    if(-not $Parity.Success -or $Parity.Groups['body'].Value -match '(?m)^        (if|continue-on-error):' -or
+        $Parity.Groups['body'].Value -notmatch '-NoProfile -File \./scripts/tests/tui-contract/test-launchers\.ps1' -or
+        $Parity.Groups['body'].Value -notmatch 'exit \$result'){$Failures.Add('MissingNativeLauncherParity')}
     return @($Failures)
 }
