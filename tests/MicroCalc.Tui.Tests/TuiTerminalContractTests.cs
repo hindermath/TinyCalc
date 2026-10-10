@@ -29,16 +29,42 @@ public sealed class TuiTerminalContractTests
     [InlineData(80, 24)]
     [InlineData(120, 40)]
     public void FrameworkTerminal_UsesActualRenderedBufferAndInput(int width, int height)
-        => VerifyFramework($"TERM-{width}x{height}-contrast", width, height, "contrast", false);
-
-    [Fact]
-    public void FrameworkTerminal_RestoresOriginalAnsiRegistration()
     {
-        Assert.True(DriverRegistry.TryGetDriver(DriverRegistry.Names.ANSI, out var original));
-        using (var adapter = new LegacyProgramUiAdapter(80, 24))
-            adapter.Run(ui => Assert.Equal(80, ui.App.Driver!.Cols));
-        Assert.True(DriverRegistry.TryGetDriver(DriverRegistry.Names.ANSI, out var restored));
-        Assert.Same(original, restored);
+        var directory = Path.Combine(FormulaContractCases.RepositoryRoot,
+            "tests/MicroCalc.Tui.Tests/TestResults/terminal-publication-fixtures", Guid.NewGuid().ToString("N"));
+        try
+        {
+            VerifyFramework($"TERM-{width}x{height}-contrast", width, height, "contrast", true, directory);
+            Assert.Single(Directory.GetFiles(directory, "path-result.json", SearchOption.AllDirectories));
+            var rawArtifacts = Directory.GetFiles(directory, "native-*", SearchOption.AllDirectories);
+            Assert.Equal(6, rawArtifacts.Length);
+            Assert.All(rawArtifacts, path => Assert.True(new FileInfo(path).Length > 0));
+        }
+        finally
+        {
+            if (Directory.Exists(directory)) Directory.Delete(directory, recursive: true);
+        }
+    }
+
+    [Theory]
+    [InlineData(SizeDetectionMode.Polling)]
+    [InlineData(SizeDetectionMode.AnsiQuery)]
+    public void FrameworkTerminal_RestoresOriginalSizeDetection(SizeDetectionMode configured)
+    {
+        var original = Driver.SizeDetection;
+        try
+        {
+            Driver.SizeDetection = configured;
+            using (var adapter = new LegacyProgramUiAdapter(80, 24))
+                adapter.Run(ui =>
+                {
+                    Assert.Equal(SizeDetectionMode.AnsiQuery, Driver.SizeDetection);
+                    Assert.Equal(80, ui.App.Driver!.Cols);
+                    Assert.Equal(24, ui.App.Driver.Rows);
+                });
+            Assert.Equal(configured, Driver.SizeDetection);
+        }
+        finally { Driver.SizeDetection = original; }
     }
 
     [Fact]
@@ -92,7 +118,7 @@ public sealed class TuiTerminalContractTests
         Assert.False(File.Exists(Path.Combine(directory, "sheet.mcalc.json")));
     }
 
-    private static void VerifyFramework(string id, int width, int height, string scenario, bool publish)
+    private static void VerifyFramework(string id, int width, int height, string scenario, bool publish, string? proofDirectory = null)
     {
         // DE: Native CI prüft echte Views/Treiberbuffer; nur macOS ergänzt den separaten Prozess-PTY.
         // EN: Native CI checks real views/driver buffers; only macOS adds the separate process PTY.
@@ -109,8 +135,10 @@ public sealed class TuiTerminalContractTests
             Assert.Equal(width, cells.GetLength(1));
             var text = string.Join("\n", Enumerable.Range(0, height).Select(y =>
                 string.Concat(Enumerable.Range(0, width).Select(x => cells[y, x].Grapheme ?? " "))));
-            artifacts.Add(phase + ".bin", Encoding.UTF8.GetBytes(ansi));
-            artifacts.Add(phase + ".txt", Encoding.UTF8.GetBytes(text));
+            // DE: Rohphasen getrennt benennen; grid.txt bleibt dem zusammenfassenden Beleg vorbehalten.
+            // EN: Name raw phases separately; grid.txt is reserved for the summary proof.
+            artifacts.Add("native-" + phase + ".bin", Encoding.UTF8.GetBytes(ansi));
+            artifacts.Add("native-" + phase + ".txt", Encoding.UTF8.GetBytes(text));
             if (scenario == "contrast")
                 for (var y = 0; y < height; y++) for (var x = 0; x < width; x++)
                 {
@@ -164,7 +192,10 @@ public sealed class TuiTerminalContractTests
             Assert.True(proof.Observe("native-rendered-views-and-owned-session-exit",
                 new JsonObject { ["focus"] = focus, ["contents"] = "7", ["value"] = 7 },
                 new JsonObject { ["focus"] = id == "APP-terminal-restoration" ? UiPathObservation.Focus(adapter) : gridFocus, ["contents"] = adapter.CurrentCell.Contents, ["value"] = adapter.CurrentCell.Value }).Accepted);
-            Assert.NotNull(proof.Complete(adapter.GridText, "Native framework rendering/input and natural owned session exit; not macOS PTY or human proof.", artifacts));
+            const string status = "Native framework rendering/input and natural owned session exit; not macOS PTY or human proof.";
+            Assert.NotNull(proofDirectory is null
+                ? proof.Complete(adapter.GridText, status, artifacts)
+                : proof.Complete(proofDirectory, adapter.GridText, status, artifacts));
         }
     }
 

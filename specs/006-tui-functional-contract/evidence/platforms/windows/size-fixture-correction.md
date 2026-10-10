@@ -10,7 +10,7 @@ und APP-terminal-restoration. Tatsächlicher Treiberbuffer war 120x30 statt
 der vorgegebenen 80x24/120x40. Das ist Testinfrastruktur-Rot, kein Produktdefekt.
 Linux wurde durch die bestehende Fail-fast-Matrix abgebrochen, nicht bestanden.
 
-Korrektur ausschließlich im Testadapter: dieselbe reale ANSI-Factory mit der
+Erster, inzwischen supersedierter Korrekturversuch im Testadapter: dieselbe reale ANSI-Factory mit der
 öffentlichen [SizeMonitor-Injektion des gepinnten Frameworks](https://github.com/tui-cs/Terminal.Gui/blob/d0a0ed9b150d3fc8aacf4ab07b7f7d91264fe6d6/Terminal.Gui/Drivers/AnsiDriver/AnsiComponentFactory.cs).
 Der Monitor meldet die vorgegebene Fixturegröße; echte Views, Tastatureingabe,
 Layout, Zeichnung und unabhängige Assertions bleiben erhalten. Die vorherige
@@ -35,9 +35,46 @@ The linked actual Windows CI run passes 217 Core tests but fails eleven of
 80x24/120x40 fixture sizes. Existing matrix fail-fast cancels Linux; cancellation
 is not success. This is infrastructure red, not a product defect.
 
-The adapter keeps the real pinned ANSI implementation, input, views, layout,
+The first, now superseded adapter attempt keeps the real pinned ANSI implementation, input, views, layout,
 rendering and assertions while using its public size-monitor injection. Original
 registration is restored even on initialisation failure; an added test checks
 session disposal. Three targeted local tests pass without compiler warnings.
 This proves controlled framework behaviour, not native Windows completion,
 physical PTY or human accessibility. Fresh complete native CI proof remains due.
+
+## Tatsächliche Folgekorrektur / Actual follow-up correction
+
+Deutsch: [Lauf 38075699435](https://github.com/hindermath/TinyCalc/actions/runs/38075699435)
+am Head `891d99f0287697400513bc03c6ebcb3f36705a8d` widerlegt die erste
+Windows-Hypothese: 120x30 bleibt bestehen. Die gepinnte
+[ApplicationImpl.Driver](https://github.com/tui-cs/Terminal.Gui/blob/d0a0ed9b150d3fc8aacf4ab07b7f7d91264fe6d6/Terminal.Gui/App/ApplicationImpl.Driver.cs)
+erstellt bei Namensauswahl die Factory direkt; die registrierte CreateFactory
+wird nicht aufgerufen. Der wirkungslose Registry-/Monitor-Eingriff ist entfernt.
+Der Adapter setzt stattdessen den öffentlichen Größenmodus vor Init auf
+AnsiQuery, setzt die gewünschte Screen-Größe und stellt den ursprünglichen
+Modus bei Fehler/Dispose wieder her. Echte ANSI-Views, Buffer und Eingabe bleiben
+erhalten; keine Änderung an Produktdefaults, Paketen oder physischen Konsolen.
+
+Linux: Core 217 Pass, TUI 444 Pass/9 Fail/null Skip. Die neun Publikationen
+kollidieren mit dem reservierten `grid.txt`. Rohphasen heißen nun `native-*`;
+die Sicherheitsprüfung bleibt streng. Die zwei lokalen Frameworkfälle prüfen
+jetzt auch vollständige Publikation von sechs nichtleeren Rohartefakten in
+einem eigenen, anschließend bereinigten Testverzeichnis. Keine doppelten
+Vertragsbelege gelangen in den Collector.
+
+Build 110: beide Publikationsfälle tatsächlich rot. Build 111: diese zwei und
+drei bestehende Namensablehnungen grün. Build 112: Polling-Restaurierungsfall
+tatsächlich rot, AnsiQuery-Fall grün. Build 113: alle sieben gezielten Fälle
+grün, null Fail/Skip. Originale: ignorierte `TestResults/006-native-publication110-red.*`,
+`006-native-publication111-green.*`, `006-native-polling112-red.*` und
+`006-native-fixture113-green.*`. Dies ersetzt keinen neuen nativen Vollbeleg.
+
+English: Actual native CI disproves the registry-factory hypothesis: the pinned
+driver selector constructs its factory directly. Remove the ineffective override
+and set the supported ANSI query mode before Init, restoring the original mode
+after disposal/failure. Keep real framework rendering and input; do not change
+product defaults or the physical console. Linux's nine raw-proof publication
+failures are reserved-name collisions, corrected with distinct native-prefixed
+phase names rather than a weaker security check. Real local red/green tests now
+exercise publication and restoration from both size modes: seven targeted cases
+pass in build 113. Fresh complete native proof remains mandatory.
