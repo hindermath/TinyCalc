@@ -1,5 +1,17 @@
 # Cloud-Autonomie-Anwendbarkeit / Cloud Autonomy Applicability
 
+## Feature 006: unveränderte Grenze / Unchanged boundary
+
+Deutsch, 2026-10-10: Produkt-C3A bleibt N/A ohne Cloud-Runtime. Lokale Tests
+und interne Session ändern das nicht. CI-/KI-Toolprovider behalten getrennte
+Bewertungen, offene Owner-Entscheidungen und alle bisherigen Gruppen/IDs.
+Owner Thorsten prüft eine neue Cloud-/Providergrenze vor betroffenem Schritt.
+Keine Zertifizierungs- oder Rechtsfreigabe durch diesen technischen Checkpoint.
+
+English: Product C3A remains N/A without cloud runtime. CI/AI tooling retains
+separate applicability, existing groups/IDs and Open owner decisions. New cloud
+or provider boundaries trigger review, not legal or certification approval.
+
 ## Feature-005-C3A-Bewertung / Feature 005 C3A assessment
 
 ## Deutscher Prüfblock

@@ -1,0 +1,413 @@
+{
+  "schemaVersion": "1.0",
+  "revision": 2,
+  "mappings": [
+    {
+      "sourcePath": "src/MicroCalc.Tui/Program.cs",
+      "sourceHash": "1a4f417e5c45bdb8e902bf960d2f8d666976a71145d09e2fc983725170ca2ab0",
+      "anchor": "TerminalStateLease.Capture",
+      "offerKind": "Substantive",
+      "capabilityRefs": ["APP-001", "TERM-001"],
+      "defectRef": null
+    },
+    {
+      "sourcePath": "src/MicroCalc.Tui/TerminalStateLease.cs",
+      "sourceHash": "a0b82a167920af9d53d1aedd2b85b1e9116607d5a524d225647b1eb78af374ec",
+      "anchor": "RegisterFinalRestore",
+      "offerKind": "Substantive",
+      "capabilityRefs": ["APP-001", "TERM-001"],
+      "defectRef": null
+    },
+    {
+      "sourcePath": "src/MicroCalc.Tui/TuiSession.cs",
+      "sourceHash": "af2c8f9f7759a3e475a9c1515be6daaba5ebdfddef54302004fda76acb7e2c68",
+      "anchor": "BuildWindow",
+      "offerKind": "Substantive",
+      "capabilityRefs": [
+        "APP-001",
+        "GRID-001",
+        "TERM-001"
+      ],
+      "defectRef": null
+    },
+    {
+      "sourcePath": "src/MicroCalc.Tui/TuiSession.cs",
+      "sourceHash": "af2c8f9f7759a3e475a9c1515be6daaba5ebdfddef54302004fda76acb7e2c68",
+      "anchor": "HandleKey",
+      "offerKind": "Substantive",
+      "capabilityRefs": [
+        "APP-001",
+        "NAV-UP-001",
+        "NAV-DOWN-001",
+        "NAV-RIGHT-001",
+        "NAV-LEFT-001",
+        "EDIT-001",
+        "CMD-001"
+      ],
+      "defectRef": null
+    },
+    {
+      "sourcePath": "src/MicroCalc.Tui/TuiSession.cs",
+      "sourceHash": "af2c8f9f7759a3e475a9c1515be6daaba5ebdfddef54302004fda76acb7e2c68",
+      "anchor": "BuildMenu",
+      "offerKind": "Substantive",
+      "capabilityRefs": [
+        "CMD-001",
+        "FILE-001",
+        "HELP-001",
+        "DIALOG-001"
+      ],
+      "defectRef": null
+    },
+    {
+      "sourcePath": "src/MicroCalc.Tui/TuiSession.cs",
+      "sourceHash": "af2c8f9f7759a3e475a9c1515be6daaba5ebdfddef54302004fda76acb7e2c68",
+      "anchor": "PromptText",
+      "offerKind": "Substantive",
+      "capabilityRefs": [
+        "EDIT-001",
+        "CELL-001",
+        "DIALOG-001"
+      ],
+      "defectRef": null
+    },
+    {
+      "sourcePath": "src/MicroCalc.Tui/TuiSession.cs",
+      "sourceHash": "af2c8f9f7759a3e475a9c1515be6daaba5ebdfddef54302004fda76acb7e2c68",
+      "anchor": "ShowHelp",
+      "offerKind": "Substantive",
+      "capabilityRefs": [
+        "HELP-001",
+        "DIALOG-001"
+      ],
+      "defectRef": null
+    },
+    {
+      "sourcePath": "README.md",
+      "sourceHash": "078d8b61d5df996f4879fc681cad7f08b9f3f5d169a1a6824526044f031c4209",
+      "anchor": "Funktionsumfang der Portierung",
+      "offerKind": "Substantive",
+      "capabilityRefs": [
+        "APP-001",
+        "GRID-001",
+        "NAV-UP-001",
+        "NAV-DOWN-001",
+        "NAV-RIGHT-001",
+        "NAV-LEFT-001",
+        "EDIT-001",
+        "CELL-001",
+        "OP-001",
+        "REF-001",
+        "FUNC-LEGACY-001",
+        "FUNC-EXT-001",
+        "CMD-001",
+        "FILE-001",
+        "HELP-001",
+        "DIALOG-001",
+        "TERM-001"
+      ],
+      "defectRef": null
+    },
+    {
+      "sourcePath": "src/MicroCalc.Tui/Resources/CALC.HLP",
+      "sourceHash": "4f123445cd98683002db74406de3dc6cbd35928dd51c0d88c1871f77b848bde2",
+      "anchor": "Summary of MicroCalc",
+      "offerKind": "Substantive",
+      "capabilityRefs": [
+        "APP-001",
+        "GRID-001",
+        "CELL-001",
+        "EDIT-001",
+        "OP-001",
+        "REF-001",
+        "FUNC-LEGACY-001"
+      ],
+      "defectRef": null
+    },
+    {
+      "sourcePath": "src/MicroCalc.Tui/Resources/CALC.HLP",
+      "sourceHash": "4f123445cd98683002db74406de3dc6cbd35928dd51c0d88c1871f77b848bde2",
+      "anchor": "Summary of commands",
+      "offerKind": "Substantive",
+      "capabilityRefs": [
+        "CMD-001",
+        "FILE-001",
+        "HELP-001",
+        "DIALOG-001"
+      ],
+      "defectRef": null
+    },
+    {
+      "sourcePath": "src/MicroCalc.Tui/Resources/CALC.HLP",
+      "sourceHash": "4f123445cd98683002db74406de3dc6cbd35928dd51c0d88c1871f77b848bde2",
+      "anchor": "EXAMPLES",
+      "offerKind": "Substantive",
+      "capabilityRefs": [
+        "EDIT-001",
+        "OP-001",
+        "REF-001",
+        "FUNC-LEGACY-001"
+      ],
+      "defectRef": null
+    },
+    {
+      "sourcePath": "CALC.HLP",
+      "sourceHash": "4f123445cd98683002db74406de3dc6cbd35928dd51c0d88c1871f77b848bde2",
+      "anchor": "Summary of MicroCalc",
+      "offerKind": "Substantive",
+      "capabilityRefs": [
+        "APP-001",
+        "GRID-001",
+        "CELL-001",
+        "EDIT-001",
+        "OP-001",
+        "REF-001",
+        "FUNC-LEGACY-001"
+      ],
+      "defectRef": null
+    },
+    {
+      "sourcePath": "CALC.HLP",
+      "sourceHash": "4f123445cd98683002db74406de3dc6cbd35928dd51c0d88c1871f77b848bde2",
+      "anchor": "Summary of commands",
+      "offerKind": "Substantive",
+      "capabilityRefs": [
+        "CMD-001",
+        "FILE-001",
+        "HELP-001",
+        "DIALOG-001"
+      ],
+      "defectRef": null
+    },
+    {
+      "sourcePath": "CALC.HLP",
+      "sourceHash": "4f123445cd98683002db74406de3dc6cbd35928dd51c0d88c1871f77b848bde2",
+      "anchor": "EXAMPLES",
+      "offerKind": "Substantive",
+      "capabilityRefs": [
+        "EDIT-001",
+        "OP-001",
+        "REF-001",
+        "FUNC-LEGACY-001"
+      ],
+      "defectRef": null
+    },
+    {
+      "sourcePath": "docs/help/microcalc-help.md",
+      "sourceHash": "b01ba655dfc6298abb35d7d5801bb10b660e5e0fa072ba1deb03b9ec18aa11fc",
+      "anchor": "Page 1",
+      "offerKind": "Substantive",
+      "capabilityRefs": [
+        "APP-001",
+        "GRID-001"
+      ],
+      "defectRef": null
+    },
+    {
+      "sourcePath": "docs/help/microcalc-help.md",
+      "sourceHash": "b01ba655dfc6298abb35d7d5801bb10b660e5e0fa072ba1deb03b9ec18aa11fc",
+      "anchor": "Page 2",
+      "offerKind": "Substantive",
+      "capabilityRefs": [
+        "CMD-001",
+        "FILE-001"
+      ],
+      "defectRef": null
+    },
+    {
+      "sourcePath": "docs/help/microcalc-help.md",
+      "sourceHash": "b01ba655dfc6298abb35d7d5801bb10b660e5e0fa072ba1deb03b9ec18aa11fc",
+      "anchor": "Page 3",
+      "offerKind": "Substantive",
+      "capabilityRefs": [
+        "GRID-001",
+        "REF-001"
+      ],
+      "defectRef": null
+    },
+    {
+      "sourcePath": "docs/help/microcalc-help.md",
+      "sourceHash": "b01ba655dfc6298abb35d7d5801bb10b660e5e0fa072ba1deb03b9ec18aa11fc",
+      "anchor": "Page 4",
+      "offerKind": "Substantive",
+      "capabilityRefs": [
+        "NAV-UP-001",
+        "NAV-DOWN-001",
+        "NAV-RIGHT-001",
+        "NAV-LEFT-001"
+      ],
+      "defectRef": null
+    },
+    {
+      "sourcePath": "docs/help/microcalc-help.md",
+      "sourceHash": "b01ba655dfc6298abb35d7d5801bb10b660e5e0fa072ba1deb03b9ec18aa11fc",
+      "anchor": "Page 5",
+      "offerKind": "Substantive",
+      "capabilityRefs": [
+        "OP-001",
+        "REF-001",
+        "FUNC-LEGACY-001",
+        "FUNC-EXT-001"
+      ],
+      "defectRef": null
+    },
+    {
+      "sourcePath": "docs/help/microcalc-help.md",
+      "sourceHash": "b01ba655dfc6298abb35d7d5801bb10b660e5e0fa072ba1deb03b9ec18aa11fc",
+      "anchor": "Page 6",
+      "offerKind": "Substantive",
+      "capabilityRefs": [
+        "CMD-001",
+        "FILE-001",
+        "HELP-001",
+        "DIALOG-001"
+      ],
+      "defectRef": null
+    },
+    {
+      "sourcePath": "docs/help/microcalc-help.md",
+      "sourceHash": "b01ba655dfc6298abb35d7d5801bb10b660e5e0fa072ba1deb03b9ec18aa11fc",
+      "anchor": "Page 7",
+      "offerKind": "Substantive",
+      "capabilityRefs": [
+        "EDIT-001",
+        "DIALOG-001"
+      ],
+      "defectRef": null
+    },
+    {
+      "sourcePath": "docs/help/microcalc-help.md",
+      "sourceHash": "b01ba655dfc6298abb35d7d5801bb10b660e5e0fa072ba1deb03b9ec18aa11fc",
+      "anchor": "Page 8",
+      "offerKind": "Substantive",
+      "capabilityRefs": [
+        "FUNC-EXT-001"
+      ],
+      "defectRef": null
+    },
+    {
+      "sourcePath": "src/MicroCalc.Tui/Program.cs",
+      "sourceHash": "1a4f417e5c45bdb8e902bf960d2f8d666976a71145d09e2fc983725170ca2ab0",
+      "anchor": "RunSmokeMode",
+      "offerKind": "Substantive",
+      "capabilityRefs": [
+        "APP-001",
+        "TERM-001"
+      ],
+      "defectRef": null
+    },
+    {
+      "sourcePath": "CALC.HLP",
+      "sourceHash": "4f123445cd98683002db74406de3dc6cbd35928dd51c0d88c1871f77b848bde2",
+      "anchor": "Aktueller Port: Bedienung (DE)",
+      "offerKind": "Substantive",
+      "capabilityRefs": [
+        "NAV-UP-001",
+        "NAV-DOWN-001",
+        "NAV-RIGHT-001",
+        "NAV-LEFT-001",
+        "EDIT-001",
+        "CMD-001",
+        "FILE-001",
+        "DIALOG-001"
+      ],
+      "defectRef": null
+    },
+    {
+      "sourcePath": "CALC.HLP",
+      "sourceHash": "4f123445cd98683002db74406de3dc6cbd35928dd51c0d88c1871f77b848bde2",
+      "anchor": "Aktueller Port: Formeln (DE)",
+      "offerKind": "Substantive",
+      "capabilityRefs": [
+        "OP-001",
+        "REF-001",
+        "FUNC-LEGACY-001",
+        "FUNC-EXT-001"
+      ],
+      "defectRef": null
+    },
+    {
+      "sourcePath": "src/MicroCalc.Tui/Resources/CALC.HLP",
+      "sourceHash": "4f123445cd98683002db74406de3dc6cbd35928dd51c0d88c1871f77b848bde2",
+      "anchor": "Aktueller Port: Bedienung (DE)",
+      "offerKind": "Substantive",
+      "capabilityRefs": [
+        "NAV-UP-001",
+        "NAV-DOWN-001",
+        "NAV-RIGHT-001",
+        "NAV-LEFT-001",
+        "EDIT-001",
+        "CMD-001",
+        "FILE-001",
+        "DIALOG-001"
+      ],
+      "defectRef": null
+    },
+    {
+      "sourcePath": "src/MicroCalc.Tui/Resources/CALC.HLP",
+      "sourceHash": "4f123445cd98683002db74406de3dc6cbd35928dd51c0d88c1871f77b848bde2",
+      "anchor": "Aktueller Port: Formeln (DE)",
+      "offerKind": "Substantive",
+      "capabilityRefs": [
+        "OP-001",
+        "REF-001",
+        "FUNC-LEGACY-001",
+        "FUNC-EXT-001"
+      ],
+      "defectRef": null
+    }
+  ],
+  "defects": [
+    {
+      "code": "DOC-COUNT",
+      "sourcePath": "docs/help/microcalc-help.md",
+      "anchor": "COUNT(A1>`A1)",
+      "kind": "DocumentationDefect",
+      "correction": "COUNT(A1>A1)",
+      "reasonDe": "Überzähliger Backtick, keine neue Formelsyntax.",
+      "reasonEn": "Stray backtick, no new formula syntax."
+    },
+    {
+      "code": "DOC-GRID",
+      "sourcePath": "src/MicroCalc.Tui/Resources/CALC.HLP",
+      "anchor": "(A1>A23)",
+      "kind": "DocumentationDefect",
+      "correction": "(A1>A21)",
+      "reasonDe": "Zeile 23 liegt außerhalb des festen Rasters; Summenangebot bleibt.",
+      "reasonEn": "Row 23 exceeds the fixed grid; retain range-sum capability."
+    },
+    {
+      "code": "DOC-GRID-LEGACY",
+      "sourcePath": "CALC.HLP",
+      "anchor": "(A1>A23)",
+      "kind": "DocumentationDefect",
+      "correction": "(A1>A21)",
+      "reasonDe": "Historisches Beispiel korrigiert; keine Produkt-Rastererweiterung.",
+      "reasonEn": "Correct the historical example without extending the product grid."
+    },
+    {
+      "code": "DOC-LIMIT-LEGACY",
+      "sourcePath": "CALC.HLP",
+      "anchor": "The formulas may be as complicated as you want",
+      "kind": "DocumentationDefect",
+      "correction": "Formulas may combine these operations within 70 characters:",
+      "reasonDe": "Bestehende 70-Zeichen-Grenze erklären; keine neue Begrenzung.",
+      "reasonEn": "Explain the existing 70-character limit, not a new restriction."
+    },
+    {
+      "code": "DOC-LIMIT",
+      "sourcePath": "src/MicroCalc.Tui/Resources/CALC.HLP",
+      "anchor": "The formulas may be as complicated as you want",
+      "kind": "DocumentationDefect",
+      "correction": "Formulas may combine these operations within 70 characters:",
+      "reasonDe": "Bestehende 70-Zeichen-Grenze erklären; keine neue Begrenzung.",
+      "reasonEn": "Explain the existing 70-character limit, not a new restriction."
+    }
+  ],
+  "decisions": [
+    "RQ-001 Grid slash versus Editor slash: resolved by owner answer A",
+    "RQ-002 historical aliases/context retained: resolved by owner answer A",
+    "RQ-003 mathematical semantics: resolved by owner answers through 2026-10-08"
+  ],
+  "unresolvedFindings": []
+}

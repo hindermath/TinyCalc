@@ -1023,8 +1023,8 @@
       "sourceClass": "ProjectEvidence",
       "path": "docs/security/security-quality-scenarios.md",
       "version": "Current",
-      "reviewedAt": "2026-09-06",
-      "normalizedSha256": "81427d45fd22554b09b09e2c46f3a0d92ac7b8f7338059330aae733ae4855d04",
+      "reviewedAt": "2026-10-10",
+      "normalizedSha256": "0d34619d4761340a24b476f0350cea166eaf57dc6a717f27b99012c7d63aa0db",
       "scope": {
         "de": "Zeilenspezifischer aktueller Nachweis aus docs/security/security-quality-scenarios.md; der Hash beweist Inhalt, nicht automatisch Erfuellung.",
         "en": "Current row-specific evidence from docs/security/security-quality-scenarios.md; the hash proves content, not automatic fulfilment."
@@ -1038,8 +1038,8 @@
       "sourceClass": "ProjectEvidence",
       "path": "docs/security/supply-chain-evidence.md",
       "version": "Current",
-      "reviewedAt": "2026-09-06",
-      "normalizedSha256": "ce2ad04908b883ec2d1e8b44af0a9ce24c17580bf01dd09c35ffee12242c6e3f",
+      "reviewedAt": "2026-10-10",
+      "normalizedSha256": "daf99c959d93d40de5b9922136ba2f49f2c52c74a2da16ad0001dfbe8ebd160b",
       "scope": {
         "de": "Zeilenspezifischer aktueller Nachweis aus docs/security/supply-chain-evidence.md; der Hash beweist Inhalt, nicht automatisch Erfuellung.",
         "en": "Current row-specific evidence from docs/security/supply-chain-evidence.md; the hash proves content, not automatic fulfilment."
@@ -1053,8 +1053,8 @@
       "sourceClass": "ProjectEvidence",
       "path": "docs/security/threat-model.md",
       "version": "Current",
-      "reviewedAt": "2026-09-06",
-      "normalizedSha256": "94093ec8a0b84d0362c6695c17280b0a3f5126c5185348ce0416542fbbd554ad",
+      "reviewedAt": "2026-10-10",
+      "normalizedSha256": "4ec34eae41ed654fa02f14a2412ad8667555c1f5d1b873da4059a1d70bcf8c48",
       "scope": {
         "de": "Zeilenspezifischer aktueller Nachweis aus docs/security/threat-model.md; der Hash beweist Inhalt, nicht automatisch Erfuellung.",
         "en": "Current row-specific evidence from docs/security/threat-model.md; the hash proves content, not automatic fulfilment."
@@ -1113,8 +1113,8 @@
       "sourceClass": "ProjectEvidence",
       "path": "docs/security/security-checklist.md",
       "version": "Current",
-      "reviewedAt": "2026-09-06",
-      "normalizedSha256": "ec1f13a40631751a1828ceb7f1de263c89563895bb7cef689ea26ec4517299e8",
+      "reviewedAt": "2026-10-10",
+      "normalizedSha256": "a4585b163f0d553a5703fdf66d2754ac86974b24a6b62813cddd18191fe12b32",
       "scope": {
         "de": "Zeilenspezifischer aktueller Nachweis aus docs/security/security-checklist.md; der Hash beweist Inhalt, nicht automatisch Erfuellung.",
         "en": "Current row-specific evidence from docs/security/security-checklist.md; the hash proves content, not automatic fulfilment."
@@ -1128,8 +1128,8 @@
       "sourceClass": "ProjectEvidence",
       "path": "docs/security/zero-trust-applicability.md",
       "version": "Current",
-      "reviewedAt": "2026-09-06",
-      "normalizedSha256": "24bbd7e6e6893ce694908da44657bcf4613f01a692dc9272203f15a72f6e3a8e",
+      "reviewedAt": "2026-10-10",
+      "normalizedSha256": "44577f2212d68f682ef6a45f6be9dca840497a63292383e95bfed5a120ca19d5",
       "scope": {
         "de": "Zeilenspezifischer aktueller Nachweis aus docs/security/zero-trust-applicability.md; der Hash beweist Inhalt, nicht automatisch Erfuellung.",
         "en": "Current row-specific evidence from docs/security/zero-trust-applicability.md; the hash proves content, not automatic fulfilment."
@@ -1158,8 +1158,8 @@
       "sourceClass": "ProjectEvidence",
       "path": "docs/security/cloud-compliance-assurance.md",
       "version": "Current",
-      "reviewedAt": "2026-09-06",
-      "normalizedSha256": "17e0cc59206f2657c60a66cde1cf327f5d3cc34ea36c7a68c5ca92e3f3e609f4",
+      "reviewedAt": "2026-10-10",
+      "normalizedSha256": "6eddbf3593caaeac04c5c7ca0527dee6daf8bbb3fb1b6a2d921f30540bb9b865",
       "scope": {
         "de": "Zeilenspezifischer aktueller Nachweis aus docs/security/cloud-compliance-assurance.md; der Hash beweist Inhalt, nicht automatisch Erfuellung.",
         "en": "Current row-specific evidence from docs/security/cloud-compliance-assurance.md; the hash proves content, not automatic fulfilment."
@@ -1203,8 +1203,8 @@
       "sourceClass": "ProjectEvidence",
       "path": "docs/security/dependency-audit.md",
       "version": "Current",
-      "reviewedAt": "2026-09-06",
-      "normalizedSha256": "441e2567712441816448243498112e514dfaa4fcd21cee0ec69ce64335c141c5",
+      "reviewedAt": "2026-10-10",
+      "normalizedSha256": "049f34c445c34aeed087dd07c2ca0405d7432e833379479cb46d29b405ec272b",
       "scope": {
         "de": "Zeilenspezifischer aktueller Nachweis aus docs/security/dependency-audit.md; der Hash beweist Inhalt, nicht automatisch Erfuellung.",
         "en": "Current row-specific evidence from docs/security/dependency-audit.md; the hash proves content, not automatic fulfilment."
@@ -1218,8 +1218,8 @@
       "sourceClass": "ProjectEvidence",
       "path": "docs/security/cloud-autonomy-applicability.md",
       "version": "Current",
-      "reviewedAt": "2026-09-06",
-      "normalizedSha256": "398a07285563cf0a9c6b555771ed7672d68a24a170045d236feeb75a87130009",
+      "reviewedAt": "2026-10-10",
+      "normalizedSha256": "bc0f421c4fb7efc3f063b8551e28b10ac14249caec441ab7bb0a5cda7bcfd5f1",
       "scope": {
         "de": "Zeilenspezifischer aktueller Nachweis aus docs/security/cloud-autonomy-applicability.md; der Hash beweist Inhalt, nicht automatisch Erfuellung.",
         "en": "Current row-specific evidence from docs/security/cloud-autonomy-applicability.md; the hash proves content, not automatic fulfilment."
@@ -1233,8 +1233,8 @@
       "sourceClass": "ProjectEvidence",
       "path": "docs/security/asvs-verification.md",
       "version": "Current",
-      "reviewedAt": "2026-09-06",
-      "normalizedSha256": "bb1cbaadfde55dfe863fe04c9ab3b5de062769ccc1ed1970991bc0641d935c07",
+      "reviewedAt": "2026-10-10",
+      "normalizedSha256": "63c48b584d93c389772b8899039aa5fa2c401ae4c19e34ceb09a39fcbdbd968b",
       "scope": {
         "de": "Zeilenspezifischer aktueller Nachweis aus docs/security/asvs-verification.md; der Hash beweist Inhalt, nicht automatisch Erfuellung.",
         "en": "Current row-specific evidence from docs/security/asvs-verification.md; the hash proves content, not automatic fulfilment."
@@ -1248,8 +1248,8 @@
       "sourceClass": "ProjectEvidence",
       "path": "docs/security/arc42-security.md",
       "version": "Current",
-      "reviewedAt": "2026-09-06",
-      "normalizedSha256": "eb28c797c53a2eca5cc8902ade176a9f854d8f63f58d66f482a09d7cf7e31a57",
+      "reviewedAt": "2026-10-10",
+      "normalizedSha256": "7845e33ec983d428f697e4d06ab4bbe301f6aa1dc05e16878caa63cd2fcbdcd6",
       "scope": {
         "de": "Zeilenspezifischer aktueller Nachweis aus docs/security/arc42-security.md; der Hash beweist Inhalt, nicht automatisch Erfuellung.",
         "en": "Current row-specific evidence from docs/security/arc42-security.md; the hash proves content, not automatic fulfilment."
@@ -1308,8 +1308,8 @@
       "sourceClass": "ProjectEvidence",
       "path": "docs/security/samm-assessment.md",
       "version": "Current",
-      "reviewedAt": "2026-09-06",
-      "normalizedSha256": "c6036128766f4aabb43ca32631db0a2c4b86f35b2c6d947296525cfa87c569e9",
+      "reviewedAt": "2026-10-10",
+      "normalizedSha256": "e795311d414c850d0a78469262da4e5d63148410ca59ed6c9c20abaf1094499a",
       "scope": {
         "de": "Zeilenspezifischer aktueller Nachweis aus docs/security/samm-assessment.md; der Hash beweist Inhalt, nicht automatisch Erfuellung.",
         "en": "Current row-specific evidence from docs/security/samm-assessment.md; the hash proves content, not automatic fulfilment."

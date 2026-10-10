@@ -1,0 +1,12 @@
+{
+  "schemaVersion": "1.0",
+  "equivalent": [
+    { "left": "{\"z\":1,\"a\":{\"y\":2,\"x\":3}}", "right": "{ \"a\": {\"x\":3,\"y\":2}, \"z\":1 }" },
+    { "left": "{\"text\":\"Grüße\\nHello\"}", "right": "{\"text\":\"Gr\\u00fc\\u00dfe\\nHello\"}" }
+  ],
+  "different": [
+    { "left": "{\"n\":1}", "right": "{\"n\":1.0}" },
+    { "left": "{\"a\":[1,2]}", "right": "{\"a\":[2,1]}" }
+  ],
+  "invalid": ["{\"a\":1,\"a\":2}", "{\"decisionDigest\":\"a\",\"decisionDigest\":\"b\"}"]
+}

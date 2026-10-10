@@ -94,6 +94,55 @@ Unterstuetzt:
 - Zellreferenzen: `A1`
 - Bereichssumme: `A1>B5`
 - Funktionen: `ABS`, `SQRT`, `SQR`, `SIN`, `COS`, `ARCTAN`, `LN`, `LOG`, `EXP`, `FACT`
+- Erweiterte Funktionen: `MIN`, `MAX`, `AVERAGE`, `COUNT`, `IF`, `ROUND`
+
+### Bedien- und Formelvertrag / Interaction and formula contract
+
+Deutsch: Die lokale Implementierung von Feature 006 wird noch abgenommen.
+Die [lesbare Vertragsbeschreibung](docs/contracts/tui/README.md) und die
+[migrierte Hilfe](docs/help/microcalc-help.md) erklären die einzelnen Wege.
+
+- Das Raster reicht von A1 bis G21. Randnavigation läuft innerhalb dieses Rasters weiter.
+- Rechts: Pfeil, Ctrl-D, Ctrl-M, Enter oder Ctrl-G; links: Pfeil, Ctrl-S oder Ctrl-A.
+  Oben: Pfeil oder Ctrl-E; unten: Pfeil, Ctrl-X oder Ctrl-J.
+- Esc öffnet vorhandenen Zellinhalt; ASCII 32–126 startet neuen Inhalt.
+  `/` öffnet nur im Raster die Palette; im Editor bleibt es Text oder Division.
+- Im Editor bewegen Ctrl-S/D nach links/rechts, Ctrl-A/F an Anfang/Ende.
+  DEL/Ctrl-G löschen links/rechts; Ctrl-V/Ins wechseln Einfügen/Überschreiben.
+  Enter bestätigt OK, Esc/Cancel verwirft Änderungen. Zellinhalt ist auf 70 Zeichen begrenzt.
+- In der Palette wählen Q/L/S/R/P/F/A Quit/Load/Save/Recalculate/Print/Format/AutoCalc.
+- Potenzen binden rechts und vor Vorzeichen: `2^3^2=512`, `-2^2=-4`,
+  `(-2)^2=4`, `2^-2=0.25`. Division und Subtraktion binden links.
+- FACT akzeptiert nur ganze Zahlen von 0 bis 33; FACT(0)=1. SIN/COS und ARCTAN verwenden Bogenmaß.
+  LN verwendet Basis e, LOG Basis 10; Argumente müssen positiv sein.
+- MIN/MAX/AVERAGE einer leeren numerischen Menge ergeben 0; COUNT zählt nur Zahlen.
+  `A1>B5` bleibt Bereichssumme; Zellvergleich: `IF(A1-B1>0,1,0)`.
+- ROUND rundet Halbwerte weg von null. Nichtnegative Präzision wird abgeschnitten:
+  0..15 sind zulässig, 15.9 wird 15; 16 und negative Rohwerte sind Fehler.
+- Numerische Ergebnisse müssen endlich sein. Fehlerhafte Load-Daten ersetzen kein Teilblatt.
+  Save/Load nutzen JSON, Print exportiert Text; `.MCS`-Import bleibt außerhalb des Umfangs.
+
+English: Feature 006 is implemented locally and still awaits acceptance. Follow
+the linked readable contract and migrated help for individual interaction paths.
+
+- The grid is A1 through G21; edge navigation wraps within that grid.
+- Right: arrow, Ctrl-D, Ctrl-M, Enter or Ctrl-G; left: arrow, Ctrl-S or Ctrl-A.
+  Up: arrow or Ctrl-E; down: arrow, Ctrl-X or Ctrl-J.
+- Esc opens existing cell contents; ASCII 32–126 starts new contents.
+  `/` opens the palette only in the grid; in the editor it remains text or division.
+- Editor Ctrl-S/D move left/right; Ctrl-A/F move to start/end. DEL/Ctrl-G delete
+  left/right; Ctrl-V/Ins toggle insert/overwrite. Enter accepts OK; Esc/Cancel
+  discards changes. Cell contents are limited to seventy characters.
+- Palette Q/L/S/R/P/F/A select Quit/Load/Save/Recalculate/Print/Format/AutoCalc.
+- Powers associate right and bind before signs; the four examples above apply.
+  Division and subtraction associate left. FACT accepts integers 0–33, FACT(0)=1.
+- SIN/COS and ARCTAN use radians; LN is base e, LOG base ten, with positive arguments.
+- MIN/MAX/AVERAGE return zero for no numeric cells; COUNT counts only numbers.
+  `A1>B5` remains a range sum; compare cells with `IF(A1-B1>0,1,0)`.
+- ROUND rounds midpoints away from zero. Truncate nonnegative precision to 0–15:
+  15.9 becomes 15; 16 and negative raw precision are errors.
+- Numeric results must be finite. Invalid loads never partially replace a sheet.
+  Save/Load use JSON and Print exports text; `.MCS` import remains out of scope.
 
 ### Commands (TUI)
 

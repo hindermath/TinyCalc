@@ -1,0 +1,95 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "pin-decision",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "dependency",
+    "resolvedVersion",
+    "approvalRef",
+    "declarationRefs",
+    "lockRefs",
+    "sourceRefs",
+    "comparisonEvidence",
+    "state",
+    "requiredGates",
+    "decisionDigest"
+  ],
+  "properties": {
+    "schemaVersion": {
+      "enum": [
+        "1.0"
+      ]
+    },
+    "dependency": {
+      "type": "string",
+      "minLength": 1
+    },
+    "resolvedVersion": {
+      "type": "string",
+      "minLength": 1
+    },
+    "approvalRef": {
+      "type": "string",
+      "minLength": 1
+    },
+    "declarationRefs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "lockRefs": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "path",
+          "sha256"
+        ],
+        "properties": {
+          "path": {
+            "type": "string",
+            "minLength": 1
+          },
+          "sha256": {
+            "type": "string",
+            "pattern": "^[a-f0-9]{64}$"
+          }
+        }
+      }
+    },
+    "sourceRefs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "comparisonEvidence": {
+      "type": "string",
+      "minLength": 1
+    },
+    "state": {
+      "enum": [
+        "AlreadySatisfied",
+        "Drift",
+        "Blocked"
+      ]
+    },
+    "requiredGates": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "decisionDigest": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    }
+  }
+}

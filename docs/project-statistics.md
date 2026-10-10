@@ -635,6 +635,14 @@ runtime evidence.*
 
 | 2026-10-08 | Feature 006 PR-102-Reviewkorrekturen / Feature 006 PR 102 review corrections | Branch `codex/tui-functional-contract-tasks`; sichtbares Review-Follow-up am 2026-10-08, keine Stoppuhrmessung. `0` Produktionscode- und `0` Produkttestzeilen; vier Dokumente betroffen, `2` netto Planzeilen, je eine Task-/PR-Textzeile ersetzt, vor Ledger-Selbstnachweis. Negative Producer-Fixtures verlangen konkrete fehlerhafte Kandidaten und explizite rote Ablehnungsassertions an isolierter zunächst permissiver Testnaht; fehlendes Bundle oder Ausnahme genügt nicht. PR-Text bindet bereits bestandene lokale Prüfungen mit Pflicht zur Wiederholung nach Folgecommit. 83 offene Tasks und vollständige Baseline bleiben erhalten; keine Produktimplementierung oder Abnahme. Erneute Dokument-/Staging-/Secret-/Statistikprüfung und technische Exact-head-PR-Prüfung vor Merge, 80/125 Zeilen/Tag und 7.8 h/Tag unverändert. / Correct producer negative-red semantics and align versioned validation status without changing product scope or acceptance authority. |
 
+| 2026-10-10 | Feature 006 Implement: Preflight und Vertragsfundament / Preflight and contract foundation | Branch `006-tui-functional-contract`, Basis `ffc3d56`; sichtbares lokales Arbeitsfenster 2026-10-10 bis Checkpoint 15:06 Europe/Berlin, keine Stoppuhrmessung. Checkpoint vor dieser Ledger-Ergänzung und späterem Architekturpaket: `0` Produktionscode-, `355` Test-, `21228` Dokumentations-/Vertrags-, `147` Infrastruktur- und `612` generierte Lockzeilen netto, 39 betroffene Dateien. Der große Dokumentationsanteil besteht überwiegend aus strukturiertem generiertem JSON für 17 Familien/364 Pfade und ist keine entsprechende manuelle Schreibzeit. T001–T008: neue lokale Autorität, aktuelle Quellen-/Serien-/Receipt-Prüfung in PowerShell/Bash, vier genehmigte Locks ohne Paketdrift, Locked Restore, Online-CVE-/Lizenzaudit und dispositionierte Automationspflege. Foundation-Schema-/Digestprüfung bestanden; Producer erst 18 tatsächlich rote Tests, danach 24 grüne einschließlich C#/PowerShell-Digestparität und isolierter Bundle-Schemas. Kein Produktfix, keine native Linux-/Windows-, PTY-, VoiceOver- oder unabhängige Abnahme behauptet. Buildzähler 33–38 jeweils vor Build/Test erhöht. Statistikvorschau Exit 0/DRY_RUN, Methodik 2, Quelle `ea8d99052656`; generierter Git-Block bleibt gemäß LocalImplementation unverändert bis separat genehmigter sauberer Commit-Grenze. Basen 80/125 Zeilen/Arbeitstag, 7.8 h/Tag, 21.5 Tage/Monat bleiben Modellannahmen, keine neue Beschleunigungsbehauptung. Keine Commits, Pushes, PRs, Merges, Upgrades oder Folgefeatures. / Record the local preflight and foundation checkpoint, distinguish generated contract volume from manual effort, retain historical generated statistics and all unfulfilled acceptance boundaries. |
+
+| 2026-10-10 | Feature 006 Implementierungs-Zwischenstand / Implementation checkpoint | Branch `006-tui-functional-contract`, Basis `ffc3d56`; sichtbares Arbeitsfenster 2026-10-10 bis 16:30 Europe/Berlin, keine Stoppuhrmessung. Vor dieser Ledger-/Lieferergänzung: 94 betroffene Dateien, netto `91` Produktionscode-, `1748` Test-, `21994` Dokumentations-/Vertrags-, `1036` Infrastruktur- und `616` generierte Lockzeilen. Session-Verschiebung ist keine entsprechende Neuentwicklung; großer JSON-Anteil ist keine manuelle Schreibzeit. 39/83 Tasks nachgewiesen; echte test-first Formel-/TUI-/Load-Korrekturen, 580 grüne Solution-Tests (Core 217/TUI 363), 28 semantische und acht Pfadsicherheitsfixtures sowie synthetische 1092-Tupel-Dateiprüfung mit identischer schreibfreier Preview. Native vollständige Vertragsläufe, PTY, menschliche VoiceOver-Abnahme, Coverage und finale unabhängige Gates offen. DocFX erfolgreich, 84 Warnungen; repräsentative ARIA-/Lynx-Textprüfung durchgeführt, fehlendes HTML-lang dokumentiert, kein WCAG-Pass. Commit/Push nun ausdrücklich genehmigt; Draft-Zwischenstand, kein Merge oder Featureabschluss. Statistikvorschau Exit 0/DRY_RUN, Methodik 2, Quelle `ea8d99052656`; historischen generierten Git-Block im schmutzigen Arbeitsbaum nicht überschrieben. Basen 80/125 Zeilen/Arbeitstag, 7.8 h/Tag, 21.5 Tage/Monat bleiben Referenzmodelle; keine neue Beschleunigungsbehauptung. / Save the partial implementation and real local proof without claiming platform or product acceptance; preserve historical generated statistics and distinguish generated volume from manual effort. |
+
+| 2026-10-10 | Feature 006 Validator-/Policy-Fortsetzung / Validator and policy continuation | Branch `006-tui-functional-contract`, Basis `8115513`; sichtbares lokales Fortsetzungsfenster 2026-10-10 nach 16:30 Europe/Berlin, keine Stoppuhrmessung. Snapshot vor Ledger und abschließendem Statussatz: 24 betroffene Dateien, netto `0` Produktionscode-, `0` C#-Test-, `280` Testskript-, `305` Infrastruktur- und `1350` Dokumentations-/Vertragszeilen. Davon 1100 generierte Katalogzeilen; keine entsprechende manuelle Schreibzeit. Nun 50/83 Tasks nachgewiesen. Policy zunächst 44/50 rot, danach 51 grün; Katalog zunächst 12/15 rot, danach 15 grün. Öffentliche Bindungs-/Ausgabeschutzfälle, echte PowerShell-/Bash-/Cmdlet-/Help-/Preview-Parität und vollständige synthetische 1092-Tupel-Dateiprüfung grün, null Repository-Schreibzugriffe. Vier GSDB-Quellbindungen nach additivem Diff erneuert; GSDB001–010 grün, keine neue Human-/Security-Abnahme. C# unverändert, 580 vorher grüne Tests nicht pauschal wiederholt. T043/T049, vollständige neue-ID-/Rot-Bindung, CI-Producer, native Plattform-/PTY-/VoiceOver-/Coverage-/Review-Abnahme bleiben offen. Claude-Providerfehler auf Nutzerwunsch zurückgestellt, nicht als Pass gewertet. Statistikvorschau Exit 0/DRY_RUN, Methodik 2, Quelle `8115513d803b`; generierte Trends bleiben bis genehmigter sauberer Commit-Grenze historisch, kein Dirty-Guard-Bypass. Basen 80/125 Zeilen/Tag, 7.8 h/Tag, 21.5 Tage/Monat bleiben Modelle ohne neue Beschleunigungsbehauptung. Kein Commit/Push/Merge, keine Intake-/Serienmutation oder Folgefeatures in diesem Paket. / Record the local partial proof and generated volume honestly; preserve all outstanding acceptance gates and defer generated statistics to an authorised clean boundary. |
+
+| 2026-10-10 | Feature 006 echte UI-Beleganbindung / Real UI proof binding | Branch `006-tui-functional-contract`, Basis `8115513`; sichtbares Testfenster 17:17–17:43 Europe/Berlin, Dokumentation anschließend, keine Arbeitszeitmessung. Kumulativer Arbeitsbaum-Snapshot gegen diese Basis vor Ledger-Ergänzung: netto `0` Produktionscode-, `508` C#-Test-, `472` Testskript-, `317` Infrastruktur- und `1495` Dokumentations-/Vertragszeilen, davon weiterhin 1100 generierte Katalogzeilen. Nicht zusätzlich zum vorherigen Arbeitsbaum-Snapshot zählen. Neuer Schwerpunkt: echte Assertions, atomare Teilbelege, typisierte vollständige Zustandszusammenführung, sichere eigene Ausgabepfade und TRX-/Klassen-/Zeit-/Hashbindung. Schreiber zuerst 6/9 rot, Producer zusätzlich 5/5 rot, danach 46 gezielte Producer-Tests grün; drei neue Semantikfälle rot, danach 31 grün. Build 71: 140 Pass einschließlich 124 UI-Pfaden; Build 72: 16 Ausgabeguards; Build 73: 111 Editorpfade, jeweils null Fail/Skip. Insgesamt 235 unterschiedliche Teilpfade und 333 serialisierte Assertions aus getrennten Zwischenläufen, keine finale Versions-/Plattformbindung. Fünf manipulierte Originalkopien korrekt verworfen; zusätzlicher Testklassen-Bypass rot/grün, Inputs/Repositorybytes unverändert. 50/83 Tasks bleiben vollständig nachgewiesen; vollständige Story-/Producer-/CI-/PTY-/Human-/Review-Gates offen, kein pauschaler 580-Test-Neulauf. Repository-Profil-2-Vorschau Exit 0/DRY_RUN, Quelle `8115513d803b`; generische Preset-Konfiguration nicht passend, keine Migration und kein Dirty-Guard-Bypass. Generierte Statistik bleibt bis sauberer autorisierter Grenze historisch. Basen 80/125 Zeilen/Tag, 7.8 h/Tag und 21.5 Tage/Monat unverändert, keine neue Beschleunigungsbehauptung. Kein Commit/Push/Merge oder Folgefeature. / Record real partial proof and cumulative volume without double-counting, measured-effort claims or replacing outstanding acceptance. |
+
 ## Statistikprofil-1-Archiv / Statistics Profile 1 Archive
 Basis dieses Schlussblocks sind die aktuell dokumentierten Snapshot- und
 Phasenwerte aus den Abschnitten `## Gesamtstand des Repositories` und
@@ -790,7 +798,67 @@ volume.
 
 | 2026-10-10 | Drei Preset-Patches und GSDB / Three preset patches and GSDB | UpdateRequired: Security 0.7.1, Architecture 0.6.2 und Sequencing 0.2.8 mit unveraenderlichen Quellen, sieben technischen GSDB-Bindungen und neuen Negativfaellen; alle fachlichen Zustandsachsen und menschlichen Entscheidungen erhalten. Restore, Release-Build, 82 Tests und TUI-Smoke bestanden, vorgeschriebener Buildzaehler 31/32. Bestehende Statistikmethodik unveraendert. / Bounded patch delivery and targeted revalidation, no product run or new acceptance. [Nachweis / Evidence](maintenance/preset-patches-2026-10-10.md). |
 
+| 2026-10-10 | Feature 006 lokaler Vollvertrag und Abschlussfortschritt / Local full contract and closeout progress | Branch `006-tui-functional-contract`, Basis `8115513`; sichtbares Testfenster Build 105 19:30:42–19:34:00 Europe/Berlin, Dokumentations-/Validatorfortsetzung bis 20:00, keine Arbeitszeitmessung. Kumulativer Arbeitsbaum-Snapshot gegen diese Basis vor dieser Ledger-Ergänzung: netto `122` Produktionscode-, `1476` C#-Test-, `815` Testskript-, `651` Infrastruktur- und `2324` Dokumentations-/Vertragszeilen; nicht zusätzlich zu früheren Arbeitsbaum-Snapshots zählen. Darin 1100 generierte Katalogzeilen und strukturiertes JSON, keine entsprechende manuelle Schreibzeit. 65/83 Tasks nachgewiesen. Ungefilterte Solution 669 Pass (Core 217/TUI 452), null Fail/Skip; ein tatsächlicher macOS-Lauf bindet 364/364 Pfade und 462 serialisierte Assertions. Changed-Line-Coverage 488/503 = 97.02%, Collector bytegleich zurückgenommen. Hilfe-/PTY-Defekte test-first korrigiert; neue Historienintegration erst 10/11 rot, danach 11/11 grün; 58 Policy-/8 TRX-Guards und öffentliche synthetische 1092-Tupel-/Zero-write-Integration grün. GSDB001–010 nach technischen Quellenhashupdates grün; keine Human-Freigabe daraus abgeleitet. DocFX 106 null Fehler/88 Warnungen, Seitensprache in fünf echten Seiten und ARIA/Lynx geprüft; axe/native finale Plattform-/VoiceOver-/unabhängige Review-/Ownerabnahme offen. Kein Paketupgrade oder Folgefeature. Basen 80/125 Zeilen/Arbeitstag, 7.8 h/Tag und 21.5 Tage/Monat bleiben Modelle, keine neue Beschleunigungsbehauptung. Profil-2-Render erst an genehmigter sauberer Commit-Grenze, kein Dirty-Guard-Bypass. / Record complete actual local coverage and bounded validator proof without double-counting generated volume or claiming final platform/human/product acceptance. |
+
+| 2026-10-10 | Feature 006 deterministische Historienfixture / Deterministic history fixture | Branch `006-tui-functional-contract`, Basis `6124d76`; sichtbare gezielte Korrektur nach 20:05 Europe/Berlin, keine Arbeitszeitmessung. Netto `0` Produktionscode-, `0` C#-Test-, `16` Testskriptzeilen vor Statistik-/Versionspflege. Nach dem Commit war die implizit schmutzige Produktdatei keine manipulierte Blob-Fixture mehr: 1/7 rot. Eigene synthetische Git-Fixture ersetzt diese Zustandsannahme; anschließend 7/7 grün, Produktkopie unverändert. Keine Wiederholung der unveränderten grünen Produktsuite. Referenzen 80/125 Zeilen/Arbeitstag, 7.8 h/Tag und 21.5 Tage/Monat bleiben Modelle. / Remove a dirty-checkout assumption with an isolated synthetic fixture and targeted red/green proof, without product changes or a new feature. |
+
+| 2026-10-10 | Feature 006 gezielter PowerShell-CI-Fix / Targeted PowerShell CI fix | Branch `006-tui-functional-contract`, Basis `6c2f11e`; sichtbare Fortsetzung nach Push, keine Arbeitszeitmessung. `0` Produktionscode-/C#-Testzeilen, Infrastruktur `+4/-4 = 0` netto und `61` zusätzliche Dokumentationszeilen vor Statistik-/Versionspflege. Ein tatsächlicher PSScriptAnalyzer-Befund betraf die automatische Variable Matches; die Hilfsvariable heißt nun ExecutionMatches. Betroffene Datei mit vorhandenem gepinntem Analyzer 1.25.0 und acht TRX-Guards gezielt grün, keine globale Unterdrückung oder Wiederholung der unveränderten Produktsuite. Abnahme-Zwischenstand ordnet alle sechs SC und verbleibende Pflichtentscheidungen zu, keine Accepted-Behauptung. Native CI und unabhängige/Human-Abnahme bleiben getrennt. Basen 80/125 Zeilen/Arbeitstag, 7.8 h/Tag und 21.5 Tage/Monat unverändert. / Fix the observed automatic-variable collision with a behaviour-preserving rename and targeted checks; document all six criteria without waiving other gates. |
+
+| 2026-10-10 | Feature 006 Windows-Größenfixture / Windows size fixture | Branch `006-tui-functional-contract`, Basis `1cc9eff`; sichtbares CI-/Korrekturfenster 20:08–20:17 Europe/Berlin, keine Arbeitszeitmessung. `0` Produktionscode-, `38` C#-Testzeilen netto vor Statistik-/Versionspflege, zusätzlich 43 Dokumentationszeilen im Plattformnachweis. Windows tatsächlich Core 217 grün, TUI 441 grün/11 rot/null Skip wegen 120x30 Hosted-Konsole statt Fixturegrößen; Linux Fail-fast-Abbruch kein Pass. Testadapter nutzt reale gepinnte ANSI-Implementierung mit öffentlicher Größenmonitor-Injektion und stellt ursprüngliche Registrierung wieder her. Build 108 drei gezielte Tests grün mit Nullabilitywarnung; Signatur an Interface angeglichen, Build 109 drei grün ohne Warnung. Kein Produktfix, kein Paketupgrade, keine Assertion-/Größenabsenkung oder globale Unterdrückung. Native finale Vollbelege bleiben offen; unveränderte lokale Produktsuite nicht pauschal wiederholt. Referenzen 80/125 Zeilen/Arbeitstag, 7.8 h/Tag und 21.5 Tage/Monat unverändert. / Correct actual Windows fixture drift through supported test-only size injection and targeted checks; retain real native acceptance requirements. |
+
+| 2026-10-10 | Feature 006 native Launcher-Parität / Native launcher parity | Branch `006-tui-functional-contract`, Basis `1f4960b`; sichtbare Fortsetzung 20:17–20:24 Europe/Berlin, keine Arbeitszeitmessung. `0` Produktionscode-/C#-Testzeilen, `15` Infrastruktur- und `1` Testskriptzeile netto, `45` neue Dokumentationszeilen vor Statistik-/Versionspflege. Native CI führt vorhandenen Launcher-/WhatIf-/Zero-write-Vertrag auf Windows und Linux aus und bewahrt das tatsächliche Protokoll. Neue Workflow-Abschwächung zunächst rot, danach positiver Fall plus sechs Negativfälle grün. Dies ist noch kein nativer Ausführungsnachweis. Paketdeklarationen und materielle Abnahmegrenzen unverändert; keine Wiederholung der unveränderten Produktsuite. Referenzen 80/125 Zeilen/Arbeitstag, 7.8 h/Tag und 21.5 Tage/Monat bleiben Modelle. / Add actual native launcher execution and a targeted red/green workflow guard without claiming future provider results. |
+
+| 2026-10-10 | Feature 006 reale native Folgekorrektur / Actual native follow-up correction | Branch `006-tui-functional-contract`, Basis `891d99f`; sichtbares CI-/Korrekturfenster 20:25–20:35 Europe/Berlin, keine Arbeitszeitmessung. `0` Produktionscode-, `14` C#-Testzeilen netto vor Statistik-/Versionspflege; Plattformdokumentation beschreibt die supersedierte Hypothese ausdrücklich. Linux tatsächlich Core 217 Pass/TUI 444 Pass, neun Publikationsfehler wegen reserviertem Dateinamen; native Rohphasen nun getrennt. Windows widerlegt Registry-Injektion, gepinnte Treiberauswahl erstellt Factory direkt. Testadapter kontrolliert stattdessen öffentlichen ANSI-Größenmodus und stellt ursprünglichen Modus wieder her, kein Produktdefault geändert. Build 110 zwei Publikationsfälle rot, 111 fünf gezielte Fälle grün; 112 Polling-Fall rot, 113 alle sieben gezielten Publikations-/Restaurierungs-/Ablehnungsfälle grün. Keine neue Abhängigkeit, keine Abschwächung, keine pauschale Wiederholung grüner Produkttests. Neuer nativer Vollbeleg bleibt erforderlich. Referenzen 80/125 Zeilen/Arbeitstag, 7.8 h/Tag und 21.5 Tage/Monat bleiben Modelle. / Fix actual observed fixture defects with narrow red/green proof and retain native acceptance boundaries. |
+
+Deutsch: Zur nativen Folgekorrektur gehören zusätzlich netto 37 Dokumentationszeilen im Plattformnachweis; generierte Statistik und Versionsfelder sind nicht enthalten.
+
+English: The native follow-up correction also adds 37 net platform-evidence documentation lines, excluding generated statistics and version fields.
+
+| 2026-10-10 | Feature 006 Hosted-I/O-Isolation / Hosted I/O isolation | Branch `006-tui-functional-contract`, Basis `bed41f1`; sichtbares CI-/Korrekturfenster 20:37–20:46 Europe/Berlin, keine Arbeitszeitmessung. `0` Produktionscode-, `18` C#-Test- und `25` Dokumentationszeilen netto vor Statistik-/Versionspflege. Windows tatsächlich Core 217 Pass, TUI 443 Pass/11 Fail/null Skip: fremde Terminalantworten beeinflussen Fixturegröße auch im ANSI-Modus. Dokumentierten Framework-Hook ausschließlich in serialisierten Buffer-Tests setzen, ursprüngliche Umgebungsvariable/Größenmodus bei Fehler/Dispose wiederherstellen; echte separate macOS-Prozess-PTYs und Human-Anforderungen erhalten. Build 114 zwei echte rote Restaurierungsfälle, Build 115 sieben gezielte Fälle grün. Keine Paketänderung, keine Produktdefault-Änderung oder abgeschwächte Assertion; native Vollabnahme bleibt offen. Referenzen 80/125 Zeilen/Arbeitstag, 7.8 h/Tag und 21.5 Tage/Monat bleiben Modelle. / Isolate controlled framework tests from hosted console I/O with the documented scoped hook and actual targeted red/green proof. |
+
+| 2026-10-10 | Feature 006 unabhängiger Review, native CI und DocFX / Independent review, native CI and DocFX | Branch `006-tui-functional-contract`, Basis `6a1154d`; sichtbares Review-/Korrekturfenster 21:13–21:35 Europe/Berlin, keine Arbeitszeitmessung. Snapshot vor dieser Ledger-/Versionspflege: `0` Produktionscode-/C#-Testzeilen, Testskript `+39/-0`, Infrastruktur `+81/-12`, Dokumentation/Verträge `+395/-97`; spätere Nachweisergänzung in derselben Lieferung separat im Git-Diff sichtbar. 70/83 Tasks nachgewiesen. Tatsächlicher Linux-/Windows-CI-Lauf 38077169518 je 671 Pass, null Fail/Skip, 364 Pfade/462 Assertions; PR-Testmerge und Feature-Head getrennt gebunden. Genehmigter unabhängiger Quell-/Architekturreview abgeschlossen; echte JSON-Lesegrenze test-first korrigiert, vollständige synthetische 1092-Tupel-/Zero-write-Integration und gezielte Policy-/Pfadtests grün. Temporäres externes axe 4.13.0, kleiner DocFX-Overlay-Fix und fünf reale axe/ARIA/lynx-Stichproben grün, manuelle Fälle erhalten. Keine neue Produktabhängigkeit oder Paketaktualisierung. Historische macOS-Evidenz bleibt historisch; VoiceOver, getrennte Ownerabnahme und finale gemeinsame Head-/Lieferbindung offen. Basen 80/125 Zeilen/Arbeitstag, 7.8 h/Tag und 21.5 Tage/Monat bleiben Modelle. / Record actual independent review, native provider results and targeted accessibility fixes without claiming human or final release acceptance. |
+
+| 2026-10-10 | Feature 006 Produktabnahme vorbereiten / Prepare owner acceptance | Branch `006-tui-functional-contract`, Basis `a9759f5`; sichtbare Dokumentations-/Providerinspektion bis 22:14 Europe/Berlin, keine Arbeitszeitmessung. `0` Produktionscode-, `0` Testcode-/Skriptzeilen, `332` Dokumentationszeilen vor Ledgerpflege: 250 Zeilen bilinguale Sitzungsanleitung, 71 Zeilen neuer nativer Originalnachweis und 11 Zeilen Verknüpfung im Abnahmeprotokoll. Vierzehn synthetische Bedienfälle mit Sollresultaten, getrennte VoiceOver-Beobachtung und spätere Ownerentscheidung vorbereitet, nicht ausgeführt oder genehmigt. Bestehende Push-CI 38080340767 read-only ausgewertet, je Linux/Windows 671 Tests/364 Pfade/462 Assertions und 1147 Originalreferenzen gültig; kein neuer Testlauf, keine historische Umetikettierung. Finale macOS-/Supply-Chain-/Headbindung und Humanabnahme bleiben offen. DocFX erfolgreich mit 83 bestehenden Warnungen; unzugängliche breite Hash-Tabelle nach echtem axe-Befund durch Textlisten ersetzt. Keine Paketänderung, kein Intake-/Serienabschluss oder Folgefeature. Profil-2-Schreiben bleibt an der sauberen Commit-Grenze; vorhandene ASCII-Trends bleiben an ihrer angegebenen Quelle gebunden. Referenzen 80/125 Zeilen/Arbeitstag, 7.8 h/Tag und 21.5 Tage/Monat bleiben Modelle. / Prepare concrete synthetic acceptance steps and separate human/owner records; inspect existing provider originals and correct actual documentation accessibility without inventing acceptance or repeating passing tests. |
+
+| 2026-10-10 | Feature 006 technischen Prüfstand einfrieren / Freeze technical test candidate | Branch `006-tui-functional-contract`, Basis `a9759f5`; fortgesetzte sichtbare Abschlusssitzung, keine Arbeitszeitmessung. `0` Produktions-/Testcodeänderungen; bilinguale Prüfstand-/Startbindung. Dokumentationsumfang vor Belegpflege im Commit-Diff nachvollziehbar. Build 116 für genau einen kommenden vollständigen Release-Testlauf reserviert, nicht bereits bestanden. Finale Maschinenoriginale werden nach Commit separat erhalten; keine selbstreferenzielle Folge von Belegcommits. Human/Owner bleibt Open. Statistik-Render-Vorschau, Write und Check folgen an der genehmigten sauberen Grenze. Referenzen 80/125 Zeilen/Arbeitstag, 7.8 h/Tag, 21.5 Tage/Monat bleiben Modelle. / Freeze a technical candidate and copied binary without product changes, invented test results or human acceptance. |
+
+| 2026-10-11 | Feature 006: menschliche Abnahme und finaler Lieferabschluss / Human acceptance and final delivery closeout | Branch `006-tui-functional-contract`, sichtbare Abschlusssitzung am 11.10.2026 Europe/Berlin; aktive Arbeitszeit nicht gemessen. `0` Produktionscode-, `0` Testcode-/Produktskriptänderungen; vor Ledgerpflege `+542/-73 = +469` Dokumentations-/Nachweiszeilen einschließlich drei neuer Abschlussartefakte, zusätzlich ein kleiner Checklistenabgleich. Arbeitspakete: tatsächliche F01–F14-/VoiceOver-/HTML-/Ownerabnahme, 1092 native Tupel, vollständige Story-/SC-/A11Y-/Supply-Chain-Zuordnung, stale Pin-Autoritätsreferenz und abgeleiteter Hash korrigiert, technischer GSDB-SRC-067-Hash erneuert ohne Kontrollaufwertung, PR-/Abschlussbericht und begrenzte finale Delivery-Prozedur. 80/125 Zeilen/Arbeitstag ergeben für 469 Nettozeilen modellhaft 5.86/3.75 Arbeitstage, 45.73/29.27 Stunden bei 7.8 h/Tag, 0.273/0.175 Monate bei 21.5 Tagen/Monat; keine gemessene Beschleunigung dieser Sitzung. Finaler Statistik-Render erst am sauberen Commit; finale Pflichtläufe/Provider-/Merge-/FF-Sync-Evidence getrennt am eingefrorenen Lieferhead, keine selbstreferenzielle Commit-Schleife. Kein Paketupgrade, Intake-Rename oder Folgefeature. / Record actual human acceptance, unchanged product sources, native proof and bounded delivery work; preserve historical evidence and model assumptions, then bind final execution and delivery separately. |
+
 ## Gesamtstatistik / Overall Statistics
+
+Deutsch: Lokaler Feature-006-Zwischenstand: 70/83 Tasks vollständig nachgewiesen;
+364/364 unterschiedliche Pfade und 462 serialisierte Assertions stammen aus
+einem tatsächlichen macOS-Vollvertrag. 669 Tests grün, Changed-Line-Coverage
+97,02 %. Zusätzlich tatsächliche Linux-/Windows-CI mit je 671 Tests, 364 Pfaden
+und 462 Assertions sowie unabhängiger Quellreview und fünf DocFX-Stichproben.
+Die getrennten Belege sind noch keine finale gemeinsame Headbindung. Human-
+und finale Liefergates bleiben offen, kein Produktabnahmenachweis. Die folgende
+generierte Gesamtstatistik einschließlich ASCII-Trends bleibt an ihre angegebene
+Git-Quelle gebunden und wird nur an einer sauberen Commit-Grenze fortgeschrieben.
+
+English: The local Feature-006 checkpoint fully evidences 70 of 83 tasks.
+One actual macOS full run supplies all 364 paths, 462 serialized assertions and
+669 passing tests, with 97.02% changed-line coverage. No local paths are missing;
+Native Linux/Windows each pass 671 tests and all paths; independent source review
+and five DocFX samples are complete. Separate results are not final common-head
+proof. Human and final delivery gates remain Open, not final product acceptance. Generated
+totals and ASCII trends below remain bound to their stated historical Git source.
+Write only at the authorised clean commit boundary, without bypassing the
+dirty-worktree guard.
+
+```text
+Feature 006: complete local path proof, not acceptance
+Paths  [####################] 364 / 364 locally proved
+Open   [....................]   0 / 364 local paths
+Tasks  [#################...]  70 /  83 fully evidenced
+Native CI: PASS; final common-head/human acceptance: OPEN
+```
+
+Deutsch: Die Balken sind grobe textuelle Anteile. Die Zahlen benennen den Stand;
+Teilbelege ersetzen keine vollständige Plattform-, Human- oder Reviewabnahme.
+
+English: Bars show approximate text-only proportions; the numbers define the
+state. Partial proof never replaces complete platform, human or review acceptance.
 
 <!-- project-statistics-v2:begin -->
 
@@ -800,29 +868,29 @@ Profil 2 verwendet Git-getrackte Textdateien und sichtbare Git-Aktivitaet. Die W
 
 | Kennzahl / Metric | Wert / Value |
 |---|---:|
-| Textbasis / Text base | 228593 lines |
-| Textdateien / Text files | 1434 |
-| Beobachtbarer Zeitraum / Observable period | 2025-10-12..2026-10-10 |
-| Aktivtage / Active days | 93 |
-| Relevante Commits / Relevant commits | 278 |
-| Zeilen je Aktivtag / Lines per active day | 2458.0 |
-| Peak-Tag im Fenster / Peak day in window | 2026-06-17 / 27058 |
-| Peak-Woche im Fenster / Peak week in window | 2026-07-19 / 33387 |
+| Textbasis / Text base | 261105 lines |
+| Textdateien / Text files | 1573 |
+| Beobachtbarer Zeitraum / Observable period | 2025-10-19..2026-10-11 |
+| Aktivtage / Active days | 94 |
+| Relevante Commits / Relevant commits | 289 |
+| Zeilen je Aktivtag / Lines per active day | 2777.7 |
+| Peak-Tag im Fenster / Peak day in window | 2026-10-10 / 35855 |
+| Peak-Woche im Fenster / Peak week in window | 2026-10-04 / 49053 |
 | Laengste Serie / Longest streak | 8 days |
-| Speedup vs. 80 lines/day | 30.7x |
-| Speedup vs. 125 lines/day | 19.7x |
-| Methodik / Methodology | v2; source `ea8d99052656` |
+| Speedup vs. 80 lines/day | 34.7x |
+| Speedup vs. 125 lines/day | 22.2x |
+| Methodik / Methodology | v2; source `12db77c4d17d` |
 
 ### Artefaktmix / Artifact Mix
 
 ```text
-Produktiv / Production          [#...................]   1.2% | 2830
-Tests                           [#...................]   4.2% | 9597
-Dokumentation / Documentation   [##############......]  72.4% | 165399
-Skripte / Scripts               [##..................]  12.4% | 28448
-Konfiguration / Configuration   [##..................]   8.4% | 19304
+Produktiv / Production          [#...................]   1.2% | 3118
+Tests                           [#...................]   5.6% | 14503
+Dokumentation / Documentation   [###############.....]  73.2% | 191159
+Skripte / Scripts               [##..................]  11.3% | 29626
+Konfiguration / Configuration   [##..................]   7.5% | 19606
 Daten und Medien / Data and media [....................]   0.0% | 0
-Sonstiger Text / Other text     [#...................]   1.3% | 3015
+Sonstiger Text / Other text     [#...................]   1.2% | 3093
 ```
 
 Die Balken teilen die aktuelle getrackte Textbasis in stabile Kategorien. Prozent und Zeilenwert sind die genaue, textorientierte Aussage.
@@ -832,25 +900,25 @@ Die Balken teilen die aktuelle getrackte Textbasis in stabile Kategorien. Prozen
 ### Tagesaktivitaet / Daily Activity
 
 ```text
-Wochen / Weeks 01..26 | 2025-10-12..2026-04-11
-So/Su  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 3 0 4 0 0
-Mo/Mo  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 2 0
-Di/Tu  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3 0
-Mi/We  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0
+Wochen / Weeks 01..26 | 2025-10-19..2026-04-18
+So/Su  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 3 0 4 0 0 2
+Mo/Mo  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 2 0 1
+Di/Tu  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3 0 0
+Mi/We  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0
 Do/Th  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-Fr/Fr  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 4 4 0 0 2 4 0
-Sa/Sa  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 4 0 0 4 0 0 0 2 0 0
+Fr/Fr  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 4 4 0 0 2 4 0 2
+Sa/Sa  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 4 0 0 4 0 0 0 2 0 0 0
 ```
 
 ```text
-Wochen / Weeks 27..52 | 2026-04-12..2026-10-10
-So/Su  2 0 0 0 0 0 0 1 0 4 0 0 0 1 4 4 1 4 4 0 4 4 4 4 0 4
-Mo/Mo  1 4 0 4 0 0 0 0 0 0 0 3 1 4 4 0 0 0 2 0 0 0 0 0 3 3
-Di/Tu  0 0 0 3 0 0 3 0 0 0 0 2 0 3 4 4 0 0 0 0 4 3 4 0 0 4
-Mi/We  0 3 0 2 0 0 0 2 0 4 0 2 0 0 2 4 0 0 0 0 0 0 0 0 0 3
-Do/Th  0 0 4 0 0 0 1 0 4 1 0 0 0 1 4 0 0 4 0 0 3 0 0 0 0 3
-Fr/Fr  2 4 0 0 0 4 2 2 0 3 2 3 4 4 4 1 0 0 0 0 4 3 2 0 0 0
-Sa/Sa  0 0 0 0 0 0 0 0 0 4 0 4 4 0 4 2 0 2 0 3 4 4 0 2 4 3
+Wochen / Weeks 27..52 | 2026-04-19..2026-10-17
+So/Su  0 0 0 0 0 0 1 0 4 0 0 0 1 4 4 1 4 4 0 4 4 4 4 0 4 3
+Mo/Mo  4 0 4 0 0 0 0 0 0 0 3 1 4 4 0 0 0 2 0 0 0 0 0 3 3 -
+Di/Tu  0 0 3 0 0 3 0 0 0 0 2 0 3 4 4 0 0 0 0 4 3 4 0 0 4 -
+Mi/We  3 0 2 0 0 0 2 0 4 0 2 0 0 2 4 0 0 0 0 0 0 0 0 0 3 -
+Do/Th  0 4 0 0 0 1 0 4 1 0 0 0 1 4 0 0 4 0 0 3 0 0 0 0 3 -
+Fr/Fr  4 0 0 0 4 2 2 0 3 2 3 4 4 4 1 0 0 0 0 4 3 2 0 0 0 -
+Sa/Sa  0 0 0 0 0 0 0 0 4 0 4 4 0 4 2 0 2 0 3 4 4 0 2 4 4 -
 ```
 
 DE: 0 = keine Aenderung; 1 = 1..79; 2 = 80..399; 3 = 400..1599; 4 = 1600+ geaenderte Textzeilen; - = noch nicht abgelaufen.
@@ -860,24 +928,24 @@ DE: 0 = keine Aenderung; 1 = 1..79; 2 = 80..399; 3 = 400..1599; 4 = 1600+ geaend
 ### Wochenvolumen / Weekly Volume
 
 ```text
-Wochen / Weeks 01..26 | 2025-10-12..2026-04-11
+Wochen / Weeks 01..26 | 2025-10-19..2026-04-18
    cap 20000 | . . . . . . . . . . . . . . . . . . . . . . . . . .
        16667 | . . . . . . . . . . . . . . . . . . . . . . . . . .
        13333 | . . . . . . . . . . . . . . . . . . . . . . . . . .
-       10000 | . . . . . . . . . . . . . . . . . . . # . . . . . .
-        6667 | . . . . . . . . . . . . . . . . . . . # . . . # . .
-        3333 | . . . . . . . . . . . . . . . . # . . # # . . # . .
+       10000 | . . . . . . . . . . . . . . . . . . # . . . . . . .
+        6667 | . . . . . . . . . . . . . . . . . . # . . . # . . .
+        3333 | . . . . . . . . . . . . . . . # . . # # . . # . . .
            0 +-----------------------------------------------------
 ```
 
 ```text
-Wochen / Weeks 27..52 | 2026-04-12..2026-10-10
+Wochen / Weeks 27..52 | 2026-04-19..2026-10-17
    cap 50000 | . . . . . . . . . . . . . . . . . . . . . . . . . .
-       41667 | . . . . . . . . . . . . . . . . . . . . . . . . . .
-       33333 | . . . . . . . . . . . . . . # . . . . . . . . . . .
-       25000 | . . . . . . . . . # . . . . # . . . . . # # . . . .
-       16667 | . . . . . . . . . # . . . . # # . . . . # # # . . .
-        8333 | . # . # . . . . . # . . # . # # . # . . # # # . . #
+       41667 | . . . . . . . . . . . . . . . . . . . . . . . . # .
+       33333 | . . . . . . . . . . . . . # . . . . . . . . . . # .
+       25000 | . . . . . . . . # . . . . # . . . . . # # . . . # .
+       16667 | . . . . . . . . # . . . . # # . . . . # # # . . # .
+        8333 | # . # . . . . . # . . # . # # . # . . # # # . . # .
            0 +-----------------------------------------------------
 ```
 
@@ -888,24 +956,24 @@ Das Wochenvolumen zeigt Additionen plus Loeschungen. Es ist Aenderungsaktivitaet
 ### Kumulative Entwicklung / Cumulative Development
 
 ```text
-Wochen / Weeks 01..26 | 2025-10-12..2026-04-11
+Wochen / Weeks 01..26 | 2025-10-19..2026-04-18
    cap 50000 | . . . . . . . . . . . . . . . . . . . . . . . . . .
        41667 | . . . . . . . . . . . . . . . . . . . . . . . . . .
-       33333 | . . . . . . . . . . . . . . . . . . . . . . . . # #
-       25000 | . . . . . . . . . . . . . . . . . . . . . . . # # #
-       16667 | . . . . . . . . . . . . . . . . . . . # # # # # # #
-        8333 | . . . . . . . . . . . . . . . . . . . # # # # # # #
+       33333 | . . . . . . . . . . . . . . . . . . . . . . . # # #
+       25000 | . . . . . . . . . . . . . . . . . . . . . . # # # #
+       16667 | . . . . . . . . . . . . . . . . . . # # # # # # # #
+        8333 | . . . . . . . . . . . . . . . . . . # # # # # # # #
            0 +-----------------------------------------------------
 ```
 
 ```text
-Wochen / Weeks 27..52 | 2026-04-12..2026-10-10
+Wochen / Weeks 27..52 | 2026-04-19..2026-10-17
   cap 500000 | . . . . . . . . . . . . . . . . . . . . . . . . . .
       416667 | . . . . . . . . . . . . . . . . . . . . . . . . . .
       333333 | . . . . . . . . . . . . . . . . . . . . . . . . . .
-      250000 | . . . . . . . . . . . . . . . . . . . . . . # # # #
-      166667 | . . . . . . . . . . . . . . . # # # # # # # # # # #
-       83333 | . . . . . . . . . # # # # # # # # # # # # # # # # #
+      250000 | . . . . . . . . . . . . . . . . . . . . . # # # # #
+      166667 | . . . . . . . . . . . . . . # # # # # # # # # # # #
+       83333 | . . . . . . . . # # # # # # # # # # # # # # # # # #
            0 +-----------------------------------------------------
 ```
 
@@ -954,8 +1022,8 @@ Die festen Slots halten den Phasenvergleich auch bei fehlenden oder spaeter erga
 
 ```text
 Scale: 0..50x
-80 lines/day       [############........] 30.7x
-125 lines/day      [########............] 19.7x
+80 lines/day       [##############......] 34.7x
+125 lines/day      [#########...........] 22.2x
 ```
 
 Die Faktoren vergleichen sichtbare Lieferdichte mit den dokumentierten manuellen Referenzen. Sie messen keine Arbeitszeit.
@@ -968,7 +1036,7 @@ Die Faktoren vergleichen sichtbare Lieferdichte mit den dokumentierten manuellen
 Scale: 0..5000 lines/day
 Experienced manual [#...................] 80
 Thorsten solo      [#...................] 125
-Visible repository [##########..........] 2458.0
+Visible repository [###########.........] 2777.7
 ```
 
 Die gemeinsame Skala vergleicht Referenzen und sichtbare Lieferdichte. Sie schreibt die Git-Aktivitaet keiner Person oder KI pauschal zu.
@@ -977,9 +1045,9 @@ Die gemeinsame Skala vergleicht Referenzen und sichtbare Lieferdichte. Sie schre
 
 ### Textalternative / Text Alternative
 
-DE: Das Fenster beginnt am 2025-10-12 und endet am 2026-10-10. Es enthaelt 93 aktive und 271 inaktive vergangene Tage. Peak-Tag: 2026-06-17 / 27058. Peak-Woche: 2026-07-19 / 33387. Laengste Serie: 8 Tage (2026-07-19..2026-07-26).
+DE: Das Fenster beginnt am 2025-10-19 und endet am 2026-10-11. Es enthaelt 94 aktive und 264 inaktive vergangene Tage. Peak-Tag: 2026-10-10 / 35855. Peak-Woche: 2026-10-04 / 49053. Laengste Serie: 8 Tage (2026-07-19..2026-07-26).
 
-*EN: The window starts on 2025-10-12 and ends on 2026-10-10. It contains 93 active and 271 inactive elapsed days. Peak day: 2026-06-17 / 27058. Peak week: 2026-07-19 / 33387. Longest streak: 8 days (2026-07-19..2026-07-26).*
+*EN: The window starts on 2025-10-19 and ends on 2026-10-11. It contains 94 active and 264 inactive elapsed days. Peak day: 2026-10-10 / 35855. Peak week: 2026-10-04 / 49053. Longest streak: 8 days (2026-07-19..2026-07-26).*
 
 | Monat / Month | Geaenderte Textzeilen / Changed text lines |
 |---|---:|
@@ -994,6 +1062,6 @@ DE: Das Fenster beginnt am 2025-10-12 und endet am 2026-10-10. Es enthaelt 93 ak
 | 2026-07 | 74031 |
 | 2026-08 | 26210 |
 | 2026-09 | 70997 |
-| 2026-10 | 20142 |
+| 2026-10 | 55772 |
 
 <!-- project-statistics-v2:end -->

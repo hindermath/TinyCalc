@@ -1,0 +1,47 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "source-mapping",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "sourcePath",
+    "sourceHash",
+    "anchor",
+    "offerKind",
+    "capabilityRefs",
+    "defectRef"
+  ],
+  "properties": {
+    "sourcePath": {
+      "type": "string",
+      "minLength": 1
+    },
+    "sourceHash": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "anchor": {
+      "type": "string",
+      "minLength": 1
+    },
+    "offerKind": {
+      "enum": [
+        "Substantive",
+        "DocumentationDefect"
+      ]
+    },
+    "capabilityRefs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "defectRef": {
+      "type": [
+        "string",
+        "null"
+      ]
+    }
+  }
+}

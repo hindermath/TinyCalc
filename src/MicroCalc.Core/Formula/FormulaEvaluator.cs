@@ -26,6 +26,12 @@ public sealed class FormulaEvaluator
     /// EN: Evaluation result with value or error details.
     /// </returns>
     public EvaluationResult Evaluate(string expression, Spreadsheet sheet)
+        => EvaluateCore(expression, sheet, null);
+
+    internal EvaluationResult EvaluateForCell(string expression, Spreadsheet sheet, CellAddress address)
+        => EvaluateCore(expression, sheet, address);
+
+    private static EvaluationResult EvaluateCore(string expression, Spreadsheet sheet, CellAddress? address)
     {
         if (string.IsNullOrWhiteSpace(expression))
         {
@@ -34,6 +40,9 @@ public sealed class FormulaEvaluator
 
         var normalized = Normalize(expression);
         var stack = new HashSet<CellAddress>();
+        // DE: Eine neue Formel darf ihre eigene Zielzelle auch nicht über einen Umweg lesen.
+        // EN: A new formula must not read its own destination, including indirect references.
+        if (address.HasValue) stack.Add(address.Value);
 
         try
         {
@@ -88,7 +97,7 @@ public sealed class FormulaEvaluator
                 throw Error("Unerwartetes Zeichen.");
             }
 
-            return value;
+            return EnsureFinite(value);
         }
 
         private double ParseExpression()
@@ -109,25 +118,25 @@ public sealed class FormulaEvaluator
                     continue;
                 }
 
-                return value;
+                return EnsureFinite(value);
             }
         }
 
         private double ParseSimpleExpression()
         {
-            var value = ParseTerm();
+            var value = ParseSignedFactor();
             while (true)
             {
                 SkipWhitespace();
                 if (Match('*'))
                 {
-                    value *= ParseTerm();
+                    value *= ParseSignedFactor();
                     continue;
                 }
 
                 if (Match('/'))
                 {
-                    var divisor = ParseTerm();
+                    var divisor = ParseSignedFactor();
                     if (Math.Abs(divisor) < double.Epsilon)
                     {
                         throw Error("Division durch Null.");
@@ -137,24 +146,17 @@ public sealed class FormulaEvaluator
                     continue;
                 }
 
-                return value;
+                return EnsureFinite(value);
             }
         }
 
         private double ParseTerm()
         {
-            var value = ParseSignedFactor();
-            while (true)
-            {
-                SkipWhitespace();
-                if (!Match('^'))
-                {
-                    return value;
-                }
-
-                var exponent = ParseSignedFactor();
-                value = Math.Pow(value, exponent);
-            }
+            var value = ParseFactor();
+            SkipWhitespace();
+            // DE: Rekursion im Exponenten bindet Potenzketten rechts und lässt negative Exponenten zu.
+            // EN: Recursion in the exponent makes powers right-associative and permits negative exponents.
+            return Match('^') ? EnsureFinite(Math.Pow(value, ParseSignedFactor())) : EnsureFinite(value);
         }
 
         private double ParseSignedFactor()
@@ -162,10 +164,10 @@ public sealed class FormulaEvaluator
             SkipWhitespace();
             if (Match('-'))
             {
-                return -ParseFactor();
+                return -ParseSignedFactor();
             }
-
-            return ParseFactor();
+            if (Match('+')) return ParseSignedFactor();
+            return ParseTerm();
         }
 
         private double ParseFactor()
@@ -310,11 +312,13 @@ public sealed class FormulaEvaluator
             SkipWhitespace();
             Expect(',');
             var decimalsRaw = ParseExpression();
-            var decimals = (int)Math.Truncate(decimalsRaw);
-            if (decimals < 0)
-            {
+            if (decimalsRaw < 0)
                 throw Error("ROUND: Negative Nachkommastellen sind nicht erlaubt.");
-            }
+            // DE: Rohgrenzen vor der Integer-Konvertierung prüfen; -0.5 darf nicht unbemerkt zu 0 werden.
+            // EN: Check raw bounds before integer conversion; -0.5 must not silently become zero.
+            if (!double.IsFinite(decimalsRaw) || decimalsRaw < 0 || decimalsRaw >= 16)
+                throw Error("ROUND erwartet eine nichtnegative Präzision, abgeschnitten zwischen 0 und 15.");
+            var decimals = (int)Math.Truncate(decimalsRaw);
 
             SkipWhitespace();
             Expect(')');
@@ -400,7 +404,7 @@ public sealed class FormulaEvaluator
 
         private double ApplyFunction(string name, double argument)
         {
-            return name switch
+            var value = name switch
             {
                 "ABS" => Math.Abs(argument),
                 "SQRT" => argument >= 0
@@ -420,15 +424,17 @@ public sealed class FormulaEvaluator
                 "FACT" => Factorial(argument),
                 _ => throw Error($"Unbekannte Funktion '{name}'."),
             };
+            return EnsureFinite(value);
         }
 
         private static double Factorial(double argument)
         {
-            var n = (int)Math.Truncate(argument);
-            if (n < 0 || n > 33)
+            if (!double.IsFinite(argument) || argument < 0 || argument > 33 || argument != Math.Truncate(argument))
             {
                 throw new FormulaParseException("FACT erwartet einen Integer zwischen 0 und 33.", 1);
             }
+
+            var n = (int)argument;
 
             double value = 1;
             for (var i = 2; i <= n; i++)
@@ -610,7 +616,14 @@ public sealed class FormulaEvaluator
                 throw Error("Ungültige Zahl.");
             }
 
-            return number;
+            return EnsureFinite(number);
+        }
+
+        private double EnsureFinite(double value)
+        {
+            if (!double.IsFinite(value))
+                throw Error("Numerisches Ergebnis ist nicht endlich; Definitionsbereich oder Überlauf prüfen.");
+            return value;
         }
 
         private bool HasDigitAfterColumn()

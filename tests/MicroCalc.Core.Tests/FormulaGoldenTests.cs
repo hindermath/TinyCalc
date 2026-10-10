@@ -11,7 +11,9 @@ public sealed class FormulaGoldenTests
     {
         yield return ["2+3*4", 14.0, false];
         yield return ["(2+3)*4", 20.0, false];
-        yield return ["2^3^2", 64.0, false];
+        // DE: RQ-002 ersetzt das alte linksassoziative Orakel ausdrücklich durch Rechtsbindung.
+        // EN: RQ-002 explicitly supersedes the old left-associative oracle with right association.
+        yield return ["2^3^2", 512.0, false];
         yield return [".5+1", 1.5, false];
         yield return ["+7", 7.0, false];
         yield return ["1.2E-3*1000", 1.2, false];

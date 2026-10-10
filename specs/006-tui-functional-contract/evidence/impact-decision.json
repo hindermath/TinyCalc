@@ -1,0 +1,16 @@
+{
+  "schemaVersion": "1.0",
+  "classes": ["FunctionalImpact", "A11yImpact", "TestInfrastructureImpact"],
+  "changedPaths": ["src/MicroCalc.Tui/", "src/MicroCalc.Core/", "tests/", "scripts/", "docs/contracts/tui/"],
+  "reason": {
+    "de": "Geplante reale UI-/Formelkorrekturen und neue Prüfinfrastruktur betreffen Funktion und Bedienbarkeit. Unveränderter Paketgraph reduziert keine Pflichtmatrix.",
+    "en": "Planned actual UI/formula corrections and new test infrastructure affect function and accessibility. The unchanged package graph does not reduce required proof."
+  },
+  "requiredGates": ["FullFunctionalLinuxWindows", "MacOsPty80x24", "MacOsPty120x40", "HumanVoiceOver", "SecurityReview", "ArchitectureReview", "DocumentationAlignment", "EvidenceStrength", "ChangedProductCoverage70Percent"],
+  "reviewer": "Feature implementation; independent acceptance review remains pending",
+  "interactionTimeoutSeconds": 30,
+  "sessionTimeoutSeconds": 180,
+  "cleanupTimeoutSeconds": 5,
+  "toleranceRef": "specs/006-tui-functional-contract/evidence/numeric-tolerances.md",
+  "decisionDigest": "516cfb25bf3c7c17f80da39154ab3db37424ca98326704cc108e152f46e00c32"
+}

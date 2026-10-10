@@ -1,5 +1,16 @@
 # Cloud-Compliance-Assurance / Cloud Compliance Assurance
 
+## Feature 006: Produkt und Werkzeuge / Product and tooling
+
+Deutsch, 2026-10-10: Produkt-C5 bleibt N/A ohne Cloud-Runtime. Vorhandene
+CI-/KI-Providerbewertungen und Kundenpflichten bleiben getrennt Open/Applicable;
+keine neue Testat-, Audit- oder Typ-1/Typ-2-Aussage. Owner Thorsten; neue Cloud-
+oder Providergrenze verlangt Neubewertung vor dem betroffenen Schritt.
+
+English: Product C5 remains N/A without cloud runtime. Existing CI/AI provider
+and customer obligations retain their separate Open/Applicable decisions. No
+audit/type-1/type-2 assurance is granted; new boundaries reopen assessment.
+
 ## Feature-005-C5-Bewertung / Feature 005 C5 assessment
 
 ## Deutscher Prüfblock

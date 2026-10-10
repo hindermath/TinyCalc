@@ -98,12 +98,6 @@ public static class TuiSmokeRunner
             return helpPathOverride;
         }
 
-        var direct = Path.Combine(baseDirectory, "CALC.HLP");
-        if (File.Exists(direct))
-        {
-            return direct;
-        }
-
-        return Path.Combine(baseDirectory, "Resources", "CALC.HLP");
+        return HelpDocument.ResolveBundledPath(baseDirectory);
     }
 }

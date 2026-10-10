@@ -88,10 +88,10 @@ public sealed class MicroCalcEngine
         }
 
         var cell = Sheet.GetCell(address);
-        ClearOverwrittenTrail(address);
 
         if (string.IsNullOrEmpty(value))
         {
+            ClearOverwrittenTrail(address);
             cell.Status = CellStatusFlags.Text;
             cell.Contents = string.Empty;
             cell.Value = 0;
@@ -100,14 +100,15 @@ public sealed class MicroCalcEngine
 
         if (ShouldEvaluateAsExpression(value))
         {
-            var eval = _evaluator.Evaluate(value, Sheet);
+            var eval = _evaluator.EvaluateForCell(value, Sheet, address);
             if (!eval.Success)
             {
-                return LooksNumericOrFormula(value)
+                return LooksNumericOrFormula(value) || IsKnownFunction(value)
                     ? new EditResult(false, eval.ErrorMessage, eval.ErrorPosition)
                     : SaveTextCell(cell, address, value);
             }
 
+            ClearOverwrittenTrail(address);
             cell.Contents = value;
             cell.Value = eval.Value;
             cell.Status = CellStatusFlags.Constant;
@@ -151,7 +152,7 @@ public sealed class MicroCalcEngine
                 continue;
             }
 
-            var eval = _evaluator.Evaluate(cell.Contents, Sheet);
+            var eval = _evaluator.EvaluateForCell(cell.Contents, Sheet, address);
             if (!eval.Success)
             {
                 errors.Add($"{address}: {eval.ErrorMessage} (Pos {eval.ErrorPosition})");
@@ -318,21 +319,27 @@ public sealed class MicroCalcEngine
 
         for (var row = 1; row <= SpreadsheetSpec.RowCount; row++)
         {
-            var rowParts = new List<string> { row.ToString("00", CultureInfo.InvariantCulture) + " " };
+            var rowBuffer = new string(' ', SpreadsheetSpec.ColumnCount * 11).ToCharArray();
             for (var column = SpreadsheetSpec.MinColumn; column <= SpreadsheetSpec.MaxColumn; column++)
             {
                 var address = new CellAddress(column, row);
                 var cell = Sheet.GetCell(address);
-                var visible = FormatCellVisibleText(cell, 11);
-                if (address.Equals(CurrentCell))
-                {
-                    visible = "[" + visible[1..10] + "]";
-                }
+                if ((cell.Status & (CellStatusFlags.Locked | CellStatusFlags.OverWritten)) != 0)
+                    continue;
+                var active = address.Equals(CurrentCell);
+                if (!active && string.IsNullOrEmpty(cell.Contents) && cell.Status.HasFlag(CellStatusFlags.Text))
+                    continue;
+                var width = active ? Math.Max(9, cell.FieldWidth - 2) : Math.Max(11, cell.FieldWidth);
+                var visible = FormatCellVisibleText(cell, width);
+                if (active) visible = "[" + visible + "]";
 
-                rowParts.Add(visible);
+                // DE: Erst auf dem festen Zeilenpuffer begrenzen: Markierung und breite Inhalte verlieren keine letzte Ziffer.
+                // EN: Clip only at the fixed row buffer so selection markers and wide content do not lose their last digit.
+                var offset = SpreadsheetSpec.ColumnToIndex(column) * 11;
+                visible.AsSpan(0, Math.Min(visible.Length, rowBuffer.Length - offset)).CopyTo(rowBuffer.AsSpan(offset));
             }
 
-            lines.Add(string.Concat(rowParts));
+            lines.Add(row.ToString("00", CultureInfo.InvariantCulture) + " " + new string(rowBuffer));
         }
 
         return string.Join(Environment.NewLine, lines);
@@ -376,6 +383,11 @@ public sealed class MicroCalcEngine
             return true;
         }
 
+        return IsKnownFunction(input);
+    }
+
+    private static bool IsKnownFunction(string input)
+    {
         var upper = input.ToUpperInvariant();
         return upper.StartsWith("ABS(", StringComparison.Ordinal)
                || upper.StartsWith("SQRT(", StringComparison.Ordinal)
@@ -386,11 +398,18 @@ public sealed class MicroCalcEngine
                || upper.StartsWith("LN(", StringComparison.Ordinal)
                || upper.StartsWith("LOG(", StringComparison.Ordinal)
                || upper.StartsWith("EXP(", StringComparison.Ordinal)
-               || upper.StartsWith("FACT(", StringComparison.Ordinal);
+               || upper.StartsWith("FACT(", StringComparison.Ordinal)
+               || upper.StartsWith("MIN(", StringComparison.Ordinal)
+               || upper.StartsWith("MAX(", StringComparison.Ordinal)
+               || upper.StartsWith("AVERAGE(", StringComparison.Ordinal)
+               || upper.StartsWith("COUNT(", StringComparison.Ordinal)
+               || upper.StartsWith("IF(", StringComparison.Ordinal)
+               || upper.StartsWith("ROUND(", StringComparison.Ordinal);
     }
 
     private EditResult SaveTextCell(Cell cell, CellAddress address, string value)
     {
+        ClearOverwrittenTrail(address);
         cell.Status = CellStatusFlags.Text;
         cell.Contents = value;
         cell.Value = 0;
@@ -455,20 +474,10 @@ public sealed class MicroCalcEngine
         if (cell.Status.HasFlag(CellStatusFlags.Text) && !cell.Status.HasFlag(CellStatusFlags.Constant))
         {
             var text = cell.Contents ?? string.Empty;
-            if (text.Length > width)
-            {
-                return text[..width];
-            }
-
             return text.PadRight(width);
         }
 
         var numeric = SpreadsheetSpec.FormatNumber(cell);
-        if (numeric.Length > width)
-        {
-            return numeric[..width];
-        }
-
         return numeric.PadLeft(width);
     }
 

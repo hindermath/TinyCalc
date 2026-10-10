@@ -2,6 +2,8 @@
 
 Prüftag / Review date: 2026-10-07. Reviewer: Codex, technischer Autorenabgleich; kein unabhängiger Produktreview und keine rechtliche Freigabe. / Technical author review only, not independent product or legal approval.
 
+**Aktueller Einstieg 2026-10-10:** Planreview durch PR #101 abgeschlossen. Thorsten genehmigt lokale Implementierung, begrenzte Lockdatei-Vorbereitung und Fortsetzung trotz noch fehlender späterer Ausführungsnachweise. Diese bleiben als Pflichtaufgaben offen; kein Commit-/Remote-/Bypass-Auftrag. / The owner-approved plan is complete. Fresh authority permits local implementation, bounded lock preparation and proceeding while future execution proof remains pending. These obligations and the no-commit/no-remote boundary remain unchanged.
+
 - [x] Bestehende .NET-/Paket-/Projekt-/Test-/Workflowquellen gelesen. / Existing technical sources inspected.
 - [x] Vollständige 17 Baseline-Familien, 17 FR und sechs AC/SC erhalten. / Complete baseline retained.
 - [x] Echte Editor-/Menü-/Paletten-/Dialogpfade statt Engine-/Smoke-Ersatz geplant. / Actual UI paths planned.
@@ -12,10 +14,10 @@ Prüftag / Review date: 2026-10-07. Reviewer: Codex, technischer Autorenabgleich
 - [x] Security-/Architektur-/A11Y-/Dokumentations-/Scriptparität konkret geplant. / Concrete evidence paths planned.
 - [x] Keine Implementierung, Produktprüfung, Commit-/Remoteaktion oder Folgefeature. / Planning-only scope preserved.
 - [x] PowerShell-/Bash-Prerequisites erkennen Research, Datenmodell, Contracts und Quickstart; Serienreview aktuell Ready, Manifest 13 Ziele/4 Wurzeln/9 Abhängigkeiten. / Both prerequisite and source-binding variants pass.
-- [ ] Human-only-Regulatorik bis Planfreigabe durch Thorsten/qualifizierten Reviewer bestätigt. / Human regulatory clearance remains Open.
-- [ ] Aktuelle Pin-/Lock-/Plattform-/Abnahmeevidenz in späterer Umsetzung erhoben. / Future execution proof not collected.
+- [x] Owner-Entscheidung zum privaten Projektscope und Planreview bestätigt: zusätzliche externe Review-Pflicht supersediert; PR #101 genehmigt und gemergt. Keine allgemeine rechtliche Freistellung oder Produktabnahme. / Owner scope decision and approved plan review supersede the added external review prerequisite, not legal applicability or product acceptance.
+- [x] Aktuelle Pin-/Lock-/Plattform-/Abnahmeevidenz erhoben: [native Kandidatenserie und Humanabnahme](../evidence/delivery-closeout.md); finale Lieferhead-Prüfung bleibt separat verpflichtend. / Current candidate execution proof collected; final delivery-head validation remains mandatory.
 
-**Ergebnis:** Technischer Aufgabenentwurf möglich; Plan-Gate Open, Umsetzung nicht freigegeben. Offene Kästchen sind keine vergessenen Prüfungen oder stillschweigenden Ausnahmen. / Technical task breakdown is possible; the plan gate remains Open and implementation is not cleared.
+**Ergebnis zum ursprünglichen Prüftag 2026-10-07:** Technischer Aufgabenentwurf möglich; Plan-Gate damals Open. Der aktuelle Stand folgt unten. Das verbleibende offene Kästchen bezeichnet künftige Ausführungsnachweise, keine erneute Planfreigabe. / Historical planning result; see the current status below. The remaining unchecked item records future execution proof, not renewed planning approval.
 
 Lokale Planungsvalidierung: sechs Artefakte UTF-8/LF, keine defekten Markdown-Links, 17 Familien/17 FR/sechs SC, keine `tasks.md`; Gitleaks ohne Befund, `git diff --check` ohne Fehler. Spezifikation, Intake/Serie, Produktcode, Tests, Feature-Pointer und Versionen unverändert. / Planning checks pass; no implementation or source-contract mutation.
 

@@ -32,20 +32,31 @@
           "**/*.md"
         ],
         "dest": "docs"
+      },
+      {
+        "files": [
+          "specs/006-tui-functional-contract/**/*.md",
+          "requirements/intakes/active/Lastenheft_A11Y_TUI.md",
+          "requirements/intakes/active/Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md"
+        ]
       }
     ],
     "resource": [
       {
         "files": [
-          "docs/**/images/**"
+          "docs/**/images/**",
+          "docs/contracts/tui/*.json",
+          "specs/006-tui-functional-contract/evidence/*.json"
         ]
       }
     ],
     "output": "_site",
     "template": [
-      "default"
+      "default",
+      "docs/docfx-template"
     ],
     "globalMetadata": {
+      "_lang": "de",
       "_appName": "MicroCalc",
       "_appTitle": "MicroCalc Documentation",
       "_enableSearch": true

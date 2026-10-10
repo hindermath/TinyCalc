@@ -1,5 +1,29 @@
 # Sicherheits-Qualitätsszenarien: TinyCalc Feature 003
 
+## Feature 006: ergänzende Szenarien / Additional scenarios
+
+### Deutscher Szenarioblock
+
+Planungs-/Implementierungscheckpoint 2026-10-10, keine bestandene Abnahme.
+
+| ID | Stimulus und Umgebung | Erwartete Reaktion und Messung | Nachweis / Owner |
+|---|---|---|---|
+| QS006-01 | ungültige Zelle spät in Load-Datei; bestehendes Blatt | gesamter alter Zustand byte-/feldgleich, verständlicher Fehler, Grid bedienbar | T034/T036 test-first; Feature-Entwicklung |
+| QS006-02 | fehlender/gedoppelter Pflichtpfad oder geschwächte Assertion | Bundle/Validator abgelehnt, keine Teilfreigabe; exakte Fehlerklasse | T014A/T015 und T041–049 |
+| QS006-03 | Timeout oder unterbrochene Ausgabe | Fail; keine sichtbare finale Teil-Datei, eigene Ressourcen innerhalb 5 s bereinigt | Producer-/Sessiontests, 30/180/5 s |
+| QS006-04 | Quelle/Pin/Commit stimmt nicht mit Resultaten überein | Blockierung statt historischem Relabeling; keine JSON-Befehlsausführung | Source-/Pin-/Exact-head-Negativtests |
+| QS006-05 | ../ oder Symlink verlässt explizite Wurzel | Exit 2, kein Lesen fremder Inhalte, keine Schreib-/Provideraktion | Validator-Pfadfixtures |
+
+### English scenario block
+
+These are required scenarios, not passing acceptance results. Invalid late load
+data must preserve the complete prior worksheet. Missing/duplicate/weak proof
+must block output. Timeout/interrupted publication must fail without a final
+partial file and clean only owned resources. Source/pin/head mismatch blocks
+rather than relabelling history. Traversal or symlink escape must fail with exit
+two without reading foreign content or executing commands. The task references
+and ownership above bind future execution.
+
 ## Deutscher Szenarioblock
 
 ### Laufnachweis und Methode

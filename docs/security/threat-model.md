@@ -1,5 +1,39 @@
 # Bedrohungsmodell: TinyCalc Feature 003
 
+## Feature 006: geplanter Grenzschutz / Planned boundary protection
+
+### Deutscher Prüfblock
+
+Stand 2026-10-10, LocalImplementation, unabhängiger Review und Produktabnahme
+Open. Assets: Tabellenintegrität/Verfügbarkeit, lokale Dateien, Paketgraph,
+Vertragsnenner und wahrheitsgemäße Nachweise. Vertraulichkeit betrifft nur lokale
+Nutzungsdateien; Tests verwenden synthetische Daten ohne Secrets.
+
+| Grenze | STRIDE / CIA | Geplante Kontrollen | Restrisiko / Owner |
+|---|---|---|---|
+| Tastatur/Formel → Core | Tampering/DoS, Integrität/Verfügbarkeit | reale UI-Tests, endliche Zahlen, sichere Grenzprüfung, 30/180-Sekunden-Testfristen | komplexer Input; Feature-Entwicklung vor Abnahme |
+| JSON/Hilfe → Produkt | Tampering/DoS, Integrität/Verfügbarkeit | validierte Daten vor atomarer Übernahme; begrenzte eigene Fixtures; Text statt ausführbarer Hilfe | bestehender Load-Pfad zuerst test-first prüfen |
+| NuGet → Build | Spoofing/Tampering/Elevation | exakter Pin, vier Locks, NuGet.org, aktueller CVE-/Lizenzaudit, SBOM/Provenance | Registry/Runner-Kompromittierung; Maintenance |
+| Tests → Abnahme | Spoofing/Tampering/Repudiation | unabhängige Baseline, Assertion-/Tupelprüfung, atomare Bundles, Head/Pin/Source-Digests, unabhängiger Review | behauptete/geschwächte Evidenz; Reviewer vor Freigabe |
+
+CAPEC-153 (Input Data Manipulation) für manipulierte JSON-/Evidenzeingaben und
+CAPEC-538 (Open-Source Library Manipulation) für den Lieferkettenpfad sind
+Risikoreferenzen, keine behaupteten Angriffe. Nicht anwendbar im lokalen Produkt:
+Netzwerk-Authentifizierung/Autorisierung und Remote-Identität; Trigger neuer Dienst.
+Menschliches VoiceOver bleibt getrennt; Automation darf es nicht simulieren.
+
+### English review block
+
+Feature 006's implementation threat assessment is provisional until independent
+review and acceptance. Protect spreadsheet/file integrity, availability, packages
+and honest contract evidence. The table maps four trust boundaries to STRIDE/CIA,
+planned controls and residual-risk owners. CAPEC-153 covers input manipulation
+and CAPEC-538 supply-chain manipulation; neither implies an observed attack.
+Use real UI assertions, safe numeric/file handling, reviewed pinned dependencies,
+independent obligations, atomic bundles and exact execution bindings. Remote
+authentication/identity is N/A for this local product, reopened by a service.
+Synthetic test data has no secrets; human VoiceOver proof remains separate.
+
 ## Deutscher Prüfblock
 
 ### Laufnachweis und Geltungsbereich

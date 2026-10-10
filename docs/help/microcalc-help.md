@@ -1,5 +1,62 @@
 # MicroCalc Help (Migrated)
 
+## Aktueller Portvertrag / Current port contract
+
+Deutsch: Feature 006 ist lokal implementiert; Plattform- und Produktabnahme
+sind noch offen. Die historischen englischen Seiten unten bleiben als
+Lernreferenz erhalten. Für den aktuellen Port gelten diese Präzisierungen:
+
+- Raster A1:G21; Randbewegungen laufen im Raster um. Rechts zusätzlich Ctrl-M,
+  Enter und Ctrl-G; unten zusätzlich Ctrl-J. Die übrigen Pfeil-/Ctrl-Aliase
+  stehen in Page 4 und im [Bedienvertrag](../../README.md#bedien--und-formelvertrag--interaction-and-formula-contract).
+- Esc öffnet vorhandenen Inhalt; druckbares ASCII startet neuen Inhalt.
+  Raster-`/` öffnet die Palette, Editor-`/` bleibt Text oder Division.
+- Editor: Ctrl-S/D links/rechts, Ctrl-A/F Anfang/Ende, DEL/Ctrl-G links/rechts
+  löschen, Ctrl-V/Ins Einfügen/Überschreiben. Enter übernimmt OK; Esc/Cancel
+  verwirft ohne Daten-/Dateiänderung. Höchstens 70 Zeichen je Zelle.
+- Palette: Q/L/S/R/P/F/A für Quit/Load/Save/Recalculate/Print/Format/AutoCalc.
+  Die Laufzeithilfe wird aus CALC.HLP beziehungsweise Resources/CALC.HLP geladen.
+- Ctrl-Q beendet im Raster; Clear und Help stehen im Menü. In Dialogen wechseln
+  Tab/Shift-Tab zwischen den Eingaben und Aktionen. In der Hilfe blättern P/N
+  oder Prev/Next, Pfeile scrollen den Text, Esc/Close kehrt zum Raster zurück.
+- Potenzen binden rechts und stärker als Vorzeichen: 2^3^2=512, -2^2=-4,
+  (-2)^2=4, 2^-2=0.25. FACT nur für ganze Zahlen 0..33, mit FACT(0)=1.
+- SIN/COS und ARCTAN nutzen Bogenmaß; LN Basis e, LOG Basis 10, beide nur für
+  positive Argumente. Definitionsfehler und nichtendliche Ergebnisse sind Fehler.
+- Leere numerische Mengen ergeben bei MIN/MAX/AVERAGE 0; COUNT zählt Zahlen.
+  Bereichssumme und IF-Zellvergleich bleiben wie auf Page 8 beschrieben getrennt.
+- ROUND: Halbwerte weg von null; nichtnegative Präzision abschneiden, dann 0..15.
+  15.9 ist zulässig; 16, -0.5 und -1 scheitern verständlich, ohne Clamp.
+- Ungültiges Load verändert weder vorhandene Zellen noch Auswahl/AutoCalc.
+  Print exportiert Text; Abbruch des Randprompts schreibt keine Datei.
+
+English: Feature 006 is implemented locally; platform and product acceptance
+remain open. Historical English pages below remain learning references, with
+these binding clarifications for the current port:
+
+- Grid A1:G21; edges wrap inside it. Right additionally accepts Ctrl-M, Enter
+  and Ctrl-G; down also accepts Ctrl-J. Other arrow/Ctrl aliases appear in Page 4
+  and the linked interaction contract.
+- Esc opens existing contents; printable ASCII starts new contents. Grid `/`
+  opens the palette; editor `/` remains text or division. Editor Ctrl-S/D move
+  left/right, Ctrl-A/F to start/end; DEL/Ctrl-G delete left/right; Ctrl-V/Ins
+  toggle insert/overwrite. Enter accepts OK, Esc/Cancel discards without changing
+  data or files. Cell contents have a seventy-character limit.
+- Palette Q/L/S/R/P/F/A select Quit/Load/Save/Recalculate/Print/Format/AutoCalc.
+  Runtime help loads CALC.HLP or Resources/CALC.HLP.
+- Ctrl-Q quits from the grid; Clear and Help are menu actions. Tab/Shift-Tab
+  moves between dialog inputs/actions. In help, P/N or Prev/Next changes pages,
+  arrows scroll text and Esc/Close returns to the grid.
+- Powers associate right before signs, using the four examples above. FACT
+  accepts only integers 0–33, with FACT(0)=1. SIN/COS and ARCTAN use radians;
+  LN is base e, LOG base ten, both for positive arguments. Domain/non-finite
+  results are errors. MIN/MAX/AVERAGE of no numeric cells return zero; COUNT
+  counts numbers. Page 8 distinguishes range sums from IF cell comparison.
+- ROUND uses midpoint-away-from-zero and truncates nonnegative precision to
+  0–15. 15.9 is valid; 16, -0.5 and -1 fail clearly without clamping.
+- Invalid Load preserves cells, selection and AutoCalc. Print exports text;
+  cancelling its margin prompt writes no file.
+
 ## Page 1 - Introduction
 
 MicroCalc is a small spreadsheet example application. It demonstrates how text, numbers, and formulas are entered and calculated in a compact grid.
@@ -98,7 +155,7 @@ Syntax: `COUNT(from>to)` or `COUNT(cell)`
 
 Examples:
 - `COUNT(A1>A5)` → 3 (when A1=5, A2 empty, A3=10, A4 empty, A5=15)
-- `COUNT(A1>`A1)` → 1 (single numeric cell)
+- `COUNT(A1>A1)` → 1 (single numeric cell)
 - `COUNT(A1>A3)` → 0 (when A1, A2, A3 all contain text)
 
 ---
@@ -130,7 +187,8 @@ Supported relational operators: `=`, `<>`, `<`, `<=`, `>=`, `>`
 
 Rounds `value` to the specified number of decimal places using midpoint-away-from-zero
 rounding. A non-integer `decimals` argument is truncated toward zero.
-Negative `decimals` produces an error.
+Negative raw `decimals` produces an error, including -0.5. After truncation,
+precision must be 0..15; 15.9 becomes 15, while 16 is an error without clamping.
 
 Syntax: `ROUND(value, decimals)`
 
@@ -159,6 +217,6 @@ Commands:
 ## Page 7 - Editing
 
 - `Esc` edits current cell.
-- Typing any printable character starts editing with that character.
+- Typing printable ASCII starts editing with that character; grid `/` opens the palette instead.
 - `Enter` confirms in dialogs.
 - Cancel leaves previous value unchanged.

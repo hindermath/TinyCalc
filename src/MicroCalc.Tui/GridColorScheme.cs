@@ -21,6 +21,8 @@ internal static class GridColorScheme
             Disabled = canvas,
             Focus = emphasis,
             Active = emphasis,
+            Editable = emphasis,
+            Highlight = emphasis,
         };
     }
 }
