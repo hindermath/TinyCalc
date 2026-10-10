@@ -23,6 +23,12 @@ werden nicht auf neue Dokumentations- oder Liefercommits umetikettiert.
 
 Verbleibende Pflichtentscheidungen/Nachweise, Owner Thorsten:
 
+Der [vorbereitete gemeinsame Bedienlauf](owner-acceptance-session.md) enthält
+synthetische Testdaten, erwartete Ergebnisse F01–F14, ein separates VoiceOver-
+Protokoll und die spätere Ownerentscheidung. Er ist noch nicht ausgeführt.
+Die technische Übergabe nennt offene finale Nachweise; Vorbereitung ist keine
+Freigabe. Daybreak-Anmeldung ist keine Voraussetzung dieses Feature-Laufs.
+
 1. Tatsächliche menschliche VoiceOver-Bedienung gemäß
    [A11Y-Zuordnung und Ablauf](../../../docs/accessibility/006-tui-functional-contract.md):
    Person, Datum, OS/Terminal/VoiceOver, Head/Revision, Beobachtung und Befund
@@ -61,3 +67,8 @@ review items remain explicit. Final common-head proof is still due. Deferred
 Claude provider failure is not a pass. Keep the PR draft until material gates
 close; formal-rule bypass cannot replace them. No intake promotion, package
 upgrade or follow-up feature is authorised by this interim assessment.
+
+The linked owner-session guide prepares synthetic data, fourteen concrete steps,
+expected results, a separate VoiceOver record and the eventual owner decision.
+It has not been executed and grants no acceptance. Technical handover retains
+all missing final evidence; Daybreak registration is not a feature prerequisite.

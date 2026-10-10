@@ -6,6 +6,13 @@
 [Abschlussfortschritt](../specs/006-tui-functional-contract/evidence/closure-checkpoint.md)
 trennt tatsächliche Implementierung von Human- und endgültiger Lieferabnahme.
 
+[Eingefrorene technische Übergabe](../specs/006-tui-functional-contract/evidence/voiceover-candidate.md)
+bindet die kommende vollständige Prüfserie separat an ihren unveränderten
+Commit und eine kopierte Release-Binary. Das lokale Laufmanifest protokolliert
+nur tatsächlich abgeschlossene Ergebnisse; Human/Owner bleibt offen.
+ / The frozen technical handover binds actual execution to an unchanged commit
+and copied release output without claiming human or owner acceptance.
+
 Problem: bestätigte Formel-, Anzeige-, Tastatur-, Hilfe- und Load-Defekte sowie
 fehlende unabhängige Vertrags-/Evidenzinfrastruktur.
 Lösung: test-first Produktkorrekturen, interne reale Session, vier unveränderte
