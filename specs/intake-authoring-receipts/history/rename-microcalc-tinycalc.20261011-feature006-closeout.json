@@ -1,0 +1,201 @@
+{
+  "schemaVersion": "2.0",
+  "documentType": "IntakeReceipt",
+  "receiptId": "75fc858e-59ae-4833-9f1f-49d3f824677b",
+  "intakeId": "b4f18668-0276-45ee-8a6f-16a8bd8b833d",
+  "generator": {
+    "version": "0.3.6",
+    "preset": "intake-authoring-governance"
+  },
+  "createdAt": "2026-10-03T23:56:45Z",
+  "operation": {
+    "operationId": "46c148a4-0877-4b97-b290-4f15a9832939",
+    "authorityEvidence": "Thorsten explicitly approved the eight bounded language updates, both README bindings, archive/lineage/series evidence and full re-review on 2026-10-04. Current maintenance delivery is MergeAndSync with admin bypass for formal merge rules only. Future intake scope and authority remain unchanged.",
+    "type": "Update"
+  },
+  "status": "ReadyForReview",
+  "target": {
+    "path": "requirements/intakes/active/Lastenheft_Rename_MicroCalc_TinyCalc.md",
+    "normalizedSha256": "ed761c150526f18c0b1d98d8febac1def260b1890aca6d0a341279dec19985b9"
+  },
+  "sources": [
+    {
+      "httpStatus": "N/A",
+      "finalUrl": "N/A",
+      "location": "Repository",
+      "contentLength": "N/A",
+      "contentType": "N/A",
+      "requestedUrl": "N/A",
+      "proofBoundary": "Repository file; strict UTF-8 normalized SHA-256; archive preserves predecessor bytes",
+      "kind": "File",
+      "gitBlob": "N/A",
+      "retrievedAt": "N/A",
+      "etag": "N/A",
+      "rawSha256": "N/A",
+      "redirectChain": [],
+      "label": "First binding source: unchanged predecessor intake",
+      "normalizedSha256": "89d40b7ca04e2a753670351bd0eb5b7e2bf3234f1792572eb46f19e9affd87e5",
+      "order": 1,
+      "path": "requirements/intakes/history/20261004-language-repair/Lastenheft_Rename_MicroCalc_TinyCalc.md",
+      "sourceId": "SRC001",
+      "lastModified": "N/A"
+    },
+    {
+      "httpStatus": "N/A",
+      "finalUrl": "N/A",
+      "location": "Repository",
+      "contentLength": "N/A",
+      "contentType": "N/A",
+      "requestedUrl": "N/A",
+      "proofBoundary": "Repository file; strict UTF-8 normalized SHA-256; archive preserves predecessor bytes",
+      "kind": "File",
+      "gitBlob": "N/A",
+      "retrievedAt": "N/A",
+      "etag": "N/A",
+      "rawSha256": "N/A",
+      "redirectChain": [],
+      "label": "Archived prior receipt preserves the full original ordered source inventory",
+      "normalizedSha256": "46e95467a050fcc213d1b498c6de3f71dbbc7527fde4ddbd058fd1eefe162935",
+      "order": 2,
+      "path": "specs/intake-authoring-receipts/history/rename-microcalc-tinycalc.20261004-language-repair.json",
+      "sourceId": "SRC002",
+      "lastModified": "N/A"
+    },
+    {
+      "httpStatus": "N/A",
+      "finalUrl": "N/A",
+      "location": "Repository",
+      "contentLength": "N/A",
+      "contentType": "N/A",
+      "requestedUrl": "N/A",
+      "proofBoundary": "Repository file; strict UTF-8 normalized SHA-256; archive preserves predecessor bytes",
+      "kind": "File",
+      "gitBlob": "N/A",
+      "retrievedAt": "N/A",
+      "etag": "N/A",
+      "rawSha256": "N/A",
+      "redirectChain": [],
+      "label": "Binding six-finding review and approved repair boundary",
+      "normalizedSha256": "f76344f4e2c16654362670ee4c8747438d6280ebb39e0dc5616cac194a685c3f",
+      "order": 3,
+      "path": "requirements/intakes/series-archive/tinycalc-delivery/20261004-language-repair/intake-review-result.json",
+      "sourceId": "SRC003",
+      "lastModified": "N/A"
+    },
+    {
+      "httpStatus": "N/A",
+      "finalUrl": "N/A",
+      "location": "SnapshotOnly",
+      "contentLength": "N/A",
+      "contentType": "N/A",
+      "requestedUrl": "N/A",
+      "proofBoundary": "Exact authority text retained in operation.authorityEvidence and updateAuthorityEvidence",
+      "kind": "Inline",
+      "gitBlob": "N/A",
+      "retrievedAt": "N/A",
+      "etag": "N/A",
+      "rawSha256": "N/A",
+      "redirectChain": [],
+      "label": "Explicit current approval",
+      "normalizedSha256": "408ec0967f777b7bf13d4a28181edef9b8ea95eedf19b9216d07af21a4360041",
+      "order": 4,
+      "path": "N/A",
+      "sourceId": "SRC004",
+      "lastModified": "N/A"
+    },
+    {
+      "httpStatus": "N/A",
+      "finalUrl": "N/A",
+      "location": "Repository",
+      "contentLength": "N/A",
+      "contentType": "N/A",
+      "requestedUrl": "N/A",
+      "proofBoundary": "Repository file; strict UTF-8 normalized SHA-256; archive preserves predecessor bytes",
+      "kind": "File",
+      "gitBlob": "N/A",
+      "retrievedAt": "N/A",
+      "etag": "N/A",
+      "rawSha256": "N/A",
+      "redirectChain": [],
+      "label": "Current README reconciled: governance pilot, Mermaid/report rule and statistics-pilot links; no product-contract change",
+      "normalizedSha256": "8cdf527d1929f9d71e1b3483cb4c594855b5946fdf190cee5813cd3c25eb2517",
+      "order": 5,
+      "path": "README.md",
+      "sourceId": "SRC005",
+      "lastModified": "N/A"
+    }
+  ],
+  "profile": "level2-lastenheft",
+  "languagePolicy": "GermanFirstEnglishSecond",
+  "decisions": [
+    {
+      "id": "IAD001",
+      "status": "Answered",
+      "question": "Which execution order is binding?",
+      "answer": "Functional acceptance and A11Y acceptance must pass before rename release-closeout.",
+      "evidence": "Explicit user decision and active series."
+    },
+    {
+      "id": "IAD002",
+      "status": "Answered",
+      "question": "Are fixed file and occurrence counts permitted?",
+      "answer": "No. A fresh execution-time inventory is authoritative; counts are evidence rather than requirements.",
+      "evidence": "Approved consolidation plan."
+    },
+    {
+      "id": "IAD003",
+      "status": "Answered",
+      "question": "May historical MicroCalc references remain?",
+      "answer": "Yes, only under an explicit, reviewed historical and compatibility allowlist.",
+      "evidence": "Approved rename scope."
+    },
+    {
+      "id": "IAD004",
+      "status": "Answered",
+      "question": "How are persisted JSON files treated?",
+      "answer": "Existing .mcalc.json files remain readable and round-trip compatible unless a separately approved migration contract changes that boundary.",
+      "evidence": "Approved compatibility decision."
+    },
+    {
+      "id": "IAD005",
+      "status": "Answered",
+      "question": "Which regression tier applies to the rename?",
+      "answer": "ReleaseCloseout applies and requires the complete current functional, A11Y, documentation, PTY, VoiceOver, and cross-platform evidence matrix.",
+      "evidence": "Approved impact matrix."
+    }
+  ],
+  "openDecisionIds": [],
+  "questionCount": 5,
+  "agentSurface": {
+    "specifyCanonicalId": "speckit.specify",
+    "specifyInvocation": "$speckit-specify",
+    "autonomousCanonicalId": "speckit.autonomous",
+    "autonomousInvocation": "$speckit-autonomous"
+  },
+  "deliveryAuthority": "LocalImplementation",
+  "authorityEvidence": "The user explicitly requested implementation of the approved intake-only consolidation plan. No product implementation, commit, push, pull request, merge, bypass, provider, or follow-up-feature authority is granted.",
+  "promptState": "Enabled",
+  "provenanceMode": "Supersession",
+  "supersedes": {
+    "archiveTargetPath": "requirements/intakes/history/20261004-language-repair/Lastenheft_Rename_MicroCalc_TinyCalc.md",
+    "archiveReceiptPath": "specs/intake-authoring-receipts/history/rename-microcalc-tinycalc.20261004-language-repair.json",
+    "targetNormalizedSha256": "89d40b7ca04e2a753670351bd0eb5b7e2bf3234f1792572eb46f19e9affd87e5",
+    "receiptPath": "specs/intake-authoring-receipts/history/rename-microcalc-tinycalc.20261004-language-repair.json",
+    "receiptNormalizedSha256": "46e95467a050fcc213d1b498c6de3f71dbbc7527fde4ddbd058fd1eefe162935"
+  },
+  "legacyAdoption": {
+    "priorTargetNormalizedSha256": "N/A",
+    "priorGitBlob": "N/A",
+    "evidenceType": "N/A"
+  },
+  "updateAuthorized": true,
+  "updateAuthorityEvidence": "Thorsten explicitly approved the eight bounded language updates, both README bindings, archive/lineage/series evidence and full re-review on 2026-10-04. Current maintenance delivery is MergeAndSync with admin bypass for formal merge rules only. Future intake scope and authority remain unchanged.",
+  "series": {
+    "seriesId": "5b4523b4-d946-4091-9cbc-11825af94332",
+    "manifestPath": "requirements/intakes/series/tinycalc-delivery/manifest.json",
+    "order": 5,
+    "role": "OrderedMember",
+    "supersedesIntakeIds": []
+  },
+  "nextAction": "$speckit-intake-review requirements/intakes/active/Lastenheft_Rename_MicroCalc_TinyCalc.md"
+}

@@ -1,0 +1,18 @@
+{
+  "acceptedPreMergeSha256": "c07016800b9e02e56f123ed6af187d0b5fedd22c1689a1b8909fcc6e8f70c6ac",
+  "snapshotType": "PostMerge",
+  "entries": [
+    {
+      "headSha": "6a86182d86c6b80d29029eac8e1f71f344a6b261",
+      "proofBoundary": "Actual completed product delivery, not a new test of this administrative delta",
+      "result": "Pass",
+      "providerCloseout": "https://github.com/hindermath/TinyCalc/pull/104#issuecomment-6103024807",
+      "evidenceReference": "git:6a86182d86c6b80d29029eac8e1f71f344a6b261:specs/006-tui-functional-contract/evidence/delivery-closeout.md"
+    }
+  ],
+  "mergeCommit": "946e392151fcaba5db0d76cf2974e055ba616e66",
+  "reviewedHead": "6a86182d86c6b80d29029eac8e1f71f344a6b261",
+  "snapshotId": "2a125594-2e91-43c6-b599-e3a606adfefd",
+  "schemaVersion": "2.0",
+  "acceptedPreMergePath": "requirements/intakes/archive/Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md"
+}

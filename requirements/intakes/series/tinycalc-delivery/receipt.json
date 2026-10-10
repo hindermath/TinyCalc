@@ -1,28 +1,28 @@
 {
   "schemaVersion": "1.0",
   "documentType": "IntakeSeriesReceipt",
-  "receiptId": "b5a367bf-a2a2-4f6a-9801-f02acf2183a9",
+  "receiptId": "6c554441-8699-4225-933c-ed7d0e72a80f",
   "seriesId": "5b4523b4-d946-4091-9cbc-11825af94332",
   "generator": {
     "preset": "intake-sequencing-governance",
-    "version": "0.2.7"
+    "version": "0.2.8"
   },
-  "createdAt": "2026-10-06T12:44:56Z",
+  "createdAt": "2026-10-10T23:05:58Z",
   "operation": {
-    "type": "Update",
-    "operationId": "88b362b4-e0c7-4421-9f39-cceb1bb5332f",
-    "authorityEvidence": "Thorsten explicitly requested execution of the approved bounded PL/0 macOS-15 GitHub Actions governance-refresh plan on 2026-10-06. The series update is causal only: one member hash and dependent evidence change; 13 targets, 4 roots, 9 hard dependencies, order, roles and lifecycle remain unchanged. Stop before independent Intake Review; no product or remote delivery authority is granted."
+    "authorityEvidence": "Thorsten explicitly authorised administrative Feature 006 closeout: intake archival and series progression, MergeAndSync with Admin-Bypass only for formal rules, no follow-up feature. Thorsten subsequently approved the bounded renewal of the TUI and Rename README source bindings including archive/receipt lineage, then explicitly approved renewal of the PL/0 AGENTS.md source binding and its archive/receipt lineage. Intake content, IDs, scope, acceptance, security, accessibility, order, roots and dependency semantics remain unchanged.",
+    "operationId": "8db75270-e7ac-49d0-a8d3-78e6e3a6509a",
+    "type": "Update"
   },
   "status": "Ready",
   "manifest": {
     "path": "requirements/intakes/series/tinycalc-delivery/manifest.json",
-    "normalizedSha256": "bccde554dc1ae47c69c4327c6a1e4332bd7f54556e255c75ae5097a541cd71cc"
+    "normalizedSha256": "16d3e9b489c1e0690a03cce58085ff70f2a1416500aecd6d3f5f3e63f2d750d3"
   },
   "supersedes": {
-    "receiptPath": "requirements/intakes/series-archive/tinycalc-delivery/20261006-macos15-governance-refresh/receipt.json",
-    "receiptNormalizedSha256": "ec5a1b5dcdc5d39d6468f5daf06ae73721f864d17eb9343ffa1781dc47e606ff",
-    "manifestArchiveSha256": "84f6b7bf93b09bbeb7c187374f9cae1208432ebc5cf4221e7e9767143c3c8b42",
-    "manifestArchivePath": "requirements/intakes/series-archive/tinycalc-delivery/20261006-macos15-governance-refresh/manifest.json"
+    "manifestArchiveSha256": "bccde554dc1ae47c69c4327c6a1e4332bd7f54556e255c75ae5097a541cd71cc",
+    "manifestArchivePath": "requirements/intakes/series-archive/tinycalc-delivery/20261011-feature006-closeout/manifest.json",
+    "receiptNormalizedSha256": "1278c3189d307b00546fe3ea4a9f20a9c5cdb3c3fdc4da49b613fd75e53ee5c4",
+    "receiptPath": "requirements/intakes/series-archive/tinycalc-delivery/20261011-feature006-closeout/receipt.json"
   },
   "tombstone": {
     "path": "N/A",

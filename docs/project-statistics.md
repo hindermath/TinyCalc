@@ -824,34 +824,32 @@ English: The native follow-up correction also adds 37 net platform-evidence docu
 
 | 2026-10-11 | Feature 006: menschliche Abnahme und finaler Lieferabschluss / Human acceptance and final delivery closeout | Branch `006-tui-functional-contract`, sichtbare Abschlusssitzung am 11.10.2026 Europe/Berlin; aktive Arbeitszeit nicht gemessen. `0` Produktionscode-, `0` Testcode-/Produktskriptänderungen; vor Ledgerpflege `+542/-73 = +469` Dokumentations-/Nachweiszeilen einschließlich drei neuer Abschlussartefakte, zusätzlich ein kleiner Checklistenabgleich. Arbeitspakete: tatsächliche F01–F14-/VoiceOver-/HTML-/Ownerabnahme, 1092 native Tupel, vollständige Story-/SC-/A11Y-/Supply-Chain-Zuordnung, stale Pin-Autoritätsreferenz und abgeleiteter Hash korrigiert, technischer GSDB-SRC-067-Hash erneuert ohne Kontrollaufwertung, PR-/Abschlussbericht und begrenzte finale Delivery-Prozedur. 80/125 Zeilen/Arbeitstag ergeben für 469 Nettozeilen modellhaft 5.86/3.75 Arbeitstage, 45.73/29.27 Stunden bei 7.8 h/Tag, 0.273/0.175 Monate bei 21.5 Tagen/Monat; keine gemessene Beschleunigung dieser Sitzung. Finaler Statistik-Render erst am sauberen Commit; finale Pflichtläufe/Provider-/Merge-/FF-Sync-Evidence getrennt am eingefrorenen Lieferhead, keine selbstreferenzielle Commit-Schleife. Kein Paketupgrade, Intake-Rename oder Folgefeature. / Record actual human acceptance, unchanged product sources, native proof and bounded delivery work; preserve historical evidence and model assumptions, then bind final execution and delivery separately. |
 
+| 2026-10-11 | Feature 006: administrativer Abschluss / Administrative closeout | Branch `codex/feature006-administrative-closeout`, Basis Produktmerge `946e392`; sichtbares Verwaltungsfenster 11.10.2026 Europe/Berlin, keine Arbeitszeitmessung. `0` Produktionscode- und `0` Testcodezeilen geändert. Vor abschließender Ledger-/Profilpflege: 36 Dateien, `+3222/-441 = +2781` Dokumentations-/Governancezeilen, einschließlich bytegleicher Archivkopien statt neuer Produktlogik. Kopiervolumen ist keine manuell neu geschriebene Arbeit. Arbeitspakete: Intake archiviert, 83/83 Tasks mit tatsächlichem Produktabschluss abgeglichen, 13 Serienmitglieder/4 Roots/9 Kanten erhalten, aktive Mitglieder 9 -> 8 und abgeschlossene 4 -> 5, drei ausdrücklich genehmigte Quell-/Receipt-Lineages erneuert, alter Review supersediert und Nachfolgereview ausstehend. Vor Veröffentlichung temporären Gesamtkandidaten mit beiden Shell-Wrappern und Originalbytehashes geprüft. Profil-2-Vorschau/Write/Check folgt an sauberer Commit-Grenze. Referenzen 80/125 Zeilen/Arbeitstag, 7.8 h/Tag und 21.5 Tage/Monat bleiben Modelle; keine neue Speedup-Messung. Kein Folgefeature und kein Paketupgrade. / Administrative archival and source-lineage work only; preserve product evidence, distinguish copied archive volume from authored work, record actual checks and pending review, and refresh statistics only at the authorised clean boundary. |
+
 ## Gesamtstatistik / Overall Statistics
 
-Deutsch: Lokaler Feature-006-Zwischenstand: 70/83 Tasks vollständig nachgewiesen;
-364/364 unterschiedliche Pfade und 462 serialisierte Assertions stammen aus
-einem tatsächlichen macOS-Vollvertrag. 669 Tests grün, Changed-Line-Coverage
-97,02 %. Zusätzlich tatsächliche Linux-/Windows-CI mit je 671 Tests, 364 Pfaden
-und 462 Assertions sowie unabhängiger Quellreview und fünf DocFX-Stichproben.
-Die getrennten Belege sind noch keine finale gemeinsame Headbindung. Human-
-und finale Liefergates bleiben offen, kein Produktabnahmenachweis. Die folgende
-generierte Gesamtstatistik einschließlich ASCII-Trends bleibt an ihre angegebene
-Git-Quelle gebunden und wird nur an einer sauberen Commit-Grenze fortgeschrieben.
+Deutsch: Feature 006 ist in PR #104 vollständig implementiert, menschlich
+abgenommen und geliefert: je Plattform 671 erfolgreiche Tests, 364 Pfade und
+462 Assertions; Changed-Line-Coverage 97,02 %. Der separat genehmigte
+[administrative Abschluss](../specs/006-tui-functional-contract/evidence/administrative-closeout.md)
+vollzieht Archivierung und Serienfortschreibung und gleicht alle 83 Tasks ab.
+Der erforderliche neue Intake-Review bleibt vor einem Folgefeature ausstehend.
+Die folgende generierte Gesamtstatistik bleibt an die angegebene Git-Quelle
+gebunden und wird nur an einer sauberen Commit-Grenze fortgeschrieben.
 
-English: The local Feature-006 checkpoint fully evidences 70 of 83 tasks.
-One actual macOS full run supplies all 364 paths, 462 serialized assertions and
-669 passing tests, with 97.02% changed-line coverage. No local paths are missing;
-Native Linux/Windows each pass 671 tests and all paths; independent source review
-and five DocFX samples are complete. Separate results are not final common-head
-proof. Human and final delivery gates remain Open, not final product acceptance. Generated
-totals and ASCII trends below remain bound to their stated historical Git source.
-Write only at the authorised clean commit boundary, without bypassing the
-dirty-worktree guard.
+English: PR #104 delivered and recorded human acceptance of Feature 006.
+Each native platform passed 671 tests, all 364 paths and 462 assertions;
+changed-line coverage is 97.02%. Separately authorised administrative closeout
+archives the intake, progresses the series and reconciles all 83 tasks.
+A new intake review remains pending before any successor feature. Generated
+statistics retain their stated Git source and require a clean commit boundary.
 
 ```text
-Feature 006: complete local path proof, not acceptance
-Paths  [####################] 364 / 364 locally proved
-Open   [....................]   0 / 364 local paths
-Tasks  [#################...]  70 /  83 fully evidenced
-Native CI: PASS; final common-head/human acceptance: OPEN
+Feature 006: product accepted and delivered; administrative closeout
+Paths  [####################] 364 / 364 per platform
+Open   [....................]   0 / 364 product paths
+Tasks  [####################]  83 /  83 evidenced
+Product native CI / human acceptance: PASS; successor intake review: PENDING
 ```
 
 Deutsch: Die Balken sind grobe textuelle Anteile. Die Zahlen benennen den Stand;
