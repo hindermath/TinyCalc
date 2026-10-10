@@ -1,7 +1,7 @@
 # Implementierungsplan: TUI-Funktionsabnahme und Regressionsvertrag / Implementation Plan
 
 **Branch:** `006-tui-functional-contract` | **Datum / Date:** 2026-10-07 | **Spec:** [spec.md](spec.md)
-**Input:** Geklärte Spezifikation und [verbindliches Intake](../../requirements/intakes/active/Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md).
+**Input:** Geklärte Spezifikation und [verbindliches Intake](../../requirements/intakes/archive/Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md).
 **Status:** Autorenplanung, RQ-001–RQ-003 und Owner-Planreview abgeschlossen; 36 Anforderungsqualitäts-Punkte Pass. Thorstens Review vom 2026-10-08 bindet `6693ee58aabdc99e1532cea66cb38dc80bb7deda`; PR #101 gemergt als `541d883127174a178bdb1a1070440253fd23f2b8`. Zusätzlicher externer Rollen-/Scope-Review entfällt gemäß Owner-Entscheidung. Keine Implementierungsfreigabe, Produktabnahme oder Preflight-Erfüllung. / Author planning, clarification and owner plan review complete; the added external review prerequisite remains superseded. Execution, product acceptance and preflight are not cleared.
 **Planungsbasis / Planning baseline:** `de65e8db85f3bc7fb4361aa0c49a894938ce3e56`; Intake-SHA-256 `c07016800b9e02e56f123ed6af187d0b5fedd22c1689a1b8909fcc6e8f70c6ac`.
 

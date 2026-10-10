@@ -25,14 +25,13 @@ intakes, historical evidence, and executable intake series.*
 
 ## Nächster Intake / Next Intake
 
-`requirements/intakes/active/Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md`
-ist nach der abgeschlossenen Terminal.Gui-Migration der bevorzugte nächste
+`requirements/intakes/active/Lastenheft_A11Y_TUI.md`
+ist nach dem abgeschlossenen Feature 006 der bevorzugte nächste
 Intake. Der Zustand wird aus der kanonischen Serie abgeleitet; bei Drift gilt
 das Manifest statt dieses lesbaren Hinweises. Diese Festlegung startet keinen
 Spec-Kit-Lauf und erteilt keine Implementierungs-, Remote- oder
 Merge-Berechtigung.
 
-*After the completed Terminal.Gui migration, complete TUI functional
-acceptance is the preferred next intake. The canonical series manifest remains
+*After completed Feature 006, TUI accessibility is the preferred next intake. The canonical series manifest remains
 authoritative. This declaration starts no Spec Kit run and grants no
 implementation, remote, or merge authority.*

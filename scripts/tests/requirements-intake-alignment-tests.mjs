@@ -417,6 +417,53 @@ if (!portableRoot.includes(
   throw new Error("tracked portable post-merge evidence did not preserve the feature link");
 }
 
+// Ein erwaehntes Folge-Intake ist kein angenommener Feature-Scope.
+// A mentioned successor intake is not accepted feature scope.
+const contextualIntake = portable.definition.entries.find((entry) => entry.status === "Eligible");
+const directProofPath = `${portableLinked.featureDirectory}/evidence/postmerge.json`;
+const directProof = JSON.parse(fs.readFileSync(path.join(portable.fixtureRoot, directProofPath), "utf8"));
+directProof.acceptedPreMergePath = portableLinked.intakePath;
+directProof.acceptedPreMergeSha256 = digest(
+  fs.readFileSync(path.join(portable.fixtureRoot, portableLinked.intakePath), "utf8"),
+);
+writeFixtureFile(portable.fixtureRoot, directProofPath, JSON.stringify(directProof));
+writeFixtureFile(portable.fixtureRoot, `${portableLinked.featureDirectory}/tasks.md`,
+  `# Tasks\n\nBinding: ${portableLinked.intakePath}\nContext only: ${contextualIntake.intakePath}\n`);
+renderLinkedIntakeViews(renderOptions(portable, {write: true}));
+for (const output of portable.outputs) {
+  const lines = fs.readFileSync(path.join(portable.fixtureRoot, output), "utf8").split("\n");
+  const bound = lines.find((line) => line.startsWith(`| ${portableLinked.displayPosition} |`));
+  const context = lines.find((line) => line.startsWith(`| ${contextualIntake.displayPosition} |`));
+  if (!bound?.includes(path.basename(portableLinked.featureDirectory)) ||
+      !context?.includes("no Spec Kit feature")) {
+    throw new Error("RED: contextual intake mention received another intake's portable feature proof");
+  }
+}
+directProof.acceptedPreMergeSha256 = "0".repeat(64);
+writeFixtureFile(portable.fixtureRoot, directProofPath, JSON.stringify(directProof));
+let directHashCode = "";
+try { renderLinkedIntakeViews(renderOptions(portable)); }
+catch (error) { directHashCode = error.code; }
+if (directHashCode !== "LIE008") throw new Error("direct portable intake hash drift was accepted");
+directProof.acceptedPreMergeSha256 = digest(
+  fs.readFileSync(path.join(portable.fixtureRoot, portableLinked.intakePath), "utf8"),
+);
+writeFixtureFile(portable.fixtureRoot, directProofPath, JSON.stringify(directProof));
+// Auch bytegleicher Inhalt macht ein anderes Intake nicht zur gleichen Identitaet.
+// Identical bytes do not turn a different intake into the same identity.
+writeFixtureFile(portable.fixtureRoot, contextualIntake.intakePath,
+  fs.readFileSync(path.join(portable.fixtureRoot, portableLinked.intakePath)));
+portable.manifest.orderedTargets.find((entry) => entry.path === contextualIntake.intakePath)
+  .normalizedSha256 = directProof.acceptedPreMergeSha256;
+writeFixtureFile(portable.fixtureRoot, portable.manifestPath, JSON.stringify(portable.manifest));
+renderLinkedIntakeViews(renderOptions(portable, {write: true}));
+for (const output of portable.outputs) {
+  const context = fs.readFileSync(path.join(portable.fixtureRoot, output), "utf8").split("\n")
+    .find((line) => line.startsWith(`| ${contextualIntake.displayPosition} |`));
+  if (!context?.includes("no Spec Kit feature")) throw new Error("same-content foreign intake received proof");
+}
+console.log("PASS: direct portable intake identity, contextual mention, hash drift and same-content foreign intake");
+
 const importOnly = createLinkedFixture("import-only");
 const importResult = spawnSync(process.execPath, [
   "--input-type=module",

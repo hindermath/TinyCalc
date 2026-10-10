@@ -303,9 +303,15 @@ function lieFeatureProofs(rootPath, target) {
           !["Pass", "N/A"].includes(entry.result))) {
       lieFail("LIE008", `portable feature evidence is invalid for ${target.path}`);
     }
+    lieSafeRelative(acceptedPath);
+    // Direkte Intake-Belege binden Identitaet und Inhalt, nicht erwaehnten Pruefkontext.
+    // Direct intake proofs bind identity and content, not mentioned review context.
+    const directIntakeProof = !acceptedPath.startsWith(`${expectedFeature}/`);
+    if (directIntakeProof && !acceptedPaths.has(acceptedPath)) continue;
     const acceptedRecord = lieResolveExisting(rootPath, acceptedPath);
     const acceptedContent = lieReadText(acceptedRecord.absolute, acceptedRecord.safe);
     if (lieDigest(acceptedContent) !== portable.acceptedPreMergeSha256 ||
+        (directIntakeProof && portable.acceptedPreMergeSha256 !== target.normalizedSha256) ||
         !portable.entries.some((entry) =>
           typeof entry.evidenceReference === "string" &&
           entry.evidenceReference.includes(`:${expectedFeature}/`))) {

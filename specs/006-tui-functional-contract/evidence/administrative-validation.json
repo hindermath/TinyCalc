@@ -1,0 +1,62 @@
+{
+  "schemaVersion": "1.0",
+  "feature": "006-tui-functional-contract",
+  "operationId": "8db75270-e7ac-49d0-a8d3-78e6e3a6509a",
+  "scope": "Administrative delta only, product merge 946e392 unchanged",
+  "localPlatform": "macOS / PowerShell 7 / Python 3.14.8",
+  "checks": [
+    {
+      "command": "node scripts/tests/requirements-intake-alignment-tests.mjs (bounded renderer repair)",
+      "result": "Pass",
+      "exit": 0,
+      "red": "Before repair: contextual intake mention received another intake's portable feature proof",
+      "green": "Exact direct intake identity; no contextual or same-content foreign assignment; hash drift rejected; legacy matrix unchanged",
+      "evidence": "specs/006-tui-functional-contract/evidence/administrative-renderer-repair.md"
+    },
+    {
+      "command": "pwsh scripts/validate-requirements-intake-alignment.ps1",
+      "result": "Pass",
+      "exit": 0,
+      "receipts": 13,
+      "targets": 13,
+      "roots": 4,
+      "edges": 9
+    },
+    {
+      "command": "bash validate-intake-authoring-receipt.sh --receipt <TUI|Rename|PL0> --repo .",
+      "result": "Pass",
+      "exit": 0,
+      "receipts": 3
+    },
+    {
+      "command": "bash validate-intake-series-receipt.sh --file requirements/intakes/series/tinycalc-delivery/receipt.json --repo . --json",
+      "result": "Pass",
+      "exit": 0
+    },
+    {
+      "command": "bash validate-intake-governance-config.sh --config requirements/intake-governance-config.json --repo . --json",
+      "result": "Pass",
+      "exit": 0,
+      "outcome": "Aligned",
+      "active": 8,
+      "completed": 5
+    },
+    {
+      "command": "node scripts/tests/requirements-intake-alignment-tests.mjs",
+      "result": "Pass",
+      "exit": 0,
+      "cases": "10 legacy, 26 linked; archive-lineage negative fixtures",
+      "reuse": "Same manifest/lifecycle and unchanged validator/fixture sources; later receipt-only source renewal separately validated"
+    },
+    {
+      "command": "Get-FileHash SHA256 original and candidate archive copies",
+      "result": "Pass",
+      "copies": 14
+    }
+  ],
+  "environmentNote": "Initial archive resolver invocation used macOS system Python 3.9 and failed at unsupported union annotation; repeated with already-installed Python 3.14.8. No source change or gate waiver.",
+  "review": "Prior series review archived and explicitly superseded; no successor review executed",
+  "nativeDeliveryChecks": "Pending provider execution on final administrative PR; no pass predicted",
+  "documentationBuild": "DocFX succeeded: 0 errors; 83 existing warnings and one immutable archived-intake sibling link now outside its original collection. Canonical successor links are available in the administrative closeout and series index; archive content is not rewritten to hide the historical reference.",
+  "followUpFeatureStarted": false
+}

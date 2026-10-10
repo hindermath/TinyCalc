@@ -1,0 +1,24 @@
+{
+  "seriesId": "5b4523b4-d946-4091-9cbc-11825af94332",
+  "successorReviewId": "N/A",
+  "documentType": "SupersededIntakeReviewEvidence",
+  "supersedingOperationId": "8db75270-e7ac-49d0-a8d3-78e6e3a6509a",
+  "proofBoundary": "Prior review superseded by authorised archival/lifecycle progression and three explicitly approved receipt/source renewals; no successor review performed or fabricated.",
+  "artifacts": [
+    {
+      "path": "requirements/intakes/series-archive/tinycalc-delivery/20261011-feature006-closeout-review/intake-review-request.json",
+      "normalizedSha256": "b4c54f0d823d1fe6e4a0e5df2b7ca6c0178067d56de5cf606c637f0e6004d8c3"
+    },
+    {
+      "path": "requirements/intakes/series-archive/tinycalc-delivery/20261011-feature006-closeout-review/intake-review-result.json",
+      "normalizedSha256": "88815318b6317facf6e3715695686c44bcf075fbb0aabc8a7d04ce7b4f0c036d"
+    },
+    {
+      "path": "requirements/intakes/series-archive/tinycalc-delivery/20261011-feature006-closeout-review/intake-review-report.md",
+      "normalizedSha256": "1b5f782f752fcee2cd49e8e114d57e14341324c934d6003fc39b4efd167e00a4"
+    }
+  ],
+  "supersededAt": "2026-10-10T23:05:58Z",
+  "schemaVersion": "1.0",
+  "nextAction": "$speckit-intake-review requirements/intakes/series/tinycalc-delivery/manifest.json"
+}

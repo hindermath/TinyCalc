@@ -29,16 +29,16 @@
       }
     },
     {
-      "path": "requirements/intakes/archive/Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md",
+      "path": "requirements/intakes/active/Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md",
       "role": "OrderedMember",
       "normalizedSha256": "c07016800b9e02e56f123ed6af187d0b5fedd22c1689a1b8909fcc6e8f70c6ac",
-      "status": "Completed"
+      "status": "Eligible"
     },
     {
       "path": "requirements/intakes/active/Lastenheft_A11Y_TUI.md",
       "role": "OrderedMember",
       "normalizedSha256": "7fec8e9dea123fdeb0753119d06c18a8389a24645a541d3b60413166bbcbd6e2",
-      "status": "Eligible"
+      "status": "Blocked"
     },
     {
       "path": "requirements/intakes/active/Lastenheft_Rename_MicroCalc_TinyCalc.md",
@@ -120,12 +120,12 @@
     },
     {
       "from": "requirements/intakes/archive/Lastenheft_TerminalGui_Migration.003-terminalgui-migration.md",
-      "to": "requirements/intakes/archive/Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md",
+      "to": "requirements/intakes/active/Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md",
       "kind": "HardCompletionGate",
       "binding": true
     },
     {
-      "from": "requirements/intakes/archive/Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md",
+      "from": "requirements/intakes/active/Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md",
       "to": "requirements/intakes/active/Lastenheft_A11Y_TUI.md",
       "kind": "HardCompletionGate",
       "binding": true
@@ -170,8 +170,6 @@
   "evidencePaths": [
     "specs/requirements-reconciliation-20260726/requirements-coverage.json",
     "specs/requirements-reconciliation-20260726/migration-proposal.json",
-    "Lastenheft_Abarbeitungsreihenfolge.md",
-    "specs/006-tui-functional-contract/evidence/administrative-closeout.md",
-    "specs/006-tui-functional-contract/evidence/postmerge.json"
+    "Lastenheft_Abarbeitungsreihenfolge.md"
   ]
 }

@@ -4,7 +4,7 @@
 **Erstellt / Created:** 2026-10-07
 **Kästchenstand / Checkbox status:** 2026-10-10: Auf Thorstens Auftrag an die dokumentierten 36 Pass-Ergebnisse vom 2026-10-08 angeglichen. Historische Reviewnotizen bleiben erhalten; es wurde keine Produktabnahme vorweggenommen. / Aligned with the recorded 36 passing requirement-quality results on the owner's instruction; historical notes remain, without claiming product acceptance.
 **Feature:** [spec.md](../spec.md)
-**Kontext / Context:** [plan.md](../plan.md), [Datenmodell / data model](../data-model.md), [Schnittstellen / interfaces](../contracts/README.md), [verbindliches Intake / binding intake](../../../requirements/intakes/active/Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md).
+**Kontext / Context:** [plan.md](../plan.md), [Datenmodell / data model](../data-model.md), [Schnittstellen / interfaces](../contracts/README.md), [verbindliches Intake / binding intake](../../../requirements/intakes/archive/Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md).
 **Tiefe / Depth:** Standard, risikoorientiert und über den gesamten verbindlichen Umfang. / Standard, risk-focused, across the complete binding scope.
 **Anwendende / Audience:** Autor und unabhängiger Reviewer vor Tasks beziehungsweise Planfreigabe. / Author and independent reviewer before tasks or plan approval.
 

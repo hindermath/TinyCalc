@@ -37,7 +37,7 @@
         "files": [
           "specs/006-tui-functional-contract/**/*.md",
           "requirements/intakes/active/Lastenheft_A11Y_TUI.md",
-          "requirements/intakes/active/Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md"
+          "requirements/intakes/archive/Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md"
         ]
       }
     ],

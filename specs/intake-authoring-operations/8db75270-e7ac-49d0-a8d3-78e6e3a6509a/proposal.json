@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "proposalId": "2a95b0ad-ec19-4d14-be53-46baceb85ea1",
+  "type": "Update",
+  "approved": true,
+  "authorityEvidence": "Thorsten explicitly authorised administrative Feature 006 closeout: intake archival and series progression, MergeAndSync with Admin-Bypass only for formal rules, no follow-up feature. Thorsten subsequently approved the bounded renewal of the TUI and Rename README source bindings including archive/receipt lineage, then explicitly approved renewal of the PL/0 AGENTS.md source binding and its archive/receipt lineage. Intake content, IDs, scope, acceptance, security, accessibility, order, roots and dependency semantics remain unchanged.",
+  "target": "requirements/intakes/series/tinycalc-delivery/manifest.json",
+  "changes": {
+    "roots": 4,
+    "completedAfter": 5,
+    "review": "Superseded; successor pending",
+    "activeBefore": 9,
+    "followUpFeatureStarted": false,
+    "edges": 9,
+    "targets": 13,
+    "archival": {
+      "contentUnchanged": true,
+      "from": "requirements/intakes/active/Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md",
+      "normalizedSha256": "c07016800b9e02e56f123ed6af187d0b5fedd22c1689a1b8909fcc6e8f70c6ac",
+      "to": "requirements/intakes/archive/Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md"
+    },
+    "activeAfter": 8,
+    "receiptRenewals": [
+      "tui-funktionsabnahme-und-regressionsvertrag",
+      "rename-microcalc-tinycalc",
+      "pl0-zellfunktionen-v1"
+    ],
+    "completedBefore": 4
+  },
+  "scopePreserved": true
+}

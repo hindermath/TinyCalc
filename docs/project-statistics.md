@@ -824,34 +824,34 @@ English: The native follow-up correction also adds 37 net platform-evidence docu
 
 | 2026-10-11 | Feature 006: menschliche Abnahme und finaler Lieferabschluss / Human acceptance and final delivery closeout | Branch `006-tui-functional-contract`, sichtbare Abschlusssitzung am 11.10.2026 Europe/Berlin; aktive Arbeitszeit nicht gemessen. `0` Produktionscode-, `0` Testcode-/Produktskriptänderungen; vor Ledgerpflege `+542/-73 = +469` Dokumentations-/Nachweiszeilen einschließlich drei neuer Abschlussartefakte, zusätzlich ein kleiner Checklistenabgleich. Arbeitspakete: tatsächliche F01–F14-/VoiceOver-/HTML-/Ownerabnahme, 1092 native Tupel, vollständige Story-/SC-/A11Y-/Supply-Chain-Zuordnung, stale Pin-Autoritätsreferenz und abgeleiteter Hash korrigiert, technischer GSDB-SRC-067-Hash erneuert ohne Kontrollaufwertung, PR-/Abschlussbericht und begrenzte finale Delivery-Prozedur. 80/125 Zeilen/Arbeitstag ergeben für 469 Nettozeilen modellhaft 5.86/3.75 Arbeitstage, 45.73/29.27 Stunden bei 7.8 h/Tag, 0.273/0.175 Monate bei 21.5 Tagen/Monat; keine gemessene Beschleunigung dieser Sitzung. Finaler Statistik-Render erst am sauberen Commit; finale Pflichtläufe/Provider-/Merge-/FF-Sync-Evidence getrennt am eingefrorenen Lieferhead, keine selbstreferenzielle Commit-Schleife. Kein Paketupgrade, Intake-Rename oder Folgefeature. / Record actual human acceptance, unchanged product sources, native proof and bounded delivery work; preserve historical evidence and model assumptions, then bind final execution and delivery separately. |
 
+| 2026-10-11 | Feature 006: administrativer Abschluss / Administrative closeout | Branch `codex/feature006-administrative-closeout`, Basis Produktmerge `946e392`; sichtbares Verwaltungsfenster 11.10.2026 Europe/Berlin, keine Arbeitszeitmessung. `0` Produktionscode- und `0` Testcodezeilen geändert. Vor abschließender Ledger-/Profilpflege: 36 Dateien, `+3222/-441 = +2781` Dokumentations-/Governancezeilen, einschließlich bytegleicher Archivkopien statt neuer Produktlogik. Kopiervolumen ist keine manuell neu geschriebene Arbeit. Arbeitspakete: Intake archiviert, 83/83 Tasks mit tatsächlichem Produktabschluss abgeglichen, 13 Serienmitglieder/4 Roots/9 Kanten erhalten, aktive Mitglieder 9 -> 8 und abgeschlossene 4 -> 5, drei ausdrücklich genehmigte Quell-/Receipt-Lineages erneuert, alter Review supersediert und Nachfolgereview ausstehend. Vor Veröffentlichung temporären Gesamtkandidaten mit beiden Shell-Wrappern und Originalbytehashes geprüft. Profil-2-Vorschau/Write/Check folgt an sauberer Commit-Grenze. Referenzen 80/125 Zeilen/Arbeitstag, 7.8 h/Tag und 21.5 Tage/Monat bleiben Modelle; keine neue Speedup-Messung. Kein Folgefeature und kein Paketupgrade. / Administrative archival and source-lineage work only; preserve product evidence, distinguish copied archive volume from authored work, record actual checks and pending review, and refresh statistics only at the authorised clean boundary. |
+
+| 2026-10-11 | Feature 006: genehmigte Verwaltungsrenderer-Korrektur / Approved administrative renderer repair | Branch `codex/feature006-administrative-closeout`; sichtbare Sitzung 11.10.2026 Europe/Berlin, aktive Arbeitszeit nicht gemessen. Produktcode `0`, Governance-Renderer `+6/-0`, Regressionstest `+47/-0`; Dokumentation: Reparaturnachweis, Prüfprotokoll, PR-Text und zwei regenerierte Reihenfolgetabellen. Tatsächliches fachliches Rot vor Fix, danach Grün für Intake-Identität, Kontext, Hashabweichung und bytegleiches fremdes Intake sowie bestehende Fixture-Matrix. Historische featurelokale Snapshot-Belege bleiben unverändert, keine allgemeine Härtung behauptet. Referenzen 80/125 Zeilen/Arbeitstag, 7.8 Stunden/Tag und 21.5 Tage/Monat bleiben Modellannahmen; kein gemessener Speedup, kein Paketupgrade und kein Folgefeature. Profil-2-Vorschau/Write/Check am sauberen Fix-Commit. / Record the authorised bounded renderer repair and actual red/green proof, keep historical evidence limits explicit, and refresh statistics at a clean boundary without repeating unchanged product checks. |
+
 ## Gesamtstatistik / Overall Statistics
 
-Deutsch: Lokaler Feature-006-Zwischenstand: 70/83 Tasks vollständig nachgewiesen;
-364/364 unterschiedliche Pfade und 462 serialisierte Assertions stammen aus
-einem tatsächlichen macOS-Vollvertrag. 669 Tests grün, Changed-Line-Coverage
-97,02 %. Zusätzlich tatsächliche Linux-/Windows-CI mit je 671 Tests, 364 Pfaden
-und 462 Assertions sowie unabhängiger Quellreview und fünf DocFX-Stichproben.
-Die getrennten Belege sind noch keine finale gemeinsame Headbindung. Human-
-und finale Liefergates bleiben offen, kein Produktabnahmenachweis. Die folgende
-generierte Gesamtstatistik einschließlich ASCII-Trends bleibt an ihre angegebene
-Git-Quelle gebunden und wird nur an einer sauberen Commit-Grenze fortgeschrieben.
+Deutsch: Feature 006 ist in PR #104 vollständig implementiert, menschlich
+abgenommen und geliefert: je Plattform 671 erfolgreiche Tests, 364 Pfade und
+462 Assertions; Changed-Line-Coverage 97,02 %. Der separat genehmigte
+[administrative Abschluss](../specs/006-tui-functional-contract/evidence/administrative-closeout.md)
+vollzieht Archivierung und Serienfortschreibung und gleicht alle 83 Tasks ab.
+Der erforderliche neue Intake-Review bleibt vor einem Folgefeature ausstehend.
+Die folgende generierte Gesamtstatistik bleibt an die angegebene Git-Quelle
+gebunden und wird nur an einer sauberen Commit-Grenze fortgeschrieben.
 
-English: The local Feature-006 checkpoint fully evidences 70 of 83 tasks.
-One actual macOS full run supplies all 364 paths, 462 serialized assertions and
-669 passing tests, with 97.02% changed-line coverage. No local paths are missing;
-Native Linux/Windows each pass 671 tests and all paths; independent source review
-and five DocFX samples are complete. Separate results are not final common-head
-proof. Human and final delivery gates remain Open, not final product acceptance. Generated
-totals and ASCII trends below remain bound to their stated historical Git source.
-Write only at the authorised clean commit boundary, without bypassing the
-dirty-worktree guard.
+English: PR #104 delivered and recorded human acceptance of Feature 006.
+Each native platform passed 671 tests, all 364 paths and 462 assertions;
+changed-line coverage is 97.02%. Separately authorised administrative closeout
+archives the intake, progresses the series and reconciles all 83 tasks.
+A new intake review remains pending before any successor feature. Generated
+statistics retain their stated Git source and require a clean commit boundary.
 
 ```text
-Feature 006: complete local path proof, not acceptance
-Paths  [####################] 364 / 364 locally proved
-Open   [....................]   0 / 364 local paths
-Tasks  [#################...]  70 /  83 fully evidenced
-Native CI: PASS; final common-head/human acceptance: OPEN
+Feature 006: product accepted and delivered; administrative closeout
+Paths  [####################] 364 / 364 per platform
+Open   [....................]   0 / 364 product paths
+Tasks  [####################]  83 /  83 evidenced
+Product native CI / human acceptance: PASS; successor intake review: PENDING
 ```
 
 Deutsch: Die Balken sind grobe textuelle Anteile. Die Zahlen benennen den Stand;
@@ -868,27 +868,27 @@ Profil 2 verwendet Git-getrackte Textdateien und sichtbare Git-Aktivitaet. Die W
 
 | Kennzahl / Metric | Wert / Value |
 |---|---:|
-| Textbasis / Text base | 261105 lines |
-| Textdateien / Text files | 1573 |
+| Textbasis / Text base | 264209 lines |
+| Textdateien / Text files | 1593 |
 | Beobachtbarer Zeitraum / Observable period | 2025-10-19..2026-10-11 |
 | Aktivtage / Active days | 94 |
-| Relevante Commits / Relevant commits | 289 |
-| Zeilen je Aktivtag / Lines per active day | 2777.7 |
+| Relevante Commits / Relevant commits | 291 |
+| Zeilen je Aktivtag / Lines per active day | 2810.7 |
 | Peak-Tag im Fenster / Peak day in window | 2026-10-10 / 35855 |
 | Peak-Woche im Fenster / Peak week in window | 2026-10-04 / 49053 |
 | Laengste Serie / Longest streak | 8 days |
-| Speedup vs. 80 lines/day | 34.7x |
-| Speedup vs. 125 lines/day | 22.2x |
-| Methodik / Methodology | v2; source `12db77c4d17d` |
+| Speedup vs. 80 lines/day | 35.1x |
+| Speedup vs. 125 lines/day | 22.5x |
+| Methodik / Methodology | v2; source `e292514f7526` |
 
 ### Artefaktmix / Artifact Mix
 
 ```text
 Produktiv / Production          [#...................]   1.2% | 3118
-Tests                           [#...................]   5.6% | 14503
-Dokumentation / Documentation   [###############.....]  73.2% | 191159
-Skripte / Scripts               [##..................]  11.3% | 29626
-Konfiguration / Configuration   [##..................]   7.5% | 19606
+Tests                           [#...................]   5.5% | 14503
+Dokumentation / Documentation   [###############.....]  73.0% | 192903
+Skripte / Scripts               [##..................]  11.2% | 29626
+Konfiguration / Configuration   [##..................]   7.9% | 20966
 Daten und Medien / Data and media [....................]   0.0% | 0
 Sonstiger Text / Other text     [#...................]   1.2% | 3093
 ```
@@ -912,7 +912,7 @@ Sa/Sa  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 4 0 0 4 0 0 0 2 0 0 0
 
 ```text
 Wochen / Weeks 27..52 | 2026-04-19..2026-10-17
-So/Su  0 0 0 0 0 0 1 0 4 0 0 0 1 4 4 1 4 4 0 4 4 4 4 0 4 3
+So/Su  0 0 0 0 0 0 1 0 4 0 0 0 1 4 4 1 4 4 0 4 4 4 4 0 4 4
 Mo/Mo  4 0 4 0 0 0 0 0 0 0 3 1 4 4 0 0 0 2 0 0 0 0 0 3 3 -
 Di/Tu  0 0 3 0 0 3 0 0 0 0 2 0 3 4 4 0 0 0 0 4 3 4 0 0 4 -
 Mi/We  3 0 2 0 0 0 2 0 4 0 2 0 0 2 4 0 0 0 0 0 0 0 0 0 3 -
@@ -1022,8 +1022,8 @@ Die festen Slots halten den Phasenvergleich auch bei fehlenden oder spaeter erga
 
 ```text
 Scale: 0..50x
-80 lines/day       [##############......] 34.7x
-125 lines/day      [#########...........] 22.2x
+80 lines/day       [##############......] 35.1x
+125 lines/day      [#########...........] 22.5x
 ```
 
 Die Faktoren vergleichen sichtbare Lieferdichte mit den dokumentierten manuellen Referenzen. Sie messen keine Arbeitszeit.
@@ -1036,7 +1036,7 @@ Die Faktoren vergleichen sichtbare Lieferdichte mit den dokumentierten manuellen
 Scale: 0..5000 lines/day
 Experienced manual [#...................] 80
 Thorsten solo      [#...................] 125
-Visible repository [###########.........] 2777.7
+Visible repository [###########.........] 2810.7
 ```
 
 Die gemeinsame Skala vergleicht Referenzen und sichtbare Lieferdichte. Sie schreibt die Git-Aktivitaet keiner Person oder KI pauschal zu.
@@ -1062,6 +1062,6 @@ DE: Das Fenster beginnt am 2025-10-19 und endet am 2026-10-11. Es enthaelt 94 ak
 | 2026-07 | 74031 |
 | 2026-08 | 26210 |
 | 2026-09 | 70997 |
-| 2026-10 | 55772 |
+| 2026-10 | 59127 |
 
 <!-- project-statistics-v2:end -->
