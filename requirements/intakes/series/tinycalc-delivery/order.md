@@ -1,6 +1,6 @@
 # TinyCalc Intake-Reihenfolge / Intake Order
 
-<!-- linked-intake-generation: 0797863dcf44d62885f0019b87dcd82c403273ab3e673cbf7f0e659469260fa9 -->
+<!-- linked-intake-generation: ce79595d6a3e0f1c98270e5627246b2b712b38fb08a682bb874ef29979c62286 -->
 
 Diese Ansicht wird aus der kanonischen Intake-Serie abgeleitet. Verbindliche
 Maschinendaten stehen im [Serienmanifest](manifest.json).
@@ -13,7 +13,7 @@ manifest contains the binding machine-readable data.*
 | 1 | Completed | [Lastenheft_Constitution_Change.002-constitution-change.md](../../archive/Lastenheft_Constitution_Change.002-constitution-change.md) | — (Root / keine direkte Abhängigkeit) | [002-constitution-change](../../../../specs/002-constitution-change/) |
 | 2 | Completed | [Lastenheft_TerminalGui_Migration.003-terminalgui-migration.md](../../archive/Lastenheft_TerminalGui_Migration.003-terminalgui-migration.md) | [Lastenheft_Constitution_Change.002-constitution-change.md](../../archive/Lastenheft_Constitution_Change.002-constitution-change.md) → current (`HardCompletionGate`, binding: true) | — (kein Spec-Kit-Feature / no Spec Kit feature) |
 | 3 | Completed | [Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md](../../archive/Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md) | [Lastenheft_TerminalGui_Migration.003-terminalgui-migration.md](../../archive/Lastenheft_TerminalGui_Migration.003-terminalgui-migration.md) → current (`HardCompletionGate`, binding: true) | [006-tui-functional-contract](../../../../specs/006-tui-functional-contract/) |
-| 4 | Eligible | [Lastenheft_A11Y_TUI.md](../../active/Lastenheft_A11Y_TUI.md) | [Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md](../../archive/Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md) → current (`HardCompletionGate`, binding: true) | [006-tui-functional-contract](../../../../specs/006-tui-functional-contract/) |
+| 4 | Eligible | [Lastenheft_A11Y_TUI.md](../../active/Lastenheft_A11Y_TUI.md) | [Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md](../../archive/Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md) → current (`HardCompletionGate`, binding: true) | — (kein Spec-Kit-Feature / no Spec Kit feature) |
 | 5 | Blocked | [Lastenheft_Rename_MicroCalc_TinyCalc.md](../../active/Lastenheft_Rename_MicroCalc_TinyCalc.md) | [Lastenheft_A11Y_TUI.md](../../active/Lastenheft_A11Y_TUI.md) → current (`HardCompletionGate`, binding: true) | — (kein Spec-Kit-Feature / no Spec Kit feature) |
 | 6 | Blocked | [Lastenheft_Didactic-Inline-Code-Comment-Hardening.md](../../active/Lastenheft_Didactic-Inline-Code-Comment-Hardening.md) | [Lastenheft_Rename_MicroCalc_TinyCalc.md](../../active/Lastenheft_Rename_MicroCalc_TinyCalc.md) → current (`HardCompletionGate`, binding: true) | — (kein Spec-Kit-Feature / no Spec Kit feature) |
 | 7 | Blocked | [Lastenheft_Secure-Development-Hardening.md](../../active/Lastenheft_Secure-Development-Hardening.md) | [Lastenheft_Didactic-Inline-Code-Comment-Hardening.md](../../active/Lastenheft_Didactic-Inline-Code-Comment-Hardening.md) → current (`HardCompletionGate`, binding: true) | — (kein Spec-Kit-Feature / no Spec Kit feature) |

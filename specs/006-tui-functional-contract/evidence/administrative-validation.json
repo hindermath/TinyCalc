@@ -6,6 +6,14 @@
   "localPlatform": "macOS / PowerShell 7 / Python 3.14.8",
   "checks": [
     {
+      "command": "node scripts/tests/requirements-intake-alignment-tests.mjs (bounded renderer repair)",
+      "result": "Pass",
+      "exit": 0,
+      "red": "Before repair: contextual intake mention received another intake's portable feature proof",
+      "green": "Exact direct intake identity; no contextual or same-content foreign assignment; hash drift rejected; legacy matrix unchanged",
+      "evidence": "specs/006-tui-functional-contract/evidence/administrative-renderer-repair.md"
+    },
+    {
       "command": "pwsh scripts/validate-requirements-intake-alignment.ps1",
       "result": "Pass",
       "exit": 0,
