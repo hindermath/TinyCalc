@@ -810,6 +810,10 @@ volume.
 
 | 2026-10-10 | Feature 006 reale native Folgekorrektur / Actual native follow-up correction | Branch `006-tui-functional-contract`, Basis `891d99f`; sichtbares CI-/Korrekturfenster 20:25–20:35 Europe/Berlin, keine Arbeitszeitmessung. `0` Produktionscode-, `14` C#-Testzeilen netto vor Statistik-/Versionspflege; Plattformdokumentation beschreibt die supersedierte Hypothese ausdrücklich. Linux tatsächlich Core 217 Pass/TUI 444 Pass, neun Publikationsfehler wegen reserviertem Dateinamen; native Rohphasen nun getrennt. Windows widerlegt Registry-Injektion, gepinnte Treiberauswahl erstellt Factory direkt. Testadapter kontrolliert stattdessen öffentlichen ANSI-Größenmodus und stellt ursprünglichen Modus wieder her, kein Produktdefault geändert. Build 110 zwei Publikationsfälle rot, 111 fünf gezielte Fälle grün; 112 Polling-Fall rot, 113 alle sieben gezielten Publikations-/Restaurierungs-/Ablehnungsfälle grün. Keine neue Abhängigkeit, keine Abschwächung, keine pauschale Wiederholung grüner Produkttests. Neuer nativer Vollbeleg bleibt erforderlich. Referenzen 80/125 Zeilen/Arbeitstag, 7.8 h/Tag und 21.5 Tage/Monat bleiben Modelle. / Fix actual observed fixture defects with narrow red/green proof and retain native acceptance boundaries. |
 
+Deutsch: Zur nativen Folgekorrektur gehören zusätzlich netto 37 Dokumentationszeilen im Plattformnachweis; generierte Statistik und Versionsfelder sind nicht enthalten.
+
+English: The native follow-up correction also adds 37 net platform-evidence documentation lines, excluding generated statistics and version fields.
+
 ## Gesamtstatistik / Overall Statistics
 
 Deutsch: Lokaler Feature-006-Zwischenstand: 65/83 Tasks vollständig nachgewiesen;
@@ -852,25 +856,25 @@ Profil 2 verwendet Git-getrackte Textdateien und sichtbare Git-Aktivitaet. Die W
 
 | Kennzahl / Metric | Wert / Value |
 |---|---:|
-| Textbasis / Text base | 259718 lines |
+| Textbasis / Text base | 259769 lines |
 | Textdateien / Text files | 1557 |
 | Beobachtbarer Zeitraum / Observable period | 2025-10-12..2026-10-10 |
 | Aktivtage / Active days | 93 |
-| Relevante Commits / Relevant commits | 284 |
-| Zeilen je Aktivtag / Lines per active day | 2792.7 |
-| Peak-Tag im Fenster / Peak day in window | 2026-10-10 / 34657 |
-| Peak-Woche im Fenster / Peak week in window | 2026-10-04 / 47855 |
+| Relevante Commits / Relevant commits | 285 |
+| Zeilen je Aktivtag / Lines per active day | 2793.2 |
+| Peak-Tag im Fenster / Peak day in window | 2026-10-10 / 34784 |
+| Peak-Woche im Fenster / Peak week in window | 2026-10-04 / 47982 |
 | Laengste Serie / Longest streak | 8 days |
 | Speedup vs. 80 lines/day | 34.9x |
 | Speedup vs. 125 lines/day | 22.3x |
-| Methodik / Methodology | v2; source `ddf8f3ffcdeb` |
+| Methodik / Methodology | v2; source `db9bc08f6571` |
 
 ### Artefaktmix / Artifact Mix
 
 ```text
 Produktiv / Production          [#...................]   1.2% | 3118
-Tests                           [#...................]   5.6% | 14432
-Dokumentation / Documentation   [###############.....]  73.1% | 189870
+Tests                           [#...................]   5.6% | 14446
+Dokumentation / Documentation   [###############.....]  73.1% | 189907
 Skripte / Scripts               [##..................]  11.4% | 29600
 Konfiguration / Configuration   [##..................]   7.5% | 19605
 Daten und Medien / Data and media [....................]   0.0% | 0
@@ -1020,7 +1024,7 @@ Die Faktoren vergleichen sichtbare Lieferdichte mit den dokumentierten manuellen
 Scale: 0..5000 lines/day
 Experienced manual [#...................] 80
 Thorsten solo      [#...................] 125
-Visible repository [###########.........] 2792.7
+Visible repository [###########.........] 2793.2
 ```
 
 Die gemeinsame Skala vergleicht Referenzen und sichtbare Lieferdichte. Sie schreibt die Git-Aktivitaet keiner Person oder KI pauschal zu.
@@ -1029,9 +1033,9 @@ Die gemeinsame Skala vergleicht Referenzen und sichtbare Lieferdichte. Sie schre
 
 ### Textalternative / Text Alternative
 
-DE: Das Fenster beginnt am 2025-10-12 und endet am 2026-10-10. Es enthaelt 93 aktive und 271 inaktive vergangene Tage. Peak-Tag: 2026-10-10 / 34657. Peak-Woche: 2026-10-04 / 47855. Laengste Serie: 8 Tage (2026-07-19..2026-07-26).
+DE: Das Fenster beginnt am 2025-10-12 und endet am 2026-10-10. Es enthaelt 93 aktive und 271 inaktive vergangene Tage. Peak-Tag: 2026-10-10 / 34784. Peak-Woche: 2026-10-04 / 47982. Laengste Serie: 8 Tage (2026-07-19..2026-07-26).
 
-*EN: The window starts on 2025-10-12 and ends on 2026-10-10. It contains 93 active and 271 inactive elapsed days. Peak day: 2026-10-10 / 34657. Peak week: 2026-10-04 / 47855. Longest streak: 8 days (2026-07-19..2026-07-26).*
+*EN: The window starts on 2025-10-12 and ends on 2026-10-10. It contains 93 active and 271 inactive elapsed days. Peak day: 2026-10-10 / 34784. Peak week: 2026-10-04 / 47982. Longest streak: 8 days (2026-07-19..2026-07-26).*
 
 | Monat / Month | Geaenderte Textzeilen / Changed text lines |
 |---|---:|
@@ -1046,6 +1050,6 @@ DE: Das Fenster beginnt am 2025-10-12 und endet am 2026-10-10. Es enthaelt 93 ak
 | 2026-07 | 74031 |
 | 2026-08 | 26210 |
 | 2026-09 | 70997 |
-| 2026-10 | 53935 |
+| 2026-10 | 54062 |
 
 <!-- project-statistics-v2:end -->
