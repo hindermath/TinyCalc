@@ -22,13 +22,13 @@ function Read-TuiTrxExecution {
 function Test-TuiExecutedResult {
     param($Record, $Executions)
     $Prefix = 'MicroCalc.Tui.Tests.' + [IO.Path]::GetFileNameWithoutExtension(($Record.testRef -split '#',2)[0]) + '.'
-    $Matches = @($Executions | Where-Object { $_.testName.StartsWith($Prefix,[StringComparison]::Ordinal) -and
+    $ExecutionMatches = @($Executions | Where-Object { $_.testName.StartsWith($Prefix,[StringComparison]::Ordinal) -and
         $_.testName.Contains(('id: "' + $Record.pathId + '"'),[StringComparison]::Ordinal) })
-    if($Matches.Count -ne 1 -or $Matches[0].outcome -cne 'Passed'){return 'MissingPassedExecution'}
+    if($ExecutionMatches.Count -ne 1 -or $ExecutionMatches[0].outcome -cne 'Passed'){return 'MissingPassedExecution'}
     $Start=[DateTimeOffset]::Parse($Record.startedAt,[Globalization.CultureInfo]::InvariantCulture)
     $End=[DateTimeOffset]::Parse($Record.finishedAt,[Globalization.CultureInfo]::InvariantCulture)
-    if($Start -lt [DateTimeOffset]::Parse($Matches[0].startTime,[Globalization.CultureInfo]::InvariantCulture) -or
-        $End -gt [DateTimeOffset]::Parse($Matches[0].endTime,[Globalization.CultureInfo]::InvariantCulture) -or
+    if($Start -lt [DateTimeOffset]::Parse($ExecutionMatches[0].startTime,[Globalization.CultureInfo]::InvariantCulture) -or
+        $End -gt [DateTimeOffset]::Parse($ExecutionMatches[0].endTime,[Globalization.CultureInfo]::InvariantCulture) -or
         $End -lt $Start -or ($End-$Start).TotalSeconds -gt 30){return 'ExecutionTimingMismatch'}
     return ''
 }
