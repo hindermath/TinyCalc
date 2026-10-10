@@ -830,6 +830,8 @@ English: The native follow-up correction also adds 37 net platform-evidence docu
 
 | 2026-10-11 | Serienreview nach Feature-006-Abschluss / Series review after Feature 006 closeout | Branch `main`, Quelle `ade6927f5b16`; sichtbare Reviewsitzung am 11.10.2026 Europe/Berlin, keine Arbeitszeitmessung. `0` Produktionscode- und `0` Testcodezeilen; vor Ledgerpflege `419` neue Dokumentations-/JSON-Zeilen in drei lokalen Review-Artefakten. Arbeitspakete: 13 unveränderte Intake-Inhalte hashgebunden mit dem archivierten Gesamt-Review abgeglichen, A11Y vollständig neu gelesen, TUI-Archivierung und drei Quell-Lineages sowie 4 Roots/9 Kanten/5 Completed/8 aktive Ziele geprüft; Ready ohne Befunde, Risiken oder Fragen. Konfiguration, Gesamt-Alignment und aktuelle Reviewbindung in PowerShell/Bash bestanden; TinyPl0-Release und öffentliche Paketverfügbarkeit read-only bestätigt, ohne TinyCalc-Integrationsgates aufzuheben. Profil-2-Vorschau Exit 0/DRY_RUN, keine Drift, Quelle `e292514f7526`, 264209 Textzeilen/94 aktive Tage; generierter Block und ASCII-Trends bleiben an diese saubere Git-Quelle gebunden, kein Dirty-Guard-Bypass. Referenzen 80/125 Zeilen/Arbeitstag ergeben modellhaft 5.24/3.35 Tage und 40.85/26.15 Stunden bei 7.8 Stunden/Tag, keine neue Speedup-Messung. Kein Produktlauf, Commit/Push/PR/Merge oder Featurestart; DocFX-/Text-A11Y-Nachweis für die Ledgerfortschreibung separat lokal. / Record a bounded local Series review, reuse exact-content semantic evidence explicitly and review the changed lifecycle handoff. Reference volumes are not measured effort; preserve the clean-source statistics and all execution/acceptance boundaries. |
 
+| 2026-10-11 | Serienreview zur Lieferung vorbereiten / Prepare Series review delivery | Branch `codex/intake-series-review-closeout`; sichtbare Liefersitzung am 11.10.2026 Europe/Berlin, keine Arbeitszeitmessung. `0` Produktions-/Testcodezeilen; zusätzlich zur vorherigen Review-Zählung `63` PR-Dokumentationszeilen und Profil-2-Refresh `+10/-10`, vor diesem Ledger-Selbstnachweis. Arbeitspakete: genehmigte enge Git-Lieferung, PR-Text, exakte Staging-Pfad-/Indexbindung und Secret-Scan; keine Intakes, Pakete, Versionen oder ausführbaren Validatoren geändert. Saubere Profil-2-Vorschau/Write/Check jeweils Exit 0: Quelle `0973c600c7e7`, 264407 getrackte Textzeilen/94 aktive Tage, ASCII-Trends synchron; keine selbstreferenzielle Neurenderschleife. Referenzen 80/125 Zeilen/Arbeitstag und 7.8 Stunden/Tag bleiben Modelle, keine neue Speedup-Messung. Finale Head-CI, tatsächlicher Merge und Fast-Forward-Sync werden separat am Provider nachgewiesen, nicht vorweg als bestanden behauptet. / Prepare the authorised maintenance delivery with bounded scope, staged candidate proof, secret checks and reproducible statistics. Preserve review-time history and distinguish pending provider delivery gates from actual local passes; start no feature. |
+
 ## Gesamtstatistik / Overall Statistics
 
 Deutsch: Feature 006 ist in PR #104 vollständig implementiert, menschlich
@@ -870,25 +872,25 @@ Profil 2 verwendet Git-getrackte Textdateien und sichtbare Git-Aktivitaet. Die W
 
 | Kennzahl / Metric | Wert / Value |
 |---|---:|
-| Textbasis / Text base | 264209 lines |
-| Textdateien / Text files | 1593 |
+| Textbasis / Text base | 264407 lines |
+| Textdateien / Text files | 1595 |
 | Beobachtbarer Zeitraum / Observable period | 2025-10-19..2026-10-11 |
 | Aktivtage / Active days | 94 |
-| Relevante Commits / Relevant commits | 291 |
-| Zeilen je Aktivtag / Lines per active day | 2810.7 |
+| Relevante Commits / Relevant commits | 292 |
+| Zeilen je Aktivtag / Lines per active day | 2812.8 |
 | Peak-Tag im Fenster / Peak day in window | 2026-10-10 / 35855 |
 | Peak-Woche im Fenster / Peak week in window | 2026-10-04 / 49053 |
 | Laengste Serie / Longest streak | 8 days |
-| Speedup vs. 80 lines/day | 35.1x |
+| Speedup vs. 80 lines/day | 35.2x |
 | Speedup vs. 125 lines/day | 22.5x |
-| Methodik / Methodology | v2; source `e292514f7526` |
+| Methodik / Methodology | v2; source `0973c600c7e7` |
 
 ### Artefaktmix / Artifact Mix
 
 ```text
 Produktiv / Production          [#...................]   1.2% | 3118
 Tests                           [#...................]   5.5% | 14503
-Dokumentation / Documentation   [###############.....]  73.0% | 192903
+Dokumentation / Documentation   [###############.....]  73.0% | 193101
 Skripte / Scripts               [##..................]  11.2% | 29626
 Konfiguration / Configuration   [##..................]   7.9% | 20966
 Daten und Medien / Data and media [....................]   0.0% | 0
@@ -1024,7 +1026,7 @@ Die festen Slots halten den Phasenvergleich auch bei fehlenden oder spaeter erga
 
 ```text
 Scale: 0..50x
-80 lines/day       [##############......] 35.1x
+80 lines/day       [##############......] 35.2x
 125 lines/day      [#########...........] 22.5x
 ```
 
@@ -1038,7 +1040,7 @@ Die Faktoren vergleichen sichtbare Lieferdichte mit den dokumentierten manuellen
 Scale: 0..5000 lines/day
 Experienced manual [#...................] 80
 Thorsten solo      [#...................] 125
-Visible repository [###########.........] 2810.7
+Visible repository [###########.........] 2812.8
 ```
 
 Die gemeinsame Skala vergleicht Referenzen und sichtbare Lieferdichte. Sie schreibt die Git-Aktivitaet keiner Person oder KI pauschal zu.
@@ -1064,6 +1066,6 @@ DE: Das Fenster beginnt am 2025-10-19 und endet am 2026-10-11. Es enthaelt 94 ak
 | 2026-07 | 74031 |
 | 2026-08 | 26210 |
 | 2026-09 | 70997 |
-| 2026-10 | 59127 |
+| 2026-10 | 59325 |
 
 <!-- project-statistics-v2:end -->
