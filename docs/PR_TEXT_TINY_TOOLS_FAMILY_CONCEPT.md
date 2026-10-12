@@ -20,7 +20,8 @@ Die Dokumentationsauswirkung ist `UpdateRequired`, nachgewiesen in
   verwandte Bedienung, kleine Abläufe für Lernende der vier IHK-IT-Berufe.
 - TinyEdit: Markdown, JSON, YAML, INI und PL/0; kleine IDE als mögliche
   Ausbaustufe. TinyDB: klassische dBASE-artige Tabellen und Masken.
-  DBF-Kompatibilität, Formate, Bibliotheken, Framework und Lernziele bleiben offen.
+  DBF-Kompatibilität, genaue Formate, Bibliotheken und Lernziele bleiben offen;
+  Terminal.Gui wie bei TinyCalc ist die gemeinsame UI-Richtung, ohne Versionspin.
 - TinyEdit zuerst ist nur ein Vorschlag. Kein Intake, Feature, Projekt,
   Implementierungsauftrag, Repository-Rename oder neuer Serienblocker.
 - README, Agenten-Guidance, Intakes, Seriennachweise, Produktcode, Tests,
@@ -70,6 +71,15 @@ Freigabe offen. Kein Folgefeature wird gestartet.
 
 ### Erweiterung vom 12.10.2026
 
+Abschließende Ergänzung: TinyDB mit einer Tabelle pro Datei, Felddefinitionen
+und Datensätzen, Tabellenansicht und Maske. JSON bleibt bevorzugter Vorschlag;
+CSV und Binär-/DBF-Vergleich sind optionale Lernvertiefungen. Terminal.Gui ist
+gemeinsame UI-Basis. PowerShell-Cmdlets und Provider ergänzen die drei Apps als
+Automatisierungszugang; PL/0-Provider nur Forschungsoption, keine künstlichen
+TinyEdit-Cmdlets. Befehle, Pfade und Schreib-/Speichersemantik bleiben offen.
+Keine weiteren Anwendungen oder Funktionsbereiche hinzugefügt. Nachweisgrenzen
+bleiben erhalten; Prüfungen, Commits und Ergebnisse werden im PR protokolliert.
+
 Zielgruppe ab dem ersten Ausbildungsjahr, CEFR B2 und WCAG 2.2 AA soweit
 anwendbar ergänzt. Kleine Apps erklären Prinzipien größerer Anwendungen;
 konkrete Unterrichtseinheiten und IDE-Funktionen bleiben auszugestalten.
@@ -110,7 +120,8 @@ Documentation impact is `UpdateRequired`, recorded in
   and small workflows for trainees in the four IHK IT professions.
 - TinyEdit: Markdown, JSON, YAML, INI and PL/0; a small IDE as a possible
   extension. TinyDB: classic dBASE-style tables and record forms.
-  DBF compatibility, formats, libraries, framework and learning objectives stay open.
+  DBF compatibility, exact formats, libraries and learning objectives stay open;
+  Terminal.Gui as used by TinyCalc is the shared UI direction, without a version pin.
 - Starting with TinyEdit is only a proposal. No new intake, feature, project,
   assignment, repository rename or blocking series dependency is created.
 - README, agent guidance, intakes, series evidence, product, tests, packages,
@@ -157,6 +168,15 @@ request permits commit/push only: PR #109 stays open until renewed approval.
 Start no follow-up feature.
 
 ### Extension on 12 October 2026
+
+Final addition: TinyDB has one table per file, field definitions and records,
+a table view and record form. JSON remains the preferred proposal; CSV and
+binary/DBF comparison are optional learning extensions. Terminal.Gui is the
+shared UI foundation. PowerShell cmdlets and providers add automation access
+to the three apps; a PL/0 provider is only a research option, with no artificial
+TinyEdit cmdlets. Commands, paths and write/save semantics stay open. No further
+apps or functional areas are added. Evidence limits remain; checks, commits and
+results are recorded in the PR.
 
 Added trainees from their first training year, CEFR B2 and WCAG 2.2 AA wherever
 applicable. Small apps explain principles of larger applications; specific

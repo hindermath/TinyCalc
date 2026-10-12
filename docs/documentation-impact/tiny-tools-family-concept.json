@@ -6,7 +6,7 @@
       "changeId": "CHG001",
       "scope": "docs/concepts/tiny-tools-family.md",
       "decision": "UpdateRequired",
-      "rationale": "Produktidee um TinyEdit-Formate, optionale IDE, vorhandene PL/0-Paketgrundlage und Lernpfad ab erstem Lehrjahr erweitern; keine Ausführungsfreigabe. / Extend the idea with TinyEdit formats, optional IDE, existing PL/0 package foundation and first-year learning paths; no execution approval.",
+      "rationale": "Produktidee um TinyDB-Eintabellenmodell, menschenlesbare Speicherrichtung, Terminal.Gui und PowerShell-Zugang abrunden; JSON bleibt Vorschlag, keine Ausführungsfreigabe. / Complete the idea with the TinyDB single-table model, human-readable storage direction, Terminal.Gui and PowerShell access; JSON remains a proposal, no execution approval.",
       "documents": ["docs/concepts/tiny-tools-family.md", "docs/PR_TEXT_TINY_TOOLS_FAMILY_CONCEPT.md", "docs/project-statistics.md"],
       "owner": "Thorsten",
       "audiences": ["Lernende / Trainees", "Maintainer", "Reviewer"],

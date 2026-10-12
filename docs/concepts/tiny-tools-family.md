@@ -24,6 +24,11 @@ CEFR B2: Fachbegriffe werden eingeführt und an kleinen Beispielen erklärt.
 Das ist keine vollständige Office-Suite und kein Versprechen einer bestimmten
 Prüfungs- oder Lehrplanabdeckung. Der Repository-Name bleibt unverändert.
 
+Die gemeinsame TUI-Basis ist Terminal.Gui wie bei TinyCalc. Diese Richtung
+legt keine dauerhafte Paketversion oder neue gemeinsame UI-Bibliothek fest.
+Die Familie bleibt auf drei eigenständige Programme begrenzt; PowerShell
+ergänzt den Zugang zur Fachlogik, ist aber keine vierte App.
+
 ### Programmkerne
 
 - **TinyCalc:** Tabellen, Formeln und Berechnungen; das bestehende Programm ist
@@ -34,9 +39,49 @@ Prüfungs- oder Lehrplanabdeckung. Der Repository-Name bleibt unverändert.
   Eine kleine TinyPl0-IDE ist eine mögliche spätere Ausbaustufe: Kompilieren,
   Ausführen, schrittweise Ausführung und verständliche Diagnosen, nicht der
   Anspruch einer vollständigen professionellen Entwicklungsumgebung.
-- **TinyDB:** klassische dBASE-artige Bedienung mit Tabellen und Masken für
-  einzelne Datensätze, als überschaubare Karteiverwaltung. Die Bedienidee ist
-  keine Zusage von DBF-Kompatibilität oder einer dBASE-Programmiersprache.
+- **TinyDB:** dBASE-artige Datenhaltung und Bearbeitung mit genau einer Tabelle
+  pro Datei, einschließlich Felddefinitionen und Datensätzen. Tabellenansicht
+  und Datensatzmaske bilden die Bedienrichtung. Mehrtabellenverwaltung und
+  Beziehungen gehören nicht zum Einstieg. DBF-Kompatibilität oder eine
+  dBASE-Programmiersprache werden nicht zugesagt.
+
+### TinyDB-Speicherung und Lernvertiefungen
+
+Gewünscht ist ein dokumentiertes, menschenlesbares Speicherformat. JSON ist
+der bevorzugte Vorschlag, noch keine beschlossene Formatentscheidung. Eine
+Datei könnte Felddefinitionen und Datensätze gemeinsam enthalten und mit
+TinyEdit untersucht werden; ein konkreter Dateivertrag bleibt offen.
+CSV-Import/-Export und ein Vergleich mit binärer Speicherung beziehungsweise
+DBF bleiben mögliche spätere Lernvertiefungen, keine zusätzlichen Pflicht-
+Backends. Der Vergleich könnte Header, Feldbeschreibungen, Zeichencodierung
+und Datensatzlängen erklären. Die dBASE-artige Bedienung hängt nicht von DBF ab.
+
+### PowerShell als Automatisierungs- und Lernzugang
+
+Cmdlets sollen dieselben Fachmodelle ohne TUI bedienen: TinyCalc-Sheets und
+TinyDB-Tabellen beziehungsweise Datensätze erstellen, lesen, bearbeiten und
+speichern; bei TinyCalc außerdem Berechnungen auslösen. TinyPl0-Kompilierung
+und begrenzte VM-Ausführung gehören ebenfalls zur Konzeptrichtung. Konkrete
+Befehlsnamen, Parameter und Modulpaketierung bleiben späteren Spezifikationen
+vorbehalten. Dies ist weder eine neue Paketabhängigkeit noch eine Umsetzung.
+
+Provider sollen einen navigierbaren Zugang zu Zellen und Datensätzen bieten.
+Ein Provider stellt Daten über PowerShell-Pfade dar; ein Cmdlet führt eine
+benannte Aufgabe aus. Pfade, unterstützte Schreiboperationen und der Zeitpunkt
+der Speicherung bleiben offen. Ein PL/0-Provider, etwa für Symbole oder
+Instruktionen, ist nur eine lose Forschungsoption.
+
+Für TinyEdit werden keine eigenen Cmdlets allein der Vollständigkeit halber
+festgelegt. Formatspezifische Prüfung oder Konvertierung sind höchstens spätere
+Ergänzungen; vorhandene PowerShell-Dateibefehle sind ein möglicher Einstieg.
+
+Lernende sollen TUI und Automation am selben Fachmodell vergleichen können:
+Objekte statt bloßer Bildschirmtexte, die Pipeline zur Weitergabe von Objekten,
+Eingabeprüfung sowie die Trennung von Oberfläche, Fachlogik und Speicherung.
+Textorientierte Hilfe und verständliche Fehler gelten auch für PowerShell;
+Vorschau und Bestätigung bei Änderungen sind spätere Vertragsfragen. CEFR B2
+und WCAG 2.2 AA soweit anwendbar bleiben die Basis. PowerShell ersetzt keine
+native TUI-/Screenreader-Prüfung.
 
 ### PL/0: bestehende Grundlage und neue Erweiterung
 
@@ -72,8 +117,8 @@ Ein späterer Einstieg mit TinyEdit ist ein Vorschlag, keine beschlossene
 Reihenfolge. Für TinyDB sind beispielsweise Suchen, Filtern und Sortieren
 mögliche Ausbauschritte, noch kein Funktionsvertrag.
 
-Offen bleiben DBF-Kompatibilität, Speicher- und Austauschformate, gemeinsame
-Bibliotheken, Frameworkwahl und konkrete Lernziele je Beruf. Gemeinsame
+Offen bleiben DBF-Kompatibilität, genaue Speicher- und Austauschformate,
+gemeinsame Bibliotheken und konkrete Lernziele je Beruf. Gemeinsame
 Bausteine sind nur eine Möglichkeit; Wiederverwendung soll nicht vor einer
 nachgewiesenen gemeinsamen Aufgabe zu zusätzlicher Komplexität führen.
 Es gibt noch keinen Zeitplan, keine Versionszusage und keine Architekturfreigabe.
@@ -87,8 +132,8 @@ Die Grenzen zwischen Anwendung, Terminal.Gui, Terminalhost und Screenreader
 müssen bei einer späteren Untersuchung getrennt betrachtet werden.
 
 Dieses Konzept behauptet weder allgemeine Barrierefreiheit noch geprüfte
-VoiceOver-/Narrator-Kompatibilität. Eine spätere Frameworkentscheidung braucht
-tatsächliche Nachweise für die betrachteten Plattformen und Hilfsmittel.
+VoiceOver-/Narrator-Kompatibilität. Die Terminal.Gui-Richtung ersetzt keine
+tatsächlichen Nachweise für die betrachteten Plattformen und Hilfsmittel.
 Die Konzeptdokumentation bleibt textorientiert und deutsch/englisch lesbar.
 WCAG 2.2 Level AA ist die Ziel- und Prüfbasis, soweit Kriterien anwendbar sind.
 Für die native TUI sind zusätzliche plattform- und screenreaderspezifische
@@ -130,6 +175,11 @@ technical terms are introduced and explained through small examples.
 This is not a complete office suite or a promise to cover a particular exam
 or curriculum. The repository name remains unchanged.
 
+The shared TUI foundation is Terminal.Gui, as used by TinyCalc. This direction
+defines neither a permanent package version nor a new shared UI library. The
+family stays limited to three independent programs; PowerShell adds access
+to domain logic, but is not a fourth app.
+
 ### Program cores
 
 - **TinyCalc:** tables, formulas and calculations; the existing program is the
@@ -139,9 +189,46 @@ or curriculum. The repository name remains unchanged.
   form the core. Format-specific support remains to be defined. A small TinyPl0
   IDE is a possible later extension: compilation, execution, stepping and clear
   diagnostics, without aiming for a full professional development environment.
-- **TinyDB:** classic dBASE-style interaction with tables and forms for
-  individual records, as a small card-file manager. This interaction idea
-  does not promise DBF compatibility or a dBASE programming language.
+- **TinyDB:** dBASE-style data storage and editing with exactly one table per
+  file, including field definitions and records. A table view and record form
+  define the interaction direction. Multi-table management and relationships
+  are not part of the introduction. DBF compatibility or a dBASE programming
+  language are not promised.
+
+### TinyDB storage and learning extensions
+
+A documented, human-readable storage format is the desired direction. JSON is
+the preferred proposal, not an agreed format decision. One file could hold
+field definitions and records together and be inspected with TinyEdit; a
+concrete file contract remains open. CSV import/export and a comparison with
+binary storage or DBF remain possible later learning extensions, not additional
+required storage backends. The comparison could explain headers, field
+descriptions, character encoding and record lengths. dBASE-style interaction
+does not depend on DBF.
+
+### PowerShell as an automation and learning access path
+
+Cmdlets should operate on the same domain models without the TUI: create,
+read, edit and save TinyCalc sheets and TinyDB tables or records, and trigger
+TinyCalc calculations. TinyPl0 compilation and bounded VM execution are also
+part of the concept direction. Command names, parameters and module packaging
+remain for later specifications. This adds no package dependency or implementation.
+
+Providers should offer navigable access to cells and records. A provider
+exposes data through PowerShell paths; a cmdlet performs a named task. Paths,
+supported write operations and when data is saved remain open. A PL/0 provider,
+for example for symbols or instructions, is only a loose research option.
+
+No TinyEdit cmdlets are defined merely for completeness. Format-specific
+validation or conversion are at most later additions; existing PowerShell file
+commands are a possible starting point.
+
+Trainees should compare TUI and automation using the same domain model:
+objects rather than screen text, the pipeline for passing objects, input
+validation, and separation of interface, domain logic and storage. Text-oriented
+help and clear errors also apply to PowerShell; previews and confirmation for
+changes are later contract questions. CEFR B2 and WCAG 2.2 AA wherever applicable
+remain the baseline. PowerShell does not replace native TUI/screenreader checks.
 
 ### PL/0: existing foundation and new extension
 
@@ -175,8 +262,8 @@ and specific teaching units remain open.
 Starting later with TinyEdit is a proposal, not an agreed sequence. Searching,
 filtering and sorting in TinyDB are possible extensions, not a function contract.
 
-DBF compatibility, storage and exchange formats, shared libraries, framework
-choice and specific learning objectives for each profession remain open.
+DBF compatibility, exact storage and exchange formats, shared libraries and
+specific learning objectives for each profession remain open.
 Shared components are only an option; reuse should not add complexity before
 a real shared task has been demonstrated. There is no schedule, version
 commitment or architecture approval yet.
@@ -189,8 +276,8 @@ but does not prove clear focus or button announcements. A later investigation
 needs to distinguish the application, Terminal.Gui, terminal host and screenreader.
 
 This concept claims neither general accessibility nor tested VoiceOver/Narrator
-compatibility. A later framework decision needs actual evidence for the
-platforms and assistive tools under consideration. The concept documentation
+compatibility. The Terminal.Gui direction does not replace actual evidence for
+the platforms and assistive tools under consideration. The concept documentation
 remains text-oriented and readable in German and English.
 WCAG 2.2 Level AA is the target and review baseline wherever criteria apply.
 The native TUI needs additional platform- and screenreader-specific evidence;
