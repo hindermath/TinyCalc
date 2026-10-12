@@ -832,6 +832,12 @@ English: The native follow-up correction also adds 37 net platform-evidence docu
 
 | 2026-10-11 | Serienreview zur Lieferung vorbereiten / Prepare Series review delivery | Branch `codex/intake-series-review-closeout`; sichtbare Liefersitzung am 11.10.2026 Europe/Berlin, keine Arbeitszeitmessung. `0` Produktions-/Testcodezeilen; zusätzlich zur vorherigen Review-Zählung `63` PR-Dokumentationszeilen und Profil-2-Refresh `+10/-10`, vor diesem Ledger-Selbstnachweis. Arbeitspakete: genehmigte enge Git-Lieferung, PR-Text, exakte Staging-Pfad-/Indexbindung und Secret-Scan; keine Intakes, Pakete, Versionen oder ausführbaren Validatoren geändert. Saubere Profil-2-Vorschau/Write/Check jeweils Exit 0: Quelle `0973c600c7e7`, 264407 getrackte Textzeilen/94 aktive Tage, ASCII-Trends synchron; keine selbstreferenzielle Neurenderschleife. Referenzen 80/125 Zeilen/Arbeitstag und 7.8 Stunden/Tag bleiben Modelle, keine neue Speedup-Messung. Finale Head-CI, tatsächlicher Merge und Fast-Forward-Sync werden separat am Provider nachgewiesen, nicht vorweg als bestanden behauptet. / Prepare the authorised maintenance delivery with bounded scope, staged candidate proof, secret checks and reproducible statistics. Preserve review-time history and distinguish pending provider delivery gates from actual local passes; start no feature. |
 
+| 2026-10-12 | Unverbindliches Grundkonzept TinyCalc/TinyEdit/TinyDB / Non-normative family concept | Branch `codex/tiny-tools-family-concept`; sichtbares Arbeitsfenster 11.–12.10.2026 Europe/Berlin mit Unterbrechungen, keine Arbeitszeitmessung. Produktionscode `0`, Testcode `0`; vor diesem Ledger-Eintrag `+316/-0` Dokumentations-/JSON-Zeilen in Konzept, PR-Text und Documentation Impact. Arbeitspakete: Produktidee mit Thorsten als Verantwortlichem, getrennte Programme im bestehenden Repository, offene DBF-/Format-/Frameworkentscheidungen, Diskussions-Issue #108 und Leserpfad zum A11Y-Issue #107. Intake-/Serien-/Review-Alignment in beiden Shells bestanden, 13 Ziele/4 Roots/9 Kanten unverändert; DocFX 2.81.0 ohne Konfigurationsänderung und Produktbuild erfolgreich, 84 bestehende Linkwarnungen außerhalb der neuen Seiten. Snapshot/axe für vier repräsentative Seiten: null Verstöße, zwei unvollständige Regelbewertungen ausdrücklich keine Pass-Nachweise; lynx-Textprüfung erfolgreich. Quellencommit vor sauberer Statistik-Vorschau/Render in separatem Checkout desselben Commits; generierter Block separat committen, Check-only und Homogenität danach erneut prüfen. `sheet.mcalc.json` ignoriert. Referenzen 80/125 Zeilen/Arbeitstag ergeben für 316 Zeilen modellhaft 3.95/2.53 Tage, 30.81/19.72 Stunden bei 7.8 h/Tag und 0.184/0.118 Monate bei 21.5 Tagen/Monat; kein gemessener Speedup dieser Sitzung. Keine Änderung der Lastenheft-Abarbeitung, keine Produktimplementierung. / Record the bilingual non-normative idea, discussion and bounded documentation checks; preserve the delivery sequence, distinguish incomplete accessibility rules from passes, and refresh generated statistics at a clean source boundary. Reference effort is a model, not measured time. |
+
+| 2026-10-12 | TinyEdit-Formate und PL/0-Lernpfad / TinyEdit formats and PL/0 learning path | Branch `codex/tiny-tools-family-concept`, sichtbare Erweiterungssitzung am 12.10.2026 Europe/Berlin, aktive Arbeitszeit nicht gemessen. Produktionscode `0`, Testcode `0`; vor diesem Ledger-Eintrag `+112/-13 = +99` Dokumentations-/JSON-Zeilen. TinyEdit um Markdown/JSON/YAML/INI/PL/0 und optionale kleine IDE ergänzt; verbindlich geplante TinyCalc-Integration und bereits gelieferte TinyPl0-NuGet-Komponenten von offener TinyCalc-Umsetzung und neuer TinyEdit-Konzeptrichtung getrennt. Zielgruppe ab erstem Lehrjahr, CEFR B2, WCAG 2.2 AA soweit anwendbar und kleine didaktische Beispiele; Issue #108 synchron fortgeschrieben. Dokumentations-, HTML-/A11Y-, Intake-/Serien-, Secret- und Staging-Prüfungen für diese Erweiterung erneut ausführen, Ergebnisse am neuen PR-Head dokumentieren. Profil-2-Vorschau/Render am sauberen Quellencommit in separatem Checkout; generierter Block separat committen und Check-only ausführen. Referenzen 80/125 Zeilen/Arbeitstag ergeben für 99 Nettozeilen modellhaft 1.24/0.79 Tage, 9.65/6.18 Stunden bei 7.8 h/Tag und 0.058/0.037 Monate bei 21.5 Tagen/Monat; kein gemessener Speedup. Commit/Push genehmigt, PR #109 bleibt bis erneuter Freigabe offen; kein Merge. Lastenhefte, Serie, Produkt, Pakete und `sheet.mcalc.json` unverändert. / Record the expanded non-normative idea and precise existing PL/0 foundation, repeat bounded documentation checks and refresh statistics at a clean boundary. Reference effort is a model; commit and push only, no merge or product work. |
+
+| 2026-10-12 | TinyDB, Terminal.Gui und PowerShell-Konzept / TinyDB, Terminal.Gui and PowerShell concept | Branch `codex/tiny-tools-family-concept`; sichtbare Abschlussergänzung am 12.10.2026 Europe/Berlin, keine Arbeitszeitmessung. Produktionscode `0`, Testcode `0`; vor Ledgerpflege `+124/-17 = +107` Dokumentations-/JSON-Zeilen. TinyDB: genau eine Tabelle pro Datei, menschenlesbare Speicherrichtung mit JSON als Vorschlag und CSV/Binär/DBF als optionale Vertiefung; Terminal.Gui als gemeinsame UI-Richtung, keine Versionsbindung; PowerShell-Cmdlets/Provider als Zugang zu denselben Fachmodellen, PL/0-Provider nur lose Forschungsoption. Drei Apps, keine vierte Anwendung, keine künstlichen TinyEdit-Cmdlets oder neuen Funktionsbereiche. Konzept, Issue #108, PR-Text und Documentation Impact synchronisieren; Dokumentations-/HTML-/A11Y-/Intake-/Serien-/Secret-/Staging-Prüfungen erneut ausführen und tatsächliche Ergebnisse im PR dokumentieren. Statistik-Vorschau/Render am sauberen Quellencommit, generierten Block separat committen, Check-only/Homogenität erneut prüfen. Referenzen 80/125 Zeilen/Arbeitstag ergeben für 107 Nettozeilen modellhaft 1.34/0.86 Tage, 10.43/6.68 Stunden bei 7.8 h/Tag und 0.062/0.040 Monate bei 21.5 Tagen/Monat; kein gemessener Speedup. Nur Commit/Push; PR #109 bleibt offen. Lastenheft-Abarbeitung, Produkt, APIs, Pakete und `sheet.mcalc.json` unverändert. / Record bounded non-normative concept completion, distinguish proposals from decisions, repeat checks and refresh statistics at a clean source boundary. Model effort is not measured time; no implementation or merge. |
+
 ## Gesamtstatistik / Overall Statistics
 
 Deutsch: Feature 006 ist in PR #104 vollständig implementiert, menschlich
@@ -872,25 +878,25 @@ Profil 2 verwendet Git-getrackte Textdateien und sichtbare Git-Aktivitaet. Die W
 
 | Kennzahl / Metric | Wert / Value |
 |---|---:|
-| Textbasis / Text base | 264407 lines |
-| Textdateien / Text files | 1595 |
-| Beobachtbarer Zeitraum / Observable period | 2025-10-19..2026-10-11 |
-| Aktivtage / Active days | 94 |
-| Relevante Commits / Relevant commits | 292 |
-| Zeilen je Aktivtag / Lines per active day | 2812.8 |
+| Textbasis / Text base | 264929 lines |
+| Textdateien / Text files | 1598 |
+| Beobachtbarer Zeitraum / Observable period | 2025-10-19..2026-10-12 |
+| Aktivtage / Active days | 95 |
+| Relevante Commits / Relevant commits | 295 |
+| Zeilen je Aktivtag / Lines per active day | 2788.7 |
 | Peak-Tag im Fenster / Peak day in window | 2026-10-10 / 35855 |
 | Peak-Woche im Fenster / Peak week in window | 2026-10-04 / 49053 |
 | Laengste Serie / Longest streak | 8 days |
-| Speedup vs. 80 lines/day | 35.2x |
-| Speedup vs. 125 lines/day | 22.5x |
-| Methodik / Methodology | v2; source `0973c600c7e7` |
+| Speedup vs. 80 lines/day | 34.9x |
+| Speedup vs. 125 lines/day | 22.3x |
+| Methodik / Methodology | v2; source `2e7869139db4` |
 
 ### Artefaktmix / Artifact Mix
 
 ```text
 Produktiv / Production          [#...................]   1.2% | 3118
 Tests                           [#...................]   5.5% | 14503
-Dokumentation / Documentation   [###############.....]  73.0% | 193101
+Dokumentation / Documentation   [###############.....]  73.1% | 193623
 Skripte / Scripts               [##..................]  11.2% | 29626
 Konfiguration / Configuration   [##..................]   7.9% | 20966
 Daten und Medien / Data and media [....................]   0.0% | 0
@@ -917,7 +923,7 @@ Sa/Sa  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 4 0 0 4 0 0 0 2 0 0 0
 ```text
 Wochen / Weeks 27..52 | 2026-04-19..2026-10-17
 So/Su  0 0 0 0 0 0 1 0 4 0 0 0 1 4 4 1 4 4 0 4 4 4 4 0 4 4
-Mo/Mo  4 0 4 0 0 0 0 0 0 0 3 1 4 4 0 0 0 2 0 0 0 0 0 3 3 -
+Mo/Mo  4 0 4 0 0 0 0 0 0 0 3 1 4 4 0 0 0 2 0 0 0 0 0 3 3 3
 Di/Tu  0 0 3 0 0 3 0 0 0 0 2 0 3 4 4 0 0 0 0 4 3 4 0 0 4 -
 Mi/We  3 0 2 0 0 0 2 0 4 0 2 0 0 2 4 0 0 0 0 0 0 0 0 0 3 -
 Do/Th  0 4 0 0 0 1 0 4 1 0 0 0 1 4 0 0 4 0 0 3 0 0 0 0 3 -
@@ -1026,8 +1032,8 @@ Die festen Slots halten den Phasenvergleich auch bei fehlenden oder spaeter erga
 
 ```text
 Scale: 0..50x
-80 lines/day       [##############......] 35.2x
-125 lines/day      [#########...........] 22.5x
+80 lines/day       [##############......] 34.9x
+125 lines/day      [#########...........] 22.3x
 ```
 
 Die Faktoren vergleichen sichtbare Lieferdichte mit den dokumentierten manuellen Referenzen. Sie messen keine Arbeitszeit.
@@ -1040,7 +1046,7 @@ Die Faktoren vergleichen sichtbare Lieferdichte mit den dokumentierten manuellen
 Scale: 0..5000 lines/day
 Experienced manual [#...................] 80
 Thorsten solo      [#...................] 125
-Visible repository [###########.........] 2812.8
+Visible repository [###########.........] 2788.7
 ```
 
 Die gemeinsame Skala vergleicht Referenzen und sichtbare Lieferdichte. Sie schreibt die Git-Aktivitaet keiner Person oder KI pauschal zu.
@@ -1049,9 +1055,9 @@ Die gemeinsame Skala vergleicht Referenzen und sichtbare Lieferdichte. Sie schre
 
 ### Textalternative / Text Alternative
 
-DE: Das Fenster beginnt am 2025-10-19 und endet am 2026-10-11. Es enthaelt 94 aktive und 264 inaktive vergangene Tage. Peak-Tag: 2026-10-10 / 35855. Peak-Woche: 2026-10-04 / 49053. Laengste Serie: 8 Tage (2026-07-19..2026-07-26).
+DE: Das Fenster beginnt am 2025-10-19 und endet am 2026-10-12. Es enthaelt 95 aktive und 264 inaktive vergangene Tage. Peak-Tag: 2026-10-10 / 35855. Peak-Woche: 2026-10-04 / 49053. Laengste Serie: 8 Tage (2026-07-19..2026-07-26).
 
-*EN: The window starts on 2025-10-19 and ends on 2026-10-11. It contains 94 active and 264 inactive elapsed days. Peak day: 2026-10-10 / 35855. Peak week: 2026-10-04 / 49053. Longest streak: 8 days (2026-07-19..2026-07-26).*
+*EN: The window starts on 2025-10-19 and ends on 2026-10-12. It contains 95 active and 264 inactive elapsed days. Peak day: 2026-10-10 / 35855. Peak week: 2026-10-04 / 49053. Longest streak: 8 days (2026-07-19..2026-07-26).*
 
 | Monat / Month | Geaenderte Textzeilen / Changed text lines |
 |---|---:|
@@ -1066,6 +1072,6 @@ DE: Das Fenster beginnt am 2025-10-19 und endet am 2026-10-11. Es enthaelt 94 ak
 | 2026-07 | 74031 |
 | 2026-08 | 26210 |
 | 2026-09 | 70997 |
-| 2026-10 | 59325 |
+| 2026-10 | 59907 |
 
 <!-- project-statistics-v2:end -->
