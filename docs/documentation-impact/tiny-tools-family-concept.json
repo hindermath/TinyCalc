@@ -6,7 +6,7 @@
       "changeId": "CHG001",
       "scope": "docs/concepts/tiny-tools-family.md",
       "decision": "UpdateRequired",
-      "rationale": "Produktidee ohne Ausführungsfreigabe dokumentieren. / Record a product idea without execution approval.",
+      "rationale": "Produktidee um TinyEdit-Formate, optionale IDE, vorhandene PL/0-Paketgrundlage und Lernpfad ab erstem Lehrjahr erweitern; keine Ausführungsfreigabe. / Extend the idea with TinyEdit formats, optional IDE, existing PL/0 package foundation and first-year learning paths; no execution approval.",
       "documents": ["docs/concepts/tiny-tools-family.md", "docs/PR_TEXT_TINY_TOOLS_FAMILY_CONCEPT.md", "docs/project-statistics.md"],
       "owner": "Thorsten",
       "audiences": ["Lernende / Trainees", "Maintainer", "Reviewer"],

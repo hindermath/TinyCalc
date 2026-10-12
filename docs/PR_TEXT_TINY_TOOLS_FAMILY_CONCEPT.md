@@ -18,7 +18,8 @@ Die Dokumentationsauswirkung ist `UpdateRequired`, nachgewiesen in
 
 - Gemeinsam: bestehendes Repository, drei separat startbare Programme,
   verwandte Bedienung, kleine Abläufe für Lernende der vier IHK-IT-Berufe.
-- TinyEdit: Klartext; TinyDB: klassische dBASE-artige Tabellen und Masken.
+- TinyEdit: Markdown, JSON, YAML, INI und PL/0; kleine IDE als mögliche
+  Ausbaustufe. TinyDB: klassische dBASE-artige Tabellen und Masken.
   DBF-Kompatibilität, Formate, Bibliotheken, Framework und Lernziele bleiben offen.
 - TinyEdit zuerst ist nur ein Vorschlag. Kein Intake, Feature, Projekt,
   Implementierungsauftrag, Repository-Rename oder neuer Serienblocker.
@@ -63,7 +64,21 @@ Finale technische
 Provider-Gates und Review-Hinweise werden erst am endgültigen Head geprüft.
 Claude-Review ist vom Eigentümer ausgenommen, nicht als bestanden zu werten.
 MergeAndSync nutzt Admin-Bypass nur nach erfolgreichen technischen Gates und
-bindet den Merge an den geprüften Head. Kein Folgefeature wird gestartet.
+bindet einen später genehmigten Merge an den geprüften Head. Der aktuelle
+Auftrag erlaubt nur Commit/Push: PR #109 bleibt bis zu einer erneuten
+Freigabe offen. Kein Folgefeature wird gestartet.
+
+### Erweiterung vom 12.10.2026
+
+Zielgruppe ab dem ersten Ausbildungsjahr, CEFR B2 und WCAG 2.2 AA soweit
+anwendbar ergänzt. Kleine Apps erklären Prinzipien größerer Anwendungen;
+konkrete Unterrichtseinheiten und IDE-Funktionen bleiben auszugestalten.
+TinyCalcs PL/0-Integration ist bereits verbindlich geplant, die NuGet-Pakete
+`TinyPl0.Core`/`TinyPl0.Vm` sind geliefert. TinyCalc-Preflight/Implementierung
+bleiben offen; TinyEdits Nutzung ist eine neue, noch nicht implementierte
+Konzeptrichtung. Lastenhefte und deren Gates bleiben unverändert.
+Die oben dokumentierten lokalen Prüfungen werden für diese Erweiterung
+wiederholt; abschließende Ergebnisse werden zusätzlich im PR festgehalten.
 
 NIST SSDF und CWE Top 25 gelten für diese sichere Dokumentationslieferung;
 WCAG 2.2 AA ist die anwendbare HTML-Prüfbasis. Neue Produkt-SBOM, VEX,
@@ -93,7 +108,8 @@ Documentation impact is `UpdateRequired`, recorded in
 
 - Shared repository, three independently startable programs, related controls
   and small workflows for trainees in the four IHK IT professions.
-- TinyEdit: plain text. TinyDB: classic dBASE-style tables and record forms.
+- TinyEdit: Markdown, JSON, YAML, INI and PL/0; a small IDE as a possible
+  extension. TinyDB: classic dBASE-style tables and record forms.
   DBF compatibility, formats, libraries, framework and learning objectives stay open.
 - Starting with TinyEdit is only a proposal. No new intake, feature, project,
   assignment, repository rename or blocking series dependency is created.
@@ -136,7 +152,20 @@ Local results on 12 October 2026:
 Final provider gates and
 review findings are checked at the final head. The owner waived Claude review;
 it is not a pass. MergeAndSync uses admin bypass only after successful technical
-gates and binds the merge to the checked head. Start no follow-up feature.
+gates and binds a later authorised merge to the checked head. The current
+request permits commit/push only: PR #109 stays open until renewed approval.
+Start no follow-up feature.
+
+### Extension on 12 October 2026
+
+Added trainees from their first training year, CEFR B2 and WCAG 2.2 AA wherever
+applicable. Small apps explain principles of larger applications; specific
+teaching units and IDE functions remain to be defined. TinyCalc's PL/0
+integration is already binding planned scope, and the `TinyPl0.Core`/`TinyPl0.Vm`
+NuGet packages are delivered. TinyCalc preflight/implementation remain open;
+TinyEdit reuse is a new concept direction, not an implemented integration.
+Requirements and their gates remain unchanged. Repeat the local checks above
+for this extension and record final results additionally in the PR.
 
 NIST SSDF/CWE Top 25 apply to this documentation delivery; WCAG 2.2 AA is the
 applicable HTML baseline. New product SBOM, VEX, SLSA provenance, ASVS, Zero
