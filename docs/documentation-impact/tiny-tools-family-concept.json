@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "1.1",
+  "feature": "tiny-tools-family-concept",
+  "entries": [
+    {
+      "changeId": "CHG001",
+      "scope": "docs/concepts/tiny-tools-family.md",
+      "decision": "UpdateRequired",
+      "rationale": "Produktidee ohne Ausführungsfreigabe dokumentieren. / Record a product idea without execution approval.",
+      "documents": ["docs/concepts/tiny-tools-family.md", "docs/PR_TEXT_TINY_TOOLS_FAMILY_CONCEPT.md", "docs/project-statistics.md"],
+      "owner": "Thorsten",
+      "audiences": ["Lernende / Trainees", "Maintainer", "Reviewer"],
+      "readerPaths": ["Issue #108 -> Konzept / concept -> A11Y-Befunde / findings in issue #107"],
+      "canonicalSource": "docs/concepts/tiny-tools-family.md",
+      "navigationImpact": "Direkte gegenseitige Issue-/Konzeptlinks; README und Navigation unverändert. / Direct reciprocal issue/concept links; README and navigation unchanged.",
+      "documentClass": "NonNormativeConcept",
+      "languageStrategy": "Deutsch zuerst, Englisch danach, CEFR B2. / German first, English second, CEFR B2.",
+      "languagePartners": [],
+      "platformAndExampleProof": "Textorientierte Konzeptseite und repräsentative HTML-Navigation mit Snapshot, axe und lynx prüfen; keine Produkt-A11Y-Abnahme. / Check the text-oriented concept and representative HTML navigation with snapshot, axe and lynx; no product accessibility acceptance.",
+      "distributionClass": "sourceOnly",
+      "homeSyncRequired": false,
+      "evidence": "docs/PR_TEXT_TINY_TOOLS_FAMILY_CONCEPT.md",
+      "risk": "Produktidee könnte als Auftrag missverstanden werden; Status und Grenzen ausdrücklich genannt. / The idea could be mistaken for an assignment; status and boundaries are explicit.",
+      "criticality": "Normal",
+      "reevaluationTrigger": "Entscheidung zu Umfang, Priorität, Architektur oder Intake. / A decision on scope, priority, architecture or an intake."
+    }
+  ]
+}
