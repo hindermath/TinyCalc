@@ -838,6 +838,34 @@ English: The native follow-up correction also adds 37 net platform-evidence docu
 
 | 2026-10-12 | TinyDB, Terminal.Gui und PowerShell-Konzept / TinyDB, Terminal.Gui and PowerShell concept | Branch `codex/tiny-tools-family-concept`; sichtbare Abschlussergänzung am 12.10.2026 Europe/Berlin, keine Arbeitszeitmessung. Produktionscode `0`, Testcode `0`; vor Ledgerpflege `+124/-17 = +107` Dokumentations-/JSON-Zeilen. TinyDB: genau eine Tabelle pro Datei, menschenlesbare Speicherrichtung mit JSON als Vorschlag und CSV/Binär/DBF als optionale Vertiefung; Terminal.Gui als gemeinsame UI-Richtung, keine Versionsbindung; PowerShell-Cmdlets/Provider als Zugang zu denselben Fachmodellen, PL/0-Provider nur lose Forschungsoption. Drei Apps, keine vierte Anwendung, keine künstlichen TinyEdit-Cmdlets oder neuen Funktionsbereiche. Konzept, Issue #108, PR-Text und Documentation Impact synchronisieren; Dokumentations-/HTML-/A11Y-/Intake-/Serien-/Secret-/Staging-Prüfungen erneut ausführen und tatsächliche Ergebnisse im PR dokumentieren. Statistik-Vorschau/Render am sauberen Quellencommit, generierten Block separat committen, Check-only/Homogenität erneut prüfen. Referenzen 80/125 Zeilen/Arbeitstag ergeben für 107 Nettozeilen modellhaft 1.34/0.86 Tage, 10.43/6.68 Stunden bei 7.8 h/Tag und 0.062/0.040 Monate bei 21.5 Tagen/Monat; kein gemessener Speedup. Nur Commit/Push; PR #109 bleibt offen. Lastenheft-Abarbeitung, Produkt, APIs, Pakete und `sheet.mcalc.json` unverändert. / Record bounded non-normative concept completion, distinguish proposals from decisions, repeat checks and refresh statistics at a clean source boundary. Model effort is not measured time; no implementation or merge. |
 
+| 2026-10-12 | Feature 007 Specify: A11Y-TUI / Accessible TUI specification | Branch `007-tui-accessibility`, Basis `935fce0d6946`; sichtbare Specify-Sitzung am 12.10.2026 Europe/Berlin, aktive Arbeitszeit nicht gemessen. Produktionscode `0`, Testcode `0`; vor Ledgerpflege `+434/-1` Dokumentations-/JSON-Zeilen: Spec `368`, Qualitätscheckliste `65`, Feature-Zeiger `+1/-1`. Vollständige zehn Intake-Anforderungen, acht Abnahmen und 17 Funktionsfamilien aus Feature 006 erhalten; Issue #107 samt zwei Kommentaren read-only als berichtete Befunde eingeordnet. Zwei Clarify-Fragen zu Referenzhost und sicherer Fokus-/Aktionsvermittlung; Checkliste `18/20`, keine Produktabnahme. Authoring-/Serien-/Review-Alignment in PowerShell/Bash aktuell, 13 Ziele/4 Roots/9 bindende Kanten unverändert, Funktionsvorgänger Completed. Statistik-Vorschau `DRY_RUN`, Check-only `CURRENT`, Exit 0, Quellenrevision `2e7869139db4`, `264929` Textzeilen/95 aktive Tage: keine Aufnahme der neuen ungetrackten Spec-Dateien behauptet. Render benötigt einen später ausdrücklich genehmigten sauberen Quellencommit; kein Stash/Commit als Umgehung. UTF-8/LF, lokale Links, ID-/Checklistenzählung und Gitleaks bestanden. Lokales DocFX 2.81.0 mit unveränderter Konfiguration nur als HTML-Build im temporären Ziel; repräsentative Statistik-/Navigationsseiten per Snapshot/axe/lynx geprüft, null axe-Verstöße; `color-contrast`/`link-in-text-block` bleiben `Incomplete`, kein Voll-WCAG-/nativer Screenreader-Pass. Bestehende Linkwarnungen außerhalb der geänderten Ledgerseite nicht als behoben ausweisen. Geschützte Dateien vor Übergabe per Hash prüfen; Ergebnisse im Chat. Referenzen `80/125` Zeilen/Arbeitstag, `7.8` Stunden/Tag, `21.5` Arbeitstage/Monat bleiben Modelle, kein neuer gemessener Speedup. Keine Implementierung, Plan-/Tasks-Erstellung, Lastenheft-/Serienänderung, Commit, Push, PR oder nachfolgendes Spec-Kit-Kommando; `sheet.mcalc.json` unverändert. / Specify the complete intake and preserve the functional baseline, reported findings and two open Clarify decisions. Distinguish committed statistics from uncommitted sources. Documentation HTML smoke found no automated violations but retained incomplete assessments; it proves neither full WCAG conformance nor native screen-reader acceptance. No product implementation or delivery. |
+
+| 2026-10-12 | Feature 007 Clarify: Referenz und Fokusansage / Reference and focus announcement | Branch `007-tui-accessibility`, Basis `935fce0d6946`; sichtbare interaktive Klärungssitzung am 12.10.2026 Europe/Berlin bis 22:33, keine Arbeitszeitmessung. Produktionscode `0`, Testcode `0`; Spec nach Klärung `380` Zeilen, Qualitätscheckliste `65` Zeilen, zusammen `+12` Netto-Dokumentationszeilen gegenüber dem Specify-Stand vor diesem Ledger-Eintrag. Zwei Fragen durch Thorsten jeweils mit A beantwortet: Mac A mit Terminal.app/VoiceOver als Referenz, Versionen/Einstellungen je Lauf und historischer B01/B02-Host weiterhin unbestätigt; unmittelbare eindeutige Aktionsansage beim Fokuswechsel ohne zusätzliche Leseschritte, keine technische Lösung vorgeschrieben. Klärungsprotokoll, US-002, R-06, Plattformvertrag, CQ-001/002 und Dokumentenstatus synchron; Checkliste `20/20` für Anforderungsqualität, kein Produkt-Pass. Zehn Anforderungen, acht Abnahmen, 17 Vertragsfamilien und Serienreihenfolge unverändert. Statistik-Vorschau/Check-only am bestehenden Quellenstand; generierter Block und ASCII-Trends bleiben commitgebunden, kein Dirty-Guard-Bypass oder erfundener Quellencommit. Referenzen `80/125` Zeilen/Arbeitstag, `7.8` Stunden/Tag und `21.5` Arbeitstage/Monat bleiben Modelle, keine neue Beschleunigungsmessung. Abschließende Dokumentations-/Alignment-/Secret-Prüfungen und lokaler HTML-/A11Y-Smoke werden getrennt von nicht ausgeführten Produkt- oder Screenreader-Tests berichtet; unvollständige A11Y-Bewertungen bleiben unvollständig. Keine Lastenheft-/Serien-/Produkt-/Paketänderung, kein Commit/Push oder Folgebefehl; `sheet.mcalc.json` bleibt unberührt. / Record two accepted clarification answers and their consistent bilingual integration. Document quality is not product acceptance. Preserve the historical evidence gaps, complete baseline, committed statistics and execution limits; report actual validation separately without inventing native screen-reader proof. |
+
+| 2026-10-12 | Feature 007 Plan: A11Y-TUI / Accessible TUI technical planning | Branch `007-tui-accessibility`, Basis `935fce0d6946`; sichtbare Planungssitzung am 12.10.2026 Europe/Berlin, keine Messung aktiver Arbeitszeit. Produktionscode `0`, Testcode `0`, sechs neue Planungsartefakte mit `416` Dokumentationszeilen vor Ledgerpflege: Plan `167`, Research `57`, Datenmodell `45`, Quickstart `61`, Contracts `46`, Plancheckliste `40`. Vollständige zehn Anforderungen, acht AK und 17 Vertragsfamilien erhalten; Mac-A-/VoiceOver-Referenz und unmittelbare Aktionsansage verbindlich, frühes natives Machbarkeitsgate statt unbelegter Frameworkzusage. Read-only Code-/Issue-/Quellenprüfung identifiziert zusätzlich den festen aktiven Intake-Pfad im Funktionsvalidator nach Archivierung; test-first lifecycle-feste Auflösung für spätere autorisierte Umsetzung geplant, jetzt nicht repariert oder als bestanden ausgegeben. Verfassungsprüfung vor/nach Design, Security-/Architektur-/Plattform-/A11Y-/Dokumentationsimpact sowie erwartete Evidenzpfade explizit; 14/14 Punkte als Planabdeckung, kein Produkt-Pass. Authoring-/Serien-/Review-Alignment in PowerShell und Bash, Statistik-Vorschau/Check-only, UTF-8/LF, Links, Secrets und Diffprüfung werden am finalen Dokumentenstand kontrolliert; HTML-Smoke des Ledgers separat, unvollständige A11Y-Bewertungen bleiben unvollständig. Generierte Gesamtstatistik/ASCII-Trends bleiben am bestehenden sauberen Quellenstand, kein Dirty-Guard-Bypass. Referenzen 80/125 Zeilen pro Arbeitstag, 7.8 Stunden pro Tag und 21.5 Arbeitstage pro Monat bleiben Modelle, keine neue Beschleunigungsmessung. Keine Implementierung, Produkt-Builds/-Tests/Restore, Tasks, Governance-/Version-/Paketänderung, Commit/Push/PR oder Folgefeature; `sheet.mcalc.json` unberührt. / Record six bilingual planning artefacts and complete intake/contract preservation, native feasibility and lifecycle-aware validation work for later authorised execution. Planning coverage is not product evidence. Validate documentation separately, preserve committed statistics and incomplete accessibility results, and perform no implementation or delivery. |
+
+| 2026-10-18 | Feature 007: Quellencommit und Durchführungshinweise / Source commit and verification instructions | Branch `007-tui-accessibility`; sichtbare Sitzung am 18.10.2026 Europe/Berlin, aktive Arbeitszeit nicht gemessen. Zuerst genehmigter lokaler Commit `aa6fb52` mit elf gezielt gestagten Dateien, Versionsangleichung `1.7.1.117` ohne Buildzählererhöhung; kein Push. Exakte Staging-Liefermenge, Secret-/Whitespace- und Intake-/Serien-/Reviewprüfung bestanden, `sheet.mcalc.json` ausgeschlossen. Danach 34 bestehende Prüfhinweise konkretisiert: CHK-001–020 und PL-001–014 mit Quellen, Vorgehen und Bestehenskriterien deutsch/englisch. Produktions-/Testcode `0/0`; Checklisten-Änderung gegenüber Quellencommit vor Ledgerpflege `+39` Netto-Dokumentationszeilen. Keine neue Fachentscheidung, Umfangs-/Statusänderung, Produktprüfung oder Implementierung. NIST SSDF/CWE Top 25 und anwendbare WCAG-2.2-AA-Dokumentenregeln gelten; native Nachweise bleiben getrennt. Die neuen Hinweise und dieser Ledger bleiben uncommittet. Profil-2-Vorschau darf den neuen Quellencommit zeigen; generierter Block bleibt bis zum nächsten zulässigen sauberen Render auf seinem bisherigen Stand, keine Umgehung und kein weiterer Commit nur für Statistik. 80/125 Zeilen je Arbeitstag, 7.8 Stunden je Tag und 21.5 Arbeitstage je Monat sind Referenzmodelle, kein gemessener Speedup. / Record the explicitly authorised local source commit, then refine all 34 verification instructions without changing product scope or claiming execution. Keep subsequent documentation uncommitted, preserve clean-source statistics rules and leave the private sheet untouched. |
+
+Dokumentationsprüfung vom 18.10.2026: 34/34 Durchführungshinweise mit deutschem und englischem Block vorhanden; UTF-8/LF, Secret-Scan und `git diff --check` bestanden. DocFX-HTML-Build im eigenen temporären Ziel mit unveränderter Konfiguration abgebrochen: Exit 134, Stack Overflow in `ResolveLinkExtension.UpdateLinks`. Kein erfolgreicher HTML-/Snapshot-/axe-/lynx-Nachweis für diese Änderung; HTML-Abnahme bleibt offen. Der frühere temporäre DocFX-2.81-Werkzeugpfad und das damalige axe-Hilfspaket sind nicht mehr vorhanden. Keine Toolchainreparatur, Installation oder Konfigurationsänderung ausgeführt. Profil-2-Vorschau: Quelle `aa6fb52236a0`, 265790 Textzeilen/96 aktive Tage, `changed=true`; generierter Block bewusst nicht als aktuell bestätigt.
+
+*Documentation verification on 18 October 2026: all 34 instructions have German and English blocks; UTF-8/LF, secret scan and diff checks passed. The unchanged-config HTML build failed with exit 134 and a stack overflow in link resolution. No successful HTML or text-accessibility smoke is claimed; acceptance remains open. Previous temporary tooling is unavailable. No toolchain repair, installation or configuration change was performed. Statistics preview shows the new source revision and a changed generated block; existing generated metrics are not claimed current.*
+
+| 2026-10-18 | DocFX-Stack-Overflow beheben / Recover DocFX HTML build | Branch `007-tui-accessibility`; sichtbare Reparatur-/Prüfsitzung am 18.10.2026 Europe/Berlin, keine Messung aktiver Arbeitszeit. Zuerst genehmigter Quellencommit `44c8b68` für bestehende Hinweise/Ledger und vorgeschriebene Versionsangleichung `1.7.2.117`, kein Push. Reproduktion mit globalem DocFX 2.78.4: Exit 134, rekursive Linkauflösung; isoliertes 2.81.0 verarbeitet dieselbe Konfiguration erfolgreich, Exit 0. Dauerhafte Korrektur über `.config/dotnet-tools.json`, kein globales Update, keine Produktabhängigkeit oder Lockdatei geändert. Produktions-/Testcode `0/0`; neue Dateien sind Werkzeugmanifest, bilinguale Wiederherstellungsdokumentation und PR-Entwurf; genaue Zeilenzahlen bei Übergabe ermitteln. Leserpfad PR-Text → `docs/maintenance/docfx-stack-overflow.md` → Manifest/Prüfnachweis. HTML-Snapshot/axe/lynx wiederholen; tatsächliche Ergebnisse und offene Regeln im Nachweis, kein nativer Reader- oder Voll-WCAG-Pass. NuGet-Restore überspringt Signaturprüfung, keine verifizierte Signatur behauptet. Generierte Statistik/ASCII-Trends bleiben am bisherigen Quellenstand; kein Dirty-Guard-Bypass oder zusätzlicher Selbstreferenzcommit. Referenzen 80/125 Zeilen/Arbeitstag, 7.8 Stunden/Tag und 21.5 Arbeitstage/Monat bleiben Modelle. Reparaturänderungen uncommittet; keine Produktimplementierung, Tests, Lastenheft-/Serienänderung oder Remote-Aktion. / Preserve the authorised source commit, reproduce the old-tool failure and pin the successful local documentation tool without changing global tooling or product dependencies. Record actual HTML/text-accessibility results separately, retain incomplete/manual checks and signature limits, and leave repair changes uncommitted. |
+
+| 2026-10-18 | DocFX projektweit binden und diesen Mac global aktualisieren / Pin project tool and update this Mac globally | Branch `007-tui-accessibility`, Ausgangscommit `44c8b68`; sichtbare Sitzung am 18.10.2026 Europe/Berlin, keine Messung aktiver Arbeitszeit. Genehmigte globale Aktualisierung auf 2.81.0 und unveränderter exakter Projekt-Pin; andere Rechner benötigen erst spätere Repository-Synchronisierung und `dotnet tool restore`, kein Flotten-Rollout. Ein lokaler Quellencommit mit genau fünf Dateien vorgesehen: Manifest, Wiederherstellungsnachweis, PR-Entwurf, Ledger und vorgeschriebene Versionsangleichung `1.7.3.117`; Buildzähler unverändert. Produktions-/Testcode `0/0`; Dokumentations-/Manifestzeilen und tatsächliche Prüfergebnisse bei Übergabe aus dem Index ermitteln. HTML-Build über den lokalen Aufruf und dieselben sechs Snapshot-/axe-/lynx-Seiten erneut prüfen; offene Kontrast-/Linkbewertungen nicht als bestanden ausgeben. Intake-/Serien-/Review-Alignment sowie Manifest-/Link-/UTF-8-/LF-/Secret-/Indexprüfung bleiben Pflicht. Historische Fehler- und Prüfnachweise unverändert; generierte Statistik/ASCII-Trends verbleiben am historischen Quellenstand, keine Behauptung eines frischen Renders. Referenzen 80/125 Zeilen/Arbeitstag, 7.8 Stunden/Tag, 21.5 Tage/Monat bleiben Modelle. Keine Produkt-/API-/Lock-/Lastenheft-/Serienänderung, kein Push/PR/Merge; private Tabelle ausgeschlossen. / Record the authorised host-global update and reproducible project manifest, repeated bounded validation and one exact local source commit. Other computers need later synchronisation and restore; no automatic rollout or remote delivery. Keep historical metrics and incomplete accessibility results explicit. |
+
+| 2026-10-18 | Feature 007: Durchführungshinweise abarbeiten / Execute document-review instructions | Branch `007-tui-accessibility`, Basis `f373437`; sichtbare Dokumentennachprüfung am 18.10.2026 Europe/Berlin, aktive Arbeitszeit nicht gemessen. CHK-001–020 und PL-001–014 einzeln geprüft und in vorhandenen Checklisten mit Ergebnis/Beleg versehen; Pass betrifft Dokumentenkonsistenz, keine Produktabnahme oder unabhängige Freigabe. Produktions-/Testcode `0/0`; Änderungen ausschließlich an acht vorhandenen Feature-Dokumenten und diesem Ledger, Umfangszahlen im finalen Git-Diff. Korrekturen: Workflow-/Rechte-/Readiness-Texte, ID-/Orakelbindung vor Produktkorrekturen, Einfügen-/Überschreib-Orakel, messbare Kontrastregeln, strikte Schema-Versionierung, gemeinsamer PS-/Bash-Archivresolver-Prüfpfad und manifestgebundener DocFX-Check ohne erfundene HTML-Abdeckung nicht veröffentlichter 007-Quellen. Zehn R-IDs, acht AK, 17 Pflichtfamilien/364 Wege je OS und beide CQ-Antworten unverändert. Vier Lock-Hashes read-only mit historischem Pin abgeglichen, kein Locked Restore oder Kompatibilitäts-Pass; Issue #107 samt Kommentaren erneut gelesen. Alignment in beiden Shells, Markdown-/Link-/UTF-8-/LF-/Secret-/Diffprüfung und Ledger-HTML-Smoke am finalen Stand kontrollieren; Incomplete-Regeln bleiben offen. Historischer generierter Statistikblock unverändert, kein Dirty-Guard-Bypass; 80/125 Zeilen/Arbeitstag, 7.8 Stunden/Tag, 21.5 Tage/Monat bleiben Modelle. Keine Produktimplementierung, Builds/Tests/Restore des Produkts, Tasks, Lastenheft-/Serien-/Version-/Lockänderung, Commit/Push oder Folgefeature. / Review all 34 instructions with row-level document evidence and correct the existing specification/design artefacts directly. Preserve full scope, accepted choices, historical product evidence and generated metrics; document quality is not execution or acceptance. Run bounded document validation only and leave all changes uncommitted. |
+
+| 2026-10-18 | Feature 007: ergänzende A11Y-Qualitätscheckliste / Supplementary A11Y requirements checklist | Branch `007-tui-accessibility`, Basis `e6c4d86`; sichtbare Dokumentationssitzung am 18.10.2026 Europe/Berlin, aktive Arbeitszeit nicht gemessen. Neue `checklists/a11y.md` mit zwölf ungeprüften Anforderungsfragen und je einem deutschen/englischen Durchführungshinweis: Quelle, Vorgehen, Bestehenskriterium und Nachweisgrenze. Bestehende 34 Prüfpunkte samt Ergebnissen unverändert; Spec/Plan, zehn Anforderungen, acht Abnahmen und 17 Familien nicht geändert. Produktions-/Testzeilen `0/0`; Dokumentationsumfang: neue Checkliste plus diese Ledgerzeile, exakte Zeilenzahlen bei Übergabe. NIST SSDF/CWE Top 25 und anwendbare WCAG-2.2-AA-Dokumentenregeln gelten; ASVS/Produkt-AI-SBOM/Zero Trust N/A gemäß bestehenden lokalen Produktgrenzen, SBOM/SLSA und bedingtes VEX bleiben späteren Artefakten vorbehalten. Keine neue Produkt- oder native Evidenz. Kein HTML regeneriert, keine frische HTML-A11Y-Abnahme behauptet. Historische generierte Statistik und ASCII-Trends bleiben quellengebunden, kein Dirty-Guard-Bypass. Referenzen 80/125 Zeilen je Arbeitstag, 7.8 Stunden/Tag und 21.5 Tage/Monat bleiben Modelle, kein gemessener Speedup. Keine Implementierung, Builds/Tests/Restore, Versions-/Intake-/Serienänderung oder Git-Lieferung; private Tabelle unberührt. / Add twelve unassessed requirements-quality questions with bilingual source, method and pass guidance. Preserve existing reviews and full feature scope. Record documentation-only work without claiming product, native or fresh HTML evidence; retain historical generated metrics and manual reference models. No implementation or Git delivery. |
+
+| 2026-10-18 | Feature 007: zwölf A11Y-Durchführungshinweise abarbeiten / Review twelve A11Y instructions | Branch `007-tui-accessibility`, Basis `e6c4d86`; sichtbare Dokumentennachprüfung am 18.10.2026 Europe/Berlin, aktive Arbeitszeit nicht gemessen. Alle zwölf Hinweise mit Fundstelle und Dokumentenergebnis in `checklists/a11y.md` bewertet. Korrekturen in Spec, Plan, Data Model, Contracts und Quickstart: zehn individuelle R-/US-/AK-/Nachweiszuordnungen; Erwartung vor nativer Sitzung; fehlende Sitzung Open, begonnene unvollständige Dokumentation Incomplete, beobachteter Fail trotz weiterer Lücken sichtbar. Keine neue Fachentscheidung, zehn Anforderungen/acht Abnahmen/17 Familien und 364 Wege je OS erhalten. Issue #107 samt zwei Kommentaren live gelesen; Berichte bleiben nicht reproduziert. Produktions-/Testzeilen `0/0`; fünf vorhandene Featuredateien, neue Checkliste und Ledger betroffen, genaue Dokumentationszeilen im finalen Diff. Alignment in PowerShell und Bash aktuell; weitere Prüfpfade: Markdown/Links/UTF-8/LF, Secret-Scan und Diff sowie begrenzter DocFX-HTML-/Snapshot-/axe-/lynx-Smoke für tatsächlich erzeugte Seiten, keine HTML-Abdeckung der 007-Quellen. Keine native Sitzung, Kontrastmessung oder Voll-WCAG-Abnahme. SSDF/CWE und bestehende Security-/N/A-/Supply-Chain-Grenzen erhalten. Statistik nur Vorschau am Quellencommit, historische generierte Kennzahlen/ASCII-Trends unverändert, kein Dirty-Guard-Bypass. Referenzen 80/125 Zeilen/Arbeitstag, 7.8 Stunden/Tag, 21.5 Tage/Monat bleiben Modelle. Keine Produktimplementierung, Produkt-Builds/-Tests/-Restores, Versions-/Intake-/Serienänderung, Commit/Push oder Folgephase; private Tabelle unberührt. / Complete all twelve document reviews and correct individual traceability, prior expectations and evidence-state consistency without reducing scope or claiming native/product acceptance. Keep actual reports distinct from proof, preserve historical statistics and record bounded documentation checks separately from execution gates. No implementation or Git delivery. |
+
+| 2026-10-18 | Feature 007: Aufgabenliste / Accessibility task list | Branch `007-tui-accessibility`, Basis `9682077`; sichtbare Aufgabenplanung am 18.10.2026 Europe/Berlin, aktive Arbeitszeit nicht gemessen. `speckit-tasks` angewandt: 60 ungeprüfte Aufgaben in sieben Phasen, nach vier Nutzerabläufen gegliedert, mit frühem nativen Machbarkeitsgate, ID-/Orakelbindung vor Produktkorrekturen, Rot–Grün–Refactor, lifecycle-festem Validator, Script-/bedingter Agentenparität, Security-/Architektur-/Sprach-/Dokumentationsnachweisen und Stop an LocalImplementation. Zehn Anforderungen, acht AK, 17 Familien/364 Wege je OS und CQ-001/CQ-002 erhalten. Produktions-/Testzeilen `0/0`; neue Aufgabenliste `166` Dokumentationszeilen plus zwei eingefügte Ledgerzeilen. Alignment aktuell, weitere bounded Dokumenten-/HTML-Smoke-Ergebnisse bei Übergabe; keine Tasks ausgeführt. SSDF/CWE gelten; ASVS/Produkt-AI-SBOM/Zero Trust und C3A/C5 begründet N/A gemäß bestehenden Grenzen, spätere SBOM/SLSA/bedingte VEX explizit geplant; keine neue Rechtsentscheidung. Historische generierte Kennzahlen/ASCII-Trends unverändert, Statistik höchstens Vorschau, kein Dirty-Guard-Bypass. Referenzen 80/125 Zeilen/Arbeitstag, 7.8 Stunden/Tag, 21.5 Tage/Monat sind Modelle, kein gemessener Speedup. Nur Tasks/Ledger ändern, keine Produkt-/API-/Lock-/Versions-/Intake-/Serienänderung, Produkt-Builds/-Tests/-Restores, Commits/Pushes/PRs oder Folgephase; private Tabelle unberührt. / Generate 60 future tasks preserving full scope and accepted choices, explicit security/architecture/accessibility work, test-first sequencing and separate native proof. Record documentation-only work and historical metric limits without executing implementation or delivery. |
+
+| 2026-10-18 | Feature 007: Analyseläufe und Korrekturen / Analysis runs and corrections | Branch `007-tui-accessibility`, Basis `ad88f62`; sichtbare Dokumentenarbeit am 18.10.2026 Europe/Berlin, aktive Arbeitszeit nicht gemessen. Klarstellung zum vorherigen Eintrag „Aufgabenliste“: Aufgabenliste und Ledger wurden danach auf Auftrag in `ad88f62` committet, einschließlich Versionsabgleich `1.7.5.117` → `1.7.6.117`; der vorherige Eintrag beschreibt den Stand vor diesem Commit und bleibt unverändert. `speckit-analyze` dreimal lesend ausgeführt: Lauf 1 neun Befunde (fünf MEDIUM, vier LOW), Lauf 2 sieben Befunde (ein MEDIUM, sechs LOW), Lauf 3 zwei Befunde (zwei LOW: `I1` Strukturbaum, `I2` Basis-/Nachtragskopf in `tasks.md`), jeweils null CRITICAL/HIGH, Abdeckung 10/10 Anforderungen und 8/8 AK, 60 Aufgaben. Auf ausdrücklichen Auftrag alle Befunde korrigiert: B01-Eingabe mit VoiceOver aus nur von Gate B abhängig; je neuer A11Y-ID genau ein Rot-/Nachweis-Eigentümer; Prüfung des 14er-Presetprofils; datierter Evidence-Pfad nach Verfassungskonvention; Abgrenzung „größere TUI-Änderung“; Commitbindung des frühen nativen Gates; DocFX-Mindestseitenumfang; Platzhalter-, Status-, Strukturbaum-, Kopfreferenz- und Kontrastmessweg-Klarstellungen. Umfang, zehn Anforderungen/acht AK, 17 Familien/364 Wege je OS, CQ-001/CQ-002 und Ausführungsrechte unverändert. Produktions-/Testzeilen `0/0`; Dokumentation Spec `+12/−6`, Plan `+9/−5`, Tasks `+21/−19` Zeilen plus zwei Ledgerzeilen. Keine Produktimplementierung, Builds/Tests/Restores, Intake-/Serienänderung oder Folgephase; Versionsabgleich erst beim nächsten beauftragten Commit; kein Commit/Push in diesem Arbeitsschritt; historische generierte Kennzahlen/ASCII-Trends unverändert, kein Dirty-Guard-Bypass. Referenzen 80/125 Zeilen/Arbeitstag, 7.8 Stunden/Tag, 21.5 Tage/Monat bleiben Modelle. / Clarify that the task list was later committed in ad88f62 with a version alignment, run three read-only analyses with no critical/high findings and correct every finding (including the two final LOW structure/header items I1 and I2) on explicit request without changing scope, accepted answers or execution authority. No implementation, product execution, commit or push. |
+
+| 2026-10-18 | PR #110: Profile-2-Statistikdrift beheben / Repair statistics drift | Branch `007-tui-accessibility`, Quelle `f0dc5d899850`; sichtbare Wartungssitzung am 18.10.2026 Europe/Berlin, aktive Arbeitszeit nicht gemessen. CI-Windows-Homogenität meldete `ASCII Statistics Profile 2 drift`. Vorhandenen Renderer und Konfiguration unverändert verwendet; Check-only bestätigte Drift, saubere lokale Kopie desselben vollständigen Git-Stands lieferte identische Vorschau (266303 Textzeilen, 96 aktive Tage). Darin autorisiert gerendert, ausschließlich generierten Ledger-Diff übernommen; private ungetrackte Tabelle im Original unberührt, kein Stash/Ignore-/Dirty-Guard-Bypass. ASCII-Trends mit aktualisiert, historische Einträge erhalten. Produktions-/Testzeilen `0/0`; Liefermenge Ledger plus Versionsfelder `1.7.8.117`, kein Buildzähleranstieg. SSDF/CWE und anwendbare Dokumenten-A11Y gelten, Produkt-/Supply-Chain-Nachweise mangels Produktänderung nicht erneuert. Referenzen 80/125 Zeilen/Arbeitstag, 7.8 Stunden/Tag, 21.5 Tage/Monat bleiben Modelle, kein gemessener Speedup. Check-only/Alignment/Format/Secret/HTML-A11Y und exakte Liefermenge validieren; Commit/Push ausdrücklich beauftragt, technisches CI am neuen Head nachprüfen. Claude-Review ausgenommen, nicht bestanden; kein Merge oder Produktlauf. / Refresh the existing Profile-2 block from an identical clean local Git copy without changing methodology, configuration, private data or historical ledger entries. Update generated trends and version fields only, validate the bounded documentation delivery and push under separate explicit authority. No merge or product implementation; reference scenarios remain models. |
+
 ## Gesamtstatistik / Overall Statistics
 
 Deutsch: Feature 006 ist in PR #104 vollständig implementiert, menschlich
@@ -878,27 +906,27 @@ Profil 2 verwendet Git-getrackte Textdateien und sichtbare Git-Aktivitaet. Die W
 
 | Kennzahl / Metric | Wert / Value |
 |---|---:|
-| Textbasis / Text base | 264929 lines |
-| Textdateien / Text files | 1598 |
-| Beobachtbarer Zeitraum / Observable period | 2025-10-19..2026-10-12 |
-| Aktivtage / Active days | 95 |
-| Relevante Commits / Relevant commits | 295 |
-| Zeilen je Aktivtag / Lines per active day | 2788.7 |
+| Textbasis / Text base | 266303 lines |
+| Textdateien / Text files | 1611 |
+| Beobachtbarer Zeitraum / Observable period | 2025-10-26..2026-10-18 |
+| Aktivtage / Active days | 96 |
+| Relevante Commits / Relevant commits | 302 |
+| Zeilen je Aktivtag / Lines per active day | 2774.0 |
 | Peak-Tag im Fenster / Peak day in window | 2026-10-10 / 35855 |
 | Peak-Woche im Fenster / Peak week in window | 2026-10-04 / 49053 |
 | Laengste Serie / Longest streak | 8 days |
-| Speedup vs. 80 lines/day | 34.9x |
-| Speedup vs. 125 lines/day | 22.3x |
-| Methodik / Methodology | v2; source `2e7869139db4` |
+| Speedup vs. 80 lines/day | 34.7x |
+| Speedup vs. 125 lines/day | 22.2x |
+| Methodik / Methodology | v2; source `f0dc5d899850` |
 
 ### Artefaktmix / Artifact Mix
 
 ```text
 Produktiv / Production          [#...................]   1.2% | 3118
-Tests                           [#...................]   5.5% | 14503
-Dokumentation / Documentation   [###############.....]  73.1% | 193623
-Skripte / Scripts               [##..................]  11.2% | 29626
-Konfiguration / Configuration   [##..................]   7.9% | 20966
+Tests                           [#...................]   5.6% | 14899
+Dokumentation / Documentation   [###############.....]  73.1% | 194589
+Skripte / Scripts               [##..................]  11.1% | 29626
+Konfiguration / Configuration   [##..................]   7.9% | 20978
 Daten und Medien / Data and media [....................]   0.0% | 0
 Sonstiger Text / Other text     [#...................]   1.2% | 3093
 ```
@@ -910,25 +938,25 @@ Die Balken teilen die aktuelle getrackte Textbasis in stabile Kategorien. Prozen
 ### Tagesaktivitaet / Daily Activity
 
 ```text
-Wochen / Weeks 01..26 | 2025-10-19..2026-04-18
-So/Su  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 3 0 4 0 0 2
-Mo/Mo  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 2 0 1
-Di/Tu  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3 0 0
-Mi/We  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0
+Wochen / Weeks 01..26 | 2025-10-26..2026-04-25
+So/Su  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 1 3 0 4 0 0 2 0
+Mo/Mo  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 0 0 0 2 0 1 4
+Di/Tu  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 3 0 0 0
+Mi/We  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0 0 0 3
 Do/Th  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-Fr/Fr  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 4 4 0 0 2 4 0 2
-Sa/Sa  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 4 0 0 4 0 0 0 2 0 0 0
+Fr/Fr  0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 4 4 0 0 2 4 0 2 4
+Sa/Sa  0 0 0 0 0 0 0 0 0 0 0 0 0 0 4 0 0 4 0 0 0 2 0 0 0 0
 ```
 
 ```text
-Wochen / Weeks 27..52 | 2026-04-19..2026-10-17
-So/Su  0 0 0 0 0 0 1 0 4 0 0 0 1 4 4 1 4 4 0 4 4 4 4 0 4 4
-Mo/Mo  4 0 4 0 0 0 0 0 0 0 3 1 4 4 0 0 0 2 0 0 0 0 0 3 3 3
-Di/Tu  0 0 3 0 0 3 0 0 0 0 2 0 3 4 4 0 0 0 0 4 3 4 0 0 4 -
-Mi/We  3 0 2 0 0 0 2 0 4 0 2 0 0 2 4 0 0 0 0 0 0 0 0 0 3 -
-Do/Th  0 4 0 0 0 1 0 4 1 0 0 0 1 4 0 0 4 0 0 3 0 0 0 0 3 -
-Fr/Fr  4 0 0 0 4 2 2 0 3 2 3 4 4 4 1 0 0 0 0 4 3 2 0 0 0 -
-Sa/Sa  0 0 0 0 0 0 0 0 4 0 4 4 0 4 2 0 2 0 3 4 4 0 2 4 4 -
+Wochen / Weeks 27..52 | 2026-04-26..2026-10-24
+So/Su  0 0 0 0 0 1 0 4 0 0 0 1 4 4 1 4 4 0 4 4 4 4 0 4 4 4
+Mo/Mo  0 4 0 0 0 0 0 0 0 3 1 4 4 0 0 0 2 0 0 0 0 0 3 3 3 -
+Di/Tu  0 3 0 0 3 0 0 0 0 2 0 3 4 4 0 0 0 0 4 3 4 0 0 4 0 -
+Mi/We  0 2 0 0 0 2 0 4 0 2 0 0 2 4 0 0 0 0 0 0 0 0 0 3 0 -
+Do/Th  4 0 0 0 1 0 4 1 0 0 0 1 4 0 0 4 0 0 3 0 0 0 0 3 0 -
+Fr/Fr  0 0 0 4 2 2 0 3 2 3 4 4 4 1 0 0 0 0 4 3 2 0 0 0 0 -
+Sa/Sa  0 0 0 0 0 0 0 4 0 4 4 0 4 2 0 2 0 3 4 4 0 2 4 4 0 -
 ```
 
 DE: 0 = keine Aenderung; 1 = 1..79; 2 = 80..399; 3 = 400..1599; 4 = 1600+ geaenderte Textzeilen; - = noch nicht abgelaufen.
@@ -938,24 +966,24 @@ DE: 0 = keine Aenderung; 1 = 1..79; 2 = 80..399; 3 = 400..1599; 4 = 1600+ geaend
 ### Wochenvolumen / Weekly Volume
 
 ```text
-Wochen / Weeks 01..26 | 2025-10-19..2026-04-18
+Wochen / Weeks 01..26 | 2025-10-26..2026-04-25
    cap 20000 | . . . . . . . . . . . . . . . . . . . . . . . . . .
        16667 | . . . . . . . . . . . . . . . . . . . . . . . . . .
        13333 | . . . . . . . . . . . . . . . . . . . . . . . . . .
-       10000 | . . . . . . . . . . . . . . . . . . # . . . . . . .
-        6667 | . . . . . . . . . . . . . . . . . . # . . . # . . .
-        3333 | . . . . . . . . . . . . . . . # . . # # . . # . . .
+       10000 | . . . . . . . . . . . . . . . . . # . . . . . . . #
+        6667 | . . . . . . . . . . . . . . . . . # . . . # . . . #
+        3333 | . . . . . . . . . . . . . . # . . # # . . # . . . #
            0 +-----------------------------------------------------
 ```
 
 ```text
-Wochen / Weeks 27..52 | 2026-04-19..2026-10-17
+Wochen / Weeks 27..52 | 2026-04-26..2026-10-24
    cap 50000 | . . . . . . . . . . . . . . . . . . . . . . . . . .
-       41667 | . . . . . . . . . . . . . . . . . . . . . . . . # .
-       33333 | . . . . . . . . . . . . . # . . . . . . . . . . # .
-       25000 | . . . . . . . . # . . . . # . . . . . # # . . . # .
-       16667 | . . . . . . . . # . . . . # # . . . . # # # . . # .
-        8333 | # . # . . . . . # . . # . # # . # . . # # # . . # .
+       41667 | . . . . . . . . . . . . . . . . . . . . . . . # . .
+       33333 | . . . . . . . . . . . . # . . . . . . . . . . # . .
+       25000 | . . . . . . . # . . . . # . . . . . # # . . . # . .
+       16667 | . . . . . . . # . . . . # # . . . . # # # . . # . .
+        8333 | . # . . . . . # . . # . # # . # . . # # # . . # . .
            0 +-----------------------------------------------------
 ```
 
@@ -966,24 +994,24 @@ Das Wochenvolumen zeigt Additionen plus Loeschungen. Es ist Aenderungsaktivitaet
 ### Kumulative Entwicklung / Cumulative Development
 
 ```text
-Wochen / Weeks 01..26 | 2025-10-19..2026-04-18
+Wochen / Weeks 01..26 | 2025-10-26..2026-04-25
    cap 50000 | . . . . . . . . . . . . . . . . . . . . . . . . . .
-       41667 | . . . . . . . . . . . . . . . . . . . . . . . . . .
-       33333 | . . . . . . . . . . . . . . . . . . . . . . . # # #
-       25000 | . . . . . . . . . . . . . . . . . . . . . . # # # #
-       16667 | . . . . . . . . . . . . . . . . . . # # # # # # # #
-        8333 | . . . . . . . . . . . . . . . . . . # # # # # # # #
+       41667 | . . . . . . . . . . . . . . . . . . . . . . . . . #
+       33333 | . . . . . . . . . . . . . . . . . . . . . . # # # #
+       25000 | . . . . . . . . . . . . . . . . . . . . . # # # # #
+       16667 | . . . . . . . . . . . . . . . . . # # # # # # # # #
+        8333 | . . . . . . . . . . . . . . . . . # # # # # # # # #
            0 +-----------------------------------------------------
 ```
 
 ```text
-Wochen / Weeks 27..52 | 2026-04-19..2026-10-17
+Wochen / Weeks 27..52 | 2026-04-26..2026-10-24
   cap 500000 | . . . . . . . . . . . . . . . . . . . . . . . . . .
       416667 | . . . . . . . . . . . . . . . . . . . . . . . . . .
-      333333 | . . . . . . . . . . . . . . . . . . . . . . . . . .
-      250000 | . . . . . . . . . . . . . . . . . . . . . # # # # #
-      166667 | . . . . . . . . . . . . . . # # # # # # # # # # # #
-       83333 | . . . . . . . . # # # # # # # # # # # # # # # # # #
+      333333 | . . . . . . . . . . . . . . . . . . . . . . . . . #
+      250000 | . . . . . . . . . . . . . . . . . . . . # # # # # #
+      166667 | . . . . . . . . . . . . . # # # # # # # # # # # # #
+       83333 | . . . . . . . # # # # # # # # # # # # # # # # # # #
            0 +-----------------------------------------------------
 ```
 
@@ -1032,8 +1060,8 @@ Die festen Slots halten den Phasenvergleich auch bei fehlenden oder spaeter erga
 
 ```text
 Scale: 0..50x
-80 lines/day       [##############......] 34.9x
-125 lines/day      [#########...........] 22.3x
+80 lines/day       [##############......] 34.7x
+125 lines/day      [#########...........] 22.2x
 ```
 
 Die Faktoren vergleichen sichtbare Lieferdichte mit den dokumentierten manuellen Referenzen. Sie messen keine Arbeitszeit.
@@ -1046,7 +1074,7 @@ Die Faktoren vergleichen sichtbare Lieferdichte mit den dokumentierten manuellen
 Scale: 0..5000 lines/day
 Experienced manual [#...................] 80
 Thorsten solo      [#...................] 125
-Visible repository [###########.........] 2788.7
+Visible repository [###########.........] 2774.0
 ```
 
 Die gemeinsame Skala vergleicht Referenzen und sichtbare Lieferdichte. Sie schreibt die Git-Aktivitaet keiner Person oder KI pauschal zu.
@@ -1055,9 +1083,9 @@ Die gemeinsame Skala vergleicht Referenzen und sichtbare Lieferdichte. Sie schre
 
 ### Textalternative / Text Alternative
 
-DE: Das Fenster beginnt am 2025-10-19 und endet am 2026-10-12. Es enthaelt 95 aktive und 264 inaktive vergangene Tage. Peak-Tag: 2026-10-10 / 35855. Peak-Woche: 2026-10-04 / 49053. Laengste Serie: 8 Tage (2026-07-19..2026-07-26).
+DE: Das Fenster beginnt am 2025-10-26 und endet am 2026-10-18. Es enthaelt 96 aktive und 262 inaktive vergangene Tage. Peak-Tag: 2026-10-10 / 35855. Peak-Woche: 2026-10-04 / 49053. Laengste Serie: 8 Tage (2026-07-19..2026-07-26).
 
-*EN: The window starts on 2025-10-19 and ends on 2026-10-12. It contains 95 active and 264 inactive elapsed days. Peak day: 2026-10-10 / 35855. Peak week: 2026-10-04 / 49053. Longest streak: 8 days (2026-07-19..2026-07-26).*
+*EN: The window starts on 2025-10-26 and ends on 2026-10-18. It contains 96 active and 262 inactive elapsed days. Peak day: 2026-10-10 / 35855. Peak week: 2026-10-04 / 49053. Longest streak: 8 days (2026-07-19..2026-07-26).*
 
 | Monat / Month | Geaenderte Textzeilen / Changed text lines |
 |---|---:|
@@ -1072,6 +1100,6 @@ DE: Das Fenster beginnt am 2025-10-19 und endet am 2026-10-12. Es enthaelt 95 ak
 | 2026-07 | 74031 |
 | 2026-08 | 26210 |
 | 2026-09 | 70997 |
-| 2026-10 | 59907 |
+| 2026-10 | 61555 |
 
 <!-- project-statistics-v2:end -->
