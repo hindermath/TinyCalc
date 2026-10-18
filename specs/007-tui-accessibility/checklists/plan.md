@@ -4,34 +4,52 @@
 
 *Reviewed by the planning agent; not human approval or product acceptance.*
 
-- [x] PL-001 Vollständige zehn Anforderungen, acht Abnahmen und 17 Familien erhalten. Hinweis: Spec und Traceability-Zeilen im Plan gegen Intake zählen.
-  *Preserve full scope; compare specification/plan traceability with the intake.*
-- [x] PL-002 CQ-001/002 unverändert übernommen. Hinweis: Mac A/Terminal.app/VoiceOver und unmittelbare Aktion ohne Leseschritt in Plan/Contracts abgleichen.
-  *Compare both accepted decisions across plan and contracts.*
-- [x] PL-003 Reale Architekturpfade benannt. Hinweis: TuiSession, PromptText, Core-Trennung und Testadapter im Repository nachlesen.
-  *Inspect actual interaction paths and layer boundaries.*
-- [x] PL-004 Native Machbarkeit vor breiter Korrektur. Hinweis: fehlende Ansage darf weder mit Zeilenlesen noch Widget-Pass geschlossen werden.
-  *Verify early native feasibility and reject weaker substitutes.*
-- [x] PL-005 B01 ohne End-Regressionsweg geplant. Hinweis: Testhelfer nicht als Ursache behaupten, direkte Eingabe separat prüfen.
-  *Plan direct typing without assuming causality.*
-- [x] PL-006 Versionsneutraler Preflight und Versionsregeln geplant. Hinweis: genehmigter Graph/vier Locks, kein Upgrade, Buildzähler und späterer Minor 7.
-  *Check dependency neutrality and future version discipline.*
-- [x] PL-007 Quellen-/Archivpfad-Befund sichtbar. Hinweis: Lifecycle-Auflösung positiv/negativ prüfen, keine doppelte aktive Quelle erzeugen.
-  *Track the archive-path risk without weakening source integrity.*
-- [x] PL-008 Vollständige Matrix und additive IDs geplant. Hinweis: alte Einzelwege behalten, neue Anker expandieren, keine Sammel-Pass-Zeile.
-  *Retain all individual paths and expand additive IDs.*
-- [x] PL-009 TDD, Coverage und Nachweisintegrität getrennt. Hinweis: Rot/Grün, 70/80 %, vollständiger Nenner und negative Manipulationsfälle.
-  *Separate line coverage, path completeness and proof integrity.*
-- [x] PL-010 Security-/Architektur-/Regulierungsanwendbarkeit aufgezeichnet. Hinweis: jede N/A-Begründung, Open-Owner/Trigger und erwarteten Evidencepfad prüfen.
-  *Review applicability, rationale and follow-up without inventing legal approval.*
-- [x] PL-011 Skript-/Agentenparität bedingt geplant. Hinweis: nur bei tatsächlicher Betroffenheit atomar prüfen; keine unnötige Guidanceänderung.
-  *Plan parity at actual change triggers, not unnecessary governance churn.*
-- [x] PL-012 Dokumentation, Sprachen und A11Y abgegrenzt. Hinweis: B2, DE/EN, DocFX/axe/lynx und native Nachweise getrennt prüfen.
-  *Review bilingual documentation and distinct evidence types.*
-- [x] PL-013 Permission- und Seriengrenzen erhalten. Hinweis: kein Produktlauf/Tasks/Git/Provider/Intakeupdate, keine neue externe Planfreigabehürde.
-  *Retain execution boundaries and the existing approval model.*
-- [x] PL-014 Statistik ohne Dirty-Guard-Bypass geplant. Hinweis: Ledger getrennt von commitgebundenem generiertem Block, 80/125-Referenzen sind Modelle.
-  *Keep ledger updates separate from clean-source generated metrics.*
+**Durchführungshinweise präzisiert / Verification instructions refined:** 2026-10-18. Die Häkchen bewerten Dokumentenqualität, nicht die Ausführung der beschriebenen Produktprüfungen.
+
+*Checked items assess document quality, not execution of the described product verification.*
+
+- [x] PL-001 Vollständige zehn Anforderungen, acht Abnahmen und 17 Familien erhalten.
+  Durchführungshinweis: Die Plan-Traceability gegen alle zehn R-IDs, acht AK und 17 Familien der Spec prüfen. Bestanden, wenn jede Pflicht einen geplanten Prüfpfad besitzt und keine Familie, Alias- oder Grenzpflicht durch eine Auswahl ersetzt wird.
+  *Verification instructions: Compare plan traceability with all specification requirements, criteria and families; require planned verification for every obligation without narrowing paths.*
+- [x] PL-002 CQ-001/002 unverändert übernommen.
+  Durchführungshinweis: CQ-001/CQ-002 in Spec, Plan, Research, Quickstart und Contracts vergleichen. Bestanden bei identischer Referenzumgebung und unmittelbarer Aktionsansage ohne Leseschritte; technische Machbarkeit bleibt unbewiesen.
+  *Verification instructions: Compare both decisions across all design artefacts. Require identical reference and speech obligations without implying proven feasibility.*
+- [x] PL-003 Reale Architekturpfade benannt.
+  Durchführungshinweis: Benannte Klassen/Dateien im Repository öffnen und Rollen prüfen: TuiSession für produktive Interaktion, Program für Start/Smoke, Core unabhängig. Bestanden ohne erfundene APIs, zweite Test-Fachlogik oder unnötiges Zusatzprojekt.
+  *Verification instructions: Inspect named implementation files and their actual roles. Require existing interaction/lifecycle/domain separation without invented APIs, duplicate test logic or unnecessary projects.*
+- [x] PL-004 Native Machbarkeit vor breiter Korrektur.
+  Durchführungshinweis: In der Ausführungsfolge das native Machbarkeitsgate vor breiter Korrektur suchen. Bestanden, wenn Beobachtung/Erwartung und Fail/Open-Stopp bei fehlender unmittelbarer Ansage vorgesehen sind; hier keine Sitzung starten.
+  *Verification instructions: Check that native feasibility precedes broad corrections and specifies observation, expectation and failure handling. Review the plan only; do not start a reader session.*
+- [x] PL-005 B01 ohne End-Regressionsweg geplant.
+  Durchführungshinweis: UiContractActions.FinishTyping und geplanten neuen Tippweg vergleichen. Bestanden, wenn der neue Test Folgezeichen ohne End sendet, VO aus/an trennt und zuerst beobachtbar rot sein soll; keine Ursache aus dem Helfer ableiten.
+  *Verification instructions: Compare the existing helper with planned direct typing. Require no inserted End, separate reader states and observable initial failure without assuming causality.*
+- [x] PL-006 Versionsneutraler Preflight und Versionsregeln geplant.
+  Durchführungshinweis: Projektdeklarationen, vier Locks und genehmigte Pin-Entscheidung als geplante Preflight-Quellen identifizieren. Bestanden bei neutralem Vergleich, Locked Restore erst nach Auftrag, Vollgates bei Drift und korrekter Versions-/Buildzählerregel; jetzt nichts bauen oder upgraden.
+  *Verification instructions: Identify dependency approval and lock sources. Require neutral comparison, later authorised locked restore, complete drift gates and version discipline; run no build or upgrade now.*
+- [x] PL-007 Quellen-/Archivpfad-Befund sichtbar.
+  Durchführungshinweis: Den festen aktiven Intake-Pfad im Validator und die aktuelle Archivquelle read-only prüfen. Bestanden, wenn der Plan eindeutige lifecycle-feste Auflösung mit Positiv-/Negativtests vorsieht und weder den Hashschutz noch Governance durch einen Workaround umgeht.
+  *Verification instructions: Inspect the validator's active path and archived source. Require unique lifecycle-aware resolution with positive/negative tests, retaining hashes and governance.*
+- [x] PL-008 Vollständige Matrix und additive IDs geplant.
+  Durchführungshinweis: Alle bestehenden IDs und acht neuen Designanker in Contracts gegen Plan/Data Model prüfen. Bestanden bei additiver Einzelweg-/Plattformzuordnung, unabhängigem Nenner und unveränderter Impact-Matrix; Designanker sind keine ausgeführten Resultate.
+  *Verification instructions: Compare existing IDs and all eight design anchors across contracts, plan and model. Require additive individual-path mappings and unchanged impact rules without treating anchors as execution.*
+- [x] PL-009 TDD, Coverage und Nachweisintegrität getrennt.
+  Durchführungshinweis: Teststrategie auf kompilierbares Rot, minimale grüne Korrektur und Vollregression prüfen. Bestanden bei getrennter 70/80-Prozent-Changed-Code-Regel, 100-Prozent-Pflichtwegen und Negativfällen für Skip, Drift, Hashmanipulation und geschwächte Orakel.
+  *Verification instructions: Review the red/green/regression sequence, independent coverage obligations and negative proof-integrity cases. Line coverage cannot replace complete path coverage.*
+- [x] PL-010 Security-/Architektur-/Regulierungsanwendbarkeit aufgezeichnet.
+  Durchführungshinweis: Jede Gatezeile im Constitution Check auf Applicable/N/A/Open, Begründung und erwarteten Evidenzpfad prüfen. Bei offenen Punkten Owner, Folgeaktion und Wiedervorlage verlangen; regulatorische Aussagen nur aus bestehender Security-Evidenz übernehmen.
+  *Verification instructions: Inspect every constitution gate for applicability, rationale and evidence path. Require owned follow-up for gaps and preserve the existing regulatory evidence source.*
+- [x] PL-011 Skript-/Agentenparität bedingt geplant.
+  Durchführungshinweis: Für geplante Skriptänderungen Bash/PowerShell, Verb-Noun, Hilfe/Manpage und native Verifikation je Variante suchen. Guidance-/Templateparität nur bei tatsächlichem Regeltrigger verlangen; Bestanden ohne einseitige Regelpflege oder unnötige Governanceänderung.
+  *Verification instructions: Check conditional paired scripting, help and native verification. Require atomic guidance parity only when shared rules actually change.*
+- [x] PL-012 Dokumentation, Sprachen und A11Y abgegrenzt.
+  Durchführungshinweis: Documentation Impact, Leserpfad und betroffene Hilfen/Nachweise prüfen. Bestanden bei DE/EN-B2, klarer DocFX-Regeneration samt Snapshot/axe/lynx und separat protokollierten nativen Kriterien; Incomplete bleibt unvollständig.
+  *Verification instructions: Review documentation scope and reader path. Require bilingual accessible docs, matching HTML verification and separate native proof with incomplete outcomes retained.*
+- [x] PL-013 Permission- und Seriengrenzen erhalten.
+  Durchführungshinweis: Plan/Quickstart auf erlaubte jetzige Aktionen und spätere Freigaben lesen; Git-Diff auf Produkt/Intake/Serie prüfen. Bestanden, wenn Dokumentenarbeit keine Tests/Implementierung/Provideraktion startet; der vorangestellte Commit ist durch den Auftrag vom 18.10.2026 separat erlaubt.
+  *Verification instructions: Review present versus future authority and changed paths. Documentation work starts no product or provider execution; the preceding local commit has separate authority from the 18 October request.*
+- [x] PL-014 Statistik ohne Dirty-Guard-Bypass geplant.
+  Durchführungshinweis: Ledgerdatum/-reihenfolge und letzte Gesamtstatistik prüfen; Renderer-Vorschau mit gebundenem Quellencommit vergleichen. Bestanden ohne Dirty-Guard-Bypass, Selbstreferenz-Commit oder Darstellung der 80/125-Referenzen als gemessene Arbeitszeit.
+  *Verification instructions: Review ledger chronology and generated source binding. Reject dirty-guard bypass, self-reference commits or reference baselines presented as measured effort.*
 
 ## Ergebnis / Result
 
