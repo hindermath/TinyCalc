@@ -4,8 +4,15 @@ description: 'Spec-kit workflow command: speckit-tasks'
 compatibility: Requires spec-kit project structure with .specify/ directory
 metadata:
   author: github-spec-kit
-  source: architecture-governance:commands/speckit.tasks.md
+  source: security-governance:.composed/speckit.tasks.md
 ---
+
+Before continuing, apply the Security Governance preset:
+
+- convert MSL applicability and justification needs into explicit tasks
+- convert security obligations into explicit tasks
+- include evidence-production tasks under `docs/security/`
+- avoid leaving secure-development work as undocumented assumptions
 
 Before continuing, apply the Architecture Governance preset:
 
@@ -15,7 +22,92 @@ Before continuing, apply the Architecture Governance preset:
   provider-dependent deployments are in scope
 - do not leave threat-modeling or ADR work implicit
 
-{CORE_TEMPLATE}
+Before continuing, apply the iSAQB Architecture Governance preset:
+
+- convert architecture goals, quality scenarios, views, ADRs, risks, and
+  technical debt into explicit tasks
+- include concrete evidence-production tasks under `docs/architecture/`
+- add architecture-review tasks for significant structure, interface,
+  runtime, or deployment changes
+- if security-relevant architecture is affected, include the corresponding
+  secure-architecture tasks from `architecture-governance`
+
+Before continuing, apply the A11Y Governance preset:
+
+- convert accessibility expectations into explicit tasks
+- convert bilingual delivery work into explicit tasks
+- do not leave A11Y or language review implicit
+
+Before continuing, apply the Cross-Platform Governance preset:
+
+- add explicit tasks for both `*.sh` and `*.ps1` variants in the same
+  change
+- add tasks for the Unix man-page and the bilingual PowerShell help
+  block
+- add a task to expose the PowerShell variant as a Cmdlet with an
+  approved `Verb-Noun` name
+- add a parity-verification task using the script-parity checklist
+
+Before continuing, apply the Agent Parity Governance preset:
+
+- add explicit tasks to update every maintained agent surface in the
+  same change
+- add tasks to propagate shared rules into project templates and the
+  local constitution mirror
+- add a parity-verification task using the agent-parity checklist
+
+# Command Template: `/speckit.tasks`
+
+Use this command to generate an executable task list from `plan.md` and `spec.md`.
+
+## Required Actions
+
+1. Organize tasks by user story for independent delivery.
+2. Include Red-Green-Refactor test tasks before implementation tasks.
+3. Include documentation tasks:
+   - bilingual updates (German block first, then English)
+   - XML documentation completeness
+   - `docfx docfx.json` run when API/XML docs changed
+4. Include coverage and dependency tasks:
+   - coverage evidence for `>=70%` minimum and `>=80%` target tracking
+   - `dotnet list package --outdated` review and update tasks
+5. Include PR preparation task (purpose, touched projects, test evidence, config/API impact).
+
+## Validation Checklist
+
+- Every code change has corresponding tests.
+- Documentation and governance tasks are present.
+- Task ordering supports incremental, verifiable delivery.
+- Coverage and dependency currency tasks are explicitly scheduled.
+
+
+Audit-ready evidence requirement:
+
+- Ensure this tasks wrapper requires concrete Markdown evidence/checklist updates for every applicable checkpoint.
+- If a checkpoint does not apply in the current Spec-Kit run, require `N/A` with a short rationale instead of omitting it.
+- If a checkpoint is undecided, require `Open` with owner, follow-up, and re-evaluation trigger.
+
+
+Audit-ready evidence requirement:
+
+- Ensure this tasks wrapper requires concrete Markdown evidence/checklist updates for every applicable checkpoint.
+- If a checkpoint does not apply in the current Spec-Kit run, require `N/A` with a short rationale instead of omitting it.
+- If a checkpoint is undecided, require `Open` with owner, follow-up, and re-evaluation trigger.
+
+
+Audit-ready evidence requirement:
+
+- Ensure this tasks wrapper requires concrete Markdown evidence/checklist updates for every applicable checkpoint.
+- If a checkpoint does not apply in the current Spec-Kit run, require `N/A` with a short rationale instead of omitting it.
+- If a checkpoint is undecided, require `Open` with owner, follow-up, and re-evaluation trigger.
+
+
+Audit-ready evidence requirement:
+
+- Ensure this tasks wrapper requires concrete Markdown evidence/checklist updates for every applicable checkpoint.
+- If a checkpoint does not apply in the current Spec-Kit run, require `N/A` with a short rationale instead of omitting it.
+- If a checkpoint is undecided, require `Open` with owner, follow-up, and re-evaluation trigger.
+
 
 Audit-ready evidence requirement:
 
@@ -77,3 +169,35 @@ NIS2/DORA-related scope. C3A/C5 evidence does not replace regulatory evidence.
 - AI/tool usage boundary / prompt and logging safeguards:
 - Supplier dependency / tested recovery / exit / concentration risk:
 - Legal Open finding / qualified reviewer / next action / due date:
+
+
+Audit-ready evidence requirement:
+
+- Ensure this tasks wrapper requires concrete Markdown evidence/checklist updates for every applicable checkpoint.
+- If a checkpoint does not apply in the current Spec-Kit run, require `N/A` with a short rationale instead of omitting it.
+- If a checkpoint is undecided, require `Open` with owner, follow-up, and re-evaluation trigger.
+
+## Regulatorischer Evidence-Vertrag / Regulatory evidence contract
+
+DE: DS-GVO, KI-VO, CRA, NIS2 und DORA getrennt fuer Beispielprogramm,
+Entwicklungswerkzeuge und nutzende Organisation pruefen. Rechtliche Rollen,
+Land, datierte Rechtsquelle und Anwendungszeitpunkt nennen; direkte Pflichten
+von vertraglichen Kunden-/Lieferkettenanforderungen trennen. Unbekannt bleibt
+Open mit Owner, Aktion und Frist. N/A braucht Begruendung und Trigger.
+AI-SBOM: N/A entscheidet nicht ueber DS-GVO oder KI-VO. Ausbildung ist keine
+allgemeine Ausnahme. Security fuehrt die Anwendbarkeit; Architecture
+referenziert diese Entscheidung fuer Datenfluesse, Schutz und Resilienz.
+Technische Pruefung ist keine Rechtsfreigabe. Historische Evidence erhalten.
+EN: Assess GDPR, AI Act, CRA, NIS2 and DORA separately for the sample product,
+development tooling and operating organisation. Record roles, jurisdiction,
+dated legal source and application date; separate direct and contractual
+duties. Unknown remains Open with owner, action and due date; N/A needs
+rationale and trigger. AI-SBOM: N/A does not decide GDPR/AI Act applicability.
+Education is not a blanket exemption. Security owns applicability;
+Architecture links decisions to data flows, safeguards and resilience.
+Technical validation grants no legal approval; preserve historical evidence.
+
+Use regulatory-applicability-template as the index and link
+gdpr-applicability-template, ai-act-applicability-template,
+cra-applicability-template, nis2-applicability-template and
+dora-applicability-template where relevant. An unfilled record is not evidence.

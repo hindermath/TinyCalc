@@ -1,0 +1,207 @@
+{
+  "schemaVersion": 1,
+  "contextId": "tinycalc-rl-se-self-assessment",
+  "platform": "macOS arm64",
+  "controlledSourceCommit": "d23f6a754fd8eaaa90c15980e09e5365715560f0",
+  "installationState": "Authorized working-tree candidate before delivery",
+  "python": "Python 3.14.8",
+  "commands": [
+    {
+      "command": "bash",
+      "arguments": [
+        ".specify/presets/secure-development-assurance-governance/scripts/validate-secure-development-assurance.sh",
+        "status",
+        "docs/security/secure-development/2026-09-05-tinycalc-rl-se-self-assessment"
+      ],
+      "exitCode": 0,
+      "output": "Context: docs/security/secure-development/2026-09-05-tinycalc-rl-se-self-assessment\nGate baseline: Ready\nGate delta: Ready\nGate closure: Ready\nGate image-impact: Ready\nOverall: Ready\nDecision technicalValidation: Fulfilled\nDecision pilotAuthorization: Open\nDecision projectAcceptance: Open\nDecision generalRelease: Open\nNext action: Retain all human-only decisions as Open and wait for the other project field tests plus github/spec-kit#4455 before the separate central preset decision."
+    },
+    {
+      "command": "pwsh",
+      "arguments": [
+        "-NoProfile",
+        "-File",
+        ".specify/presets/secure-development-assurance-governance/scripts/validate-secure-development-assurance.ps1",
+        "-Action",
+        "Status",
+        "-EvidenceDirectory",
+        "docs/security/secure-development/2026-09-05-tinycalc-rl-se-self-assessment"
+      ],
+      "exitCode": 0,
+      "output": "Context: docs/security/secure-development/2026-09-05-tinycalc-rl-se-self-assessment\nGate baseline: Ready\nGate delta: Ready\nGate closure: Ready\nGate image-impact: Ready\nOverall: Ready\nDecision technicalValidation: Fulfilled\nDecision pilotAuthorization: Open\nDecision projectAcceptance: Open\nDecision generalRelease: Open\nNext action: Retain all human-only decisions as Open and wait for the other project field tests plus github/spec-kit#4455 before the separate central preset decision."
+    },
+    {
+      "command": "bash",
+      "arguments": [
+        ".specify/presets/secure-development-assurance-governance/scripts/validate-secure-development-assurance.sh",
+        "review",
+        "baseline",
+        "tinycalc-rl-se-self-assessment",
+        "development"
+      ],
+      "exitCode": 0,
+      "output": "Reviewed: gate=baseline context=tinycalc-rl-se-self-assessment mode=development outcome=Ready"
+    },
+    {
+      "command": "pwsh",
+      "arguments": [
+        "-NoProfile",
+        "-File",
+        ".specify/presets/secure-development-assurance-governance/scripts/validate-secure-development-assurance.ps1",
+        "-Action",
+        "Review",
+        "-Gate",
+        "baseline",
+        "-ContextId",
+        "tinycalc-rl-se-self-assessment",
+        "-Mode",
+        "development"
+      ],
+      "exitCode": 0,
+      "output": "Reviewed: gate=baseline context=tinycalc-rl-se-self-assessment mode=development outcome=Ready"
+    },
+    {
+      "command": "bash",
+      "arguments": [
+        ".specify/presets/secure-development-assurance-governance/scripts/validate-secure-development-assurance.sh",
+        "review",
+        "delta",
+        "tinycalc-rl-se-self-assessment",
+        "development"
+      ],
+      "exitCode": 0,
+      "output": "Reviewed: gate=delta context=tinycalc-rl-se-self-assessment mode=development outcome=Ready"
+    },
+    {
+      "command": "pwsh",
+      "arguments": [
+        "-NoProfile",
+        "-File",
+        ".specify/presets/secure-development-assurance-governance/scripts/validate-secure-development-assurance.ps1",
+        "-Action",
+        "Review",
+        "-Gate",
+        "delta",
+        "-ContextId",
+        "tinycalc-rl-se-self-assessment",
+        "-Mode",
+        "development"
+      ],
+      "exitCode": 0,
+      "output": "Reviewed: gate=delta context=tinycalc-rl-se-self-assessment mode=development outcome=Ready"
+    },
+    {
+      "command": "bash",
+      "arguments": [
+        ".specify/presets/secure-development-assurance-governance/scripts/validate-secure-development-assurance.sh",
+        "review",
+        "closure",
+        "tinycalc-rl-se-self-assessment",
+        "development"
+      ],
+      "exitCode": 0,
+      "output": "Reviewed: gate=closure context=tinycalc-rl-se-self-assessment mode=development outcome=Ready"
+    },
+    {
+      "command": "pwsh",
+      "arguments": [
+        "-NoProfile",
+        "-File",
+        ".specify/presets/secure-development-assurance-governance/scripts/validate-secure-development-assurance.ps1",
+        "-Action",
+        "Review",
+        "-Gate",
+        "closure",
+        "-ContextId",
+        "tinycalc-rl-se-self-assessment",
+        "-Mode",
+        "development"
+      ],
+      "exitCode": 0,
+      "output": "Reviewed: gate=closure context=tinycalc-rl-se-self-assessment mode=development outcome=Ready"
+    },
+    {
+      "command": "bash",
+      "arguments": [
+        ".specify/presets/secure-development-assurance-governance/scripts/validate-secure-development-assurance.sh",
+        "review",
+        "image-impact",
+        "tinycalc-rl-se-self-assessment",
+        "development"
+      ],
+      "exitCode": 0,
+      "output": "Reviewed: gate=image-impact context=tinycalc-rl-se-self-assessment mode=development outcome=Ready"
+    },
+    {
+      "command": "pwsh",
+      "arguments": [
+        "-NoProfile",
+        "-File",
+        ".specify/presets/secure-development-assurance-governance/scripts/validate-secure-development-assurance.ps1",
+        "-Action",
+        "Review",
+        "-Gate",
+        "image-impact",
+        "-ContextId",
+        "tinycalc-rl-se-self-assessment",
+        "-Mode",
+        "development"
+      ],
+      "exitCode": 0,
+      "output": "Reviewed: gate=image-impact context=tinycalc-rl-se-self-assessment mode=development outcome=Ready"
+    }
+  ],
+  "before": [
+    {
+      "path": "assessment-matrix.json",
+      "sha256": "eef2b2adbb4f32b478af41caf6a90189d438c6195f606783fbaf9e873bdbd3cf"
+    },
+    {
+      "path": "baseline.json",
+      "sha256": "362617bbbe21379cc82af7e51c187f16ffdfeed06f2e48c9fcdd5486bd198d7a"
+    },
+    {
+      "path": "closure.json",
+      "sha256": "db2be35af5b02d52be2d74045862756bb149fe0dfddf7043e2f69ccca8054138"
+    },
+    {
+      "path": "deltas/rl-se-assessment.json",
+      "sha256": "90200736ae784fae69848decdb54d0e5bec63cff3167025e7466a793626ec94b"
+    },
+    {
+      "path": "evidence-matrix.md",
+      "sha256": "a6f442f4558863f6131ee043931b691746469ef75bf4b368ba1257e4447aa93d"
+    },
+    {
+      "path": "image-impact.json",
+      "sha256": "2e285061d8aa75f19376d6e08ac5d9aebde1603e085c71268fe0ba26c09ee8bd"
+    }
+  ],
+  "after": [
+    {
+      "path": "assessment-matrix.json",
+      "sha256": "eef2b2adbb4f32b478af41caf6a90189d438c6195f606783fbaf9e873bdbd3cf"
+    },
+    {
+      "path": "baseline.json",
+      "sha256": "362617bbbe21379cc82af7e51c187f16ffdfeed06f2e48c9fcdd5486bd198d7a"
+    },
+    {
+      "path": "closure.json",
+      "sha256": "db2be35af5b02d52be2d74045862756bb149fe0dfddf7043e2f69ccca8054138"
+    },
+    {
+      "path": "deltas/rl-se-assessment.json",
+      "sha256": "90200736ae784fae69848decdb54d0e5bec63cff3167025e7466a793626ec94b"
+    },
+    {
+      "path": "evidence-matrix.md",
+      "sha256": "a6f442f4558863f6131ee043931b691746469ef75bf4b368ba1257e4447aa93d"
+    },
+    {
+      "path": "image-impact.json",
+      "sha256": "2e285061d8aa75f19376d6e08ac5d9aebde1603e085c71268fe0ba26c09ee8bd"
+    }
+  ],
+  "readOnly": true
+}
