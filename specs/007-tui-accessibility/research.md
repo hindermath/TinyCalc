@@ -52,6 +52,14 @@ Der deklarierte Pin ist derzeit Terminal.Gui 2.4.17, Projekte `net10.0`; dies is
 
 ## Restpunkte und Owner / Remaining Work and Owner
 
+Nachprüfung 18.10.2026 am Basiscommit `f373437`: 17 aktive Pflichtfamilien und 364 Wege je Plattform read-only bestätigt; vier Lock-Hashes stimmen mit der historischen Pin-Entscheidung überein, kein erneuter Locked Restore oder Kompatibilitäts-Pass. `scripts/test-tinycalc-contract.sh` delegiert an die PowerShell-Engine: spätere Archivpfadkorrektur dort durchführen, beide Einstiegspfade positiv/negativ prüfen, keinen zweiten Resolver oder neues aktives Intake erzeugen. Quellenauflösung muss fehlende, doppelte oder manipulierte Quelle ablehnen; Inhaltshash und getrennte Lebenszyklusbindung erhalten. Neue Pflichtfelder strikter Schemas benötigen explizite Versions-/Kompatibilitätsprüfung statt stiller Umschreibung historischer Evidence.
+
+*Read-only recheck at f373437 confirms 17 mandatory families, 364 paths per platform and four historical lock hashes, not renewed restore/compatibility success. Bash delegates to the PowerShell engine: later fix source resolution there and verify both entrypoints without duplicate resolvers/intakes. Reject missing/duplicate/tampered sources, preserve content hashes and lifecycle binding, and explicitly version strict-schema changes rather than rewriting evidence.*
+
+Der inzwischen versionierte DocFX-Pin 2.81.0 und [Reparaturnachweis](../../docs/maintenance/docfx-stack-overflow.md) gelten für lokale HTML-Dokumentenprüfungen. Das ist kein Product-Dependency-Upgrade und kein Nachweis nativer TUI-Zugänglichkeit. Die unveränderte Konfiguration enthält keine 007-Spec-Seiten. Dokumentarische Korrekturen betreffen Gate-Reihenfolge, Einfügen-/Überschreib-Orakel, messbare Kontrastregeln, Workflowstand und Nachweis-Kompatibilität; CQ-001/CQ-002 bleiben unverändert.
+
+*Use the versioned DocFX pin and linked recovery evidence for local HTML checks, not as a product upgrade or native accessibility proof. Unchanged configuration excludes 007 sources. Correct gate ordering, mode-specific oracles, measurable contrast, workflow wording and evidence compatibility without changing either accepted clarification.*
+
 Keine unbeantwortete fachliche Entscheidung. Technische Ausführung offen: native Fokusansage, direkte Eingabe, lifecycle-fester Validator, Kontrastmessung und vollständige Plattform-/Dokumentationsmatrix. Owner Thorsten; Folgeaktion separat autorisierte Umsetzung nach Plan-/Taskprüfung; Wiedervorlage vor erster Produktänderung und finalem Kandidaten. Keine dieser offenen Ausführungen wird durch Planung als Pass geschlossen.
 
 *No unanswered product choice remains. Native speech, direct input, lifecycle-aware validation, contrast and complete platform/docs proof await authorised execution. Thorsten owns follow-up before implementation and final candidate; planning closes none of these as passes.*

@@ -4,6 +4,8 @@
 **Basis / Basis:** [geklärte Spezifikation](spec.md), CQ-001/CQ-002 jeweils Antwort A.
 **Status:** Planungsentwurf zur Owner-Prüfung; keine Umsetzung oder Lieferung freigegeben.
 
+**Dokumentennachprüfung / Document recheck:** 2026-10-18, Basis `f373437`; Korrekturen aus CHK-001–020 und PL-001–014, kein neuer Plan-/Tasks-Lauf.
+
 *Planning draft for owner review; neither implementation nor delivery is authorised.*
 
 ## Zusammenfassung / Summary
@@ -12,9 +14,9 @@ Die vorhandene TUI wird innerhalb ihrer bestehenden Session-/Core-Grenze verbess
 
 *Improve the existing TUI within its current session/Core boundary. Preserve all ten requirements, eight criteria and 17 functional families. The 364 existing obligation tuples per platform are a baseline, not a cap. Keep migration → functional acceptance → accessibility → rename. Issue #107 supplements evidence without granting additional work.*
 
-Die Umsetzung beginnt erst nach separatem Auftrag mit Quellen-/Dependency-Preflight, direkten Eingaberegressionen und einem frühen nativen VoiceOver-Machbarkeitsgate. Kleine Änderungen an Beschriftung, Fokus, Rückmeldung, Hilfe und Kontrast folgen nur bei belegtem Bedarf. Keine neue öffentliche API, native Bridge, linearer Ersatzmodus, Frameworkmigration oder Paketaktualisierung wird vorab beschlossen. Eine nicht erfüllbare Fokusansage bleibt Fail/Open und verlangt eine neue Entscheidung, keinen stillen Ersatz durch Zeilenlesen.
+Die Umsetzung beginnt erst nach separatem Auftrag mit Quellen-/Dependency-Preflight und ID-/Orakelbindung vor jeder Produktkorrektur, danach einem frühen nativen VoiceOver-Machbarkeitsgate und direkten Eingaberegressionen. Kleine Änderungen an Beschriftung, Fokus, Rückmeldung, Hilfe und Kontrast folgen nur bei belegtem Bedarf. Keine neue öffentliche API, native Bridge, linearer Ersatzmodus, Frameworkmigration oder Paketaktualisierung wird vorab beschlossen. Eine nicht erfüllbare Fokusansage bleibt Fail/Open und verlangt eine neue Entscheidung, keinen stillen Ersatz durch Zeilenlesen.
 
-*Future authorised execution starts with source/dependency preflight, direct-input regression and an early native VoiceOver feasibility gate. Make small evidence-driven changes to labels, focus, feedback, help and contrast. No public API, native bridge, replacement mode, framework migration or package upgrade is selected. An unattainable focus announcement remains Fail/Open and requires a new decision rather than substitution with line reading.*
+*Future authorised execution starts with source/dependency preflight and ID/oracle binding before any product correction, then early native feasibility and direct-input regression. Make small evidence-driven changes to labels, focus, feedback, help and contrast. No public API, native bridge, replacement mode, framework migration or package upgrade is selected. An unattainable focus announcement remains Fail/Open and requires a new decision rather than substitution with line reading.*
 
 ## Technischer Kontext / Technical Context
 
@@ -53,7 +55,7 @@ Vor Forschung und nach Design geprüft am 12.10.2026. `Erfüllt` in dieser Tabel
 | Serialisierung / Serialization | Applicable als Erhaltungspflicht: JSON-Rundreise, Fehler/Abbruch ohne Teilwirkung; kein Produktformatwechsel / preserve existing storage semantics |
 | Security | Applicable; SSDF, CWE Top 25, sichere C#-Eingaben/Dateipfade/Fehler, synthetische Daten; `docs/security/security-checklist.md`, featurebezogener Nachweis unter `docs/security/secure-development/007-tui-accessibility/` / scoped future evidence |
 | Architektur/STRIDE/CAPEC | Applicable; bestehende Eingabe-, Datei-, Terminal- und Evidenzgrenzen prüfen; `docs/security/threat-model.md`, `docs/security/arc42-security.md`. Relevante CAPEC-Muster bei konkreten Risikoflows binden, keine IDs erfinden / review existing boundaries and actual threats |
-| ADR/S-ADR | Conditional; separate native Bridge/Trust-Boundary-Änderung nicht genehmigt. Bei notwendiger materieller Entscheidung stoppen, ADR unter `docs/architecture/adr/`, S-ADR unter `docs/security/adr/` nach Freigabe / stop for significant new design |
+| ADR/S-ADR | N/A für eine neue Architekturentscheidung in dieser Dokumentennachprüfung; keine Bridge/Trust-Boundary-Änderung beschlossen. Trigger: notwendiger materieller Entwurf; dann stoppen, Owner Thorsten entscheidet über ADR unter `docs/architecture/adr/` und S-ADR unter `docs/security/adr/` / no new design now; significant later design requires a separate decision |
 | ASVS | N/A, kein Web/API/HTTP-/Auth-Dienst; Level N/A. `docs/security/asvs-verification.md`; Trigger neuer Dienst / local TUI only |
 | SBOM/SLSA | Applicable für spätere Releases/CI-Artefakte, keine Erzeugung jetzt; `docs/security/supply-chain-evidence.md`, Provenienz mindestens L1 soweit machbar, keine erreichte Stufe behauptet / later artefact evidence |
 | VEX | Open, bedingt durch bekannte relevante Schwachstelle; vor Umsetzung/Release Audit prüfen, Owner Thorsten, `docs/security/dependency-audit.md` / actual vulnerability disposition remains unassessed |
@@ -62,9 +64,9 @@ Vor Forschung und nach Design geprüft am 12.10.2026. `Erfüllt` in dieser Tabel
 | BSI C3A/C5 | N/A, keine Cloud-Auswahl oder Deploymentänderung; `docs/security/cloud-autonomy-applicability.md`, erwarteter Assurance-Pfad `docs/security/cloud-compliance-assurance.md`; Trigger Cloudintegration / no assurance claim |
 | SAMM | Applicable als vorhandener langlebiger Prozesskontext; Befunde in `docs/security/samm-assessment.md`, kein Voll-Reassessment jetzt / retain process context |
 | Cheat Sheets/Proactive Controls/Scorecard | Applicable als Entwicklungs-/OSS-Reviewreferenzen; später im Dependency-/Securityreview, kein aktueller Score behauptet / supporting references, no invented audit |
-| Datenschutz/regulatorischer Scope / Regulatory scope | Bestehende `docs/security/regulatory-applicability.md` führt DS-GVO/KI-VO/CRA/NIS2/DORA getrennt für Produkt, Tools, Organisation. Keine neue Rechtsentscheidung; unbekannt bleibt Open mit bestehendem Owner/Frist / preserve dated dispositions |
+| Datenschutz/regulatorischer Scope / Regulatory scope | Applicable als Verweis auf bestehende `docs/security/regulatory-applicability.md`: DS-GVO/KI-VO/CRA/NIS2/DORA getrennt für Produkt, Tools, Organisation. Keine neue Rechtsentscheidung; unbekannt bleibt Open mit bestehendem Owner/Frist / applicability reference only; preserve dated dispositions |
 | A11Y | Applicable; gesamtes Intake, CQ-001/002, Kriterienmatrix und native Nachweise nach `contracts/README.md`; kein Voll-WCAG-Zertifikat / full intake and actual native proof |
-| Skriptparität / Script parity | Conditional bei Validator-/Launcheränderung: Bash und PowerShell, Advanced Function Verb-Noun, bilinguale Hilfe, Manpage und native manuelle Prüfung je Variante; `evidence/script-parity.md` später / paired scripting unit |
+| Skriptparität / Script parity | Applicable für die geplante Validatorpflege; Bash und PowerShell, Advanced Function Verb-Noun, bilinguale Hilfe, Manpage und native manuelle Prüfung je Variante; `evidence/script-parity.md` später. Ausführung jetzt N/A mangels Skriptänderung; Trigger spätere Änderung / plan paired verification; no script execution/change now |
 | Agentenparität / Agent parity | N/A jetzt, keine Regeländerung. Trigger gemeinsame Guidance/Templateänderung: alle fünf Agentenflächen, Vorlagen und Spiegel atomar prüfen; `evidence/agent-parity.md` später, falls betroffen / no needless governance churn |
 | Statistik / Statistics | Applicable; Ledger jetzt, commitgebundener Profil-2-Block unverändert. Später sauberer Quellencommit nur nach Auftrag; Preview/Render/Check / preserve clean-source guard |
 | Autonom/parallel / Autonomous/parallel | N/A für Ausführung, kein delegierter Lauf; keine Run-State-Datei und keine Provideraktion / installation grants no authority |
@@ -113,16 +115,20 @@ Besonderer technischer Befund: `scripts/test-tinycalc-contract.ps1` löst das Fu
 
 ## Phase 1: Design und Ausführungsreihenfolge / Design and Execution Order
 
-1. **Vorprüfung:** Quellen-/Review-Frische, freigegebene Pakete, vier Lockdateien, genehmigte Funktionsbaseline und Impact `A11yImpact` binden. Validatorpfad-Befund test-first beheben, soweit durch späteren Auftrag gedeckt. Bei Drift verbindlicher Intake-Quellen stoppen und gesondertes Update/Review anfordern.
+1. **Vorprüfung und Testbindung:** Quellen-/Review-Frische, freigegebene Pakete, vier Lockdateien, genehmigte Funktionsbaseline und Impact `A11yImpact` binden. Vor jeder neuen Produktkorrektur additive IDs in Einzelwege/Plattformen expandieren, unabhängig zugeordnete Orakel und kompilierbare rote Regressionen vorbereiten. Native Erwartungen zusätzlich vor der Sitzung festhalten; eine fehlende Sitzung ist kein fachliches Rot. Validatorpfad-Befund test-first beheben, soweit durch späteren Auftrag gedeckt. Bei Drift verbindlicher Intake-Quellen stoppen und gesondertes Update/Review anfordern.
 2. **Native Machbarkeit:** Mac A/Terminal.app/VoiceOver exakt protokollieren. B02 an realem Dialog mit Tab/Shift-Tab und direktem Vergleich der aktuellen Aktion prüfen; Kontrolllauf VoiceOver aus. Spätere minimale lokale Korrekturen separat rot/grün belegen. Wenn der vorhandene Stack die Ansage nicht nachweislich ermöglicht: Fail/Open, Ownerentscheidung statt Bridge-/Frameworkwechsel oder Lesefolge als Ersatz.
 3. **Direkte Eingabe und Dialoge:** B01 ohne eingeschobenes End reproduzieren, neue Regression vor Korrektur; bestehende Alias-/Einfügen-/Überschreibverträge bleiben erhalten. Alle Dialogausgänge, Default-Aktion und Rückkehrfokus prüfen.
 4. **Text, Hilfe, Kontrast:** Vollständige Befehle/Shortcuts kontextbezogen erklären, Feedback Erfolg/Abbruch/Fehler, aktive Adresse/Typ/AutoCalc und Auswahl ohne Farbabhängigkeit. Geprüfte Reader-Hinweise getrennt von Grenzen dokumentieren. Alle betroffenen Farben und Fokusindikatoren messen, nicht aus CI-Farbnamen ableiten.
-5. **Nachweisintegrität:** Additive IDs mit jedem aktiven Einzelweg/Plattform binden, echte Assertion-/Prozessresultate und menschliche Nachweise getrennt. Fehlende/stale/inkonsistente/geschwächte Nachweise blockieren Abschluss.
+5. **Nachweisintegrität konsolidieren:** Die bereits vor Produktkorrekturen gebundenen additiven IDs und alle alten aktiven Einzelwege vollständig mit tatsächlichen Resultaten abgleichen; keine IDs oder Orakel erst nachträglich an grüne Ergebnisse anpassen. Echte Assertion-/Prozessresultate und menschliche Nachweise getrennt. Fehlende/stale/inkonsistente/geschwächte Nachweise blockieren Abschluss.
 6. **Vollregression und Dokumentation:** Gesamter aktiver Vertrag auf Linux/Windows, macOS-PTY, native VoiceOver-Sitzung und betroffene DocFX-Seiten am gemeinsamen Kandidaten. Security-/Architekturreview und Owner-Abnahme separat. Lieferung/Archivierung/Serienfortschreibung erst nach gesonderter Autorisierung; kein Start Rename.
 
-*The authorised execution sequence is preflight, early native feasibility, direct input/dialog regression, text/help/contrast, proof integrity, then complete regression/documentation. Each step preserves existing contracts. Stop for source drift or an unsupported native requirement instead of changing scope. Delivery, lifecycle changes and rename require separate authority.*
+*The authorised sequence is preflight with individual ID/oracle and red-regression binding, early native feasibility, direct input/dialog correction, text/help/contrast, consolidation of actual proof, then complete regression/documentation. Bind expectations before testing; absent native execution is not an observed red failure. Never fit IDs/oracles retrospectively to green results. Stop for source drift or an unsupported native requirement. Delivery, lifecycle changes and rename require separate authority.*
 
 ## Traceability und Teststrategie / Traceability and Test Strategy
+
+Der native Machbarkeitsnachweis vergleicht tatsächlich beobachteten Anwendungsfokus mit Sprachansage, nicht nur eine angenommene Tab-Reihenfolge. Feldfokus, Aktionsfokus, Default-Aktion und Rückkehrfokus getrennt protokollieren. Gleichzeitiger Tastendruck, Ansage und Fokus müssen derselben Interaktion zugeordnet sein. Automatisierte UI-/PTY-Belege und ein geplantes Tastaturskript ersetzen keinen gesprochenen nativen Befund.
+
+*Native feasibility compares observed application focus with actual speech, not merely predicted tab order. Record field/action/default/return focus separately and bind key, speech and focus to the same interaction. Automated UI/PTY proof or a planned key sequence cannot replace native observation.*
 
 | Anforderungen / Requirements | Geplanter Prüfpfad / Planned verification | Abnahme / Acceptance |
 |---|---|---|
@@ -153,6 +159,10 @@ Keine Verfassungsverletzung wird beantragt; keine vierte Schicht, kein neues Pro
 *No constitutional exception is requested. No extra project, layer, framework or package choice is introduced. Unexecuted proof remains an execution gate rather than an unresolved product decision; stop if it requires a new design.*
 
 ## Dokumentationsimpact und Stopp / Documentation Impact and Stop
+
+DocFX wird über das versionierte Manifest und `dotnet tool run docfx -- build docfx.json` verwendet, nicht über eine beliebige globale Version. Der aktuelle Pin ist 2.81.0; ein später abweichendes Manifest benötigt erneute Werkzeugprüfung, kein automatisches Update in diesem Feature. Die unveränderte Konfiguration veröffentlicht `specs/007-tui-accessibility/` derzeit nicht. Diese Dateien daher direkt als Markdown prüfen; HTML-Smoke betrifft den Ledger und andere tatsächlich erzeugte Seiten und wird nicht als HTML-Nachweis der 007-Spec ausgegeben. Anwendbarkeit und tatsächliche Prüfung von 3.1.2 (Sprache von Teilen) separat dokumentieren; `html lang=de` allein beweist keine korrekte englische Sprachauszeichnung.
+
+*Use the versioned manifest and explicit local DocFX invocation, currently pinned to 2.81.0. Recheck later manifest changes rather than updating automatically. Unchanged configuration does not publish Feature 007 sources: review them as Markdown and limit HTML claims to actually generated pages. Separately assess language-of-parts applicability and evidence; German page language alone does not prove English part markup.*
 
 **Documentation Impact: `UpdateRequired`.** Quelle Spec/Intake, Owner Thorsten, Deutsch kanonisch mit direkt folgendem Englisch, Zielgruppe ab erstem Lehrjahr/CEFR B2. Leserpfad Serie → Intake → Spec → Plan → Contracts → Einzelweg-/Plattformnachweis; Issue #107 ergänzt den Befundkontext. Jetzt neue Planungsdateien und Ledger, keine Navigation/README/API-Ausgabe ändern; `sourceOnly`, kein Home-sync. Später Laufzeithilfe und `docs/accessibility/007-tui-accessibility.md`, Architektur-/Security-Nachweise und ggf. DocFX. Geänderte öffentliche XML-APIs lösen API-Regeneration aus. Jeder erfolgreiche DocFX-Lauf erhält Snapshot/axe/lynx im selben Arbeitspaket; unvollständige Regeln sind kein Pass.
 

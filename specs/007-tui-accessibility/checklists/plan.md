@@ -51,6 +51,29 @@
   Durchführungshinweis: Ledgerdatum/-reihenfolge und letzte Gesamtstatistik prüfen; Renderer-Vorschau mit gebundenem Quellencommit vergleichen. Bestanden ohne Dirty-Guard-Bypass, Selbstreferenz-Commit oder Darstellung der 80/125-Referenzen als gemessene Arbeitszeit.
   *Verification instructions: Review ledger chronology and generated source binding. Reject dirty-guard bypass, self-reference commits or reference baselines presented as measured effort.*
 
+## Nachprüfung der Durchführungshinweise / Verification Instruction Recheck
+
+18.10.2026, Basis `f373437`, Prüfung durch den bearbeitenden Agenten, kein unabhängiger Produktreview. Pass bedeutet hier Dokumentenkonsistenz nach Korrektur, nicht ausgeführte Produktprüfung. Owner verbleibender Produkt-/Plattformnachweise: Thorsten, Wiedervorlage vor Umsetzung/finalem Kandidaten.
+
+*Authoring-agent document review, not independent product acceptance. Passing rows establish corrected document consistency only; Thorsten owns future execution before implementation/final acceptance.*
+
+| Prüfpunkt / Item | Ergebnis und Beleg / Result and evidence |
+|---|---|
+| PL-001 | Pass — Plan-Traceability gegen zehn R/acht AK/17 Familien abgeglichen / complete plan mapping checked. |
+| PL-002 | Pass — Zwei CQ-Antworten durch Spec/Plan/Research/Contracts/Quickstart erhalten / both decisions retained across design files. |
+| PL-003 | Pass — Program/TuiSession/Core und produktiver Testadapter statisch geprüft / actual existing architecture reviewed. |
+| PL-004 | Pass — Frühes natives Gate und unabhängige Fokus-/Sprachzuordnung präzisiert / early feasibility and actual observation clarified. |
+| PL-005 | Pass — FinishTyping sendet End; neue Insert-Orakel ohne Navigation, Overwrite separat / direct typing and separate overwrite obligations. |
+| PL-006 | Pass — Vier Lock-Hashes/Pin 2.4.17/net10.0 lesend bestätigt, kein Restore/Produkt-Pass / current inspected declarations without execution claims. |
+| PL-007 | Pass — Fester aktiver Pfad bestätigt; Bash delegiert an PS, gemeinsame Quellenkorrektur geplant / verified shared-engine archive-path repair design. |
+| PL-008 | Pass — Acht Designanker bleiben additiv; Expansion jetzt vor Produktcode eingeordnet / all anchors retained with binding before code. |
+| PL-009 | Pass — Rot/Grün/Refactor und 70/80/100-Prozent-Pflichten getrennt; Orakel vor Korrektur / test-first and independent coverage gates. |
+| PL-010 | Pass — Planmatrix: Begründung/Evidencepfad, Open-Owner und Wiedervorlage; keine neue Rechtsentscheidung / applicability and follow-up retained. |
+| PL-011 | Pass — Bash/PS/Hilfe/Manpage/native Parität bei Änderung; keine gemeinsame Regel geändert / conditional parity without guidance changes. |
+| PL-012 | Pass — Lokaler DocFX-Pin und nicht veröffentlichte 007-Quellen benannt; 3.1.2 separat / current documentation tooling and proof boundaries. |
+| PL-013 | Pass — Aktueller Auftrag: nur Dokumentenkorrekturen, keine Implementierung oder Lieferung / current document-only authority. |
+| PL-014 | Pass — Ledger/Vorschau und historischer Gesamtblock getrennt; kein Render-Bypass / historical generated metrics distinguished from current review. |
+
 ## Ergebnis / Result
 
 14/14 Planungsprüfpunkte erfüllt. Keine unbeantwortete fachliche Entscheidung oder beantragte Verfassungsausnahme. Native Machbarkeit, Validatorreparatur und Produkt-/Plattformnachweise sind zukünftige Ausführungsgates, sämtlich `Not Assessed` in diesem Lauf. Ownerprüfung und separater Umsetzungsauftrag bleiben erforderlich; kein Tasks-/Implementierungs- oder Lieferkommando gestartet.

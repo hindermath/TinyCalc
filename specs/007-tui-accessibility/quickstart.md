@@ -17,6 +17,10 @@ pwsh -NoProfile -File scripts/render-project-statistics.ps1 -WhatIf -Json
 
 Der bestehende `Test-TinyCalcContract`-Launcher ist lesend, benötigt aber zuerst die im Research dokumentierte Archivpfadkorrektur und aktuelle Bindungen. Nach dieser autorisierten Korrektur mit vollständigen 007-Evidence-/Pin-/Impactpfaden zuerst `-WhatIf -Json`, danach normale Validierung in beiden Shells; `-WhatIf` ist keine Produktabnahme. Keine Beispielpfade als existierende Nachweise ausgeben.
 
+Vor erster Produktkorrektur die neuen Designanker auf Einzelwege/Plattformen expandieren, Quellen und Orakel binden und kompilierbare rote Regressionen vorbereiten. Die native Sitzung bekommt vorab protokollierte Erwartungen; fehlende Ausführung ist kein beobachtetes Rot. Danach frühe native Machbarkeit, direkte Eingabe/Korrektur und Vollregression in der Reihenfolge des Plans, keine nachträgliche Anpassung an grüne Resultate.
+
+*Before product correction, expand design anchors into individual paths/platforms, bind sources/oracles and prepare compiling red regressions. Record native expectations before execution; missing execution is not red proof. Follow the plan's native-feasibility, correction and regression order without fitting expectations to results.*
+
 *The read-only contract launcher needs the documented archive-path correction and current bindings first. After authorised repair, supply actual complete Feature 007 paths, preview then validate in both shells. Preview is not acceptance and example paths are not existing proof.*
 
 ## 2. Dependency, TDD und Version / Dependencies, TDD and Versioning
@@ -57,5 +61,9 @@ Echte macOS-PTY-Prozesspfade mit Terminalrücksetzung und vollständige native L
 *Bind actual PTY/restoration and complete native platform automation. Hosted governance CI is not VoiceOver evidence. Missing hosts require separately authorised native CI. Bind every result and prove read-only verification separately.*
 
 DocFX nach betroffenen Hilfe-/Dokumentations-/API-Änderungen mit unveränderter Konfiguration erzeugen, repräsentative Seiten über Snapshot/axe und lynx prüfen; manuelle Kriterien und axe-Incomplete nicht als Pass ausgeben. Security-/Architekturreview und Owner-Abnahme getrennt, acht AK einzeln beurteilen. Danach ohne frischen Lieferauftrag lokal stoppen: kein Commit, Push, PR, Merge, Intake-Archivieren oder Rename-Start.
+
+Für den HTML-Dokumentencheck `dotnet tool run docfx -- --version` und `dotnet tool run docfx -- build docfx.json --output <eigener temporärer Ordner>` verwenden; benötigtes Tool-Restore nur nach gesonderter Erlaubnis, kein Paketupdate. Version gemäß `.config/dotnet-tools.json`, derzeit 2.81.0. Die 007-Quellen werden von dieser Konfiguration nicht veröffentlicht: direktes Markdown-Review nicht mit HTML-Smoke verwechseln. DE/EN-Sprachwechsel, Kontrast-/Link-Incomplete und manuelle Kriterien bleiben separat zu bewerten.
+
+*For HTML review use the explicit versioned local-tool commands above, with restore only when separately authorised and no upgrade. Current manifest version is 2.81.0. Feature 007 sources are not published by this configuration: distinguish Markdown review from HTML smoke and assess language changes and manual/incomplete checks separately.*
 
 *Regenerate affected documentation and verify text accessibility, retaining incomplete/manual criteria. Separate technical review from owner acceptance and assess every criterion. Stop locally without fresh delivery authority.*

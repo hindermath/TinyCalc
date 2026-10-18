@@ -79,8 +79,37 @@
   Durchführungshinweis: Governance-Matrix gegen Verfassung und installierte Presets lesen. Für jeden anwendbaren Standard Evidenzpfad, für N/A Begründung/Trigger und für Open Owner/Folgeaktion prüfen; keine aufgehobene externe Rollen-/Scope-Hürde wieder einführen.
   *Verification instructions: Compare applicability with the constitution and installed presets. Require evidence paths, justified non-applicability and owned follow-up for gaps without reintroducing the removed external review gate.*
 
+## Nachprüfung der Durchführungshinweise / Verification Instruction Recheck
+
+18.10.2026, Basis `f373437`, Prüfung durch den bearbeitenden Agenten, kein unabhängiger Produktreview. Pass bedeutet hier Dokumentenkonsistenz nach Korrektur, nicht ausgeführte Produktprüfung. Owner verbleibender Produkt-/Plattformnachweise: Thorsten, Wiedervorlage vor Umsetzung/finalem Kandidaten.
+
+*Authoring-agent document review, not independent product acceptance. Passing rows establish corrected document consistency only; Thorsten owns future execution before implementation/final acceptance.*
+
+| Prüfpunkt / Item | Ergebnis und Beleg / Result and evidence |
+|---|---|
+| CHK-001 | Pass — Spec Nicht-Ziele/CR-004: keine neue Produktlösung; Dokumentenrechte berichtigt / no new product solution; corrected document scope. |
+| CHK-002 | Pass — US-001–004: selbstständige Bedienung, sichere Dialoge, Hilfe und Evidenz getrennt prüfbar / distinct user-valued journeys. |
+| CHK-003 | Pass — Lesehilfe und DE/EN-Paare geprüft; Einfüge-/Überschreib- und Nachweisbegriffe konkretisiert / language parity and mode/evidence terminology reviewed. |
+| CHK-004 | Pass — Lokale Spec-Vorlage: Szenarien, Requirements/CR, Entitäten, Erfolgskriterien, Annahmen vorhanden / mandatory sections present. |
+| CHK-005 | Pass — Zwei CQ-Antworten erhalten, keine neuen fachlichen Marker / both accepted answers retained; no new unresolved choice. |
+| CHK-006 | Pass — CQ-001/002, US-002, R-06 und Contracts gleichgerichtet; tatsächlicher Fokus statt vermuteter Tab-Reihenfolge / consistent reference/speech criteria and observed focus. |
+| CHK-007 | Pass — AK-01–08 vollständig; R-05/Contracts um Messweg und 3:1-Nichttextkriterium präzisiert / all criteria present; contrast proof clarified. |
+| CHK-008 | Pass — AK-Tabellen: Nutzerausgänge von Build/Widget/HTML-Teilbelegen getrennt / user outcomes distinguished from partial technical evidence. |
+| CHK-009 | Pass — Baseline-/Grenzfälle gelesen; Contracts erhalten Modus-, Abbruch-/Dateninvarianten / baseline boundaries and mode/cancellation obligations preserved. |
+| CHK-010 | Pass — 80x24/120x40 plus 120x28; Drift, fehlende Ansage/Prüfung und unkontrollierbare Farben ohne Pass / sizes and failure/evidence boundaries preserved. |
+| CHK-011 | Pass — Intake-Nichtziele und #107 abgeglichen; kein Rename/PL0/Frameworkwechsel/Upgrade / scope and non-goals preserved. |
+| CHK-012 | Pass — Beide Alignment-Varianten erneut geprüft; aktuelle 13 Receipts, Serie/Review; Completed-Vorgänger / current bindings verified in both variants. |
+| CHK-013 | Pass — Zehn R-IDs in Spec zu acht AK und vier US rückverfolgbar / ten requirements mapped to eight criteria and four journeys. |
+| CHK-014 | Pass — Aktiver Produktvertrag read-only: 17 Pflichtfamilien/364 Wege je Plattform, keine Auswahl / complete independent denominator retained. |
+| CHK-015 | Pass — CR-010 von Prüfbehauptung zu Prüfpflicht korrigiert; HTML-/Native-Grenzen erhalten / corrected unexecuted review claim; preserved evidence limits. |
+| CHK-016 | Pass — Spec beschreibt Ziele und Nachweisgrenzen, technische Orakel/Schemaänderungen nur im Design / specification remains outcome-oriented. |
+| CHK-017 | Pass — #107 und beide Kommentare live gelesen; B01/B02 berichtet, historische Angaben weiterhin offen / current issue context read without invented reproduction. |
+| CHK-018 | Pass — Spec Zuständigkeitsgrenzen/Contracts: TinyCalc, Framework, Host und Reader getrennt / responsibilities and evidence types separated. |
+| CHK-019 | Pass — Git-Diff begrenzt; alte Protokolle und Serienartefakte unangetastet / historical evidence and lifecycle files preserved. |
+| CHK-020 | Pass — Verfassung/14 Presets/Security-Matrix abgeglichen; N/A-/Open-Owner/Trigger erhalten / applicability and existing approval model preserved. |
+
 ## Ergebnis / Result
 
-Dokumentenprüfung nach Clarify: 20 von 20 Punkten erfüllt; beide fachlichen Entscheidungen sind durch Thorsten geklärt und konsistent eingearbeitet. Vollständige Aufnahme von zehn Anforderungen, acht Abnahmekriterien und 17 Funktionsfamilien; kein Produktnachweis ausgeführt. Bereit für separat beauftragtes `$speckit-plan` mit erneuter Frischeprüfung, keine Implementierungsfreigabe. Kein nachfolgendes Kommando gestartet. Der optionale Commit-Hook ist gemäß Nutzerauftrag übersprungen.
+Dokumentennachprüfung vom 18.10.2026: 20/20 Punkte geprüft; gefundene Inkonsistenzen direkt korrigiert und oben je Prüfpunkt belegt. Zehn Anforderungen, acht Abnahmen, 17 Pflichtfamilien und beide CQ-Antworten erhalten. Die Planung liegt bereits vor; kein erneuter Plan-Lauf erforderlich allein wegen des früheren Clarify-Textes. Ownerprüfung und ein gesonderter Tasks-/Umsetzungsauftrag bleiben getrennt. Kein Produktnachweis, Commit/Push oder nachfolgendes Kommando ausgeführt.
 
-*Document review after Clarify: all 20 items satisfied; Thorsten resolved both decisions and they are integrated consistently. All ten requirements, eight acceptance criteria and 17 functional families are covered, with no product verification executed. Ready for separately authorised planning after renewed freshness checks, not implementation approval. No follow-up command started; optional commit hook skipped as requested.*
+*Document recheck on 18 October: all 20 instructions completed with corrected findings and row-level evidence above. Preserve all requirements, criteria, families and answers. Planning already exists; stale Clarify wording does not require rerunning it. Owner review and separate task/implementation authority remain distinct. No product proof, Git delivery or next workflow command executed.*
