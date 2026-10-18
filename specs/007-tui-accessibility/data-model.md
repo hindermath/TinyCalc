@@ -30,9 +30,9 @@ Quell-/Pin-/Commitdrift -> keine aktuelle Pass-Wiederverwendung / no current pas
 N/A -> begründete Anwendbarkeit, keine bestandene Ausführung / scope, not execution
 ```
 
-Pass benötigt vollständige aktuelle Bindung, tatsächliche Prüfung und passendes Orakel. Fehlende Aktion in der unmittelbaren Ansage ist Fail, fehlende Sitzung Open, begonnene unvollständige Sitzung Incomplete. Berichtet → reproduziert → verifiziert beschreibt Evidenzstärke, nicht automatische Pass-Übergänge. Keine historische Evidenz umetikettieren.
+Pass benötigt vollständige aktuelle Bindung, tatsächliche Prüfung und passendes Orakel; die Erwartung wird vor der Sitzung festgehalten. Fehlende Aktion in der unmittelbaren Ansage ist Fail, fehlende Sitzung Open, begonnene unvollständige Sitzung einschließlich fehlender Pflichtangaben Incomplete. Ein tatsächlich beobachteter Widerspruch bleibt Fail; zusätzliche Dokumentationslücken separat festhalten, nicht den Fehler zu Incomplete abschwächen. Berichtet → reproduziert → verifiziert beschreibt Evidenzstärke, nicht automatische Pass-Übergänge. Keine historische Evidenz umetikettieren.
 
-*Pass needs complete current bindings, actual execution and a suitable oracle. Missing required speech is Fail; missing execution is Open; inconclusive execution is Incomplete. Reported/reproduced/verified describe evidence strength, not automatic pass transitions.*
+*Pass needs complete current bindings, actual execution and a suitable oracle, with expectations recorded before the session. Missing required speech is Fail; missing execution is Open; started but inconclusive or incompletely documented execution is Incomplete. Preserve an observed contradiction as Fail and record additional documentation gaps separately rather than weakening failure to Incomplete. Reported/reproduced/verified describe evidence strength, not automatic pass transitions.*
 
 ## Integritäts- und Speichergrenzen / Integrity and Storage Boundaries
 

@@ -130,15 +130,22 @@ Der native Machbarkeitsnachweis vergleicht tatsächlich beobachteten Anwendungsf
 
 *Native feasibility compares observed application focus with actual speech, not merely predicted tab order. Record field/action/default/return focus separately and bind key, speech and focus to the same interaction. Automated UI/PTY proof or a planned key sequence cannot replace native observation.*
 
-| Anforderungen / Requirements | Geplanter Prüfpfad / Planned verification | Abnahme / Acceptance |
-|---|---|---|
-| R-01/03 | Vollständige kontextuelle Hilfe, jeder Alias/Seitenweg, strukturierte DE/EN-Texte / complete contextual help | AK-01/03/07/08 |
-| R-02/06 | Erfolg/Abbruch/Fehler, alle Dialogausgänge und direkte Eingaben; native unmittelbare Fokusansage / feedback, dialogs, direct typing and native action naming | AK-01/02/05/06/08 |
-| R-04 | Deklaration/Locks/Freigabe, Drift- und fehlender-Pin-Negative / neutral pin and drift checks | AK-04 |
-| R-05 | Raster/Menü/Dialog/Status/Meldung, gemessener Kontrast und Textalternativen / all surfaces and measured contrast | AK-05/06 |
-| R-07/08 | Echte PTY-Prozesse, Terminalrücksetzung und separate VoiceOver-Bedienung / actual process and native reader | AK-01/02/06 |
-| R-09 | Repräsentative geänderte DocFX-Seiten, Snapshot/axe/lynx, manuelle offene Kriterien / docs automation and manual gaps | AK-07 |
-| R-10 | Unabhängiger Nenner, additive IDs, vollständige Regressions-/Impact-Matrix / complete independently bound denominator | AK-08 und alle Zeilen / all rows |
+Die Kurzformen R-01–10 und AK-01–08 stehen für die unveränderten `R-A11Y-CALC-*`- und `AK-A11Y-CALC-*`-IDs. Jede Zeile bezeichnet geplante Nachweise, keine ausgeführten Ergebnisse. Die acht AK werden zusätzlich einzeln ausgewertet; eine gemeinsame Zuordnung erlaubt keinen Ersatz der nativen Prüfung durch Automation.
+
+*R-01–10 and AK-01–08 abbreviate the unchanged requirement and acceptance IDs. Rows describe planned evidence, not executed results. Assess all eight criteria separately; shared mappings do not allow automation to replace native proof.*
+
+| Anforderung / Requirement | Szenarien / Journeys | Geplanter Prüfpfad und Nachweisart / Planned verification and evidence type | Abnahme / Acceptance |
+|---|---|---|---|
+| R-01 | US-001/003/004 | Vollständige kontextuelle Tasten-/Aliasreferenz; Quellenabgleich, UI-/PTY-Textnachweise / full contextual key reference, source comparison and UI/PTY text | AK-01/03/08 |
+| R-02 | US-001/002/004 | Erfolg/Abbruch/Fehler und Zellkontext; UI-/PTY-Text- und Zustandsnachweise / feedback and context, UI/PTY text and state | AK-01/02/08 |
+| R-03 | US-003/004 | Alle Hilfeseiten/-wege; Quellenabgleich, UI/PTY, getrennte native Lese-/Fokusbefunde und betroffene HTML-Seiten / full help, distinct native and affected HTML evidence | AK-03/07/08 |
+| R-04 | US-004 | Deklaration/Locks/Freigabe, Drift-/fehlender-Pin-Negative; gebundener Preflight-Bericht / neutral source comparison and rejection tests | AK-04/08 |
+| R-05 | US-001/002/004 | Raster/Auswahl/Menü/Dialog/Status/Meldung; Farbpaar-/Kontrastmessung je Zustand und Nicht-Farb-Review / measured contrast and non-colour review | AK-05/08 |
+| R-06 | US-001/002/004 | Alle Dialogausgänge, direkte Eingabe, Fokus-/Dateninvarianten; UI/PTY plus getrenntes natives Fokus-/Sprachprotokoll / dialogs and direct input with distinct native speech | AK-01/02/05/08 |
+| R-07 | US-001–004 | Vollständige echte PTY-Prozesswege und Terminalrücksetzung; Prozess-/Text-/Zustandsnachweise / full real-process PTY evidence | AK-01/02/06/08 |
+| R-08 | US-001–004 | Impact-/Drifttrigger; gebundene native VoiceOver-Sitzung zusätzlich zu Plattformautomation / impact decision and actual native reader session | AK-06/08 |
+| R-09 | US-003/004 | Tatsächlich erzeugte DocFX-Seiten; Snapshot/axe/lynx plus getrennte manuelle/offene Kriterien / actual HTML automation and manual gaps | AK-07/08 |
+| R-10 | US-004 | Unabhängiger Nenner, additive IDs, Einzelweg-/Plattform-/Impact-Matrix und negative Integritätsbelege / full independently bound coverage and integrity checks | AK-01/08; Bindung aller AK / binds all criteria |
 
 Verbindliche Impact-Matrix unverkleinert: NoFunctionalImpact verlangt Drift-/Dokumentationsprüfungen, FunctionalImpact vollständigen aktiven Linux-/Windows-Vertrag, A11yImpact zusätzlich vollständiges A11Y-Intake/macOS-PTY/VoiceOver, TestInfrastructureImpact volle Matrix plus Anti-Testschwächung, ReleaseCloseout alle Funktions-/A11Y-/DocFX-/Plattformnachweise auf demselben Commit. Permanente PR-/Push-Vollautomation aus Feature 006 bleibt erhalten; Impact liefert zusätzliche Pflichten, keinen Skip-Schalter.
 

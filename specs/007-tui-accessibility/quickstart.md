@@ -50,9 +50,9 @@ Start aus dokumentiertem Arbeitsverzeichnis mit dem oben erzeugten Kandidaten (`
 
 *Start the bound candidate from the recorded directory without rebuilding, or use its explicit Release DLL. Separately reproduce the reported dotnet run path only when authorised: it may build and requires its own binary/version bindings. Old Debug proof is not Release proof. Test both baseline sizes and supplementary 120x28.*
 
-Fehlende unmittelbare Aktion: Fail; keine Sitzung: Open; nicht abschließbare Prüfung: Incomplete. Bei nicht erfüllbarer Anforderung stoppen und Thorsten ansprechen; kein Frameworkwechsel oder automatischer Scopeabbau.
+Vor Beginn Erwartung und zulässige Zustands-/Fokusänderungen je Einzelweg festhalten; alle Pflichtfelder aus dem Plattformvertrag der Spec verwenden. Fehlende unmittelbare Aktion: Fail; keine Sitzung: Open; begonnene Prüfung mit fehlenden Pflichtangaben oder nicht abschließbarer Bewertung: Incomplete. Beobachtete Fehler trotz zusätzlicher Nachweislücken als Fail sichtbar lassen. Bei nicht erfüllbarer Anforderung stoppen und Thorsten ansprechen; kein Frameworkwechsel oder automatischer Scopeabbau.
 
-*Missing required speech fails; missing execution is Open; inconclusive execution is Incomplete. Stop for an unattainable requirement rather than switching frameworks or shrinking scope.*
+*Record expectations and allowed state/focus changes per path before starting, using every required specification field. Missing required speech fails; missing execution is Open; started execution missing required fields or a conclusive assessment is Incomplete. Preserve observed failures despite additional evidence gaps. Stop for an unattainable requirement rather than switching frameworks or shrinking scope.*
 
 ## 4. Gesamtabnahme und Stopp / Full Acceptance and Stop
 
