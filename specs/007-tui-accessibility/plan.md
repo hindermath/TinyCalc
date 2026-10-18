@@ -4,6 +4,8 @@
 **Basis / Basis:** [geklärte Spezifikation](spec.md), CQ-001/CQ-002 jeweils Antwort A.
 **Status:** Planungsentwurf zur Owner-Prüfung; keine Umsetzung oder Lieferung freigegeben.
 
+**Nachtrag / Addendum 2026-10-18:** `tasks.md` wurde separat beauftragt erstellt; zwei `/speckit.analyze`-Läufe führten zu beauftragten Korrekturen dieses Plans (Evidence-Pfad nach Verfassungskonvention, B01-Reihenfolge). Die Stopp-Klausel am Ende bleibt die historische Grenze des Planlaufs, kein Verbot dieser späteren Aufträge. / Tasks were generated separately; two analysis runs led to authorised plan corrections. The final stop clause remains the historical limit of the planning run.
+
 **Dokumentennachprüfung / Document recheck:** 2026-10-18, Basis `f373437`; Korrekturen aus CHK-001–020 und PL-001–014, kein neuer Plan-/Tasks-Lauf.
 
 *Planning draft for owner review; neither implementation nor delivery is authorised.*
@@ -53,7 +55,7 @@ Vor Forschung und nach Design geprüft am 12.10.2026. `Erfüllt` in dieser Tabel
 | TDD/Coverage | Applicable bei späteren Produktkorrekturen: ausführbares Rot → Grün → Refactor; Changed-Code mindestens 70 %, Ziel 80 %. Jetzt N/A mangels Codeänderung; Trigger Produktcode / no execution now |
 | Dependency/Locks | Applicable; Locked Restore erst später. `AlreadySatisfied` nur bei freigegebenem unverändertem Graph und gültigen Nachweisen; Drift verlangt Vollprüfung, kein Upgrade / neutral preflight |
 | Serialisierung / Serialization | Applicable als Erhaltungspflicht: JSON-Rundreise, Fehler/Abbruch ohne Teilwirkung; kein Produktformatwechsel / preserve existing storage semantics |
-| Security | Applicable; SSDF, CWE Top 25, sichere C#-Eingaben/Dateipfade/Fehler, synthetische Daten; `docs/security/security-checklist.md`, featurebezogener Nachweis unter `docs/security/secure-development/007-tui-accessibility/` / scoped future evidence |
+| Security | Applicable; SSDF, CWE Top 25, sichere C#-Eingaben/Dateipfade/Fehler, synthetische Daten; `docs/security/security-checklist.md`, featurebezogener Nachweis gemäß Verfassungskonvention `<datum>-<scope>` unter `docs/security/secure-development/<JJJJ-MM-TT>-007-tui-accessibility/`, Datum der Ordneranlage in T005; der undatierte 006-Ordner bleibt historisch unverändert / scoped future evidence in a dated folder per constitution convention |
 | Architektur/STRIDE/CAPEC | Applicable; bestehende Eingabe-, Datei-, Terminal- und Evidenzgrenzen prüfen; `docs/security/threat-model.md`, `docs/security/arc42-security.md`. Relevante CAPEC-Muster bei konkreten Risikoflows binden, keine IDs erfinden / review existing boundaries and actual threats |
 | ADR/S-ADR | N/A für eine neue Architekturentscheidung in dieser Dokumentennachprüfung; keine Bridge/Trust-Boundary-Änderung beschlossen. Trigger: notwendiger materieller Entwurf; dann stoppen, Owner Thorsten entscheidet über ADR unter `docs/architecture/adr/` und S-ADR unter `docs/security/adr/` / no new design now; significant later design requires a separate decision |
 | ASVS | N/A, kein Web/API/HTTP-/Auth-Dienst; Level N/A. `docs/security/asvs-verification.md`; Trigger neuer Dienst / local TUI only |
@@ -84,9 +86,11 @@ specs/007-tui-accessibility/
   research.md
   data-model.md
   quickstart.md
+  tasks.md
   contracts/README.md
   checklists/requirements.md
   checklists/plan.md
+  checklists/a11y.md
 src/MicroCalc.Tui/
   TuiSession.cs                 vorhandene Dialog-/Fokus-/Feedbackwege
   GridColorScheme.cs            vorhandene Farben/Kontrast
@@ -99,9 +103,9 @@ scripts/tests/tui-contract/     vorhandene Negativ-/PTY-Fixtures
 docs/contracts/tui/             unabhängige Baseline und aktive Vertrags-IDs
 ```
 
-Die textuelle Zuordnung ist vollständig: TuiSession verantwortet Bedienkontext, Widgets vermitteln Eingaben, Core bleibt Fachlogik, Terminalhost/Reader liefern getrennt nachzuweisende Ausgabe. Keine zusätzliche Bibliothek oder neues Projekt. `tasks.md` wird erst durch einen separat beauftragten Tasks-Lauf erstellt. Spätere neue Tests bleiben im bestehenden Testprojekt, Nachweise unter `evidence/`; diese Orte werden jetzt nicht als ausgeführte Evidenz angelegt.
+Die textuelle Zuordnung ist vollständig: TuiSession verantwortet Bedienkontext, Widgets vermitteln Eingaben, Core bleibt Fachlogik, Terminalhost/Reader liefern getrennt nachzuweisende Ausgabe. Keine zusätzliche Bibliothek oder neues Projekt. `tasks.md` und `checklists/a11y.md` wurden durch separat beauftragte Folgeläufe ergänzt. Spätere neue Tests bleiben im bestehenden Testprojekt, ausführungsgebundene Paritätschecklisten (`checklists/script-parity.md`, `checklists/agent-parity.md`) und Nachweise unter `evidence/`; diese Orte werden jetzt nicht als ausgeführte Evidenz angelegt.
 
-*The structure preserves interaction in TuiSession, widgets for input and Core for domain logic, with separately verified host/reader output. Add no library/project. A separate Tasks command creates tasks.md. Future tests stay in the existing test project and actual proof goes in evidence; no execution evidence is fabricated now.*
+*The structure preserves interaction in TuiSession, widgets for input and Core for domain logic, with separately verified host/reader output. Add no library/project. Separate authorised runs added tasks.md and checklists/a11y.md. Future tests stay in the existing test project, and execution-bound parity checklists (checklists/script-parity.md, checklists/agent-parity.md) plus actual proof go in evidence; no execution evidence is fabricated now.*
 
 ## Phase 0: Forschung und Vorprüfung / Research and Preflight
 
@@ -117,12 +121,12 @@ Besonderer technischer Befund: `scripts/test-tinycalc-contract.ps1` löst das Fu
 
 1. **Vorprüfung und Testbindung:** Quellen-/Review-Frische, freigegebene Pakete, vier Lockdateien, genehmigte Funktionsbaseline und Impact `A11yImpact` binden. Vor jeder neuen Produktkorrektur additive IDs in Einzelwege/Plattformen expandieren, unabhängig zugeordnete Orakel und kompilierbare rote Regressionen vorbereiten. Native Erwartungen zusätzlich vor der Sitzung festhalten; eine fehlende Sitzung ist kein fachliches Rot. Validatorpfad-Befund test-first beheben, soweit durch späteren Auftrag gedeckt. Bei Drift verbindlicher Intake-Quellen stoppen und gesondertes Update/Review anfordern.
 2. **Native Machbarkeit:** Mac A/Terminal.app/VoiceOver exakt protokollieren. B02 an realem Dialog mit Tab/Shift-Tab und direktem Vergleich der aktuellen Aktion prüfen; Kontrolllauf VoiceOver aus. Spätere minimale lokale Korrekturen separat rot/grün belegen. Wenn der vorhandene Stack die Ansage nicht nachweislich ermöglicht: Fail/Open, Ownerentscheidung statt Bridge-/Frameworkwechsel oder Lesefolge als Ersatz.
-3. **Direkte Eingabe und Dialoge:** B01 ohne eingeschobenes End reproduzieren, neue Regression vor Korrektur; bestehende Alias-/Einfügen-/Überschreibverträge bleiben erhalten. Alle Dialogausgänge, Default-Aktion und Rückkehrfokus prüfen.
+3. **Direkte Eingabe und Dialoge:** B01 ohne eingeschobenes End reproduzieren, neue Regression vor Korrektur; bestehende Alias-/Einfügen-/Überschreibverträge bleiben erhalten. Weil B01 mit VoiceOver aus berichtet wurde, hängt dieser Tastatur-/Funktionsteil nur von Schritt 1 ab und wird durch ein offenes oder fehlgeschlagenes natives Gate aus Schritt 2 nicht blockiert; der VO-an-Teil folgt nach Schritt 2. Alle Dialogausgänge, Default-Aktion und Rückkehrfokus nach Schritt 2 prüfen.
 4. **Text, Hilfe, Kontrast:** Vollständige Befehle/Shortcuts kontextbezogen erklären, Feedback Erfolg/Abbruch/Fehler, aktive Adresse/Typ/AutoCalc und Auswahl ohne Farbabhängigkeit. Geprüfte Reader-Hinweise getrennt von Grenzen dokumentieren. Alle betroffenen Farben und Fokusindikatoren messen, nicht aus CI-Farbnamen ableiten.
 5. **Nachweisintegrität konsolidieren:** Die bereits vor Produktkorrekturen gebundenen additiven IDs und alle alten aktiven Einzelwege vollständig mit tatsächlichen Resultaten abgleichen; keine IDs oder Orakel erst nachträglich an grüne Ergebnisse anpassen. Echte Assertion-/Prozessresultate und menschliche Nachweise getrennt. Fehlende/stale/inkonsistente/geschwächte Nachweise blockieren Abschluss.
 6. **Vollregression und Dokumentation:** Gesamter aktiver Vertrag auf Linux/Windows, macOS-PTY, native VoiceOver-Sitzung und betroffene DocFX-Seiten am gemeinsamen Kandidaten. Security-/Architekturreview und Owner-Abnahme separat. Lieferung/Archivierung/Serienfortschreibung erst nach gesonderter Autorisierung; kein Start Rename.
 
-*The authorised sequence is preflight with individual ID/oracle and red-regression binding, early native feasibility, direct input/dialog correction, text/help/contrast, consolidation of actual proof, then complete regression/documentation. Bind expectations before testing; absent native execution is not an observed red failure. Never fit IDs/oracles retrospectively to green results. Stop for source drift or an unsupported native requirement. Delivery, lifecycle changes and rename require separate authority.*
+*The authorised sequence is preflight with individual ID/oracle and red-regression binding, early native feasibility, direct input/dialog correction (the reader-off B01 input path depends only on preflight, not on the native gate), text/help/contrast, consolidation of actual proof, then complete regression/documentation. Bind expectations before testing; absent native execution is not an observed red failure. Never fit IDs/oracles retrospectively to green results. Stop for source drift or an unsupported native requirement. Delivery, lifecycle changes and rename require separate authority.*
 
 ## Traceability und Teststrategie / Traceability and Test Strategy
 
