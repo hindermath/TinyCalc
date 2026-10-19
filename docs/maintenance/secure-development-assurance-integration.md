@@ -1,9 +1,9 @@
 # Secure Development Assurance – Projektintegration / Project Integration
 
-> Aktuell gilt [der v0.1.3-Nachtrag](assurance-v013-adoption.md).
+> Aktuell gilt [der v0.1.4-Rollout](preset-readme-patch-rollout-2026-10-18.md).
 > Der folgende Text erhält den historischen Stand der ersten Integration.
 >
-> Current installation follows the v0.1.3 addendum linked above.
+> Current installation follows the v0.1.4 rollout linked above.
 > The text below preserves the historical initial-integration record.
 
 ## Zweck und Profil / Purpose and Profile

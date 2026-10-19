@@ -1,0 +1,138 @@
+{
+  "schemaVersion": "1.1",
+  "feature": "tinycalc-fourteen-preset-patch-rollout",
+  "entries": [
+    {
+      "changeId": "CHG001",
+      "scope": "tinycalc-installation-and-agent-composition",
+      "decision": "UpdateRequired",
+      "rationale": "DE: Vierzehn freigegebene Pakete und aktuelle Guidance gemeinsam aktualisieren. EN: Update fourteen approved packages and their current guidance together.",
+      "documents": [
+        "AGENTS.md",
+        "CLAUDE.md",
+        "GEMINI.md",
+        ".github/copilot-instructions.md",
+        ".github/agents/copilot-instructions.md",
+        "constitution.md",
+        ".specify/memory/constitution.md",
+        "docs/maintenance/preset-readme-patch-rollout-2026-10-18.md"
+      ],
+      "owner": "Thorsten Hindermann",
+      "audiences": [
+        "Maintainers",
+        "Preset users"
+      ],
+      "readerPaths": [
+        "README → bounded rollout report → source lock, installed lock and delivery PR"
+      ],
+      "canonicalSource": "scripts/config/spec-kit-project-statistics-governance-presets.json",
+      "navigationImpact": "DE: Aktueller Integrationshinweis verlinkt den datierten Rollout. EN: Current integration entry links the dated rollout.",
+      "documentClass": "ActiveSemantic",
+      "languageStrategy": "German first and English second; paired README files and synchronized guidance.",
+      "languagePartners": [],
+      "platformAndExampleProof": "DE: Beide Shell-Matrizen, Agentenparitaet und echte lokale Produktregression; native CI getrennt. EN: Both shell matrices, parity and real local regression; native CI remains separate.",
+      "distributionClass": "sourceOnly",
+      "homeSyncRequired": false,
+      "evidence": "docs/maintenance/preset-readme-patch-rollout-2026-10-18.md",
+      "risk": "DE: Nur TinyCalc, kein Home-Sync und keine weitergehende Autoritaet. EN: TinyCalc only, without Home sync or broader authority.",
+      "criticality": "Usage",
+      "reevaluationTrigger": "Preset, priority, composition, override or runtime-distribution change."
+    },
+    {
+      "changeId": "CHG002",
+      "scope": "tinycalc-technical-gsdb-revalidation",
+      "decision": "UpdateRequired",
+      "rationale": "DE: Exakte Versions- und Hashbindungen unter ausdruecklicher technischer Autoritaet nachpruefen. EN: Revalidate exact versions and hashes under explicit technical authority.",
+      "documents": [
+        "docs/security/gsdb-intensive-review/evidence-matrix.json",
+        "scripts/validate-gsdb-intensive-review.ps1",
+        "scripts/tests/gsdb-intensive-review/test-validate-gsdb-intensive-review.ps1",
+        "docs/maintenance/preset-readme-patch-source-lock-2026-10-18.json"
+      ],
+      "owner": "Thorsten Hindermann",
+      "audiences": [
+        "Technical reviewers",
+        "Maintainers"
+      ],
+      "readerPaths": [
+        "Rollout -> GSDB source inventory and preset assessments -> validators and negative fixtures"
+      ],
+      "canonicalSource": "docs/security/gsdb-intensive-review/evidence-matrix.json",
+      "navigationImpact": "DE: Technische Nachpruefung bleibt vom historischen Feldtest getrennt. EN: Keep technical revalidation separate from historical field-test acceptance.",
+      "documentClass": "ActiveSemantic",
+      "languageStrategy": "Bilingual matrix/runbooks; language-neutral JSON keys, paths and hashes.",
+      "languagePartners": [],
+      "platformAndExampleProof": "DE: Voll-/Teilpruefung und 28 neue Negativfaelle, Assurance-Status und vier getrennte Reviews. EN: Full/partial validation, twenty-eight stale-binding negatives, status and four gate reviews.",
+      "distributionClass": "sourceOnly",
+      "homeSyncRequired": false,
+      "evidence": "docs/maintenance/preset-readme-patch-rollout-2026-10-18.md",
+      "risk": "Technical integrity checks do not establish complete control implementation, human product acceptance or regulatory/certification approval.",
+      "criticality": "Security",
+      "reevaluationTrigger": "Controlled-document, installed payload, scope or authority change."
+    },
+    {
+      "changeId": "CHG003",
+      "scope": "statistics",
+      "decision": "GeneratedUpdate",
+      "rationale": "Append the bounded Level-0 delivery ledger and regenerate statistics with unchanged methodology and configuration.",
+      "documents": [
+        "docs/project-statistics.md"
+      ],
+      "owner": "Thorsten Hindermann",
+      "audiences": [
+        "Maintainers",
+        "Readers"
+      ],
+      "readerPaths": [
+        "README → project statistics → bounded delivery evidence"
+      ],
+      "canonicalSource": "docs/project-statistics.config.json",
+      "navigationImpact": "Existing ledger and last overall-statistics section retained.",
+      "documentClass": "ActiveSemantic",
+      "languageStrategy": "German first and English second.",
+      "languagePartners": [],
+      "platformAndExampleProof": "Canonical renderer preview/update and Bash/PowerShell check-only proof after clean source commits.",
+      "distributionClass": "sourceOnly",
+      "homeSyncRequired": false,
+      "evidence": "docs/maintenance/preset-readme-patch-rollout-2026-10-18.md",
+      "risk": "Repository transparency is not measured AI productivity, personal time or a quality score.",
+      "criticality": "Usage",
+      "reevaluationTrigger": "Source or ledger changes.",
+      "generatedSource": {
+        "path": "docs/project-statistics.config.json",
+        "renderer": "bash scripts/render-project-statistics.sh --repo ."
+      }
+    },
+    {
+      "changeId": "CHG004",
+      "scope": "macos-pty-test-infrastructure",
+      "decision": "UpdateRequired",
+      "rationale": "Explicitly authorized readiness and byte-boundary repair without weakening product oracles or timeouts.",
+      "documents": [
+        "scripts/tests/tui-contract/capture-terminal.exp",
+        "tests/MicroCalc.Tui.Tests/PtyCaptureAdapterTests.cs",
+        "docs/maintenance/macos-pty-adapter-2026-10-18.md"
+      ],
+      "owner": "Thorsten Hindermann",
+      "audiences": [
+        "Maintainers",
+        "Preset users"
+      ],
+      "readerPaths": [
+        "README → bounded rollout report → source lock, installed lock and delivery PR"
+      ],
+      "canonicalSource": "scripts/tests/tui-contract/capture-terminal.exp",
+      "navigationImpact": "DE: Aktueller Integrationshinweis verlinkt den datierten Rollout. EN: Current integration entry links the dated rollout.",
+      "documentClass": "ActiveSemantic",
+      "languageStrategy": "German first and English second; paired README files and synchronized guidance.",
+      "languagePartners": [],
+      "platformAndExampleProof": "21 focused cases; complete unfiltered 217 Core + 461 TUI suite; native collector 364 macOS paths; noninteractive smoke. Other host/reader acceptance remains separate.",
+      "distributionClass": "sourceOnly",
+      "homeSyncRequired": false,
+      "evidence": "docs/maintenance/macos-pty-adapter-2026-10-18.md",
+      "risk": "Test infrastructure only; preserve strict existing product oracles and outer deadlines.",
+      "criticality": "Usage",
+      "reevaluationTrigger": "PTY protocol, product startup, test fixture or terminal state changes."
+    }
+  ]
+}

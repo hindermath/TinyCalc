@@ -17,11 +17,57 @@ fconfigure $spawn_id -encoding binary -translation binary
 set raw [open [file join $output trace.bin] wb]
 set transcript ""
 set answered [dict create]
-proc collect {seconds} {
-    global spawn_id raw transcript answered rows columns timeout
+# DE: Bereitschaft statt Blindwartezeit; das bestehende äußere 25-/30-s-Limit bleibt unverändert.
+# EN: Observe readiness instead of sleeping; preserve the existing outer 25/30-second deadline.
+set interactionDeadline [expr {[clock milliseconds] + ($scenario eq "accessibility" ? 25000 : 20000)}]
+proc utf8Complete {} {
+    global transcript
+    set continuations 0
+    for {set i [expr {[string length $transcript] - 1}]} {$i >= 0 && $continuations < 4} {incr i -1} {
+        binary scan [string index $transcript $i] c byte
+        set byte [expr {$byte & 255}]
+        if {$byte >= 128 && $byte < 192} { incr continuations; continue }
+        if {$byte < 128} { return [expr {$continuations == 0}] }
+        set expected 0
+        if {$byte >= 194 && $byte <= 223} { set expected 1 }
+        if {$byte >= 224 && $byte <= 239} { set expected 2 }
+        if {$byte >= 240 && $byte <= 244} { set expected 3 }
+        return [expr {$expected > 0 && $continuations == $expected}]
+    }
+    return [expr {[string length $transcript] == 0}]
+}
+proc streamComplete {} {
+    global transcript
+    if {![utf8Complete]} { return 0 }
+    set escape [format %c 27]
+    set start [string last $escape $transcript]
+    if {$start < 0} { return 1 }
+    set tail [string range $transcript $start end]
+    if {[string length $tail] < 2} { return 0 }
+    scan [string index $tail 1] %c kind
+    if {$kind == 91} { return [regexp {^\x1b\[[0-?]*[ -/]*[@-~]} $tail] }
+    if {$kind == 93} { return [expr {[string first [format %c 7] $tail] >= 0}] }
+    return 1
+}
+proc hasOutput {markers from} {
+    global transcript
+    # DE: Keine Rohbytes löschen oder ersetzen; auf vollständige UTF-8-/Escape-Grenzen warten.
+    # EN: Never discard or replace raw bytes; wait for complete UTF-8 and escape boundaries.
+    if {![streamComplete]} { return 0 }
+    # DE: Nur SGR-Farbformatierung für Bereitschaft entfernen; Rohdaten und strenge Bildschirm-/Kontrastorakel bleiben unverändert.
+    # EN: Strip only SGR formatting for readiness; preserve raw captures and strict screen/contrast oracles.
+    set observed [regsub -all {\x1b\[[0-9;:]*m} [string range $transcript $from end] ""]
+    foreach marker $markers {
+        if {[string first $marker $observed] < 0} { return 0 }
+    }
+    return 1
+}
+proc collect {seconds {markers {}} {from 0}} {
+    global spawn_id raw transcript answered rows columns timeout interactionDeadline
     set timeout 1
-    set deadline [expr {[clock milliseconds] + $seconds * 1000}]
+    set deadline [expr {min($interactionDeadline, [clock milliseconds] + $seconds * 1000)}]
     while {[clock milliseconds] < $deadline} {
+        if {[llength $markers] && [hasOutput $markers $from]} { return 0 }
         expect {
             -re {.+} {
                 set chunk $expect_out(buffer)
@@ -31,14 +77,14 @@ proc collect {seconds} {
                 # DE: Antworten simulieren nur das Terminalprotokoll, niemals Produktzustand.
                 # EN: Replies simulate only the terminal protocol, never product state.
                 foreach {query response} [list "\033\[6n" "\033\[1;1R" "\033\[0c" "\033\[?1;2c" "\033\[c" "\033\[?1;2c" "\033\[18t" "\033\[8;${rows};${columns}t" "\033\[?u" "\033\[?0u" "\033\[>0c" "\033\[>0;136;0c" "\033\]10;?\007" "\033\]10;rgb:ffff/ffff/ffff\007" "\033\]11;?\007" "\033\]11;rgb:0000/0000/0000\007"] {
-                    set from 0
-                    if {[dict exists $answered $query]} { set from [dict get $answered $query] }
-                    set position [string first $query $transcript $from]
+                    set queryFrom 0
+                    if {[dict exists $answered $query]} { set queryFrom [dict get $answered $query] }
+                    set position [string first $query $transcript $queryFrom]
                     while {$position >= 0} {
                         send -- $response
-                        set from [expr {$position + [string length $query]}]
-                        dict set answered $query $from
-                        set position [string first $query $transcript $from]
+                        set queryFrom [expr {$position + [string length $query]}]
+                        dict set answered $query $queryFrom
+                        set position [string first $query $transcript $queryFrom]
                     }
                 }
                 if {[string length $transcript] > 20971520} { error "TraceLimit" }
@@ -49,6 +95,12 @@ proc collect {seconds} {
     }
     return 0
 }
+proc awaitOutput {name markers from} {
+    # DE: Nur frische Prozessausgabe zählt; alte Bilder dürfen keine neue Eingabe freigeben.
+    # EN: Only fresh process output counts; earlier frames cannot authorize the next input.
+    if {[collect 8 $markers $from]} { error "EarlyExit:$name" }
+    if {![hasOutput $markers $from]} { error "StateTimeout:$name" }
+}
 proc checkpoint {name} {
     global transcript output
     set file [open [file join $output $name.bin] wb]
@@ -56,7 +108,7 @@ proc checkpoint {name} {
     close $file
 }
 set failed [catch {
-    if {[collect 3]} { error "EarlyExit" }
+    awaitOutput grid {"MicroCalc .NET 10" "A1  Text  AutoCalc: ON" "File" "01 "} 0
     checkpoint grid
     if {$scenario eq "accessibility"} {
         send -- "\033\[C"
@@ -84,11 +136,16 @@ set failed [catch {
         send -- "\033"
         if {[collect 1]} { error "HelpCloseExit" }
     }
+    # DE: Der ergänzende Navigationsablauf hat zuvor ausdrücklich B1 ausgewählt.
+    # EN: The supplementary navigation scenario explicitly selected B1 earlier.
+    set cell [expr {$scenario eq "accessibility" ? "B1" : "A1"}]
+    set from [string length $transcript]
     send -- "7"
-    if {[collect 2]} { error "EditorExit" }
+    awaitOutput editor [list "Edit $cell" "Value:"] $from
     checkpoint editor
+    set from [string length $transcript]
     send -- "\r"
-    if {[collect 2]} { error "CommitExit" }
+    awaitOutput committed [list "7.00" "$cell  Numeric  AutoCalc: ON"] $from
     checkpoint committed
     send -- "\021"
     if {![collect 5]} { error "QuitTimeout" }

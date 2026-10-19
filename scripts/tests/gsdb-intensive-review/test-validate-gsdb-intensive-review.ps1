@@ -274,6 +274,38 @@ try {
         Assert-GsdbFailure -Assessment $AuthoringVersionDrift -ExpectedCode 'GSDB008'
     }
 
+    # DE: Alle vierzehn unmittelbar vorigen Pins und Hashes bleiben blockiert.
+    # EN: Reject all fourteen immediately preceding package bindings independently.
+    foreach ($PreviousReadmePatch in @(
+        @{ Id = 'a11y-governance'; Version = '0.4.3'; Hash = 'abed4e64a34853417674c8403a660daa8b97606b42782be404f0d5faa3347c10' },
+        @{ Id = 'agent-parity-governance'; Version = '0.4.2'; Hash = '33ab3c1bd99a5069af5c0006899c26476d0cabd868bd7ac55659bdd4e4794952' },
+        @{ Id = 'architecture-governance'; Version = '0.6.2'; Hash = '36d56d00fb827997fec0b1cca6b6989207f458e6a4ad66b1572caa205b8a4d8a' },
+        @{ Id = 'autonomous-run-governance'; Version = '0.4.4'; Hash = 'bee76630e08942fd07776e3c7c6fff0f7b370391f95398cb7e5e50a721c7c6a9' },
+        @{ Id = 'cross-platform-governance'; Version = '0.2.2'; Hash = '9eff272453e338884da0c695fe79d56ec074e83661d95cccced8800b3337a64e' },
+        @{ Id = 'intake-authoring-governance'; Version = '0.3.7'; Hash = '3ece036a3aa5921a70501f3ba846e38dfaa8ff3505e79aabc2f6db679c44bcaa' },
+        @{ Id = 'intake-review-governance'; Version = '0.2.4'; Hash = '72c9e3967464db4b1ddd0aba9deedcd7a9772abf55bbc1fa0a7c7adefffde732' },
+        @{ Id = 'intake-sequencing-governance'; Version = '0.2.8'; Hash = '7b8beec23acf1b99d0fc0e628ebad50770cece065bff4f8594c527f3cfb9d11b' },
+        @{ Id = 'isaqb-architecture-governance'; Version = '0.2.2'; Hash = '9f349a98c20f5200ec2cb50f9b18c2bee2cbfa48e7b7b5e643cd6970ac865eb9' },
+        @{ Id = 'model-routing-governance'; Version = '0.1.4'; Hash = 'a06eee81c3988b9ef617e131370c2522f4d4f8847c6dcfed833f465ed479fd0e' },
+        @{ Id = 'parallel-autonomous-run-governance'; Version = '0.2.6'; Hash = '70af07aa51506790ed99e2743ec7a51127936de0d9e82239e2b3f03716539b0d' },
+        @{ Id = 'project-statistics-governance'; Version = '0.1.0'; Hash = '5359a8ef0d576fd9afb3b34a70ec41adbb665abcc29394750d5d94689037ef4c' },
+        @{ Id = 'secure-development-assurance-governance'; Version = '0.1.3'; Hash = '8e17022fb60749a3db454239641592f125e727585c0312418fae538e2b3ca622' },
+        @{ Id = 'security-governance'; Version = '0.7.1'; Hash = '50a60321c5c94bd055c83fafb24b3e81edb2209f47b0f58d18d4cf0a416358cf' }
+    )) {
+        $StaleHash = Copy-GsdbProductionAssessment -Name ($PreviousReadmePatch.Id + '-readme-patch-old-hash') -Mutate {
+            param($Document)
+            $Source = $Document.sourceInventory | Where-Object sourceId -CEQ ('PRESET-' + $PreviousReadmePatch.Id)
+            $Source.normalizedSha256 = $PreviousReadmePatch.Hash
+        }
+        Assert-GsdbFailure -Assessment $StaleHash -ExpectedCode 'GSDB002'
+        $StaleVersion = Copy-GsdbProductionAssessment -Name ($PreviousReadmePatch.Id + '-readme-patch-old-version') -Mutate {
+            param($Document)
+            $Preset = $Document.presetAssessments | Where-Object presetId -CEQ $PreviousReadmePatch.Id
+            $Preset.version = $PreviousReadmePatch.Version
+        }
+        Assert-GsdbFailure -Assessment $StaleVersion -ExpectedCode 'GSDB008'
+    }
+
     # DE: Die drei vorigen Patch-Bindungen muessen jeweils geschlossen scheitern.
     # EN: Reject each preceding patch hash and version independently.
     foreach ($OldPatch in @(
