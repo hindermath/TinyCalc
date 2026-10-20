@@ -1,5 +1,17 @@
 # Regulatorische Anwendbarkeit / Regulatory Applicability
 
+## GSDB-3.4.4-Neubewertung / GSDB 3.4.4 reassessment
+
+DE: Die datierten Entscheidungen unten bleiben historische Owner-Evidence.
+Sie ersetzen kein aktuelles Screening je Rechtsregime für Produkt, KI-Werkzeugbetrieb
+und Organisation nach CL-01-12/CL-09-16. Insbesondere ist Ausbildung oder fehlender
+Vertrieb keine pauschale KI-VO-/DSGVO-Ausnahme. Neue Rollen-/Art.-4-/Scopefragen
+bleiben in der aktuellen GSDB-Matrix Open; keine frühere Entscheidung wird gelöscht.
+EN: Preserve the dated owner decisions below. They do not replace current
+per-regime product/tool-operation/organisation screening. Training or lack of
+sales is no blanket AI Act/GDPR exemption. New role/literacy/scope questions
+remain Open in the current matrix, without deleting earlier decisions.
+
 ## Technische Vorprüfung Feature 005 / Feature 005 technical screening
 
 ## Deutscher Prüfblock

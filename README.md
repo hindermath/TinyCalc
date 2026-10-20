@@ -1,5 +1,7 @@
 # MicroCalc .NET 10 (Terminal.Gui)
 
+[GSDB 3.4.4: Pilotrollout / pilot rollout](docs/maintenance/gsdb-344-pilot-2026-10-20.md).
+
 DE: Der [Governance-Pilot vom 03.10.2026](docs/maintenance/coordinated-governance-oct03.md)
 bindet fuenf neue Preset-Releases und das genehmigte Wartungspaket. Technische
 Installation ist keine Produkt-, Risiko- oder regulatorische Freigabe.

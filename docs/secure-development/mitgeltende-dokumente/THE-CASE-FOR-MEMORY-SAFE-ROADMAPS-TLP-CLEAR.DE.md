@@ -278,7 +278,7 @@ Sie sollte enthalten:
 Für Level-2-Projekte reicht oft eine kleinere Variante. Wichtig ist, dass die
 Entscheidung nachvollziehbar ist.
 
-## Bedeutung für die sechs Spec-Kit-Presets
+## Bedeutung für die acht Spec-Kit-Presets
 
 ### `security-governance`
 
@@ -311,6 +311,18 @@ gemeinsam aktualisiert werden.
 
 Skripte und Tooling für Migration, Tests und Nachweise müssen auf den
 unterstützten Plattformen nachvollziehbar funktionieren.
+
+### `autonomous-run-governance`
+
+Ein ausdrücklich delegierter autonomer Lauf muss die MSL-Entscheidung,
+Sicherheitsgates und menschliche Freigaben als prüfbare Zustände erhalten.
+Die Installation des Presets startet keinen Lauf.
+
+### `parallel-autonomous-run-governance`
+
+Parallele autonome Läufe dürfen MSL-Migrationen oder Sprachvarianten nur in
+getrennten Worktrees bearbeiten. Die spätere Konsolidierung prüft exakte
+Commit-Stände, Reviews, Tests und den dokumentierten Abschluss.
 
 ## Bedeutung für Fachinformatiker*innen
 
@@ -354,3 +366,5 @@ Kundentransparenz zu verbinden.
 Für Ausbildungsprojekte ist der wichtigste Lernpunkt: Sichere Entwicklung
 beginnt nicht erst beim Test. Sie beginnt bei Sprache, Architektur, Planung,
 Reviews und nachvollziehbarer Dokumentation.
+
+**Primärquellen-Nachprüfung / Primary-source follow-up (2026-10-20):** [Offizielle Kopie des Mitherausgebers NCSC NZ / Official co-author copy](https://www.ncsc.govt.nz/assets/OLD/The-Case-for-Memory-Safe-Roadmaps-508c.pdf), Dezember / December 2023; byte-identisch / byte-identical SHA-256 `dfe3e72e075738e345aab81a541f72ab4c0cd149235426108090bf48787bc34b`.

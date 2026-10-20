@@ -868,6 +868,13 @@ Dokumentationsprüfung vom 18.10.2026: 34/34 Durchführungshinweise mit deutsche
 
 | 2026-10-18 | Begrenzter 14-Preset-Patch-Rollout / Bounded fourteen-preset patch rollout | Branch `codex/fourteen-preset-patch-rollout`, Basis `d23f6a7`; genehmigte technische GSDB-Versions-/Hashnachpruefung, unveraenderte Kontroll-/Finding-/Human-Achsen und 28 zusaetzliche Negativfaelle. Pakete, aktuelle Guidance, Quellenbindungen und Agentenflaechen gemeinsam aktualisieren; keine Produkt-API oder Intake-Ausfuehrung. Echte Restore-/Release-/Test-/TUI-Smoke-Regressionsgates sowie Paket-/Assurance-/Statistikpruefung vor Lieferung. Exakte Test- und Lieferergebnisse im zugeordneten PR; Kandidat ist keine Abnahme. Produktions-/Test-/Dokumentationsumfang aus Git, sichtbare Sitzung am 18.10.2026, aktive Arbeitszeit nicht gemessen; 80/125 Zeilen je Arbeitstag und 7.8 Stunden bleiben Modelle. Private Tabelle unberuehrt, keine Community-/Flottenfreigabe. / Update the fourteen immutable packages and their bounded technical evidence without changing human decisions. Require real regression and exact-head green delivery, preserve statistics methodology and private user data; no product or wider rollout authority. |
 
+### 2026-10-20 - GSDB 3.4.4 / Assurance 0.1.5 Pilot
+
+DE: Manifestgebundene GSDB-Übernahme aus Level 0 d9898356, 157 IDs erhalten;
+Assurance 0.1.5 gezielt integriert, andere 13 Pakete und historische Evidence erhalten.
+[Nachweis / Evidence](maintenance/gsdb-344-pilot-2026-10-20.md).
+EN: Bounded source/preset adoption and new project evidence; no product or fleet acceptance.
+
 ## Gesamtstatistik / Overall Statistics
 
 Deutsch: Feature 006 ist in PR #104 vollständig implementiert, menschlich

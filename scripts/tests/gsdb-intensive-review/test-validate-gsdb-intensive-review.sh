@@ -45,7 +45,7 @@ assert_parity_failure() {
   run_and_capture sh "$assessment_file" "$sh_out" "$sh_err" "$validation_root" || sh_exit=$?
 
   [ "$ps_exit" -ne 0 ] && [ "$sh_exit" -eq "$ps_exit" ] || {
-    echo "Exit-code mismatch for $expected_code: ps=$ps_exit sh=$sh_exit" >&2
+    echo "Exit-code mismatch for $expected_code ($assessment_file): ps=$ps_exit sh=$sh_exit" >&2
     exit 1
   }
   cmp -s "$ps_out" "$sh_out" || {
@@ -169,7 +169,7 @@ jq '.findings[0].severity = "Low"' \
   "$production_assessment" >"$fixture_root/downgraded-finding.json"
 assert_parity_failure "$fixture_root/downgraded-finding.json" GSDB009
 
-jq '.checklistRows[0].severity = "Medium"' \
+jq '([.checklistRows[] | select(.implementationStatus == "Fulfilled")] | length) as $n | if $n == 0 then error("No fulfilled mutation target") else (.checklistRows[] | select(.implementationStatus == "Fulfilled") | .severity) = "Medium" end'  \
   "$production_assessment" >"$fixture_root/fulfilled-severity.json"
 jq '(.checklistRows[] | select(.applicability == "Open") | .humanOnly) = false' \
   "$production_assessment" >"$fixture_root/open-without-human.json"
