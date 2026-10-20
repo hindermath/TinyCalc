@@ -40,3 +40,19 @@ jobs:
           pwsh -NoProfile -File .specify/presets/secure-development-assurance-governance/tests/test-secure-development-assurance.ps1
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
           git diff --exit-code
+
+  navigation:
+    name: GSDB source navigation
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
+      - uses: lycheeverse/lychee-action@e7477775783ea5526144ba13e8db5eec57747ce8 # v2
+        with:
+          args: >-
+            --offline
+            --include-fragments
+            --no-progress
+            './docs/secure-development/**/*.md'
+            'docs/maintenance/gsdb-344*.md'
+          fail: true
