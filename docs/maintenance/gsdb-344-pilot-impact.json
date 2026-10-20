@@ -7,7 +7,9 @@
       "rationale": "Bounded GSDB 3.4.4 and Assurance 0.1.5 adoption; preserve historical and project-specific evidence, reassess changed controls without inferred acceptance.",
       "documents": [
         "README.md",
-        "docs/maintenance/gsdb-344-pilot-2026-10-20.md"
+        "docs/maintenance/gsdb-344-pilot-2026-10-20.md",
+        "docs/security/secure-development/2026-10-20-tinycalc-gsdb344/rl-se-assessment-matrix.json",
+        "docs/security/gsdb-intensive-review/evidence-matrix.json"
       ],
       "owner": "Thorsten Hindermann",
       "audiences": [

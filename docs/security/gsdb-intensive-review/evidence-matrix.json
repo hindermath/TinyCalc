@@ -1068,8 +1068,8 @@
       "sourceClass": "ProjectEvidence",
       "path": "scripts/validate-rl-se-assessment.sh",
       "version": "Current",
-      "reviewedAt": "2026-09-06",
-      "normalizedSha256": "724cb09c551b9c3f806b03dff07edaf7350a838295ffe9cfb63b7a5d4fe9fcdc",
+      "reviewedAt": "2026-10-20",
+      "normalizedSha256": "3c4485a5c562187748e3b938811fbb8a6156c59715bd77029c84781d6b8c6c5b",
       "scope": {
         "de": "Zeilenspezifischer aktueller Nachweis aus scripts/validate-rl-se-assessment.sh; der Hash beweist Inhalt, nicht automatisch Erfuellung.",
         "en": "Current row-specific evidence from scripts/validate-rl-se-assessment.sh; the hash proves content, not automatic fulfilment."
@@ -1098,8 +1098,8 @@
       "sourceClass": "ProjectEvidence",
       "path": "scripts/validate-rl-se-assessment.ps1",
       "version": "Current",
-      "reviewedAt": "2026-09-06",
-      "normalizedSha256": "9012e1f8aabd02d53428fed0a6ad1ee42eb753210b856542e2c9fd383faa744d",
+      "reviewedAt": "2026-10-20",
+      "normalizedSha256": "f245e8fab5808f5fc39c7e864e329823bd191e6f30e322ea52d5323767182319",
       "scope": {
         "de": "Zeilenspezifischer aktueller Nachweis aus scripts/validate-rl-se-assessment.ps1; der Hash beweist Inhalt, nicht automatisch Erfuellung.",
         "en": "Current row-specific evidence from scripts/validate-rl-se-assessment.ps1; the hash proves content, not automatic fulfilment."

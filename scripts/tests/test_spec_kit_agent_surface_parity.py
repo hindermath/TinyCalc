@@ -246,5 +246,18 @@ class SpecKitAgentSurfaceParityTests(unittest.TestCase):
         validate_release_sources(CONFIG, read_json(REPOSITORY / "docs/maintenance/gsdb-344-preset-source-lock.json"))
 
 
+    def test_current_rlse_view_matches_intensive_assessment(self) -> None:
+        # A current view must not silently revive historical positive or N/A claims.
+        active = read_json(REPOSITORY / "docs/security/gsdb-intensive-review/evidence-matrix.json")
+        view = read_json(REPOSITORY / "docs/security/secure-development/2026-10-20-tinycalc-gsdb344/rl-se-assessment-matrix.json")
+        self.assertEqual(len(view["rows"]), 157)
+        self.assertEqual(view["baseline"]["baselineVersion"], active["baseline"]["baselineVersion"])
+        self.assertEqual(view["baseline"]["manifestNormalizedSha256"], active["baseline"]["manifestNormalizedSha256"])
+        self.assertEqual(
+            [(r["id"], r["applicability"], r["implementationStatus"], r["humanOnly"]) for r in view["rows"]],
+            [(r["id"], r["applicability"], r["implementationStatus"], r["humanOnly"]) for r in active["checklistRows"]],
+        )
+
+
 if __name__ == "__main__":
     unittest.main()
