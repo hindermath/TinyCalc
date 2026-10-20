@@ -289,7 +289,7 @@ try {
         @{ Id = 'model-routing-governance'; Version = '0.1.4'; Hash = 'a06eee81c3988b9ef617e131370c2522f4d4f8847c6dcfed833f465ed479fd0e' },
         @{ Id = 'parallel-autonomous-run-governance'; Version = '0.2.6'; Hash = '70af07aa51506790ed99e2743ec7a51127936de0d9e82239e2b3f03716539b0d' },
         @{ Id = 'project-statistics-governance'; Version = '0.1.0'; Hash = '5359a8ef0d576fd9afb3b34a70ec41adbb665abcc29394750d5d94689037ef4c' },
-        @{ Id = 'secure-development-assurance-governance'; Version = '0.1.3'; Hash = '8e17022fb60749a3db454239641592f125e727585c0312418fae538e2b3ca622' },
+        @{ Id = 'secure-development-assurance-governance'; Version = '0.1.4'; Hash = '0463ab0e9f7e6dd20a6b170706a72e28bef9aee15f971a2380dddc108c99e1f0' },
         @{ Id = 'security-governance'; Version = '0.7.1'; Hash = '50a60321c5c94bd055c83fafb24b3e81edb2209f47b0f58d18d4cf0a416358cf' }
     )) {
         $StaleHash = Copy-GsdbProductionAssessment -Name ($PreviousReadmePatch.Id + '-readme-patch-old-hash') -Mutate {
@@ -379,7 +379,12 @@ try {
         $InvalidStatus = Copy-GsdbProductionAssessment -Name $StatusCase -Mutate {
             param($Document)
             switch ($StatusCase) {
-                'fulfilled-severity' { $Document.checklistRows[0].severity = 'Medium' }
+                'fulfilled-severity' {
+                    # Bind the negative case to a currently fulfilled row, not a historical index.
+                    $FulfilledRow = $Document.checklistRows | Where-Object implementationStatus -CEQ 'Fulfilled' | Select-Object -First 1
+                    if (-not $FulfilledRow) { throw 'No fulfilled mutation target.' }
+                    $FulfilledRow.severity = 'Medium'
+                }
                 'open-without-human' {
                     $OpenRow = $Document.checklistRows | Where-Object applicability -CEQ 'Open' | Select-Object -First 1
                     $OpenRow.humanOnly = $false

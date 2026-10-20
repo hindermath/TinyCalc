@@ -1,17 +1,30 @@
 # Verzahnung Richtlinie, Checklisten und Spec-Kit-Presets
 
-**Stand / Date:** 2026-07-17
-**Version / Version:** 1.1.0
-**Baseline-Version / Baseline version:** 3.1.0
+**Stand / Date:** 2026-10-20
+**Version / Version:** 1.5.3
+**Baseline-Version / Baseline version:** 3.4.4
 **Verantwortliche Rolle / Responsible role:** Projekt- oder Ausbildungsverantwortung mit Security-Review / Project or training owner with security review
 **Review-Zyklus / Review cycle:** jährlich und bei wesentlichen Änderungen / annually and after material changes
-**Zielgruppe / Audience:** Fachinformatiker*innen in Ausbildung, Entwickler*innen, Reviewer und KI-Agenten / IT specialist apprentices, developers, reviewers, and AI agents
+**Zielgruppe / Audience:** Alle vier IT-Ausbildungsberufe ab dem ersten Ausbildungsjahr, Entwickler*innen, Reviewer und KI-Agenten / All four IT training occupations from the first training year, developers, reviewers, and AI agents
 
 ## Zweck / Purpose
 
-**DE:** Diese Datei zeigt, wie die mitgeltenden Dokumente zur Richtlinie Sichere Entwicklung, zu den zwölf Checklisten und zu den sechs GitHub-Spec-Kit-Governance-Presets passen. Sie ist eine Lese- und Prüfbrücke. Sie ersetzt keine projektspezifischen Nachweise.
+**DE:** Diese Datei zeigt die Verbindung zur Richtlinie Sichere Entwicklung, zu den zwoelf Checklisten und zu den Spec-Kit-Preset-Profilen. Das oeffentliche Standardprofil umfasst acht Presets. Das verwaltete Zwölf-Preset-Profil ergänzt Model Routing und drei Intake-Presets; Profil 13 ergänzt Assurance, Profil 14 Project Statistics. Die Datei ist eine Lese- und Pruefbruecke und ersetzt keine projektspezifischen Nachweise.
 
-**EN:** This file shows how the related documents connect to the Secure Development Guideline, the twelve checklists, and the six GitHub Spec Kit governance presets. It is a reading and review bridge. It does not replace project-specific evidence.
+**EN:** This file connects the related documents to the Secure Development Guideline, the twelve checklists, and the Spec Kit preset profiles. The public default contains eight presets. The managed twelve-preset profile adds Model Routing and three Intake presets; profile 13 adds Assurance and profile 14 Project Statistics. The file is a reading and review bridge and does not replace project-specific evidence.
+
+## Preset-Profile und Prioritaet / Preset Profiles and Priority
+
+**DE:** Eine Preset-Prioritaet bestimmt die Aufloesungsreihenfolge beim Stapeln. Sie ist weder Wichtigkeitsstufe noch Ausfuehrungsbefehl. Das verwaltete Profil `model-routing-twelve-governance-presets` fuegt Model Routing auf Prioritaet 61, Intake Authoring auf 64, Intake Review auf 65 und Intake Sequencing auf 66 ein. Installation startet keinen Befehl und erteilt keine Delivery Authority.
+
+**EN:** A preset priority defines resolution order when presets are stacked. It is neither an importance level nor an execution command. The managed profile `model-routing-twelve-governance-presets` adds Model Routing at priority 61, Intake Authoring at 64, Intake Review at 65, and Intake Sequencing at 66. Installation starts no command and grants no delivery authority.
+
+| Optionales Preset / Optional preset | Zweck / Purpose | Grenze / Boundary |
+|---|---|---|
+| `model-routing-governance` | Lokal erkannte Modelle providerneutralen Rollen zuordnen / Map locally discovered models to provider-neutral roles | Konkrete Modelle bleiben lokal; kein stiller Fallback / Concrete models remain local; no silent fallback |
+| `intake-authoring-governance` | Intake erzeugen, lesen, aktualisieren oder logisch loeschen / Create, read, update, or logically delete an intake | Startet kein Review oder Feature / Starts no review or feature |
+| `intake-review-governance` | Einzelne Intakes, Serien oder Kampagnen pruefen / Review single intakes, series, or campaigns | `Ready` erteilt keine Delivery Authority / `Ready` grants no delivery authority |
+| `intake-sequencing-governance` | Reihenfolge, Abhaengigkeiten und `Eligible` bestimmen / Determine order, dependencies, and `Eligible` | `Eligible` startet keinen Lauf / `Eligible` starts no run |
 
 ## Wie diese Datei genutzt wird / How To Use This File
 
@@ -43,19 +56,19 @@ Eine Statusangabe ohne Begründung und Evidenzpfad ist kein Auditnachweis. / A s
 | `Gebrauch_kryptografischer_Massnahmen.md` | Kryptografische Mindestvorgaben, sichere Programmierung | CL_03, CL_08, CL_09 | `security-governance`, `architecture-governance` | Krypto-Review, S-ADR, Threat Model, Code-Review, Testnachweis |
 | `Kompetenzprofile_und_Schulungsplan_Sichere-Entwicklung.md` | Qualifikation, Schulung, didaktische Nachvollziehbarkeit | CL_08, CL_09, CL_10, CL_12 | `a11y-governance`, `agent-parity-governance`, `security-governance` | Lernzielnotiz, Review-Protokoll, Aufgabenliste, Schulungsnachweis |
 | `Leitlinie_Sichere-Programmierung.md` | Secure Coding, MSL, Fehlerbehandlung, Eingaben, Abhängigkeiten | CL_01, CL_05, CL_08, CL_09 | `security-governance` | Secure-Coding-Check, Sprachprofil, Dependency-Audit, MSL-Entscheidung |
-| `Leitlinie_Sichere-Entwicklungs-Sandbox.md` | Sandbox-Freigabe, MSL-Toolchains, KI-Agenten, Mounts, Netzwerk, Public-Readiness | CL_05, CL_09, CL_10, CL_12 | `security-governance`, `architecture-governance`, `a11y-governance`, `cross-platform-governance`, `agent-parity-governance` | Sandbox-Freigabe, Isolationsnachweis, MSL-Support-Matrix, SBOM/Scan, Netzwerkentscheidung, Lastenheft |
-| `Richtlinie_Secure-Development-Life-Cycle.md` | SDLC, Spezifikation, Planung, Umsetzung, Freigabe | CL_01 bis CL_12 | alle sieben Presets | `spec.md`, `plan.md`, `tasks.md`, Review- und Abschlussnotiz |
-| `Checkliste_Secure-Development-Life-Cycle.md` | Kompakter SDLC-Review | CL_01 bis CL_12 | alle sieben Presets | Ausgefüllte SDLC-Kurzprüfung mit Status und Evidenzpfad |
+| `Leitlinie_Sichere-Entwicklungs-Sandbox.md` | Sandbox-Freigabe, MSL-Toolchains, KI-Agenten, Mounts, Netzwerk, Public-Readiness | CL_05, CL_09, CL_10, CL_12 | `security-governance`, `architecture-governance`, `a11y-governance`, `cross-platform-governance`, `agent-parity-governance`, `autonomous-run-governance`, `parallel-autonomous-run-governance` | Sandbox-Freigabe, Isolationsnachweis, MSL-Support-Matrix, SBOM/Scan, Netzwerkentscheidung, Lastenheft |
+| `Richtlinie_Secure-Development-Life-Cycle.md` | SDLC, Spezifikation, Planung, Umsetzung, Freigabe | CL_01 bis CL_12 | alle acht Presets | `spec.md`, `plan.md`, `tasks.md`, Review- und Abschlussnotiz |
+| `Checkliste_Secure-Development-Life-Cycle.md` | Kompakter SDLC-Review | CL_01 bis CL_12 | alle acht Presets | Ausgefüllte SDLC-Kurzprüfung mit Status und Evidenzpfad |
 | `Richtlinie_Changemanagement.md` | Nachvollziehbare Änderungen, Freigaben, Tests | CL_06, CL_08, CL_10, CL_12 | `agent-parity-governance`, `cross-platform-governance`, `security-governance` | Commit, PR/MR, Review, Testlauf, Änderungsnotiz |
-| `Richtlinie_Dienstleister-und-Lieferantenbeziehungen.md` | Dependencies, Dienste, Lieferkette, Cloud-/Provider-Abhängigkeiten | CL_01, CL_05, CL_07 | `security-governance`, `architecture-governance` | Dependency-Audit, SBOM, VEX, C3A/C5-Entscheidung, Lieferantenbewertung |
+| `Richtlinie_Dienstleister-und-Lieferantenbeziehungen.md` | Dependencies, Dienste, Lieferkette, Cloud-/Provider-Abhängigkeiten | CL_01, CL-02-12 (C3A), CL-02-13 (C5), CL_05, CL_07 | `security-governance`, `architecture-governance` | Dependency-Audit, SBOM, VEX, C3A/C5-Entscheidung, Lieferantenbewertung |
 | `Richtlinie_Testmanagement.md` | Teststrategie, Sicherheits- und A11Y-Tests | CL_02, CL_04, CL_08, CL_10 | `security-governance`, `a11y-governance`, `cross-platform-governance` | Testplan, CI-Ergebnis, Coverage, A11Y-Smoke-Test, `N/A`-Begründung |
 | `Richtlinie_Zugangssteuerung.md` | Identitäten, Rollen, Least Privilege, Secrets | CL_02, CL_03, CL_08, CL_10, CL_12 | `security-governance`, `architecture-governance`, `agent-parity-governance` | Berechtigungsmatrix, Secret-Scan, Rollenentscheidung, Sandbox-Konfiguration |
 | `Datenschutzleitlinie.md` | Datenschutz, Testdaten, Logs, DPIA | CL_01, CL_08, CL_11 | `security-governance`, `architecture-governance`, `a11y-governance` | Datenflussnotiz, DPIA, Logging-Review, Testdatenkonzept |
 | `Leitlinie_Sicheres-Softwaredesign.md` | Trust Boundaries, Defense in Depth, S-ADR, sichere Konfiguration | CL_02, CL_04, CL_08 | `architecture-governance`, `isaqb-architecture-governance`, `security-governance` | S-ADR, arc42 Abschnitt 8, Threat Model, Qualitäts- oder Risikoszenario |
 | `BCM-Notfallhandbuch.md` | Wiederanlauf, Abhängigkeiten, Betriebsstabilität | CL_02, CL_05, CL_10 | `architecture-governance`, `isaqb-architecture-governance`, `security-governance` | Backup-/Restore-Notiz, CI/CD-Wiederanlauf, Provider-Risiko, Runbook |
-| `Standardsregister_Sichere-Entwicklung.md` | Einheitliche Fassungen und Primärquellen | CL_01 bis CL_12 | alle sieben Presets als Referenzrahmen | Standardfassung, Prüftag, Quelle, Migrationsentscheidung |
-| `../Lernpfad_Sichere-Entwicklung_Lehrjahr-1-bis-3.md` | Sicherheit ab dem ersten Lern- und Entwicklungsauftrag | CL_01 bis CL_12 | alle sieben Presets nach Anwendbarkeit | Lernstufe, Übung, Review, Reflexion, Folgeaufgabe |
-| `THE-CASE-FOR-MEMORY-SAFE-ROADMAPS-TLP-CLEAR.*` | MSL-Präferenz, sichere Sprachwahl, Migrationsplanung | CL_01, CL_05, CL_08, CL_09 | `security-governance`, `architecture-governance`, `a11y-governance` | MSL-Entscheidung, Nicht-MSL-Begründung, Roadmap, Lernnotiz |
+| `Standardsregister_Sichere-Entwicklung.md` | Einheitliche Fassungen und Primärquellen | CL_01 bis CL_12 | alle acht Presets als Referenzrahmen | Standardfassung, Prüftag, Quelle, Migrationsentscheidung |
+| `../Lernpfad_Sichere-Entwicklung_Lehrjahr-1-bis-3.md` | Sicherheit ab dem ersten Lern- und Entwicklungsauftrag | CL_01 bis CL_12 | alle acht Presets nach Anwendbarkeit | Lernstufe, Übung, Review, Reflexion, Folgeaufgabe |
+| `THE-CASE-FOR-MEMORY-SAFE-ROADMAPS-TLP-CLEAR.*` | MSL-Präferenz, sichere Sprachwahl, Migrationsplanung | CL-08-12/13 (operative MSL-/Sprachprofil-Prüfung), CL_01/05/09 (Querschnitt) | `security-governance`, `architecture-governance` | MSL-Entscheidung, Nicht-MSL-Begründung, Roadmap, Lernnotiz |
 
 ## Swift und Memory-Safe Languages / Swift and Memory-Safe Languages
 
@@ -93,3 +106,49 @@ Eine Statusangabe ohne Begründung und Evidenzpfad ist kein Auditnachweis. / A s
 |---|---|---|
 | 1.0.0 | 2026-07-10 | Erstes kontrolliertes Release als mitgeltendes Dokument der sichere-Entwicklung-Basis 3.0.0. / First controlled release as a related document of secure-development baseline 3.0.0. |
 | 1.1.0 | 2026-07-17 | Preset-Verzahnung auf das verbindliche Siebenerprofil einschließlich `autonomous-run-governance` erweitert. / Extended preset alignment to the binding seven-preset profile including `autonomous-run-governance`. |
+| 1.2.0 | 2026-07-19 | Preset-Verzahnung auf das verbindliche Achterprofil einschließlich `parallel-autonomous-run-governance` erweitert. / Extended preset alignment to the binding eight-preset profile including `parallel-autonomous-run-governance`. |
+| 1.3.0 | 2026-08-02 | Oeffentliches Achterprofil und verwaltetes Elf-Preset-Profil getrennt; optionale Intake-Presets und vier Ausbildungsberufe ergaenzt. / Separated public eight-preset and managed eleven-preset profiles; added optional intake presets and four training occupations. |
+| 1.4.0 | 2026-08-10 | Thorstens verwaltetes Flottenprofil auf zwoelf Presets angehoben; Model Routing auf Prioritaet 61 und seine lokale Modellgrenze ergaenzt. / Raised Thorsten's managed fleet profile to twelve presets; added Model Routing at priority 61 and its local-model boundary. |
+| 1.5.0 | 2026-10-19 | Level-0-Konsolidierung: Baseline-Bindung und fachliche Konsistenz geprüft; Grenzen im Reviewbericht. / Level-0 consolidation: baseline binding and consistency reviewed; limitations recorded in the review report. |
+| 1.5.1 | 2026-10-20 | Primärquellen-Nachprüfung und Baseline-Bindung 3.4.1; Details im Quellenabschluss. / Primary-source follow-up and baseline binding 3.4.1; see source closure report. |
+| 1.5.2 | 2026-10-20 | Unabhängige Reviewkorrekturen, Quellenanker und Baseline 3.4.3. / Independent review corrections, source anchors and baseline 3.4.3. |
+| 1.5.3 | 2026-10-20 | P3-Abschluss mit präzisen Quellenzuordnungen; Baseline 3.4.4. / P3 closure with precise source mappings; baseline 3.4.4. |
+
+## Vollständige Profilkomposition / Complete Profile Composition
+
+Kanonische Quelle / canonical source: `scripts/config/spec-kit-preset-profiles.json` und die dort gebundenen Matrizen / and its bound matrices. Versionen und Prioritäten werden dort gepflegt; keine zweite Versionsliste in dieser Datei. / Maintain versions and priorities there, not in a second list here.
+
+| Profil / Profile | Anzahl / Count | Ergänzung / Addition |
+|---|---:|---|
+| `standard-eight-governance-presets` | 8 | Öffentliches Standardprofil / public default |
+| `intake-review-nine-governance-presets` | 9 | Intake Review |
+| `intake-authoring-ten-governance-presets` | 10 | Intake Authoring |
+| `intake-sequencing-eleven-governance-presets` | 11 | Intake Sequencing |
+| `model-routing-twelve-governance-presets` | 12 | Model Routing |
+| `secure-development-assurance-thirteen-governance-presets` | 13 | Secure Development Assurance, Priorität / priority 15 |
+| `project-statistics-fourteen-governance-presets` | 14 | Project Statistics |
+| `none` | 0 | Explizite Profilentscheidung, kein stiller Fallback / explicit decision, no silent fallback |
+
+DE: Level 0 verwendet das zugewiesene Vierzehnerprofil. Andere Repositories behalten ihre ausdrücklich zugeordnete Matrix. Die Registrierung allein beweist keine Installation. Eine höhere Profilzahl ist keine höhere Sicherheitsbewertung.
+
+EN: Level 0 uses its assigned fourteen-preset profile. Other repositories retain their explicitly assigned matrix. Registration alone does not prove installation. A higher profile count is not a higher security rating.
+
+| Bestandteil / Component | Zuständigkeit / Responsibility | Grenze / Boundary |
+|---|---|---|
+| GSDB | Fachliche Anforderungen und CL-IDs / subject-matter requirements and checklist IDs | Projektspezifische Anwendbarkeit bleibt erforderlich / project applicability still required |
+| `security-governance` | Sicherheitsanforderungen in Spec-Kit-Artefakten / security in Spec Kit artefacts | Keine vollständige GSDB-Abnahme / no full GSDB acceptance |
+| `secure-development-assurance-governance` | Manifest-, Versions-, Hash- und Evidence-Bindung; Baseline, Delta, Closure, Image Impact / manifest, version, hash and evidence binding; four gates | Besitzt oder aktualisiert die GSDB nicht; kein menschlicher Freigabeersatz / does not own or update GSDB or replace human approval |
+| `project-statistics-governance` | Reproduzierbare Statistik und Methodik / reproducible statistics and methodology | Aktivität ist kein Sicherheitsnachweis / activity is not security proof |
+
+DE: Der quartalsweise GSDB-Review prüft alle aktiven Presets auf Bezug und Aktualität. Die jährliche vertiefte Preset-Prüfung am 3. Oktober bleibt zusätzlich bestehen. Ein technischer Pass ohne semantischen Review ist kein fachlicher Pass. Der aktuelle Befundstand steht im [unabhängigen Korrekturbericht](../../maintenance/gsdb-p3-followup-2026-10-20.md); der [Bericht vom 19.10.](../../maintenance/gsdb-level0-review-2026-10-19.md) bleibt historisch.
+
+EN: Quarterly GSDB review includes every active preset's relevance and currency. Annual in-depth preset review on 3 October remains additional. Technical validation without semantic review is not a subject-matter pass. Current findings are recorded in the independent correction report; the 19 October report is historical.
+
+
+
+DE: Quellenanker: C3A v1.0 → CL-02-12 → architecture-governance (cloud-autonomy); C5:2026 v1.1.0 → CL-02-13 → architecture-governance (cloud-compliance). G7 AI-SBOM → CL-05-13/CL-09-15 → security-governance. Memory-Safe Roadmaps → CL-08-12/13 → security-governance, ergänzt durch Architekturentscheidungen; Überschneidungen sind bewusst und kein pauschaler Erfüllungsnachweis.
+
+EN: Source anchors: C3A v1.0 → CL-02-12 → architecture-governance (cloud autonomy); C5:2026 v1.1.0 → CL-02-13 → architecture-governance (cloud compliance). G7 AI SBOM → CL-05-13/CL-09-15 → security-governance. Memory-Safe Roadmaps → CL-08-12/13 → security-governance, supported by architecture decisions; overlaps are deliberate and do not establish blanket fulfilment.
+
+
+DE: Aktueller Arbeitsstand 3.4.4; fachlicher P3-Abschluss im verlinkten Bericht. Der Bericht zu 3.4.3 ist eine historische Nachprüfung. / EN: Current working revision 3.4.4; the linked report records P3 closure. Revision 3.4.3 review remains historical.

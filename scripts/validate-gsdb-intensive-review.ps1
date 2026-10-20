@@ -82,7 +82,7 @@ $script:ExpectedPresets = [ordered]@{
     # DE: Statistik belegt Dokumentationspflege, nicht die Erfüllung von Sicherheitskontrollen.
     # EN: Statistics support documentation maintenance, not fulfilment of security controls.
     'project-statistics-governance' = @{ Version = '0.1.1'; Priority = 'NotInStandardMatrix'; Standard = $false; Families = @(); Gates = @('025') }
-    'secure-development-assurance-governance' = @{ Version = '0.1.4'; Priority = 'NotInStandardMatrix'; Standard = $false; Families = @('CL-01', 'CL-02', 'CL-03', 'CL-04', 'CL-05', 'CL-06', 'CL-07', 'CL-08', 'CL-09', 'CL-10', 'CL-11', 'CL-12'); Gates = @('003', '004', '005', '006', '007', '008', '009', '010', '011', '012', '013', '014', '015', '016', '017', '018', '026') }
+    'secure-development-assurance-governance' = @{ Version = '0.1.5'; Priority = 'NotInStandardMatrix'; Standard = $false; Families = @('CL-01', 'CL-02', 'CL-03', 'CL-04', 'CL-05', 'CL-06', 'CL-07', 'CL-08', 'CL-09', 'CL-10', 'CL-11', 'CL-12'); Gates = @('003', '004', '005', '006', '007', '008', '009', '010', '011', '012', '013', '014', '015', '016', '017', '018', '026') }
     'security-governance' = @{ Version = '0.7.2'; Priority = 10; Standard = $true; Families = @('CL-01', 'CL-03', 'CL-05', 'CL-07', 'CL-08'); Gates = @('008', '009', '010', '011', '012', '013', '014', '015', '016', '017', '018', '024') }
 }
 

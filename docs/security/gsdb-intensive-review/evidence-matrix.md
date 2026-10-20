@@ -1,5 +1,18 @@
 # GSDB-Evidenzmatrix / GSDB Evidence Matrix
 
+## Aktuelle GSDB-3.4.4-Neubewertung / Current GSDB 3.4.4 reassessment
+
+DE: [Pilotbericht](../../maintenance/gsdb-344-pilot-2026-10-20.md),
+[normativer Delta-Abgleich](../../maintenance/gsdb-344-control-delta.json),
+[unveränderter Vorgänger](history/evidence-matrix-45c66a2d.json).
+50 geänderte normative Kontrollpassagen wurden konservativ neu
+bewertet. Alte positive beziehungsweise N/A-Aussagen werden nicht auf geänderte
+Pflichten übertragen. Finding 014 und die aktuelle JSON-Matrix sind maßgeblich;
+die folgenden datierten Tabellen bleiben historisch und behalten ihre Zahlen.
+EN: Conservatively reassess 50 changed normative control passages.
+The current JSON and finding 014 govern; retain the historical tables below.
+This is not product acceptance or a new hardening feature.
+
 ## Aktuelle Nachpruefung 2026-10-05 / Current follow-up 2026-10-05
 
 DE: Aktuelle Authoring-Version v0.3.7 und Hashbindungen stehen im
