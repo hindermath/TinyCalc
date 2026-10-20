@@ -19,6 +19,10 @@ jobs:
       - name: Verify generator, exact installed profile and project evidence
         shell: pwsh
         run: |
+          if ($IsWindows) { python scripts/tests/test_spec_kit_agent_surface_parity.py } else { python3 scripts/tests/test_spec_kit_agent_surface_parity.py }
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          pwsh -NoProfile -File scripts/validate-documentation-impact.ps1 -Evidence docs/maintenance/gsdb-344-pilot-impact.json
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
           pwsh -NoProfile -File scripts/build-secure-development-docs.ps1 -Check
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
           pwsh -NoProfile -File scripts/install-spec-kit-governance-presets.ps1 -Repo . -PresetConfig scripts/config/spec-kit-project-statistics-governance-presets.json -CheckOnly
