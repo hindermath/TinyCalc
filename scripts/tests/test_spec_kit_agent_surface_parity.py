@@ -9,6 +9,7 @@ import hashlib
 import re
 from pathlib import Path, PurePosixPath
 import unittest
+from urllib.parse import unquote, urlsplit
 
 
 REPOSITORY = Path(__file__).resolve().parents[2]
@@ -257,6 +258,35 @@ class SpecKitAgentSurfaceParityTests(unittest.TestCase):
             [(r["id"], r["applicability"], r["implementationStatus"], r["humanOnly"]) for r in view["rows"]],
             [(r["id"], r["applicability"], r["implementationStatus"], r["humanOnly"]) for r in active["checklistRows"]],
         )
+
+
+    def test_gsdb_source_navigation_and_level0_scope(self) -> None:
+        register = read_json(REPOSITORY / "docs/maintenance/gsdb-344-external-references.json")
+        commit = register["sourceCommit"]
+        self.assertRegex(commit, r"^[0-9a-f]{40}$")
+        paths = [entry["path"] for entry in register["references"]]
+        self.assertEqual(len(paths), len(set(paths)))
+        for entry in register["references"]:
+            path = entry["path"]
+            self.assertTrue(path.startswith("docs/maintenance/"))
+            self.assertNotIn("..", Path(path).parts)
+            self.assertEqual(entry["sourceCommit"], commit)
+            self.assertRegex(entry["sourceNormalizedSha256"], r"^[0-9a-f]{64}$")
+            self.assertEqual(entry["url"], f"https://github.com/hindermath/home-baseline/blob/{commit}/{path}")
+            pointer = REPOSITORY / path
+            text = pointer.read_text(encoding="utf-8")
+            for token in ("Level0SourceReference", commit, entry["url"], entry["sourceNormalizedSha256"]):
+                self.assertIn(token, text)
+            if pointer.suffix == ".json":
+                data = read_json(pointer)
+                self.assertEqual(data["documentType"], "Level0SourceReference")
+                self.assertNotIn("overallOutcome", data)
+                self.assertNotIn("humanDecisions", data)
+        for document in (REPOSITORY / "docs/secure-development").rglob("*.md"):
+            for link in re.findall(r"\]\(([^)\s]+)\)", document.read_text(encoding="utf-8")):
+                parsed = urlsplit(link)
+                if not parsed.scheme and not parsed.netloc and parsed.path:
+                    self.assertTrue((document.parent / unquote(parsed.path)).exists(), f"Missing source link: {document}: {link}")
 
 
 if __name__ == "__main__":
