@@ -1,0 +1,159 @@
+{
+  "schemaVersion": "2.0",
+  "documentType": "IntakeReceipt",
+  "receiptId": "ef11b00b-77f0-454b-93f7-13eae280c619",
+  "intakeId": "04b7b43a-af45-4d3d-9d6e-95dd4d285a9f",
+  "generator": {
+    "preset": "intake-authoring-governance",
+    "version": "0.3.6"
+  },
+  "createdAt": "2026-10-03T23:56:45Z",
+  "operation": {
+    "operationId": "6ccd9831-ce85-434b-a027-11c24473b535",
+    "type": "Update",
+    "authorityEvidence": "Thorsten explicitly approved the eight bounded language updates, both README bindings, archive/lineage/series evidence and full re-review on 2026-10-04. Current maintenance delivery is MergeAndSync with admin bypass for formal merge rules only. Future intake scope and authority remain unchanged."
+  },
+  "status": "ReadyForReview",
+  "target": {
+    "path": "requirements/intakes/active/Lastenheft_Sandbox-gestuetzte-Secure-Development-Haertung.md",
+    "normalizedSha256": "f5ca1db52063f52f53914032fabcc8a1418c77fced607e922454248f17e72a6e"
+  },
+  "sources": [
+    {
+      "httpStatus": "N/A",
+      "label": "First binding source: unchanged predecessor intake",
+      "contentType": "N/A",
+      "finalUrl": "N/A",
+      "gitBlob": "N/A",
+      "order": 1,
+      "location": "Repository",
+      "normalizedSha256": "3669d72d727ceeff5510dde789f9c9c1ddf815bad9c55d5377378959f102f2a2",
+      "rawSha256": "N/A",
+      "proofBoundary": "Repository file; strict UTF-8 normalized SHA-256; archive preserves predecessor bytes",
+      "etag": "N/A",
+      "requestedUrl": "N/A",
+      "kind": "File",
+      "retrievedAt": "N/A",
+      "contentLength": "N/A",
+      "path": "requirements/intakes/history/20261004-language-repair/Lastenheft_Sandbox-gestuetzte-Secure-Development-Haertung.md",
+      "lastModified": "N/A",
+      "redirectChain": [],
+      "sourceId": "SRC001"
+    },
+    {
+      "httpStatus": "N/A",
+      "label": "Archived prior receipt preserves the full original ordered source inventory",
+      "contentType": "N/A",
+      "finalUrl": "N/A",
+      "gitBlob": "N/A",
+      "order": 2,
+      "location": "Repository",
+      "normalizedSha256": "c404d97ec14999c3262f44f9c6d37dfdc4a7527918c1fe604c0328c98d620351",
+      "rawSha256": "N/A",
+      "proofBoundary": "Repository file; strict UTF-8 normalized SHA-256; archive preserves predecessor bytes",
+      "etag": "N/A",
+      "requestedUrl": "N/A",
+      "kind": "File",
+      "retrievedAt": "N/A",
+      "contentLength": "N/A",
+      "path": "specs/intake-authoring-receipts/history/sandbox-gestuetzte-secure-development-haertung.20261004-language-repair.json",
+      "lastModified": "N/A",
+      "redirectChain": [],
+      "sourceId": "SRC002"
+    },
+    {
+      "httpStatus": "N/A",
+      "label": "Binding six-finding review and approved repair boundary",
+      "contentType": "N/A",
+      "finalUrl": "N/A",
+      "gitBlob": "N/A",
+      "order": 3,
+      "location": "Repository",
+      "normalizedSha256": "f76344f4e2c16654362670ee4c8747438d6280ebb39e0dc5616cac194a685c3f",
+      "rawSha256": "N/A",
+      "proofBoundary": "Repository file; strict UTF-8 normalized SHA-256; archive preserves predecessor bytes",
+      "etag": "N/A",
+      "requestedUrl": "N/A",
+      "kind": "File",
+      "retrievedAt": "N/A",
+      "contentLength": "N/A",
+      "path": "requirements/intakes/series-archive/tinycalc-delivery/20261004-language-repair/intake-review-result.json",
+      "lastModified": "N/A",
+      "redirectChain": [],
+      "sourceId": "SRC003"
+    },
+    {
+      "httpStatus": "N/A",
+      "label": "Explicit current approval",
+      "contentType": "N/A",
+      "finalUrl": "N/A",
+      "gitBlob": "N/A",
+      "order": 4,
+      "location": "SnapshotOnly",
+      "normalizedSha256": "408ec0967f777b7bf13d4a28181edef9b8ea95eedf19b9216d07af21a4360041",
+      "rawSha256": "N/A",
+      "proofBoundary": "Exact authority text retained in operation.authorityEvidence and updateAuthorityEvidence",
+      "etag": "N/A",
+      "requestedUrl": "N/A",
+      "kind": "Inline",
+      "retrievedAt": "N/A",
+      "contentLength": "N/A",
+      "path": "N/A",
+      "lastModified": "N/A",
+      "redirectChain": [],
+      "sourceId": "SRC004"
+    }
+  ],
+  "profile": "level2-lastenheft",
+  "languagePolicy": "GermanFirstEnglishSecond",
+  "decisions": [
+    {
+      "id": "IAD001",
+      "status": "Answered",
+      "question": "Welcher Zielpfad ist nach der Konsolidierung verbindlich?",
+      "answer": "requirements/intakes/active/Lastenheft_Sandbox-gestuetzte-Secure-Development-Haertung.md",
+      "evidence": "specs/requirements-reconciliation-20260726/migration-proposal.json"
+    },
+    {
+      "id": "IAD002",
+      "status": "Answered",
+      "question": "Welche Delivery Authority gilt?",
+      "answer": "LocalImplementation",
+      "evidence": "The migration grants no feature-delivery authority."
+    }
+  ],
+  "openDecisionIds": [],
+  "questionCount": 0,
+  "agentSurface": {
+    "specifyCanonicalId": "speckit.specify",
+    "specifyInvocation": "$speckit-specify",
+    "autonomousCanonicalId": "speckit.autonomous",
+    "autonomousInvocation": "$speckit-autonomous"
+  },
+  "deliveryAuthority": "LocalImplementation",
+  "authorityEvidence": "Default: this migration grants no remote feature-delivery authority.",
+  "promptState": "Enabled",
+  "provenanceMode": "Supersession",
+  "supersedes": {
+    "receiptNormalizedSha256": "c404d97ec14999c3262f44f9c6d37dfdc4a7527918c1fe604c0328c98d620351",
+    "archiveTargetPath": "requirements/intakes/history/20261004-language-repair/Lastenheft_Sandbox-gestuetzte-Secure-Development-Haertung.md",
+    "receiptPath": "specs/intake-authoring-receipts/history/sandbox-gestuetzte-secure-development-haertung.20261004-language-repair.json",
+    "archiveReceiptPath": "specs/intake-authoring-receipts/history/sandbox-gestuetzte-secure-development-haertung.20261004-language-repair.json",
+    "targetNormalizedSha256": "3669d72d727ceeff5510dde789f9c9c1ddf815bad9c55d5377378959f102f2a2"
+  },
+  "legacyAdoption": {
+    "evidenceType": "N/A",
+    "priorTargetNormalizedSha256": "N/A",
+    "priorGitBlob": "N/A"
+  },
+  "updateAuthorized": true,
+  "updateAuthorityEvidence": "Thorsten explicitly approved the eight bounded language updates, both README bindings, archive/lineage/series evidence and full re-review on 2026-10-04. Current maintenance delivery is MergeAndSync with admin bypass for formal merge rules only. Future intake scope and authority remain unchanged.",
+  "series": {
+    "seriesId": "5b4523b4-d946-4091-9cbc-11825af94332",
+    "manifestPath": "requirements/intakes/series/tinycalc-delivery/manifest.json",
+    "order": 11,
+    "role": "OrderedMember",
+    "supersedesIntakeIds": []
+  },
+  "nextAction": "$speckit-intake-review requirements/intakes/active/Lastenheft_Sandbox-gestuetzte-Secure-Development-Haertung.md"
+}

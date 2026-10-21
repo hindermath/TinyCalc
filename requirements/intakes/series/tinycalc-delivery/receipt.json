@@ -1,28 +1,28 @@
 {
   "schemaVersion": "1.0",
   "documentType": "IntakeSeriesReceipt",
-  "receiptId": "6c554441-8699-4225-933c-ed7d0e72a80f",
+  "receiptId": "4a14246f-7c68-4701-b01d-1d978a71632a",
   "seriesId": "5b4523b4-d946-4091-9cbc-11825af94332",
   "generator": {
     "preset": "intake-sequencing-governance",
-    "version": "0.2.8"
+    "version": "0.2.9"
   },
-  "createdAt": "2026-10-10T23:05:58Z",
+  "createdAt": "2026-10-21T10:45:45Z",
   "operation": {
-    "authorityEvidence": "Thorsten explicitly authorised administrative Feature 006 closeout: intake archival and series progression, MergeAndSync with Admin-Bypass only for formal rules, no follow-up feature. Thorsten subsequently approved the bounded renewal of the TUI and Rename README source bindings including archive/receipt lineage, then explicitly approved renewal of the PL/0 AGENTS.md source binding and its archive/receipt lineage. Intake content, IDs, scope, acceptance, security, accessibility, order, roots and dependency semantics remain unchanged.",
-    "operationId": "8db75270-e7ac-49d0-a8d3-78e6e3a6509a",
+    "authorityEvidence": "Thorsten approved PLEASE IMPLEMENT THIS PLAN: targeted GSDB 3.4.4 / Assurance 0.1.5 governance and intake refresh, administrative Feature 006 provenance only, minimal Feature 007 alignment and separate independent Series review. Preserve historical acceptance, target identities, scope, order, states, roots and dependencies. Local documentation only: no implementation, build, test, restore, upgrade, commit, push, PR, merge or bypass. Exclude sheet.mcalc.json.",
+    "operationId": "44f5901d-e5d9-42b8-b975-4693195d034f",
     "type": "Update"
   },
   "status": "Ready",
   "manifest": {
     "path": "requirements/intakes/series/tinycalc-delivery/manifest.json",
-    "normalizedSha256": "16d3e9b489c1e0690a03cce58085ff70f2a1416500aecd6d3f5f3e63f2d750d3"
+    "normalizedSha256": "b8a6f7d21305766d8917dcfa567e01cbbe5195503d9b08f171de921a6a2305db"
   },
   "supersedes": {
-    "manifestArchiveSha256": "bccde554dc1ae47c69c4327c6a1e4332bd7f54556e255c75ae5097a541cd71cc",
-    "manifestArchivePath": "requirements/intakes/series-archive/tinycalc-delivery/20261011-feature006-closeout/manifest.json",
-    "receiptNormalizedSha256": "1278c3189d307b00546fe3ea4a9f20a9c5cdb3c3fdc4da49b613fd75e53ee5c4",
-    "receiptPath": "requirements/intakes/series-archive/tinycalc-delivery/20261011-feature006-closeout/receipt.json"
+    "receiptPath": "requirements/intakes/series-archive/tinycalc-delivery/20261021-gsdb344-alignment/receipt.json",
+    "receiptNormalizedSha256": "35810b13fea67b03dec5d96e4318435fdac9189c11953dc87211e682dc8111bb",
+    "manifestArchivePath": "requirements/intakes/series-archive/tinycalc-delivery/20261021-gsdb344-alignment/manifest.json",
+    "manifestArchiveSha256": "16d3e9b489c1e0690a03cce58085ff70f2a1416500aecd6d3f5f3e63f2d750d3"
   },
   "tombstone": {
     "path": "N/A",

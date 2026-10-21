@@ -100,12 +100,12 @@ Dieses Lastenheft beschreibt einen spaeteren Spec-Kit-Lauf, der prueft, wie dies
 
 ## Anforderungen / Requirements
 
-1. Der spaetere Spec-Kit-Lauf dokumentiert `Applicable`, `N/A` oder `Open` fuer alle einschlaegigen Sandbox- und Secure-Development-Pruefpunkte.
+1. Der spaetere Spec-Kit-Lauf trennt fuer alle einschlaegigen Sandbox- und Secure-Development-Pruefpunkte Anwendbarkeit (`Applicable`, `N/A`, `Open`) und Umsetzung (`Fulfilled`, `Partly Fulfilled`, `Not Fulfilled`, `Not Assessed`).
 2. Der Lauf nennt konkrete Evidenzpfade fuer Mounts, Schreibrechte, Agenten-Konfiguration, Build/Test, SBOM/Dependency-Audit und Review.
 3. Der Lauf beschreibt, welche Arbeiten sinnvoll in der Sandbox stattfinden und welche lokal oder in CI bleiben muessen.
 4. Der Lauf prueft, ob die Sandbox ausreichend sicher ist, ohne die Arbeitsfaehigkeit fuer Auszubildende und Entwickler*innen unnoetig einzuschraenken.
 5. Der Lauf nutzt DE/EN, CEFR B2 und WCAG 2.2 AA fuer nutzerseitige Dokumentation.
-6. Offene Punkte werden als Folgeaufgaben dokumentiert, nicht stillschweigend ausgelassen.
+6. Offene oder nicht vollstaendig erfuellte Punkte erhalten Folgeaktion (`nextAction`), Owner und Termin (`dueAt`); N/A erhaelt Begruendung und Neubewertungstrigger. Nichts wird stillschweigend ausgelassen.
 
 ## Akzeptanzkriterien / Acceptance Criteria
 
@@ -161,12 +161,12 @@ toolchains are already installed.
 
 ### English: requirements (same numbering)
 
-1. Record Applicable/N/A/Open for all relevant sandbox/security checks.
+1. Separate applicability (Applicable/N/A/Open) from implementation (Fulfilled/Partly Fulfilled/Not Fulfilled/Not Assessed) for all relevant sandbox/security checks.
 2. Name concrete mount/permission/agent/build/test/SBOM/dependency/review evidence.
 3. Explain what belongs in the sandbox versus local execution or CI.
 4. Assess safety without unnecessarily restricting apprentice/developer work.
 5. Use DE/EN, B2 and applicable WCAG 2.2 AA for user-facing docs.
-6. Record open items as follow-ups, never omit them silently.
+6. Record nextAction, owner and dueAt for open or incompletely fulfilled items; N/A requires rationale and a re-evaluation trigger. Never omit an item silently.
 
 ### English: acceptance, sequence and prompts
 
@@ -182,6 +182,16 @@ applicability decisions, without implementation/hardening. Separately requested
 Autonomous stays LocalImplementation: no remote/PR/merge/bypass/secrets/provider/
 follow-up authority is granted.
 
+
+## Governance-Nachtrag 2026-10-21 / Governance Addendum 2026-10-21
+
+Deutsch: GSDB 3.4.4 und Secure Development Assurance 0.1.5 sind der geprüfte Quellenstand dieses Nachtrags, keine dauerhafte Versionsbindung. Vor einem späteren Lauf Quellen erneut prüfen. Der Kontrollabgleich der 50 Änderungen steht in `docs/maintenance/gsdb-344-intake-control-impact.json`; die aktuelle GSDB-Matrix mit 157 IDs und der RL-SE-Nachweis unter `docs/security/secure-development/2026-10-20-tinycalc-gsdb344/` sind ergänzende, kontextgebundene Belege, keine automatische Erfüllung dieses Intakes.
+
+Deutsch: Anwendbarkeit, Umsetzung und Gate-Ergebnis sind getrennte Angaben. Anwendbarkeit ist `Applicable`, `N/A` oder `Open` (noch ungeklärt); Umsetzung ist `Fulfilled`, `Partly Fulfilled`, `Not Fulfilled` oder `Not Assessed`. Gate-Ergebnisse heißen `Ready`, `ReadyWithAcceptedRisks`, `NeedsRemediation` oder `Blocked`; `Ready` ist mit offenen oder unerfüllten Pflichtpunkten unzulässig. N/A benötigt Grund und Neubewertungstrigger; offene oder unvollständig erfüllte Punkte benötigen Folgeaktion, Owner und Termin. `AlreadySatisfied`/`FollowUp` sind nur Planungshinweise, kein Ersatz für diese Statusachsen oder aktuelle Belege. Historische Ergebnisse bleiben datiert erhalten; zurückgenommene Positivaussagen nicht als aktuelle Erfüllung wiederverwenden. Eine Risikoannahme bleibt menschliche Entscheidung.
+
+English: GSDB 3.4.4 and Secure Development Assurance 0.1.5 are the checked sources for this addendum, not permanent version pins. Recheck sources before a later run. The 50-control impact map is `docs/maintenance/gsdb-344-intake-control-impact.json`; the current 157-ID GSDB matrix and RL-SE evidence under `docs/security/secure-development/2026-10-20-tinycalc-gsdb344/` are context-bound inputs, not automatic fulfilment of this intake.
+
+English: Applicability, implementation and gate outcome are separate. Applicability is Applicable, N/A or Open (undecided); implementation is Fulfilled, Partly Fulfilled, Not Fulfilled or Not Assessed. Gate outcomes are Ready, ReadyWithAcceptedRisks, NeedsRemediation or Blocked; Ready is invalid with open or unfulfilled mandatory items. N/A needs a reason and re-evaluation trigger; open or incomplete items need nextAction, owner and dueAt. AlreadySatisfied/FollowUp are planning labels only. Keep dated historical results and do not reuse withdrawn positive claims as current fulfilment. Risk acceptance remains a human decision.
 
 <!-- intake-authoring:prompts -->
 ## Kopierbare Spec-Kit-Prompts / Copy-Ready Spec Kit Prompts

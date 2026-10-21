@@ -1,0 +1,232 @@
+{
+  "schemaVersion": "1.0",
+  "documentType": "GovernanceIntakeAlignmentValidation",
+  "operationId": "44f5901d-e5d9-42b8-b975-4693195d034f",
+  "head": "5dc92cfd53b6afc785e39e465472a4fe263352cd",
+  "deliveryBoundary": "Local documentation only; no product execution, Git delivery or index changes",
+  "initialAuthoring": {
+    "pass": 10,
+    "expectedSourceDrift": 3,
+    "unexpectedDrift": 0
+  },
+  "candidateChecks": {
+    "powerShellAlignment": {
+      "exitCode": 0,
+      "command": "pwsh -NoProfile -File scripts/validate-requirements-intake-alignment.ps1"
+    },
+    "bashAlignment": {
+      "exitCode": 0,
+      "command": "bash scripts/validate-requirements-intake-alignment.sh"
+    },
+    "authoringReceipts": 13,
+    "governanceConfig": "Pass in both shells",
+    "operation": "Pass in both shells",
+    "documentationImpact": "Pass in both shells",
+    "postIR001ReceiptAndSeries": "Pass in both shells",
+    "alignmentFixtures": {
+      "exitCode": 0,
+      "legacyCases": 10,
+      "linkedCases": 26,
+      "command": "node --test scripts/tests/requirements-intake-alignment-tests.mjs"
+    },
+    "archivePairs": 17,
+    "protectedFiles": 820,
+    "seriesTargets": 13,
+    "roots": 4,
+    "dependencies": 9,
+    "controls": 50,
+    "uncheckedFeatureTasks": 60,
+    "secretScan": {
+      "exitCode": 0,
+      "command": "delivery file contents | gitleaks stdin --redact --no-banner --no-color --exit-code 2",
+      "bytes": 633705,
+      "proofBoundary": "Candidate source set before final review and ledger; final scan repeated separately"
+    }
+  },
+  "independentReview": {
+    "reviewId": "c0d161e3-477b-4381-9e11-38c19e6e6797",
+    "status": "Ready",
+    "proofBoundary": "Document quality only; no product/native/technical acceptance",
+    "boundInputs": 32,
+    "resolvedFindings": [
+      "IR001"
+    ],
+    "openFindings": 0,
+    "acceptedRisks": 0,
+    "questions": 0
+  },
+  "html": {
+    "status": "BoundedSmokeOnly",
+    "docfxVersion": "2.81.0",
+    "configuration": "Unchanged; build only, no metadata/product build",
+    "firstFullBuild": {
+      "exitCode": 0,
+      "warnings": 113
+    },
+    "smokeFile": "specs/intake-authoring-operations/44f5901d-e5d9-42b8-b975-4693195d034f/html-a11y.json",
+    "initialAttempt": "Wrong assumed index.html caused HTTP failure; corrected to actual README.html and repeated",
+    "manualOpen": [
+      "color-contrast incomplete",
+      "link-in-text-block incomplete",
+      "language-of-parts WCAG 3.1.2",
+      "full keyboard and native reader/Braille proof"
+    ],
+    "historicalBrokenLinks": 3,
+    "finalFullBuild": {
+      "exitCode": 0,
+      "warnings": 105,
+      "proofBoundary": "Remaining existing publication/source-link warnings are not treated as resolved"
+    },
+    "finalSourceBoundSmoke": {
+      "pages": 6,
+      "reportedViolations": 0,
+      "nativeAcceptance": "Not performed",
+      "sourceHashesBound": true
+    }
+  },
+  "statistics": {
+    "preview": {
+      "status": "DRY_RUN",
+      "exitCode": 0,
+      "changed": true,
+      "sourceRevision": "d4455f841279",
+      "totalTextLines": 293038,
+      "activeDays": 97
+    },
+    "checkOnly": {
+      "status": "DRIFT",
+      "exitCode": 1
+    },
+    "generatedBlock": "Unchanged historical clean-source block; no fresh render claimed",
+    "nextAction": "Separately authorised clean source commit, then preview/render/check; no bypass"
+  },
+  "homogeneity": {
+    "powerShellCandidate": {
+      "exitCode": 1,
+      "score": 97
+    },
+    "bashCandidate": {
+      "exitCode": 1,
+      "score": 96
+    },
+    "onlyFinding": "ASCII Statistics Profile 2 drift",
+    "status": "NotFullyPassed",
+    "reason": "Generated statistics deliberately retain their historical clean source; current source refresh requires separately authorised commit. No guard bypass.",
+    "powerShellWorkspace": {
+      "exitCode": 1,
+      "score": 97
+    },
+    "bashWorkspace": {
+      "exitCode": 1,
+      "score": 96
+    }
+  },
+  "finalWorkspace": {
+    "status": "LocalUpdateCompleteWithExplicitDeferredChecks",
+    "powerShellAlignment": {
+      "exitCode": 0,
+      "authoringReceipts": 13,
+      "seriesTargets": 13,
+      "reviewStatus": "Ready"
+    },
+    "bashAlignment": {
+      "exitCode": 0,
+      "authoringReceipts": 13,
+      "seriesTargets": 13,
+      "reviewStatus": "Ready"
+    },
+    "independentHashBindings": {
+      "count": 32,
+      "status": "Pass"
+    },
+    "archiveBytePairs": {
+      "count": 17,
+      "status": "Pass"
+    },
+    "protectedFiles": {
+      "count": 820,
+      "status": "Unchanged"
+    },
+    "strictUtf8Lf": "Pass",
+    "jsonParsing": {
+      "files": 29,
+      "status": "Pass"
+    },
+    "deliverySet": {
+      "files": 49,
+      "status": "Exact; no unrelated tracked edits"
+    },
+    "index": "Unchanged; no staged paths",
+    "ledgerChronology": "Pass",
+    "generatedStatisticsBlock": "Unchanged",
+    "trackedSecretScan": {
+      "powerShell": 0,
+      "bash": 0
+    },
+    "completeDeliverySecretScan": {
+      "exitCode": 0,
+      "command": "All 49 delivery text files | gitleaks stdin --redact --no-banner --no-color --exit-code 2",
+      "proofBoundary": "Repeated after final metadata closeout; no private sheet input"
+    },
+    "diffCheck": "Pass",
+    "productExecution": "None",
+    "head": "5dc92cfd53b6afc785e39e465472a4fe263352cd",
+    "branch": "codex/gsdb344-intake-alignment",
+    "nextAction": "Stop; owner may inspect local diff. No following feature or Git delivery."
+  },
+  "deliveryPaths": [
+    "docs/maintenance/gsdb-344-intake-control-impact.json",
+    "requirements/intakes/active/Lastenheft_Secure-Development-Hardening.md",
+    "requirements/intakes/active/Lastenheft_Sandbox-gestuetzte-Secure-Development-Haertung.md",
+    "specs/007-tui-accessibility/spec.md",
+    "specs/007-tui-accessibility/plan.md",
+    "specs/007-tui-accessibility/tasks.md",
+    "specs/007-tui-accessibility/checklists/requirements.md",
+    "specs/007-tui-accessibility/checklists/plan.md",
+    "specs/007-tui-accessibility/checklists/a11y.md",
+    "requirements/intakes/history/20261021-gsdb344-alignment/Lastenheft_PL0-Zellfunktionen_V1.md",
+    "specs/intake-authoring-receipts/history/pl0-zellfunktionen-v1.20261021-gsdb344-alignment.json",
+    "specs/intake-authoring-receipts/pl0-zellfunktionen-v1.json",
+    "requirements/intakes/history/20261021-gsdb344-alignment/Lastenheft_Rename_MicroCalc_TinyCalc.md",
+    "specs/intake-authoring-receipts/history/rename-microcalc-tinycalc.20261021-gsdb344-alignment.json",
+    "specs/intake-authoring-receipts/rename-microcalc-tinycalc.json",
+    "requirements/intakes/history/20261021-gsdb344-alignment/Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md",
+    "specs/intake-authoring-receipts/history/tui-funktionsabnahme-und-regressionsvertrag.20261021-gsdb344-alignment.json",
+    "specs/intake-authoring-receipts/tui-funktionsabnahme-und-regressionsvertrag.json",
+    "requirements/intakes/history/20261021-gsdb344-alignment/Lastenheft_Secure-Development-Hardening.md",
+    "specs/intake-authoring-receipts/history/secure-development-hardening.20261021-gsdb344-alignment.json",
+    "specs/intake-authoring-receipts/secure-development-hardening.json",
+    "requirements/intakes/history/20261021-gsdb344-alignment/Lastenheft_Sandbox-gestuetzte-Secure-Development-Haertung.md",
+    "specs/intake-authoring-receipts/history/sandbox-gestuetzte-secure-development-haertung.20261021-gsdb344-alignment.json",
+    "specs/intake-authoring-receipts/sandbox-gestuetzte-secure-development-haertung.json",
+    "requirements/intakes/series-archive/tinycalc-delivery/20261021-gsdb344-alignment/manifest.json",
+    "requirements/intakes/series-archive/tinycalc-delivery/20261021-gsdb344-alignment/receipt.json",
+    "requirements/intakes/series-archive/tinycalc-delivery/20261021-gsdb344-alignment/operation.json",
+    "requirements/intakes/series-archive/tinycalc-delivery/20261021-gsdb344-alignment/order.md",
+    "requirements/intakes/series-archive/tinycalc-delivery/20261021-gsdb344-alignment/intake-review-request.json",
+    "requirements/intakes/series-archive/tinycalc-delivery/20261021-gsdb344-alignment/intake-review-result.json",
+    "requirements/intakes/series-archive/tinycalc-delivery/20261021-gsdb344-alignment/intake-review-report.md",
+    "requirements/intakes/series/tinycalc-delivery/manifest.json",
+    "requirements/intakes/series/tinycalc-delivery/receipt.json",
+    "requirements/intakes/series/tinycalc-delivery/intake-review-request.json",
+    "requirements/intakes/series-archive/tinycalc-delivery/20261021-gsdb344-alignment/superseded-review.json",
+    "specs/intake-authoring-operations/44f5901d-e5d9-42b8-b975-4693195d034f/proposal.json",
+    "specs/intake-authoring-operations/44f5901d-e5d9-42b8-b975-4693195d034f/lineage.json",
+    "specs/intake-authoring-operations/44f5901d-e5d9-42b8-b975-4693195d034f/operation.json",
+    "requirements/intakes/series/tinycalc-delivery/operation.json",
+    "docs/maintenance/gsdb-344-intake-alignment-2026-10-21.md",
+    "docs/PR_TEXT_GSDB344_INTAKE_ALIGNMENT.md",
+    "docs/documentation-impact/gsdb344-intake-alignment.json",
+    "requirements/intakes/series/tinycalc-delivery/intake-review-result.json",
+    "requirements/intakes/series/tinycalc-delivery/intake-review-report.md",
+    "specs/intake-authoring-operations/44f5901d-e5d9-42b8-b975-4693195d034f/independent-review.json",
+    "specs/intake-authoring-operations/44f5901d-e5d9-42b8-b975-4693195d034f/independent-review.md",
+    "specs/intake-authoring-operations/44f5901d-e5d9-42b8-b975-4693195d034f/html-a11y.json",
+    "specs/intake-authoring-operations/44f5901d-e5d9-42b8-b975-4693195d034f/validation.json",
+    "docs/project-statistics.md"
+  ],
+  "checkedUnchangedDerivedViews": [
+    "Lastenheft_Abarbeitungsreihenfolge.md",
+    "requirements/intakes/series/tinycalc-delivery/order.md"
+  ]
+}

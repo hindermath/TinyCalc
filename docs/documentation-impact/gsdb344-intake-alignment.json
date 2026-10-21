@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.1",
+  "feature": "gsdb344-intake-alignment",
+  "entries": [
+    {
+      "changeId": "CHG001",
+      "scope": "Targeted governance/intake and Feature 007 document alignment",
+      "decision": "UpdateRequired",
+      "rationale": "Quellen und Nachweisregeln nach PR #113/#114 abgleichen, keine Produktabnahme. / Align sources and evidence rules without product acceptance.",
+      "documents": [
+        "docs/maintenance/gsdb-344-intake-alignment-2026-10-21.md",
+        "docs/PR_TEXT_GSDB344_INTAKE_ALIGNMENT.md",
+        "docs/project-statistics.md"
+      ],
+      "owner": "Thorsten",
+      "audiences": [
+        "Lernende / Trainees",
+        "Maintainers",
+        "Reviewers"
+      ],
+      "readerPaths": [
+        "Serie -> Bericht -> Kontrollmatrix -> Feature 007 -> unabhängiger Review / independent review"
+      ],
+      "canonicalSource": "requirements/intakes/series/tinycalc-delivery/manifest.json",
+      "navigationImpact": "Direkte Links, keine README-/Navigationsänderung. / Direct links only, no README/navigation change.",
+      "documentClass": "ReviewEvidence",
+      "languageStrategy": "GermanFirstEnglishSecond; CEFR B2; text-first",
+      "languagePartners": [],
+      "platformAndExampleProof": "Governance validators in Bash/PowerShell; actual HTML pages via snapshot, axe and lynx if regenerated; no native product acceptance.",
+      "distributionClass": "sourceOnly",
+      "homeSyncRequired": false,
+      "evidence": "docs/maintenance/gsdb-344-intake-alignment-2026-10-21.md",
+      "risk": "No historical acceptance rewriting or transferred product fulfilment.",
+      "criticality": "Normal",
+      "reevaluationTrigger": "Source, scope, evidence or authority change."
+    }
+  ]
+}

@@ -1,135 +1,53 @@
-# Intake-Serienreview / Intake series review
+# Unabhängiger Serienreview / Independent Series Review
 
 ## Deutsch
 
-### Ergebnis und Bindung
+Ergebnis: **Ready**, ausschließlich für Intake- und Dokumentenqualität. Review-ID: `c0d161e3-477b-4381-9e11-38c19e6e6797`; geprüft: 2026-10-21T10:59:41Z. Ein unabhängiger Agent prüfte getrennt vom Autor die 13 Ziele und den Feature-007-Abgleich. Keine Produktimplementierung, native Screenreader-Abnahme oder menschliche Freigabe.
 
-- Ergebnis: `Ready`; Review-ID: `30ca6838-1bdf-49e3-8f94-d72e990c6728`.
-- Zeitpunkt (UTC): `2026-10-10T23:41:02Z`; Repository-Head: `ade6927f5b16cfe14575261646a80e0c8a51733c`.
-- Umfang: Serie `tinycalc-delivery`, 13 Ziele, 0 Kampagnen-Worker.
-- Befunde: Critical 0, High 0, Medium 0, Low 0; akzeptierte Risiken 0; offene Fragen 0.
-- Manifest-SHA-256: `16d3e9b489c1e0690a03cce58085ff70f2a1416500aecd6d3f5f3e63f2d750d3`.
-- Receipt-SHA-256: `35810b13fea67b03dec5d96e4318435fdac9189c11953dc87211e682dc8111bb`.
-- [Prüfauftrag](intake-review-request.json) und [maschinenlesbares Ergebnis](intake-review-result.json) binden alle aktuellen Zielpfade und Inhalts-Hashes. Ein Hash ist der eindeutige Inhaltsprüfwert; die Receipt ist der Herkunftsnachweis.
+Die Serie behält 13 Ziele, vier Wurzeln und neun bindende Abhängigkeiten. Reihenfolge und Fortschrittsstatus bleiben erhalten: Migration → Funktionsabnahme → A11Y → Rename. Nur A11Y ist ausdrücklich Eligible; Sandbox bleibt eine unabhängige Pending-Wurzel. Eligible ist keine Umsetzungserlaubnis.
 
-### Prüftiefe und wiederverwendete Nachweise
+### Quellenabdeckung
 
-Alle 13 Intake-Inhalte stimmen exakt mit den Hashes des früheren vollständigen
-Serienreviews `192a2219-0b1e-4a71-a336-502848cf10b0` überein. Diese semantische
-Prüfung wird ausdrücklich wiederverwendet; 13 neue vollständige Einzel-Leseläufe
-werden nicht behauptet. Der alte Review bleibt unter
-[Archivresultat](../../series-archive/tinycalc-delivery/20261011-feature006-closeout-review/intake-review-result.json)
-erhalten und wird durch dieses Ergebnis supersediert, nicht rückwirkend umgeschrieben.
+Alle 13 Intake-Verträge wurden auf Identität, Zielgruppe, Begriffe, Umfang, Nicht-Ziele, überprüfbare Abnahme, Quellen, Reihenfolge und Autorität geprüft. Abgeschlossene Constitution-/Migration-/Funktions-/RL-SE-/GSDB-Verträge bleiben historische Dokumente. Ihre alten Promptpfade und datierten Regeln werden nicht nachträglich umgeschrieben; aktive Ausführung richtet sich nach dem aktuellen Manifest und der Archivauflösung.
 
-Neu geprüft wurden der Abschluss von Feature 006, der archivierte TUI-Zielpfad,
-die Quellen-/Receipt-Fortschreibung für TUI, Rename und PL/0 sowie die Übergabe
-an A11Y. Der A11Y-Intake wurde vollständig erneut gelesen. Anforderungen,
-Nicht-Ziele, messbare Abnahme, Sicherheits- und Plattformgrenzen, eingebettete
-Prompts, Vorwissen, Begriffserklärungen und Deutsch-vor-Englisch auf B2-Niveau
-bleiben konsistent. Historische offene Aussagen in abgeschlossenen Intakes sind
-keine neuen Ausführungsaufträge und heben belegte Abnahmen nicht auf.
+PL/0, Rename, A11Y und das archivierte Funktions-Intake bleiben byteidentisch. Die Erneuerung des Feature-006-Receipts ist ausschließlich administrativ. Fünf Receipt-Erneuerungen behalten Intake-Identitäten und ordnen Vorgänger vor Änderungsquellen ein. 17 Archivpaare wurden unabhängig gegen die Ausgangsdateien byteweise per SHA-256 verglichen.
 
-### Reihenfolge und Status
+Die 50 geänderten Kontroll-IDs sind vollständig und eindeutig zugeordnet. Neun Zeilen verlangen Dokumentationspräzisierungen für Feature 007; 41 sind bereits durch bestehende spätere Prüfaufträge abgedeckt. Diese Einordnung bestätigt keinen einzelnen Produktnachweis. Konkrete Kontrolldetails werden vor späterer Umsetzung gegen die gebundenen Quellen geprüft; unbekannte Anwendbarkeit bleibt offen. Es wurde keine neue rechtliche Anwendbarkeit bestimmt.
 
-Die Serie hat vier unabhängige Startknoten und neun verbindliche Abschlusskanten.
-Alle 13 Ziele stehen genau einmal in einer widerspruchsfreien Reihenfolge:
+Feature 007 bewahrt zehn Anforderungen, acht Abnahmen, CQ-001/CQ-002 und die gesamte Funktionsbaseline mit 17 Familien sowie mindestens 364 Wegen je Plattform. Alle 60 Aufgaben bleiben offen. GA-007-01–03 sind T003/T005/T047/T048 zugeordnet. Die sechs neuen GOV007-01/02-Prüfungen in den drei Checklisten sind als Dokumentenprüfung erfüllt; frühere Prüfergebnisse bleiben historische Aussagen.
 
-1. Constitution, Terminal.Gui-Migration und TUI-Funktionsvertrag: Completed, archiviert.
-2. A11Y: Eligible, bevorzugter nächster Kandidat.
-3. Rename → didaktische Kommentare → Security → PL/0 → Legacy → Tabellenoperationen:
-   sechs Blocked-Ziele; jeweils der direkte Vorgänger muss abgeschlossen sein.
-4. Sandbox: eigener Startknoten ohne Serienvorgänger, weiterhin Pending; kein bevorzugter Start.
-5. RL-SE und GSDB: eigene abgeschlossene, archivierte Startknoten.
+### Befund und Nachprüfung
 
-Insgesamt sind fünf Ziele abgeschlossen und acht aktiv. `Eligible` bezeichnet
-nur die fachliche Reihenfolge, keine Implementierungs- oder Lieferfreigabe.
-A11Y übernimmt den bestehenden Funktionsvertrag additiv: keine neue Migration,
-keine automatische Paketaktualisierung, keine Rücknahme der Feature-006-Abnahme.
-Ein späterer Lauf muss unveränderte, passende Nachweise gezielt wiederverwenden
-und tatsächliche Änderungen samt vorgeschriebenen menschlichen Prüfungen belegen.
+IR001, Medium: Der aktive Reifeabschnitt des Secure-Development-Intakes verwendete Open noch für fehlende Erfüllungsbelege, obwohl der neue Vertrag ungeklärte Anwendbarkeit meint. Der Autor trennte die Begriffe in Deutsch und Englisch; fehlende Umsetzungsevidenz gehört nun ausdrücklich in Not Assessed, Not Fulfilled oder Partly Fulfilled. Die korrigierten Passagen und neuen Ziel-/Receipt-/Manifest-/Lineage-Hashes wurden unabhängig nachgeprüft. Der historische ersetzte Prompt blieb erhalten.
 
-### Ausgeführte Prüfungen und Grenzen
+Es verbleiben null offene Befunde, null akzeptierte Risiken und null offene Fragen. Die maschinenlesbare Zusammenfassung zählt den einen erledigten Medium-Befund weiterhin mit; sie behauptet keinen offenen Restrisikoentscheid. Keine Risikoannahme wurde durch den Agenten getroffen.
 
-- Schema-2.0-Governance-Konfiguration: `Aligned`; DirectoryStrict mit acht aktiven
-  Dateien, 13 Serienzielen und neun Abhängigkeiten.
-- Vollständiges Requirements-Alignment: Exit 0; Renderer, alle 13
-  Authoring-Receipts, Serienmanifest und Serienreceipt gültig. Vor diesem neuen
-  Ergebnis war der Nachfolgereview erwartungsgemäß ausstehend.
-- Strikte UTF-8-Lesung und normalisierte SHA-256-Prüfung; alle Zielinhalte stimmen
-  mit Manifest und archiviertem Review überein. Git-Blobs stehen im Ergebnis.
-- Ergebnisvalidatoren in PowerShell und Bash: jeweils Exit 0, aktueller Series-Review mit 13 Zielen und Status Ready.
-- Aktuelle Quellenbindungen und die portable TUI-Abschlussidentität passen.
-  Die genehmigte Verwaltungsrenderer-Korrektur wird nicht als allgemeine
-  Härtung aller historischen Belegformate ausgegeben.
-- TinyPl0: [Release v0.4.1](https://github.com/hindermath/TinyPl0/releases/tag/v0.4.1),
-  Quellcommit `edab567e1e7cd3ea8eb8e3bea425b54f24d4b506` und erfolgreicher
-  [Providerlauf 33757534918](https://github.com/hindermath/TinyPl0/actions/runs/33757534918)
-  sowie Version 0.4.1 in den öffentlichen
-  [Core](https://api.nuget.org/v3-flatcontainer/tinypl0.core/index.json)- und
-  [Vm](https://api.nuget.org/v3-flatcontainer/tinypl0.vm/index.json)-Indizes
-  read-only bestätigt. Dies ersetzt weder den internen Security-Vorgänger noch
-  TinyCalcs spätere Versionswahl, Locked-Restore- und Vertragstest-Gates.
-- Anwendbarkeit: NIST SSDF und CWE Top 25; WCAG 2.2 AA für Text, TUI und HTML;
-  STRIDE/CAPEC für relevante Vertrauensgrenzen; SBOM/SLSA für lieferbare Artefakte,
-  VEX bei bekannten Schwachstellen. SAMM und OpenSSF bleiben ergänzende
-  projektbezogene Prüfpunkte, keine neu behaupteten Zertifizierungen.
-  ASVS und Zero Trust sind für die lokale, nicht verteilte Anwendung N/A;
-  AI-SBOM ist N/A, weil KI nur Entwicklungswerkzeug ist.
-- Kein Produkt-Build/Test oder menschlicher Nachweis neu erzeugt. DocFX: 0 Fehler/84 Warnungen; axe: 0 Verstöße, keine Vollkonformitätsbehauptung.
-  UTF-8-Lynx/ARIA bestätigen die Lesbarkeit der Ledger-Ergänzung; zwei bestehende HTML-Linklücken und manuelle axe-Prüfpunkte bleiben außerhalb dieses Intake-Reviews.
+### Bindung und Grenzen
 
-### Befunde, Entscheidungen und nächste Aktion
+`intake-review-result.json` bindet den aktuellen Request und alle 13 Zielhashes. Der ergänzende Nachweis `specs/intake-authoring-operations/44f5901d-e5d9-42b8-b975-4693195d034f/independent-review.json` bindet zusätzlich Spec, Plan, Tasks, drei Checklisten, Kontrollmatrix, Quelldelta, Assurance-Vertrag, Governance-Konfiguration, Serie, fünf Receipts und Lineage. Der vorherige Review `30ca6838-1bdf-49e3-8f94-d72e990c6728` ist ausdrücklich supersediert und byteidentisch archiviert.
 
-Keine Befunde, keine erforderlichen Klärungsentscheidungen, keine akzeptierten
-Restrisiken. Die Review-Artefakte liegen außerhalb der geprüften Intakes; deren
-Inhalte, Manifest und Receipt bleiben unverändert.
+NIST SSDF und CWE Top 25 gelten für Quellen-/Evidenzintegrität. Produkt-SBOM/VEX/SLSA, native A11Y-/Plattformnachweise und menschliche Produktabnahme bleiben getrennte spätere Pflichten. Die externe TinyPl0-Lieferung erfüllt keinen TinyCalc-Integrationspreflight. Kein allgemeines WCAG- oder Sicherheitsversprechen, keine zusätzliche externe Rollenfreigabe und kein Folgefeature.
 
-Nächste Aktion: `$speckit-intake-series-next tinycalc-delivery`.
-Dieser Review startet keinen Folgefeature-Lauf und führt keine Git-Lieferaktion aus.
+Beide Reviewvalidatoren wurden nach Anlage ausgeführt und bestanden mit Exit 0: PowerShell und Bash bestätigen denselben aktuellen Series-/Ready-Review mit 13 Zielhashes. Befehle und Exitcodes stehen im ergänzenden unabhängigen JSON-Nachweis. HTML-, Statistik- und sonstige technische Prüfungen gehören zum getrennten Änderungsbericht und werden hier nicht vorweg als bestanden behauptet.
+
+Nächste Aktion: Lokale Validierung abschließen, Thorsten berichten und stoppen. Keinen nachfolgenden Spec-Kit-Befehl ausführen.
 
 ## English
 
-### Outcome and evidence
+Outcome: **Ready** for written intake/document quality only. The independent reviewer assessed 13 targets and Feature 007 alignment separately from the author. This grants no implementation, native screenreader, product or human approval.
 
-Outcome: `Ready`; 13 targets, zero campaign workers, zero findings at every
-severity, zero accepted risks and zero open questions. The request and result
-bind the current paths, normalized content hashes, manifest, receipt and source
-head. All 13 target bodies exactly match the archived full semantic review
-`192a2219-0b1e-4a71-a336-502848cf10b0`. That evidence is explicitly reused;
-this report does not claim 13 new full rereads. The archived review remains
-unchanged and is explicitly superseded.
+Preserve 13 targets, four roots, nine binding edges and every lifecycle state. Migration → functional acceptance → accessibility → rename remains binding. A11Y is the sole declared Eligible target; Sandbox remains an independent Pending root. Eligibility grants no execution authority.
 
-The new review covers Feature 006 completion, TUI archival, three approved source
-lineages and the TUI-to-A11Y handoff. The complete A11Y intake was reread.
-Scope, non-goals, measurable acceptance, evidence, security, accessibility,
-platform boundaries, prompts, prior knowledge, first-use terms and bilingual
-B2 readability remain consistent. Historical open wording does not reopen
-completed work or grant execution authority.
+All target contracts were reviewed for identity, audience, terminology, scope, non-goals, measurable acceptance, sources, order and authority. Completed contracts remain historical; do not rewrite their dated rules or prompts. Resolve current execution paths through the manifest and supported archive resolution.
 
-### Order and boundaries
+PL/0, Rename, A11Y and completed functional intake bytes remain identical. Feature 006 receipt renewal is administrative only. Five renewed receipts retain intake identity and predecessor-first provenance. Independently compared all 17 archive pairs against baseline bytes.
 
-Four roots, nine hard completion edges and 13 unique ordered targets form an
-acyclic dependency graph. Five targets are Completed and archived; eight remain
-active. A11Y is the single Eligible preferred candidate. Rename, didactic
-comments, Security, PL/0, Legacy and table operations remain Blocked in that
-order. Sandbox is an independent Pending root, not the preferred start.
-RL-SE and GSDB are completed independent roots.
+The impact map covers exactly 50 changed controls: nine Feature 007 document refinements and 41 existing future review obligations. This establishes document coverage, not completed product verification. Recheck concrete control details against bound sources before future implementation and keep unknown applicability open. This review makes no new legal determination.
 
-Eligibility is not implementation or delivery permission. Future A11Y work
-must extend the existing contract, reuse still-valid exact-head evidence, avoid
-repeating the migration, preserve human/platform gates and not upgrade packages
-without authority. The public TinyPl0 release and both NuGet versions were
-checked read-only; TinyCalc's later pin, locked restore and contract-test gates,
-as well as its internal Security predecessor, remain required.
+Feature 007 retains ten requirements, eight criteria, both clarified decisions, 17 functional families and at least 364 paths per platform. All 60 tasks remain unchecked. GA-007-01–03 map to four existing tasks. Six new checklist points pass as document quality only, without changing historical reviews.
 
-Configuration and full alignment passed; every target hash matches the current
-manifest and prior review.
-Both PowerShell and Bash result validators passed with exit 0 for the current 13-target Series review.
-NIST SSDF/CWE Top 25, applicable WCAG 2.2 AA, STRIDE/CAPEC and release-specific SBOM/SLSA/VEX boundaries remain intact.
-ASVS/Zero Trust are N/A for the local non-distributed product; AI-SBOM is N/A
-for development-only AI usage. No new certification, human acceptance or risk
-acceptance is claimed. DocFX: zero errors/84 warnings; axe: zero violations. UTF-8 Lynx/ARIA confirm readable ledger text; two existing HTML link gaps and manual axe checks remain outside this intake review.
+IR001 (Medium) identified a mixed Open meaning in the active hardening readiness section. The author corrected both language tracks, separating undecided applicability from missing implementation proof. Independently rechecked the correction and renewed target/receipt/manifest/lineage hashes; the historical superseded prompt is unchanged. No findings, risks or questions remain open. The summary retains the resolved Medium finding in its historical count; the agent accepted no risk.
 
-Next action: `$speckit-intake-series-next tinycalc-delivery`.
-No target content, manifest or receipt was changed. No feature was started and
-no commit, push, pull request or merge was performed.
+The result binds its current request and 13 target hashes. Separate independent evidence binds Feature 007 and supporting inputs. Explicitly supersede and preserve the previous review. SSDF/CWE govern evidence integrity; product, native A11Y, platform, release and human acceptance remain separate. External TinyPl0 delivery is not TinyCalc integration approval. No full WCAG/security assurance or additional external role gate is introduced.
+
+Both result validators ran after writing and passed with exit 0, confirming the same current Series/Ready result with 13 target hashes. Commands and exit codes are recorded in the independent JSON. HTML/statistics/other technical validation remain in the separate change report, not invented here. Finish local validation, report and stop without a downstream command.

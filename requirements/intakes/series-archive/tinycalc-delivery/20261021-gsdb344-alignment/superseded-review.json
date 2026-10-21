@@ -1,0 +1,12 @@
+{
+  "schemaVersion": "1.0",
+  "documentType": "SupersededIntakeReview",
+  "reviewId": "30ca6838-1bdf-49e3-8f94-d72e990c6728",
+  "status": "Superseded",
+  "supersededAt": "2026-10-21T10:45:45Z",
+  "archivedResultPath": "requirements/intakes/series-archive/tinycalc-delivery/20261021-gsdb344-alignment/intake-review-result.json",
+  "archivedResultSha256": "f837574e58b780cc59cf625e67f925da3676755b4219ae38b616a98e637ec376",
+  "successorRequestPath": "requirements/intakes/series/tinycalc-delivery/intake-review-request.json",
+  "successorReviewId": "c0d161e3-477b-4381-9e11-38c19e6e6797",
+  "reason": "Current GSDB/Assurance sources and two intake target hashes changed; prior Ready remains historical, not current validation."
+}

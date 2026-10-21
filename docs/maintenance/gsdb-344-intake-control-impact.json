@@ -1,0 +1,1163 @@
+{
+  "schemaVersion": "1.0",
+  "documentType": "GovernanceIntakeControlImpact",
+  "createdAt": "2026-10-21T10:45:45Z",
+  "head": "5dc92cfd53b6afc785e39e465472a4fe263352cd",
+  "gsdbVersion": "3.4.4",
+  "assuranceVersion": "0.1.5",
+  "sourceDeltaPath": "docs/maintenance/gsdb-344-control-delta.json",
+  "sourceDeltaNormalizedSha256": "e1b4355f6c383ee9b32abd9758d5504751a39d8840728da063bd1f1d74ca2d8f",
+  "proofBoundary": "Documentation coverage only; not a product security assessment / Nur Dokumentenabdeckung, keine Produktsicherheitsbewertung",
+  "controls": [
+    {
+      "controlId": "CL-01-12",
+      "sourcePath": "docs/secure-development/checklisten/CL_01_Standards-Anwendbarkeit.md",
+      "sourceNormalizedSha256": "d52d339fcb61a8585cf425104517e51a88b3826c3311a0a47d17f549b4fb3396",
+      "beforeNormativeSha256": "ca95cef95e56fbb56c1b734eff61f6582f9104ddabf1b684375e83c0110d02b3",
+      "afterNormativeSha256": "8535edfbf50ac2816ab14cd2fcd6d1f70849356e711135cc63a7ef65744306e6",
+      "securityHardening": "DocumentationUpdateRequired",
+      "sandboxHardening": "DocumentationUpdateRequired",
+      "feature007": "DocumentationUpdateRequired",
+      "feature007References": [
+        "spec.md: Governance-Anwendbarkeit und Evidenz",
+        "plan.md: Verfassungsprüfung",
+        "tasks.md: T005/T048"
+      ],
+      "rationale": {
+        "de": "Bestehender Anwendbarkeitsauftrag bleibt erhalten: Produkt, Werkzeugbetrieb und Organisation getrennt prüfen; neue Quellen binden, unbekannte Rollen bleiben offen. Keine neue Rechtsentscheidung in diesem Update.",
+        "en": "Retain existing applicability work: separate product, tooling and organisation, bind current sources and keep unknown roles open. This update makes no new legal determination."
+      },
+      "implementation": "Not Assessed",
+      "owner": "Thorsten",
+      "reevaluationTrigger": "Before separately authorised implementation or changed source/scope",
+      "scopeChangeRequired": false
+    },
+    {
+      "controlId": "CL-07-08",
+      "sourcePath": "docs/secure-development/checklisten/CL_07_CRA-Anwendbarkeit.md",
+      "sourceNormalizedSha256": "03b972af3e45b7fdc3e297fc1ef4b55d23d105f6dcc77f74b68e24b1c38cc53c",
+      "beforeNormativeSha256": "f3fe569c65ef0feed678437c92441325d9840be0362c23e2d40933ae5e615246",
+      "afterNormativeSha256": "45cf5ec829766e6019e61b15a1fe16d5ca9764dedb7672f32b92e44145b54fd7",
+      "securityHardening": "DocumentationUpdateRequired",
+      "sandboxHardening": "DocumentationUpdateRequired",
+      "feature007": "AlreadyCovered",
+      "feature007References": [
+        "spec.md: Governance-Anwendbarkeit und Evidenz",
+        "plan.md: Verfassungsprüfung",
+        "tasks.md: T005/T048"
+      ],
+      "rationale": {
+        "de": "Bestehender Anwendbarkeitsauftrag bleibt erhalten: Produkt, Werkzeugbetrieb und Organisation getrennt prüfen; neue Quellen binden, unbekannte Rollen bleiben offen. Keine neue Rechtsentscheidung in diesem Update.",
+        "en": "Retain existing applicability work: separate product, tooling and organisation, bind current sources and keep unknown roles open. This update makes no new legal determination."
+      },
+      "implementation": "Not Assessed",
+      "owner": "Thorsten",
+      "reevaluationTrigger": "Before separately authorised implementation or changed source/scope",
+      "scopeChangeRequired": false
+    },
+    {
+      "controlId": "CL-07-03",
+      "sourcePath": "docs/secure-development/checklisten/CL_07_CRA-Anwendbarkeit.md",
+      "sourceNormalizedSha256": "03b972af3e45b7fdc3e297fc1ef4b55d23d105f6dcc77f74b68e24b1c38cc53c",
+      "beforeNormativeSha256": "ab0c61d1f89668e311d4a5a4f893452812ebe0bcaeedbdc75f96d21facccbaa3",
+      "afterNormativeSha256": "e5c1ca68d9e5ba510a666342cb6b52f633863208997abe38cdbc62fe88551d9d",
+      "securityHardening": "DocumentationUpdateRequired",
+      "sandboxHardening": "DocumentationUpdateRequired",
+      "feature007": "AlreadyCovered",
+      "feature007References": [
+        "spec.md: Governance-Anwendbarkeit und Evidenz",
+        "plan.md: Verfassungsprüfung",
+        "tasks.md: T005/T048"
+      ],
+      "rationale": {
+        "de": "Bestehender Anwendbarkeitsauftrag bleibt erhalten: Produkt, Werkzeugbetrieb und Organisation getrennt prüfen; neue Quellen binden, unbekannte Rollen bleiben offen. Keine neue Rechtsentscheidung in diesem Update.",
+        "en": "Retain existing applicability work: separate product, tooling and organisation, bind current sources and keep unknown roles open. This update makes no new legal determination."
+      },
+      "implementation": "Not Assessed",
+      "owner": "Thorsten",
+      "reevaluationTrigger": "Before separately authorised implementation or changed source/scope",
+      "scopeChangeRequired": false
+    },
+    {
+      "controlId": "CL-08-12",
+      "sourcePath": "docs/secure-development/checklisten/CL_08_Sicherheits-Code-Review.md",
+      "sourceNormalizedSha256": "571b0ee9c2970c09c4a5dd4ef17831d4a2b7f88571265f32037bb784a2b3be17",
+      "beforeNormativeSha256": "45257c5410f1daf14e984a6fe5c1abf3172fac9de0fe370b4346fc2d5dce41b7",
+      "afterNormativeSha256": "823aabc5eb341250699786edb762dbd4e04db09600f1785eb5274f23f3bf655b",
+      "securityHardening": "DocumentationUpdateRequired",
+      "sandboxHardening": "DocumentationUpdateRequired",
+      "feature007": "AlreadyCovered",
+      "feature007References": [
+        "spec.md: CR-014 und Security Governance",
+        "plan.md: Traceability und Teststrategie",
+        "tasks.md: T047"
+      ],
+      "rationale": {
+        "de": "Bestehende sichere C#-, Datei-, Eingabe-, Ausgabe- und Reviewverträge bleiben maßgeblich. Geänderte Detailregeln werden später an tatsächlichen Änderungen geprüft, keine Codekorrektur oder neue Auth-/Netzwerkschnittstelle jetzt.",
+        "en": "Retain existing secure C#, file, input/output and review contracts. Apply changed details to actual later changes; no code fix or new authentication/network interface now."
+      },
+      "implementation": "Not Assessed",
+      "owner": "Thorsten",
+      "reevaluationTrigger": "Before separately authorised implementation or changed source/scope",
+      "scopeChangeRequired": false
+    },
+    {
+      "controlId": "CL-08-06",
+      "sourcePath": "docs/secure-development/checklisten/CL_08_Sicherheits-Code-Review.md",
+      "sourceNormalizedSha256": "571b0ee9c2970c09c4a5dd4ef17831d4a2b7f88571265f32037bb784a2b3be17",
+      "beforeNormativeSha256": "5aae9505ce289dae96033c26951f55a6dafd717363fbfb96675443bca89b5d64",
+      "afterNormativeSha256": "adee9e834f6f6a07fd30e7c2da3b4095d000e9c953a7a58a190dd8014959f3a0",
+      "securityHardening": "DocumentationUpdateRequired",
+      "sandboxHardening": "DocumentationUpdateRequired",
+      "feature007": "AlreadyCovered",
+      "feature007References": [
+        "spec.md: CR-014 und Security Governance",
+        "plan.md: Traceability und Teststrategie",
+        "tasks.md: T047"
+      ],
+      "rationale": {
+        "de": "Bestehende sichere C#-, Datei-, Eingabe-, Ausgabe- und Reviewverträge bleiben maßgeblich. Geänderte Detailregeln werden später an tatsächlichen Änderungen geprüft, keine Codekorrektur oder neue Auth-/Netzwerkschnittstelle jetzt.",
+        "en": "Retain existing secure C#, file, input/output and review contracts. Apply changed details to actual later changes; no code fix or new authentication/network interface now."
+      },
+      "implementation": "Not Assessed",
+      "owner": "Thorsten",
+      "reevaluationTrigger": "Before separately authorised implementation or changed source/scope",
+      "scopeChangeRequired": false
+    },
+    {
+      "controlId": "CL-08-10",
+      "sourcePath": "docs/secure-development/checklisten/CL_08_Sicherheits-Code-Review.md",
+      "sourceNormalizedSha256": "571b0ee9c2970c09c4a5dd4ef17831d4a2b7f88571265f32037bb784a2b3be17",
+      "beforeNormativeSha256": "c65339cf9270e1f385a1c874d8344ae45f3e0310e371bdd5f872395c75611f18",
+      "afterNormativeSha256": "b2c72b817ab0cd3008f290fa19bbb5dbe267010a32ea358b4289462b7fa65400",
+      "securityHardening": "DocumentationUpdateRequired",
+      "sandboxHardening": "DocumentationUpdateRequired",
+      "feature007": "AlreadyCovered",
+      "feature007References": [
+        "spec.md: CR-014 und Security Governance",
+        "plan.md: Traceability und Teststrategie",
+        "tasks.md: T047"
+      ],
+      "rationale": {
+        "de": "Bestehende sichere C#-, Datei-, Eingabe-, Ausgabe- und Reviewverträge bleiben maßgeblich. Geänderte Detailregeln werden später an tatsächlichen Änderungen geprüft, keine Codekorrektur oder neue Auth-/Netzwerkschnittstelle jetzt.",
+        "en": "Retain existing secure C#, file, input/output and review contracts. Apply changed details to actual later changes; no code fix or new authentication/network interface now."
+      },
+      "implementation": "Not Assessed",
+      "owner": "Thorsten",
+      "reevaluationTrigger": "Before separately authorised implementation or changed source/scope",
+      "scopeChangeRequired": false
+    },
+    {
+      "controlId": "CL-08-03",
+      "sourcePath": "docs/secure-development/checklisten/CL_08_Sicherheits-Code-Review.md",
+      "sourceNormalizedSha256": "571b0ee9c2970c09c4a5dd4ef17831d4a2b7f88571265f32037bb784a2b3be17",
+      "beforeNormativeSha256": "8fc9afedeafc384021c4964ea5f7c7fc26c62257f2603da92283e72f37543d2d",
+      "afterNormativeSha256": "a6b8ae73b4562ce187047a7c79fe855ecbfc17459878b1d3800dc8a089ef860a",
+      "securityHardening": "DocumentationUpdateRequired",
+      "sandboxHardening": "DocumentationUpdateRequired",
+      "feature007": "AlreadyCovered",
+      "feature007References": [
+        "spec.md: CR-014 und Security Governance",
+        "plan.md: Traceability und Teststrategie",
+        "tasks.md: T047"
+      ],
+      "rationale": {
+        "de": "Bestehende sichere C#-, Datei-, Eingabe-, Ausgabe- und Reviewverträge bleiben maßgeblich. Geänderte Detailregeln werden später an tatsächlichen Änderungen geprüft, keine Codekorrektur oder neue Auth-/Netzwerkschnittstelle jetzt.",
+        "en": "Retain existing secure C#, file, input/output and review contracts. Apply changed details to actual later changes; no code fix or new authentication/network interface now."
+      },
+      "implementation": "Not Assessed",
+      "owner": "Thorsten",
+      "reevaluationTrigger": "Before separately authorised implementation or changed source/scope",
+      "scopeChangeRequired": false
+    },
+    {
+      "controlId": "CL-08-13",
+      "sourcePath": "docs/secure-development/checklisten/CL_08_Sicherheits-Code-Review.md",
+      "sourceNormalizedSha256": "571b0ee9c2970c09c4a5dd4ef17831d4a2b7f88571265f32037bb784a2b3be17",
+      "beforeNormativeSha256": "6f933a7cb4500d97069818e46e3de8e7887abd64bb6235f1658056d802740c16",
+      "afterNormativeSha256": "919eff9c6978fd364fa8ee983b47781146bfa504f19906a111f8156d03466c98",
+      "securityHardening": "DocumentationUpdateRequired",
+      "sandboxHardening": "DocumentationUpdateRequired",
+      "feature007": "AlreadyCovered",
+      "feature007References": [
+        "spec.md: CR-014 und Security Governance",
+        "plan.md: Traceability und Teststrategie",
+        "tasks.md: T047"
+      ],
+      "rationale": {
+        "de": "Bestehende sichere C#-, Datei-, Eingabe-, Ausgabe- und Reviewverträge bleiben maßgeblich. Geänderte Detailregeln werden später an tatsächlichen Änderungen geprüft, keine Codekorrektur oder neue Auth-/Netzwerkschnittstelle jetzt.",
+        "en": "Retain existing secure C#, file, input/output and review contracts. Apply changed details to actual later changes; no code fix or new authentication/network interface now."
+      },
+      "implementation": "Not Assessed",
+      "owner": "Thorsten",
+      "reevaluationTrigger": "Before separately authorised implementation or changed source/scope",
+      "scopeChangeRequired": false
+    },
+    {
+      "controlId": "CL-08-02",
+      "sourcePath": "docs/secure-development/checklisten/CL_08_Sicherheits-Code-Review.md",
+      "sourceNormalizedSha256": "571b0ee9c2970c09c4a5dd4ef17831d4a2b7f88571265f32037bb784a2b3be17",
+      "beforeNormativeSha256": "034c4da055ec29159f0069747a80c947b36b490f4c9b50b8545cddae92feef05",
+      "afterNormativeSha256": "a16c097ec1ae00d90881b7ce5b1a37e9e8318ad5330fee4d88f93030d15e3c93",
+      "securityHardening": "DocumentationUpdateRequired",
+      "sandboxHardening": "DocumentationUpdateRequired",
+      "feature007": "AlreadyCovered",
+      "feature007References": [
+        "spec.md: CR-014 und Security Governance",
+        "plan.md: Traceability und Teststrategie",
+        "tasks.md: T047"
+      ],
+      "rationale": {
+        "de": "Bestehende sichere C#-, Datei-, Eingabe-, Ausgabe- und Reviewverträge bleiben maßgeblich. Geänderte Detailregeln werden später an tatsächlichen Änderungen geprüft, keine Codekorrektur oder neue Auth-/Netzwerkschnittstelle jetzt.",
+        "en": "Retain existing secure C#, file, input/output and review contracts. Apply changed details to actual later changes; no code fix or new authentication/network interface now."
+      },
+      "implementation": "Not Assessed",
+      "owner": "Thorsten",
+      "reevaluationTrigger": "Before separately authorised implementation or changed source/scope",
+      "scopeChangeRequired": false
+    },
+    {
+      "controlId": "CL-09-16",
+      "sourcePath": "docs/secure-development/checklisten/CL_09_KI-Codeerzeugung.md",
+      "sourceNormalizedSha256": "1a1c97d69b74026d76c76e620b4160e54a4f3bfb2c09d6b5f60f891e2a8b7c62",
+      "beforeNormativeSha256": "377ae084b7fe4fd39ef4b94fa7ca70105fa08f6e67a44cb480540c05f5a83f32",
+      "afterNormativeSha256": "97eb04af1cbf891d49ab1b31f42b5eb5349ac7ada821eb291c0786299925e597",
+      "securityHardening": "DocumentationUpdateRequired",
+      "sandboxHardening": "DocumentationUpdateRequired",
+      "feature007": "DocumentationUpdateRequired",
+      "feature007References": [
+        "spec.md: Governance-Anwendbarkeit und Evidenz",
+        "plan.md: Verfassungsprüfung",
+        "tasks.md: T005/T048"
+      ],
+      "rationale": {
+        "de": "Bestehender Anwendbarkeitsauftrag bleibt erhalten: Produkt, Werkzeugbetrieb und Organisation getrennt prüfen; neue Quellen binden, unbekannte Rollen bleiben offen. Keine neue Rechtsentscheidung in diesem Update.",
+        "en": "Retain existing applicability work: separate product, tooling and organisation, bind current sources and keep unknown roles open. This update makes no new legal determination."
+      },
+      "implementation": "Not Assessed",
+      "owner": "Thorsten",
+      "reevaluationTrigger": "Before separately authorised implementation or changed source/scope",
+      "scopeChangeRequired": false
+    },
+    {
+      "controlId": "CL-09-05",
+      "sourcePath": "docs/secure-development/checklisten/CL_09_KI-Codeerzeugung.md",
+      "sourceNormalizedSha256": "1a1c97d69b74026d76c76e620b4160e54a4f3bfb2c09d6b5f60f891e2a8b7c62",
+      "beforeNormativeSha256": "69d74993025cee4416ad7c9c95b8367105246692866be7606a3b3eca2ebecf0d",
+      "afterNormativeSha256": "38d6a303e06df963cba912491eddde42255f1bbf57178291b20cd2bbcec2fa4e",
+      "securityHardening": "DocumentationUpdateRequired",
+      "sandboxHardening": "DocumentationUpdateRequired",
+      "feature007": "AlreadyCovered",
+      "feature007References": [
+        "spec.md: CR-014 und Governance-Anwendbarkeit",
+        "plan.md: Phase 0",
+        "tasks.md: T003/T005/T047"
+      ],
+      "rationale": {
+        "de": "Bestehende Werkzeug-, Datenschutz- und Evidenzgrenzen verwenden. Anbieter-/Kontoeigenschaften nicht aus Produktnamen oder Ignore-Dateien ableiten; offene Nachweise nicht als erfüllt übernehmen.",
+        "en": "Use existing tooling, privacy and evidence boundaries. Do not infer provider/account properties from names or ignore files, or transfer unverified fulfilment."
+      },
+      "implementation": "Not Assessed",
+      "owner": "Thorsten",
+      "reevaluationTrigger": "Before separately authorised implementation or changed source/scope",
+      "scopeChangeRequired": false
+    },
+    {
+      "controlId": "CL-09-12",
+      "sourcePath": "docs/secure-development/checklisten/CL_09_KI-Codeerzeugung.md",
+      "sourceNormalizedSha256": "1a1c97d69b74026d76c76e620b4160e54a4f3bfb2c09d6b5f60f891e2a8b7c62",
+      "beforeNormativeSha256": "9a615c100341b85914e90067c2130717810f8df7b8c61ad3851c282d2ae100be",
+      "afterNormativeSha256": "64cde97fc0731dbee5a4341b04ed47ba049a428ed2c5a615137dd2c61f0c0725",
+      "securityHardening": "DocumentationUpdateRequired",
+      "sandboxHardening": "DocumentationUpdateRequired",
+      "feature007": "AlreadyCovered",
+      "feature007References": [
+        "spec.md: CR-014 und Governance-Anwendbarkeit",
+        "plan.md: Phase 0",
+        "tasks.md: T003/T005/T047"
+      ],
+      "rationale": {
+        "de": "Bestehende Werkzeug-, Datenschutz- und Evidenzgrenzen verwenden. Anbieter-/Kontoeigenschaften nicht aus Produktnamen oder Ignore-Dateien ableiten; offene Nachweise nicht als erfüllt übernehmen.",
+        "en": "Use existing tooling, privacy and evidence boundaries. Do not infer provider/account properties from names or ignore files, or transfer unverified fulfilment."
+      },
+      "implementation": "Not Assessed",
+      "owner": "Thorsten",
+      "reevaluationTrigger": "Before separately authorised implementation or changed source/scope",
+      "scopeChangeRequired": false
+    },
+    {
+      "controlId": "CL-09-01",
+      "sourcePath": "docs/secure-development/checklisten/CL_09_KI-Codeerzeugung.md",
+      "sourceNormalizedSha256": "1a1c97d69b74026d76c76e620b4160e54a4f3bfb2c09d6b5f60f891e2a8b7c62",
+      "beforeNormativeSha256": "32fc7153620e3be28d8591f37cb88471eba8626210542bfb0889cbdebf36c411",
+      "afterNormativeSha256": "32b4038d7e8685efae0f37896671820e0f03cddc51883be93fcde6cf340d2e50",
+      "securityHardening": "DocumentationUpdateRequired",
+      "sandboxHardening": "DocumentationUpdateRequired",
+      "feature007": "DocumentationUpdateRequired",
+      "feature007References": [
+        "spec.md: CR-014 und Governance-Anwendbarkeit",
+        "plan.md: Phase 0",
+        "tasks.md: T003/T005/T047"
+      ],
+      "rationale": {
+        "de": "Bestehende Werkzeug-, Datenschutz- und Evidenzgrenzen verwenden. Anbieter-/Kontoeigenschaften nicht aus Produktnamen oder Ignore-Dateien ableiten; offene Nachweise nicht als erfüllt übernehmen.",
+        "en": "Use existing tooling, privacy and evidence boundaries. Do not infer provider/account properties from names or ignore files, or transfer unverified fulfilment."
+      },
+      "implementation": "Not Assessed",
+      "owner": "Thorsten",
+      "reevaluationTrigger": "Before separately authorised implementation or changed source/scope",
+      "scopeChangeRequired": false
+    },
+    {
+      "controlId": "CL-09-06",
+      "sourcePath": "docs/secure-development/checklisten/CL_09_KI-Codeerzeugung.md",
+      "sourceNormalizedSha256": "1a1c97d69b74026d76c76e620b4160e54a4f3bfb2c09d6b5f60f891e2a8b7c62",
+      "beforeNormativeSha256": "4d24f2e7e93e1815341c0fab0b972f381448245910e71d3292add19fd3c2085c",
+      "afterNormativeSha256": "38d05636d644228342b19b26d30d2b310b27f3c151e18dd269aff4be00a98f23",
+      "securityHardening": "DocumentationUpdateRequired",
+      "sandboxHardening": "DocumentationUpdateRequired",
+      "feature007": "AlreadyCovered",
+      "feature007References": [
+        "spec.md: CR-014 und Governance-Anwendbarkeit",
+        "plan.md: Phase 0",
+        "tasks.md: T003/T005/T047"
+      ],
+      "rationale": {
+        "de": "Bestehende Werkzeug-, Datenschutz- und Evidenzgrenzen verwenden. Anbieter-/Kontoeigenschaften nicht aus Produktnamen oder Ignore-Dateien ableiten; offene Nachweise nicht als erfüllt übernehmen.",
+        "en": "Use existing tooling, privacy and evidence boundaries. Do not infer provider/account properties from names or ignore files, or transfer unverified fulfilment."
+      },
+      "implementation": "Not Assessed",
+      "owner": "Thorsten",
+      "reevaluationTrigger": "Before separately authorised implementation or changed source/scope",
+      "scopeChangeRequired": false
+    },
+    {
+      "controlId": "CL-09-11",
+      "sourcePath": "docs/secure-development/checklisten/CL_09_KI-Codeerzeugung.md",
+      "sourceNormalizedSha256": "1a1c97d69b74026d76c76e620b4160e54a4f3bfb2c09d6b5f60f891e2a8b7c62",
+      "beforeNormativeSha256": "8e1eb7f435ebae22c1acf8e9d043c8da37ff648073784fa21fa00939667a9edd",
+      "afterNormativeSha256": "bbf5b48d274e2e9940ff9a2cac85ad3bb4535c06baf5799cc363150fc5fed60a",
+      "securityHardening": "DocumentationUpdateRequired",
+      "sandboxHardening": "DocumentationUpdateRequired",
+      "feature007": "DocumentationUpdateRequired",
+      "feature007References": [
+        "spec.md: CR-014 und Governance-Anwendbarkeit",
+        "plan.md: Phase 0",
+        "tasks.md: T003/T005/T047"
+      ],
+      "rationale": {
+        "de": "Bestehende Werkzeug-, Datenschutz- und Evidenzgrenzen verwenden. Anbieter-/Kontoeigenschaften nicht aus Produktnamen oder Ignore-Dateien ableiten; offene Nachweise nicht als erfüllt übernehmen.",
+        "en": "Use existing tooling, privacy and evidence boundaries. Do not infer provider/account properties from names or ignore files, or transfer unverified fulfilment."
+      },
+      "implementation": "Not Assessed",
+      "owner": "Thorsten",
+      "reevaluationTrigger": "Before separately authorised implementation or changed source/scope",
+      "scopeChangeRequired": false
+    },
+    {
+      "controlId": "CL-09-13",
+      "sourcePath": "docs/secure-development/checklisten/CL_09_KI-Codeerzeugung.md",
+      "sourceNormalizedSha256": "1a1c97d69b74026d76c76e620b4160e54a4f3bfb2c09d6b5f60f891e2a8b7c62",
+      "beforeNormativeSha256": "3d626d2c8c89d7af16cf8046ad88a588c9d4240fdddb78d72395b095f288940e",
+      "afterNormativeSha256": "d0bf65f649cf8665348bc0e496ea3ab31243cf7862176c5f5c323e609addd66c",
+      "securityHardening": "DocumentationUpdateRequired",
+      "sandboxHardening": "DocumentationUpdateRequired",
+      "feature007": "DocumentationUpdateRequired",
+      "feature007References": [
+        "spec.md: CR-014 und Governance-Anwendbarkeit",
+        "plan.md: Phase 0",
+        "tasks.md: T003/T005/T047"
+      ],
+      "rationale": {
+        "de": "Bestehende Werkzeug-, Datenschutz- und Evidenzgrenzen verwenden. Anbieter-/Kontoeigenschaften nicht aus Produktnamen oder Ignore-Dateien ableiten; offene Nachweise nicht als erfüllt übernehmen.",
+        "en": "Use existing tooling, privacy and evidence boundaries. Do not infer provider/account properties from names or ignore files, or transfer unverified fulfilment."
+      },
+      "implementation": "Not Assessed",
+      "owner": "Thorsten",
+      "reevaluationTrigger": "Before separately authorised implementation or changed source/scope",
+      "scopeChangeRequired": false
+    },
+    {
+      "controlId": "CL-10-12",
+      "sourcePath": "docs/secure-development/checklisten/CL_10_Sichere-Entwicklungsumgebung.md",
+      "sourceNormalizedSha256": "3403d31987dd1d26f2e76002193ad7aaf856dd516e8c0ebbfa3ab72ff48b562c",
+      "beforeNormativeSha256": "af4721a86f937329bffd34307d74563ed9e11ffa5453d9890d6cb546df7dcec9",
+      "afterNormativeSha256": "d0bf65f649cf8665348bc0e496ea3ab31243cf7862176c5f5c323e609addd66c",
+      "securityHardening": "DocumentationUpdateRequired",
+      "sandboxHardening": "DocumentationUpdateRequired",
+      "feature007": "DocumentationUpdateRequired",
+      "feature007References": [
+        "spec.md: CR-014 und Governance-Anwendbarkeit",
+        "plan.md: Phase 0",
+        "tasks.md: T003/T005/T047"
+      ],
+      "rationale": {
+        "de": "Bestehende Werkzeug-, Datenschutz- und Evidenzgrenzen verwenden. Anbieter-/Kontoeigenschaften nicht aus Produktnamen oder Ignore-Dateien ableiten; offene Nachweise nicht als erfüllt übernehmen.",
+        "en": "Use existing tooling, privacy and evidence boundaries. Do not infer provider/account properties from names or ignore files, or transfer unverified fulfilment."
+      },
+      "implementation": "Not Assessed",
+      "owner": "Thorsten",
+      "reevaluationTrigger": "Before separately authorised implementation or changed source/scope",
+      "scopeChangeRequired": false
+    },
+    {
+      "controlId": "CL-11-08",
+      "sourcePath": "docs/secure-development/checklisten/CL_11_Datenschutz-Folgenabschaetzung.md",
+      "sourceNormalizedSha256": "bd40ec60bb50af1f4a482135b5b982892a64aa55b0dbfbc9777e3957589b2577",
+      "beforeNormativeSha256": "e2fcaceac7365c44e0262e4d56fa6b38b013b491076657843af7a1f0a287d80e",
+      "afterNormativeSha256": "0943614b6f151e6bd40f4237ecd67e4ba77501a209dfb20ed980b0c8b4da7bdd",
+      "securityHardening": "DocumentationUpdateRequired",
+      "sandboxHardening": "DocumentationUpdateRequired",
+      "feature007": "AlreadyCovered",
+      "feature007References": [
+        "spec.md: Governance-Anwendbarkeit und Evidenz",
+        "plan.md: Verfassungsprüfung",
+        "tasks.md: T005/T048"
+      ],
+      "rationale": {
+        "de": "Bestehender Anwendbarkeitsauftrag bleibt erhalten: Produkt, Werkzeugbetrieb und Organisation getrennt prüfen; neue Quellen binden, unbekannte Rollen bleiben offen. Keine neue Rechtsentscheidung in diesem Update.",
+        "en": "Retain existing applicability work: separate product, tooling and organisation, bind current sources and keep unknown roles open. This update makes no new legal determination."
+      },
+      "implementation": "Not Assessed",
+      "owner": "Thorsten",
+      "reevaluationTrigger": "Before separately authorised implementation or changed source/scope",
+      "scopeChangeRequired": false
+    },
+    {
+      "controlId": "CL-11-12",
+      "sourcePath": "docs/secure-development/checklisten/CL_11_Datenschutz-Folgenabschaetzung.md",
+      "sourceNormalizedSha256": "bd40ec60bb50af1f4a482135b5b982892a64aa55b0dbfbc9777e3957589b2577",
+      "beforeNormativeSha256": "a8fff10ccb9616ca017cff27d5220ac4ffd6df322ecfb5d165b588895a69e05e",
+      "afterNormativeSha256": "c6e94577c7dac1757ecb306e8f8d53fa9e6d1caff356cb12456f82218338202a",
+      "securityHardening": "DocumentationUpdateRequired",
+      "sandboxHardening": "DocumentationUpdateRequired",
+      "feature007": "AlreadyCovered",
+      "feature007References": [
+        "spec.md: Governance-Anwendbarkeit und Evidenz",
+        "plan.md: Verfassungsprüfung",
+        "tasks.md: T005/T048"
+      ],
+      "rationale": {
+        "de": "Bestehender Anwendbarkeitsauftrag bleibt erhalten: Produkt, Werkzeugbetrieb und Organisation getrennt prüfen; neue Quellen binden, unbekannte Rollen bleiben offen. Keine neue Rechtsentscheidung in diesem Update.",
+        "en": "Retain existing applicability work: separate product, tooling and organisation, bind current sources and keep unknown roles open. This update makes no new legal determination."
+      },
+      "implementation": "Not Assessed",
+      "owner": "Thorsten",
+      "reevaluationTrigger": "Before separately authorised implementation or changed source/scope",
+      "scopeChangeRequired": false
+    },
+    {
+      "controlId": "CL-11-11",
+      "sourcePath": "docs/secure-development/checklisten/CL_11_Datenschutz-Folgenabschaetzung.md",
+      "sourceNormalizedSha256": "bd40ec60bb50af1f4a482135b5b982892a64aa55b0dbfbc9777e3957589b2577",
+      "beforeNormativeSha256": "555c0d4c79ef8f602c8cc579405023c64282abac46d2eab8aa59855ebde8ea8d",
+      "afterNormativeSha256": "570412460e368a76ce948feda8895548b31d0c3f7fbf1e2959891c417bb73f69",
+      "securityHardening": "DocumentationUpdateRequired",
+      "sandboxHardening": "DocumentationUpdateRequired",
+      "feature007": "AlreadyCovered",
+      "feature007References": [
+        "spec.md: Governance-Anwendbarkeit und Evidenz",
+        "plan.md: Verfassungsprüfung",
+        "tasks.md: T005/T048"
+      ],
+      "rationale": {
+        "de": "Bestehender Anwendbarkeitsauftrag bleibt erhalten: Produkt, Werkzeugbetrieb und Organisation getrennt prüfen; neue Quellen binden, unbekannte Rollen bleiben offen. Keine neue Rechtsentscheidung in diesem Update.",
+        "en": "Retain existing applicability work: separate product, tooling and organisation, bind current sources and keep unknown roles open. This update makes no new legal determination."
+      },
+      "implementation": "Not Assessed",
+      "owner": "Thorsten",
+      "reevaluationTrigger": "Before separately authorised implementation or changed source/scope",
+      "scopeChangeRequired": false
+    },
+    {
+      "controlId": "CL-11-07",
+      "sourcePath": "docs/secure-development/checklisten/CL_11_Datenschutz-Folgenabschaetzung.md",
+      "sourceNormalizedSha256": "bd40ec60bb50af1f4a482135b5b982892a64aa55b0dbfbc9777e3957589b2577",
+      "beforeNormativeSha256": "f90d976af9303c949fa941337758445b82ab753b8a1d4fb82e274055a039ab4c",
+      "afterNormativeSha256": "4070b49ba9fd914dc7f76e28e94caf61e23c41adee8df1c1d34d0c37573cc8e9",
+      "securityHardening": "DocumentationUpdateRequired",
+      "sandboxHardening": "DocumentationUpdateRequired",
+      "feature007": "AlreadyCovered",
+      "feature007References": [
+        "spec.md: Governance-Anwendbarkeit und Evidenz",
+        "plan.md: Verfassungsprüfung",
+        "tasks.md: T005/T048"
+      ],
+      "rationale": {
+        "de": "Bestehender Anwendbarkeitsauftrag bleibt erhalten: Produkt, Werkzeugbetrieb und Organisation getrennt prüfen; neue Quellen binden, unbekannte Rollen bleiben offen. Keine neue Rechtsentscheidung in diesem Update.",
+        "en": "Retain existing applicability work: separate product, tooling and organisation, bind current sources and keep unknown roles open. This update makes no new legal determination."
+      },
+      "implementation": "Not Assessed",
+      "owner": "Thorsten",
+      "reevaluationTrigger": "Before separately authorised implementation or changed source/scope",
+      "scopeChangeRequired": false
+    },
+    {
+      "controlId": "CL-11-06",
+      "sourcePath": "docs/secure-development/checklisten/CL_11_Datenschutz-Folgenabschaetzung.md",
+      "sourceNormalizedSha256": "bd40ec60bb50af1f4a482135b5b982892a64aa55b0dbfbc9777e3957589b2577",
+      "beforeNormativeSha256": "11c8bce2d59b2acc0a07623365a5a43c4e5a0038630633e1b0c8f924fd20aa2e",
+      "afterNormativeSha256": "1b5991649e451c16f2fca64e1dac889f3454f42d110abef6f53decc117165265",
+      "securityHardening": "DocumentationUpdateRequired",
+      "sandboxHardening": "DocumentationUpdateRequired",
+      "feature007": "AlreadyCovered",
+      "feature007References": [
+        "spec.md: Governance-Anwendbarkeit und Evidenz",
+        "plan.md: Verfassungsprüfung",
+        "tasks.md: T005/T048"
+      ],
+      "rationale": {
+        "de": "Bestehender Anwendbarkeitsauftrag bleibt erhalten: Produkt, Werkzeugbetrieb und Organisation getrennt prüfen; neue Quellen binden, unbekannte Rollen bleiben offen. Keine neue Rechtsentscheidung in diesem Update.",
+        "en": "Retain existing applicability work: separate product, tooling and organisation, bind current sources and keep unknown roles open. This update makes no new legal determination."
+      },
+      "implementation": "Not Assessed",
+      "owner": "Thorsten",
+      "reevaluationTrigger": "Before separately authorised implementation or changed source/scope",
+      "scopeChangeRequired": false
+    },
+    {
+      "controlId": "CL-07-01",
+      "sourcePath": "docs/secure-development/checklisten/CL_07_CRA-Anwendbarkeit.md",
+      "sourceNormalizedSha256": "03b972af3e45b7fdc3e297fc1ef4b55d23d105f6dcc77f74b68e24b1c38cc53c",
+      "beforeNormativeSha256": "5f2bd664a4bb1511b04ac803141cdbafd2026b589d36376163952376e65aa273",
+      "afterNormativeSha256": "31f7b50da3e8c5edfb9fbcf9eda7cdc9efaf061520768401ceb2d2607cfd2ed6",
+      "securityHardening": "DocumentationUpdateRequired",
+      "sandboxHardening": "DocumentationUpdateRequired",
+      "feature007": "AlreadyCovered",
+      "feature007References": [
+        "spec.md: Governance-Anwendbarkeit und Evidenz",
+        "plan.md: Verfassungsprüfung",
+        "tasks.md: T005/T048"
+      ],
+      "rationale": {
+        "de": "Bestehender Anwendbarkeitsauftrag bleibt erhalten: Produkt, Werkzeugbetrieb und Organisation getrennt prüfen; neue Quellen binden, unbekannte Rollen bleiben offen. Keine neue Rechtsentscheidung in diesem Update.",
+        "en": "Retain existing applicability work: separate product, tooling and organisation, bind current sources and keep unknown roles open. This update makes no new legal determination."
+      },
+      "implementation": "Not Assessed",
+      "owner": "Thorsten",
+      "reevaluationTrigger": "Before separately authorised implementation or changed source/scope",
+      "scopeChangeRequired": false
+    },
+    {
+      "controlId": "CL-07-10",
+      "sourcePath": "docs/secure-development/checklisten/CL_07_CRA-Anwendbarkeit.md",
+      "sourceNormalizedSha256": "03b972af3e45b7fdc3e297fc1ef4b55d23d105f6dcc77f74b68e24b1c38cc53c",
+      "beforeNormativeSha256": "440474c46410219755cefd856947b76f60bc96ec11a10209d4ccd14abf2583be",
+      "afterNormativeSha256": "9cceae131db9f0c23ffb2b8fc2a5c02f7d9b914435c6d9ce6788ad5c562c0dc1",
+      "securityHardening": "DocumentationUpdateRequired",
+      "sandboxHardening": "DocumentationUpdateRequired",
+      "feature007": "AlreadyCovered",
+      "feature007References": [
+        "spec.md: Governance-Anwendbarkeit und Evidenz",
+        "plan.md: Verfassungsprüfung",
+        "tasks.md: T005/T048"
+      ],
+      "rationale": {
+        "de": "Bestehender Anwendbarkeitsauftrag bleibt erhalten: Produkt, Werkzeugbetrieb und Organisation getrennt prüfen; neue Quellen binden, unbekannte Rollen bleiben offen. Keine neue Rechtsentscheidung in diesem Update.",
+        "en": "Retain existing applicability work: separate product, tooling and organisation, bind current sources and keep unknown roles open. This update makes no new legal determination."
+      },
+      "implementation": "Not Assessed",
+      "owner": "Thorsten",
+      "reevaluationTrigger": "Before separately authorised implementation or changed source/scope",
+      "scopeChangeRequired": false
+    },
+    {
+      "controlId": "CL-07-11",
+      "sourcePath": "docs/secure-development/checklisten/CL_07_CRA-Anwendbarkeit.md",
+      "sourceNormalizedSha256": "03b972af3e45b7fdc3e297fc1ef4b55d23d105f6dcc77f74b68e24b1c38cc53c",
+      "beforeNormativeSha256": "13eec6bc2e1ca8ac5089cbf537f6bf7d0394fa85efd431a180d6e1c7f28a170f",
+      "afterNormativeSha256": "172a645317c681f529600971a5444a34e83f3550f443b8f2534eb40fa116dc49",
+      "securityHardening": "DocumentationUpdateRequired",
+      "sandboxHardening": "DocumentationUpdateRequired",
+      "feature007": "AlreadyCovered",
+      "feature007References": [
+        "spec.md: Governance-Anwendbarkeit und Evidenz",
+        "plan.md: Verfassungsprüfung",
+        "tasks.md: T005/T048"
+      ],
+      "rationale": {
+        "de": "Bestehender Anwendbarkeitsauftrag bleibt erhalten: Produkt, Werkzeugbetrieb und Organisation getrennt prüfen; neue Quellen binden, unbekannte Rollen bleiben offen. Keine neue Rechtsentscheidung in diesem Update.",
+        "en": "Retain existing applicability work: separate product, tooling and organisation, bind current sources and keep unknown roles open. This update makes no new legal determination."
+      },
+      "implementation": "Not Assessed",
+      "owner": "Thorsten",
+      "reevaluationTrigger": "Before separately authorised implementation or changed source/scope",
+      "scopeChangeRequired": false
+    },
+    {
+      "controlId": "CL-07-05",
+      "sourcePath": "docs/secure-development/checklisten/CL_07_CRA-Anwendbarkeit.md",
+      "sourceNormalizedSha256": "03b972af3e45b7fdc3e297fc1ef4b55d23d105f6dcc77f74b68e24b1c38cc53c",
+      "beforeNormativeSha256": "f7d3f0c1c726f96f6e24b461f63182db7bec55908b3bc94419695a4495e3802f",
+      "afterNormativeSha256": "d9833131fea9d0306512f57bdc2088a8f70cd00d96ad3100f31fd59292ead011",
+      "securityHardening": "DocumentationUpdateRequired",
+      "sandboxHardening": "DocumentationUpdateRequired",
+      "feature007": "AlreadyCovered",
+      "feature007References": [
+        "spec.md: Governance-Anwendbarkeit und Evidenz",
+        "plan.md: Verfassungsprüfung",
+        "tasks.md: T005/T048"
+      ],
+      "rationale": {
+        "de": "Bestehender Anwendbarkeitsauftrag bleibt erhalten: Produkt, Werkzeugbetrieb und Organisation getrennt prüfen; neue Quellen binden, unbekannte Rollen bleiben offen. Keine neue Rechtsentscheidung in diesem Update.",
+        "en": "Retain existing applicability work: separate product, tooling and organisation, bind current sources and keep unknown roles open. This update makes no new legal determination."
+      },
+      "implementation": "Not Assessed",
+      "owner": "Thorsten",
+      "reevaluationTrigger": "Before separately authorised implementation or changed source/scope",
+      "scopeChangeRequired": false
+    },
+    {
+      "controlId": "CL-01-10",
+      "sourcePath": "docs/secure-development/checklisten/CL_01_Standards-Anwendbarkeit.md",
+      "sourceNormalizedSha256": "d52d339fcb61a8585cf425104517e51a88b3826c3311a0a47d17f549b4fb3396",
+      "beforeNormativeSha256": "18a77174f520daba8dcf6c3f9f688d22b99f5de02e5db795fe4a8a07d44b2aef",
+      "afterNormativeSha256": "e6ad5e3bfd1f38dd8d5a0694b543920882c66034161d2a27c5671ea9a7d1b3fe",
+      "securityHardening": "DocumentationUpdateRequired",
+      "sandboxHardening": "DocumentationUpdateRequired",
+      "feature007": "AlreadyCovered",
+      "feature007References": [
+        "spec.md: Governance-Anwendbarkeit und Evidenz",
+        "plan.md: Verfassungsprüfung",
+        "tasks.md: T003/T005/T048"
+      ],
+      "rationale": {
+        "de": "Bestehende Governance-/Supply-Chain-Anwendbarkeit bleibt erhalten; konkrete Fassung und getrennte Statusachsen im späteren Evidence-Kontext binden. Referenz oder Installation ist kein Erfüllungsnachweis.",
+        "en": "Retain existing governance/supply-chain applicability and bind exact sources and separate status axes in the later evidence context. Reference or installation is not fulfilment."
+      },
+      "implementation": "Not Assessed",
+      "owner": "Thorsten",
+      "reevaluationTrigger": "Before separately authorised implementation or changed source/scope",
+      "scopeChangeRequired": false
+    },
+    {
+      "controlId": "CL-01-08",
+      "sourcePath": "docs/secure-development/checklisten/CL_01_Standards-Anwendbarkeit.md",
+      "sourceNormalizedSha256": "d52d339fcb61a8585cf425104517e51a88b3826c3311a0a47d17f549b4fb3396",
+      "beforeNormativeSha256": "7befc92fade4b89e708660af9e6c50ac4a34438f79abb55b3ca2261c3e7355f2",
+      "afterNormativeSha256": "0e9cfc5175b59984788bfe40fe35f2cd62fb08324618da6ac1a3ae98b936f64b",
+      "securityHardening": "DocumentationUpdateRequired",
+      "sandboxHardening": "DocumentationUpdateRequired",
+      "feature007": "AlreadyCovered",
+      "feature007References": [
+        "spec.md: Governance-Anwendbarkeit und Evidenz",
+        "plan.md: Verfassungsprüfung",
+        "tasks.md: T003/T005/T048"
+      ],
+      "rationale": {
+        "de": "Bestehende Governance-/Supply-Chain-Anwendbarkeit bleibt erhalten; konkrete Fassung und getrennte Statusachsen im späteren Evidence-Kontext binden. Referenz oder Installation ist kein Erfüllungsnachweis.",
+        "en": "Retain existing governance/supply-chain applicability and bind exact sources and separate status axes in the later evidence context. Reference or installation is not fulfilment."
+      },
+      "implementation": "Not Assessed",
+      "owner": "Thorsten",
+      "reevaluationTrigger": "Before separately authorised implementation or changed source/scope",
+      "scopeChangeRequired": false
+    },
+    {
+      "controlId": "CL-01-11",
+      "sourcePath": "docs/secure-development/checklisten/CL_01_Standards-Anwendbarkeit.md",
+      "sourceNormalizedSha256": "d52d339fcb61a8585cf425104517e51a88b3826c3311a0a47d17f549b4fb3396",
+      "beforeNormativeSha256": "f050a267e48b792fb612ac40cfc2598a3fc39575b5a22fb7225226fe58d772a1",
+      "afterNormativeSha256": "f767aa885a6d09d6401bacc9817a1b40ad773b5abd69f031de52462e03f73f97",
+      "securityHardening": "DocumentationUpdateRequired",
+      "sandboxHardening": "DocumentationUpdateRequired",
+      "feature007": "DocumentationUpdateRequired",
+      "feature007References": [
+        "spec.md: Governance-Anwendbarkeit und Evidenz",
+        "plan.md: Verfassungsprüfung",
+        "tasks.md: T003/T005/T048"
+      ],
+      "rationale": {
+        "de": "Bestehende Governance-/Supply-Chain-Anwendbarkeit bleibt erhalten; konkrete Fassung und getrennte Statusachsen im späteren Evidence-Kontext binden. Referenz oder Installation ist kein Erfüllungsnachweis.",
+        "en": "Retain existing governance/supply-chain applicability and bind exact sources and separate status axes in the later evidence context. Reference or installation is not fulfilment."
+      },
+      "implementation": "Not Assessed",
+      "owner": "Thorsten",
+      "reevaluationTrigger": "Before separately authorised implementation or changed source/scope",
+      "scopeChangeRequired": false
+    },
+    {
+      "controlId": "CL-01-01",
+      "sourcePath": "docs/secure-development/checklisten/CL_01_Standards-Anwendbarkeit.md",
+      "sourceNormalizedSha256": "d52d339fcb61a8585cf425104517e51a88b3826c3311a0a47d17f549b4fb3396",
+      "beforeNormativeSha256": "f03bcee2fffdd19af72131003e1ba39d72cb6fa01942e5e10cef67819be39b1f",
+      "afterNormativeSha256": "3b02e0903d133b484ffb1a77c9971c3e61a546b9a9a4898b4a21e4469d94f82a",
+      "securityHardening": "DocumentationUpdateRequired",
+      "sandboxHardening": "DocumentationUpdateRequired",
+      "feature007": "AlreadyCovered",
+      "feature007References": [
+        "spec.md: Governance-Anwendbarkeit und Evidenz",
+        "plan.md: Verfassungsprüfung",
+        "tasks.md: T003/T005/T048"
+      ],
+      "rationale": {
+        "de": "Bestehende Governance-/Supply-Chain-Anwendbarkeit bleibt erhalten; konkrete Fassung und getrennte Statusachsen im späteren Evidence-Kontext binden. Referenz oder Installation ist kein Erfüllungsnachweis.",
+        "en": "Retain existing governance/supply-chain applicability and bind exact sources and separate status axes in the later evidence context. Reference or installation is not fulfilment."
+      },
+      "implementation": "Not Assessed",
+      "owner": "Thorsten",
+      "reevaluationTrigger": "Before separately authorised implementation or changed source/scope",
+      "scopeChangeRequired": false
+    },
+    {
+      "controlId": "CL-01-03",
+      "sourcePath": "docs/secure-development/checklisten/CL_01_Standards-Anwendbarkeit.md",
+      "sourceNormalizedSha256": "d52d339fcb61a8585cf425104517e51a88b3826c3311a0a47d17f549b4fb3396",
+      "beforeNormativeSha256": "a7d00eabec84e851af8bbfae0a771451244181ddb72426c17371df8ac0274197",
+      "afterNormativeSha256": "b29a696322109f638f505b6ed36c0a358bc71f6b114377e485bfd7abe14349b7",
+      "securityHardening": "DocumentationUpdateRequired",
+      "sandboxHardening": "DocumentationUpdateRequired",
+      "feature007": "AlreadyCovered",
+      "feature007References": [
+        "spec.md: Governance-Anwendbarkeit und Evidenz",
+        "plan.md: Verfassungsprüfung",
+        "tasks.md: T003/T005/T048"
+      ],
+      "rationale": {
+        "de": "Bestehende Governance-/Supply-Chain-Anwendbarkeit bleibt erhalten; konkrete Fassung und getrennte Statusachsen im späteren Evidence-Kontext binden. Referenz oder Installation ist kein Erfüllungsnachweis.",
+        "en": "Retain existing governance/supply-chain applicability and bind exact sources and separate status axes in the later evidence context. Reference or installation is not fulfilment."
+      },
+      "implementation": "Not Assessed",
+      "owner": "Thorsten",
+      "reevaluationTrigger": "Before separately authorised implementation or changed source/scope",
+      "scopeChangeRequired": false
+    },
+    {
+      "controlId": "CL-02-12",
+      "sourcePath": "docs/secure-development/checklisten/CL_02_Sichere-Softwarearchitektur.md",
+      "sourceNormalizedSha256": "45f51a1bf357c8fe13689aa20b81b6b0298114090e834efa20129ff6f3e099d7",
+      "beforeNormativeSha256": "24c0e6ab23f629829ee5a309595018fb496a8a4490914a3fdb5e00310f47e590",
+      "afterNormativeSha256": "a67d08598d63803829ab096c7c48ca52c09413998151d8129bf85a099ca30260",
+      "securityHardening": "DocumentationUpdateRequired",
+      "sandboxHardening": "DocumentationUpdateRequired",
+      "feature007": "AlreadyCovered",
+      "feature007References": [
+        "spec.md: Governance-Anwendbarkeit und Evidenz",
+        "plan.md: Verfassungsprüfung",
+        "tasks.md: T003/T005/T048"
+      ],
+      "rationale": {
+        "de": "Bestehende Governance-/Supply-Chain-Anwendbarkeit bleibt erhalten; konkrete Fassung und getrennte Statusachsen im späteren Evidence-Kontext binden. Referenz oder Installation ist kein Erfüllungsnachweis.",
+        "en": "Retain existing governance/supply-chain applicability and bind exact sources and separate status axes in the later evidence context. Reference or installation is not fulfilment."
+      },
+      "implementation": "Not Assessed",
+      "owner": "Thorsten",
+      "reevaluationTrigger": "Before separately authorised implementation or changed source/scope",
+      "scopeChangeRequired": false
+    },
+    {
+      "controlId": "CL-02-13",
+      "sourcePath": "docs/secure-development/checklisten/CL_02_Sichere-Softwarearchitektur.md",
+      "sourceNormalizedSha256": "45f51a1bf357c8fe13689aa20b81b6b0298114090e834efa20129ff6f3e099d7",
+      "beforeNormativeSha256": "5d84168d185f56b48c8f26903ed98ce75fab5eefc153c7e50aea1c4ec03f0859",
+      "afterNormativeSha256": "4ec628b91eae3d4c83372b0a8edae096da8090667589c1ec742b9ac53ffb4863",
+      "securityHardening": "DocumentationUpdateRequired",
+      "sandboxHardening": "DocumentationUpdateRequired",
+      "feature007": "AlreadyCovered",
+      "feature007References": [
+        "spec.md: Governance-Anwendbarkeit und Evidenz",
+        "plan.md: Verfassungsprüfung",
+        "tasks.md: T003/T005/T048"
+      ],
+      "rationale": {
+        "de": "Bestehende Governance-/Supply-Chain-Anwendbarkeit bleibt erhalten; konkrete Fassung und getrennte Statusachsen im späteren Evidence-Kontext binden. Referenz oder Installation ist kein Erfüllungsnachweis.",
+        "en": "Retain existing governance/supply-chain applicability and bind exact sources and separate status axes in the later evidence context. Reference or installation is not fulfilment."
+      },
+      "implementation": "Not Assessed",
+      "owner": "Thorsten",
+      "reevaluationTrigger": "Before separately authorised implementation or changed source/scope",
+      "scopeChangeRequired": false
+    },
+    {
+      "controlId": "CL-02-02",
+      "sourcePath": "docs/secure-development/checklisten/CL_02_Sichere-Softwarearchitektur.md",
+      "sourceNormalizedSha256": "45f51a1bf357c8fe13689aa20b81b6b0298114090e834efa20129ff6f3e099d7",
+      "beforeNormativeSha256": "a096abae7d424439d820bd96ea0cdcd83e787f84778552531a4432d8a3d53867",
+      "afterNormativeSha256": "78689129945227fedb233efca8bd902583f75435336f41408ae4fc1b900f0298",
+      "securityHardening": "DocumentationUpdateRequired",
+      "sandboxHardening": "DocumentationUpdateRequired",
+      "feature007": "AlreadyCovered",
+      "feature007References": [
+        "spec.md: Governance-Anwendbarkeit und Evidenz",
+        "plan.md: Verfassungsprüfung",
+        "tasks.md: T003/T005/T048"
+      ],
+      "rationale": {
+        "de": "Bestehende Governance-/Supply-Chain-Anwendbarkeit bleibt erhalten; konkrete Fassung und getrennte Statusachsen im späteren Evidence-Kontext binden. Referenz oder Installation ist kein Erfüllungsnachweis.",
+        "en": "Retain existing governance/supply-chain applicability and bind exact sources and separate status axes in the later evidence context. Reference or installation is not fulfilment."
+      },
+      "implementation": "Not Assessed",
+      "owner": "Thorsten",
+      "reevaluationTrigger": "Before separately authorised implementation or changed source/scope",
+      "scopeChangeRequired": false
+    },
+    {
+      "controlId": "CL-03-10",
+      "sourcePath": "docs/secure-development/checklisten/CL_03_Krypto-Mindestvorgaben.md",
+      "sourceNormalizedSha256": "be5d2629200268cb202ffba99f34f5d1e11252686496b5e9f7f477f5d7a69db3",
+      "beforeNormativeSha256": "d61434e587a3552b58f445fc23aea210c96a39b1c48340dc0c4b008aa54b5120",
+      "afterNormativeSha256": "d9bec167629baf32c3c455cadf78fb3ba01af9cb1d3e56885114fd67840929b0",
+      "securityHardening": "DocumentationUpdateRequired",
+      "sandboxHardening": "DocumentationUpdateRequired",
+      "feature007": "AlreadyCovered",
+      "feature007References": [
+        "spec.md: CR-014 und Security Governance",
+        "plan.md: Verfassungsprüfung",
+        "tasks.md: T047/T048"
+      ],
+      "rationale": {
+        "de": "Bestehender risikobasierter Security-/Release-Prüfauftrag deckt die Kontrollart ab. Algorithmus-, Frist- und Supportdetails erst im späteren anwendbaren Scope prüfen; keine neue Kryptografie oder Releasepflicht behaupten.",
+        "en": "The existing risk-based security/release review covers this control type. Assess algorithm, date and support details only in later applicable scope; invent no crypto or release obligation."
+      },
+      "implementation": "Not Assessed",
+      "owner": "Thorsten",
+      "reevaluationTrigger": "Before separately authorised implementation or changed source/scope",
+      "scopeChangeRequired": false
+    },
+    {
+      "controlId": "CL-03-07",
+      "sourcePath": "docs/secure-development/checklisten/CL_03_Krypto-Mindestvorgaben.md",
+      "sourceNormalizedSha256": "be5d2629200268cb202ffba99f34f5d1e11252686496b5e9f7f477f5d7a69db3",
+      "beforeNormativeSha256": "3214f9f102a91cc1ba90d8e8542dd7550ebacdd5d4aa7db259d1aa3a3a37d571",
+      "afterNormativeSha256": "7609b2a2cbefab4768a8e0b4bc9f7758ad428feba8556e50fcfd8231a16314b3",
+      "securityHardening": "DocumentationUpdateRequired",
+      "sandboxHardening": "DocumentationUpdateRequired",
+      "feature007": "AlreadyCovered",
+      "feature007References": [
+        "spec.md: CR-014 und Security Governance",
+        "plan.md: Verfassungsprüfung",
+        "tasks.md: T047/T048"
+      ],
+      "rationale": {
+        "de": "Bestehender risikobasierter Security-/Release-Prüfauftrag deckt die Kontrollart ab. Algorithmus-, Frist- und Supportdetails erst im späteren anwendbaren Scope prüfen; keine neue Kryptografie oder Releasepflicht behaupten.",
+        "en": "The existing risk-based security/release review covers this control type. Assess algorithm, date and support details only in later applicable scope; invent no crypto or release obligation."
+      },
+      "implementation": "Not Assessed",
+      "owner": "Thorsten",
+      "reevaluationTrigger": "Before separately authorised implementation or changed source/scope",
+      "scopeChangeRequired": false
+    },
+    {
+      "controlId": "CL-12-12",
+      "sourcePath": "docs/secure-development/checklisten/CL_12_Agentische-KI-Sandbox.md",
+      "sourceNormalizedSha256": "2c02d0730c7a1e4ec93f062499f7ebc68083f5ffce432929459c917918b07fc4",
+      "beforeNormativeSha256": "a65043404cd7832defadf3da335ca238cd398e30cbf6bfa9350fd6cd1a2d8b86",
+      "afterNormativeSha256": "3ce564c5890163ac5b998b8bb970e5b56981d19f680d80bfe75ccebc519c385a",
+      "securityHardening": "DocumentationUpdateRequired",
+      "sandboxHardening": "DocumentationUpdateRequired",
+      "feature007": "DocumentationUpdateRequired",
+      "feature007References": [
+        "spec.md: CR-014 und Governance-Anwendbarkeit",
+        "plan.md: Phase 0",
+        "tasks.md: T003/T005/T047"
+      ],
+      "rationale": {
+        "de": "Bestehende Werkzeug-, Datenschutz- und Evidenzgrenzen verwenden. Anbieter-/Kontoeigenschaften nicht aus Produktnamen oder Ignore-Dateien ableiten; offene Nachweise nicht als erfüllt übernehmen.",
+        "en": "Use existing tooling, privacy and evidence boundaries. Do not infer provider/account properties from names or ignore files, or transfer unverified fulfilment."
+      },
+      "implementation": "Not Assessed",
+      "owner": "Thorsten",
+      "reevaluationTrigger": "Before separately authorised implementation or changed source/scope",
+      "scopeChangeRequired": false
+    },
+    {
+      "controlId": "CL-03-02",
+      "sourcePath": "docs/secure-development/checklisten/CL_03_Krypto-Mindestvorgaben.md",
+      "sourceNormalizedSha256": "be5d2629200268cb202ffba99f34f5d1e11252686496b5e9f7f477f5d7a69db3",
+      "beforeNormativeSha256": "6c4b96eeaf40243ac634679fe9d4b3a35cdf143cf78fd6b3c9b317745630138e",
+      "afterNormativeSha256": "234deae7b61edfa7e322fd13179ef7aba0007345fda37c315a311cf2d2b83d96",
+      "securityHardening": "DocumentationUpdateRequired",
+      "sandboxHardening": "DocumentationUpdateRequired",
+      "feature007": "AlreadyCovered",
+      "feature007References": [
+        "spec.md: CR-014 und Security Governance",
+        "plan.md: Verfassungsprüfung",
+        "tasks.md: T047/T048"
+      ],
+      "rationale": {
+        "de": "Bestehender risikobasierter Security-/Release-Prüfauftrag deckt die Kontrollart ab. Algorithmus-, Frist- und Supportdetails erst im späteren anwendbaren Scope prüfen; keine neue Kryptografie oder Releasepflicht behaupten.",
+        "en": "The existing risk-based security/release review covers this control type. Assess algorithm, date and support details only in later applicable scope; invent no crypto or release obligation."
+      },
+      "implementation": "Not Assessed",
+      "owner": "Thorsten",
+      "reevaluationTrigger": "Before separately authorised implementation or changed source/scope",
+      "scopeChangeRequired": false
+    },
+    {
+      "controlId": "CL-05-13",
+      "sourcePath": "docs/secure-development/checklisten/CL_05_Lieferkette-Build-Integritaet.md",
+      "sourceNormalizedSha256": "63d0ef15476da6d5d782c2feb9c74387e4328ce9a9228b47df730a382a99f80b",
+      "beforeNormativeSha256": "1363b740f451fa29c9a793c862713aecd0366745eda47cdcf11490451c0267c0",
+      "afterNormativeSha256": "a86c6f1eb7be64764265e3edbc9bc1e0e1631c87fb42d83323d69cac9c4d62fe",
+      "securityHardening": "DocumentationUpdateRequired",
+      "sandboxHardening": "DocumentationUpdateRequired",
+      "feature007": "AlreadyCovered",
+      "feature007References": [
+        "spec.md: Governance-Anwendbarkeit und Evidenz",
+        "plan.md: Verfassungsprüfung",
+        "tasks.md: T003/T005/T048"
+      ],
+      "rationale": {
+        "de": "Bestehende Governance-/Supply-Chain-Anwendbarkeit bleibt erhalten; konkrete Fassung und getrennte Statusachsen im späteren Evidence-Kontext binden. Referenz oder Installation ist kein Erfüllungsnachweis.",
+        "en": "Retain existing governance/supply-chain applicability and bind exact sources and separate status axes in the later evidence context. Reference or installation is not fulfilment."
+      },
+      "implementation": "Not Assessed",
+      "owner": "Thorsten",
+      "reevaluationTrigger": "Before separately authorised implementation or changed source/scope",
+      "scopeChangeRequired": false
+    },
+    {
+      "controlId": "CL-05-11",
+      "sourcePath": "docs/secure-development/checklisten/CL_05_Lieferkette-Build-Integritaet.md",
+      "sourceNormalizedSha256": "63d0ef15476da6d5d782c2feb9c74387e4328ce9a9228b47df730a382a99f80b",
+      "beforeNormativeSha256": "8e63fe4e20c0d0e53d89098606d12a92cfc062f0125d8e1026d5a96423b82788",
+      "afterNormativeSha256": "60f67d12522b92f5b88343cabc10a61610438a2043930a0910bb32907933a1a8",
+      "securityHardening": "DocumentationUpdateRequired",
+      "sandboxHardening": "DocumentationUpdateRequired",
+      "feature007": "AlreadyCovered",
+      "feature007References": [
+        "spec.md: Governance-Anwendbarkeit und Evidenz",
+        "plan.md: Verfassungsprüfung",
+        "tasks.md: T003/T005/T048"
+      ],
+      "rationale": {
+        "de": "Bestehende Governance-/Supply-Chain-Anwendbarkeit bleibt erhalten; konkrete Fassung und getrennte Statusachsen im späteren Evidence-Kontext binden. Referenz oder Installation ist kein Erfüllungsnachweis.",
+        "en": "Retain existing governance/supply-chain applicability and bind exact sources and separate status axes in the later evidence context. Reference or installation is not fulfilment."
+      },
+      "implementation": "Not Assessed",
+      "owner": "Thorsten",
+      "reevaluationTrigger": "Before separately authorised implementation or changed source/scope",
+      "scopeChangeRequired": false
+    },
+    {
+      "controlId": "CL-06-09",
+      "sourcePath": "docs/secure-development/checklisten/CL_06_Schwachstellenoffenlegung.md",
+      "sourceNormalizedSha256": "b9548318e2d261a4534645167e1576642ec1809aa342ed532b9739c74b63a174",
+      "beforeNormativeSha256": "ecf716b798954b2cbd4bc8a4c5493da7965c34b902550f37739b0ac27911aff3",
+      "afterNormativeSha256": "e194a6d388e749b65ce514c4a1e2f6eb953880b81a47687208ecb4c25d5247b3",
+      "securityHardening": "DocumentationUpdateRequired",
+      "sandboxHardening": "DocumentationUpdateRequired",
+      "feature007": "AlreadyCovered",
+      "feature007References": [
+        "spec.md: CR-014 und Security Governance",
+        "plan.md: Verfassungsprüfung",
+        "tasks.md: T047/T048"
+      ],
+      "rationale": {
+        "de": "Bestehender risikobasierter Security-/Release-Prüfauftrag deckt die Kontrollart ab. Algorithmus-, Frist- und Supportdetails erst im späteren anwendbaren Scope prüfen; keine neue Kryptografie oder Releasepflicht behaupten.",
+        "en": "The existing risk-based security/release review covers this control type. Assess algorithm, date and support details only in later applicable scope; invent no crypto or release obligation."
+      },
+      "implementation": "Not Assessed",
+      "owner": "Thorsten",
+      "reevaluationTrigger": "Before separately authorised implementation or changed source/scope",
+      "scopeChangeRequired": false
+    },
+    {
+      "controlId": "CL-06-07",
+      "sourcePath": "docs/secure-development/checklisten/CL_06_Schwachstellenoffenlegung.md",
+      "sourceNormalizedSha256": "b9548318e2d261a4534645167e1576642ec1809aa342ed532b9739c74b63a174",
+      "beforeNormativeSha256": "e338808747de3e1526e270e8e9a07589ec5a23f9658c785535fdc66bf1ceca83",
+      "afterNormativeSha256": "3a490317b356c65821736c2b7152ceb12a929aa8225caee2ca46819ee300f21a",
+      "securityHardening": "DocumentationUpdateRequired",
+      "sandboxHardening": "DocumentationUpdateRequired",
+      "feature007": "AlreadyCovered",
+      "feature007References": [
+        "spec.md: CR-014 und Security Governance",
+        "plan.md: Verfassungsprüfung",
+        "tasks.md: T047/T048"
+      ],
+      "rationale": {
+        "de": "Bestehender risikobasierter Security-/Release-Prüfauftrag deckt die Kontrollart ab. Algorithmus-, Frist- und Supportdetails erst im späteren anwendbaren Scope prüfen; keine neue Kryptografie oder Releasepflicht behaupten.",
+        "en": "The existing risk-based security/release review covers this control type. Assess algorithm, date and support details only in later applicable scope; invent no crypto or release obligation."
+      },
+      "implementation": "Not Assessed",
+      "owner": "Thorsten",
+      "reevaluationTrigger": "Before separately authorised implementation or changed source/scope",
+      "scopeChangeRequired": false
+    },
+    {
+      "controlId": "CL-07-04",
+      "sourcePath": "docs/secure-development/checklisten/CL_07_CRA-Anwendbarkeit.md",
+      "sourceNormalizedSha256": "03b972af3e45b7fdc3e297fc1ef4b55d23d105f6dcc77f74b68e24b1c38cc53c",
+      "beforeNormativeSha256": "ceac2b48a9c6e5b7fcd2c5381549241226a8f941f9937aa83885c40e886244d8",
+      "afterNormativeSha256": "0f1dd7d9dafdb48ff506cc04b53b2aea1b99bfa60d34dc2abdfd39a8d67d9b62",
+      "securityHardening": "DocumentationUpdateRequired",
+      "sandboxHardening": "DocumentationUpdateRequired",
+      "feature007": "AlreadyCovered",
+      "feature007References": [
+        "spec.md: Governance-Anwendbarkeit und Evidenz",
+        "plan.md: Verfassungsprüfung",
+        "tasks.md: T005/T048"
+      ],
+      "rationale": {
+        "de": "Bestehender Anwendbarkeitsauftrag bleibt erhalten: Produkt, Werkzeugbetrieb und Organisation getrennt prüfen; neue Quellen binden, unbekannte Rollen bleiben offen. Keine neue Rechtsentscheidung in diesem Update.",
+        "en": "Retain existing applicability work: separate product, tooling and organisation, bind current sources and keep unknown roles open. This update makes no new legal determination."
+      },
+      "implementation": "Not Assessed",
+      "owner": "Thorsten",
+      "reevaluationTrigger": "Before separately authorised implementation or changed source/scope",
+      "scopeChangeRequired": false
+    },
+    {
+      "controlId": "CL-07-07",
+      "sourcePath": "docs/secure-development/checklisten/CL_07_CRA-Anwendbarkeit.md",
+      "sourceNormalizedSha256": "03b972af3e45b7fdc3e297fc1ef4b55d23d105f6dcc77f74b68e24b1c38cc53c",
+      "beforeNormativeSha256": "b62faa0a49274b55b4da153cf8b44623ad2102c9b75326aba431c3544a43ce5b",
+      "afterNormativeSha256": "ca30971cd7bd1a0f2e4d0d0284e5a3c169ebf4edd0417d1ddff4ea79516db572",
+      "securityHardening": "DocumentationUpdateRequired",
+      "sandboxHardening": "DocumentationUpdateRequired",
+      "feature007": "AlreadyCovered",
+      "feature007References": [
+        "spec.md: Governance-Anwendbarkeit und Evidenz",
+        "plan.md: Verfassungsprüfung",
+        "tasks.md: T005/T048"
+      ],
+      "rationale": {
+        "de": "Bestehender Anwendbarkeitsauftrag bleibt erhalten: Produkt, Werkzeugbetrieb und Organisation getrennt prüfen; neue Quellen binden, unbekannte Rollen bleiben offen. Keine neue Rechtsentscheidung in diesem Update.",
+        "en": "Retain existing applicability work: separate product, tooling and organisation, bind current sources and keep unknown roles open. This update makes no new legal determination."
+      },
+      "implementation": "Not Assessed",
+      "owner": "Thorsten",
+      "reevaluationTrigger": "Before separately authorised implementation or changed source/scope",
+      "scopeChangeRequired": false
+    },
+    {
+      "controlId": "CL-07-09",
+      "sourcePath": "docs/secure-development/checklisten/CL_07_CRA-Anwendbarkeit.md",
+      "sourceNormalizedSha256": "03b972af3e45b7fdc3e297fc1ef4b55d23d105f6dcc77f74b68e24b1c38cc53c",
+      "beforeNormativeSha256": "66881d7f1d16a0b7c20b576ce8fbf0a22116a2e2a280277a8a12783bb28ce55b",
+      "afterNormativeSha256": "0ca22826fbb7ad951dde63bc84d127ad0c3a60c78fdcc9ca157488e9a36761e1",
+      "securityHardening": "DocumentationUpdateRequired",
+      "sandboxHardening": "DocumentationUpdateRequired",
+      "feature007": "AlreadyCovered",
+      "feature007References": [
+        "spec.md: Governance-Anwendbarkeit und Evidenz",
+        "plan.md: Verfassungsprüfung",
+        "tasks.md: T005/T048"
+      ],
+      "rationale": {
+        "de": "Bestehender Anwendbarkeitsauftrag bleibt erhalten: Produkt, Werkzeugbetrieb und Organisation getrennt prüfen; neue Quellen binden, unbekannte Rollen bleiben offen. Keine neue Rechtsentscheidung in diesem Update.",
+        "en": "Retain existing applicability work: separate product, tooling and organisation, bind current sources and keep unknown roles open. This update makes no new legal determination."
+      },
+      "implementation": "Not Assessed",
+      "owner": "Thorsten",
+      "reevaluationTrigger": "Before separately authorised implementation or changed source/scope",
+      "scopeChangeRequired": false
+    },
+    {
+      "controlId": "CL-07-06",
+      "sourcePath": "docs/secure-development/checklisten/CL_07_CRA-Anwendbarkeit.md",
+      "sourceNormalizedSha256": "03b972af3e45b7fdc3e297fc1ef4b55d23d105f6dcc77f74b68e24b1c38cc53c",
+      "beforeNormativeSha256": "cfbdae43ef350ed38451d35aed1fd6499f94ea98b5f2ae0e1e692a2d43807e60",
+      "afterNormativeSha256": "3937a7a1a346a0ad3b37553f2b55916a872e098d2705dbb20b4584685ea1cd73",
+      "securityHardening": "DocumentationUpdateRequired",
+      "sandboxHardening": "DocumentationUpdateRequired",
+      "feature007": "AlreadyCovered",
+      "feature007References": [
+        "spec.md: Governance-Anwendbarkeit und Evidenz",
+        "plan.md: Verfassungsprüfung",
+        "tasks.md: T005/T048"
+      ],
+      "rationale": {
+        "de": "Bestehender Anwendbarkeitsauftrag bleibt erhalten: Produkt, Werkzeugbetrieb und Organisation getrennt prüfen; neue Quellen binden, unbekannte Rollen bleiben offen. Keine neue Rechtsentscheidung in diesem Update.",
+        "en": "Retain existing applicability work: separate product, tooling and organisation, bind current sources and keep unknown roles open. This update makes no new legal determination."
+      },
+      "implementation": "Not Assessed",
+      "owner": "Thorsten",
+      "reevaluationTrigger": "Before separately authorised implementation or changed source/scope",
+      "scopeChangeRequired": false
+    },
+    {
+      "controlId": "CL-07-02",
+      "sourcePath": "docs/secure-development/checklisten/CL_07_CRA-Anwendbarkeit.md",
+      "sourceNormalizedSha256": "03b972af3e45b7fdc3e297fc1ef4b55d23d105f6dcc77f74b68e24b1c38cc53c",
+      "beforeNormativeSha256": "4e33bbec715a07fd7ea78f8a0f779d52676ba1d27b02c93d8c76f1c00bcc43c4",
+      "afterNormativeSha256": "856aba5a8407caa3bb6af345fefc778edb3684ff2dcce89ff4bd635371e853ed",
+      "securityHardening": "DocumentationUpdateRequired",
+      "sandboxHardening": "DocumentationUpdateRequired",
+      "feature007": "AlreadyCovered",
+      "feature007References": [
+        "spec.md: Governance-Anwendbarkeit und Evidenz",
+        "plan.md: Verfassungsprüfung",
+        "tasks.md: T005/T048"
+      ],
+      "rationale": {
+        "de": "Bestehender Anwendbarkeitsauftrag bleibt erhalten: Produkt, Werkzeugbetrieb und Organisation getrennt prüfen; neue Quellen binden, unbekannte Rollen bleiben offen. Keine neue Rechtsentscheidung in diesem Update.",
+        "en": "Retain existing applicability work: separate product, tooling and organisation, bind current sources and keep unknown roles open. This update makes no new legal determination."
+      },
+      "implementation": "Not Assessed",
+      "owner": "Thorsten",
+      "reevaluationTrigger": "Before separately authorised implementation or changed source/scope",
+      "scopeChangeRequired": false
+    },
+    {
+      "controlId": "CL-07-12",
+      "sourcePath": "docs/secure-development/checklisten/CL_07_CRA-Anwendbarkeit.md",
+      "sourceNormalizedSha256": "03b972af3e45b7fdc3e297fc1ef4b55d23d105f6dcc77f74b68e24b1c38cc53c",
+      "beforeNormativeSha256": "424cbc49e771c7bec64e30aeac4d7a1ef5a5b030e5a3f7bbbbc83a8bb4c99bda",
+      "afterNormativeSha256": "7df5b92af3457b493259ff9e8ee435ac4296c123f7f43c52c5580bbcab718bbd",
+      "securityHardening": "DocumentationUpdateRequired",
+      "sandboxHardening": "DocumentationUpdateRequired",
+      "feature007": "AlreadyCovered",
+      "feature007References": [
+        "spec.md: Governance-Anwendbarkeit und Evidenz",
+        "plan.md: Verfassungsprüfung",
+        "tasks.md: T005/T048"
+      ],
+      "rationale": {
+        "de": "Bestehender Anwendbarkeitsauftrag bleibt erhalten: Produkt, Werkzeugbetrieb und Organisation getrennt prüfen; neue Quellen binden, unbekannte Rollen bleiben offen. Keine neue Rechtsentscheidung in diesem Update.",
+        "en": "Retain existing applicability work: separate product, tooling and organisation, bind current sources and keep unknown roles open. This update makes no new legal determination."
+      },
+      "implementation": "Not Assessed",
+      "owner": "Thorsten",
+      "reevaluationTrigger": "Before separately authorised implementation or changed source/scope",
+      "scopeChangeRequired": false
+    },
+    {
+      "controlId": "CL-03-14",
+      "sourcePath": "docs/secure-development/checklisten/CL_03_Krypto-Mindestvorgaben.md",
+      "sourceNormalizedSha256": "be5d2629200268cb202ffba99f34f5d1e11252686496b5e9f7f477f5d7a69db3",
+      "beforeNormativeSha256": "622459235b4829c6488db0f1a2dc98b97d0a13b18c249e9e30f28c418ab87fd0",
+      "afterNormativeSha256": "bed697cdeb15260495a60273c1ae4fd58bee4b33ecf64d1bfb7eb0684be96de4",
+      "securityHardening": "DocumentationUpdateRequired",
+      "sandboxHardening": "DocumentationUpdateRequired",
+      "feature007": "AlreadyCovered",
+      "feature007References": [
+        "spec.md: CR-014 und Security Governance",
+        "plan.md: Verfassungsprüfung",
+        "tasks.md: T047/T048"
+      ],
+      "rationale": {
+        "de": "Bestehender risikobasierter Security-/Release-Prüfauftrag deckt die Kontrollart ab. Algorithmus-, Frist- und Supportdetails erst im späteren anwendbaren Scope prüfen; keine neue Kryptografie oder Releasepflicht behaupten.",
+        "en": "The existing risk-based security/release review covers this control type. Assess algorithm, date and support details only in later applicable scope; invent no crypto or release obligation."
+      },
+      "implementation": "Not Assessed",
+      "owner": "Thorsten",
+      "reevaluationTrigger": "Before separately authorised implementation or changed source/scope",
+      "scopeChangeRequired": false
+    },
+    {
+      "controlId": "CL-12-05",
+      "sourcePath": "docs/secure-development/checklisten/CL_12_Agentische-KI-Sandbox.md",
+      "sourceNormalizedSha256": "2c02d0730c7a1e4ec93f062499f7ebc68083f5ffce432929459c917918b07fc4",
+      "beforeNormativeSha256": "a16f84016bb8e82b74cc05e005ba8b35b8d7b73424fedf3dae027f286d6964d1",
+      "afterNormativeSha256": "050774e22033a86cafa7907df83689f3be91cac8d94cfaa6fc0420338ddadaf3",
+      "securityHardening": "DocumentationUpdateRequired",
+      "sandboxHardening": "DocumentationUpdateRequired",
+      "feature007": "DocumentationUpdateRequired",
+      "feature007References": [
+        "spec.md: CR-014 und Governance-Anwendbarkeit",
+        "plan.md: Phase 0",
+        "tasks.md: T003/T005/T047"
+      ],
+      "rationale": {
+        "de": "Bestehende Werkzeug-, Datenschutz- und Evidenzgrenzen verwenden. Anbieter-/Kontoeigenschaften nicht aus Produktnamen oder Ignore-Dateien ableiten; offene Nachweise nicht als erfüllt übernehmen.",
+        "en": "Use existing tooling, privacy and evidence boundaries. Do not infer provider/account properties from names or ignore files, or transfer unverified fulfilment."
+      },
+      "implementation": "Not Assessed",
+      "owner": "Thorsten",
+      "reevaluationTrigger": "Before separately authorised implementation or changed source/scope",
+      "scopeChangeRequired": false
+    }
+  ]
+}

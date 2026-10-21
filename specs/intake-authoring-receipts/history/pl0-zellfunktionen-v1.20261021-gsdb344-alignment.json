@@ -1,0 +1,180 @@
+{
+  "schemaVersion": "2.0",
+  "documentType": "IntakeReceipt",
+  "receiptId": "39377825-a334-4fbe-90dd-e5297ab3ff45",
+  "intakeId": "7474c2ca-2efe-4d05-a359-9af278333007",
+  "generator": {
+    "version": "0.3.7",
+    "preset": "intake-authoring-governance"
+  },
+  "createdAt": "2026-10-10T23:05:58Z",
+  "operation": {
+    "authorityEvidence": "Thorsten explicitly authorised administrative Feature 006 closeout: intake archival and series progression, MergeAndSync with Admin-Bypass only for formal rules, no follow-up feature. Thorsten subsequently approved the bounded renewal of the TUI and Rename README source bindings including archive/receipt lineage, then explicitly approved renewal of the PL/0 AGENTS.md source binding and its archive/receipt lineage. Intake content, IDs, scope, acceptance, security, accessibility, order, roots and dependency semantics remain unchanged.",
+    "operationId": "8db75270-e7ac-49d0-a8d3-78e6e3a6509a",
+    "type": "Update"
+  },
+  "status": "ReadyForReview",
+  "target": {
+    "path": "requirements/intakes/active/Lastenheft_PL0-Zellfunktionen_V1.md",
+    "normalizedSha256": "72c67c9c4b20ee9e1e9ad89e76b0bd51284eda4f9772c05fa6c0ca92a162f7b0"
+  },
+  "sources": [
+    {
+      "sourceId": "SRC001",
+      "order": 1,
+      "kind": "File",
+      "location": "Repository",
+      "label": "First binding source: unchanged predecessor intake",
+      "path": "requirements/intakes/archive/pl0-zellfunktionen-v1/20261011-feature006-closeout/Lastenheft_PL0-Zellfunktionen_V1.md",
+      "normalizedSha256": "72c67c9c4b20ee9e1e9ad89e76b0bd51284eda4f9772c05fa6c0ca92a162f7b0",
+      "proofBoundary": "Strict UTF-8 normalized SHA-256; preserved predecessor bytes and bounded authority",
+      "etag": "N/A",
+      "contentLength": "N/A",
+      "finalUrl": "N/A",
+      "lastModified": "N/A",
+      "retrievedAt": "N/A",
+      "httpStatus": "N/A",
+      "rawSha256": "N/A",
+      "gitBlob": "N/A",
+      "requestedUrl": "N/A",
+      "contentType": "N/A",
+      "redirectChain": []
+    },
+    {
+      "sourceId": "SRC002",
+      "order": 2,
+      "kind": "File",
+      "location": "Repository",
+      "label": "Byte-identical predecessor receipt preserves all original ordered sources",
+      "path": "specs/intake-authoring-receipts/history/pl0-zellfunktionen-v1.20261011-feature006-closeout.json",
+      "normalizedSha256": "5238d11f0c071c1df268303e928090bad005ce1e57f8402dde01a15154909f1c",
+      "proofBoundary": "Strict UTF-8 normalized SHA-256; preserved predecessor bytes and bounded authority",
+      "etag": "N/A",
+      "contentLength": "N/A",
+      "finalUrl": "N/A",
+      "lastModified": "N/A",
+      "retrievedAt": "N/A",
+      "httpStatus": "N/A",
+      "rawSha256": "N/A",
+      "gitBlob": "N/A",
+      "requestedUrl": "N/A",
+      "contentType": "N/A",
+      "redirectChain": []
+    },
+    {
+      "sourceId": "SRC003",
+      "order": 3,
+      "kind": "File",
+      "location": "Repository",
+      "label": "Approved current source binding; product contract remains unchanged",
+      "path": "AGENTS.md",
+      "normalizedSha256": "cd78259e906bd5ee2ceec0a5371b8d5ec804c425f8e2366c6521df4d54987e2f",
+      "proofBoundary": "Strict UTF-8 normalized SHA-256; preserved predecessor bytes and bounded authority",
+      "etag": "N/A",
+      "contentLength": "N/A",
+      "finalUrl": "N/A",
+      "lastModified": "N/A",
+      "retrievedAt": "N/A",
+      "httpStatus": "N/A",
+      "rawSha256": "N/A",
+      "gitBlob": "N/A",
+      "requestedUrl": "N/A",
+      "contentType": "N/A",
+      "redirectChain": []
+    },
+    {
+      "sourceId": "SRC004",
+      "order": 4,
+      "kind": "File",
+      "location": "Repository",
+      "label": "Explicit bounded administrative authority and product closeout",
+      "path": "specs/006-tui-functional-contract/evidence/administrative-closeout.md",
+      "normalizedSha256": "1049b9e223f065dbb67bfc4e1dde51522dad8840550bce7b3c62e6a353f84eb2",
+      "proofBoundary": "Strict UTF-8 normalized SHA-256; preserved predecessor bytes and bounded authority",
+      "etag": "N/A",
+      "contentLength": "N/A",
+      "finalUrl": "N/A",
+      "lastModified": "N/A",
+      "retrievedAt": "N/A",
+      "httpStatus": "N/A",
+      "rawSha256": "N/A",
+      "gitBlob": "N/A",
+      "requestedUrl": "N/A",
+      "contentType": "N/A",
+      "redirectChain": []
+    }
+  ],
+  "profile": "level2-lastenheft",
+  "languagePolicy": "GermanFirstEnglishSecond",
+  "decisions": [
+    {
+      "id": "IAD001",
+      "status": "Answered",
+      "question": "Are the PL0 scope and TinyPl0 predecessor preserved?",
+      "answer": "Yes. The existing PL0 scope and fail-closed TinyPl0 delivery gate remain unchanged.",
+      "evidence": "Prior intake and archive."
+    },
+    {
+      "id": "IAD002",
+      "status": "Answered",
+      "question": "Is a local project-reference fallback permitted?",
+      "answer": "No. Public pinned TinyPl0 packages and the locked contract gate remain mandatory.",
+      "evidence": "Prior intake and archive."
+    },
+    {
+      "id": "IAD003",
+      "status": "Answered",
+      "question": "Does the intake permanently require one Terminal.Gui version?",
+      "answer": "No. Execution resolves the then-current explicitly approved repository pin and classifies drift.",
+      "evidence": "Explicit prior user decision."
+    },
+    {
+      "id": "IAD004",
+      "status": "Answered",
+      "question": "How does PL0 affect the current product contract?",
+      "answer": "PL0 adds stable PL0 contract IDs before product code and retains regression for every earlier active ID.",
+      "evidence": "Approved intake consolidation plan."
+    },
+    {
+      "id": "IAD005",
+      "status": "Answered",
+      "question": "Which part of the TinyPl0 delivery gate is now satisfied?",
+      "answer": "The external TinyPl0 delivery stage is satisfied by release v0.4.1, source commit edab567e1e7cd3ea8eb8e3bea425b54f24d4b506, successful release run 33757534918, and matching public packages. The TinyCalc technical preflight and internal predecessor remain open and blocking.",
+      "evidence": "GitHub release and workflow snapshots plus the two official NuGet.org version indexes."
+    }
+  ],
+  "openDecisionIds": [],
+  "questionCount": 5,
+  "agentSurface": {
+    "specifyCanonicalId": "speckit.specify",
+    "specifyInvocation": "$speckit-specify",
+    "autonomousCanonicalId": "speckit.autonomous",
+    "autonomousInvocation": "$speckit-autonomous"
+  },
+  "deliveryAuthority": "LocalImplementation",
+  "authorityEvidence": "Thorsten explicitly requested execution of the approved bounded PL/0 macOS-15 GitHub Actions governance-refresh plan on 2026-10-06. Authority covers local intake, lineage, series, supersession, validation, PR-text and statistics updates only. Stop before independent Intake Review; no product implementation, package change, commit, push, pull request, merge, bypass or fleet rollout is authorized.",
+  "promptState": "Enabled",
+  "provenanceMode": "Supersession",
+  "supersedes": {
+    "targetNormalizedSha256": "72c67c9c4b20ee9e1e9ad89e76b0bd51284eda4f9772c05fa6c0ca92a162f7b0",
+    "archiveReceiptPath": "specs/intake-authoring-receipts/history/pl0-zellfunktionen-v1.20261011-feature006-closeout.json",
+    "receiptNormalizedSha256": "5238d11f0c071c1df268303e928090bad005ce1e57f8402dde01a15154909f1c",
+    "receiptPath": "specs/intake-authoring-receipts/history/pl0-zellfunktionen-v1.20261011-feature006-closeout.json",
+    "archiveTargetPath": "requirements/intakes/archive/pl0-zellfunktionen-v1/20261011-feature006-closeout/Lastenheft_PL0-Zellfunktionen_V1.md"
+  },
+  "legacyAdoption": {
+    "evidenceType": "N/A",
+    "priorTargetNormalizedSha256": "N/A",
+    "priorGitBlob": "N/A"
+  },
+  "updateAuthorized": true,
+  "updateAuthorityEvidence": "Thorsten explicitly authorised administrative Feature 006 closeout: intake archival and series progression, MergeAndSync with Admin-Bypass only for formal rules, no follow-up feature. Thorsten subsequently approved the bounded renewal of the TUI and Rename README source bindings including archive/receipt lineage, then explicitly approved renewal of the PL/0 AGENTS.md source binding and its archive/receipt lineage. Intake content, IDs, scope, acceptance, security, accessibility, order, roots and dependency semantics remain unchanged.",
+  "series": {
+    "seriesId": "5b4523b4-d946-4091-9cbc-11825af94332",
+    "manifestPath": "requirements/intakes/series/tinycalc-delivery/manifest.json",
+    "order": 8,
+    "role": "OrderedMember",
+    "supersedesIntakeIds": []
+  },
+  "nextAction": "$speckit-intake-review requirements/intakes/active/Lastenheft_PL0-Zellfunktionen_V1.md"
+}

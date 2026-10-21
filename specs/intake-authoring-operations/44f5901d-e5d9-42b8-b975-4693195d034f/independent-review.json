@@ -1,0 +1,226 @@
+{
+  "schemaVersion": "1.0",
+  "documentType": "IndependentGovernanceIntakeReview",
+  "reviewId": "c0d161e3-477b-4381-9e11-38c19e6e6797",
+  "reviewedAt": "2026-10-21T10:59:41Z",
+  "owner": "Thorsten",
+  "reviewer": "Independent intake reviewer (/root/independent_intake_review)",
+  "independentFromAuthor": true,
+  "scope": "Series intake/document quality and Feature 007 governance alignment only / Nur Intake-/Dokumentenqualität und Governance-Abgleich",
+  "status": "Ready",
+  "normalization": "Strict UTF-8; remove one leading BOM; normalize CRLF/CR to LF; no other changes / Keine weiteren Änderungen",
+  "inputs": [
+    {
+      "path": "requirements/intakes/archive/Lastenheft_Constitution_Change.002-constitution-change.md",
+      "normalizedSha256": "04c4e1ba93d626463829a07f33b5591a6417b6aeaf89e805b637ab1bf5c26a0a"
+    },
+    {
+      "path": "requirements/intakes/archive/Lastenheft_TerminalGui_Migration.003-terminalgui-migration.md",
+      "normalizedSha256": "01db3bd8f2dc375fe1400a91580ce1a906dfc446c12fb8ad011419fe50fee94d"
+    },
+    {
+      "path": "requirements/intakes/archive/Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md",
+      "normalizedSha256": "c07016800b9e02e56f123ed6af187d0b5fedd22c1689a1b8909fcc6e8f70c6ac"
+    },
+    {
+      "path": "requirements/intakes/active/Lastenheft_A11Y_TUI.md",
+      "normalizedSha256": "7fec8e9dea123fdeb0753119d06c18a8389a24645a541d3b60413166bbcbd6e2"
+    },
+    {
+      "path": "requirements/intakes/active/Lastenheft_Rename_MicroCalc_TinyCalc.md",
+      "normalizedSha256": "ed761c150526f18c0b1d98d8febac1def260b1890aca6d0a341279dec19985b9"
+    },
+    {
+      "path": "requirements/intakes/active/Lastenheft_Didactic-Inline-Code-Comment-Hardening.md",
+      "normalizedSha256": "460abc8142179cc40e1d0cfe07928260456088205b3200e7ca6c6e10818e46da"
+    },
+    {
+      "path": "requirements/intakes/active/Lastenheft_Secure-Development-Hardening.md",
+      "normalizedSha256": "8b52ca4953d74cc5e647b82ecbeea2adfcfbff3ebbc00f58196c8ee36143d402"
+    },
+    {
+      "path": "requirements/intakes/active/Lastenheft_PL0-Zellfunktionen_V1.md",
+      "normalizedSha256": "72c67c9c4b20ee9e1e9ad89e76b0bd51284eda4f9772c05fa6c0ca92a162f7b0"
+    },
+    {
+      "path": "requirements/intakes/active/Lastenheft_Legacy-Kompatibilitaet_V1.md",
+      "normalizedSha256": "f24a7ff1c6d1bcde8bca45a57133de5b9f6386c4586a079d1ba743f99479863c"
+    },
+    {
+      "path": "requirements/intakes/active/Lastenheft_Formelkopie-und-Tabellenoperationen_V1.md",
+      "normalizedSha256": "7890c8e1358e002044b352adc94fcbe2a104f38e5fc1504f6919830de03d2fb4"
+    },
+    {
+      "path": "requirements/intakes/active/Lastenheft_Sandbox-gestuetzte-Secure-Development-Haertung.md",
+      "normalizedSha256": "b85f66e2d0fc1ce7d47ad4328e61a007821c1f19f9d1b291e9d4533271e079fa"
+    },
+    {
+      "path": "requirements/intakes/archive/Lastenheft_RL-SE-Checklist-Selbstpruefung.004-rl-se-self-assessment.md",
+      "normalizedSha256": "96a5ef9c414d55c69ad117509d41f056f10d005824890bd5a2867eaf8ab948da"
+    },
+    {
+      "path": "requirements/intakes/archive/Lastenheft_GSDB-Spec-Kit-Intensivpruefung.005-gsdb-intensive-review.md",
+      "normalizedSha256": "f4dcb3fac6cb755faed296847ffd40170f0d008fa3640e5e5fa5bc38e4af5375"
+    },
+    {
+      "path": "specs/007-tui-accessibility/spec.md",
+      "normalizedSha256": "645a04d7cdab2220d6744ae4743fabd38b12e8d772e351380d0a5dff0e3c65ed"
+    },
+    {
+      "path": "specs/007-tui-accessibility/plan.md",
+      "normalizedSha256": "8cf7c09e4e110745cc3eb9d86539bb94f0cc1bd3ac45b387f9802f1670a19304"
+    },
+    {
+      "path": "specs/007-tui-accessibility/tasks.md",
+      "normalizedSha256": "b815e1d0354005414c8cc4240ec20998a0f7d5e42d24b4a415fc7da374e1bfc9"
+    },
+    {
+      "path": "specs/007-tui-accessibility/checklists/requirements.md",
+      "normalizedSha256": "2e1423295c5aa674a63f3ca7a7ef89f9630ee8a0944b2c9685d34760ce090cad"
+    },
+    {
+      "path": "specs/007-tui-accessibility/checklists/plan.md",
+      "normalizedSha256": "e3a6ade1e5d9bae3e2540428a187a4422ace3b1155a0450c5239c9442c76f78b"
+    },
+    {
+      "path": "specs/007-tui-accessibility/checklists/a11y.md",
+      "normalizedSha256": "04cfdb99cae2a5841dc996b0ad626ed4df91e4efb0c5108772e72aa79137af9b"
+    },
+    {
+      "path": "docs/maintenance/gsdb-344-intake-control-impact.json",
+      "normalizedSha256": "fd992d9ac9623019879026f79d5437f9baef16e6a18c40b4fd2346225e403788"
+    },
+    {
+      "path": "docs/maintenance/gsdb-344-control-delta.json",
+      "normalizedSha256": "e1b4355f6c383ee9b32abd9758d5504751a39d8840728da063bd1f1d74ca2d8f"
+    },
+    {
+      "path": ".specify/presets/secure-development-assurance-governance/templates/secure-development-evidence-contract.md",
+      "normalizedSha256": "1e3d7235fc24eb26c9385f635571cf544a28eed4a6e1d996c9921d01c350ba0b"
+    },
+    {
+      "path": "requirements/intake-governance-config.json",
+      "normalizedSha256": "2f88475fecdeb7e3ca03cbef5456a620f3c7c2627ae7541ca75960c7188ff4dd"
+    },
+    {
+      "path": "requirements/intakes/series/tinycalc-delivery/manifest.json",
+      "normalizedSha256": "b8a6f7d21305766d8917dcfa567e01cbbe5195503d9b08f171de921a6a2305db"
+    },
+    {
+      "path": "requirements/intakes/series/tinycalc-delivery/receipt.json",
+      "normalizedSha256": "2c4eeb74a8e7831a939837ace78c61344f98147e06d40462580e44a3495f1473"
+    },
+    {
+      "path": "requirements/intakes/series/tinycalc-delivery/intake-review-request.json",
+      "normalizedSha256": "ecba4391b6967cef22e4845fa288cee8a26642bf62e10e456b8723db7494a7ad"
+    },
+    {
+      "path": "specs/intake-authoring-operations/44f5901d-e5d9-42b8-b975-4693195d034f/lineage.json",
+      "normalizedSha256": "0ad2e2f5928877d47b5f97539d15e4fab8df77d004206520aa70a7048ad304b7"
+    },
+    {
+      "path": "specs/intake-authoring-receipts/pl0-zellfunktionen-v1.json",
+      "normalizedSha256": "2773e13c91c586a90cddee17cda6a65073456d822bc4b70de0a5caa635967c77"
+    },
+    {
+      "path": "specs/intake-authoring-receipts/rename-microcalc-tinycalc.json",
+      "normalizedSha256": "0abd34b203f7d26d61795787574c4e7129f2e86f9245cdcc778985a6de2bbed6"
+    },
+    {
+      "path": "specs/intake-authoring-receipts/tui-funktionsabnahme-und-regressionsvertrag.json",
+      "normalizedSha256": "9c3424e2d6d39951088fa74f7c4c8ee824fc7e3399575115e0917542a43933dc"
+    },
+    {
+      "path": "specs/intake-authoring-receipts/secure-development-hardening.json",
+      "normalizedSha256": "1431886d0521e7191da66ad9cb7eb412085219667385a5df24f9fcdce793219e"
+    },
+    {
+      "path": "specs/intake-authoring-receipts/sandbox-gestuetzte-secure-development-haertung.json",
+      "normalizedSha256": "86ea4a406d731fb9c6633d931a625958425ffa6f7ead62a162f4fdb2f75f9f1f"
+    }
+  ],
+  "checks": {
+    "targetCount": 13,
+    "roots": 4,
+    "dependencies": 9,
+    "controlIds": 50,
+    "featureDocumentationRefinements": 9,
+    "featureExistingReviewObligations": 41,
+    "taskCount": 60,
+    "allTasksUnchecked": true,
+    "archiveBytePairs": 17,
+    "errors": []
+  },
+  "checklists": [
+    {
+      "path": "specs/007-tui-accessibility/checklists/requirements.md",
+      "id": "GOV007-01",
+      "status": "Pass",
+      "scope": "Document quality only / Nur Dokumentenqualität",
+      "evidence": "GA-007-01–03 map to T003/T005/T047/T048 and all 50 control IDs; status axes and bound-source metadata checked. / Mapping, Statusachsen und Metadatenpflicht geprüft."
+    },
+    {
+      "path": "specs/007-tui-accessibility/checklists/requirements.md",
+      "id": "GOV007-02",
+      "status": "Pass",
+      "scope": "Document quality only / Nur Dokumentenqualität",
+      "evidence": "Unchanged intake/CQ/full functional baseline; all 60 tasks remain unchecked. / Intake, CQ und Vollbaseline erhalten; alle 60 Aufgaben offen."
+    },
+    {
+      "path": "specs/007-tui-accessibility/checklists/plan.md",
+      "id": "GOV007-01",
+      "status": "Pass",
+      "scope": "Document quality only / Nur Dokumentenqualität",
+      "evidence": "GA-007-01–03 map to T003/T005/T047/T048 and all 50 control IDs; status axes and bound-source metadata checked. / Mapping, Statusachsen und Metadatenpflicht geprüft."
+    },
+    {
+      "path": "specs/007-tui-accessibility/checklists/plan.md",
+      "id": "GOV007-02",
+      "status": "Pass",
+      "scope": "Document quality only / Nur Dokumentenqualität",
+      "evidence": "Unchanged intake/CQ/full functional baseline; all 60 tasks remain unchecked. / Intake, CQ und Vollbaseline erhalten; alle 60 Aufgaben offen."
+    },
+    {
+      "path": "specs/007-tui-accessibility/checklists/a11y.md",
+      "id": "GOV007-01",
+      "status": "Pass",
+      "scope": "Document quality only / Nur Dokumentenqualität",
+      "evidence": "GA-007-01–03 map to T003/T005/T047/T048 and all 50 control IDs; status axes and bound-source metadata checked. / Mapping, Statusachsen und Metadatenpflicht geprüft."
+    },
+    {
+      "path": "specs/007-tui-accessibility/checklists/a11y.md",
+      "id": "GOV007-02",
+      "status": "Pass",
+      "scope": "Document quality only / Nur Dokumentenqualität",
+      "evidence": "Unchanged intake/CQ/full functional baseline; all 60 tasks remain unchecked. / Intake, CQ und Vollbaseline erhalten; alle 60 Aufgaben offen."
+    }
+  ],
+  "findings": [
+    {
+      "id": "IR001",
+      "severity": "Medium",
+      "category": "StatusSemantics",
+      "target": "requirements/intakes/active/Lastenheft_Secure-Development-Hardening.md",
+      "disposition": "Resolved and independently rechecked; no risk acceptance / Behoben und unabhängig nachgeprüft, keine Risikoannahme",
+      "owner": "Thorsten",
+      "evidence": "Active Intake Readiness Open definition formerly mixed applicability and missing fulfilment. DE line 163 and English readiness now reserve Open for undecided applicability, separating missing implementation evidence into implementation states. Historical superseded prompt unchanged. Final normalized SHA-256: 8b52ca4953d74cc5e647b82ecbeea2adfcfbff3ebbc00f58196c8ee36143d402",
+      "reevaluationTrigger": "Changed status definition, source or normative target / Geänderte Statusdefinition, Quelle oder Intake"
+    }
+  ],
+  "openFindings": 0,
+  "acceptedRisks": [],
+  "validations": {
+    "reviewPowerShell": {
+      "status": "Pass",
+      "exitCode": 0,
+      "command": "pwsh -NoProfile -File .specify/presets/intake-review-governance/scripts/validate-intake-review-result.ps1 -Result requirements/intakes/series/tinycalc-delivery/intake-review-result.json -Repo ."
+    },
+    "reviewBash": {
+      "status": "Pass",
+      "exitCode": 0,
+      "command": "bash .specify/presets/intake-review-governance/scripts/validate-intake-review-result.sh --result requirements/intakes/series/tinycalc-delivery/intake-review-result.json --repo ."
+    }
+  },
+  "proofBoundary": "Ready means written intake and feature planning consistency only; no implementation, product/security conformance, full WCAG, native screenreader or human approval / Ready gilt ausschließlich für Dokumentenkonsistenz, keine Produkt-/Security-/WCAG-/Screenreader-/Menschenfreigabe",
+  "nextAction": "Stop after local validation and report to Thorsten; no downstream command / Nach lokaler Validierung berichten und stoppen"
+}

@@ -113,3 +113,18 @@
 Dokumentennachprüfung vom 18.10.2026: 20/20 Punkte geprüft; gefundene Inkonsistenzen direkt korrigiert und oben je Prüfpunkt belegt. Zehn Anforderungen, acht Abnahmen, 17 Pflichtfamilien und beide CQ-Antworten erhalten. Die Planung liegt bereits vor; kein erneuter Plan-Lauf erforderlich allein wegen des früheren Clarify-Textes. Ownerprüfung und ein gesonderter Tasks-/Umsetzungsauftrag bleiben getrennt. Kein Produktnachweis, Commit/Push oder nachfolgendes Kommando ausgeführt.
 
 *Document recheck on 18 October: all 20 instructions completed with corrected findings and row-level evidence above. Preserve all requirements, criteria, families and answers. Planning already exists; stale Clarify wording does not require rerunning it. Owner review and separate task/implementation authority remain distinct. No product proof, Git delivery or next workflow command executed.*
+
+## Governance-Nachprüfung 2026-10-21 / Governance Recheck 2026-10-21
+
+Frühere Checkboxen und Ergebnisse bleiben historische Dokumentenprüfungen. Die folgenden neuen Punkte sind bis zum unabhängigen Review offen, keine Produktabnahme.
+
+*Earlier checks remain historical document reviews. New checks below are pending independent review, not product acceptance.*
+
+- [x] GOV007-01 Sind GA-007-01–03 in Spec, Plan und T003/T005/T047/T048 vollständig abgebildet? Durchführung: Quellen 3.4.4/0.1.5 und alle 50 Kontroll-IDs mit der Impact-Matrix vergleichen; Statusachsen, Metadatenpflicht und Nachweisgrenzen prüfen. Bestanden nur ohne ausgelassene Kontrolle oder übertragene Produkt-Erfüllung.
+  *Are GA-007-01–03 fully mapped? Compare checked sources and all 50 IDs with the impact map, status axes, metadata and proof boundaries. Pass only without missing controls or transferred product fulfilment.*
+- [x] GOV007-02 Bleiben Intake, CQ-001/CQ-002, zehn Anforderungen, acht Kriterien, 17 Familien und mindestens 364 Wege je Plattform erhalten? Durchführung: Diff und Quellenhashes prüfen, 60 offene Aufgaben zählen; historische Abnahmen und fehlende native Nachweise nicht umdeuten. Ein Dokumenten-Pass bestätigt keine Screenreader-Kompatibilität.
+  *Are intake, clarified decisions and the complete baseline preserved? Check diffs/hashes and 60 unchecked tasks; do not reinterpret history or missing native evidence. A document pass proves no screenreader compatibility.*
+
+Dokumentennachprüfung am 21.10.2026 durch den unabhängigen Reviewer: GOV007-01 und GOV007-02 nach Korrektur IR001 erfüllt. Nur Dokumentenqualität, keine Umsetzung oder Produkt-/Screenreader-Abnahme. Hashgebundener Nachweis: `specs/intake-authoring-operations/44f5901d-e5d9-42b8-b975-4693195d034f/independent-review.json`.
+
+*Independent document recheck on 21 October 2026: both new checks passed after correction IR001. This confirms document quality only, not implementation or product/screenreader acceptance. The separate review evidence binds the final source hashes.*
