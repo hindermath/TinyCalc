@@ -55,7 +55,7 @@
     {
       "path": "requirements/intakes/active/Lastenheft_Secure-Development-Hardening.md",
       "role": "OrderedMember",
-      "normalizedSha256": "38d57df9cb6431eddf812ca328965f8542d9aab801cdb8b9971cd72351472490",
+      "normalizedSha256": "8b52ca4953d74cc5e647b82ecbeea2adfcfbff3ebbc00f58196c8ee36143d402",
       "status": "Blocked"
     },
     {
@@ -79,7 +79,7 @@
     {
       "path": "requirements/intakes/active/Lastenheft_Sandbox-gestuetzte-Secure-Development-Haertung.md",
       "role": "OrderedMember",
-      "normalizedSha256": "f5ca1db52063f52f53914032fabcc8a1418c77fced607e922454248f17e72a6e",
+      "normalizedSha256": "b85f66e2d0fc1ce7d47ad4328e61a007821c1f19f9d1b291e9d4533271e079fa",
       "status": "Pending"
     },
     {
@@ -172,6 +172,8 @@
     "specs/requirements-reconciliation-20260726/migration-proposal.json",
     "Lastenheft_Abarbeitungsreihenfolge.md",
     "specs/006-tui-functional-contract/evidence/administrative-closeout.md",
-    "specs/006-tui-functional-contract/evidence/postmerge.json"
+    "specs/006-tui-functional-contract/evidence/postmerge.json",
+    "docs/maintenance/gsdb-344-intake-alignment-2026-10-21.md",
+    "docs/maintenance/gsdb-344-intake-control-impact.json"
   ]
 }

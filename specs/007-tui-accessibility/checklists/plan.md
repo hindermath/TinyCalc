@@ -79,3 +79,18 @@
 14/14 Planungsprüfpunkte erfüllt. Keine unbeantwortete fachliche Entscheidung oder beantragte Verfassungsausnahme. Native Machbarkeit, Validatorreparatur und Produkt-/Plattformnachweise sind zukünftige Ausführungsgates, sämtlich `Not Assessed` in diesem Lauf. Ownerprüfung und separater Umsetzungsauftrag bleiben erforderlich; kein Tasks-/Implementierungs- oder Lieferkommando gestartet.
 
 *All fourteen planning checks are covered. No unresolved product decision or constitutional exception is requested. Native feasibility, validator repair and product/platform proof remain future unassessed gates. Owner review and separate execution authority remain required; no next workflow command has started.*
+
+## Governance-Nachprüfung 2026-10-21 / Governance Recheck 2026-10-21
+
+Frühere Checkboxen und Ergebnisse bleiben historische Dokumentenprüfungen. Die folgenden neuen Punkte sind bis zum unabhängigen Review offen, keine Produktabnahme.
+
+*Earlier checks remain historical document reviews. New checks below are pending independent review, not product acceptance.*
+
+- [x] GOV007-01 Sind GA-007-01–03 in Spec, Plan und T003/T005/T047/T048 vollständig abgebildet? Durchführung: Quellen 3.4.4/0.1.5 und alle 50 Kontroll-IDs mit der Impact-Matrix vergleichen; Statusachsen, Metadatenpflicht und Nachweisgrenzen prüfen. Bestanden nur ohne ausgelassene Kontrolle oder übertragene Produkt-Erfüllung.
+  *Are GA-007-01–03 fully mapped? Compare checked sources and all 50 IDs with the impact map, status axes, metadata and proof boundaries. Pass only without missing controls or transferred product fulfilment.*
+- [x] GOV007-02 Bleiben Intake, CQ-001/CQ-002, zehn Anforderungen, acht Kriterien, 17 Familien und mindestens 364 Wege je Plattform erhalten? Durchführung: Diff und Quellenhashes prüfen, 60 offene Aufgaben zählen; historische Abnahmen und fehlende native Nachweise nicht umdeuten. Ein Dokumenten-Pass bestätigt keine Screenreader-Kompatibilität.
+  *Are intake, clarified decisions and the complete baseline preserved? Check diffs/hashes and 60 unchecked tasks; do not reinterpret history or missing native evidence. A document pass proves no screenreader compatibility.*
+
+Dokumentennachprüfung am 21.10.2026 durch den unabhängigen Reviewer: GOV007-01 und GOV007-02 nach Korrektur IR001 erfüllt. Nur Dokumentenqualität, keine Umsetzung oder Produkt-/Screenreader-Abnahme. Hashgebundener Nachweis: `specs/intake-authoring-operations/44f5901d-e5d9-42b8-b975-4693195d034f/independent-review.json`.
+
+*Independent document recheck on 21 October 2026: both new checks passed after correction IR001. This confirms document quality only, not implementation or product/screenreader acceptance. The separate review evidence binds the final source hashes.*

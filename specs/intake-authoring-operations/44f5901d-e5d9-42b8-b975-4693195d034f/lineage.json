@@ -1,0 +1,162 @@
+{
+  "schemaVersion": "1.0",
+  "operationId": "44f5901d-e5d9-42b8-b975-4693195d034f",
+  "createdAt": "2026-10-21T10:45:45Z",
+  "head": "5dc92cfd53b6afc785e39e465472a4fe263352cd",
+  "beforeManifestSha256": "16d3e9b489c1e0690a03cce58085ff70f2a1416500aecd6d3f5f3e63f2d750d3",
+  "afterManifestSha256": "b8a6f7d21305766d8917dcfa567e01cbbe5195503d9b08f171de921a6a2305db",
+  "intakes": [
+    {
+      "slug": "pl0-zellfunktionen-v1",
+      "intakeId": "7474c2ca-2efe-4d05-a359-9af278333007",
+      "receiptId": "c69d55e0-b561-40a3-b2f7-4d59e570e2d8",
+      "targetPath": "requirements/intakes/active/Lastenheft_PL0-Zellfunktionen_V1.md",
+      "beforeTargetSha256": "72c67c9c4b20ee9e1e9ad89e76b0bd51284eda4f9772c05fa6c0ca92a162f7b0",
+      "afterTargetSha256": "72c67c9c4b20ee9e1e9ad89e76b0bd51284eda4f9772c05fa6c0ca92a162f7b0",
+      "beforeReceiptSha256": "2cf9abb39da800db11fbff87b5fffb3888448e71967527f0f7f0c7187437465f",
+      "afterReceiptSha256": "2773e13c91c586a90cddee17cda6a65073456d822bc4b70de0a5caa635967c77",
+      "archiveTargetPath": "requirements/intakes/history/20261021-gsdb344-alignment/Lastenheft_PL0-Zellfunktionen_V1.md",
+      "archiveReceiptPath": "specs/intake-authoring-receipts/history/pl0-zellfunktionen-v1.20261021-gsdb344-alignment.json",
+      "receiptOnly": true
+    },
+    {
+      "slug": "rename-microcalc-tinycalc",
+      "intakeId": "b4f18668-0276-45ee-8a6f-16a8bd8b833d",
+      "receiptId": "672d90e1-ecab-45c4-b1c5-e83916cf30fc",
+      "targetPath": "requirements/intakes/active/Lastenheft_Rename_MicroCalc_TinyCalc.md",
+      "beforeTargetSha256": "ed761c150526f18c0b1d98d8febac1def260b1890aca6d0a341279dec19985b9",
+      "afterTargetSha256": "ed761c150526f18c0b1d98d8febac1def260b1890aca6d0a341279dec19985b9",
+      "beforeReceiptSha256": "8a414279d88cff09447a3ab9b3f81df9f8c3bcf200351ec97d98e0f4da60d6c4",
+      "afterReceiptSha256": "0abd34b203f7d26d61795787574c4e7129f2e86f9245cdcc778985a6de2bbed6",
+      "archiveTargetPath": "requirements/intakes/history/20261021-gsdb344-alignment/Lastenheft_Rename_MicroCalc_TinyCalc.md",
+      "archiveReceiptPath": "specs/intake-authoring-receipts/history/rename-microcalc-tinycalc.20261021-gsdb344-alignment.json",
+      "receiptOnly": true
+    },
+    {
+      "slug": "tui-funktionsabnahme-und-regressionsvertrag",
+      "intakeId": "40e85866-18d3-4cc8-b667-a1de8da44b10",
+      "receiptId": "507d2f72-7437-42ce-bdb8-2d841f7721d0",
+      "targetPath": "requirements/intakes/archive/Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md",
+      "beforeTargetSha256": "c07016800b9e02e56f123ed6af187d0b5fedd22c1689a1b8909fcc6e8f70c6ac",
+      "afterTargetSha256": "c07016800b9e02e56f123ed6af187d0b5fedd22c1689a1b8909fcc6e8f70c6ac",
+      "beforeReceiptSha256": "dce90cdd9596eb7a2ec0dceace8097e09108ca91a967d09a14c2ff90aa55384b",
+      "afterReceiptSha256": "9c3424e2d6d39951088fa74f7c4c8ee824fc7e3399575115e0917542a43933dc",
+      "archiveTargetPath": "requirements/intakes/history/20261021-gsdb344-alignment/Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md",
+      "archiveReceiptPath": "specs/intake-authoring-receipts/history/tui-funktionsabnahme-und-regressionsvertrag.20261021-gsdb344-alignment.json",
+      "receiptOnly": true
+    },
+    {
+      "slug": "secure-development-hardening",
+      "intakeId": "25157ad2-2db3-45bf-a0e1-8b3dd3c5e82f",
+      "receiptId": "bea8ceab-dbe0-4360-a931-fb1d7a8fdffa",
+      "targetPath": "requirements/intakes/active/Lastenheft_Secure-Development-Hardening.md",
+      "beforeTargetSha256": "38d57df9cb6431eddf812ca328965f8542d9aab801cdb8b9971cd72351472490",
+      "afterTargetSha256": "8b52ca4953d74cc5e647b82ecbeea2adfcfbff3ebbc00f58196c8ee36143d402",
+      "beforeReceiptSha256": "2a484f26f16598d065f16211f299fb8d47f56e69cdf2ab6237eea567d1933b49",
+      "afterReceiptSha256": "1431886d0521e7191da66ad9cb7eb412085219667385a5df24f9fcdce793219e",
+      "archiveTargetPath": "requirements/intakes/history/20261021-gsdb344-alignment/Lastenheft_Secure-Development-Hardening.md",
+      "archiveReceiptPath": "specs/intake-authoring-receipts/history/secure-development-hardening.20261021-gsdb344-alignment.json",
+      "receiptOnly": false
+    },
+    {
+      "slug": "sandbox-gestuetzte-secure-development-haertung",
+      "intakeId": "04b7b43a-af45-4d3d-9d6e-95dd4d285a9f",
+      "receiptId": "a8a3b69b-0b3d-4bc0-8dba-6b19d415340c",
+      "targetPath": "requirements/intakes/active/Lastenheft_Sandbox-gestuetzte-Secure-Development-Haertung.md",
+      "beforeTargetSha256": "f5ca1db52063f52f53914032fabcc8a1418c77fced607e922454248f17e72a6e",
+      "afterTargetSha256": "b85f66e2d0fc1ce7d47ad4328e61a007821c1f19f9d1b291e9d4533271e079fa",
+      "beforeReceiptSha256": "11381dd0c3b6a06b27912b2b5f0fb6edf70d8515b0523114002b2edd3c18300b",
+      "afterReceiptSha256": "86ea4a406d731fb9c6633d931a625958425ffa6f7ead62a162f4fdb2f75f9f1f",
+      "archiveTargetPath": "requirements/intakes/history/20261021-gsdb344-alignment/Lastenheft_Sandbox-gestuetzte-Secure-Development-Haertung.md",
+      "archiveReceiptPath": "specs/intake-authoring-receipts/history/sandbox-gestuetzte-secure-development-haertung.20261021-gsdb344-alignment.json",
+      "receiptOnly": false
+    }
+  ],
+  "archivePairs": [
+    {
+      "source": "requirements/intakes/active/Lastenheft_PL0-Zellfunktionen_V1.md",
+      "archive": "requirements/intakes/history/20261021-gsdb344-alignment/Lastenheft_PL0-Zellfunktionen_V1.md",
+      "rawSha256": "72c67c9c4b20ee9e1e9ad89e76b0bd51284eda4f9772c05fa6c0ca92a162f7b0"
+    },
+    {
+      "source": "specs/intake-authoring-receipts/pl0-zellfunktionen-v1.json",
+      "archive": "specs/intake-authoring-receipts/history/pl0-zellfunktionen-v1.20261021-gsdb344-alignment.json",
+      "rawSha256": "2cf9abb39da800db11fbff87b5fffb3888448e71967527f0f7f0c7187437465f"
+    },
+    {
+      "source": "requirements/intakes/active/Lastenheft_Rename_MicroCalc_TinyCalc.md",
+      "archive": "requirements/intakes/history/20261021-gsdb344-alignment/Lastenheft_Rename_MicroCalc_TinyCalc.md",
+      "rawSha256": "ed761c150526f18c0b1d98d8febac1def260b1890aca6d0a341279dec19985b9"
+    },
+    {
+      "source": "specs/intake-authoring-receipts/rename-microcalc-tinycalc.json",
+      "archive": "specs/intake-authoring-receipts/history/rename-microcalc-tinycalc.20261021-gsdb344-alignment.json",
+      "rawSha256": "8a414279d88cff09447a3ab9b3f81df9f8c3bcf200351ec97d98e0f4da60d6c4"
+    },
+    {
+      "source": "requirements/intakes/archive/Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md",
+      "archive": "requirements/intakes/history/20261021-gsdb344-alignment/Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md",
+      "rawSha256": "c07016800b9e02e56f123ed6af187d0b5fedd22c1689a1b8909fcc6e8f70c6ac"
+    },
+    {
+      "source": "specs/intake-authoring-receipts/tui-funktionsabnahme-und-regressionsvertrag.json",
+      "archive": "specs/intake-authoring-receipts/history/tui-funktionsabnahme-und-regressionsvertrag.20261021-gsdb344-alignment.json",
+      "rawSha256": "dce90cdd9596eb7a2ec0dceace8097e09108ca91a967d09a14c2ff90aa55384b"
+    },
+    {
+      "source": "requirements/intakes/active/Lastenheft_Secure-Development-Hardening.md",
+      "archive": "requirements/intakes/history/20261021-gsdb344-alignment/Lastenheft_Secure-Development-Hardening.md",
+      "rawSha256": "38d57df9cb6431eddf812ca328965f8542d9aab801cdb8b9971cd72351472490"
+    },
+    {
+      "source": "specs/intake-authoring-receipts/secure-development-hardening.json",
+      "archive": "specs/intake-authoring-receipts/history/secure-development-hardening.20261021-gsdb344-alignment.json",
+      "rawSha256": "2a484f26f16598d065f16211f299fb8d47f56e69cdf2ab6237eea567d1933b49"
+    },
+    {
+      "source": "requirements/intakes/active/Lastenheft_Sandbox-gestuetzte-Secure-Development-Haertung.md",
+      "archive": "requirements/intakes/history/20261021-gsdb344-alignment/Lastenheft_Sandbox-gestuetzte-Secure-Development-Haertung.md",
+      "rawSha256": "f5ca1db52063f52f53914032fabcc8a1418c77fced607e922454248f17e72a6e"
+    },
+    {
+      "source": "specs/intake-authoring-receipts/sandbox-gestuetzte-secure-development-haertung.json",
+      "archive": "specs/intake-authoring-receipts/history/sandbox-gestuetzte-secure-development-haertung.20261021-gsdb344-alignment.json",
+      "rawSha256": "11381dd0c3b6a06b27912b2b5f0fb6edf70d8515b0523114002b2edd3c18300b"
+    },
+    {
+      "source": "requirements/intakes/series/tinycalc-delivery/manifest.json",
+      "archive": "requirements/intakes/series-archive/tinycalc-delivery/20261021-gsdb344-alignment/manifest.json",
+      "rawSha256": "16d3e9b489c1e0690a03cce58085ff70f2a1416500aecd6d3f5f3e63f2d750d3"
+    },
+    {
+      "source": "requirements/intakes/series/tinycalc-delivery/receipt.json",
+      "archive": "requirements/intakes/series-archive/tinycalc-delivery/20261021-gsdb344-alignment/receipt.json",
+      "rawSha256": "35810b13fea67b03dec5d96e4318435fdac9189c11953dc87211e682dc8111bb"
+    },
+    {
+      "source": "requirements/intakes/series/tinycalc-delivery/operation.json",
+      "archive": "requirements/intakes/series-archive/tinycalc-delivery/20261021-gsdb344-alignment/operation.json",
+      "rawSha256": "305bc7beecff5ff820fb81bd07b8a84dd43acb82fc6dbe8308264176e323284c"
+    },
+    {
+      "source": "requirements/intakes/series/tinycalc-delivery/order.md",
+      "archive": "requirements/intakes/series-archive/tinycalc-delivery/20261021-gsdb344-alignment/order.md",
+      "rawSha256": "9193a5f8c14376e41f39c11b269a05a8bdb7e2e4dbc4daf661bd285c33804a43"
+    },
+    {
+      "source": "requirements/intakes/series/tinycalc-delivery/intake-review-request.json",
+      "archive": "requirements/intakes/series-archive/tinycalc-delivery/20261021-gsdb344-alignment/intake-review-request.json",
+      "rawSha256": "68e4c56dd6ebdbd109f86a87a08d9992bb7e8abc0b9f93cee8cc295ac35e8796"
+    },
+    {
+      "source": "requirements/intakes/series/tinycalc-delivery/intake-review-result.json",
+      "archive": "requirements/intakes/series-archive/tinycalc-delivery/20261021-gsdb344-alignment/intake-review-result.json",
+      "rawSha256": "f837574e58b780cc59cf625e67f925da3676755b4219ae38b616a98e637ec376"
+    },
+    {
+      "source": "requirements/intakes/series/tinycalc-delivery/intake-review-report.md",
+      "archive": "requirements/intakes/series-archive/tinycalc-delivery/20261021-gsdb344-alignment/intake-review-report.md",
+      "rawSha256": "5366343ee2933f68a019c374c00ae4b4c5702e129fe34cf80c00a4111183fe79"
+    }
+  ]
+}

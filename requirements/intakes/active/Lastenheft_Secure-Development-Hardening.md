@@ -73,7 +73,7 @@ Der spaetere Spec-Kit-Lauf soll alle relevanten Pruefpunkte klassifizieren und d
 
 - `Applicable`: der Pruefpunkt gilt fuer TinyCalc und muss mit Evidenzpfad, Entscheidung und Ergebnis dokumentiert werden.
 - `N/A`: der Pruefpunkt gilt nicht fuer diesen Lauf und muss mit kurzer Begruendung dokumentiert werden.
-- `Open`: der Pruefpunkt gilt, ist aber noch nicht ausreichend erfuellt; Folgeaufgabe, Risiko oder technische Haertung ist zu dokumentieren.
+- `Open`: die Anwendbarkeit ist noch nicht entschieden; offene Sachfrage, Owner und Termin sind zu dokumentieren.
 
 Nicht anwendbare Punkte duerfen nicht stillschweigend ausgelassen werden.
 
@@ -115,10 +115,10 @@ Dieses Lastenheft loest keinen Haertungslauf aus und aendert keine Produktionslo
 ## 7. Mindestanforderungen an den spaeteren Spec-Kit-Lauf
 
 1. Relevante Checklisten aus `docs/secure-development/` auswaehlen und jede Auswahl begruenden.
-2. Alle Pruefpunkte als `Applicable`, `N/A` oder `Open` dokumentieren.
+2. Alle Pruefpunkte getrennt nach Anwendbarkeit (`Applicable`, `N/A`, `Open`) und Umsetzung (`Fulfilled`, `Partly Fulfilled`, `Not Fulfilled`, `Not Assessed`) dokumentieren.
 3. Fuer `Applicable`-Punkte konkrete Evidenzpfade in `docs/security/`, Testdateien, Codeverweisen oder Spec-Kit-Artefakten benennen.
-4. Fuer `N/A`-Punkte eine kurze technische oder fachliche Begruendung erfassen.
-5. Fuer `Open`-Punkte Risiko, Folgeaktion und Prioritaet festhalten.
+4. Fuer `N/A`-Punkte technische oder fachliche Begruendung und Neubewertungstrigger erfassen; N/A ist kein Umsetzungsnachweis.
+5. Fuer offene oder nicht vollstaendig erfuellte Punkte Risiko, Folgeaktion (`nextAction`), Owner, Termin (`dueAt`) und Prioritaet festhalten.
 6. Secure Coding und Secure Architecture gemeinsam bewerten; MSL-Status ersetzt keine sichere API-, I/O-, Auth-, Crypto-, Logging- oder Dependency-Pruefung.
 7. Formel-, Datei-, UI- und Persistenzgrenzen als Trust Boundaries behandeln.
 8. A11Y- und didaktische Kommentar-Governance fuer TUI, CLI-Ausgaben und Dokumentation pruefen.
@@ -160,7 +160,7 @@ Der spaetere Lauf muss mindestens klassifizieren:
 - `Applicable`: gilt fuer diesen Lauf und braucht Umsetzung oder Evidenz.
 - `AlreadySatisfied`: ist im aktuellen Stand bereits nachweisbar erledigt.
 - `N/A`: gilt fuer diesen Lauf nicht und braucht eine kurze Begruendung.
-- `Open`: gilt, ist aber noch nicht ausreichend geklaert oder belegt.
+- `Open`: die Anwendbarkeit ist noch nicht ausreichend geklaert; fehlende Umsetzungsevidenz wird getrennt als `Not Assessed`, `Not Fulfilled` oder `Partly Fulfilled` erfasst.
 - `FollowUp`: fachlich relevant, aber nicht Teil dieses Laufs.
 
 ## Kopierbarer `/speckit-specify`-Prompt / Copyable `/speckit-specify` Prompt
@@ -210,11 +210,11 @@ Those steps belong to the separately requested later run.
 ### English: minimum requirements (section 7, same numbering)
 
 1. Select relevant secure-development checklists and justify every selection.
-2. Classify all checks Applicable (applies, with evidence/decision/result),
-   N/A (does not apply, with rationale) or Open (not sufficiently met).
+2. Separate applicability (Applicable, N/A, Open for undecided applicability)
+   from implementation (Fulfilled, Partly Fulfilled, Not Fulfilled, Not Assessed).
 3. Name concrete Applicable evidence in security docs, tests, code or Spec Kit artifacts.
-4. Explain N/A technically or functionally.
-5. Record risk, follow-up and priority for Open items.
+4. Explain N/A technically or functionally, with a re-evaluation trigger; N/A proves no implementation.
+5. Record risk, nextAction, owner, dueAt and priority for open or incompletely fulfilled items.
 6. Assess coding and architecture together; memory safety replaces no API,
    I/O, Auth, Crypto, logging or dependency assessment.
 7. Treat formula/file/UI/persistence boundaries as trust boundaries.
@@ -235,14 +235,26 @@ silently omitted; all omissions justified N/A; Open items have follow-ups;
 every positive conformance claim has concrete proof; TinyCalc remains buildable
 and testable after later hardening.
 Before Specify, check current state to avoid repeating completed/superseded work.
-Classify Applicable, AlreadySatisfied (proved), N/A, Open or FollowUp (relevant,
-outside this run). Plan only Applicable work and justify N/A/FollowUp. Preserve
+Classify Applicable, AlreadySatisfied (proved), N/A, Open (undecided
+applicability) or FollowUp (relevant, outside this run). Missing implementation
+evidence belongs separately to Not Assessed, Not Fulfilled or Partly Fulfilled.
+Plan only Applicable work and justify N/A/FollowUp. Preserve
 the intake/constitution/agent/guidance/A11Y/B2/didactic rules. Start no other
 intake run or combine intakes without documented justified coupling. The marked
 old prompt is historical, not another command. Canonical Specify creates only
 the matching specification; separately requested Autonomous stays LocalImplementation,
 with no push/PR/merge/bypass/secrets/provider/follow-up authority.
 
+
+## Governance-Nachtrag 2026-10-21 / Governance Addendum 2026-10-21
+
+Deutsch: GSDB 3.4.4 und Secure Development Assurance 0.1.5 sind der geprüfte Quellenstand dieses Nachtrags, keine dauerhafte Versionsbindung. Vor einem späteren Lauf Quellen erneut prüfen. Der Kontrollabgleich der 50 Änderungen steht in `docs/maintenance/gsdb-344-intake-control-impact.json`; die aktuelle GSDB-Matrix mit 157 IDs und der RL-SE-Nachweis unter `docs/security/secure-development/2026-10-20-tinycalc-gsdb344/` sind ergänzende, kontextgebundene Belege, keine automatische Erfüllung dieses Intakes.
+
+Deutsch: Anwendbarkeit, Umsetzung und Gate-Ergebnis sind getrennte Angaben. Anwendbarkeit ist `Applicable`, `N/A` oder `Open` (noch ungeklärt); Umsetzung ist `Fulfilled`, `Partly Fulfilled`, `Not Fulfilled` oder `Not Assessed`. Gate-Ergebnisse heißen `Ready`, `ReadyWithAcceptedRisks`, `NeedsRemediation` oder `Blocked`; `Ready` ist mit offenen oder unerfüllten Pflichtpunkten unzulässig. N/A benötigt Grund und Neubewertungstrigger; offene oder unvollständig erfüllte Punkte benötigen Folgeaktion, Owner und Termin. `AlreadySatisfied`/`FollowUp` sind nur Planungshinweise, kein Ersatz für diese Statusachsen oder aktuelle Belege. Historische Ergebnisse bleiben datiert erhalten; zurückgenommene Positivaussagen nicht als aktuelle Erfüllung wiederverwenden. Eine Risikoannahme bleibt menschliche Entscheidung.
+
+English: GSDB 3.4.4 and Secure Development Assurance 0.1.5 are the checked sources for this addendum, not permanent version pins. Recheck sources before a later run. The 50-control impact map is `docs/maintenance/gsdb-344-intake-control-impact.json`; the current 157-ID GSDB matrix and RL-SE evidence under `docs/security/secure-development/2026-10-20-tinycalc-gsdb344/` are context-bound inputs, not automatic fulfilment of this intake.
+
+English: Applicability, implementation and gate outcome are separate. Applicability is Applicable, N/A or Open (undecided); implementation is Fulfilled, Partly Fulfilled, Not Fulfilled or Not Assessed. Gate outcomes are Ready, ReadyWithAcceptedRisks, NeedsRemediation or Blocked; Ready is invalid with open or unfulfilled mandatory items. N/A needs a reason and re-evaluation trigger; open or incomplete items need nextAction, owner and dueAt. AlreadySatisfied/FollowUp are planning labels only. Keep dated historical results and do not reuse withdrawn positive claims as current fulfilment. Risk acceptance remains a human decision.
 
 <!-- intake-authoring:prompts -->
 ## Kopierbare Spec-Kit-Prompts / Copy-Ready Spec Kit Prompts

@@ -1,0 +1,31 @@
+{
+  "schemaVersion": "1.0",
+  "proposalId": "7cfed307-8672-4626-97fd-a998683d3b5b",
+  "type": "Update",
+  "approved": true,
+  "authorityEvidence": "Thorsten approved PLEASE IMPLEMENT THIS PLAN: targeted GSDB 3.4.4 / Assurance 0.1.5 governance and intake refresh, administrative Feature 006 provenance only, minimal Feature 007 alignment and separate independent Series review. Preserve historical acceptance, target identities, scope, order, states, roots and dependencies. Local documentation only: no implementation, build, test, restore, upgrade, commit, push, PR, merge or bypass. Exclude sheet.mcalc.json.",
+  "target": "requirements/intakes/series/tinycalc-delivery/manifest.json",
+  "scopePreserved": true,
+  "changes": {
+    "targets": 13,
+    "roots": 4,
+    "edges": 9,
+    "statusChanges": [],
+    "orderChanges": [],
+    "receiptRenewals": [
+      "pl0-zellfunktionen-v1",
+      "rename-microcalc-tinycalc",
+      "tui-funktionsabnahme-und-regressionsvertrag",
+      "secure-development-hardening",
+      "sandbox-gestuetzte-secure-development-haertung"
+    ],
+    "contentChanges": [
+      "requirements/intakes/active/Lastenheft_Secure-Development-Hardening.md",
+      "requirements/intakes/active/Lastenheft_Sandbox-gestuetzte-Secure-Development-Haertung.md"
+    ],
+    "featureAlignment": "007 documentation only; all 60 tasks unchecked",
+    "review": "Superseded; independent successor pending",
+    "historicalAcceptance": "Unchanged",
+    "delivery": "Local only; no commit/push/PR/merge"
+  }
+}

@@ -867,6 +867,8 @@ Dokumentationsprüfung vom 18.10.2026: 34/34 Durchführungshinweise mit deutsche
 | 2026-10-18 | PR #110: Profile-2-Statistikdrift beheben / Repair statistics drift | Branch `007-tui-accessibility`, Quelle `f0dc5d899850`; sichtbare Wartungssitzung am 18.10.2026 Europe/Berlin, aktive Arbeitszeit nicht gemessen. CI-Windows-Homogenität meldete `ASCII Statistics Profile 2 drift`. Vorhandenen Renderer und Konfiguration unverändert verwendet; Check-only bestätigte Drift, saubere lokale Kopie desselben vollständigen Git-Stands lieferte identische Vorschau (266303 Textzeilen, 96 aktive Tage). Darin autorisiert gerendert, ausschließlich generierten Ledger-Diff übernommen; private ungetrackte Tabelle im Original unberührt, kein Stash/Ignore-/Dirty-Guard-Bypass. ASCII-Trends mit aktualisiert, historische Einträge erhalten. Produktions-/Testzeilen `0/0`; Liefermenge Ledger plus Versionsfelder `1.7.8.117`, kein Buildzähleranstieg. SSDF/CWE und anwendbare Dokumenten-A11Y gelten, Produkt-/Supply-Chain-Nachweise mangels Produktänderung nicht erneuert. Referenzen 80/125 Zeilen/Arbeitstag, 7.8 Stunden/Tag, 21.5 Tage/Monat bleiben Modelle, kein gemessener Speedup. Check-only/Alignment/Format/Secret/HTML-A11Y und exakte Liefermenge validieren; Commit/Push ausdrücklich beauftragt, technisches CI am neuen Head nachprüfen. Claude-Review ausgenommen, nicht bestanden; kein Merge oder Produktlauf. / Refresh the existing Profile-2 block from an identical clean local Git copy without changing methodology, configuration, private data or historical ledger entries. Update generated trends and version fields only, validate the bounded documentation delivery and push under separate explicit authority. No merge or product implementation; reference scenarios remain models. |
 
 | 2026-10-18 | Begrenzter 14-Preset-Patch-Rollout / Bounded fourteen-preset patch rollout | Branch `codex/fourteen-preset-patch-rollout`, Basis `d23f6a7`; genehmigte technische GSDB-Versions-/Hashnachpruefung, unveraenderte Kontroll-/Finding-/Human-Achsen und 28 zusaetzliche Negativfaelle. Pakete, aktuelle Guidance, Quellenbindungen und Agentenflaechen gemeinsam aktualisieren; keine Produkt-API oder Intake-Ausfuehrung. Echte Restore-/Release-/Test-/TUI-Smoke-Regressionsgates sowie Paket-/Assurance-/Statistikpruefung vor Lieferung. Exakte Test- und Lieferergebnisse im zugeordneten PR; Kandidat ist keine Abnahme. Produktions-/Test-/Dokumentationsumfang aus Git, sichtbare Sitzung am 18.10.2026, aktive Arbeitszeit nicht gemessen; 80/125 Zeilen je Arbeitstag und 7.8 Stunden bleiben Modelle. Private Tabelle unberuehrt, keine Community-/Flottenfreigabe. / Update the fourteen immutable packages and their bounded technical evidence without changing human decisions. Require real regression and exact-head green delivery, preserve statistics methodology and private user data; no product or wider rollout authority. |
+| 2026-10-21 | Gezielter GSDB-/Intake-Abgleich / Targeted GSDB and intake alignment | Branch `codex/gsdb344-intake-alignment`; sichtbares Fenster 2026-10-21T10:45:45Z bis 2026-10-21T11:06:04Z, keine Arbeitszeitmessung. Produktcode `0`, Testcode `0`; vor Ledger und Schlussmetadaten in 50 Dokumentations-/JSON-Dateien `+6887/-582` Zeilen, davon `3706` neue Archivkopiezeilen; maschinelle Hash-/Review-Evidence ist keine handgeschriebene Programmlogik. Arbeitspakete: fünf Receipt-Lineages, zwei Härtungs-Intakes mit getrennten Statusachsen, 50 Kontrollzuordnungen, minimaler Feature-007-Abgleich und unabhängiger Serienreview. 13 Ziele/4 Wurzeln/9 Kanten und Status erhalten; 17 Archivpaare bytegleich, 820 Schutzdateien unverändert, 60 Tasks offen. Beide Shell-Validatorwege und 36 Alignmentfixtures bestanden; Review Ready nur für Dokumente, IR001 behoben, null offene Befunde. HTML-Snapshot/axe/lynx auf sechs Seiten ohne gemeldete axe-Verstöße, mit ausdrücklich offenen manuellen/unvollständigen Regeln und drei historischen defekten Links. Statistik-Preview DRY_RUN/Drift, Check-only DRIFT Exit 1; generierter Block unverändert, Homogenität deshalb nicht vollständig bestanden. Modelle 80/125 Zeilen pro Arbeitstag, 7.8 Stunden/Tag und 21.5 Tage/Monat bleiben unverändert, keine neue Aufwands-/Speedupmessung. Kein Produktlauf oder Git-Delivery; [Bericht / Report](maintenance/gsdb-344-intake-alignment-2026-10-21.md). / Local documentation and lineage update with independent document review, preserved history/order and no implementation or delivery. Counts include copied archives and generated evidence, not measured human effort; statistics and manual HTML/native evidence remain explicitly bounded. |
+| 2026-10-21 | Statistikdrift nach Quellencommit beheben / Resolve statistics drift after source commit | Branch `codex/gsdb344-intake-alignment`; sichtbares Lieferfenster am 21.10.2026, keine Arbeitszeitmessung. Quellencommit `1425e9a9ffe7`; Produktions-/Testcode `0/0`, generierter Dokumentationsdiff `+23/-23` vor diesem Ledger-Nachtrag. Arbeitspakete: genehmigter Quellencommit, saubere temporäre Git-Kopie ohne private Tabelle, kanonische Profil-2-Vorschau → Render → Check jeweils Exit 0, unveränderte Methodik/Konfiguration, Quelle mit 299456 Textzeilen und 98 Aktivtagen. Vorherige Drift-/Homogenitätsbefunde bleiben historische Ergebnisse, keine aktuelle Blockadebehauptung; aktuelle Schlussprüfungen werden am PR-Head geführt. Referenzen 80/125 Zeilen/Arbeitstag, 7.8 Stunden/Tag und 21.5 Tage/Monat bleiben Modellannahmen, keine gemessene KI-Beschleunigung. Kein Produktbuild/-test/-restore lokal; bestehende Remote-CI ist technische Lieferung, keine menschliche/native A11Y-Abnahme. Separater Statistikcommit und MergeAndSync mit Admin-Bypass sind jetzt ausdrücklich genehmigt; technische Gates bleiben Pflicht, Claude-Review bleibt ausgenommen und ist kein Pass. / Refresh canonical statistics from the authorised clean source commit without changing methodology or touching the private sheet. Preview/render/check pass; preserve dated earlier failures and report final technical and review gates on the PR head, without inferring product acceptance or measured effort. |
 
 ### 2026-10-20 - GSDB 3.4.4 / Assurance 0.1.5 Pilot
 
@@ -874,6 +876,18 @@ DE: Manifestgebundene GSDB-Übernahme aus Level 0 d9898356, 157 IDs erhalten;
 Assurance 0.1.5 gezielt integriert, andere 13 Pakete und historische Evidence erhalten.
 [Nachweis / Evidence](maintenance/gsdb-344-pilot-2026-10-20.md).
 EN: Bounded source/preset adoption and new project evidence; no product or fleet acceptance.
+
+### 2026-10-21 - Governance-/Intake-Abgleich / Governance and Intake Alignment
+
+Deutsch: Der neue Ledger-Eintrag beschreibt nur diesen lokalen Dokumentenlauf. Der nachfolgende generierte Profil-2-Block bleibt am bisherigen sauberen Quellenstand; die aktuelle Vorschau zeigt Drift. Kein frischer Gesamtstand, vollständiger Homogenitäts-Pass oder neue Beschleunigung wird behauptet. Die regelkonforme Neuberechnung benötigt einen gesondert freigegebenen sauberen Quellencommit; private Tabellen bleiben ausgeschlossen. Prüfbericht und unabhängiger Review trennen Dokumentenqualität, technische Checks und spätere Produktabnahme.
+
+English: The new entry records local document work only. Keep the generated Profile 2 block at its historical clean source; the current preview reports drift. Claim no fresh totals, full homogeneity pass or new speedup. A later authorised clean source commit enables regeneration, with private sheets excluded. Keep document review, technical checks and later product acceptance separate.
+
+### 2026-10-21 - Statistikdrift und Lieferfreigabe / Statistics Drift and Delivery Authority
+
+Deutsch: Nach dem Quellencommit `1425e9a9ffe7` wurden Vorschau, Render und Check-only auf einer sauberen temporären Git-Kopie erfolgreich ausgeführt. Nur der generierte Block wird zurückübernommen; manuelle Abschnitte bleiben erhalten. Die oben datierten Drift-/Homogenitätsbefunde dokumentieren den früheren lokalen Prüfstand. Der nachfolgende Profil-2-Block ist jetzt an den neuen Quellencommit gebunden, mit 299456 Textzeilen und 98 sichtbaren Aktivtagen. Aktuelle HTML-/A11Y-, Homogenitäts- und Lieferprüfungen werden im PR geführt; offene manuelle Kriterien und historische Links werden nicht als gelöst ausgegeben. Thorsten hat Commit, Push, PR und MergeAndSync mit Admin-Bypass separat genehmigt; kein Folgefeature.
+
+English: Preview, render and check-only succeeded on a clean temporary Git copy of the source commit. Copy back only the generated block and preserve authored history. Earlier dated drift/homogeneity results describe the previous local state, not current blockers. The following block binds the new clean source, 299456 text lines and 98 visible active days. Record final HTML/accessibility, homogeneity and delivery checks in the PR without claiming manual criteria or historical links resolved. Separate authority now permits Git delivery and admin-bypass MergeAndSync, not another feature.
 
 ## Gesamtstatistik / Overall Statistics
 
@@ -915,29 +929,29 @@ Profil 2 verwendet Git-getrackte Textdateien und sichtbare Git-Aktivitaet. Die W
 
 | Kennzahl / Metric | Wert / Value |
 |---|---:|
-| Textbasis / Text base | 293038 lines |
-| Textdateien / Text files | 1741 |
-| Beobachtbarer Zeitraum / Observable period | 2025-10-26..2026-10-20 |
-| Aktivtage / Active days | 97 |
-| Relevante Commits / Relevant commits | 307 |
-| Zeilen je Aktivtag / Lines per active day | 3021.0 |
+| Textbasis / Text base | 299456 lines |
+| Textdateien / Text files | 1770 |
+| Beobachtbarer Zeitraum / Observable period | 2025-10-26..2026-10-21 |
+| Aktivtage / Active days | 98 |
+| Relevante Commits / Relevant commits | 308 |
+| Zeilen je Aktivtag / Lines per active day | 3055.7 |
 | Peak-Tag im Fenster / Peak day in window | 2026-10-10 / 35855 |
 | Peak-Woche im Fenster / Peak week in window | 2026-10-04 / 49053 |
 | Laengste Serie / Longest streak | 8 days |
-| Speedup vs. 80 lines/day | 37.8x |
-| Speedup vs. 125 lines/day | 24.2x |
-| Methodik / Methodology | v2; source `d4455f841279` |
+| Speedup vs. 80 lines/day | 38.2x |
+| Speedup vs. 125 lines/day | 24.4x |
+| Methodik / Methodology | v2; source `1425e9a9ffe7` |
 
 ### Artefaktmix / Artifact Mix
 
 ```text
-Produktiv / Production          [#...................]   1.1% | 3118
-Tests                           [#...................]   5.3% | 15430
-Dokumentation / Documentation   [###############.....]  74.1% | 217013
-Skripte / Scripts               [##..................]  11.4% | 33348
-Konfiguration / Configuration   [#...................]   7.2% | 21036
+Produktiv / Production          [#...................]   1.0% | 3118
+Tests                           [#...................]   5.2% | 15444
+Dokumentation / Documentation   [###############.....]  73.6% | 220549
+Skripte / Scripts               [##..................]  11.1% | 33348
+Konfiguration / Configuration   [##..................]   8.0% | 23904
 Daten und Medien / Data and media [....................]   0.0% | 0
-Sonstiger Text / Other text     [#...................]   1.1% | 3093
+Sonstiger Text / Other text     [#...................]   1.0% | 3093
 ```
 
 Die Balken teilen die aktuelle getrackte Textbasis in stabile Kategorien. Prozent und Zeilenwert sind die genaue, textorientierte Aussage.
@@ -962,7 +976,7 @@ Wochen / Weeks 27..52 | 2026-04-26..2026-10-24
 So/Su  0 0 0 0 0 1 0 4 0 0 0 1 4 4 1 4 4 0 4 4 4 4 0 4 4 4
 Mo/Mo  0 4 0 0 0 0 0 0 0 3 1 4 4 0 0 0 2 0 0 0 0 0 3 3 3 0
 Di/Tu  0 3 0 0 3 0 0 0 0 2 0 3 4 4 0 0 0 0 4 3 4 0 0 4 0 4
-Mi/We  0 2 0 0 0 2 0 4 0 2 0 0 2 4 0 0 0 0 0 0 0 0 0 3 0 -
+Mi/We  0 2 0 0 0 2 0 4 0 2 0 0 2 4 0 0 0 0 0 0 0 0 0 3 0 4
 Do/Th  4 0 0 0 1 0 4 1 0 0 0 1 4 0 0 4 0 0 3 0 0 0 0 3 0 -
 Fr/Fr  0 0 0 4 2 2 0 3 2 3 4 4 4 1 0 0 0 0 4 3 2 0 0 0 0 -
 Sa/Sa  0 0 0 0 0 0 0 4 0 4 4 0 4 2 0 2 0 3 4 4 0 2 4 4 0 -
@@ -988,7 +1002,7 @@ Wochen / Weeks 01..26 | 2025-10-26..2026-04-25
 ```text
 Wochen / Weeks 27..52 | 2026-04-26..2026-10-24
    cap 50000 | . . . . . . . . . . . . . . . . . . . . . . . . . .
-       41667 | . . . . . . . . . . . . . . . . . . . . . . . # . .
+       41667 | . . . . . . . . . . . . . . . . . . . . . . . # . #
        33333 | . . . . . . . . . . . . # . . . . . . . . . . # . #
        25000 | . . . . . . . # . . . . # . . . . . # # . . . # . #
        16667 | . . . . . . . # . . . . # # . . . . # # # . . # . #
@@ -1069,8 +1083,8 @@ Die festen Slots halten den Phasenvergleich auch bei fehlenden oder spaeter erga
 
 ```text
 Scale: 0..50x
-80 lines/day       [###############.....] 37.8x
-125 lines/day      [##########..........] 24.2x
+80 lines/day       [###############.....] 38.2x
+125 lines/day      [##########..........] 24.4x
 ```
 
 Die Faktoren vergleichen sichtbare Lieferdichte mit den dokumentierten manuellen Referenzen. Sie messen keine Arbeitszeit.
@@ -1083,7 +1097,7 @@ Die Faktoren vergleichen sichtbare Lieferdichte mit den dokumentierten manuellen
 Scale: 0..5000 lines/day
 Experienced manual [#...................] 80
 Thorsten solo      [#...................] 125
-Visible repository [############........] 3021.0
+Visible repository [############........] 3055.7
 ```
 
 Die gemeinsame Skala vergleicht Referenzen und sichtbare Lieferdichte. Sie schreibt die Git-Aktivitaet keiner Person oder KI pauschal zu.
@@ -1092,9 +1106,9 @@ Die gemeinsame Skala vergleicht Referenzen und sichtbare Lieferdichte. Sie schre
 
 ### Textalternative / Text Alternative
 
-DE: Das Fenster beginnt am 2025-10-26 und endet am 2026-10-20. Es enthaelt 97 aktive und 263 inaktive vergangene Tage. Peak-Tag: 2026-10-10 / 35855. Peak-Woche: 2026-10-04 / 49053. Laengste Serie: 8 Tage (2026-07-19..2026-07-26).
+DE: Das Fenster beginnt am 2025-10-26 und endet am 2026-10-21. Es enthaelt 98 aktive und 263 inaktive vergangene Tage. Peak-Tag: 2026-10-10 / 35855. Peak-Woche: 2026-10-04 / 49053. Laengste Serie: 8 Tage (2026-07-19..2026-07-26).
 
-*EN: The window starts on 2025-10-26 and ends on 2026-10-20. It contains 97 active and 263 inactive elapsed days. Peak day: 2026-10-10 / 35855. Peak week: 2026-10-04 / 49053. Longest streak: 8 days (2026-07-19..2026-07-26).*
+*EN: The window starts on 2025-10-26 and ends on 2026-10-21. It contains 98 active and 263 inactive elapsed days. Peak day: 2026-10-10 / 35855. Peak week: 2026-10-04 / 49053. Longest streak: 8 days (2026-07-19..2026-07-26).*
 
 | Monat / Month | Geaenderte Textzeilen / Changed text lines |
 |---|---:|
@@ -1109,6 +1123,6 @@ DE: Das Fenster beginnt am 2025-10-26 und endet am 2026-10-20. Es enthaelt 97 ak
 | 2026-07 | 74031 |
 | 2026-08 | 26210 |
 | 2026-09 | 70997 |
-| 2026-10 | 100852 |
+| 2026-10 | 108020 |
 
 <!-- project-statistics-v2:end -->

@@ -1,0 +1,47 @@
+{
+  "schemaVersion": "1.0",
+  "documentType": "IntakeOperation",
+  "operationId": "44f5901d-e5d9-42b8-b975-4693195d034f",
+  "type": "Update",
+  "status": "Completed",
+  "createdAt": "2026-10-21T10:45:45Z",
+  "authorityEvidence": "Thorsten approved PLEASE IMPLEMENT THIS PLAN: targeted GSDB 3.4.4 / Assurance 0.1.5 governance and intake refresh, administrative Feature 006 provenance only, minimal Feature 007 alignment and separate independent Series review. Preserve historical acceptance, target identities, scope, order, states, roots and dependencies. Local documentation only: no implementation, build, test, restore, upgrade, commit, push, PR, merge or bypass. Exclude sheet.mcalc.json.",
+  "proposalPath": "specs/intake-authoring-operations/44f5901d-e5d9-42b8-b975-4693195d034f/proposal.json",
+  "proposalNormalizedSha256": "dfb66dcbb2b1a394346e5bb85311f3564980a9054c2823856bc005ab5e474306",
+  "approval": {
+    "approved": true,
+    "approvedAt": "2026-10-21T10:45:45Z",
+    "approvedBy": "Thorsten",
+    "evidence": "Thorsten approved PLEASE IMPLEMENT THIS PLAN: targeted GSDB 3.4.4 / Assurance 0.1.5 governance and intake refresh, administrative Feature 006 provenance only, minimal Feature 007 alignment and separate independent Series review. Preserve historical acceptance, target identities, scope, order, states, roots and dependencies. Local documentation only: no implementation, build, test, restore, upgrade, commit, push, PR, merge or bypass. Exclude sheet.mcalc.json."
+  },
+  "stagingDirectory": "Temporary tracked-source candidate; excluded private sheet",
+  "intendedTargets": [
+    "requirements/intakes/active/Lastenheft_PL0-Zellfunktionen_V1.md",
+    "requirements/intakes/active/Lastenheft_Rename_MicroCalc_TinyCalc.md",
+    "requirements/intakes/archive/Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md",
+    "requirements/intakes/active/Lastenheft_Secure-Development-Hardening.md",
+    "requirements/intakes/active/Lastenheft_Sandbox-gestuetzte-Secure-Development-Haertung.md"
+  ],
+  "validatedTargets": [
+    "requirements/intakes/active/Lastenheft_PL0-Zellfunktionen_V1.md",
+    "requirements/intakes/active/Lastenheft_Rename_MicroCalc_TinyCalc.md",
+    "requirements/intakes/archive/Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md",
+    "requirements/intakes/active/Lastenheft_Secure-Development-Hardening.md",
+    "requirements/intakes/active/Lastenheft_Sandbox-gestuetzte-Secure-Development-Haertung.md"
+  ],
+  "publishedTargets": [
+    "requirements/intakes/active/Lastenheft_PL0-Zellfunktionen_V1.md",
+    "requirements/intakes/active/Lastenheft_Rename_MicroCalc_TinyCalc.md",
+    "requirements/intakes/archive/Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md",
+    "requirements/intakes/active/Lastenheft_Secure-Development-Hardening.md",
+    "requirements/intakes/active/Lastenheft_Sandbox-gestuetzte-Secure-Development-Haertung.md"
+  ],
+  "rollbackBoundary": "Validate complete candidate before local publication; original working tree remains unchanged on preparation failure.",
+  "failure": {
+    "class": "N/A",
+    "message": "N/A"
+  },
+  "nextAction": "$speckit-intake-review requirements/intakes/series/tinycalc-delivery/manifest.json",
+  "completedReviewId": "c0d161e3-477b-4381-9e11-38c19e6e6797",
+  "completionBoundary": "Local governance update and separate independent document review completed. Generated statistics deferred without commit authority; manual HTML/native acceptance remains open. No implementation or delivery."
+}
