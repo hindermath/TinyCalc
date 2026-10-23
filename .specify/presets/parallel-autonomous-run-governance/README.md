@@ -1,19 +1,29 @@
 # Parallel Autonomous Run Governance
 
-Patch **0.2.7** liefert die verbesserte zweisprachige Einstiegs- und
-Kompositionsdokumentation. Verhalten und Berechtigungsgrenzen bleiben erhalten.
-[Release-Nachweis / Release record](docs/release-0.2.7-validation.md).
+<!-- current-package: 0.2.8 -->
 
-*Patch 0.2.7 packages the improved bilingual getting-started and composition
+**Leserpfad / Reader path:** [Deutsch: Einstieg, Begriffe und Fehlerhilfe](docs/user-guide.md) · [English: start, terms and troubleshooting](docs/user-guide.EN.md).
+
+Quellkandidat **v0.2.8**. Der [Release-Stand](https://github.com/hindermath/spec-kit-preset-parallel-autonomous-run-governance/releases) wird getrennt geprüft; ein Commit auf main ist noch keine Veröffentlichung oder Installation.
+
+*Source candidate v0.2.8. The release page records actual publication separately; a main-branch commit is not publication or installation.*
+
+
+Patch **0.2.8** liefert die verbesserte zweisprachige Einstiegs- und
+Kompositionsdokumentation. Verhalten und Berechtigungsgrenzen bleiben erhalten.
+[Release-Nachweis / Release record](docs/release-0.2.8-validation.md).
+
+*Patch 0.2.8 packages the improved bilingual getting-started and composition
 guide. Behavior and authority boundaries remain unchanged.*
 
 Permission-bounded coordination for several isolated autonomous Spec Kit runs.
 
-Version `0.2.7` | Priority `80` | Spec Kit `>=0.8.3`
+Version `0.2.8` | Priority `80` | Spec Kit `>=0.8.3`
 
-Version 0.2.6 aligns current installation examples with Autonomous Run
-Governance 0.3.6. Campaign, authority, and `model-routing.json` contracts are
-unchanged.
+Historical note: version 0.2.6 aligned its installation examples with
+Autonomous Run Governance 0.3.6. The current documentation candidate uses
+Autonomous 0.4.6 with Parallel 0.2.8, not a newly claimed live field test.
+Campaign, authority, and model-routing.json contracts are unchanged.
 Required worker preset: `autonomous-run-governance >=0.2.2`
 
 Schema 1.2 optionally binds worker scheduling to a current campaign intake
@@ -120,8 +130,8 @@ Fuer regulaere Kampagnen gilt:
 1. Preset 7, danach Preset 8 installieren:
 
    ```bash
-   specify preset add --from https://github.com/hindermath/spec-kit-preset-autonomous-run-governance/archive/refs/tags/v0.3.6.zip --priority 70
-   specify preset add --from https://github.com/hindermath/spec-kit-preset-parallel-autonomous-run-governance/archive/refs/tags/v0.2.7.zip --priority 80
+   specify preset add --from https://github.com/hindermath/spec-kit-preset-autonomous-run-governance/archive/refs/tags/v0.4.6.zip --priority 70
+   specify preset add --from https://github.com/hindermath/spec-kit-preset-parallel-autonomous-run-governance/archive/refs/tags/v0.2.8.zip --priority 80
    ```
 
 2. Beide Presets pruefen:
