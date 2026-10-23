@@ -889,6 +889,26 @@ Deutsch: Nach dem Quellencommit `1425e9a9ffe7` wurden Vorschau, Render und Check
 
 English: Preview, render and check-only succeeded on a clean temporary Git copy of the source commit. Copy back only the generated block and preserve authored history. Earlier dated drift/homogeneity results describe the previous local state, not current blockers. The following block binds the new clean source, 299456 text lines and 98 visible active days. Record final HTML/accessibility, homogeneity and delivery checks in the PR without claiming manual criteria or historical links resolved. Separate authority now permits Git delivery and admin-bypass MergeAndSync, not another feature.
 
+### 2026-10-24 - Stabile Preset-Pakete / Stable preset packages
+
+Deutsch: Begrenzter Rollout aller 14 stabilen Preset-Releases aus Home Baseline
+PR #341. Quellen-, Archiv- und Installed-Locks sind getrennt; historische
+GSDB-/Assurance-Evidence bleibt erhalten. 678 lokale Tests bestehen, der
+native macOS-Collector bindet 364 Pfade und der Smoke liefert `SMOKE_OK`.
+Keine neue Produktfunktion oder Modellprobe. Beide Statistik-Kontexte werden
+nach dem Quellencommit getrennt mit Vorschau und ohne Dirty-Guard-Bypass
+fortgeschrieben. Referenzen, Zeitzonen und manuelle Abschnitte bleiben erhalten.
+Der neue TinyCalc-PR benötigt eigene fachliche Sichtung und Lieferfreigabe.
+
+English: Bounded rollout of fourteen stable preset releases from Home Baseline
+PR #341. Source, archive and installed locks are separate; historical
+GSDB/Assurance evidence is retained. All 678 local tests pass, native macOS
+evidence binds 364 paths and smoke returns `SMOKE_OK`. No new product feature
+or model probe. Both statistics contexts are regenerated separately after the
+source commit, with previews and no dirty-worktree bypass. Reference estimates,
+time zones and authored sections remain unchanged. The new TinyCalc PR needs
+its own human review and delivery approval.
+
 ## Gesamtstatistik / Overall Statistics
 
 Deutsch: Feature 006 ist in PR #104 vollständig implementiert, menschlich
