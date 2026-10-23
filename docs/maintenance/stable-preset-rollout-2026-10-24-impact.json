@@ -1,0 +1,117 @@
+{
+  "schemaVersion": "1.1",
+  "feature": "tinycalc-stable-preset-rollout-2026-10-24",
+  "entries": [
+    {
+      "changeId": "CHG001",
+      "scope": "central-profile-guidance-and-navigation",
+      "decision": "UpdateRequired",
+      "rationale": "Vierzehn stabile Pakete nach explizitem Pilotauftrag; historische Evidence und menschliche Entscheidungen bleiben erhalten. / Fourteen stable packages under explicit pilot authority; preserve history and human decisions.",
+      "documents": [
+        "README.md",
+        "AGENTS.md",
+        "CLAUDE.md",
+        "GEMINI.md",
+        ".github/copilot-instructions.md",
+        ".github/agents/copilot-instructions.md",
+        "constitution.md",
+        ".specify/memory/constitution.md"
+      ],
+      "owner": "Thorsten Hindermann",
+      "audiences": [
+        "Preset users",
+        "Maintainers"
+      ],
+      "readerPaths": [
+        "README -> current bounded rollout report -> release/source/installed bindings -> exact-head human review"
+      ],
+      "canonicalSource": "scripts/config/spec-kit-project-statistics-governance-presets.json",
+      "navigationImpact": "README links the new technical rollout report; historical reports remain unchanged.",
+      "documentClass": "ActiveSemantic",
+      "languageStrategy": "Deutsch zuerst und gleichwertiges Englisch im selben Dokument / German first and equivalent English in the same document.",
+      "languagePartners": [
+        "README.md"
+      ],
+      "platformAndExampleProof": "Exact Bash/PowerShell matrix, archive comparison, stable routing/documentation tests; full local and native results recorded in rollout PR.",
+      "distributionClass": "sourceOnly",
+      "homeSyncRequired": false,
+      "evidence": "docs/maintenance/stable-preset-rollout-2026-10-24.md",
+      "risk": "Package installation and technical gates grant no product, risk or human acceptance; no models or wider rollout.",
+      "criticality": "Usage",
+      "reevaluationTrigger": "Package, source, profile, evidence or authority drift."
+    },
+    {
+      "changeId": "CHG002",
+      "scope": "installation-release-evidence-and-technical-assurance",
+      "decision": "UpdateRequired",
+      "rationale": "Vierzehn stabile Pakete nach explizitem Pilotauftrag; historische Evidence und menschliche Entscheidungen bleiben erhalten. / Fourteen stable packages under explicit pilot authority; preserve history and human decisions.",
+      "documents": [
+        "docs/maintenance/stable-preset-rollout-2026-10-24.md",
+        "docs/maintenance/preset-source-lock.json",
+        "docs/maintenance/preset-installed-lock.json",
+        "docs/maintenance/stable-preset-rollout-2026-10-24-checks.json",
+        "docs/project-statistics-pilot/README.md",
+        "docs/PR_TEXT_STABLE_PRESET_ROLLOUT_2026_10_24.md"
+      ],
+      "owner": "Thorsten Hindermann",
+      "audiences": [
+        "Preset users",
+        "Maintainers"
+      ],
+      "readerPaths": [
+        "README -> current bounded rollout report -> release/source/installed bindings -> exact-head human review"
+      ],
+      "canonicalSource": "scripts/config/spec-kit-project-statistics-governance-presets.json",
+      "navigationImpact": "README links the new technical rollout report; historical reports remain unchanged.",
+      "documentClass": "ActiveSemantic",
+      "languageStrategy": "Deutsch zuerst und gleichwertiges Englisch im selben Dokument / German first and equivalent English in the same document.",
+      "languagePartners": [
+        "README.md"
+      ],
+      "platformAndExampleProof": "Exact Bash/PowerShell matrix, archive comparison, stable routing/documentation tests; full local and native results recorded in rollout PR.",
+      "distributionClass": "sourceOnly",
+      "homeSyncRequired": false,
+      "evidence": "docs/maintenance/stable-preset-rollout-2026-10-24.md",
+      "risk": "Package installation and technical gates grant no product, risk or human acceptance; no models or wider rollout.",
+      "criticality": "Usage",
+      "reevaluationTrigger": "Package, source, profile, evidence or authority drift."
+    },
+    {
+      "changeId": "CHG003",
+      "scope": "statistics",
+      "decision": "GeneratedUpdate",
+      "rationale": "Vierzehn stabile Pakete nach explizitem Pilotauftrag; historische Evidence und menschliche Entscheidungen bleiben erhalten. / Fourteen stable packages under explicit pilot authority; preserve history and human decisions.",
+      "documents": [
+        "docs/project-statistics.md",
+        "docs/project-statistics-pilot/report.md",
+        "docs/project-statistics-pilot/snapshot.json"
+      ],
+      "owner": "Thorsten Hindermann",
+      "audiences": [
+        "Preset users",
+        "Maintainers"
+      ],
+      "readerPaths": [
+        "README -> current bounded rollout report -> release/source/installed bindings -> exact-head human review"
+      ],
+      "canonicalSource": "docs/project-statistics.config.json",
+      "navigationImpact": "README links the new technical rollout report; historical reports remain unchanged.",
+      "documentClass": "Generated",
+      "languageStrategy": "Deutsch zuerst und gleichwertiges Englisch im selben Dokument / German first and equivalent English in the same document.",
+      "languagePartners": [
+        "README.md"
+      ],
+      "platformAndExampleProof": "Exact Bash/PowerShell matrix, archive comparison, stable routing/documentation tests; full local and native results recorded in rollout PR.",
+      "distributionClass": "sourceOnly",
+      "homeSyncRequired": false,
+      "evidence": "docs/maintenance/stable-preset-rollout-2026-10-24.md",
+      "risk": "Package installation and technical gates grant no product, risk or human acceptance; no models or wider rollout.",
+      "criticality": "Usage",
+      "reevaluationTrigger": "Package, source, profile, evidence or authority drift.",
+      "generatedSource": {
+        "path": "docs/project-statistics.config.json",
+        "renderer": "bash scripts/render-project-statistics.sh"
+      }
+    }
+  ]
+}

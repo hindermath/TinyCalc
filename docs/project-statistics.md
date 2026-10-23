@@ -889,6 +889,26 @@ Deutsch: Nach dem Quellencommit `1425e9a9ffe7` wurden Vorschau, Render und Check
 
 English: Preview, render and check-only succeeded on a clean temporary Git copy of the source commit. Copy back only the generated block and preserve authored history. Earlier dated drift/homogeneity results describe the previous local state, not current blockers. The following block binds the new clean source, 299456 text lines and 98 visible active days. Record final HTML/accessibility, homogeneity and delivery checks in the PR without claiming manual criteria or historical links resolved. Separate authority now permits Git delivery and admin-bypass MergeAndSync, not another feature.
 
+### 2026-10-24 - Stabile Preset-Pakete / Stable preset packages
+
+Deutsch: Begrenzter Rollout aller 14 stabilen Preset-Releases aus Home Baseline
+PR #341. Quellen-, Archiv- und Installed-Locks sind getrennt; historische
+GSDB-/Assurance-Evidence bleibt erhalten. 678 lokale Tests bestehen, der
+native macOS-Collector bindet 364 Pfade und der Smoke liefert `SMOKE_OK`.
+Keine neue Produktfunktion oder Modellprobe. Beide Statistik-Kontexte werden
+nach dem Quellencommit getrennt mit Vorschau und ohne Dirty-Guard-Bypass
+fortgeschrieben. Referenzen, Zeitzonen und manuelle Abschnitte bleiben erhalten.
+Der neue TinyCalc-PR benötigt eigene fachliche Sichtung und Lieferfreigabe.
+
+English: Bounded rollout of fourteen stable preset releases from Home Baseline
+PR #341. Source, archive and installed locks are separate; historical
+GSDB/Assurance evidence is retained. All 678 local tests pass, native macOS
+evidence binds 364 paths and smoke returns `SMOKE_OK`. No new product feature
+or model probe. Both statistics contexts are regenerated separately after the
+source commit, with previews and no dirty-worktree bypass. Reference estimates,
+time zones and authored sections remain unchanged. The new TinyCalc PR needs
+its own human review and delivery approval.
+
 ## Gesamtstatistik / Overall Statistics
 
 Deutsch: Feature 006 ist in PR #104 vollständig implementiert, menschlich
@@ -929,29 +949,29 @@ Profil 2 verwendet Git-getrackte Textdateien und sichtbare Git-Aktivitaet. Die W
 
 | Kennzahl / Metric | Wert / Value |
 |---|---:|
-| Textbasis / Text base | 299456 lines |
-| Textdateien / Text files | 1770 |
-| Beobachtbarer Zeitraum / Observable period | 2025-10-26..2026-10-21 |
-| Aktivtage / Active days | 98 |
-| Relevante Commits / Relevant commits | 308 |
-| Zeilen je Aktivtag / Lines per active day | 3055.7 |
+| Textbasis / Text base | 327411 lines |
+| Textdateien / Text files | 1908 |
+| Beobachtbarer Zeitraum / Observable period | 2025-10-26..2026-10-24 |
+| Aktivtage / Active days | 99 |
+| Relevante Commits / Relevant commits | 310 |
+| Zeilen je Aktivtag / Lines per active day | 3307.2 |
 | Peak-Tag im Fenster / Peak day in window | 2026-10-10 / 35855 |
-| Peak-Woche im Fenster / Peak week in window | 2026-10-04 / 49053 |
+| Peak-Woche im Fenster / Peak week in window | 2026-10-18 / 77736 |
 | Laengste Serie / Longest streak | 8 days |
-| Speedup vs. 80 lines/day | 38.2x |
-| Speedup vs. 125 lines/day | 24.4x |
-| Methodik / Methodology | v2; source `1425e9a9ffe7` |
+| Speedup vs. 80 lines/day | 41.3x |
+| Speedup vs. 125 lines/day | 26.5x |
+| Methodik / Methodology | v2; source `c82939b04d29` |
 
 ### Artefaktmix / Artifact Mix
 
 ```text
 Produktiv / Production          [#...................]   1.0% | 3118
-Tests                           [#...................]   5.2% | 15444
-Dokumentation / Documentation   [###############.....]  73.6% | 220549
-Skripte / Scripts               [##..................]  11.1% | 33348
-Konfiguration / Configuration   [##..................]   8.0% | 23904
+Tests                           [#...................]   4.7% | 15476
+Dokumentation / Documentation   [###############.....]  75.9% | 248455
+Skripte / Scripts               [##..................]  10.2% | 33348
+Konfiguration / Configuration   [#...................]   7.3% | 23921
 Daten und Medien / Data and media [....................]   0.0% | 0
-Sonstiger Text / Other text     [#...................]   1.0% | 3093
+Sonstiger Text / Other text     [#...................]   0.9% | 3093
 ```
 
 Die Balken teilen die aktuelle getrackte Textbasis in stabile Kategorien. Prozent und Zeilenwert sind die genaue, textorientierte Aussage.
@@ -977,9 +997,9 @@ So/Su  0 0 0 0 0 1 0 4 0 0 0 1 4 4 1 4 4 0 4 4 4 4 0 4 4 4
 Mo/Mo  0 4 0 0 0 0 0 0 0 3 1 4 4 0 0 0 2 0 0 0 0 0 3 3 3 0
 Di/Tu  0 3 0 0 3 0 0 0 0 2 0 3 4 4 0 0 0 0 4 3 4 0 0 4 0 4
 Mi/We  0 2 0 0 0 2 0 4 0 2 0 0 2 4 0 0 0 0 0 0 0 0 0 3 0 4
-Do/Th  4 0 0 0 1 0 4 1 0 0 0 1 4 0 0 4 0 0 3 0 0 0 0 3 0 -
-Fr/Fr  0 0 0 4 2 2 0 3 2 3 4 4 4 1 0 0 0 0 4 3 2 0 0 0 0 -
-Sa/Sa  0 0 0 0 0 0 0 4 0 4 4 0 4 2 0 2 0 3 4 4 0 2 4 4 0 -
+Do/Th  4 0 0 0 1 0 4 1 0 0 0 1 4 0 0 4 0 0 3 0 0 0 0 3 0 0
+Fr/Fr  0 0 0 4 2 2 0 3 2 3 4 4 4 1 0 0 0 0 4 3 2 0 0 0 0 0
+Sa/Sa  0 0 0 0 0 0 0 4 0 4 4 0 4 2 0 2 0 3 4 4 0 2 4 4 0 4
 ```
 
 DE: 0 = keine Aenderung; 1 = 1..79; 2 = 80..399; 3 = 400..1599; 4 = 1600+ geaenderte Textzeilen; - = noch nicht abgelaufen.
@@ -1001,12 +1021,12 @@ Wochen / Weeks 01..26 | 2025-10-26..2026-04-25
 
 ```text
 Wochen / Weeks 27..52 | 2026-04-26..2026-10-24
-   cap 50000 | . . . . . . . . . . . . . . . . . . . . . . . . . .
-       41667 | . . . . . . . . . . . . . . . . . . . . . . . # . #
+  cap 100000 | . . . . . . . . . . . . . . . . . . . . . . . . . .
+       83333 | . . . . . . . . . . . . . . . . . . . . . . . . . .
+       66667 | . . . . . . . . . . . . . . . . . . . . . . . . . #
+       50000 | . . . . . . . . . . . . . . . . . . . . . . . . . #
        33333 | . . . . . . . . . . . . # . . . . . . . . . . # . #
-       25000 | . . . . . . . # . . . . # . . . . . # # . . . # . #
        16667 | . . . . . . . # . . . . # # . . . . # # # . . # . #
-        8333 | . # . . . . . # . . # . # # . # . . # # # . . # . #
            0 +-----------------------------------------------------
 ```
 
@@ -1083,8 +1103,8 @@ Die festen Slots halten den Phasenvergleich auch bei fehlenden oder spaeter erga
 
 ```text
 Scale: 0..50x
-80 lines/day       [###############.....] 38.2x
-125 lines/day      [##########..........] 24.4x
+80 lines/day       [#################...] 41.3x
+125 lines/day      [###########.........] 26.5x
 ```
 
 Die Faktoren vergleichen sichtbare Lieferdichte mit den dokumentierten manuellen Referenzen. Sie messen keine Arbeitszeit.
@@ -1097,7 +1117,7 @@ Die Faktoren vergleichen sichtbare Lieferdichte mit den dokumentierten manuellen
 Scale: 0..5000 lines/day
 Experienced manual [#...................] 80
 Thorsten solo      [#...................] 125
-Visible repository [############........] 3055.7
+Visible repository [#############.......] 3307.2
 ```
 
 Die gemeinsame Skala vergleicht Referenzen und sichtbare Lieferdichte. Sie schreibt die Git-Aktivitaet keiner Person oder KI pauschal zu.
@@ -1106,9 +1126,9 @@ Die gemeinsame Skala vergleicht Referenzen und sichtbare Lieferdichte. Sie schre
 
 ### Textalternative / Text Alternative
 
-DE: Das Fenster beginnt am 2025-10-26 und endet am 2026-10-21. Es enthaelt 98 aktive und 263 inaktive vergangene Tage. Peak-Tag: 2026-10-10 / 35855. Peak-Woche: 2026-10-04 / 49053. Laengste Serie: 8 Tage (2026-07-19..2026-07-26).
+DE: Das Fenster beginnt am 2025-10-26 und endet am 2026-10-24. Es enthaelt 99 aktive und 265 inaktive vergangene Tage. Peak-Tag: 2026-10-10 / 35855. Peak-Woche: 2026-10-18 / 77736. Laengste Serie: 8 Tage (2026-07-19..2026-07-26).
 
-*EN: The window starts on 2025-10-26 and ends on 2026-10-21. It contains 98 active and 263 inactive elapsed days. Peak day: 2026-10-10 / 35855. Peak week: 2026-10-04 / 49053. Longest streak: 8 days (2026-07-19..2026-07-26).*
+*EN: The window starts on 2025-10-26 and ends on 2026-10-24. It contains 99 active and 265 inactive elapsed days. Peak day: 2026-10-10 / 35855. Peak week: 2026-10-18 / 77736. Longest streak: 8 days (2026-07-19..2026-07-26).*
 
 | Monat / Month | Geaenderte Textzeilen / Changed text lines |
 |---|---:|
@@ -1123,6 +1143,6 @@ DE: Das Fenster beginnt am 2025-10-26 und endet am 2026-10-21. Es enthaelt 98 ak
 | 2026-07 | 74031 |
 | 2026-08 | 26210 |
 | 2026-09 | 70997 |
-| 2026-10 | 108020 |
+| 2026-10 | 137643 |
 
 <!-- project-statistics-v2:end -->

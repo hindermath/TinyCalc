@@ -1,5 +1,7 @@
 # MicroCalc .NET 10 (Terminal.Gui)
 
+[Aktueller stabiler Preset-Rollout / Current stable preset rollout](docs/maintenance/stable-preset-rollout-2026-10-24.md).
+
 [GSDB 3.4.4: Pilotrollout / pilot rollout](docs/maintenance/gsdb-344-pilot-2026-10-20.md).
 
 DE: Der [Governance-Pilot vom 03.10.2026](docs/maintenance/coordinated-governance-oct03.md)
@@ -12,16 +14,18 @@ technical installation grants no product, risk or legal approval.
 ## Lernenden- und A11Y-Basis / Learner and A11Y Baseline
 
 Dieses Lern- und Referenzprojekt richtet sich ab dem ersten Ausbildungsjahr an
-Fachinformatiker*innen, Kaufleute für IT-System-Management und Kaufleute für
-Digitalisierungsmanagement. Inhalte stehen auf Deutsch zuerst und Englisch
+Fachinformatiker*innen aller vier Fachrichtungen, IT-System-Elektroniker*innen,
+Kaufleute für IT-System-Management und Kaufleute für Digitalisierungsmanagement
+sowie Entwickelnde ohne vertieftes Governance-Wissen. Inhalte stehen auf Deutsch zuerst und Englisch
 danach, verwenden ungefähr CEFR B2, erklären Fachbegriffe beim ersten Auftreten
 und setzen keine Spec-Kit-Erfahrung voraus. Abhängigkeiten, Zustände und
 Entscheidungen bleiben ohne ausschließlich visuelle Darstellung verständlich.
 `Programmierung #include<everyone>` und WCAG 2.2 Level AA sind die Prüfbasis,
 soweit die Kriterien anwendbar sind.
 
-*This learning and reference project targets IT specialist apprentices and both
-IT management occupations from their first training year. Content is
+*This learning and reference project targets all four IT training occupations,
+including all four IT specialist disciplines, from the first training year,
+and developers without specialist governance knowledge. Content is
 German-first/English-second at about CEFR B2, explains technical terms at first
 use, assumes no prior Spec Kit experience, and never relies on visual-only
 dependency, state, or decision information. `Programmierung #include<everyone>`
@@ -307,20 +311,24 @@ begründete, dokumentierte Projektausnahme zulässig.
 
 Standard-Preset-Set:
 
-- `security-governance` v0.6.1, Priority 10
-- `architecture-governance` v0.5.1, Priority 20
-- `isaqb-architecture-governance` v0.2.1, Priority 30
-- `a11y-governance` v0.4.1, Priority 40
-- `cross-platform-governance` v0.2.1, Priority 50
-- `agent-parity-governance` v0.4.0, Priority 60
-- `autonomous-run-governance` v0.4.2, Priority 70
-- `parallel-autonomous-run-governance` v0.2.1, Priority 80
+- `security-governance` v0.7.3, Priority 10
+- `architecture-governance` v0.6.4, Priority 20
+- `isaqb-architecture-governance` v0.2.4, Priority 30
+- `a11y-governance` v0.4.5, Priority 40
+- `cross-platform-governance` v0.2.4, Priority 50
+- `agent-parity-governance` v0.4.4, Priority 60
+- `autonomous-run-governance` v0.4.6, Priority 70
+- `parallel-autonomous-run-governance` v0.2.8, Priority 80
 
-Die ursprünglichen sechs Presets sind seit 2026-05-04 im `github/spec-kit`
-Community-Katalog enthalten; `autonomous-run-governance` v0.2.2 wurde dort am
-2026-07-17 verifiziert. `parallel-autonomous-run-governance` v0.2.1 wurde mit
-`github/spec-kit#3591` für den Katalog eingereicht. Installation startet keinen
-autonomen oder parallelen Lauf und erteilt keine zusätzlichen Rechte.
+Die Katalog- und Einreichungshinweise der früheren Pilotberichte sind
+historische Evidence. Die hier installierten Versionen sind nicht automatisch
+die Versionen im Community-Katalog. Installation startet keinen autonomen oder
+parallelen Lauf und erteilt keine zusätzlichen Rechte.
+
+Earlier pilot reports contain historical catalogue and submission evidence.
+The versions installed here are not necessarily the community catalogue
+versions. Installation starts no autonomous or parallel run and grants no
+additional authority.
 
 Alle acht Presets erzeugen oder verlangen audit-ready Spec-Kit-Run-Evidenz mit
 `Applicable` / `N/A` / `Open`, Begründung, Evidenzpfad, Reviewer, Restrisiko und
@@ -331,14 +339,20 @@ agentenneutrale Runner-Metadaten.
 Nach Installation oder Update prüfen:
 
 ```bash
-bash scripts/install-spec-kit-governance-presets.sh --check-only --repo .
+bash scripts/install-spec-kit-governance-presets.sh --check-only --repo . --preset-config scripts/config/spec-kit-project-statistics-governance-presets.json
 specify preset list
 specify preset info security-governance
-specify preset resolve constitution-template.md
+specify preset resolve constitution-template
 ```
 
 Wenn Presets Projekt-Policy sind, `.specify/presets/` und erzeugte
 Agenten-/Command-Dateien committen; `.specify/presets/.cache/` nicht committen.
+
+TinyCalc verwendet ausdrücklich das optionale 14er-Profil; der globale
+Acht-Preset-Default wird dadurch nicht geändert.
+
+TinyCalc explicitly uses the optional fourteen-preset profile; this does not
+change the global eight-preset default.
 
 *The registered standard profile for this workspace family includes all eight
 governance presets at level 0, level 1, and level 2. A subset requires a

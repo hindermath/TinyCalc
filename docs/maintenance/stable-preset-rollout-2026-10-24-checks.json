@@ -1,0 +1,131 @@
+{
+  "schemaVersion": 1,
+  "kind": "TinyCalc bounded stable preset integration; technical evidence only",
+  "observedAt": "2026-10-23T23:27:58.567470+00:00",
+  "sourceCommit": "e00f126273a37695bf770b3253d75d606034420f",
+  "installationCommit": "17660cff9daf059f475d5446d6558a930df6147e",
+  "installedPackageCount": 14,
+  "installedPayloadFileCount": 607,
+  "stockArchiveFileCount": 604,
+  "homeOnlyOverlayCopied": false,
+  "stableCommandDeclarations": 49,
+  "packageDocumentationSuites": 14,
+  "cohortAssertions": 238,
+  "minimumStableRoutingAssertions": 44,
+  "gsdbControlConclusionsUnchanged": true,
+  "gsdbPreservedKeys": [
+    "checklistRows",
+    "externalDuties",
+    "findings",
+    "summary",
+    "reviewedAt",
+    "baseline"
+  ],
+  "additionalOldPackageNegativeCases": 28,
+  "assuranceReadOnly": {
+    "kind": "TinyCalc technical-only Assurance revalidation",
+    "context": "docs/security/secure-development/2026-10-24-tinycalc-stable-preset-rollout",
+    "rawEvidenceDigestBefore": "290c2b633fdadf2efb6a689bb5e6f9a938cf739b16f3e9056aa63a817a8073ff",
+    "rawEvidenceDigestAfter": "290c2b633fdadf2efb6a689bb5e6f9a938cf739b16f3e9056aa63a817a8073ff",
+    "commands": [
+      {
+        "shell": "bash",
+        "gate": "status",
+        "exitCode": 0,
+        "readOnly": true,
+        "output": "Context: docs/security/secure-development/2026-10-24-tinycalc-stable-preset-rollout\nGate baseline: Ready\nGate delta: Ready\nGate closure: Ready\nGate image-impact: Ready\nOverall: Ready\nDecision technicalValidation: Fulfilled\nDecision pilotAuthorization: Open\nDecision projectAcceptance: Open\nDecision generalRelease: Open\nNext action: Present the exact TinyCalc rollout PR head for human review; no merge before concrete delivery approval and green technical checks."
+      },
+      {
+        "shell": "bash",
+        "gate": "baseline",
+        "exitCode": 0,
+        "readOnly": true,
+        "output": "Reviewed: gate=baseline context=tinycalc-stable-preset-rollout mode=development outcome=Ready"
+      },
+      {
+        "shell": "bash",
+        "gate": "delta",
+        "exitCode": 0,
+        "readOnly": true,
+        "output": "Reviewed: gate=delta context=tinycalc-stable-preset-rollout mode=development outcome=Ready"
+      },
+      {
+        "shell": "bash",
+        "gate": "closure",
+        "exitCode": 0,
+        "readOnly": true,
+        "output": "Reviewed: gate=closure context=tinycalc-stable-preset-rollout mode=development outcome=Ready"
+      },
+      {
+        "shell": "bash",
+        "gate": "image-impact",
+        "exitCode": 0,
+        "readOnly": true,
+        "output": "Reviewed: gate=image-impact context=tinycalc-stable-preset-rollout mode=development outcome=Ready"
+      },
+      {
+        "shell": "pwsh",
+        "gate": "status",
+        "exitCode": 0,
+        "readOnly": true,
+        "output": "Context: docs/security/secure-development/2026-10-24-tinycalc-stable-preset-rollout\nGate baseline: Ready\nGate delta: Ready\nGate closure: Ready\nGate image-impact: Ready\nOverall: Ready\nDecision technicalValidation: Fulfilled\nDecision pilotAuthorization: Open\nDecision projectAcceptance: Open\nDecision generalRelease: Open\nNext action: Present the exact TinyCalc rollout PR head for human review; no merge before concrete delivery approval and green technical checks."
+      },
+      {
+        "shell": "pwsh",
+        "gate": "baseline",
+        "exitCode": 0,
+        "readOnly": true,
+        "output": "Reviewed: gate=baseline context=tinycalc-stable-preset-rollout mode=development outcome=Ready"
+      },
+      {
+        "shell": "pwsh",
+        "gate": "delta",
+        "exitCode": 0,
+        "readOnly": true,
+        "output": "Reviewed: gate=delta context=tinycalc-stable-preset-rollout mode=development outcome=Ready"
+      },
+      {
+        "shell": "pwsh",
+        "gate": "closure",
+        "exitCode": 0,
+        "readOnly": true,
+        "output": "Reviewed: gate=closure context=tinycalc-stable-preset-rollout mode=development outcome=Ready"
+      },
+      {
+        "shell": "pwsh",
+        "gate": "image-impact",
+        "exitCode": 0,
+        "readOnly": true,
+        "output": "Reviewed: gate=image-impact context=tinycalc-stable-preset-rollout mode=development outcome=Ready"
+      }
+    ],
+    "humanProductOrReleaseApproval": false
+  },
+  "nativeMacOS": {
+    "coreTestsPassed": 217,
+    "tuiTestsPassed": 461,
+    "skipped": 0,
+    "boundExecutedPaths": 364,
+    "testedCommit": "17660cff9daf059f475d5446d6558a930df6147e",
+    "testedWorkingTreeDigest": "19d2bcfd4592784cbe81e1bc745f120785eb4422e3eb4869edab4826bbc5912d",
+    "bundleSha256": "234ec4821bc4a0c3fbb28c8ac017551cf9cb10eef4b00275533f774120814e31",
+    "smoke": "SMOKE_OK",
+    "exitCode": 0,
+    "scopeBoundary": "Bound before final documentation/statistics follow-up; no later product-code change."
+  },
+  "documentation": {
+    "baselineDocfxWarnings": 105,
+    "candidateDocfxWarnings": 105,
+    "newWarnings": 0,
+    "renderedReaderPaths": 3,
+    "lynx": true,
+    "semanticBrowserSnapshot": true,
+    "physicalAssistiveAcceptance": false,
+    "axeExecuted": false
+  },
+  "privateSheetIncluded": false,
+  "modelCalls": 0,
+  "humanPilotProductRiskOrReleaseApproval": false,
+  "nativeLinuxWindowsCI": "Pending PR execution",
+  "prHeadHumanReview": "Required"
+}

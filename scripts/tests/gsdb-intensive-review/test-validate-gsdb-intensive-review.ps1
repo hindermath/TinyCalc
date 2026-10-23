@@ -277,6 +277,38 @@ try {
     # DE: Alle vierzehn unmittelbar vorigen Pins und Hashes bleiben blockiert.
     # EN: Reject all fourteen immediately preceding package bindings independently.
     foreach ($PreviousReadmePatch in @(
+        @{ Id = 'a11y-governance'; Version = '0.4.4'; Hash = '0db2a88252d66e1be151e7caa7c52059c281dd1a2c508ab78c08fda37b36dfdb' },
+        @{ Id = 'agent-parity-governance'; Version = '0.4.3'; Hash = 'd28d185d43b97e77e9a305c06077c2d0a188d3d2690dcf9142dc75bc4530037d' },
+        @{ Id = 'architecture-governance'; Version = '0.6.3'; Hash = '112898032d8a9d355969ff2fa5c06317c62afaffa7840c33668cfd4e89cfbd60' },
+        @{ Id = 'autonomous-run-governance'; Version = '0.4.5'; Hash = 'fa7ce019ccef73f1ad6280bfe2c61fb6d6ad013a087fb0191ae8c18cccc46d7b' },
+        @{ Id = 'cross-platform-governance'; Version = '0.2.3'; Hash = '99bdc11457d0973f665747fe177e1cd555105a8a293f6a8cf8f2e54582aa0855' },
+        @{ Id = 'intake-authoring-governance'; Version = '0.3.8'; Hash = '420ab9b5719dc09e1bd1eb72997ddec3e4928f92ca1ddfff432c3e06d245fd9a' },
+        @{ Id = 'intake-review-governance'; Version = '0.2.5'; Hash = 'bdac2fc991c96e39b70be971c88389eb8139775d32de1d7dc78b2a91e23a34e7' },
+        @{ Id = 'intake-sequencing-governance'; Version = '0.2.9'; Hash = '72b8c723b81f3d5642f1911f4e26a7b775e56a44f3c0820a4db8362dccee2002' },
+        @{ Id = 'isaqb-architecture-governance'; Version = '0.2.3'; Hash = '291629f00c99520b041b695cd18d923f79e143d9ab2794c7a57263cc5163f4cc' },
+        @{ Id = 'model-routing-governance'; Version = '0.1.5'; Hash = '30bde60c4822d548a4846f6a273af22b7426b9d37717633b06553a7ef2309d77' },
+        @{ Id = 'parallel-autonomous-run-governance'; Version = '0.2.7'; Hash = '6b890a1df6ce330f476d9ec46cf9e7082b9cbb5b1e8875474d8bb039ddc7843b' },
+        @{ Id = 'project-statistics-governance'; Version = '0.1.1'; Hash = '0b1e4c295c5d0c8ee50aa6efccc65014833d01b77d1e2ab365c77ac51cb40dee' },
+        @{ Id = 'secure-development-assurance-governance'; Version = '0.1.5'; Hash = 'e1da9c3b3d3ed91da31d34129db390564d1a3004095aa374a104b5cdec2ce7c7' },
+        @{ Id = 'security-governance'; Version = '0.7.2'; Hash = '911d2779d99a457e3433f712542cd2b0e2f68fcff2529772b9938da6e11425fb' }
+    )) {
+        $StaleHash = Copy-GsdbProductionAssessment -Name ($PreviousReadmePatch.Id + '-oct24-old-hash') -Mutate {
+            param($Document)
+            $Source = $Document.sourceInventory | Where-Object sourceId -CEQ ('PRESET-' + $PreviousReadmePatch.Id)
+            $Source.normalizedSha256 = $PreviousReadmePatch.Hash
+        }
+        Assert-GsdbFailure -Assessment $StaleHash -ExpectedCode 'GSDB002'
+        $StaleVersion = Copy-GsdbProductionAssessment -Name ($PreviousReadmePatch.Id + '-oct24-old-version') -Mutate {
+            param($Document)
+            $Preset = $Document.presetAssessments | Where-Object presetId -CEQ $PreviousReadmePatch.Id
+            $Preset.version = $PreviousReadmePatch.Version
+        }
+        Assert-GsdbFailure -Assessment $StaleVersion -ExpectedCode 'GSDB008'
+    }
+
+    # DE: Alle vierzehn unmittelbar vorigen Pins und Hashes bleiben blockiert.
+    # EN: Reject all fourteen immediately preceding package bindings independently.
+    foreach ($PreviousReadmePatch in @(
         @{ Id = 'a11y-governance'; Version = '0.4.3'; Hash = 'abed4e64a34853417674c8403a660daa8b97606b42782be404f0d5faa3347c10' },
         @{ Id = 'agent-parity-governance'; Version = '0.4.2'; Hash = '33ab3c1bd99a5069af5c0006899c26476d0cabd868bd7ac55659bdd4e4794952' },
         @{ Id = 'architecture-governance'; Version = '0.6.2'; Hash = '36d56d00fb827997fec0b1cca6b6989207f458e6a4ad66b1572caa205b8a4d8a' },

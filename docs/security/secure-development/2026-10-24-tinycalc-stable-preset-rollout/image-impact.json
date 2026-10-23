@@ -1,0 +1,42 @@
+{
+  "schemaVersion": "1.0",
+  "documentType": "SecureDevelopmentGateEvidence",
+  "contextId": "tinycalc-stable-preset-rollout",
+  "gate": "image-impact",
+  "mode": "development",
+  "createdAt": "2026-10-23T23:15:27Z",
+  "review": {
+    "owner": "@hindermath",
+    "reviewer": "Codex under explicit technical GSDB/Assurance revalidation authority",
+    "reviewedAt": "2026-10-23T23:15:27Z",
+    "reviewDue": "2027-01-10",
+    "residualRisk": "Technical package identity, exact matrix, stable command coverage and unchanged GSDB control conclusions only. Human pilot, product, risk, legal and release decisions remain independent and Open.",
+    "reevaluationTrigger": "Package, source, baseline, evidence, scope or authority drift; existing quarterly review schedule preserved."
+  },
+  "assessments": [
+    {
+      "id": "NO-IMAGE-CHANGE",
+      "applicability": "N/A",
+      "implementation": "Not Assessed",
+      "reason": "TinyCalc governance package integration only; no image, compose, runtime or toolchain change.",
+      "reevaluationTrigger": "Any image, toolchain, compose or deployment change.",
+      "evidence": "docs/maintenance/stable-preset-rollout-2026-10-24.md"
+    }
+  ],
+  "outcome": "Ready",
+  "externalComparisonBoundary": "HOSK/GWDG: ExternalComparison only; never local evidence",
+  "verificationScope": "TinyCalc: fourteen released stable presets without the Home-only overlay; unchanged GSDB 3.4.4 document bindings and 157 control conclusions. No model call, product feature or Spec Kit run.",
+  "runbookApplicability": "N/A",
+  "runbookRationale": "Bounded governance-package integration, not a product or training feature run; no image build or deployment. Historical contexts remain unchanged.",
+  "imageChecks": {
+    "build": "N/A",
+    "compose": "N/A",
+    "toolchain": "N/A",
+    "ociDigest": "N/A",
+    "sbom": "N/A",
+    "secrets": "N/A",
+    "mounts": "N/A",
+    "network": "N/A",
+    "ci": "N/A"
+  }
+}

@@ -1,5 +1,22 @@
 # TinyCalc-Statistik-Feldtest / TinyCalc statistics field test
 
+## Aktueller Paketstand / Current package state
+
+Seit dem begrenzten Rollout vom 24.10.2026 wird dieser Messkontext mit
+Project Statistics Governance v0.1.2 gepflegt. Aktuelle Paket-, Registry- und
+Payload-Bindungen stehen in `docs/maintenance/preset-installed-lock.json`
+und `docs/maintenance/preset-source-lock.json`. Die native CI prüft alle
+14 aktuellen Pakete statt das datierte v0.1.0-Receipt passend umzuschreiben.
+Die folgenden Angaben zum Feldtest v0.1.0 bleiben historische Evidence.
+
+Since the bounded 24 October 2026 rollout, this measurement context uses
+Project Statistics Governance v0.1.2. The current installed and source locks
+bind the package, registry and payload. Native CI checks all fourteen current
+packages; it does not rewrite the dated v0.1.0 receipt. The following v0.1.0
+field-test details remain historical evidence.
+
+Siehe [aktuellen Rollout-Bericht / current rollout report](../maintenance/stable-preset-rollout-2026-10-24.md).
+
 ## Zweck und Status / Purpose and status
 
 Dieser getrennte Pilot prueft Project Statistics Governance v0.1.0 an einem

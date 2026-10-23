@@ -17,9 +17,9 @@
       "sourceId": "PRESET-a11y-governance",
       "sourceClass": "Preset",
       "path": ".specify/presets/a11y-governance/preset.yml",
-      "version": "0.4.4",
-      "reviewedAt": "2026-10-18",
-      "normalizedSha256": "0db2a88252d66e1be151e7caa7c52059c281dd1a2c508ab78c08fda37b36dfdb",
+      "version": "0.4.5",
+      "reviewedAt": "2026-10-24",
+      "normalizedSha256": "f8d58c556b7158c16d5a72ac3371e6456d970a1f8830339a73fd68327b3dad8e",
       "scope": {
         "de": "Diese Quelle wird nur für ihren benannten TinyCalc-Prüfumfang verwendet.",
         "en": "This source is used only for its named TinyCalc assessment scope."
@@ -32,9 +32,9 @@
       "sourceId": "PRESET-agent-parity-governance",
       "sourceClass": "Preset",
       "path": ".specify/presets/agent-parity-governance/preset.yml",
-      "version": "0.4.3",
-      "reviewedAt": "2026-10-18",
-      "normalizedSha256": "d28d185d43b97e77e9a305c06077c2d0a188d3d2690dcf9142dc75bc4530037d",
+      "version": "0.4.4",
+      "reviewedAt": "2026-10-24",
+      "normalizedSha256": "b09355872c62142b0aaf1dff06ff930f6687c5fa7b06b29467d21347d62e34b5",
       "scope": {
         "de": "Diese Quelle wird nur für ihren benannten TinyCalc-Prüfumfang verwendet.",
         "en": "This source is used only for its named TinyCalc assessment scope."
@@ -47,9 +47,9 @@
       "sourceId": "PRESET-architecture-governance",
       "sourceClass": "Preset",
       "path": ".specify/presets/architecture-governance/preset.yml",
-      "version": "0.6.3",
-      "reviewedAt": "2026-10-18",
-      "normalizedSha256": "112898032d8a9d355969ff2fa5c06317c62afaffa7840c33668cfd4e89cfbd60",
+      "version": "0.6.4",
+      "reviewedAt": "2026-10-24",
+      "normalizedSha256": "7c163d07758473f76d35a40048d9c92cc635ae174c8a9f34e92b148889038370",
       "scope": {
         "de": "Diese Quelle wird nur für ihren benannten TinyCalc-Prüfumfang verwendet.",
         "en": "This source is used only for its named TinyCalc assessment scope."
@@ -62,9 +62,9 @@
       "sourceId": "PRESET-autonomous-run-governance",
       "sourceClass": "Preset",
       "path": ".specify/presets/autonomous-run-governance/preset.yml",
-      "version": "0.4.5",
-      "reviewedAt": "2026-10-18",
-      "normalizedSha256": "fa7ce019ccef73f1ad6280bfe2c61fb6d6ad013a087fb0191ae8c18cccc46d7b",
+      "version": "0.4.6",
+      "reviewedAt": "2026-10-24",
+      "normalizedSha256": "b6933481f14acd3a4ff6b035141b8e64f9f6466a60700378484b6b1a4351c541",
       "scope": {
         "de": "Diese Quelle wird nur für ihren benannten TinyCalc-Prüfumfang verwendet.",
         "en": "This source is used only for its named TinyCalc assessment scope."
@@ -77,9 +77,9 @@
       "sourceId": "PRESET-cross-platform-governance",
       "sourceClass": "Preset",
       "path": ".specify/presets/cross-platform-governance/preset.yml",
-      "version": "0.2.3",
-      "reviewedAt": "2026-10-18",
-      "normalizedSha256": "99bdc11457d0973f665747fe177e1cd555105a8a293f6a8cf8f2e54582aa0855",
+      "version": "0.2.4",
+      "reviewedAt": "2026-10-24",
+      "normalizedSha256": "edaf0211c657c216a0acb0360205365f50a87e836675d17a48e6a32d09bfae0f",
       "scope": {
         "de": "Diese Quelle wird nur für ihren benannten TinyCalc-Prüfumfang verwendet.",
         "en": "This source is used only for its named TinyCalc assessment scope."
@@ -92,9 +92,9 @@
       "sourceId": "PRESET-intake-authoring-governance",
       "sourceClass": "Preset",
       "path": ".specify/presets/intake-authoring-governance/preset.yml",
-      "version": "0.3.8",
-      "reviewedAt": "2026-10-18",
-      "normalizedSha256": "420ab9b5719dc09e1bd1eb72997ddec3e4928f92ca1ddfff432c3e06d245fd9a",
+      "version": "0.3.9",
+      "reviewedAt": "2026-10-24",
+      "normalizedSha256": "58912fba5a6a9c104244282e8cade98efa9f3f5fc78a95d1e03a531dd3e842ac",
       "scope": {
         "de": "Diese Quelle wird nur für ihren benannten TinyCalc-Prüfumfang verwendet.",
         "en": "This source is used only for its named TinyCalc assessment scope."
@@ -107,9 +107,9 @@
       "sourceId": "PRESET-intake-review-governance",
       "sourceClass": "Preset",
       "path": ".specify/presets/intake-review-governance/preset.yml",
-      "version": "0.2.5",
-      "reviewedAt": "2026-10-18",
-      "normalizedSha256": "bdac2fc991c96e39b70be971c88389eb8139775d32de1d7dc78b2a91e23a34e7",
+      "version": "0.2.6",
+      "reviewedAt": "2026-10-24",
+      "normalizedSha256": "f7afb1ab618de8918f25a274275cb2e9883b44a9614cc56e1fc41c1a8ec3810c",
       "scope": {
         "de": "Diese Quelle wird nur für ihren benannten TinyCalc-Prüfumfang verwendet.",
         "en": "This source is used only for its named TinyCalc assessment scope."
@@ -122,9 +122,9 @@
       "sourceId": "PRESET-intake-sequencing-governance",
       "sourceClass": "Preset",
       "path": ".specify/presets/intake-sequencing-governance/preset.yml",
-      "version": "0.2.9",
-      "reviewedAt": "2026-10-18",
-      "normalizedSha256": "72b8c723b81f3d5642f1911f4e26a7b775e56a44f3c0820a4db8362dccee2002",
+      "version": "0.2.10",
+      "reviewedAt": "2026-10-24",
+      "normalizedSha256": "ff4059b12eda48288bc8d7e201ff40b72ab8dc47c20337f1c6f169623e102f9e",
       "scope": {
         "de": "Diese Quelle wird nur für ihren benannten TinyCalc-Prüfumfang verwendet.",
         "en": "This source is used only for its named TinyCalc assessment scope."
@@ -137,9 +137,9 @@
       "sourceId": "PRESET-isaqb-architecture-governance",
       "sourceClass": "Preset",
       "path": ".specify/presets/isaqb-architecture-governance/preset.yml",
-      "version": "0.2.3",
-      "reviewedAt": "2026-10-18",
-      "normalizedSha256": "291629f00c99520b041b695cd18d923f79e143d9ab2794c7a57263cc5163f4cc",
+      "version": "0.2.4",
+      "reviewedAt": "2026-10-24",
+      "normalizedSha256": "1803bafaed7744884d5ea9894b87bc9c6baa67f4847d98fa62b24377b6f2ffc6",
       "scope": {
         "de": "Diese Quelle wird nur für ihren benannten TinyCalc-Prüfumfang verwendet.",
         "en": "This source is used only for its named TinyCalc assessment scope."
@@ -152,9 +152,9 @@
       "sourceId": "PRESET-model-routing-governance",
       "sourceClass": "Preset",
       "path": ".specify/presets/model-routing-governance/preset.yml",
-      "version": "0.1.5",
-      "reviewedAt": "2026-10-18",
-      "normalizedSha256": "30bde60c4822d548a4846f6a273af22b7426b9d37717633b06553a7ef2309d77",
+      "version": "0.1.6",
+      "reviewedAt": "2026-10-24",
+      "normalizedSha256": "0fcc6869a658124df8109921428c3a9240905ec72057c46194823df0132f7bae",
       "scope": {
         "de": "Diese Quelle wird nur für ihren benannten TinyCalc-Prüfumfang verwendet.",
         "en": "This source is used only for its named TinyCalc assessment scope."
@@ -167,9 +167,9 @@
       "sourceId": "PRESET-parallel-autonomous-run-governance",
       "sourceClass": "Preset",
       "path": ".specify/presets/parallel-autonomous-run-governance/preset.yml",
-      "version": "0.2.7",
-      "reviewedAt": "2026-10-18",
-      "normalizedSha256": "6b890a1df6ce330f476d9ec46cf9e7082b9cbb5b1e8875474d8bb039ddc7843b",
+      "version": "0.2.8",
+      "reviewedAt": "2026-10-24",
+      "normalizedSha256": "c77d51ddbf6757ce7ed310b127fc18930639f7965f6ba69262613521f72a49d6",
       "scope": {
         "de": "Diese Quelle wird nur für ihren benannten TinyCalc-Prüfumfang verwendet.",
         "en": "This source is used only for its named TinyCalc assessment scope."
@@ -182,9 +182,9 @@
       "sourceId": "PRESET-project-statistics-governance",
       "sourceClass": "Preset",
       "path": ".specify/presets/project-statistics-governance/preset.yml",
-      "version": "0.1.1",
-      "reviewedAt": "2026-10-18",
-      "normalizedSha256": "0b1e4c295c5d0c8ee50aa6efccc65014833d01b77d1e2ab365c77ac51cb40dee",
+      "version": "0.1.2",
+      "reviewedAt": "2026-10-24",
+      "normalizedSha256": "0b0bf3f6eaa54621ff2e9312928586bd21c76c6338c80a30ac99d5327f101380",
       "scope": {
         "de": "Optionaler Statistik-Pilot: Installations- und Dokumentationszuordnung, keine Wirksamkeits- oder Freigabeaussage.",
         "en": "Optional statistics pilot: installation and documentation mapping, no effectiveness or approval claim."
@@ -197,9 +197,9 @@
       "sourceId": "PRESET-secure-development-assurance-governance",
       "sourceClass": "Preset",
       "path": ".specify/presets/secure-development-assurance-governance/preset.yml",
-      "version": "0.1.5",
-      "reviewedAt": "2026-10-20",
-      "normalizedSha256": "e1da9c3b3d3ed91da31d34129db390564d1a3004095aa374a104b5cdec2ce7c7",
+      "version": "0.1.7",
+      "reviewedAt": "2026-10-24",
+      "normalizedSha256": "a089d354e84213f67596f105594d86e8c297782568794ad89eb4d5f624f713ed",
       "scope": {
         "de": "Diese Quelle wird nur für ihren benannten TinyCalc-Prüfumfang verwendet.",
         "en": "This source is used only for its named TinyCalc assessment scope."
@@ -212,9 +212,9 @@
       "sourceId": "PRESET-security-governance",
       "sourceClass": "Preset",
       "path": ".specify/presets/security-governance/preset.yml",
-      "version": "0.7.2",
-      "reviewedAt": "2026-10-18",
-      "normalizedSha256": "911d2779d99a457e3433f712542cd2b0e2f68fcff2529772b9938da6e11425fb",
+      "version": "0.7.3",
+      "reviewedAt": "2026-10-24",
+      "normalizedSha256": "587afce92107b7ee0723a562a13bd679c437594aca81d59ade4599eba890654a",
       "scope": {
         "de": "Diese Quelle wird nur für ihren benannten TinyCalc-Prüfumfang verwendet.",
         "en": "This source is used only for its named TinyCalc assessment scope."
@@ -783,8 +783,8 @@
       "sourceClass": "Constitution",
       "path": "constitution.md",
       "version": "Current",
-      "reviewedAt": "2026-10-18",
-      "normalizedSha256": "883471c627c82687d008bc81c8ec6dbef3259ad94621dec30466631aac332cb0",
+      "reviewedAt": "2026-10-24",
+      "normalizedSha256": "9bdbc1227839493f7f648b8738a63230d69295161b2a639607cfa325bc1de654",
       "scope": {
         "de": "Diese Quelle wird nur für ihren benannten TinyCalc-Prüfumfang verwendet.",
         "en": "This source is used only for its named TinyCalc assessment scope."
@@ -798,8 +798,8 @@
       "sourceClass": "Constitution",
       "path": ".specify/memory/constitution.md",
       "version": "Current",
-      "reviewedAt": "2026-10-18",
-      "normalizedSha256": "883471c627c82687d008bc81c8ec6dbef3259ad94621dec30466631aac332cb0",
+      "reviewedAt": "2026-10-24",
+      "normalizedSha256": "9bdbc1227839493f7f648b8738a63230d69295161b2a639607cfa325bc1de654",
       "scope": {
         "de": "Diese Quelle wird nur für ihren benannten TinyCalc-Prüfumfang verwendet.",
         "en": "This source is used only for its named TinyCalc assessment scope."
@@ -1263,8 +1263,8 @@
       "sourceClass": "ProjectEvidence",
       "path": "AGENTS.md",
       "version": "Current",
-      "reviewedAt": "2026-10-20",
-      "normalizedSha256": "963cdc8766b4283f396763fb2d9755af2178780c78ed3390cf45a11bfd67b26f",
+      "reviewedAt": "2026-10-24",
+      "normalizedSha256": "46bdfe61a9ecd431e1d50714685a8b9384cc626466d37e6f2ab15e31d11cfa02",
       "scope": {
         "de": "Zeilenspezifischer aktueller Nachweis aus AGENTS.md; der Hash beweist Inhalt, nicht automatisch Erfuellung.",
         "en": "Current row-specific evidence from AGENTS.md; the hash proves content, not automatic fulfilment."
@@ -1278,8 +1278,8 @@
       "sourceClass": "ProjectEvidence",
       "path": ".specify/presets/.registry",
       "version": "Current",
-      "reviewedAt": "2026-10-20",
-      "normalizedSha256": "fac1e68a5486526dcc82f22e91349146c7542e7169f440b01430a974fdac3779",
+      "reviewedAt": "2026-10-24",
+      "normalizedSha256": "2a40eefcc188d2c4b3d910aa9451355b6d346c44e2711df4f544c7b821192da3",
       "scope": {
         "de": "Zeilenspezifischer aktueller Nachweis aus .specify/presets/.registry; der Hash beweist Inhalt, nicht automatisch Erfuellung.",
         "en": "Current row-specific evidence from .specify/presets/.registry; the hash proves content, not automatic fulfilment."
@@ -12456,7 +12456,7 @@
   "presetAssessments": [
     {
       "presetId": "a11y-governance",
-      "version": "0.4.4",
+      "version": "0.4.5",
       "priority": 40,
       "standardMatrixMember": true,
       "applicability": "Applicable",
@@ -12483,18 +12483,18 @@
         {
           "path": ".specify/presets/a11y-governance/preset.yml",
           "locator": "id: \"a11y-governance\"",
-          "observedAt": "2026-10-18",
+          "observedAt": "2026-10-24",
           "freshness": "Revalidated",
           "availability": "Existing",
           "supports": {
-            "de": "a11y-governance ist durch .specify/presets/a11y-governance/preset.yml am exakten Locator 'id: \"a11y-governance\"' belegt. Der am 2026-10-18 als Revalidated geprüfte Inhalt stützt ausschließlich die Einstufung Applicable.",
-            "en": "a11y-governance is bound to .specify/presets/a11y-governance/preset.yml at the exact locator 'id: \"a11y-governance\"'. The content observed on 2026-10-18 as Revalidated supports only the Applicable disposition."
+            "de": "a11y-governance ist durch .specify/presets/a11y-governance/preset.yml am exakten Locator 'id: \"a11y-governance\"' belegt. Der am 2026-10-24 als Revalidated geprüfte Inhalt stützt ausschließlich die Einstufung Applicable.",
+            "en": "a11y-governance is bound to .specify/presets/a11y-governance/preset.yml at the exact locator 'id: \"a11y-governance\"'. The content observed on 2026-10-24 as Revalidated supports only the Applicable disposition."
           }
         }
       ],
       "rationale": {
-        "de": "a11y-governance 0.4.4 ist am exakten Preset-Locator inventarisiert und auf 12 Checklistenzeilen sowie 3 Feature-Gates abgebildet.",
-        "en": "a11y-governance 0.4.4 is inventoried at its exact preset locator and mapped to 12 checklist rows and 3 feature gates."
+        "de": "a11y-governance 0.4.5 ist am exakten Preset-Locator inventarisiert und auf 12 Checklistenzeilen sowie 3 Feature-Gates abgebildet.",
+        "en": "a11y-governance 0.4.5 is inventoried at its exact preset locator and mapped to 12 checklist rows and 3 feature gates."
       },
       "owner": "Spec Kit governance role",
       "reviewer": "Independent technical review role",
@@ -12513,7 +12513,7 @@
     },
     {
       "presetId": "agent-parity-governance",
-      "version": "0.4.3",
+      "version": "0.4.4",
       "priority": 60,
       "standardMatrixMember": true,
       "applicability": "Applicable",
@@ -12573,18 +12573,18 @@
         {
           "path": ".specify/presets/agent-parity-governance/preset.yml",
           "locator": "id: \"agent-parity-governance\"",
-          "observedAt": "2026-10-18",
+          "observedAt": "2026-10-24",
           "freshness": "Revalidated",
           "availability": "Existing",
           "supports": {
-            "de": "agent-parity-governance ist durch .specify/presets/agent-parity-governance/preset.yml am exakten Locator 'id: \"agent-parity-governance\"' belegt. Der am 2026-10-18 als Revalidated geprüfte Inhalt stützt ausschließlich die Einstufung Applicable.",
-            "en": "agent-parity-governance is bound to .specify/presets/agent-parity-governance/preset.yml at the exact locator 'id: \"agent-parity-governance\"'. The content observed on 2026-10-18 as Revalidated supports only the Applicable disposition."
+            "de": "agent-parity-governance ist durch .specify/presets/agent-parity-governance/preset.yml am exakten Locator 'id: \"agent-parity-governance\"' belegt. Der am 2026-10-24 als Revalidated geprüfte Inhalt stützt ausschließlich die Einstufung Applicable.",
+            "en": "agent-parity-governance is bound to .specify/presets/agent-parity-governance/preset.yml at the exact locator 'id: \"agent-parity-governance\"'. The content observed on 2026-10-24 as Revalidated supports only the Applicable disposition."
           }
         }
       ],
       "rationale": {
-        "de": "agent-parity-governance 0.4.3 ist am exakten Preset-Locator inventarisiert und auf 46 Checklistenzeilen sowie 2 Feature-Gates abgebildet.",
-        "en": "agent-parity-governance 0.4.3 is inventoried at its exact preset locator and mapped to 46 checklist rows and 2 feature gates."
+        "de": "agent-parity-governance 0.4.4 ist am exakten Preset-Locator inventarisiert und auf 46 Checklistenzeilen sowie 2 Feature-Gates abgebildet.",
+        "en": "agent-parity-governance 0.4.4 is inventoried at its exact preset locator and mapped to 46 checklist rows and 2 feature gates."
       },
       "owner": "Spec Kit governance role",
       "reviewer": "Independent technical review role",
@@ -12603,7 +12603,7 @@
     },
     {
       "presetId": "architecture-governance",
-      "version": "0.6.3",
+      "version": "0.6.4",
       "priority": 20,
       "standardMatrixMember": true,
       "applicability": "Applicable",
@@ -12643,18 +12643,18 @@
         {
           "path": ".specify/presets/architecture-governance/preset.yml",
           "locator": "id: \"architecture-governance\"",
-          "observedAt": "2026-10-18",
+          "observedAt": "2026-10-24",
           "freshness": "Revalidated",
           "availability": "Existing",
           "supports": {
-            "de": "architecture-governance ist durch .specify/presets/architecture-governance/preset.yml am exakten Locator 'id: \"architecture-governance\"' belegt. Der am 2026-10-18 als Revalidated geprüfte Inhalt stützt ausschließlich die Einstufung Applicable.",
-            "en": "architecture-governance is bound to .specify/presets/architecture-governance/preset.yml at the exact locator 'id: \"architecture-governance\"'. The content observed on 2026-10-18 as Revalidated supports only the Applicable disposition."
+            "de": "architecture-governance ist durch .specify/presets/architecture-governance/preset.yml am exakten Locator 'id: \"architecture-governance\"' belegt. Der am 2026-10-24 als Revalidated geprüfte Inhalt stützt ausschließlich die Einstufung Applicable.",
+            "en": "architecture-governance is bound to .specify/presets/architecture-governance/preset.yml at the exact locator 'id: \"architecture-governance\"'. The content observed on 2026-10-24 as Revalidated supports only the Applicable disposition."
           }
         }
       ],
       "rationale": {
-        "de": "architecture-governance 0.6.3 ist am exakten Preset-Locator inventarisiert und auf 23 Checklistenzeilen sowie 5 Feature-Gates abgebildet.",
-        "en": "architecture-governance 0.6.3 is inventoried at its exact preset locator and mapped to 23 checklist rows and 5 feature gates."
+        "de": "architecture-governance 0.6.4 ist am exakten Preset-Locator inventarisiert und auf 23 Checklistenzeilen sowie 5 Feature-Gates abgebildet.",
+        "en": "architecture-governance 0.6.4 is inventoried at its exact preset locator and mapped to 23 checklist rows and 5 feature gates."
       },
       "owner": "Spec Kit governance role",
       "reviewer": "Independent technical review role",
@@ -12673,7 +12673,7 @@
     },
     {
       "presetId": "autonomous-run-governance",
-      "version": "0.4.5",
+      "version": "0.4.6",
       "priority": 70,
       "standardMatrixMember": true,
       "applicability": "Applicable",
@@ -12736,18 +12736,18 @@
         {
           "path": ".specify/presets/autonomous-run-governance/preset.yml",
           "locator": "id: \"autonomous-run-governance\"",
-          "observedAt": "2026-10-18",
+          "observedAt": "2026-10-24",
           "freshness": "Revalidated",
           "availability": "Existing",
           "supports": {
-            "de": "autonomous-run-governance ist durch .specify/presets/autonomous-run-governance/preset.yml am exakten Locator 'id: \"autonomous-run-governance\"' belegt. Der am 2026-10-18 als Revalidated geprüfte Inhalt stützt ausschließlich die Einstufung Applicable.",
-            "en": "autonomous-run-governance is bound to .specify/presets/autonomous-run-governance/preset.yml at the exact locator 'id: \"autonomous-run-governance\"'. The content observed on 2026-10-18 as Revalidated supports only the Applicable disposition."
+            "de": "autonomous-run-governance ist durch .specify/presets/autonomous-run-governance/preset.yml am exakten Locator 'id: \"autonomous-run-governance\"' belegt. Der am 2026-10-24 als Revalidated geprüfte Inhalt stützt ausschließlich die Einstufung Applicable.",
+            "en": "autonomous-run-governance is bound to .specify/presets/autonomous-run-governance/preset.yml at the exact locator 'id: \"autonomous-run-governance\"'. The content observed on 2026-10-24 as Revalidated supports only the Applicable disposition."
           }
         }
       ],
       "rationale": {
-        "de": "autonomous-run-governance 0.4.5 ist am exakten Preset-Locator inventarisiert und unverändert auf 42 Checklistenzeilen sowie 9 Feature-Gates abgebildet; physische Rename-Pfade, reguläre Indexmodi und Indexbytes stärken GSDB-GATE-027.",
-        "en": "autonomous-run-governance 0.4.5 is inventoried at its exact preset locator and remains mapped to 42 checklist rows and 9 feature gates; physical rename paths, regular index modes, and index bytes strengthen GSDB-GATE-027."
+        "de": "autonomous-run-governance 0.4.6 ist am exakten Preset-Locator inventarisiert und unverändert auf 42 Checklistenzeilen sowie 9 Feature-Gates abgebildet; physische Rename-Pfade, reguläre Indexmodi und Indexbytes stärken GSDB-GATE-027.",
+        "en": "autonomous-run-governance 0.4.6 is inventoried at its exact preset locator and remains mapped to 42 checklist rows and 9 feature gates; physical rename paths, regular index modes, and index bytes strengthen GSDB-GATE-027."
       },
       "owner": "Spec Kit governance role",
       "reviewer": "Independent technical review role",
@@ -12766,7 +12766,7 @@
     },
     {
       "presetId": "cross-platform-governance",
-      "version": "0.2.3",
+      "version": "0.2.4",
       "priority": 50,
       "standardMatrixMember": true,
       "applicability": "Applicable",
@@ -12811,18 +12811,18 @@
         {
           "path": ".specify/presets/cross-platform-governance/preset.yml",
           "locator": "id: \"cross-platform-governance\"",
-          "observedAt": "2026-10-18",
+          "observedAt": "2026-10-24",
           "freshness": "Revalidated",
           "availability": "Existing",
           "supports": {
-            "de": "cross-platform-governance ist durch .specify/presets/cross-platform-governance/preset.yml am exakten Locator 'id: \"cross-platform-governance\"' belegt. Der am 2026-10-18 als Revalidated geprüfte Inhalt stützt ausschließlich die Einstufung Applicable.",
-            "en": "cross-platform-governance is bound to .specify/presets/cross-platform-governance/preset.yml at the exact locator 'id: \"cross-platform-governance\"'. The content observed on 2026-10-18 as Revalidated supports only the Applicable disposition."
+            "de": "cross-platform-governance ist durch .specify/presets/cross-platform-governance/preset.yml am exakten Locator 'id: \"cross-platform-governance\"' belegt. Der am 2026-10-24 als Revalidated geprüfte Inhalt stützt ausschließlich die Einstufung Applicable.",
+            "en": "cross-platform-governance is bound to .specify/presets/cross-platform-governance/preset.yml at the exact locator 'id: \"cross-platform-governance\"'. The content observed on 2026-10-24 as Revalidated supports only the Applicable disposition."
           }
         }
       ],
       "rationale": {
-        "de": "cross-platform-governance 0.2.3 ist am exakten Preset-Locator inventarisiert und auf 30 Checklistenzeilen sowie 3 Feature-Gates abgebildet.",
-        "en": "cross-platform-governance 0.2.3 is inventoried at its exact preset locator and mapped to 30 checklist rows and 3 feature gates."
+        "de": "cross-platform-governance 0.2.4 ist am exakten Preset-Locator inventarisiert und auf 30 Checklistenzeilen sowie 3 Feature-Gates abgebildet.",
+        "en": "cross-platform-governance 0.2.4 is inventoried at its exact preset locator and mapped to 30 checklist rows and 3 feature gates."
       },
       "owner": "Spec Kit governance role",
       "reviewer": "Independent technical review role",
@@ -12841,7 +12841,7 @@
     },
     {
       "presetId": "intake-authoring-governance",
-      "version": "0.3.8",
+      "version": "0.3.9",
       "priority": "NotInStandardMatrix",
       "standardMatrixMember": false,
       "applicability": "Applicable",
@@ -12885,18 +12885,18 @@
         {
           "path": ".specify/presets/intake-authoring-governance/preset.yml",
           "locator": "id: \"intake-authoring-governance\"",
-          "observedAt": "2026-10-18",
+          "observedAt": "2026-10-24",
           "freshness": "Revalidated",
           "availability": "Existing",
           "supports": {
-            "de": "intake-authoring-governance ist durch .specify/presets/intake-authoring-governance/preset.yml am exakten Locator 'id: \"intake-authoring-governance\"' belegt. Der am 2026-10-18 als Revalidated geprüfte Inhalt stützt ausschließlich die Einstufung Applicable.",
-            "en": "intake-authoring-governance is bound to .specify/presets/intake-authoring-governance/preset.yml at the exact locator 'id: \"intake-authoring-governance\"'. The content observed on 2026-10-18 as Revalidated supports only the Applicable disposition."
+            "de": "intake-authoring-governance ist durch .specify/presets/intake-authoring-governance/preset.yml am exakten Locator 'id: \"intake-authoring-governance\"' belegt. Der am 2026-10-24 als Revalidated geprüfte Inhalt stützt ausschließlich die Einstufung Applicable.",
+            "en": "intake-authoring-governance is bound to .specify/presets/intake-authoring-governance/preset.yml at the exact locator 'id: \"intake-authoring-governance\"'. The content observed on 2026-10-24 as Revalidated supports only the Applicable disposition."
           }
         }
       ],
       "rationale": {
-        "de": "intake-authoring-governance 0.3.8 ist am exakten Preset-Locator inventarisiert und auf 29 Checklistenzeilen sowie 3 Feature-Gates abgebildet.",
-        "en": "intake-authoring-governance 0.3.8 is inventoried at its exact preset locator and mapped to 29 checklist rows and 3 feature gates."
+        "de": "intake-authoring-governance 0.3.9 ist am exakten Preset-Locator inventarisiert und auf 29 Checklistenzeilen sowie 3 Feature-Gates abgebildet.",
+        "en": "intake-authoring-governance 0.3.9 is inventoried at its exact preset locator and mapped to 29 checklist rows and 3 feature gates."
       },
       "owner": "Spec Kit governance role",
       "reviewer": "Independent technical review role",
@@ -12915,7 +12915,7 @@
     },
     {
       "presetId": "intake-review-governance",
-      "version": "0.2.5",
+      "version": "0.2.6",
       "priority": "NotInStandardMatrix",
       "standardMatrixMember": false,
       "applicability": "Applicable",
@@ -12972,18 +12972,18 @@
         {
           "path": ".specify/presets/intake-review-governance/preset.yml",
           "locator": "id: \"intake-review-governance\"",
-          "observedAt": "2026-10-18",
+          "observedAt": "2026-10-24",
           "freshness": "Revalidated",
           "availability": "Existing",
           "supports": {
-            "de": "intake-review-governance ist durch .specify/presets/intake-review-governance/preset.yml am exakten Locator 'id: \"intake-review-governance\"' belegt. Der am 2026-10-18 als Revalidated geprüfte Inhalt stützt ausschließlich die Einstufung Applicable.",
-            "en": "intake-review-governance is bound to .specify/presets/intake-review-governance/preset.yml at the exact locator 'id: \"intake-review-governance\"'. The content observed on 2026-10-18 as Revalidated supports only the Applicable disposition."
+            "de": "intake-review-governance ist durch .specify/presets/intake-review-governance/preset.yml am exakten Locator 'id: \"intake-review-governance\"' belegt. Der am 2026-10-24 als Revalidated geprüfte Inhalt stützt ausschließlich die Einstufung Applicable.",
+            "en": "intake-review-governance is bound to .specify/presets/intake-review-governance/preset.yml at the exact locator 'id: \"intake-review-governance\"'. The content observed on 2026-10-24 as Revalidated supports only the Applicable disposition."
           }
         }
       ],
       "rationale": {
-        "de": "intake-review-governance 0.2.5 ist am exakten Preset-Locator inventarisiert und auf 42 Checklistenzeilen sowie 3 Feature-Gates abgebildet.",
-        "en": "intake-review-governance 0.2.5 is inventoried at its exact preset locator and mapped to 42 checklist rows and 3 feature gates."
+        "de": "intake-review-governance 0.2.6 ist am exakten Preset-Locator inventarisiert und auf 42 Checklistenzeilen sowie 3 Feature-Gates abgebildet.",
+        "en": "intake-review-governance 0.2.6 is inventoried at its exact preset locator and mapped to 42 checklist rows and 3 feature gates."
       },
       "owner": "Spec Kit governance role",
       "reviewer": "Independent technical review role",
@@ -13002,7 +13002,7 @@
     },
     {
       "presetId": "intake-sequencing-governance",
-      "version": "0.2.9",
+      "version": "0.2.10",
       "priority": "NotInStandardMatrix",
       "standardMatrixMember": false,
       "applicability": "Applicable",
@@ -13046,18 +13046,18 @@
         {
           "path": ".specify/presets/intake-sequencing-governance/preset.yml",
           "locator": "id: \"intake-sequencing-governance\"",
-          "observedAt": "2026-10-18",
+          "observedAt": "2026-10-24",
           "freshness": "Revalidated",
           "availability": "Existing",
           "supports": {
-            "de": "intake-sequencing-governance ist durch .specify/presets/intake-sequencing-governance/preset.yml am exakten Locator 'id: \"intake-sequencing-governance\"' belegt. Der am 2026-10-18 als Revalidated geprüfte Inhalt stützt ausschließlich die Einstufung Applicable.",
-            "en": "intake-sequencing-governance is bound to .specify/presets/intake-sequencing-governance/preset.yml at the exact locator 'id: \"intake-sequencing-governance\"'. The content observed on 2026-10-18 as Revalidated supports only the Applicable disposition."
+            "de": "intake-sequencing-governance ist durch .specify/presets/intake-sequencing-governance/preset.yml am exakten Locator 'id: \"intake-sequencing-governance\"' belegt. Der am 2026-10-24 als Revalidated geprüfte Inhalt stützt ausschließlich die Einstufung Applicable.",
+            "en": "intake-sequencing-governance is bound to .specify/presets/intake-sequencing-governance/preset.yml at the exact locator 'id: \"intake-sequencing-governance\"'. The content observed on 2026-10-24 as Revalidated supports only the Applicable disposition."
           }
         }
       ],
       "rationale": {
-        "de": "intake-sequencing-governance 0.2.9 ist am exakten Preset-Locator inventarisiert und auf 29 Checklistenzeilen sowie 3 Feature-Gates abgebildet.",
-        "en": "intake-sequencing-governance 0.2.9 is inventoried at its exact preset locator and mapped to 29 checklist rows and 3 feature gates."
+        "de": "intake-sequencing-governance 0.2.10 ist am exakten Preset-Locator inventarisiert und auf 29 Checklistenzeilen sowie 3 Feature-Gates abgebildet.",
+        "en": "intake-sequencing-governance 0.2.10 is inventoried at its exact preset locator and mapped to 29 checklist rows and 3 feature gates."
       },
       "owner": "Spec Kit governance role",
       "reviewer": "Independent technical review role",
@@ -13076,7 +13076,7 @@
     },
     {
       "presetId": "isaqb-architecture-governance",
-      "version": "0.2.3",
+      "version": "0.2.4",
       "priority": 30,
       "standardMatrixMember": true,
       "applicability": "Applicable",
@@ -13112,18 +13112,18 @@
         {
           "path": ".specify/presets/isaqb-architecture-governance/preset.yml",
           "locator": "id: \"isaqb-architecture-governance\"",
-          "observedAt": "2026-10-18",
+          "observedAt": "2026-10-24",
           "freshness": "Revalidated",
           "availability": "Existing",
           "supports": {
-            "de": "isaqb-architecture-governance ist durch .specify/presets/isaqb-architecture-governance/preset.yml am exakten Locator 'id: \"isaqb-architecture-governance\"' belegt. Der am 2026-10-18 als Revalidated geprüfte Inhalt stützt ausschließlich die Einstufung Applicable.",
-            "en": "isaqb-architecture-governance is bound to .specify/presets/isaqb-architecture-governance/preset.yml at the exact locator 'id: \"isaqb-architecture-governance\"'. The content observed on 2026-10-18 as Revalidated supports only the Applicable disposition."
+            "de": "isaqb-architecture-governance ist durch .specify/presets/isaqb-architecture-governance/preset.yml am exakten Locator 'id: \"isaqb-architecture-governance\"' belegt. Der am 2026-10-24 als Revalidated geprüfte Inhalt stützt ausschließlich die Einstufung Applicable.",
+            "en": "isaqb-architecture-governance is bound to .specify/presets/isaqb-architecture-governance/preset.yml at the exact locator 'id: \"isaqb-architecture-governance\"'. The content observed on 2026-10-24 as Revalidated supports only the Applicable disposition."
           }
         }
       ],
       "rationale": {
-        "de": "isaqb-architecture-governance 0.2.3 ist am exakten Preset-Locator inventarisiert und auf 23 Checklistenzeilen sowie 1 Feature-Gates abgebildet.",
-        "en": "isaqb-architecture-governance 0.2.3 is inventoried at its exact preset locator and mapped to 23 checklist rows and 1 feature gates."
+        "de": "isaqb-architecture-governance 0.2.4 ist am exakten Preset-Locator inventarisiert und auf 23 Checklistenzeilen sowie 1 Feature-Gates abgebildet.",
+        "en": "isaqb-architecture-governance 0.2.4 is inventoried at its exact preset locator and mapped to 23 checklist rows and 1 feature gates."
       },
       "owner": "Spec Kit governance role",
       "reviewer": "Independent technical review role",
@@ -13142,7 +13142,7 @@
     },
     {
       "presetId": "model-routing-governance",
-      "version": "0.1.5",
+      "version": "0.1.6",
       "priority": "NotInStandardMatrix",
       "standardMatrixMember": false,
       "applicability": "Applicable",
@@ -13185,18 +13185,18 @@
         {
           "path": ".specify/presets/model-routing-governance/preset.yml",
           "locator": "id: \"model-routing-governance\"",
-          "observedAt": "2026-10-18",
+          "observedAt": "2026-10-24",
           "freshness": "Revalidated",
           "availability": "Existing",
           "supports": {
-            "de": "model-routing-governance ist durch .specify/presets/model-routing-governance/preset.yml am exakten Locator 'id: \"model-routing-governance\"' belegt. Der am 2026-10-18 als Revalidated geprüfte Inhalt stützt ausschließlich die Einstufung Applicable.",
-            "en": "model-routing-governance is bound to .specify/presets/model-routing-governance/preset.yml at the exact locator 'id: \"model-routing-governance\"'. The content observed on 2026-10-18 as Revalidated supports only the Applicable disposition."
+            "de": "model-routing-governance ist durch .specify/presets/model-routing-governance/preset.yml am exakten Locator 'id: \"model-routing-governance\"' belegt. Der am 2026-10-24 als Revalidated geprüfte Inhalt stützt ausschließlich die Einstufung Applicable.",
+            "en": "model-routing-governance is bound to .specify/presets/model-routing-governance/preset.yml at the exact locator 'id: \"model-routing-governance\"'. The content observed on 2026-10-24 as Revalidated supports only the Applicable disposition."
           }
         }
       ],
       "rationale": {
-        "de": "model-routing-governance 0.1.5 ist am exakten Preset-Locator inventarisiert und auf 29 Checklistenzeilen sowie 2 Feature-Gates abgebildet.",
-        "en": "model-routing-governance 0.1.5 is inventoried at its exact preset locator and mapped to 29 checklist rows and 2 feature gates."
+        "de": "model-routing-governance 0.1.6 ist am exakten Preset-Locator inventarisiert und auf 29 Checklistenzeilen sowie 2 Feature-Gates abgebildet.",
+        "en": "model-routing-governance 0.1.6 is inventoried at its exact preset locator and mapped to 29 checklist rows and 2 feature gates."
       },
       "owner": "Spec Kit governance role",
       "reviewer": "Independent technical review role",
@@ -13215,7 +13215,7 @@
     },
     {
       "presetId": "parallel-autonomous-run-governance",
-      "version": "0.2.7",
+      "version": "0.2.8",
       "priority": 80,
       "standardMatrixMember": true,
       "applicability": "N/A",
@@ -13257,18 +13257,18 @@
         {
           "path": ".specify/presets/parallel-autonomous-run-governance/preset.yml",
           "locator": "id: \"parallel-autonomous-run-governance\"",
-          "observedAt": "2026-10-18",
+          "observedAt": "2026-10-24",
           "freshness": "Revalidated",
           "availability": "Existing",
           "supports": {
-            "de": "parallel-autonomous-run-governance ist durch .specify/presets/parallel-autonomous-run-governance/preset.yml am exakten Locator 'id: \"parallel-autonomous-run-governance\"' belegt. Der am 2026-10-18 als Revalidated geprüfte Inhalt stützt ausschließlich die Einstufung N/A.",
-            "en": "parallel-autonomous-run-governance is bound to .specify/presets/parallel-autonomous-run-governance/preset.yml at the exact locator 'id: \"parallel-autonomous-run-governance\"'. The content observed on 2026-10-18 as Revalidated supports only the N/A disposition."
+            "de": "parallel-autonomous-run-governance ist durch .specify/presets/parallel-autonomous-run-governance/preset.yml am exakten Locator 'id: \"parallel-autonomous-run-governance\"' belegt. Der am 2026-10-24 als Revalidated geprüfte Inhalt stützt ausschließlich die Einstufung N/A.",
+            "en": "parallel-autonomous-run-governance is bound to .specify/presets/parallel-autonomous-run-governance/preset.yml at the exact locator 'id: \"parallel-autonomous-run-governance\"'. The content observed on 2026-10-24 as Revalidated supports only the N/A disposition."
           }
         }
       ],
       "rationale": {
-        "de": "parallel-autonomous-run-governance 0.2.7 ist am exakten Preset-Locator inventarisiert und auf 29 Checklistenzeilen sowie 1 Feature-Gates abgebildet.",
-        "en": "parallel-autonomous-run-governance 0.2.7 is inventoried at its exact preset locator and mapped to 29 checklist rows and 1 feature gates."
+        "de": "parallel-autonomous-run-governance 0.2.8 ist am exakten Preset-Locator inventarisiert und auf 29 Checklistenzeilen sowie 1 Feature-Gates abgebildet.",
+        "en": "parallel-autonomous-run-governance 0.2.8 is inventoried at its exact preset locator and mapped to 29 checklist rows and 1 feature gates."
       },
       "owner": "Spec Kit governance role",
       "reviewer": "Independent technical review role",
@@ -13287,7 +13287,7 @@
     },
     {
       "presetId": "project-statistics-governance",
-      "version": "0.1.1",
+      "version": "0.1.2",
       "priority": "NotInStandardMatrix",
       "standardMatrixMember": false,
       "applicability": "Applicable",
@@ -13299,7 +13299,7 @@
         {
           "path": ".specify/presets/project-statistics-governance/preset.yml",
           "locator": "id: \"project-statistics-governance\"",
-          "observedAt": "2026-10-18",
+          "observedAt": "2026-10-24",
           "freshness": "Revalidated",
           "availability": "Existing",
           "supports": {
@@ -13329,7 +13329,7 @@
     },
     {
       "presetId": "secure-development-assurance-governance",
-      "version": "0.1.5",
+      "version": "0.1.7",
       "priority": "NotInStandardMatrix",
       "standardMatrixMember": false,
       "applicability": "Applicable",
@@ -13515,12 +13515,12 @@
         {
           "path": ".specify/presets/secure-development-assurance-governance/preset.yml",
           "locator": "id: \"secure-development-assurance-governance\"",
-          "observedAt": "2026-10-18",
+          "observedAt": "2026-10-24",
           "freshness": "Revalidated",
           "availability": "Existing",
           "supports": {
-            "de": "secure-development-assurance-governance ist durch .specify/presets/secure-development-assurance-governance/preset.yml am exakten Locator 'id: \"secure-development-assurance-governance\"' belegt. Der am 2026-10-18 als Revalidated geprüfte Inhalt stützt ausschließlich die Einstufung Applicable.",
-            "en": "secure-development-assurance-governance is bound to .specify/presets/secure-development-assurance-governance/preset.yml at the exact locator 'id: \"secure-development-assurance-governance\"'. The content observed on 2026-10-18 as Revalidated supports only the Applicable disposition."
+            "de": "secure-development-assurance-governance ist durch .specify/presets/secure-development-assurance-governance/preset.yml am exakten Locator 'id: \"secure-development-assurance-governance\"' belegt. Der am 2026-10-24 als Revalidated geprüfte Inhalt stützt ausschließlich die Einstufung Applicable.",
+            "en": "secure-development-assurance-governance is bound to .specify/presets/secure-development-assurance-governance/preset.yml at the exact locator 'id: \"secure-development-assurance-governance\"'. The content observed on 2026-10-24 as Revalidated supports only the Applicable disposition."
           }
         }
       ],
@@ -13545,7 +13545,7 @@
     },
     {
       "presetId": "security-governance",
-      "version": "0.7.2",
+      "version": "0.7.3",
       "priority": 10,
       "standardMatrixMember": true,
       "applicability": "Applicable",
@@ -13634,18 +13634,18 @@
         {
           "path": ".specify/presets/security-governance/preset.yml",
           "locator": "id: \"security-governance\"",
-          "observedAt": "2026-10-18",
+          "observedAt": "2026-10-24",
           "freshness": "Revalidated",
           "availability": "Existing",
           "supports": {
-            "de": "security-governance ist durch .specify/presets/security-governance/preset.yml am exakten Locator 'id: \"security-governance\"' belegt. Der am 2026-10-18 als Revalidated geprüfte Inhalt stützt ausschließlich die Einstufung Applicable.",
-            "en": "security-governance is bound to .specify/presets/security-governance/preset.yml at the exact locator 'id: \"security-governance\"'. The content observed on 2026-10-18 as Revalidated supports only the Applicable disposition."
+            "de": "security-governance ist durch .specify/presets/security-governance/preset.yml am exakten Locator 'id: \"security-governance\"' belegt. Der am 2026-10-24 als Revalidated geprüfte Inhalt stützt ausschließlich die Einstufung Applicable.",
+            "en": "security-governance is bound to .specify/presets/security-governance/preset.yml at the exact locator 'id: \"security-governance\"'. The content observed on 2026-10-24 as Revalidated supports only the Applicable disposition."
           }
         }
       ],
       "rationale": {
-        "de": "security-governance 0.7.2 ist am exakten Preset-Locator inventarisiert und auf 65 Checklistenzeilen sowie 12 Feature-Gates abgebildet.",
-        "en": "security-governance 0.7.2 is inventoried at its exact preset locator and mapped to 65 checklist rows and 12 feature gates."
+        "de": "security-governance 0.7.3 ist am exakten Preset-Locator inventarisiert und auf 65 Checklistenzeilen sowie 12 Feature-Gates abgebildet.",
+        "en": "security-governance 0.7.3 is inventoried at its exact preset locator and mapped to 65 checklist rows and 12 feature gates."
       },
       "owner": "Spec Kit governance role",
       "reviewer": "Independent technical review role",
