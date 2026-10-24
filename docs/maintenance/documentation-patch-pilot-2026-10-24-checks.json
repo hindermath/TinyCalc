@@ -315,7 +315,7 @@
   "documentationValidation": {
     "errors": 0,
     "docfxExit": 0,
-    "note": "Rendered before final delivery-blocker report note; initial wrong index.html path rejected, actual README.html path succeeded.",
+    "note": "Final authorized lineage documentation built: same 105 existing warnings and zero errors. Three rendered reader paths inspected: README, rollout report and Assurance matrix. Series-review Markdown is intentionally not a DocFX content path; no HTML acceptance claimed for it.",
     "fullWcagAcceptance": false,
     "lynxReaderPaths": 3,
     "physicalScreenreaderBrailleTested": false,
@@ -335,5 +335,8 @@
     "allThirteenTargetsUnchanged": true,
     "validatedBeforeAtomicPublication": true
   },
-  "latestRequirementsIntakeExit": 0
+  "latestRequirementsIntakeExit": 0,
+  "installationCommit": "dc5d64a277bb5fb1adb833247c1b79ad1feacbd3",
+  "documentationImpactEntries": 4,
+  "documentationImpactExit": 0
 }
