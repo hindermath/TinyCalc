@@ -34,7 +34,21 @@ jobs:
         run: |
           pwsh -NoProfile -File scripts/tests/test-gsdb-consolidation.ps1
           if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
-      - name: Assurance 0.1.5 strict regression
+      - name: Current stable rollout bindings and read-only gates
+        shell: pwsh
+        run: |
+          pwsh -NoProfile -File scripts/validate-documentation-impact.ps1 -Evidence docs/maintenance/documentation-patch-pilot-2026-10-24-impact.json
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          $validator = '.specify/presets/secure-development-assurance-governance/scripts/validate-secure-development-assurance.ps1'
+          pwsh -NoProfile -File $validator -Action Status -EvidenceDirectory docs/security/secure-development/2026-10-24-tinycalc-documentation-patches
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          foreach ($gate in @('baseline', 'delta', 'closure', 'image-impact')) {
+            pwsh -NoProfile -File $validator -Action Review -Gate $gate -ContextId tinycalc-documentation-patches -Mode development
+            if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+          }
+          git diff --exit-code
+          if ($LASTEXITCODE -ne 0) { exit $LASTEXITCODE }
+      - name: Assurance 0.1.8 strict regression
         shell: pwsh
         run: |
           pwsh -NoProfile -File .specify/presets/secure-development-assurance-governance/tests/test-secure-development-assurance.ps1

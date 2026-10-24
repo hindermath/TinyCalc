@@ -1,16 +1,16 @@
 {
   "schemaVersion": "2.0",
   "documentType": "IntakeReceipt",
-  "receiptId": "bea8ceab-dbe0-4360-a931-fb1d7a8fdffa",
+  "receiptId": "5dee00ec-a6ce-425e-9e3e-5fddc1850e01",
   "intakeId": "25157ad2-2db3-45bf-a0e1-8b3dd3c5e82f",
   "generator": {
-    "version": "0.3.8",
+    "version": "0.3.10",
     "preset": "intake-authoring-governance"
   },
-  "createdAt": "2026-10-21T10:45:45Z",
+  "createdAt": "2026-10-24T17:44:42Z",
   "operation": {
-    "authorityEvidence": "Thorsten approved PLEASE IMPLEMENT THIS PLAN: targeted GSDB 3.4.4 / Assurance 0.1.5 governance and intake refresh, administrative Feature 006 provenance only, minimal Feature 007 alignment and separate independent Series review. Preserve historical acceptance, target identities, scope, order, states, roots and dependencies. Local documentation only: no implementation, build, test, restore, upgrade, commit, push, PR, merge or bypass. Exclude sheet.mcalc.json.",
-    "operationId": "44f5901d-e5d9-42b8-b975-4693195d034f",
+    "authorityEvidence": "Thorsten explicitly authorized exactly five source-hash lineage corrections on 2026-10-24: PL0, Rename, sandbox-supported hardening, secure-development hardening and TUI acceptance/regression. Preserve target bytes, intake IDs, scope, DAG, order and lifecycle states. Archive predecessors, renew receipts and operation IDs, supersede old review evidence without claiming a current Ready result. No product run, product/risk/release approval, or validator weakening.",
+    "operationId": "363e883c-a20c-4a98-b4da-62a1a3b5a0f2",
     "type": "Update"
   },
   "status": "ReadyForReview",
@@ -25,7 +25,7 @@
       "kind": "File",
       "label": "First binding source: byte-identical predecessor intake",
       "location": "Repository",
-      "path": "requirements/intakes/history/20261021-gsdb344-alignment/Lastenheft_Secure-Development-Hardening.md",
+      "path": "requirements/intakes/history/20261024-documentation-patch-lineage/Lastenheft_Secure-Development-Hardening.md",
       "requestedUrl": "N/A",
       "finalUrl": "N/A",
       "retrievedAt": "N/A",
@@ -36,7 +36,7 @@
       "lastModified": "N/A",
       "redirectChain": [],
       "rawSha256": "N/A",
-      "normalizedSha256": "38d57df9cb6431eddf812ca328965f8542d9aab801cdb8b9971cd72351472490",
+      "normalizedSha256": "8b52ca4953d74cc5e647b82ecbeea2adfcfbff3ebbc00f58196c8ee36143d402",
       "gitBlob": "N/A",
       "proofBoundary": "Strict UTF-8 normalized SHA-256; source adoption is not product conformance / Quellenbindung ist keine Produktkonformitaet."
     },
@@ -46,7 +46,7 @@
       "kind": "File",
       "label": "Byte-identical prior receipt preserves historical source order",
       "location": "Repository",
-      "path": "specs/intake-authoring-receipts/history/secure-development-hardening.20261021-gsdb344-alignment.json",
+      "path": "specs/intake-authoring-receipts/history/secure-development-hardening.20261024-documentation-patch-lineage.json",
       "requestedUrl": "N/A",
       "finalUrl": "N/A",
       "retrievedAt": "N/A",
@@ -57,7 +57,7 @@
       "lastModified": "N/A",
       "redirectChain": [],
       "rawSha256": "N/A",
-      "normalizedSha256": "2a484f26f16598d065f16211f299fb8d47f56e69cdf2ab6237eea567d1933b49",
+      "normalizedSha256": "1431886d0521e7191da66ad9cb7eb412085219667385a5df24f9fcdce793219e",
       "gitBlob": "N/A",
       "proofBoundary": "Strict UTF-8 normalized SHA-256; source adoption is not product conformance / Quellenbindung ist keine Produktkonformitaet."
     },
@@ -99,7 +99,7 @@
       "lastModified": "N/A",
       "redirectChain": [],
       "rawSha256": "N/A",
-      "normalizedSha256": "1e3d7235fc24eb26c9385f635571cf544a28eed4a6e1d996c9921d01c350ba0b",
+      "normalizedSha256": "cd471d1c3b6d40717aee4d306e0b9e3d8a3627c39121c8114816411c411e171d",
       "gitBlob": "N/A",
       "proofBoundary": "Strict UTF-8 normalized SHA-256; source adoption is not product conformance / Quellenbindung ist keine Produktkonformitaet."
     }
@@ -135,11 +135,11 @@
   "promptState": "Enabled",
   "provenanceMode": "Supersession",
   "supersedes": {
-    "receiptPath": "specs/intake-authoring-receipts/history/secure-development-hardening.20261021-gsdb344-alignment.json",
-    "receiptNormalizedSha256": "2a484f26f16598d065f16211f299fb8d47f56e69cdf2ab6237eea567d1933b49",
-    "archiveReceiptPath": "specs/intake-authoring-receipts/history/secure-development-hardening.20261021-gsdb344-alignment.json",
-    "targetNormalizedSha256": "38d57df9cb6431eddf812ca328965f8542d9aab801cdb8b9971cd72351472490",
-    "archiveTargetPath": "requirements/intakes/history/20261021-gsdb344-alignment/Lastenheft_Secure-Development-Hardening.md"
+    "receiptPath": "specs/intake-authoring-receipts/history/secure-development-hardening.20261024-documentation-patch-lineage.json",
+    "receiptNormalizedSha256": "1431886d0521e7191da66ad9cb7eb412085219667385a5df24f9fcdce793219e",
+    "archiveReceiptPath": "specs/intake-authoring-receipts/history/secure-development-hardening.20261024-documentation-patch-lineage.json",
+    "targetNormalizedSha256": "8b52ca4953d74cc5e647b82ecbeea2adfcfbff3ebbc00f58196c8ee36143d402",
+    "archiveTargetPath": "requirements/intakes/history/20261024-documentation-patch-lineage/Lastenheft_Secure-Development-Hardening.md"
   },
   "legacyAdoption": {
     "priorTargetNormalizedSha256": "N/A",
@@ -147,7 +147,7 @@
     "evidenceType": "N/A"
   },
   "updateAuthorized": true,
-  "updateAuthorityEvidence": "Thorsten approved PLEASE IMPLEMENT THIS PLAN: targeted GSDB 3.4.4 / Assurance 0.1.5 governance and intake refresh, administrative Feature 006 provenance only, minimal Feature 007 alignment and separate independent Series review. Preserve historical acceptance, target identities, scope, order, states, roots and dependencies. Local documentation only: no implementation, build, test, restore, upgrade, commit, push, PR, merge or bypass. Exclude sheet.mcalc.json.",
+  "updateAuthorityEvidence": "Thorsten explicitly authorized exactly five source-hash lineage corrections on 2026-10-24: PL0, Rename, sandbox-supported hardening, secure-development hardening and TUI acceptance/regression. Preserve target bytes, intake IDs, scope, DAG, order and lifecycle states. Archive predecessors, renew receipts and operation IDs, supersede old review evidence without claiming a current Ready result. No product run, product/risk/release approval, or validator weakening.",
   "series": {
     "seriesId": "5b4523b4-d946-4091-9cbc-11825af94332",
     "manifestPath": "requirements/intakes/series/tinycalc-delivery/manifest.json",

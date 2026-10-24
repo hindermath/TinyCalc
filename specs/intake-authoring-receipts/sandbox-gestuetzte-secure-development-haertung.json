@@ -1,16 +1,16 @@
 {
   "schemaVersion": "2.0",
   "documentType": "IntakeReceipt",
-  "receiptId": "a8a3b69b-0b3d-4bc0-8dba-6b19d415340c",
+  "receiptId": "c941279d-a91f-423d-ba42-de381961b90f",
   "intakeId": "04b7b43a-af45-4d3d-9d6e-95dd4d285a9f",
   "generator": {
     "preset": "intake-authoring-governance",
-    "version": "0.3.8"
+    "version": "0.3.10"
   },
-  "createdAt": "2026-10-21T10:45:45Z",
+  "createdAt": "2026-10-24T17:44:42Z",
   "operation": {
-    "authorityEvidence": "Thorsten approved PLEASE IMPLEMENT THIS PLAN: targeted GSDB 3.4.4 / Assurance 0.1.5 governance and intake refresh, administrative Feature 006 provenance only, minimal Feature 007 alignment and separate independent Series review. Preserve historical acceptance, target identities, scope, order, states, roots and dependencies. Local documentation only: no implementation, build, test, restore, upgrade, commit, push, PR, merge or bypass. Exclude sheet.mcalc.json.",
-    "operationId": "44f5901d-e5d9-42b8-b975-4693195d034f",
+    "authorityEvidence": "Thorsten explicitly authorized exactly five source-hash lineage corrections on 2026-10-24: PL0, Rename, sandbox-supported hardening, secure-development hardening and TUI acceptance/regression. Preserve target bytes, intake IDs, scope, DAG, order and lifecycle states. Archive predecessors, renew receipts and operation IDs, supersede old review evidence without claiming a current Ready result. No product run, product/risk/release approval, or validator weakening.",
+    "operationId": "363e883c-a20c-4a98-b4da-62a1a3b5a0f2",
     "type": "Update"
   },
   "status": "ReadyForReview",
@@ -25,7 +25,7 @@
       "kind": "File",
       "label": "First binding source: byte-identical predecessor intake",
       "location": "Repository",
-      "path": "requirements/intakes/history/20261021-gsdb344-alignment/Lastenheft_Sandbox-gestuetzte-Secure-Development-Haertung.md",
+      "path": "requirements/intakes/history/20261024-documentation-patch-lineage/Lastenheft_Sandbox-gestuetzte-Secure-Development-Haertung.md",
       "requestedUrl": "N/A",
       "finalUrl": "N/A",
       "retrievedAt": "N/A",
@@ -36,7 +36,7 @@
       "lastModified": "N/A",
       "redirectChain": [],
       "rawSha256": "N/A",
-      "normalizedSha256": "f5ca1db52063f52f53914032fabcc8a1418c77fced607e922454248f17e72a6e",
+      "normalizedSha256": "b85f66e2d0fc1ce7d47ad4328e61a007821c1f19f9d1b291e9d4533271e079fa",
       "gitBlob": "N/A",
       "proofBoundary": "Strict UTF-8 normalized SHA-256; source adoption is not product conformance / Quellenbindung ist keine Produktkonformitaet."
     },
@@ -46,7 +46,7 @@
       "kind": "File",
       "label": "Byte-identical prior receipt preserves historical source order",
       "location": "Repository",
-      "path": "specs/intake-authoring-receipts/history/sandbox-gestuetzte-secure-development-haertung.20261021-gsdb344-alignment.json",
+      "path": "specs/intake-authoring-receipts/history/sandbox-gestuetzte-secure-development-haertung.20261024-documentation-patch-lineage.json",
       "requestedUrl": "N/A",
       "finalUrl": "N/A",
       "retrievedAt": "N/A",
@@ -57,7 +57,7 @@
       "lastModified": "N/A",
       "redirectChain": [],
       "rawSha256": "N/A",
-      "normalizedSha256": "11381dd0c3b6a06b27912b2b5f0fb6edf70d8515b0523114002b2edd3c18300b",
+      "normalizedSha256": "86ea4a406d731fb9c6633d931a625958425ffa6f7ead62a162f4fdb2f75f9f1f",
       "gitBlob": "N/A",
       "proofBoundary": "Strict UTF-8 normalized SHA-256; source adoption is not product conformance / Quellenbindung ist keine Produktkonformitaet."
     },
@@ -99,7 +99,7 @@
       "lastModified": "N/A",
       "redirectChain": [],
       "rawSha256": "N/A",
-      "normalizedSha256": "1e3d7235fc24eb26c9385f635571cf544a28eed4a6e1d996c9921d01c350ba0b",
+      "normalizedSha256": "cd471d1c3b6d40717aee4d306e0b9e3d8a3627c39121c8114816411c411e171d",
       "gitBlob": "N/A",
       "proofBoundary": "Strict UTF-8 normalized SHA-256; source adoption is not product conformance / Quellenbindung ist keine Produktkonformitaet."
     }
@@ -135,11 +135,11 @@
   "promptState": "Enabled",
   "provenanceMode": "Supersession",
   "supersedes": {
-    "receiptPath": "specs/intake-authoring-receipts/history/sandbox-gestuetzte-secure-development-haertung.20261021-gsdb344-alignment.json",
-    "receiptNormalizedSha256": "11381dd0c3b6a06b27912b2b5f0fb6edf70d8515b0523114002b2edd3c18300b",
-    "archiveReceiptPath": "specs/intake-authoring-receipts/history/sandbox-gestuetzte-secure-development-haertung.20261021-gsdb344-alignment.json",
-    "targetNormalizedSha256": "f5ca1db52063f52f53914032fabcc8a1418c77fced607e922454248f17e72a6e",
-    "archiveTargetPath": "requirements/intakes/history/20261021-gsdb344-alignment/Lastenheft_Sandbox-gestuetzte-Secure-Development-Haertung.md"
+    "receiptPath": "specs/intake-authoring-receipts/history/sandbox-gestuetzte-secure-development-haertung.20261024-documentation-patch-lineage.json",
+    "receiptNormalizedSha256": "86ea4a406d731fb9c6633d931a625958425ffa6f7ead62a162f4fdb2f75f9f1f",
+    "archiveReceiptPath": "specs/intake-authoring-receipts/history/sandbox-gestuetzte-secure-development-haertung.20261024-documentation-patch-lineage.json",
+    "targetNormalizedSha256": "b85f66e2d0fc1ce7d47ad4328e61a007821c1f19f9d1b291e9d4533271e079fa",
+    "archiveTargetPath": "requirements/intakes/history/20261024-documentation-patch-lineage/Lastenheft_Sandbox-gestuetzte-Secure-Development-Haertung.md"
   },
   "legacyAdoption": {
     "evidenceType": "N/A",
@@ -147,7 +147,7 @@
     "priorGitBlob": "N/A"
   },
   "updateAuthorized": true,
-  "updateAuthorityEvidence": "Thorsten approved PLEASE IMPLEMENT THIS PLAN: targeted GSDB 3.4.4 / Assurance 0.1.5 governance and intake refresh, administrative Feature 006 provenance only, minimal Feature 007 alignment and separate independent Series review. Preserve historical acceptance, target identities, scope, order, states, roots and dependencies. Local documentation only: no implementation, build, test, restore, upgrade, commit, push, PR, merge or bypass. Exclude sheet.mcalc.json.",
+  "updateAuthorityEvidence": "Thorsten explicitly authorized exactly five source-hash lineage corrections on 2026-10-24: PL0, Rename, sandbox-supported hardening, secure-development hardening and TUI acceptance/regression. Preserve target bytes, intake IDs, scope, DAG, order and lifecycle states. Archive predecessors, renew receipts and operation IDs, supersede old review evidence without claiming a current Ready result. No product run, product/risk/release approval, or validator weakening.",
   "series": {
     "seriesId": "5b4523b4-d946-4091-9cbc-11825af94332",
     "manifestPath": "requirements/intakes/series/tinycalc-delivery/manifest.json",

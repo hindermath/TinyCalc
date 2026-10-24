@@ -1,0 +1,32 @@
+{
+  "deleteAfterArchive": [
+    "requirements/intakes/series/tinycalc-delivery/intake-review-result.json"
+  ],
+  "operationId": "363e883c-a20c-4a98-b4da-62a1a3b5a0f2",
+  "paths": [
+    "requirements/intakes/history/20261024-documentation-patch-lineage/Lastenheft_PL0-Zellfunktionen_V1.md",
+    "specs/intake-authoring-receipts/history/pl0-zellfunktionen-v1.20261024-documentation-patch-lineage.json",
+    "specs/intake-authoring-receipts/pl0-zellfunktionen-v1.json",
+    "requirements/intakes/history/20261024-documentation-patch-lineage/Lastenheft_Rename_MicroCalc_TinyCalc.md",
+    "specs/intake-authoring-receipts/history/rename-microcalc-tinycalc.20261024-documentation-patch-lineage.json",
+    "specs/intake-authoring-receipts/rename-microcalc-tinycalc.json",
+    "requirements/intakes/history/20261024-documentation-patch-lineage/Lastenheft_Sandbox-gestuetzte-Secure-Development-Haertung.md",
+    "specs/intake-authoring-receipts/history/sandbox-gestuetzte-secure-development-haertung.20261024-documentation-patch-lineage.json",
+    "specs/intake-authoring-receipts/sandbox-gestuetzte-secure-development-haertung.json",
+    "requirements/intakes/history/20261024-documentation-patch-lineage/Lastenheft_Secure-Development-Hardening.md",
+    "specs/intake-authoring-receipts/history/secure-development-hardening.20261024-documentation-patch-lineage.json",
+    "specs/intake-authoring-receipts/secure-development-hardening.json",
+    "requirements/intakes/history/20261024-documentation-patch-lineage/Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md",
+    "specs/intake-authoring-receipts/history/tui-funktionsabnahme-und-regressionsvertrag.20261024-documentation-patch-lineage.json",
+    "specs/intake-authoring-receipts/tui-funktionsabnahme-und-regressionsvertrag.json",
+    "requirements/intakes/series-archive/tinycalc-delivery/20261024-documentation-patch-lineage/intake-review-request.json",
+    "requirements/intakes/series-archive/tinycalc-delivery/20261024-documentation-patch-lineage/intake-review-result.json",
+    "requirements/intakes/series-archive/tinycalc-delivery/20261024-documentation-patch-lineage/intake-review-report.md",
+    "requirements/intakes/series/tinycalc-delivery/intake-review-request.json",
+    "requirements/intakes/series/tinycalc-delivery/intake-review-report.md",
+    "requirements/intakes/series/tinycalc-delivery/intake-review-result.json",
+    "specs/intake-authoring-operations/363e883c-a20c-4a98-b4da-62a1a3b5a0f2/proposal.json",
+    "specs/intake-authoring-operations/363e883c-a20c-4a98-b4da-62a1a3b5a0f2/lineage.json",
+    "specs/intake-authoring-operations/363e883c-a20c-4a98-b4da-62a1a3b5a0f2/operation.json"
+  ]
+}

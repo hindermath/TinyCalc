@@ -1,16 +1,16 @@
 {
   "schemaVersion": "2.0",
   "documentType": "IntakeReceipt",
-  "receiptId": "c69d55e0-b561-40a3-b2f7-4d59e570e2d8",
+  "receiptId": "dac09359-3363-4118-b692-e4a03ff1748b",
   "intakeId": "7474c2ca-2efe-4d05-a359-9af278333007",
   "generator": {
-    "version": "0.3.8",
+    "version": "0.3.10",
     "preset": "intake-authoring-governance"
   },
-  "createdAt": "2026-10-21T10:45:45Z",
+  "createdAt": "2026-10-24T17:44:42Z",
   "operation": {
-    "authorityEvidence": "Thorsten approved PLEASE IMPLEMENT THIS PLAN: targeted GSDB 3.4.4 / Assurance 0.1.5 governance and intake refresh, administrative Feature 006 provenance only, minimal Feature 007 alignment and separate independent Series review. Preserve historical acceptance, target identities, scope, order, states, roots and dependencies. Local documentation only: no implementation, build, test, restore, upgrade, commit, push, PR, merge or bypass. Exclude sheet.mcalc.json.",
-    "operationId": "44f5901d-e5d9-42b8-b975-4693195d034f",
+    "authorityEvidence": "Thorsten explicitly authorized exactly five source-hash lineage corrections on 2026-10-24: PL0, Rename, sandbox-supported hardening, secure-development hardening and TUI acceptance/regression. Preserve target bytes, intake IDs, scope, DAG, order and lifecycle states. Archive predecessors, renew receipts and operation IDs, supersede old review evidence without claiming a current Ready result. No product run, product/risk/release approval, or validator weakening.",
+    "operationId": "363e883c-a20c-4a98-b4da-62a1a3b5a0f2",
     "type": "Update"
   },
   "status": "ReadyForReview",
@@ -25,7 +25,7 @@
       "kind": "File",
       "label": "First binding source: byte-identical predecessor intake",
       "location": "Repository",
-      "path": "requirements/intakes/history/20261021-gsdb344-alignment/Lastenheft_PL0-Zellfunktionen_V1.md",
+      "path": "requirements/intakes/history/20261024-documentation-patch-lineage/Lastenheft_PL0-Zellfunktionen_V1.md",
       "requestedUrl": "N/A",
       "finalUrl": "N/A",
       "retrievedAt": "N/A",
@@ -46,7 +46,7 @@
       "kind": "File",
       "label": "Byte-identical prior receipt preserves historical source order",
       "location": "Repository",
-      "path": "specs/intake-authoring-receipts/history/pl0-zellfunktionen-v1.20261021-gsdb344-alignment.json",
+      "path": "specs/intake-authoring-receipts/history/pl0-zellfunktionen-v1.20261024-documentation-patch-lineage.json",
       "requestedUrl": "N/A",
       "finalUrl": "N/A",
       "retrievedAt": "N/A",
@@ -57,7 +57,7 @@
       "lastModified": "N/A",
       "redirectChain": [],
       "rawSha256": "N/A",
-      "normalizedSha256": "2cf9abb39da800db11fbff87b5fffb3888448e71967527f0f7f0c7187437465f",
+      "normalizedSha256": "2773e13c91c586a90cddee17cda6a65073456d822bc4b70de0a5caa635967c77",
       "gitBlob": "N/A",
       "proofBoundary": "Strict UTF-8 normalized SHA-256; source adoption is not product conformance / Quellenbindung ist keine Produktkonformitaet."
     },
@@ -99,7 +99,7 @@
       "lastModified": "N/A",
       "redirectChain": [],
       "rawSha256": "N/A",
-      "normalizedSha256": "1e3d7235fc24eb26c9385f635571cf544a28eed4a6e1d996c9921d01c350ba0b",
+      "normalizedSha256": "cd471d1c3b6d40717aee4d306e0b9e3d8a3627c39121c8114816411c411e171d",
       "gitBlob": "N/A",
       "proofBoundary": "Strict UTF-8 normalized SHA-256; source adoption is not product conformance / Quellenbindung ist keine Produktkonformitaet."
     },
@@ -120,7 +120,7 @@
       "lastModified": "N/A",
       "redirectChain": [],
       "rawSha256": "N/A",
-      "normalizedSha256": "963cdc8766b4283f396763fb2d9755af2178780c78ed3390cf45a11bfd67b26f",
+      "normalizedSha256": "81ff1c0eede7c3e0a200ba91786e96740f624f9517b65867e3208a4982f014dc",
       "gitBlob": "N/A",
       "proofBoundary": "Strict UTF-8 normalized SHA-256; source adoption is not product conformance / Quellenbindung ist keine Produktkonformitaet."
     }
@@ -177,11 +177,11 @@
   "promptState": "Enabled",
   "provenanceMode": "Supersession",
   "supersedes": {
-    "receiptPath": "specs/intake-authoring-receipts/history/pl0-zellfunktionen-v1.20261021-gsdb344-alignment.json",
-    "receiptNormalizedSha256": "2cf9abb39da800db11fbff87b5fffb3888448e71967527f0f7f0c7187437465f",
-    "archiveReceiptPath": "specs/intake-authoring-receipts/history/pl0-zellfunktionen-v1.20261021-gsdb344-alignment.json",
+    "receiptPath": "specs/intake-authoring-receipts/history/pl0-zellfunktionen-v1.20261024-documentation-patch-lineage.json",
+    "receiptNormalizedSha256": "2773e13c91c586a90cddee17cda6a65073456d822bc4b70de0a5caa635967c77",
+    "archiveReceiptPath": "specs/intake-authoring-receipts/history/pl0-zellfunktionen-v1.20261024-documentation-patch-lineage.json",
     "targetNormalizedSha256": "72c67c9c4b20ee9e1e9ad89e76b0bd51284eda4f9772c05fa6c0ca92a162f7b0",
-    "archiveTargetPath": "requirements/intakes/history/20261021-gsdb344-alignment/Lastenheft_PL0-Zellfunktionen_V1.md"
+    "archiveTargetPath": "requirements/intakes/history/20261024-documentation-patch-lineage/Lastenheft_PL0-Zellfunktionen_V1.md"
   },
   "legacyAdoption": {
     "evidenceType": "N/A",
@@ -189,7 +189,7 @@
     "priorGitBlob": "N/A"
   },
   "updateAuthorized": true,
-  "updateAuthorityEvidence": "Thorsten approved PLEASE IMPLEMENT THIS PLAN: targeted GSDB 3.4.4 / Assurance 0.1.5 governance and intake refresh, administrative Feature 006 provenance only, minimal Feature 007 alignment and separate independent Series review. Preserve historical acceptance, target identities, scope, order, states, roots and dependencies. Local documentation only: no implementation, build, test, restore, upgrade, commit, push, PR, merge or bypass. Exclude sheet.mcalc.json.",
+  "updateAuthorityEvidence": "Thorsten explicitly authorized exactly five source-hash lineage corrections on 2026-10-24: PL0, Rename, sandbox-supported hardening, secure-development hardening and TUI acceptance/regression. Preserve target bytes, intake IDs, scope, DAG, order and lifecycle states. Archive predecessors, renew receipts and operation IDs, supersede old review evidence without claiming a current Ready result. No product run, product/risk/release approval, or validator weakening.",
   "series": {
     "seriesId": "5b4523b4-d946-4091-9cbc-11825af94332",
     "manifestPath": "requirements/intakes/series/tinycalc-delivery/manifest.json",

@@ -76,10 +76,13 @@ jobs:
           $sourceBefore = Get-ProofHashSet $source
           $pilotBefore = Get-ProofHashSet $pilot
           $package = Join-Path $pilot '.specify/presets/project-statistics-governance'
-          $receipt = Get-Content (Join-Path $pilot 'docs/maintenance/project-statistics-installation-v010.json') -Raw | ConvertFrom-Json
-          foreach ($file in $receipt.installedPayloadFiles) {
-              if ((Get-FileHash -LiteralPath (Join-Path $package $file.path)).Hash.ToLowerInvariant() -cne $file.sha256) { throw 'Installed payload drift.' }
-          }
+          # DE: Das datierte v0.1.0-Receipt bleibt historisch. Der aktuelle Lock
+          # bindet Version, Registry und jeden Payload-Pfad aller 14 Pakete.
+          # EN: Preserve the historical v0.1.0 receipt; validate the current
+          # version, registry and every payload path across all 14 packages.
+          $parity = Join-Path $pilot 'scripts/tests/test_spec_kit_agent_surface_parity.py'
+          if ($IsWindows) { & python $parity } else { & python3 $parity }
+          if ($LASTEXITCODE -ne 0) { throw 'Current installed payload or source binding drift.' }
           $snapshot = Get-Content (Join-Path $pilot $mutable[2]) -Raw | ConvertFrom-Json
           & git -C $pilot merge-base --is-ancestor $snapshot.measurement.sourceRevision HEAD
           if ($LASTEXITCODE -ne 0) { throw 'Measurement source is not an ancestor.' }

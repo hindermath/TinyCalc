@@ -243,8 +243,8 @@ class SpecKitAgentSurfaceParityTests(unittest.TestCase):
 
     def test_gsdb_rollout_installed_payload_and_release_bindings(self) -> None:
         # Keep observed installation state separate from immutable release provenance.
-        validate_installed_lock(PRESETS, read_json(REPOSITORY / "docs/maintenance/gsdb-344-preset-installed-lock.json"))
-        validate_release_sources(CONFIG, read_json(REPOSITORY / "docs/maintenance/gsdb-344-preset-source-lock.json"))
+        validate_installed_lock(PRESETS, read_json(REPOSITORY / "docs/maintenance/preset-installed-lock.json"))
+        validate_release_sources(CONFIG, read_json(REPOSITORY / "docs/maintenance/preset-source-lock.json"))
 
 
     def test_current_rlse_view_matches_intensive_assessment(self) -> None:
