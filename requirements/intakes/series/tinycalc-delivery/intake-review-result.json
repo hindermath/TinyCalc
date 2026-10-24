@@ -1,0 +1,290 @@
+{
+  "schemaVersion": "1.1",
+  "reviewId": "0cb1a45b-9f8e-40a6-b102-1477e13b1332",
+  "mode": "Series",
+  "status": "Ready",
+  "policy": "tinycalc-delivery-v1",
+  "reviewedAt": "2026-10-24T21:54:07Z",
+  "repository": {
+    "root": ".",
+    "head": "88203420390290d58d69f4da9b735ca4efa0b2db"
+  },
+  "requestEvidence": {
+    "path": "requirements/intakes/series/tinycalc-delivery/intake-review-request.json",
+    "normalizedSha256": "0685bde72e1226fe74f3f9d66e51ad8592f63272522bfc15f9fa716acb22eec3"
+  },
+  "targets": [
+    {
+      "normalizedSha256": "04c4e1ba93d626463829a07f33b5591a6417b6aeaf89e805b637ab1bf5c26a0a",
+      "gitBlob": "e5baf4a877153692acdc9aed7035afe3999a4acc",
+      "role": "Primary",
+      "path": "requirements/intakes/archive/Lastenheft_Constitution_Change.002-constitution-change.md"
+    },
+    {
+      "normalizedSha256": "01db3bd8f2dc375fe1400a91580ce1a906dfc446c12fb8ad011419fe50fee94d",
+      "gitBlob": "d960bf119005a5d3d09860da90be7d5bbfa22d5a",
+      "role": "OrderedMember",
+      "path": "requirements/intakes/archive/Lastenheft_TerminalGui_Migration.003-terminalgui-migration.md"
+    },
+    {
+      "normalizedSha256": "c07016800b9e02e56f123ed6af187d0b5fedd22c1689a1b8909fcc6e8f70c6ac",
+      "gitBlob": "4ad418e77fe5bdd39fd05c087ee24aeb73e164ef",
+      "role": "OrderedMember",
+      "path": "requirements/intakes/archive/Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md"
+    },
+    {
+      "normalizedSha256": "7fec8e9dea123fdeb0753119d06c18a8389a24645a541d3b60413166bbcbd6e2",
+      "gitBlob": "f8f2b83c12c20f67fedc9a22a22675b7d86349c1",
+      "role": "OrderedMember",
+      "path": "requirements/intakes/active/Lastenheft_A11Y_TUI.md"
+    },
+    {
+      "normalizedSha256": "ed761c150526f18c0b1d98d8febac1def260b1890aca6d0a341279dec19985b9",
+      "gitBlob": "bb7999fed59d81aa9b449729321fb03b94868724",
+      "role": "OrderedMember",
+      "path": "requirements/intakes/active/Lastenheft_Rename_MicroCalc_TinyCalc.md"
+    },
+    {
+      "normalizedSha256": "460abc8142179cc40e1d0cfe07928260456088205b3200e7ca6c6e10818e46da",
+      "gitBlob": "206acb40849eceac8d79e10f71464a5e533880c4",
+      "role": "OrderedMember",
+      "path": "requirements/intakes/active/Lastenheft_Didactic-Inline-Code-Comment-Hardening.md"
+    },
+    {
+      "normalizedSha256": "8b52ca4953d74cc5e647b82ecbeea2adfcfbff3ebbc00f58196c8ee36143d402",
+      "gitBlob": "247b031b26538df4b626b9ecacc98fe9be5fb178",
+      "role": "OrderedMember",
+      "path": "requirements/intakes/active/Lastenheft_Secure-Development-Hardening.md"
+    },
+    {
+      "normalizedSha256": "72c67c9c4b20ee9e1e9ad89e76b0bd51284eda4f9772c05fa6c0ca92a162f7b0",
+      "gitBlob": "bc0b6621be4dbe27ba882fbc93f69d6eb084ef6b",
+      "role": "OrderedMember",
+      "path": "requirements/intakes/active/Lastenheft_PL0-Zellfunktionen_V1.md"
+    },
+    {
+      "normalizedSha256": "f24a7ff1c6d1bcde8bca45a57133de5b9f6386c4586a079d1ba743f99479863c",
+      "gitBlob": "f7f47ff2950c14423815e87f658208673718c232",
+      "role": "OrderedMember",
+      "path": "requirements/intakes/active/Lastenheft_Legacy-Kompatibilitaet_V1.md"
+    },
+    {
+      "normalizedSha256": "7890c8e1358e002044b352adc94fcbe2a104f38e5fc1504f6919830de03d2fb4",
+      "gitBlob": "0935e0d42877e19cc9b446ca71d34a512d666aff",
+      "role": "OrderedMember",
+      "path": "requirements/intakes/active/Lastenheft_Formelkopie-und-Tabellenoperationen_V1.md"
+    },
+    {
+      "normalizedSha256": "b85f66e2d0fc1ce7d47ad4328e61a007821c1f19f9d1b291e9d4533271e079fa",
+      "gitBlob": "ef90813e64c2e62744999c2925c6d23ed91daf90",
+      "role": "OrderedMember",
+      "path": "requirements/intakes/active/Lastenheft_Sandbox-gestuetzte-Secure-Development-Haertung.md"
+    },
+    {
+      "normalizedSha256": "96a5ef9c414d55c69ad117509d41f056f10d005824890bd5a2867eaf8ab948da",
+      "gitBlob": "0cd87941bb49e73b11aa15ec7b529bc36788b245",
+      "role": "OrderedMember",
+      "path": "requirements/intakes/archive/Lastenheft_RL-SE-Checklist-Selbstpruefung.004-rl-se-self-assessment.md"
+    },
+    {
+      "normalizedSha256": "f4dcb3fac6cb755faed296847ffd40170f0d008fa3640e5e5fa5bc38e4af5375",
+      "gitBlob": "1df4cd2af93098ab1bb0e95de9e10d2811273210",
+      "role": "OrderedMember",
+      "path": "requirements/intakes/archive/Lastenheft_GSDB-Spec-Kit-Intensivpruefung.005-gsdb-intensive-review.md"
+    }
+  ],
+  "findings": [],
+  "questions": [],
+  "acceptedRisks": [],
+  "operatorExceptions": [],
+  "coverage": {
+    "individual": [
+      "requirements/intakes/archive/Lastenheft_Constitution_Change.002-constitution-change.md",
+      "requirements/intakes/archive/Lastenheft_TerminalGui_Migration.003-terminalgui-migration.md",
+      "requirements/intakes/archive/Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md",
+      "requirements/intakes/active/Lastenheft_A11Y_TUI.md",
+      "requirements/intakes/active/Lastenheft_Rename_MicroCalc_TinyCalc.md",
+      "requirements/intakes/active/Lastenheft_Didactic-Inline-Code-Comment-Hardening.md",
+      "requirements/intakes/active/Lastenheft_Secure-Development-Hardening.md",
+      "requirements/intakes/active/Lastenheft_PL0-Zellfunktionen_V1.md",
+      "requirements/intakes/active/Lastenheft_Legacy-Kompatibilitaet_V1.md",
+      "requirements/intakes/active/Lastenheft_Formelkopie-und-Tabellenoperationen_V1.md",
+      "requirements/intakes/active/Lastenheft_Sandbox-gestuetzte-Secure-Development-Haertung.md",
+      "requirements/intakes/archive/Lastenheft_RL-SE-Checklist-Selbstpruefung.004-rl-se-self-assessment.md",
+      "requirements/intakes/archive/Lastenheft_GSDB-Spec-Kit-Intensivpruefung.005-gsdb-intensive-review.md"
+    ],
+    "series": [
+      "13 targets; 4 roots; 9 HardCompletionGate edges; unique ordered DAG and unchanged handoffs",
+      "Schema 2.0 inventory, source receipts, five provenance lineages and archive identity checked",
+      "Reuse prior independent semantic review only for all 13 exact normalized target hashes; current provenance review performed by the current agent"
+    ],
+    "workers": []
+  },
+  "summary": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+  },
+  "supersedes": "c0d161e3-477b-4381-9e11-38c19e6e6797",
+  "evidenceBoundary": {
+    "previousReview": "requirements/intakes/series-archive/tinycalc-delivery/20261024-documentation-patch-lineage/intake-review-result.json",
+    "provenanceOperation": "specs/intake-authoring-operations/363e883c-a20c-4a98-b4da-62a1a3b5a0f2/lineage.json",
+    "reusedSemanticTargets": 13,
+    "newIndependentReviewer": false,
+    "implementationApproval": false,
+    "nativeAccessibilityAcceptance": false,
+    "sourceBindings": [
+      {
+        "normalized": "04c4e1ba93d626463829a07f33b5591a6417b6aeaf89e805b637ab1bf5c26a0a",
+        "raw": "04C4E1BA93D626463829A07F33B5591A6417B6AEAF89E805B637AB1BF5C26A0A",
+        "path": "requirements/intakes/archive/Lastenheft_Constitution_Change.002-constitution-change.md"
+      },
+      {
+        "normalized": "01db3bd8f2dc375fe1400a91580ce1a906dfc446c12fb8ad011419fe50fee94d",
+        "raw": "01DB3BD8F2DC375FE1400A91580CE1A906DFC446C12FB8AD011419FE50FEE94D",
+        "path": "requirements/intakes/archive/Lastenheft_TerminalGui_Migration.003-terminalgui-migration.md"
+      },
+      {
+        "normalized": "c07016800b9e02e56f123ed6af187d0b5fedd22c1689a1b8909fcc6e8f70c6ac",
+        "raw": "C07016800B9E02E56F123ED6AF187D0B5FEDD22C1689A1B8909FCC6E8F70C6AC",
+        "path": "requirements/intakes/archive/Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md"
+      },
+      {
+        "normalized": "7fec8e9dea123fdeb0753119d06c18a8389a24645a541d3b60413166bbcbd6e2",
+        "raw": "7FEC8E9DEA123FDEB0753119D06C18A8389A24645A541D3B60413166BBCBD6E2",
+        "path": "requirements/intakes/active/Lastenheft_A11Y_TUI.md"
+      },
+      {
+        "normalized": "ed761c150526f18c0b1d98d8febac1def260b1890aca6d0a341279dec19985b9",
+        "raw": "ED761C150526F18C0B1D98D8FEBAC1DEF260B1890ACA6D0A341279DEC19985B9",
+        "path": "requirements/intakes/active/Lastenheft_Rename_MicroCalc_TinyCalc.md"
+      },
+      {
+        "normalized": "460abc8142179cc40e1d0cfe07928260456088205b3200e7ca6c6e10818e46da",
+        "raw": "460ABC8142179CC40E1D0CFE07928260456088205B3200E7CA6C6E10818E46DA",
+        "path": "requirements/intakes/active/Lastenheft_Didactic-Inline-Code-Comment-Hardening.md"
+      },
+      {
+        "normalized": "8b52ca4953d74cc5e647b82ecbeea2adfcfbff3ebbc00f58196c8ee36143d402",
+        "raw": "8B52CA4953D74CC5E647B82ECBEEA2ADFCFBFF3EBBC00F58196C8EE36143D402",
+        "path": "requirements/intakes/active/Lastenheft_Secure-Development-Hardening.md"
+      },
+      {
+        "normalized": "72c67c9c4b20ee9e1e9ad89e76b0bd51284eda4f9772c05fa6c0ca92a162f7b0",
+        "raw": "72C67C9C4B20EE9E1E9AD89E76B0BD51284EDA4F9772C05FA6C0CA92A162F7B0",
+        "path": "requirements/intakes/active/Lastenheft_PL0-Zellfunktionen_V1.md"
+      },
+      {
+        "normalized": "f24a7ff1c6d1bcde8bca45a57133de5b9f6386c4586a079d1ba743f99479863c",
+        "raw": "F24A7FF1C6D1BCDE8BCA45A57133DE5B9F6386C4586A079D1BA743F99479863C",
+        "path": "requirements/intakes/active/Lastenheft_Legacy-Kompatibilitaet_V1.md"
+      },
+      {
+        "normalized": "7890c8e1358e002044b352adc94fcbe2a104f38e5fc1504f6919830de03d2fb4",
+        "raw": "7890C8E1358E002044B352ADC94FCBE2A104F38E5FC1504F6919830DE03D2FB4",
+        "path": "requirements/intakes/active/Lastenheft_Formelkopie-und-Tabellenoperationen_V1.md"
+      },
+      {
+        "normalized": "b85f66e2d0fc1ce7d47ad4328e61a007821c1f19f9d1b291e9d4533271e079fa",
+        "raw": "B85F66E2D0FC1CE7D47AD4328E61A007821C1F19F9D1B291E9D4533271E079FA",
+        "path": "requirements/intakes/active/Lastenheft_Sandbox-gestuetzte-Secure-Development-Haertung.md"
+      },
+      {
+        "normalized": "96a5ef9c414d55c69ad117509d41f056f10d005824890bd5a2867eaf8ab948da",
+        "raw": "96A5EF9C414D55C69AD117509D41F056F10D005824890BD5A2867EAF8AB948DA",
+        "path": "requirements/intakes/archive/Lastenheft_RL-SE-Checklist-Selbstpruefung.004-rl-se-self-assessment.md"
+      },
+      {
+        "normalized": "f4dcb3fac6cb755faed296847ffd40170f0d008fa3640e5e5fa5bc38e4af5375",
+        "raw": "F4DCB3FAC6CB755FAED296847FFD40170F0D008FA3640E5E5FA5BC38E4AF5375",
+        "path": "requirements/intakes/archive/Lastenheft_GSDB-Spec-Kit-Intensivpruefung.005-gsdb-intensive-review.md"
+      },
+      {
+        "normalized": "3b435e4494c4ea5d33ff4a3a6eae7e697a0e6e5aa15748760bb9f908a66dd5f9",
+        "raw": "3B435E4494C4EA5D33FF4A3A6EAE7E697A0E6E5AA15748760BB9F908A66DD5F9",
+        "path": "specs/intake-authoring-receipts/a11y-tui.json"
+      },
+      {
+        "normalized": "9eff5c690872b8e6cb3152fefba7400dc55aceeb7048edc725d75cc52f4edcc6",
+        "raw": "9EFF5C690872B8E6CB3152FEFBA7400DC55ACEEB7048EDC725D75CC52F4EDCC6",
+        "path": "specs/intake-authoring-receipts/constitution-change.json"
+      },
+      {
+        "normalized": "a6a74db4a009b4833e11b3d3454a6a9095d6cbae927a3b7fe6285b372bbb7e5a",
+        "raw": "A6A74DB4A009B4833E11B3D3454A6A9095D6CBAE927A3B7FE6285B372BBB7E5A",
+        "path": "specs/intake-authoring-receipts/didactic-inline-code-comment-hardening.json"
+      },
+      {
+        "normalized": "9171d97bd88c430b0aa2a7635116a573c458c9eea006967d9b73ac8bc294de17",
+        "raw": "9171D97BD88C430B0AA2A7635116A573C458C9EEA006967D9B73AC8BC294DE17",
+        "path": "specs/intake-authoring-receipts/formelkopie-und-tabellenoperationen-v1.json"
+      },
+      {
+        "normalized": "486ad79b054a77864eb554a0fce619a41c9ecfb0054be0b237abfba03960a423",
+        "raw": "486AD79B054A77864EB554A0FCE619A41C9ECFB0054BE0B237ABFBA03960A423",
+        "path": "specs/intake-authoring-receipts/gsdb-spec-kit-intensivpruefung.json"
+      },
+      {
+        "normalized": "4d7bdc786aa59cfe0ce3cc49b36f735f91a154a8a44ca2200093ddeacab3867a",
+        "raw": "4D7BDC786AA59CFE0CE3CC49B36F735F91A154A8A44CA2200093DDEACAB3867A",
+        "path": "specs/intake-authoring-receipts/legacy-kompatibilitaet-v1.json"
+      },
+      {
+        "normalized": "22e3f626ced0637e1568c831ea0e7c1a58ba21f2d85c1e24cc38ad623ea02506",
+        "raw": "22E3F626CED0637E1568C831EA0E7C1A58BA21F2D85C1E24CC38AD623EA02506",
+        "path": "specs/intake-authoring-receipts/pl0-zellfunktionen-v1.json"
+      },
+      {
+        "normalized": "78d5a612d3fc9ccf008e5eba62a39166993eb4d8f028f073d8213e3c75255eaf",
+        "raw": "78D5A612D3FC9CCF008E5EBA62A39166993EB4D8F028F073D8213E3C75255EAF",
+        "path": "specs/intake-authoring-receipts/rename-microcalc-tinycalc.json"
+      },
+      {
+        "normalized": "1d1d5c342157a9e86825ceca9a2691d2a29b95d791f956fcbef15d25f51d7daa",
+        "raw": "1D1D5C342157A9E86825CECA9A2691D2A29B95D791F956FCBEF15D25F51D7DAA",
+        "path": "specs/intake-authoring-receipts/rl-se-checklist-selbstpruefung.json"
+      },
+      {
+        "normalized": "0c0581ca22f6fc4432c6cdc3d6d3ba7a92c4d4c2eef1bfd68d599990f0628e90",
+        "raw": "0C0581CA22F6FC4432C6CDC3D6D3BA7A92C4D4C2EEF1BFD68D599990F0628E90",
+        "path": "specs/intake-authoring-receipts/sandbox-gestuetzte-secure-development-haertung.json"
+      },
+      {
+        "normalized": "ccb70cabe2a7ffdb73e18fc62941dd274682b9c9a98226a7c201b5306d9636d3",
+        "raw": "CCB70CABE2A7FFDB73E18FC62941DD274682B9C9A98226A7C201B5306D9636D3",
+        "path": "specs/intake-authoring-receipts/secure-development-hardening.json"
+      },
+      {
+        "normalized": "d948db6fd9164269a260de52897daa08f66062c2f24fa7b290b448ac9bb0691a",
+        "raw": "D948DB6FD9164269A260DE52897DAA08F66062C2F24FA7B290B448AC9BB0691A",
+        "path": "specs/intake-authoring-receipts/terminalgui-migration.json"
+      },
+      {
+        "normalized": "0fe2c2707d6f7a7ceadaa97a1236f44586387ca2a682f36a930f84a276d247d8",
+        "raw": "0FE2C2707D6F7A7CEADAA97A1236F44586387CA2A682F36A930F84A276D247D8",
+        "path": "specs/intake-authoring-receipts/tui-funktionsabnahme-und-regressionsvertrag.json"
+      },
+      {
+        "normalized": "b8a6f7d21305766d8917dcfa567e01cbbe5195503d9b08f171de921a6a2305db",
+        "raw": "B8A6F7D21305766D8917DCFA567E01CBBE5195503D9B08F171DE921A6A2305DB",
+        "path": "requirements/intakes/series/tinycalc-delivery/manifest.json"
+      },
+      {
+        "normalized": "2c4eeb74a8e7831a939837ace78c61344f98147e06d40462580e44a3495f1473",
+        "raw": "2C4EEB74A8E7831A939837ACE78C61344F98147E06D40462580E44A3495F1473",
+        "path": "requirements/intakes/series/tinycalc-delivery/receipt.json"
+      },
+      {
+        "normalized": "0685bde72e1226fe74f3f9d66e51ad8592f63272522bfc15f9fa716acb22eec3",
+        "raw": "0685BDE72E1226FE74F3F9D66E51AD8592F63272522BFC15F9FA716ACB22EEC3",
+        "path": "requirements/intakes/series/tinycalc-delivery/intake-review-request.json"
+      },
+      {
+        "normalized": "2f88475fecdeb7e3ca03cbef5456a620f3c7c2627ae7541ca75960c7188ff4dd",
+        "raw": "2F88475FECDEB7E3CA03CBEF5456A620F3C7C2627AE7541CA75960C7188FF4DD",
+        "path": "requirements/intake-governance-config.json"
+      }
+    ]
+  }
+}
