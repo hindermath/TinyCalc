@@ -1,10 +1,18 @@
 # Nutzungsleitfaden: intake-authoring-governance
 
-<!-- current-package: 0.3.9 -->
+<!-- current-package: 0.3.10 -->
+
+Paketkennung: **v0.3.10**. [Vorbereitung und Veröffentlichungsgrenze](release-0.3.10-validation.md). Die Release-Seite und der externe Archivnachweis belegen die Veröffentlichung, nicht dieser Vorbereitungsstand. Frühere Versionsnachweise unten bleiben historisch.
+
+<span lang="en">Package identity: v0.3.10. The release page and external archive evidence prove publication, not this preparation snapshot. Earlier version records below remain historical.</span>
+
+[Release-Abschluss und Verbesserungsprofil / Publication closeout and improvement profile](release-0.3.9-validation.md).
+
+Der unten verlinkte Basispaket-Nachweis bleibt historisch; dieses Paket nimmt die Quellenkorrekturen als neue Version auf.
 
 [English](user-guide.EN.md) · [Preset-Referenz](../README.md)
 
-Quellkandidat **v0.3.9**. Den tatsächlich veröffentlichten Stand auf der [Release-Seite](https://github.com/hindermath/spec-kit-preset-intake-authoring-governance/releases) prüfen. Dieser Leitfaden erteilt keine Merge-, Release- oder Projektfreigabe.
+Historisches Basispaket **v0.3.9**. Den tatsächlich veröffentlichten Stand auf der [Release-Seite](https://github.com/hindermath/spec-kit-preset-intake-authoring-governance/releases) prüfen. Dieser Leitfaden erteilt keine Merge-, Release- oder Projektfreigabe.
 
 Inhalt: [Start](#start) · [Beispiel](#example) · [Begriffe](#terms) · [Routing](#routing) · [Fehlerhilfe](#help) · [Referenzen](#references)
 
@@ -69,7 +77,7 @@ Rollen beschreiben Aufgaben, keinen Modellnamen und keine Qualitätsgarantie. Ma
 
 Eine modellfreie Skriptprüfung und eine Agentenbewertung sind verschiedene Tätigkeiten. Modellaufrufe, auch Zugangs-Preflights, können trotz read-only-Verhalten Kontingent verbrauchen. Diese Dokumentation beauftragt keine Probe und keinen Anbieterwechsel. Sie enthält keine neue dynamische Routing-Implementierung.
 
-Dokumentations-Zielkombination: Authoring **0.3.9**, Review **0.2.6**, Sequencing **0.2.10**. Diese Kandidatenkombination ist kein behaupteter Feldtest. Verifizierte Tests werden im PR getrennt aufgeführt.
+Dokumentations-Zielkombination: Authoring **0.3.10**, Review **0.2.7**, Sequencing **0.2.11**. Diese Kandidatenkombination ist kein behaupteter Feldtest. Verifizierte Tests werden im PR getrennt aufgeführt.
 
 <a id="help"></a>
 

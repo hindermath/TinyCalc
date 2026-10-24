@@ -1,5 +1,46 @@
 # Begrenzter Rollout: 14 stabile Governance-Pakete
 
+## Aktueller Dokumentationspatch-Nachlauf / Current documentation patch follow-up
+
+Verbindliche Quelle: Home Baseline PR #345, Merge
+`ded29751b58eece7711e80cf997a89b559812c93`. Dieser Nachlauf ersetzt die
+Paketbindungen des früheren PR-Heads `d9d2ed10`; die folgenden historischen
+Ergebnisse bleiben als Vorgänger erhalten und sind keine aktuellen Passes.
+Aktueller Bericht: `docs/maintenance/documentation-patch-pilot-2026-10-24.md`.
+Aktuelle Checks: `docs/maintenance/documentation-patch-pilot-2026-10-24-checks.json`.
+
+The current follow-up uses Home Baseline PR #345 and preserves the previous
+head's historical evidence. Use the new report and checks record for current
+technical results, not the historical sections below.
+
+Alle 14 Dokumentationspatches: 660 Stockdateien gegen verifizierte Archive,
+vollständige native SDK-Agentenkomposition ohne SDK-Patch und ohne Home-only-
+Overlay. 678 vollständige lokale Tests ohne Skip, 364 native macOS-Pfade und
+`SMOKE_OK`; Restore und Release-Build ohne Fehler oder Warnungen. Die aktuelle
+GSDB-Matrix erhält nur technische Paket-/Hashbindungen; 157 Kontrollbewertungen,
+Findings und menschliche Entscheidungen bleiben unverändert. Neuer eigener
+Assurance-Kontext; alte Kontexte bleiben historisch erhalten.
+
+All fourteen documentation patches: 660 verified stock files, complete native
+SDK composition without SDK patches or Home-only overlays. One complete local
+run passes 678 tests without skips, binds 364 macOS paths and returns
+`SMOKE_OK`; restore and Release build succeed without errors or warnings.
+Preserve GSDB conclusions, findings, human decisions and older contexts.
+
+Explizite aktuelle Lieferfreigabe: MergeAndSync mit Admin-Bypass ohne erneute
+Einzel-Head-Sichtung dieses begrenzten Diffs. Grüne technische Checks,
+geklärte Reviewbefunde und gelieferte Level-0/Home-Runtime bleiben Voraussetzung.
+Keine Produkt-, Rechts-, Risiko- oder allgemeine Freigabe und kein Modelllauf.
+
+Current explicit delivery authority permits bounded MergeAndSync with admin
+bypass without another individual-head review. Green technical checks, resolved
+findings and delivered Level 0/Home Runtime remain mandatory. No product,
+legal, risk or general approval and no model call are inferred.
+
+---
+
+## Historischer Vorgänger / Historical predecessor
+
 ## Auftrag / Scope
 
 TinyCalc folgt dem gelieferten Level-0-Stand aus Home Baseline PR #341

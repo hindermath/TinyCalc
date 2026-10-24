@@ -1,12 +1,22 @@
 # Agent Parity Governance Preset
 
-<!-- current-package: 0.4.4 -->
+<!-- current-package: 0.4.5 -->
+
+Paketkennung: **v0.4.5**. [Vorbereitung und Veröffentlichungsgrenze](docs/release-0.4.5-validation.md). Die Release-Seite und der externe Archivnachweis belegen die Veröffentlichung, nicht dieser Vorbereitungsstand. Frühere Versionsnachweise unten bleiben historisch.
+
+<span lang="en">Package identity: v0.4.5. The release page and external archive evidence prove publication, not this preparation snapshot. Earlier version records below remain historical.</span>
+
+[Release-Abschluss und Verbesserungsprofil / Publication closeout and improvement profile](docs/release-0.4.4-validation.md).
+
+Der unten verlinkte Basispaket-Nachweis bleibt historisch; dieses Paket nimmt die Quellenkorrekturen als neue Version auf.
+
+<span lang="en">The linked base-package evidence remains historical; this package includes the source corrections as a new version.</span>
 
 **Leserpfad / Reader path:** [Deutsch: Einstieg, Begriffe und Fehlerhilfe](docs/user-guide.md) · [English: start, terms and troubleshooting](docs/user-guide.EN.md).
 
-Quellkandidat **v0.4.4**. Der [Release-Stand](https://github.com/hindermath/spec-kit-preset-agent-parity-governance/releases) wird getrennt geprüft; ein Commit auf main ist noch keine Veröffentlichung oder Installation.
+Historisches Basispaket **v0.4.4**. Der [Release-Stand](https://github.com/hindermath/spec-kit-preset-agent-parity-governance/releases) wird getrennt geprüft; ein Commit auf main ist noch keine Veröffentlichung oder Installation.
 
-*Source candidate v0.4.4. The release page records actual publication separately; a main-branch commit is not publication or installation.*
+*Historical base package v0.4.4. The release page records actual publication separately; a main-branch commit is not publication or installation.*
 
 
 Patch **0.4.4** liefert die verbesserte zweisprachige Einstiegs- und
@@ -16,8 +26,8 @@ Kompositionsdokumentation. Verhalten und Berechtigungsgrenzen bleiben erhalten.
 *Patch 0.4.4 packages the improved bilingual getting-started and composition
 guide. Behavior and authority boundaries remain unchanged.*
 
-Version: `0.4.4`
-Status: Quellkandidat zur Sichtung / source candidate for review
+Version: `0.4.5`
+Status: Veröffentlichung über die Release-Seite prüfen / verify publication on the release page
 Priority: `60`
 Requires: Spec-Kit `>=0.8.0` (uses the `wrap` and `append` composition
 strategies introduced in `0.8.x`).
@@ -173,7 +183,7 @@ shared and which are intentionally agent-specific.*
 ### Veröffentlichter Tag / Published Tag
 
 ```bash
-specify preset add --from https://github.com/hindermath/spec-kit-preset-agent-parity-governance/archive/refs/tags/v0.4.4.zip --priority 60
+specify preset add --from https://github.com/hindermath/spec-kit-preset-agent-parity-governance/archive/refs/tags/v0.4.5.zip --priority 60
 specify preset info agent-parity-governance
 ```
 

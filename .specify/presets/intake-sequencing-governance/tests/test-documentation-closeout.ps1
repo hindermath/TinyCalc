@@ -141,7 +141,7 @@ if ($id -in @('autonomous-run-governance','parallel-autonomous-run-governance'))
 }
 if ($id -like 'intake-*-governance') {
     foreach ($text in @($readme)+$guides) {
-        foreach ($pairVersion in @('0.3.9','0.2.6','0.2.10')) { Assert-DocRequirement ($text.Contains($pairVersion)) 'coordinated intake targets' }
+        foreach ($pairVersion in @('0.3.10','0.2.7','0.2.11')) { Assert-DocRequirement ($text.Contains($pairVersion)) 'coordinated intake targets' }
     }
 }
 if ($CohortRoot) {
@@ -158,4 +158,6 @@ if ($CohortRoot) {
     Assert-DocRequirement ($count -eq 49) '49 declarations; no skipped missing catalogs'
 }
 "PASS: $script:checks documentation assertions; own declarations=$ownCount; no models/network/writes."
+# DE/EN: Publication/history semantics remain separate from runtime contracts.
+& (Join-Path $PSScriptRoot 'test-release-status.ps1')
 exit 0

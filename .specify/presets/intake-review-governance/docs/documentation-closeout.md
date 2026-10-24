@@ -1,6 +1,14 @@
 # Dokumentationsabschluss / Documentation closeout: v0.2.6
 
-<!-- current-package: 0.2.6 -->
+<!-- current-package: 0.2.7 -->
+
+## Veröffentlichungsabschluss / Publication closeout
+
+DE: Paket 0.2.6 ist regulär veröffentlicht. [Release-Nachweis und Verbesserungsprofil](release-0.2.6-validation.md) trennen damalige Vorbereitung, tatsächliche Veröffentlichung und den aktuellen Dokumentationsnachlauf. Der folgende ursprüngliche Auftrag beschreibt den historischen Prüfzeitpunkt und erteilt keine aktuelle Lieferfreigabe.
+
+EN: Package 0.2.6 is a regular published release. The linked evidence separates original preparation, actual publication and this documentation follow-up. The original task below describes the historical assessment and grants no current delivery authority.
+
+## Historischer Dokumentationsauftrag / Historical documentation task
 
 Documentation Impact: **UpdateRequired**. Owner: Thorsten Hindermann.
 

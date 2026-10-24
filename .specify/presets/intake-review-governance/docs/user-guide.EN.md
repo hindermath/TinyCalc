@@ -1,10 +1,16 @@
 # User guide: intake-review-governance
 
-<!-- current-package: 0.2.6 -->
+<!-- current-package: 0.2.7 -->
+
+Package identity: **v0.2.7**. [Preparation and publication boundary](release-0.2.7-validation.md). The release page, not this preparation snapshot, proves publication and the external archive hash. Earlier version records below remain historical.
+
+[Release-Abschluss und Verbesserungsprofil / Publication closeout and improvement profile](release-0.2.6-validation.md).
+
+The linked base-package evidence remains historical; this package includes the source corrections as a new version.
 
 [Deutsch](user-guide.md) · [Preset reference](../README.md)
 
-Source candidate **v0.2.6**. Verify the actually published version on the [release page](https://github.com/hindermath/spec-kit-preset-intake-review-governance/releases). This guide grants no merge, release or project authority.
+Historical base package **v0.2.6**. Verify the actually published version on the [release page](https://github.com/hindermath/spec-kit-preset-intake-review-governance/releases). This guide grants no merge, release or project authority.
 
 Contents: [Start](#start) · [Example](#example) · [Terms](#terms) · [Routing](#routing) · [Troubleshooting](#help) · [References](#references)
 
@@ -67,7 +73,7 @@ Roles describe tasks, not a model name or quality guarantee. Read the actual mod
 
 A model-free script check and an agent assessment are different activities. Model calls, including model-access preflights, can consume quota even when they are read-only. No probe or provider switch is authorized by this documentation. No new dynamic-routing implementation is included.
 
-Documentation target combination: Authoring **0.3.9**, Review **0.2.6**, Sequencing **0.2.10**. This candidate combination is not a claimed field test. Verified tests are listed separately in the PR.
+Documentation target combination: Authoring **0.3.10**, Review **0.2.7**, Sequencing **0.2.11**. This candidate combination is not a claimed field test. Verified tests are listed separately in the PR.
 
 <a id="help"></a>
 

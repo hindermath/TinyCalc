@@ -1,12 +1,22 @@
 # Model Routing Governance
 
-<!-- current-package: 0.1.6 -->
+<!-- current-package: 0.1.7 -->
+
+Paketkennung: **v0.1.7**. [Vorbereitung und Veröffentlichungsgrenze](docs/release-0.1.7-validation.md). Die Release-Seite und der externe Archivnachweis belegen die Veröffentlichung, nicht dieser Vorbereitungsstand. Frühere Versionsnachweise unten bleiben historisch.
+
+<span lang="en">Package identity: v0.1.7. The release page and external archive evidence prove publication, not this preparation snapshot. Earlier version records below remain historical.</span>
+
+[Release-Abschluss und Verbesserungsprofil / Publication closeout and improvement profile](docs/release-0.1.6-validation.md).
+
+Der unten verlinkte Basispaket-Nachweis bleibt historisch; dieses Paket nimmt die Quellenkorrekturen als neue Version auf.
+
+<span lang="en">The linked base-package evidence remains historical; this package includes the source corrections as a new version.</span>
 
 **Leserpfad / Reader path:** [Deutsch: Einstieg, Begriffe und Fehlerhilfe](docs/user-guide.md) · [English: start, terms and troubleshooting](docs/user-guide.EN.md).
 
-Quellkandidat **v0.1.6**. Der [Release-Stand](https://github.com/hindermath/spec-kit-preset-model-routing-governance/releases) wird getrennt geprüft; ein Commit auf main ist noch keine Veröffentlichung oder Installation.
+Historisches Basispaket **v0.1.6**. Der [Release-Stand](https://github.com/hindermath/spec-kit-preset-model-routing-governance/releases) wird getrennt geprüft; ein Commit auf main ist noch keine Veröffentlichung oder Installation.
 
-*Source candidate v0.1.6. The release page records actual publication separately; a main-branch commit is not publication or installation.*
+*Historical base package v0.1.6. The release page records actual publication separately; a main-branch commit is not publication or installation.*
 
 
 Patch **0.1.6** liefert die verbesserte zweisprachige Einstiegs- und
@@ -182,7 +192,7 @@ Codex binding only after explicit authorization.
 ## Installation
 
 ```bash
-specify preset add --from https://github.com/hindermath/spec-kit-preset-model-routing-governance/archive/refs/tags/v0.1.6.zip --priority 61
+specify preset add --from https://github.com/hindermath/spec-kit-preset-model-routing-governance/archive/refs/tags/v0.1.7.zip --priority 61
 ```
 
 License: MIT.

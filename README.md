@@ -1,6 +1,6 @@
 # MicroCalc .NET 10 (Terminal.Gui)
 
-[Aktueller stabiler Preset-Rollout / Current stable preset rollout](docs/maintenance/stable-preset-rollout-2026-10-24.md).
+[Aktueller Dokumentationspatch-Pilot / Current documentation patch pilot](docs/maintenance/documentation-patch-pilot-2026-10-24.md).
 
 [GSDB 3.4.4: Pilotrollout / pilot rollout](docs/maintenance/gsdb-344-pilot-2026-10-20.md).
 
@@ -311,14 +311,14 @@ begründete, dokumentierte Projektausnahme zulässig.
 
 Standard-Preset-Set:
 
-- `security-governance` v0.7.3, Priority 10
-- `architecture-governance` v0.6.4, Priority 20
-- `isaqb-architecture-governance` v0.2.4, Priority 30
-- `a11y-governance` v0.4.5, Priority 40
-- `cross-platform-governance` v0.2.4, Priority 50
-- `agent-parity-governance` v0.4.4, Priority 60
-- `autonomous-run-governance` v0.4.6, Priority 70
-- `parallel-autonomous-run-governance` v0.2.8, Priority 80
+- `security-governance` v0.7.4, Priority 10
+- `architecture-governance` v0.6.5, Priority 20
+- `isaqb-architecture-governance` v0.2.5, Priority 30
+- `a11y-governance` v0.4.6, Priority 40
+- `cross-platform-governance` v0.2.5, Priority 50
+- `agent-parity-governance` v0.4.5, Priority 60
+- `autonomous-run-governance` v0.4.7, Priority 70
+- `parallel-autonomous-run-governance` v0.2.9, Priority 80
 
 Die Katalog- und Einreichungshinweise der früheren Pilotberichte sind
 historische Evidence. Die hier installierten Versionen sind nicht automatisch

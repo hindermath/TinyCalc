@@ -1,6 +1,6 @@
 {
   "id": "intake-sequencing-governance",
-  "version": "0.2.10",
+  "version": "0.2.11",
   "priority": 66,
   "readers": [
     "docs/user-guide.md",
@@ -8,5 +8,6 @@
     "docs/documentation-closeout.md"
   ],
   "sourceBaseCommit": "0165082b3146ca2bd6834303129e802e83daa78d",
-  "preserveHistoricalEvidence": true
+  "preserveHistoricalEvidence": true,
+  "publicationEvidenceVersion": "0.2.10"
 }

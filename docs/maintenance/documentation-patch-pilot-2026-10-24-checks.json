@@ -1,0 +1,339 @@
+{
+  "schemaVersion": 1,
+  "kind": "TinyCalc documentation-patch pilot technical validation",
+  "sourceCommit": "ded29751b58eece7711e80cf997a89b559812c93",
+  "predecessorPrHead": "d9d2ed106e703a5a555bd42255c67055d936f3ea",
+  "platform": "local macOS",
+  "noModelCall": true,
+  "noProductSpecKitRun": true,
+  "noHomeOnlyOverlay": true,
+  "gsdbControlConclusionsUnchanged": true,
+  "checks": [
+    {
+      "name": "agent-surfaces",
+      "executable": "python3",
+      "arguments": [
+        "scripts/tests/test_spec_kit_agent_surface_parity.py"
+      ],
+      "exitCode": 0,
+      "startedAt": "2026-10-24T15:41:37.202364Z",
+      "finishedAt": "2026-10-24T15:41:38.513028Z"
+    },
+    {
+      "name": "matrix-bash",
+      "executable": "bash",
+      "arguments": [
+        "scripts/install-spec-kit-governance-presets.sh",
+        "--repo",
+        ".",
+        "--preset-config",
+        "scripts/config/spec-kit-project-statistics-governance-presets.json",
+        "--check-only"
+      ],
+      "exitCode": 0,
+      "startedAt": "2026-10-24T15:41:38.516893Z",
+      "finishedAt": "2026-10-24T15:41:39.955057Z"
+    },
+    {
+      "name": "matrix-powershell",
+      "executable": "pwsh",
+      "arguments": [
+        "-NoProfile",
+        "-File",
+        "scripts/install-spec-kit-governance-presets.ps1",
+        "-Repo",
+        ".",
+        "-PresetConfig",
+        "scripts/config/spec-kit-project-statistics-governance-presets.json",
+        "-CheckOnly"
+      ],
+      "exitCode": 0,
+      "startedAt": "2026-10-24T15:41:39.955497Z",
+      "finishedAt": "2026-10-24T15:41:40.48996Z"
+    },
+    {
+      "name": "gsdb-validate-sources",
+      "executable": "bash",
+      "arguments": [
+        "scripts/validate-gsdb-intensive-review.sh",
+        "--repository-root",
+        ".",
+        "--action",
+        "validate-sources"
+      ],
+      "exitCode": 0,
+      "startedAt": "2026-10-24T15:41:40.490398Z",
+      "finishedAt": "2026-10-24T15:41:41.886655Z"
+    },
+    {
+      "name": "gsdb-validate-compendium",
+      "executable": "bash",
+      "arguments": [
+        "scripts/validate-gsdb-intensive-review.sh",
+        "--repository-root",
+        ".",
+        "--action",
+        "validate-compendium"
+      ],
+      "exitCode": 0,
+      "startedAt": "2026-10-24T15:41:41.88699Z",
+      "finishedAt": "2026-10-24T15:41:42.974217Z"
+    },
+    {
+      "name": "gsdb-validate-mappings",
+      "executable": "bash",
+      "arguments": [
+        "scripts/validate-gsdb-intensive-review.sh",
+        "--repository-root",
+        ".",
+        "--action",
+        "validate-mappings"
+      ],
+      "exitCode": 0,
+      "startedAt": "2026-10-24T15:41:42.974572Z",
+      "finishedAt": "2026-10-24T15:41:44.188587Z"
+    },
+    {
+      "name": "gsdb-validate",
+      "executable": "bash",
+      "arguments": [
+        "scripts/validate-gsdb-intensive-review.sh",
+        "--repository-root",
+        ".",
+        "--action",
+        "validate"
+      ],
+      "exitCode": 0,
+      "startedAt": "2026-10-24T15:41:44.188863Z",
+      "finishedAt": "2026-10-24T15:41:47.211686Z"
+    },
+    {
+      "name": "gsdb-negative-fixtures",
+      "executable": "pwsh",
+      "arguments": [
+        "-NoProfile",
+        "-File",
+        "scripts/tests/gsdb-intensive-review/test-validate-gsdb-intensive-review.ps1"
+      ],
+      "exitCode": 0,
+      "startedAt": "2026-10-24T15:41:47.211973Z",
+      "finishedAt": "2026-10-24T15:44:59.830423Z"
+    },
+    {
+      "name": "rl-se",
+      "executable": "bash",
+      "arguments": [
+        "scripts/validate-rl-se-assessment.sh",
+        "--assessment",
+        "docs/security/secure-development/2026-10-20-tinycalc-gsdb344/rl-se-assessment-matrix.json"
+      ],
+      "exitCode": 0,
+      "startedAt": "2026-10-24T15:44:59.831457Z",
+      "finishedAt": "2026-10-24T15:45:01.576987Z"
+    },
+    {
+      "name": "documentation-impact",
+      "executable": "pwsh",
+      "arguments": [
+        "-NoProfile",
+        "-File",
+        "scripts/validate-documentation-impact.ps1",
+        "-Evidence",
+        "docs/maintenance/documentation-patch-pilot-2026-10-24-impact.json"
+      ],
+      "exitCode": 0,
+      "startedAt": "2026-10-24T15:45:01.577354Z",
+      "finishedAt": "2026-10-24T15:45:02.11174Z"
+    },
+    {
+      "name": "gsdb-generated-documents",
+      "executable": "pwsh",
+      "arguments": [
+        "-NoProfile",
+        "-File",
+        "scripts/build-secure-development-docs.ps1",
+        "-Check"
+      ],
+      "exitCode": 0,
+      "startedAt": "2026-10-24T15:45:02.11203Z",
+      "finishedAt": "2026-10-24T15:45:02.984738Z"
+    },
+    {
+      "name": "assurance-status",
+      "executable": "pwsh",
+      "arguments": [
+        "-NoProfile",
+        "-File",
+        ".specify/presets/secure-development-assurance-governance/scripts/validate-secure-development-assurance.ps1",
+        "-Action",
+        "Status",
+        "-EvidenceDirectory",
+        "docs/security/secure-development/2026-10-24-tinycalc-documentation-patches"
+      ],
+      "exitCode": 0,
+      "startedAt": "2026-10-24T15:45:02.985045Z",
+      "finishedAt": "2026-10-24T15:45:03.876405Z"
+    },
+    {
+      "name": "assurance-baseline",
+      "executable": "pwsh",
+      "arguments": [
+        "-NoProfile",
+        "-File",
+        ".specify/presets/secure-development-assurance-governance/scripts/validate-secure-development-assurance.ps1",
+        "-Action",
+        "Review",
+        "-Gate",
+        "baseline",
+        "-ContextId",
+        "tinycalc-documentation-patches",
+        "-Mode",
+        "development"
+      ],
+      "exitCode": 0,
+      "startedAt": "2026-10-24T15:45:03.876663Z",
+      "finishedAt": "2026-10-24T15:45:04.586675Z"
+    },
+    {
+      "name": "assurance-delta",
+      "executable": "pwsh",
+      "arguments": [
+        "-NoProfile",
+        "-File",
+        ".specify/presets/secure-development-assurance-governance/scripts/validate-secure-development-assurance.ps1",
+        "-Action",
+        "Review",
+        "-Gate",
+        "delta",
+        "-ContextId",
+        "tinycalc-documentation-patches",
+        "-Mode",
+        "development"
+      ],
+      "exitCode": 0,
+      "startedAt": "2026-10-24T15:45:04.586903Z",
+      "finishedAt": "2026-10-24T15:45:05.142937Z"
+    },
+    {
+      "name": "assurance-closure",
+      "executable": "pwsh",
+      "arguments": [
+        "-NoProfile",
+        "-File",
+        ".specify/presets/secure-development-assurance-governance/scripts/validate-secure-development-assurance.ps1",
+        "-Action",
+        "Review",
+        "-Gate",
+        "closure",
+        "-ContextId",
+        "tinycalc-documentation-patches",
+        "-Mode",
+        "development"
+      ],
+      "exitCode": 0,
+      "startedAt": "2026-10-24T15:45:05.143183Z",
+      "finishedAt": "2026-10-24T15:45:05.64798Z"
+    },
+    {
+      "name": "assurance-image-impact",
+      "executable": "pwsh",
+      "arguments": [
+        "-NoProfile",
+        "-File",
+        ".specify/presets/secure-development-assurance-governance/scripts/validate-secure-development-assurance.ps1",
+        "-Action",
+        "Review",
+        "-Gate",
+        "image-impact",
+        "-ContextId",
+        "tinycalc-documentation-patches",
+        "-Mode",
+        "development"
+      ],
+      "exitCode": 0,
+      "startedAt": "2026-10-24T15:45:05.648233Z",
+      "finishedAt": "2026-10-24T15:45:06.153734Z"
+    },
+    {
+      "name": "requirements-intake",
+      "executable": "pwsh",
+      "arguments": [
+        "-NoProfile",
+        "-File",
+        "scripts/validate-requirements-intake-alignment.ps1"
+      ],
+      "exitCode": 1,
+      "startedAt": "2026-10-24T15:45:06.154001Z",
+      "finishedAt": "2026-10-24T15:46:13.51066Z"
+    },
+    {
+      "name": "powershell-analysis",
+      "executable": "pwsh",
+      "arguments": [
+        "-NoProfile",
+        "-File",
+        "scripts/invoke-psscriptanalyzer.ps1"
+      ],
+      "exitCode": 0,
+      "startedAt": "2026-10-24T15:46:13.510914Z",
+      "finishedAt": "2026-10-24T15:46:27.785715Z"
+    },
+    {
+      "name": "secret-scan",
+      "executable": "bash",
+      "arguments": [
+        "scripts/scan-agent-secrets.sh",
+        "--fail-on-high",
+        "."
+      ],
+      "exitCode": 0,
+      "startedAt": "2026-10-24T15:46:27.785925Z",
+      "finishedAt": "2026-10-24T15:46:28.436606Z"
+    }
+  ],
+  "productValidation": {
+    "corePassed": 217,
+    "buildWarnings": 0,
+    "tuiPassed": 461,
+    "restoreExit": 0,
+    "releaseBuildExit": 0,
+    "nativeMacOsPaths": 364,
+    "buildCounter": 137,
+    "buildErrors": 0,
+    "skipped": 0,
+    "testExit": 0,
+    "smoke": "SMOKE_OK",
+    "testCounter": 138,
+    "note": "One complete unfiltered test run; initial collector metadata failure occurred before tests."
+  },
+  "packageValidation": {
+    "archives": 14,
+    "homeOnlyExceptions": 0,
+    "stockFiles": 660,
+    "archiveSha256Bound": true
+  },
+  "documentationValidation": {
+    "errors": 0,
+    "docfxExit": 0,
+    "note": "Rendered before final delivery-blocker report note; initial wrong index.html path rejected, actual README.html path succeeded.",
+    "fullWcagAcceptance": false,
+    "lynxReaderPaths": 3,
+    "physicalScreenreaderBrailleTested": false,
+    "warnings": 105
+  },
+  "lineageResolution": {
+    "sourceBindings": 8,
+    "powershellAlignmentExit": 0,
+    "receipts": 5,
+    "manifestDagOrderStatesUnchanged": true,
+    "currentReview": "Pending; no new Ready verdict",
+    "oldReadyReview": "Archived byte-identically and explicitly superseded",
+    "productSuiteRepeated": false,
+    "bashExit": 0,
+    "operationId": "363e883c-a20c-4a98-b4da-62a1a3b5a0f2",
+    "explicitAuthority": "Exactly five source-provenance corrections authorized on 2026-10-24",
+    "allThirteenTargetsUnchanged": true,
+    "validatedBeforeAtomicPublication": true
+  },
+  "latestRequirementsIntakeExit": 0
+}

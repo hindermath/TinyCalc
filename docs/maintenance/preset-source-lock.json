@@ -4,115 +4,115 @@
   "presets": [
     {
       "id": "security-governance",
-      "tag": "v0.7.3",
-      "commit": "c66cabfbfdde532994bd3c0e63ebf843dadfa1c0",
+      "tag": "v0.7.4",
+      "commit": "16666d7c1f54aafa929c158d4bcdcb03bace1564",
       "repository": "https://github.com/hindermath/spec-kit-preset-security-governance",
-      "archiveUrl": "https://github.com/hindermath/spec-kit-preset-security-governance/archive/refs/tags/v0.7.3.zip",
-      "archiveSha256": "e43fdbc3af2334182ded8908f160313dc085882faf96532f29bfffbb7cfd8f9d"
+      "archiveUrl": "https://github.com/hindermath/spec-kit-preset-security-governance/archive/refs/tags/v0.7.4.zip",
+      "archiveSha256": "222697829118be22c6ddf6675852f1375dbb415061e5fe2fd31a5c82d65a5dcb"
     },
     {
       "id": "secure-development-assurance-governance",
-      "tag": "v0.1.7",
-      "commit": "0f47996be3b613b3ab26206b606f68e3acb44c30",
+      "tag": "v0.1.8",
+      "commit": "100ff9e6e037b0d162bdadd8bfd0bf30520ff7b6",
       "repository": "https://github.com/hindermath/spec-kit-preset-secure-development-assurance-governance",
-      "archiveUrl": "https://github.com/hindermath/spec-kit-preset-secure-development-assurance-governance/archive/refs/tags/v0.1.7.zip",
-      "archiveSha256": "0b1352fad73970c6bc12d77bc4b687dde8db36a02ee1f73ed97289bb16134b35"
+      "archiveUrl": "https://github.com/hindermath/spec-kit-preset-secure-development-assurance-governance/archive/refs/tags/v0.1.8.zip",
+      "archiveSha256": "bce2969fa25b8753199ef40730037fedc7689971e6a54cc3a9da4ef0f64762dc"
     },
     {
       "id": "architecture-governance",
-      "tag": "v0.6.4",
-      "commit": "bf2261d0d7c31e1c892dfa2b9708e5978dd28a73",
+      "tag": "v0.6.5",
+      "commit": "5d02e804c4fc617fbf17bd34900c53fccbc81e60",
       "repository": "https://github.com/hindermath/spec-kit-preset-architecture-governance",
-      "archiveUrl": "https://github.com/hindermath/spec-kit-preset-architecture-governance/archive/refs/tags/v0.6.4.zip",
-      "archiveSha256": "020349ca49db89c655762b1cc1ce86d5f40ea0e4b2f598aac443ed6e0dbdc6e4"
+      "archiveUrl": "https://github.com/hindermath/spec-kit-preset-architecture-governance/archive/refs/tags/v0.6.5.zip",
+      "archiveSha256": "5d7151a1dadf36684f4f0f754b6630f51ff3bbcbbf11414e7537d855ca87e56c"
     },
     {
       "id": "isaqb-architecture-governance",
-      "tag": "v0.2.4",
-      "commit": "1f5529d289b90c4c302e267c14d9bccab96d5e99",
+      "tag": "v0.2.5",
+      "commit": "1bf9b5c72f8a39c570e8596e78ceac6b855af20b",
       "repository": "https://github.com/hindermath/spec-kit-preset-isaqb-architecture-governance",
-      "archiveUrl": "https://github.com/hindermath/spec-kit-preset-isaqb-architecture-governance/archive/refs/tags/v0.2.4.zip",
-      "archiveSha256": "ad9802cb23ea2ef604098bea1b0e297cbaf0badcd56ba87541706d45910605ba"
+      "archiveUrl": "https://github.com/hindermath/spec-kit-preset-isaqb-architecture-governance/archive/refs/tags/v0.2.5.zip",
+      "archiveSha256": "03f1a946994ece3c30b0da3a733eb7c5eb88c8a65021831e75cf5543fed65d58"
     },
     {
       "id": "a11y-governance",
-      "tag": "v0.4.5",
-      "commit": "58f02a2496094a34e95c12a6160f970f99227720",
+      "tag": "v0.4.6",
+      "commit": "55b88a8d7be6586f5ef54e172742b1eb351bc5fe",
       "repository": "https://github.com/hindermath/spec-kit-preset-a11y-governance",
-      "archiveUrl": "https://github.com/hindermath/spec-kit-preset-a11y-governance/archive/refs/tags/v0.4.5.zip",
-      "archiveSha256": "764823f359f0071a165020e3b19957cc48ea8a815764bc0df3ed0c64a4cf699d"
+      "archiveUrl": "https://github.com/hindermath/spec-kit-preset-a11y-governance/archive/refs/tags/v0.4.6.zip",
+      "archiveSha256": "150cc5c1709d0bc6e9f682badb510922595cd784299ff3d9a9c17389919ec89f"
     },
     {
       "id": "cross-platform-governance",
-      "tag": "v0.2.4",
-      "commit": "14e830b7625b47dbc712989502f8c5ca0e3bbf57",
+      "tag": "v0.2.5",
+      "commit": "9718ffa54f55fc63652abc92da85d1d558ee6029",
       "repository": "https://github.com/hindermath/spec-kit-preset-cross-platform-governance",
-      "archiveUrl": "https://github.com/hindermath/spec-kit-preset-cross-platform-governance/archive/refs/tags/v0.2.4.zip",
-      "archiveSha256": "0dfa8cfaeb317f1847462c48a3a1d83389e668256abd6f508ee6d89e452d5456"
+      "archiveUrl": "https://github.com/hindermath/spec-kit-preset-cross-platform-governance/archive/refs/tags/v0.2.5.zip",
+      "archiveSha256": "eeb88517330858ceae706d35d79bb7ff04e7c37f1f17faf66159eb7e4d917cdc"
     },
     {
       "id": "agent-parity-governance",
-      "tag": "v0.4.4",
-      "commit": "ca4e9116a68472b336450d8f03a52e0264f5beb6",
+      "tag": "v0.4.5",
+      "commit": "005efa0c62e4c80a04fdab8712debc048f48754d",
       "repository": "https://github.com/hindermath/spec-kit-preset-agent-parity-governance",
-      "archiveUrl": "https://github.com/hindermath/spec-kit-preset-agent-parity-governance/archive/refs/tags/v0.4.4.zip",
-      "archiveSha256": "2c752eea241b359c0dce808c95cf750bd0116fe2470e2bce6edfb1aff1a8d020"
+      "archiveUrl": "https://github.com/hindermath/spec-kit-preset-agent-parity-governance/archive/refs/tags/v0.4.5.zip",
+      "archiveSha256": "2c730ad78a0dcc03893523e417c37f0be93754f888efd85739ab12001eb4eb11"
     },
     {
       "id": "model-routing-governance",
-      "tag": "v0.1.6",
-      "commit": "99c7c13b3ef2e154cf4f62f43262ade3fbe8d2a9",
+      "tag": "v0.1.7",
+      "commit": "f5b86800ed5058dd0efb1a3e70b39f47b12c0753",
       "repository": "https://github.com/hindermath/spec-kit-preset-model-routing-governance",
-      "archiveUrl": "https://github.com/hindermath/spec-kit-preset-model-routing-governance/archive/refs/tags/v0.1.6.zip",
-      "archiveSha256": "94648588b4e6ec8c839da579d7321026821fa2cf4378db05c6ad3cdd4dc05dad"
+      "archiveUrl": "https://github.com/hindermath/spec-kit-preset-model-routing-governance/archive/refs/tags/v0.1.7.zip",
+      "archiveSha256": "79bbde5a52f1842fa02aea01532c9ba04922531b0ddd4ab46aff08e9e5ead204"
     },
     {
       "id": "intake-authoring-governance",
-      "tag": "v0.3.9",
-      "commit": "33845858eff1cc6aa766012650491d53e1a88447",
+      "tag": "v0.3.10",
+      "commit": "b4ddd5580277edb008132149ca5870b64c2dd68a",
       "repository": "https://github.com/hindermath/spec-kit-preset-intake-authoring-governance",
-      "archiveUrl": "https://github.com/hindermath/spec-kit-preset-intake-authoring-governance/archive/refs/tags/v0.3.9.zip",
-      "archiveSha256": "5fdec1175224a30f4c2e10f549351fe71bfd06722f4390596625d45ed4733ffb"
+      "archiveUrl": "https://github.com/hindermath/spec-kit-preset-intake-authoring-governance/archive/refs/tags/v0.3.10.zip",
+      "archiveSha256": "878f5c767360d623b3b3cccfd3fd01caa92298b9785f10da99d229329b45b10d"
     },
     {
       "id": "intake-review-governance",
-      "tag": "v0.2.6",
-      "commit": "4838ab546d4f6f6c892152469cf336297e303384",
+      "tag": "v0.2.7",
+      "commit": "e3ba5ffee691612568396c0074ef0b573c82709e",
       "repository": "https://github.com/hindermath/spec-kit-preset-intake-review-governance",
-      "archiveUrl": "https://github.com/hindermath/spec-kit-preset-intake-review-governance/archive/refs/tags/v0.2.6.zip",
-      "archiveSha256": "fa02a2fa1ed44b2041ecd209f0ad1f96ec32b40bf5f3a867e58fd7012e3aa90b"
+      "archiveUrl": "https://github.com/hindermath/spec-kit-preset-intake-review-governance/archive/refs/tags/v0.2.7.zip",
+      "archiveSha256": "c2cd56a09676d7fe0859c030680f223575ba0bf89dde872058e6f36066d4eab0"
     },
     {
       "id": "intake-sequencing-governance",
-      "tag": "v0.2.10",
-      "commit": "ccb6c223c51ba685f650f2ce5238299cb73b1f31",
+      "tag": "v0.2.11",
+      "commit": "fa7ae29dced61da7cf8b255d351d5d8f5ea1e432",
       "repository": "https://github.com/hindermath/spec-kit-preset-intake-sequencing-governance",
-      "archiveUrl": "https://github.com/hindermath/spec-kit-preset-intake-sequencing-governance/archive/refs/tags/v0.2.10.zip",
-      "archiveSha256": "0da5d751a89b9ae68a75c2f590b449599d98d4a0ed7fe4c2bcd935e90a197678"
+      "archiveUrl": "https://github.com/hindermath/spec-kit-preset-intake-sequencing-governance/archive/refs/tags/v0.2.11.zip",
+      "archiveSha256": "ddbea4dac1b21137700b31e7d9ef6e4bfff6fe4608506c07b522c433811c5164"
     },
     {
       "id": "autonomous-run-governance",
-      "tag": "v0.4.6",
-      "commit": "130a69dc483fa27e3835640c87feb40b446bf4cc",
+      "tag": "v0.4.7",
+      "commit": "f5e5ae162b2309f35b91bece1a303ea4091ab364",
       "repository": "https://github.com/hindermath/spec-kit-preset-autonomous-run-governance",
-      "archiveUrl": "https://github.com/hindermath/spec-kit-preset-autonomous-run-governance/archive/refs/tags/v0.4.6.zip",
-      "archiveSha256": "db7450ff1e1fcf26aae4a98fac3504464a2fa1e9bf7db23ffdbe1b89c5ec8b04"
+      "archiveUrl": "https://github.com/hindermath/spec-kit-preset-autonomous-run-governance/archive/refs/tags/v0.4.7.zip",
+      "archiveSha256": "5a9ed42d7f0caa9f65e2b9b3285dcf48e54372d54fa194109fce7e80334d8999"
     },
     {
       "id": "parallel-autonomous-run-governance",
-      "tag": "v0.2.8",
-      "commit": "63bbf78b51fe00385b34f52cc568dbf2928954ad",
+      "tag": "v0.2.9",
+      "commit": "b39ec31994aeb4f4c793808540ab55d1e2d0577b",
       "repository": "https://github.com/hindermath/spec-kit-preset-parallel-autonomous-run-governance",
-      "archiveUrl": "https://github.com/hindermath/spec-kit-preset-parallel-autonomous-run-governance/archive/refs/tags/v0.2.8.zip",
-      "archiveSha256": "36598b775b14fe070dc50700409b3e6cec8fc06b9fb2f80cf1906af1ac3560b7"
+      "archiveUrl": "https://github.com/hindermath/spec-kit-preset-parallel-autonomous-run-governance/archive/refs/tags/v0.2.9.zip",
+      "archiveSha256": "e87ff1b325f5fff16a4e2c2fa805078620636044b53bba2f08bc9e7632ea866c"
     },
     {
       "id": "project-statistics-governance",
-      "tag": "v0.1.2",
-      "commit": "454554bafda574c1153e6be319c30e9787ac3867",
+      "tag": "v0.1.3",
+      "commit": "e1e81b5c7c778314945539083b8aac557798e36c",
       "repository": "https://github.com/hindermath/spec-kit-preset-project-statistics-governance",
-      "archiveUrl": "https://github.com/hindermath/spec-kit-preset-project-statistics-governance/archive/refs/tags/v0.1.2.zip",
-      "archiveSha256": "6cc233b56033b4b7dc0abd831666a6f3b0f5b70b0c9b9a395c8dc78c9549bb95"
+      "archiveUrl": "https://github.com/hindermath/spec-kit-preset-project-statistics-governance/archive/refs/tags/v0.1.3.zip",
+      "archiveSha256": "6b963051c619b65e692247ced30997823e15feae82526ec69481c8e99df6cb32"
     }
   ]
 }

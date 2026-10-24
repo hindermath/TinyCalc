@@ -1,0 +1,201 @@
+{
+  "schemaVersion": "2.0",
+  "documentType": "IntakeReceipt",
+  "receiptId": "672d90e1-ecab-45c4-b1c5-e83916cf30fc",
+  "intakeId": "b4f18668-0276-45ee-8a6f-16a8bd8b833d",
+  "generator": {
+    "version": "0.3.8",
+    "preset": "intake-authoring-governance"
+  },
+  "createdAt": "2026-10-21T10:45:45Z",
+  "operation": {
+    "authorityEvidence": "Thorsten approved PLEASE IMPLEMENT THIS PLAN: targeted GSDB 3.4.4 / Assurance 0.1.5 governance and intake refresh, administrative Feature 006 provenance only, minimal Feature 007 alignment and separate independent Series review. Preserve historical acceptance, target identities, scope, order, states, roots and dependencies. Local documentation only: no implementation, build, test, restore, upgrade, commit, push, PR, merge or bypass. Exclude sheet.mcalc.json.",
+    "operationId": "44f5901d-e5d9-42b8-b975-4693195d034f",
+    "type": "Update"
+  },
+  "status": "ReadyForReview",
+  "target": {
+    "path": "requirements/intakes/active/Lastenheft_Rename_MicroCalc_TinyCalc.md",
+    "normalizedSha256": "ed761c150526f18c0b1d98d8febac1def260b1890aca6d0a341279dec19985b9"
+  },
+  "sources": [
+    {
+      "sourceId": "SRC001",
+      "order": 1,
+      "kind": "File",
+      "label": "First binding source: byte-identical predecessor intake",
+      "location": "Repository",
+      "path": "requirements/intakes/history/20261021-gsdb344-alignment/Lastenheft_Rename_MicroCalc_TinyCalc.md",
+      "requestedUrl": "N/A",
+      "finalUrl": "N/A",
+      "retrievedAt": "N/A",
+      "httpStatus": "N/A",
+      "contentType": "N/A",
+      "contentLength": "N/A",
+      "etag": "N/A",
+      "lastModified": "N/A",
+      "redirectChain": [],
+      "rawSha256": "N/A",
+      "normalizedSha256": "ed761c150526f18c0b1d98d8febac1def260b1890aca6d0a341279dec19985b9",
+      "gitBlob": "N/A",
+      "proofBoundary": "Strict UTF-8 normalized SHA-256; source adoption is not product conformance / Quellenbindung ist keine Produktkonformitaet."
+    },
+    {
+      "sourceId": "SRC002",
+      "order": 2,
+      "kind": "File",
+      "label": "Byte-identical prior receipt preserves historical source order",
+      "location": "Repository",
+      "path": "specs/intake-authoring-receipts/history/rename-microcalc-tinycalc.20261021-gsdb344-alignment.json",
+      "requestedUrl": "N/A",
+      "finalUrl": "N/A",
+      "retrievedAt": "N/A",
+      "httpStatus": "N/A",
+      "contentType": "N/A",
+      "contentLength": "N/A",
+      "etag": "N/A",
+      "lastModified": "N/A",
+      "redirectChain": [],
+      "rawSha256": "N/A",
+      "normalizedSha256": "8a414279d88cff09447a3ab9b3f81df9f8c3bcf200351ec97d98e0f4da60d6c4",
+      "gitBlob": "N/A",
+      "proofBoundary": "Strict UTF-8 normalized SHA-256; source adoption is not product conformance / Quellenbindung ist keine Produktkonformitaet."
+    },
+    {
+      "sourceId": "SRC003",
+      "order": 3,
+      "kind": "File",
+      "label": "Approved governance change source; no product acceptance inferred",
+      "location": "Repository",
+      "path": "docs/maintenance/gsdb-344-control-delta.json",
+      "requestedUrl": "N/A",
+      "finalUrl": "N/A",
+      "retrievedAt": "N/A",
+      "httpStatus": "N/A",
+      "contentType": "N/A",
+      "contentLength": "N/A",
+      "etag": "N/A",
+      "lastModified": "N/A",
+      "redirectChain": [],
+      "rawSha256": "N/A",
+      "normalizedSha256": "e1b4355f6c383ee9b32abd9758d5504751a39d8840728da063bd1f1d74ca2d8f",
+      "gitBlob": "N/A",
+      "proofBoundary": "Strict UTF-8 normalized SHA-256; source adoption is not product conformance / Quellenbindung ist keine Produktkonformitaet."
+    },
+    {
+      "sourceId": "SRC004",
+      "order": 4,
+      "kind": "File",
+      "label": "Approved governance change source; no product acceptance inferred",
+      "location": "Repository",
+      "path": ".specify/presets/secure-development-assurance-governance/templates/secure-development-evidence-contract.md",
+      "requestedUrl": "N/A",
+      "finalUrl": "N/A",
+      "retrievedAt": "N/A",
+      "httpStatus": "N/A",
+      "contentType": "N/A",
+      "contentLength": "N/A",
+      "etag": "N/A",
+      "lastModified": "N/A",
+      "redirectChain": [],
+      "rawSha256": "N/A",
+      "normalizedSha256": "1e3d7235fc24eb26c9385f635571cf544a28eed4a6e1d996c9921d01c350ba0b",
+      "gitBlob": "N/A",
+      "proofBoundary": "Strict UTF-8 normalized SHA-256; source adoption is not product conformance / Quellenbindung ist keine Produktkonformitaet."
+    },
+    {
+      "sourceId": "SRC005",
+      "order": 5,
+      "kind": "File",
+      "label": "Approved governance change source; no product acceptance inferred",
+      "location": "Repository",
+      "path": "README.md",
+      "requestedUrl": "N/A",
+      "finalUrl": "N/A",
+      "retrievedAt": "N/A",
+      "httpStatus": "N/A",
+      "contentType": "N/A",
+      "contentLength": "N/A",
+      "etag": "N/A",
+      "lastModified": "N/A",
+      "redirectChain": [],
+      "rawSha256": "N/A",
+      "normalizedSha256": "694c1a48df250628875ddf5dd02e93b44804120d225ca727df48db70bcb89109",
+      "gitBlob": "N/A",
+      "proofBoundary": "Strict UTF-8 normalized SHA-256; source adoption is not product conformance / Quellenbindung ist keine Produktkonformitaet."
+    }
+  ],
+  "profile": "level2-lastenheft",
+  "languagePolicy": "GermanFirstEnglishSecond",
+  "decisions": [
+    {
+      "id": "IAD001",
+      "status": "Answered",
+      "question": "Which execution order is binding?",
+      "answer": "Functional acceptance and A11Y acceptance must pass before rename release-closeout.",
+      "evidence": "Explicit user decision and active series."
+    },
+    {
+      "id": "IAD002",
+      "status": "Answered",
+      "question": "Are fixed file and occurrence counts permitted?",
+      "answer": "No. A fresh execution-time inventory is authoritative; counts are evidence rather than requirements.",
+      "evidence": "Approved consolidation plan."
+    },
+    {
+      "id": "IAD003",
+      "status": "Answered",
+      "question": "May historical MicroCalc references remain?",
+      "answer": "Yes, only under an explicit, reviewed historical and compatibility allowlist.",
+      "evidence": "Approved rename scope."
+    },
+    {
+      "id": "IAD004",
+      "status": "Answered",
+      "question": "How are persisted JSON files treated?",
+      "answer": "Existing .mcalc.json files remain readable and round-trip compatible unless a separately approved migration contract changes that boundary.",
+      "evidence": "Approved compatibility decision."
+    },
+    {
+      "id": "IAD005",
+      "status": "Answered",
+      "question": "Which regression tier applies to the rename?",
+      "answer": "ReleaseCloseout applies and requires the complete current functional, A11Y, documentation, PTY, VoiceOver, and cross-platform evidence matrix.",
+      "evidence": "Approved impact matrix."
+    }
+  ],
+  "openDecisionIds": [],
+  "questionCount": 5,
+  "agentSurface": {
+    "specifyCanonicalId": "speckit.specify",
+    "specifyInvocation": "$speckit-specify",
+    "autonomousCanonicalId": "speckit.autonomous",
+    "autonomousInvocation": "$speckit-autonomous"
+  },
+  "deliveryAuthority": "LocalImplementation",
+  "authorityEvidence": "The user explicitly requested implementation of the approved intake-only consolidation plan. No product implementation, commit, push, pull request, merge, bypass, provider, or follow-up-feature authority is granted.",
+  "promptState": "Enabled",
+  "provenanceMode": "Supersession",
+  "supersedes": {
+    "receiptPath": "specs/intake-authoring-receipts/history/rename-microcalc-tinycalc.20261021-gsdb344-alignment.json",
+    "receiptNormalizedSha256": "8a414279d88cff09447a3ab9b3f81df9f8c3bcf200351ec97d98e0f4da60d6c4",
+    "archiveReceiptPath": "specs/intake-authoring-receipts/history/rename-microcalc-tinycalc.20261021-gsdb344-alignment.json",
+    "targetNormalizedSha256": "ed761c150526f18c0b1d98d8febac1def260b1890aca6d0a341279dec19985b9",
+    "archiveTargetPath": "requirements/intakes/history/20261021-gsdb344-alignment/Lastenheft_Rename_MicroCalc_TinyCalc.md"
+  },
+  "legacyAdoption": {
+    "priorTargetNormalizedSha256": "N/A",
+    "priorGitBlob": "N/A",
+    "evidenceType": "N/A"
+  },
+  "updateAuthorized": true,
+  "updateAuthorityEvidence": "Thorsten approved PLEASE IMPLEMENT THIS PLAN: targeted GSDB 3.4.4 / Assurance 0.1.5 governance and intake refresh, administrative Feature 006 provenance only, minimal Feature 007 alignment and separate independent Series review. Preserve historical acceptance, target identities, scope, order, states, roots and dependencies. Local documentation only: no implementation, build, test, restore, upgrade, commit, push, PR, merge or bypass. Exclude sheet.mcalc.json.",
+  "series": {
+    "seriesId": "5b4523b4-d946-4091-9cbc-11825af94332",
+    "manifestPath": "requirements/intakes/series/tinycalc-delivery/manifest.json",
+    "order": 5,
+    "role": "OrderedMember",
+    "supersedesIntakeIds": []
+  },
+  "nextAction": "$speckit-intake-review requirements/intakes/active/Lastenheft_Rename_MicroCalc_TinyCalc.md"
+}

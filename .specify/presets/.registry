@@ -2,9 +2,9 @@
   "schema_version": "1.0",
   "presets": {
     "security-governance": {
-      "version": "0.7.3",
+      "version": "0.7.4",
       "source": "local",
-      "manifest_hash": "sha256:587afce92107b7ee0723a562a13bd679c437594aca81d59ade4599eba890654a",
+      "manifest_hash": "sha256:c7dd3e6d099f90e6e3b6b2dc4eb91f08fbd0f0e24f138c75bd6f189cc06f2b84",
       "enabled": true,
       "priority": 10,
       "registered_commands": {
@@ -44,12 +44,12 @@
         "speckit-plan",
         "speckit-tasks"
       ],
-      "installed_at": "2026-10-23T23:07:42.604384+00:00"
+      "installed_at": "2026-10-24T15:36:37.288589+00:00"
     },
     "secure-development-assurance-governance": {
-      "version": "0.1.7",
+      "version": "0.1.8",
       "source": "local",
-      "manifest_hash": "sha256:a089d354e84213f67596f105594d86e8c297782568794ad89eb4d5f624f713ed",
+      "manifest_hash": "sha256:d6d15d42efd7d2fdf8efeecc9925bd82171a86181d295b734be6eb9db4d232bc",
       "enabled": true,
       "priority": 15,
       "registered_commands": {
@@ -82,12 +82,12 @@
         "speckit-secure-development-status",
         "speckit-secure-development-review"
       ],
-      "installed_at": "2026-10-23T23:07:44.053578+00:00"
+      "installed_at": "2026-10-24T15:36:38.698741+00:00"
     },
     "architecture-governance": {
-      "version": "0.6.4",
+      "version": "0.6.5",
       "source": "local",
-      "manifest_hash": "sha256:7c163d07758473f76d35a40048d9c92cc635ae174c8a9f34e92b148889038370",
+      "manifest_hash": "sha256:8c63329e71fbd441a5824cb0c848c90f8ec4919cf79d5332f854838beea9db85",
       "enabled": true,
       "priority": 20,
       "registered_commands": {
@@ -127,12 +127,12 @@
         "speckit-plan",
         "speckit-tasks"
       ],
-      "installed_at": "2026-10-23T23:07:45.343165+00:00"
+      "installed_at": "2026-10-24T15:36:39.971473+00:00"
     },
     "isaqb-architecture-governance": {
-      "version": "0.2.4",
+      "version": "0.2.5",
       "source": "local",
-      "manifest_hash": "sha256:1803bafaed7744884d5ea9894b87bc9c6baa67f4847d98fa62b24377b6f2ffc6",
+      "manifest_hash": "sha256:12fc1b8bfaed165a083135fadb40052a5596ecc625f86c477c2e1239e6d49928",
       "enabled": true,
       "priority": 30,
       "registered_commands": {
@@ -172,12 +172,12 @@
         "speckit-plan",
         "speckit-tasks"
       ],
-      "installed_at": "2026-10-23T23:07:46.671549+00:00"
+      "installed_at": "2026-10-24T15:36:41.266216+00:00"
     },
     "a11y-governance": {
-      "version": "0.4.5",
+      "version": "0.4.6",
       "source": "local",
-      "manifest_hash": "sha256:f8d58c556b7158c16d5a72ac3371e6456d970a1f8830339a73fd68327b3dad8e",
+      "manifest_hash": "sha256:e10585b6b9c0e135ff675516a0bc1eb69abce01742adfed1c6c5c898786241da",
       "enabled": true,
       "priority": 40,
       "registered_commands": {
@@ -217,12 +217,12 @@
         "speckit-plan",
         "speckit-tasks"
       ],
-      "installed_at": "2026-10-23T23:07:48.198929+00:00"
+      "installed_at": "2026-10-24T15:36:42.597478+00:00"
     },
     "cross-platform-governance": {
-      "version": "0.2.4",
+      "version": "0.2.5",
       "source": "local",
-      "manifest_hash": "sha256:edaf0211c657c216a0acb0360205365f50a87e836675d17a48e6a32d09bfae0f",
+      "manifest_hash": "sha256:a6aec238bc0254a3dc67bd4680daf3930d078f990780bf5627187b9374ed1a34",
       "enabled": true,
       "priority": 50,
       "registered_commands": {
@@ -262,12 +262,12 @@
         "speckit-plan",
         "speckit-tasks"
       ],
-      "installed_at": "2026-10-23T23:07:50.189407+00:00"
+      "installed_at": "2026-10-24T15:36:43.955772+00:00"
     },
     "agent-parity-governance": {
-      "version": "0.4.4",
+      "version": "0.4.5",
       "source": "local",
-      "manifest_hash": "sha256:b09355872c62142b0aaf1dff06ff930f6687c5fa7b06b29467d21347d62e34b5",
+      "manifest_hash": "sha256:d7d07212c6251f8ccf3777f4acf21e6766278b43c7e4736be2b034eb46fd4344",
       "enabled": true,
       "priority": 60,
       "registered_commands": {
@@ -307,12 +307,12 @@
         "speckit-plan",
         "speckit-tasks"
       ],
-      "installed_at": "2026-10-23T23:07:51.860880+00:00"
+      "installed_at": "2026-10-24T15:36:45.271374+00:00"
     },
     "model-routing-governance": {
-      "version": "0.1.6",
+      "version": "0.1.7",
       "source": "local",
-      "manifest_hash": "sha256:0fcc6869a658124df8109921428c3a9240905ec72057c46194823df0132f7bae",
+      "manifest_hash": "sha256:9e1165e8178d05fef4c989c991ce138ad0a202e1c3f830dc2d8e1b75c0579bbc",
       "enabled": true,
       "priority": 61,
       "registered_commands": {
@@ -345,12 +345,12 @@
         "speckit-model-routing-status",
         "speckit-model-routing-refresh"
       ],
-      "installed_at": "2026-10-23T23:07:53.603861+00:00"
+      "installed_at": "2026-10-24T15:36:46.532936+00:00"
     },
     "intake-authoring-governance": {
-      "version": "0.3.9",
+      "version": "0.3.10",
       "source": "local",
-      "manifest_hash": "sha256:58912fba5a6a9c104244282e8cade98efa9f3f5fc78a95d1e03a531dd3e842ac",
+      "manifest_hash": "sha256:4916fe3d0d4da69fc61eb6fc3f8d8920363bc9b35dfef6795d41ec27d287fd0a",
       "enabled": true,
       "priority": 64,
       "registered_commands": {
@@ -404,12 +404,12 @@
         "speckit-intake-delete",
         "speckit-intake-create-status"
       ],
-      "installed_at": "2026-10-23T23:07:55.318290+00:00"
+      "installed_at": "2026-10-24T15:36:47.758949+00:00"
     },
     "intake-review-governance": {
-      "version": "0.2.6",
+      "version": "0.2.7",
       "source": "local",
-      "manifest_hash": "sha256:f7afb1ab618de8918f25a274275cb2e9883b44a9614cc56e1fc41c1a8ec3810c",
+      "manifest_hash": "sha256:3d809c52a3c165818c4a33cee9c6efa69399597993d6700106e93263f1da589d",
       "enabled": true,
       "priority": 65,
       "registered_commands": {
@@ -449,12 +449,12 @@
         "speckit-intake-repair",
         "speckit-intake-review-status"
       ],
-      "installed_at": "2026-10-23T23:07:57.057078+00:00"
+      "installed_at": "2026-10-24T15:36:49.061503+00:00"
     },
     "intake-sequencing-governance": {
-      "version": "0.2.10",
+      "version": "0.2.11",
       "source": "local",
-      "manifest_hash": "sha256:ff4059b12eda48288bc8d7e201ff40b72ab8dc47c20337f1c6f169623e102f9e",
+      "manifest_hash": "sha256:a5ffd10ffeb01c3c8672dda4339f0367b2f18c04cc3b5d1c7a97c951d94b728c",
       "enabled": true,
       "priority": 66,
       "registered_commands": {
@@ -515,12 +515,12 @@
         "speckit-intake-series-status",
         "speckit-intake-series-next"
       ],
-      "installed_at": "2026-10-23T23:07:58.592838+00:00"
+      "installed_at": "2026-10-24T15:36:50.349045+00:00"
     },
     "autonomous-run-governance": {
-      "version": "0.4.6",
+      "version": "0.4.7",
       "source": "local",
-      "manifest_hash": "sha256:b6933481f14acd3a4ff6b035141b8e64f9f6466a60700378484b6b1a4351c541",
+      "manifest_hash": "sha256:0034c2dc7da5c64be3e2bceb10fbea435bc0de921def37b4ec5e7203b9719367",
       "enabled": true,
       "priority": 70,
       "registered_commands": {
@@ -574,12 +574,12 @@
         "speckit-autonomous-stop",
         "speckit-autonomous-resume"
       ],
-      "installed_at": "2026-10-23T23:08:00.429441+00:00"
+      "installed_at": "2026-10-24T15:36:51.674126+00:00"
     },
     "parallel-autonomous-run-governance": {
-      "version": "0.2.8",
+      "version": "0.2.9",
       "source": "local",
-      "manifest_hash": "sha256:c77d51ddbf6757ce7ed310b127fc18930639f7965f6ba69262613521f72a49d6",
+      "manifest_hash": "sha256:481e7f725160672f00bc63e681b4e69f94be76477e649e56e5670ad1c401a103",
       "enabled": true,
       "priority": 80,
       "registered_commands": {
@@ -633,12 +633,12 @@
         "speckit-parallel-autonomous-resume",
         "speckit-parallel-autonomous-consolidate"
       ],
-      "installed_at": "2026-10-23T23:08:03.853668+00:00"
+      "installed_at": "2026-10-24T15:37:56.574221+00:00"
     },
     "project-statistics-governance": {
-      "version": "0.1.2",
+      "version": "0.1.3",
       "source": "local",
-      "manifest_hash": "sha256:0b0bf3f6eaa54621ff2e9312928586bd21c76c6338c80a30ac99d5327f101380",
+      "manifest_hash": "sha256:14f8b1d3f9a183795afd4ca7a550ad75a1fd92c86127a797d13589be2dd48dd7",
       "enabled": true,
       "priority": 90,
       "registered_commands": {
@@ -678,7 +678,7 @@
         "speckit-statistics-status",
         "speckit-statistics-update"
       ],
-      "installed_at": "2026-10-23T23:08:05.578974+00:00"
+      "installed_at": "2026-10-24T15:37:57.494858+00:00"
     }
   }
 }

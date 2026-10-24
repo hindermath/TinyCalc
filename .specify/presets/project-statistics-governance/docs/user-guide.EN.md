@@ -1,10 +1,16 @@
 # User guide: project-statistics-governance
 
-<!-- current-package: 0.1.2 -->
+<!-- current-package: 0.1.3 -->
+
+Package identity: **v0.1.3**. [Preparation and publication boundary](release-0.1.3-validation.md). The release page, not this preparation snapshot, proves publication and the external archive hash. Earlier version records below remain historical.
+
+[Release-Abschluss und Verbesserungsprofil / Publication closeout and improvement profile](release-0.1.2-validation.md).
+
+The linked base-package evidence remains historical; this package includes the source corrections as a new version.
 
 [Deutsch](user-guide.md) · [Preset reference](../README.md)
 
-Source candidate **v0.1.2**. Verify the actually published version on the [release page](https://github.com/hindermath/spec-kit-preset-project-statistics-governance/releases). This guide grants no merge, release or project authority.
+Historical base package **v0.1.2**. Verify the actually published version on the [release page](https://github.com/hindermath/spec-kit-preset-project-statistics-governance/releases). This guide grants no merge, release or project authority.
 
 Contents: [Start](#start) · [Example](#example) · [Terms](#terms) · [Routing](#routing) · [Troubleshooting](#help) · [References](#references)
 

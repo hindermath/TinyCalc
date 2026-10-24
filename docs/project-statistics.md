@@ -909,6 +909,29 @@ source commit, with previews and no dirty-worktree bypass. Reference estimates,
 time zones and authored sections remain unchanged. The new TinyCalc PR needs
 its own human review and delivery approval.
 
+### 2026-10-24 - Dokumentationspatches und Quellen-Lineage / Documentation patches and source lineage
+
+Deutsch: Der ausdrücklich begrenzte Nachlauf übernimmt alle 14 veröffentlichten
+Dokumentationspatches aus Home Baseline PR #345. 660 Paketdateien stimmen mit
+den gebundenen Archiven überein; kein Home-only-Overlay. Die einmalige lokale
+Produktsuite besteht mit 678 Tests ohne Skip, 364 gebundenen macOS-Pfaden und
+`SMOKE_OK`; keine geänderte Produktlogik. Fünf zusätzlich genehmigte Receipt-
+Lineages erneuern acht veraltete Quellenbindungen, bei unveränderten Targets,
+DAG, Reihenfolge und Zuständen. Alt-Ready-Review bleibt historisch; neuer Review
+ist ausstehend. Kanonische Profil-2-Statistik und getrennter Pilot werden nach
+dem sauberen Quellencommit jeweils einmal gerendert. Historische Aussagen,
+manuelle Referenzen 80/125 und Berechnungsmethodik bleiben erhalten.
+
+English: The bounded follow-up adopts fourteen published documentation patches
+from Home Baseline PR #345, matching 660 archive files without Home-only overlays.
+One local product run passes 678 tests with no skips, 364 bound macOS paths and
+`SMOKE_OK`; product logic is unchanged. Five separately authorized receipt
+lineages renew eight stale source bindings while preserving targets, DAG,
+order and states. Preserve old Ready evidence historically; current review is
+pending. Render canonical Profile 2 and the separate existing pilot once each
+after the clean source commit. Preserve historical statements, manual 80/125
+references and methodology.
+
 ## Gesamtstatistik / Overall Statistics
 
 Deutsch: Feature 006 ist in PR #104 vollständig implementiert, menschlich
