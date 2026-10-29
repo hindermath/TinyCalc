@@ -936,6 +936,20 @@ pending. Render canonical Profile 2 and the separate existing pilot once each
 after the clean source commit. Preserve historical statements, manual 80/125
 references and methodology.
 
+### 2026-10-29 - Storage-Check-only-Make-Härtung / Storage check-only Make hardening
+
+DE: Der gemeinsame cc65-Storage-Adapter startet in Check-only, Dry-run sowie
+Dirty-/Busy-Updates kein projektgesteuertes Make mehr. Sechzehn gezielte
+Vertragstests bestanden. Documentation Impact: UpdateRequired; die Manpage
+beschreibt die sichere Modusgrenze. Statistik ist Git-basierte Transparenz,
+keine gemessene KI-Produktivität.
+
+EN: The shared cc65 storage adapter no longer starts project-controlled Make
+in check-only, dry-run, or dirty/busy updates. Sixteen focused contract tests
+passed. Documentation Impact: UpdateRequired; the man page documents the safe
+mode boundary. Statistics provide Git-based transparency, not measured AI
+productivity.
+
 ## Gesamtstatistik / Overall Statistics
 
 Deutsch: Feature 006 ist in PR #104 vollständig implementiert, menschlich
@@ -976,26 +990,26 @@ Profil 2 verwendet Git-getrackte Textdateien und sichtbare Git-Aktivitaet. Die W
 
 | Kennzahl / Metric | Wert / Value |
 |---|---:|
-| Textbasis / Text base | 354531 lines |
+| Textbasis / Text base | 354718 lines |
 | Textdateien / Text files | 1991 |
-| Beobachtbarer Zeitraum / Observable period | 2025-11-02..2026-10-25 |
-| Aktivtage / Active days | 100 |
-| Relevante Commits / Relevant commits | 313 |
-| Zeilen je Aktivtag / Lines per active day | 3545.3 |
+| Beobachtbarer Zeitraum / Observable period | 2025-11-02..2026-10-29 |
+| Aktivtage / Active days | 101 |
+| Relevante Commits / Relevant commits | 314 |
+| Zeilen je Aktivtag / Lines per active day | 3512.1 |
 | Peak-Tag im Fenster / Peak day in window | 2026-10-24 / 58461 |
 | Peak-Woche im Fenster / Peak week in window | 2026-10-18 / 106574 |
 | Laengste Serie / Longest streak | 8 days |
-| Speedup vs. 80 lines/day | 44.3x |
-| Speedup vs. 125 lines/day | 28.4x |
-| Methodik / Methodology | v2; source `ae738ed4de65` |
+| Speedup vs. 80 lines/day | 43.9x |
+| Speedup vs. 125 lines/day | 28.1x |
+| Methodik / Methodology | v2; source `f3e9ac99769d` |
 
 ### Artefaktmix / Artifact Mix
 
 ```text
 Produktiv / Production          [#...................]   0.9% | 3118
-Tests                           [#...................]   4.4% | 15476
-Dokumentation / Documentation   [###############.....]  77.3% | 274034
-Skripte / Scripts               [##..................]   9.4% | 33348
+Tests                           [#...................]   4.4% | 15645
+Dokumentation / Documentation   [###############.....]  77.3% | 274046
+Skripte / Scripts               [##..................]   9.4% | 33354
 Konfiguration / Configuration   [#...................]   7.2% | 25462
 Daten und Medien / Data and media [....................]   0.0% | 0
 Sonstiger Text / Other text     [#...................]   0.9% | 3093
@@ -1021,10 +1035,10 @@ Sa/Sa  0 0 0 0 0 0 0 0 0 0 0 0 0 4 0 0 4 0 0 0 2 0 0 0 0 0
 ```text
 Wochen / Weeks 27..52 | 2026-05-03..2026-10-31
 So/Su  0 0 0 0 1 0 4 0 0 0 1 4 4 1 4 4 0 4 4 4 4 0 4 4 4 2
-Mo/Mo  4 0 0 0 0 0 0 0 3 1 4 4 0 0 0 2 0 0 0 0 0 3 3 3 0 -
-Di/Tu  3 0 0 3 0 0 0 0 2 0 3 4 4 0 0 0 0 4 3 4 0 0 4 0 4 -
-Mi/We  2 0 0 0 2 0 4 0 2 0 0 2 4 0 0 0 0 0 0 0 0 0 3 0 4 -
-Do/Th  0 0 0 1 0 4 1 0 0 0 1 4 0 0 4 0 0 3 0 0 0 0 3 0 0 -
+Mo/Mo  4 0 0 0 0 0 0 0 3 1 4 4 0 0 0 2 0 0 0 0 0 3 3 3 0 0
+Di/Tu  3 0 0 3 0 0 0 0 2 0 3 4 4 0 0 0 0 4 3 4 0 0 4 0 4 0
+Mi/We  2 0 0 0 2 0 4 0 2 0 0 2 4 0 0 0 0 0 0 0 0 0 3 0 4 0
+Do/Th  0 0 0 1 0 4 1 0 0 0 1 4 0 0 4 0 0 3 0 0 0 0 3 0 0 2
 Fr/Fr  0 0 4 2 2 0 3 2 3 4 4 4 1 0 0 0 0 4 3 2 0 0 0 0 0 -
 Sa/Sa  0 0 0 0 0 0 4 0 4 4 0 4 2 0 2 0 3 4 4 0 2 4 4 0 4 -
 ```
@@ -1103,6 +1117,18 @@ Slots 0..15
              00 01 02 03 04 05 06 07 08 09 10 11 12 13 14 15
 ```
 
+```text
+Slots 16..16
+     cap 200 | .
+         167 | #
+         133 | #
+         100 | #
+          67 | #
+          33 | #
+           0 +---
+             16
+```
+
 | Slot | Phase | Nettozeilen / Net lines |
 |---:|---|---:|
 | 0 | main / main | 7368 |
@@ -1121,6 +1147,7 @@ Slots 0..15
 | 13 | 004 RL-SE-Selbstpruefung / 004 RL-SE self-assessment | 6760 |
 | 14 | 004 RL-SE-Closeout / 004 RL-SE closeout | 1265 |
 | 15 | Feature 032 verlinkte Intake-Evidence / Feature 032 linked intake evidence | 1359 |
+| 16 | Storage-Check-only-Make-Härtung / Storage check-only Make hardening | 187 |
 
 Die festen Slots halten den Phasenvergleich auch bei fehlenden oder spaeter ergaenzten Werten stabil.
 
@@ -1130,8 +1157,8 @@ Die festen Slots halten den Phasenvergleich auch bei fehlenden oder spaeter erga
 
 ```text
 Scale: 0..50x
-80 lines/day       [##################..] 44.3x
-125 lines/day      [###########.........] 28.4x
+80 lines/day       [##################..] 43.9x
+125 lines/day      [###########.........] 28.1x
 ```
 
 Die Faktoren vergleichen sichtbare Lieferdichte mit den dokumentierten manuellen Referenzen. Sie messen keine Arbeitszeit.
@@ -1144,7 +1171,7 @@ Die Faktoren vergleichen sichtbare Lieferdichte mit den dokumentierten manuellen
 Scale: 0..5000 lines/day
 Experienced manual [#...................] 80
 Thorsten solo      [#...................] 125
-Visible repository [##############......] 3545.3
+Visible repository [##############......] 3512.1
 ```
 
 Die gemeinsame Skala vergleicht Referenzen und sichtbare Lieferdichte. Sie schreibt die Git-Aktivitaet keiner Person oder KI pauschal zu.
@@ -1153,9 +1180,9 @@ Die gemeinsame Skala vergleicht Referenzen und sichtbare Lieferdichte. Sie schre
 
 ### Textalternative / Text Alternative
 
-DE: Das Fenster beginnt am 2025-11-02 und endet am 2026-10-25. Es enthaelt 100 aktive und 258 inaktive vergangene Tage. Peak-Tag: 2026-10-24 / 58461. Peak-Woche: 2026-10-18 / 106574. Laengste Serie: 8 Tage (2026-07-19..2026-07-26).
+DE: Das Fenster beginnt am 2025-11-02 und endet am 2026-10-29. Es enthaelt 101 aktive und 261 inaktive vergangene Tage. Peak-Tag: 2026-10-24 / 58461. Peak-Woche: 2026-10-18 / 106574. Laengste Serie: 8 Tage (2026-07-19..2026-07-26).
 
-*EN: The window starts on 2025-11-02 and ends on 2026-10-25. It contains 100 active and 258 inactive elapsed days. Peak day: 2026-10-24 / 58461. Peak week: 2026-10-18 / 106574. Longest streak: 8 days (2026-07-19..2026-07-26).*
+*EN: The window starts on 2025-11-02 and ends on 2026-10-29. It contains 101 active and 261 inactive elapsed days. Peak day: 2026-10-24 / 58461. Peak week: 2026-10-18 / 106574. Longest streak: 8 days (2026-07-19..2026-07-26).*
 
 | Monat / Month | Geaenderte Textzeilen / Changed text lines |
 |---|---:|
@@ -1170,6 +1197,6 @@ DE: Das Fenster beginnt am 2025-11-02 und endet am 2026-10-25. Es enthaelt 100 a
 | 2026-07 | 74031 |
 | 2026-08 | 26210 |
 | 2026-09 | 70997 |
-| 2026-10 | 166764 |
+| 2026-10 | 167033 |
 
 <!-- project-statistics-v2:end -->
