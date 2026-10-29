@@ -936,6 +936,20 @@ pending. Render canonical Profile 2 and the separate existing pilot once each
 after the clean source commit. Preserve historical statements, manual 80/125
 references and methodology.
 
+### 2026-10-29 - Storage-Check-only-Make-Härtung / Storage check-only Make hardening
+
+DE: Der gemeinsame cc65-Storage-Adapter startet in Check-only, Dry-run sowie
+Dirty-/Busy-Updates kein projektgesteuertes Make mehr. Sechzehn gezielte
+Vertragstests bestanden. Documentation Impact: UpdateRequired; die Manpage
+beschreibt die sichere Modusgrenze. Statistik ist Git-basierte Transparenz,
+keine gemessene KI-Produktivität.
+
+EN: The shared cc65 storage adapter no longer starts project-controlled Make
+in check-only, dry-run, or dirty/busy updates. Sixteen focused contract tests
+passed. Documentation Impact: UpdateRequired; the man page documents the safe
+mode boundary. Statistics provide Git-based transparency, not measured AI
+productivity.
+
 ## Gesamtstatistik / Overall Statistics
 
 Deutsch: Feature 006 ist in PR #104 vollständig implementiert, menschlich
