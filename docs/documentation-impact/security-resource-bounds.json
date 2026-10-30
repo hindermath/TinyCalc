@@ -1,0 +1,42 @@
+{
+  "schemaVersion": "1.1",
+  "feature": "security-resource-bounds",
+  "entries": [
+    {
+      "changeId": "CHG001",
+      "scope": "Formula recalculation and spreadsheet JSON loading resource boundaries",
+      "decision": "UpdateRequired",
+      "rationale": "The security fix introduces observable fail-safe limits for JSON bytes, JSON depth, and formula-reference work while preserving valid saved sheets and per-run recalculation semantics.",
+      "documents": [
+        "README.md",
+        "docs/help/microcalc-help.md",
+        "src/MicroCalc.Tui/Resources/CALC.HLP",
+        "docs/security/threat-model.md",
+        "docs/security/gsdb-intensive-review/open-findings.md",
+        "docs/project-statistics.md"
+      ],
+      "owner": "Repository Maintainer",
+      "audiences": [
+        "TinyCalc users",
+        "Maintainers and security reviewers",
+        "Learners"
+      ],
+      "readerPaths": [
+        "README interaction contract -> migrated help -> runtime help",
+        "Threat model -> GSDB open finding -> focused regression tests"
+      ],
+      "canonicalSource": "src/MicroCalc.Core/IO/SpreadsheetJsonStorage.cs and src/MicroCalc.Core/Formula/FormulaEvaluator.cs",
+      "navigationImpact": "Existing README, help, and security-document paths are updated; no new navigation surface is introduced.",
+      "documentClass": "ActiveSemantic",
+      "languageStrategy": "German first and English second at CEFR B2; runtime help keeps matching German and English pages.",
+      "languagePartners": [],
+      "platformAndExampleProof": "Focused Core tests cover oversized and deeply nested JSON, maximum application-generated sheets, forward-compatible unknown fields, repeated-reference DAGs, work-budget exhaustion, cycles, and dependency refresh.",
+      "distributionClass": "sourceOnly",
+      "homeSyncRequired": false,
+      "evidence": "docs/documentation-impact/security-resource-bounds.json",
+      "risk": "Low residual risk: valid application-generated sheets remain loadable; small unknown JSON fields remain allowed; broader filesystem error-message handling is explicitly out of scope.",
+      "criticality": "Security",
+      "reevaluationTrigger": "Grid dimensions, cell-input limits, JSON format, formula grammar, public evaluator contract, or load error handling changes."
+    }
+  ]
+}

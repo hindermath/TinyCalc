@@ -28,7 +28,10 @@ Lernreferenz erhalten. Für den aktuellen Port gelten diese Präzisierungen:
 - ROUND: Halbwerte weg von null; nichtnegative Präzision abschneiden, dann 0..15.
   15.9 ist zulässig; 16, -0.5 und -1 scheitern verständlich, ohne Clamp.
 - Ungültiges Load verändert weder vorhandene Zellen noch Auswahl/AutoCalc.
-  Print exportiert Text; Abbruch des Randprompts schreibt keine Datei.
+  Load akzeptiert höchstens 128 KiB JSON und 16 Verschachtelungsebenen.
+  Neuberechnung nutzt einen Cache nur für den aktuellen Lauf und meldet
+  übermäßige Referenzarbeit als Fehler. Print exportiert Text; Abbruch des
+  Randprompts schreibt keine Datei.
 
 English: Feature 006 is implemented locally; platform and product acceptance
 remain open. Historical English pages below remain learning references, with
@@ -55,7 +58,10 @@ these binding clarifications for the current port:
 - ROUND uses midpoint-away-from-zero and truncates nonnegative precision to
   0–15. 15.9 is valid; 16, -0.5 and -1 fail clearly without clamping.
 - Invalid Load preserves cells, selection and AutoCalc. Print exports text;
-  cancelling its margin prompt writes no file.
+  Load accepts at most 128 KiB of JSON and sixteen nesting levels.
+  Recalculation uses a cache only for the current run and reports excessive
+  reference work as an error. Print exports text; cancelling its margin prompt
+  writes no file.
 
 ## Page 1 - Introduction
 

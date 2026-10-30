@@ -1,5 +1,27 @@
 # Bedrohungsmodell: TinyCalc Feature 003
 
+## Ressourcenbegrenzung 2026-10-30 / Resource bounds 2026-10-30
+
+Deutsch: Die Trust Boundary Datei/Formel begrenzt `.mcalc.json` auf 128 KiB
+und 16 JSON-Verschachtelungsebenen, bevor ein Objektgraph entsteht. Die
+Neuberechnung verwendet nur innerhalb eines Laufs memoierte Zellwerte und ein
+aus Raster- und Formellimits abgeleitetes Arbeitsbudget. Zykluserkennung,
+atomare Ladeübernahme und bestehende Fehlerverträge bleiben erhalten. Damit
+sind die Standard-Scan-Befunde `csf_c54f3d1ce3e3ec728a5fb57f` und
+`csf_7264301dfe8ca7dc4a0ae14d` technisch adressiert. Restrisiken: bewusst
+ungeprüfte kleine zukünftige JSON-Felder bleiben kompatibel; Dateisystemfehler
+außerhalb dieser beiden Ressourcenbefunde werden getrennt bewertet.
+
+English: The file/formula trust boundary caps `.mcalc.json` at 128 KiB and
+sixteen JSON nesting levels before an object graph is created. Recalculation
+uses cell values memoized only for one run plus a work budget derived from the
+grid and formula limits. Cycle detection, atomic load replacement and existing
+error contracts remain intact. This technically addresses standard-scan
+findings `csf_c54f3d1ce3e3ec728a5fb57f` and
+`csf_7264301dfe8ca7dc4a0ae14d`. Small unknown future JSON properties remain
+compatible by design; filesystem-error handling outside these two resource
+findings remains a separate assessment.
+
 ## Feature 006: geplanter Grenzschutz / Planned boundary protection
 
 ### Deutscher Prüfblock

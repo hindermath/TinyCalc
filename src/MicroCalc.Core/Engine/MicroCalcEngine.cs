@@ -143,6 +143,9 @@ public sealed class MicroCalcEngine
     public RecalculateResult Recalculate()
     {
         var errors = new List<string>();
+        // DE: Eine Sitzung teilt sichere Zwischenergebnisse und das Arbeitsbudget über den gesamten Lauf.
+        // EN: One session shares safe intermediate results and the work budget across the complete run.
+        var evaluationSession = _evaluator.CreateSession(Sheet);
 
         foreach (var address in Sheet.AddressesRowMajor())
         {
@@ -152,7 +155,7 @@ public sealed class MicroCalcEngine
                 continue;
             }
 
-            var eval = _evaluator.EvaluateForCell(cell.Contents, Sheet, address);
+            var eval = evaluationSession.EvaluateForCell(cell.Contents, address);
             if (!eval.Success)
             {
                 errors.Add($"{address}: {eval.ErrorMessage} (Pos {eval.ErrorPosition})");

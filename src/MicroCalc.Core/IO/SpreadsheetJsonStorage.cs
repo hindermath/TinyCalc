@@ -10,6 +10,9 @@ namespace MicroCalc.Core.IO;
 /// </summary>
 public static class SpreadsheetJsonStorage
 {
+    private const int MaximumDocumentSizeBytes = 128 * 1024;
+    private const int MaximumJsonDepth = 16;
+
     /// <summary>
     /// DE: Speichert den Engine-Zustand als JSON-Datei.
     /// EN: Saves the engine state as a JSON file.
@@ -71,11 +74,43 @@ public static class SpreadsheetJsonStorage
     /// </exception>
     public static void Load(string path, MicroCalcEngine engine)
     {
-        var json = File.ReadAllText(path);
         SpreadsheetDocument doc;
+        using var stream = new FileStream(path, new FileStreamOptions
+        {
+            Mode = FileMode.Open,
+            Access = FileAccess.Read,
+            Share = FileShare.Read,
+            BufferSize = 4096,
+            Options = FileOptions.SequentialScan,
+        });
+        // DE: Die Grenze gilt am offenen Handle, bevor JSON-Text oder Objektgraphen Speicher belegen.
+        // EN: Enforce the limit on the open handle before JSON text or object graphs allocate memory.
+        if (stream.Length > MaximumDocumentSizeBytes)
+        {
+            throw DocumentTooLarge();
+        }
+
+        var documentBytes = new byte[MaximumDocumentSizeBytes + 1];
+        var documentLength = 0;
+        int bytesRead;
+        while (documentLength < documentBytes.Length &&
+               (bytesRead = stream.Read(documentBytes, documentLength, documentBytes.Length - documentLength)) > 0)
+        {
+            documentLength += bytesRead;
+        }
+
+        // DE: Auch eine nach dem Laengencheck wachsende Datei darf die Byte-Grenze nicht umgehen.
+        // EN: A file that grows after the length check must not bypass the byte boundary either.
+        if (documentLength > MaximumDocumentSizeBytes)
+        {
+            throw DocumentTooLarge();
+        }
+
         try
         {
-            doc = JsonSerializer.Deserialize<SpreadsheetDocument>(json)
+            doc = JsonSerializer.Deserialize<SpreadsheetDocument>(
+                      documentBytes.AsSpan(0, documentLength),
+                      new JsonSerializerOptions { MaxDepth = MaximumJsonDepth })
                   ?? throw new InvalidDataException("Datei enthält kein gültiges Tabellen-Dokument.");
         }
         catch (JsonException exception)
@@ -113,6 +148,9 @@ public static class SpreadsheetJsonStorage
             cell.FieldWidth = item.FieldWidth;
         }
     }
+
+    private static InvalidDataException DocumentTooLarge() => new(
+        $"Dateigröße überschreitet das Maximum von {MaximumDocumentSizeBytes} Bytes.");
 
     private sealed class SpreadsheetDocument
     {

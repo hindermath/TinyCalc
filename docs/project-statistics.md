@@ -950,6 +950,35 @@ passed. Documentation Impact: UpdateRequired; the man page documents the safe
 mode boundary. Statistics provide Git-based transparency, not measured AI
 productivity.
 
+### 2026-10-30 - Formel- und JSON-Ressourcengrenzen / Formula and JSON resource bounds
+
+DE: Zwei Standard-Scan-Befunde werden gemeinsam an der Datei-/Formelgrenze
+adressiert. JSON-Load liest maximal 128 KiB bei hoechstens 16 Ebenen und
+uebernimmt erst nach vollstaendiger Validierung. Die Neuberechnung memoisiert
+Zellwerte nur fuer den aktuellen Lauf und begrenzt Referenz- sowie
+Bereichsarbeit deterministisch. Vor diesem Statistik-Selbstnachweis umfasst
+der Kandidat netto 153 Produktionscode-, 180 Test- und 81 Dokumentationszeilen,
+insgesamt 414 Zeilen. Das entspricht 5,2 konservativen beziehungsweise 3,3
+Thorsten-Solo-Arbeitstagen oder etwa 40,4 beziehungsweise 25,8 Stunden. Gegen
+einen sichtbaren Aktivtag sind 5,2x und 3,3x reine Lieferdichte, keine
+Stoppuhrmessung. 97 fokussierte Core-Regressionen sowie die vollstaendige
+Solution mit 226 Core- und 461 TUI-Tests bestanden. DocFX baute die
+Dokumentation ohne Warnung oder Fehler; die geaenderten Seiten blieben in der
+textorientierten Stichprobe nutzbar.
+
+EN: Two Standard Scan findings are addressed together at the file/formula
+boundary. JSON Load reads at most 128 KiB with no more than sixteen levels and
+replaces state only after complete validation. Recalculation memoizes cell
+values for one run and deterministically bounds reference and range work.
+Before this statistics self-record, the candidate contains 153 net production,
+180 test and 81 documentation lines, 414 lines in total. This corresponds to
+5.2 conservative or 3.3 Thorsten-solo workdays, about 40.4 or 25.8 hours.
+Against one visible active day, 5.2x and 3.3x describe delivery density, not
+stopwatch time. Ninety-seven focused Core regressions and the complete solution
+with 226 Core and 461 TUI tests pass. DocFX built the documentation without a
+warning or error, and the changed pages remained usable in the text-oriented
+spot check.
+
 ## Gesamtstatistik / Overall Statistics
 
 Deutsch: Feature 006 ist in PR #104 vollständig implementiert, menschlich

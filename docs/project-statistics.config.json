@@ -139,6 +139,14 @@
       "labelEn": "Storage check-only Make hardening",
       "netLines": 187,
       "activeDays": 1
+    },
+    {
+      "slot": 17,
+      "id": "security-resource-bounds",
+      "labelDe": "Formel- und JSON-Ressourcengrenzen",
+      "labelEn": "Formula and JSON resource bounds",
+      "netLines": 414,
+      "activeDays": 1
     }
   ],
   "excludedPaths": [
