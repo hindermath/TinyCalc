@@ -26,33 +26,64 @@ public sealed class FormulaEvaluator
     /// EN: Evaluation result with value or error details.
     /// </returns>
     public EvaluationResult Evaluate(string expression, Spreadsheet sheet)
-        => EvaluateCore(expression, sheet, null);
+        => EvaluateCore(expression, sheet, null, new EvaluationContext());
 
     internal EvaluationResult EvaluateForCell(string expression, Spreadsheet sheet, CellAddress address)
-        => EvaluateCore(expression, sheet, address);
+        => EvaluateCore(expression, sheet, address, new EvaluationContext());
 
-    private static EvaluationResult EvaluateCore(string expression, Spreadsheet sheet, CellAddress? address)
+    internal EvaluationSession CreateSession(Spreadsheet sheet) => new(sheet);
+
+    private static EvaluationResult EvaluateCore(
+        string expression,
+        Spreadsheet sheet,
+        CellAddress? address,
+        EvaluationContext context)
     {
         if (string.IsNullOrWhiteSpace(expression))
         {
             return EvaluationResult.Failed("Ausdruck ist leer.", 1);
         }
 
+        if (address.HasValue && context.TryGetValue(address.Value, out var cachedValue))
+        {
+            return EvaluationResult.Ok(cachedValue, true);
+        }
+
         var normalized = Normalize(expression);
         var stack = new HashSet<CellAddress>();
         // DE: Eine neue Formel darf ihre eigene Zielzelle auch nicht über einen Umweg lesen.
         // EN: A new formula must not read its own destination, including indirect references.
-        if (address.HasValue) stack.Add(address.Value);
+        if (address.HasValue)
+        {
+            if (!context.TryConsumeEvaluationStep())
+            {
+                return EvaluationResult.Failed("Berechnungsbudget überschritten.", 1);
+            }
+
+            stack.Add(address.Value);
+        }
 
         try
         {
-            var parser = new Parser(normalized, sheet, stack);
+            var parser = new Parser(normalized, sheet, stack, context);
             var value = parser.ParseToEnd();
+            if (address.HasValue)
+            {
+                context.SetValue(address.Value, value);
+            }
+
             return EvaluationResult.Ok(value, parser.IsFormula);
         }
         catch (FormulaParseException ex)
         {
             return EvaluationResult.Failed(ex.Message, ex.Position);
+        }
+        finally
+        {
+            if (address.HasValue)
+            {
+                stack.Remove(address.Value);
+            }
         }
     }
 
@@ -72,18 +103,65 @@ public sealed class FormulaEvaluator
         return text;
     }
 
+    internal sealed class EvaluationSession
+    {
+        private readonly Spreadsheet _sheet;
+        private readonly EvaluationContext _context = new();
+
+        internal EvaluationSession(Spreadsheet sheet)
+        {
+            _sheet = sheet;
+        }
+
+        internal EvaluationResult EvaluateForCell(string expression, CellAddress address)
+            => EvaluateCore(expression, _sheet, address, _context);
+    }
+
+    private sealed class EvaluationContext
+    {
+        // DE: 32 Schritte je moeglichem Zeichen und Zelle decken selbst sieben Vollbereichsreferenzen
+        // je 70-Zeichen-Formel samt Aufloesung ab, begrenzen aber unverhaeltnismaessige API-Ausdruecke.
+        // EN: 32 steps per possible character and cell cover seven full-grid ranges in every
+        // 70-character formula including resolution, while bounding disproportionate API expressions.
+        private const int MaximumEvaluationSteps =
+            SpreadsheetSpec.ColumnCount * SpreadsheetSpec.RowCount * SpreadsheetSpec.CellInputLimit * 32;
+        private readonly Dictionary<CellAddress, double> _values = new();
+        private int _evaluationSteps;
+
+        public bool TryGetValue(CellAddress address, out double value) => _values.TryGetValue(address, out value);
+
+        public void SetValue(CellAddress address, double value) => _values[address] = value;
+
+        public bool TryConsumeEvaluationStep()
+        {
+            if (_evaluationSteps >= MaximumEvaluationSteps)
+            {
+                return false;
+            }
+
+            _evaluationSteps++;
+            return true;
+        }
+    }
+
     private sealed class Parser
     {
         private readonly string _text;
         private readonly Spreadsheet _sheet;
         private readonly HashSet<CellAddress> _evaluationStack;
+        private readonly EvaluationContext _context;
         private int _position;
 
-        public Parser(string text, Spreadsheet sheet, HashSet<CellAddress> evaluationStack)
+        public Parser(
+            string text,
+            Spreadsheet sheet,
+            HashSet<CellAddress> evaluationStack,
+            EvaluationContext context)
         {
             _text = text;
             _sheet = sheet;
             _evaluationStack = evaluationStack;
+            _context = context;
         }
 
         public bool IsFormula { get; private set; }
@@ -462,6 +540,11 @@ public sealed class FormulaEvaluator
             {
                 for (var column = startColumn; column <= endColumn; column++)
                 {
+                    if (!_context.TryConsumeEvaluationStep())
+                    {
+                        throw Error("Berechnungsbudget überschritten.");
+                    }
+
                     var address = new CellAddress(SpreadsheetSpec.IndexToColumn(column), row);
                     var cell = _sheet.GetCell(address);
                     if (cell.Status.HasFlag(CellStatusFlags.Constant) || cell.Status.HasFlag(CellStatusFlags.Calculated))
@@ -476,6 +559,16 @@ public sealed class FormulaEvaluator
 
         private double ResolveCellValue(CellAddress address)
         {
+            if (!_context.TryConsumeEvaluationStep())
+            {
+                throw Error("Berechnungsbudget überschritten.");
+            }
+
+            if (_context.TryGetValue(address, out var cachedValue))
+            {
+                return cachedValue;
+            }
+
             if (!_evaluationStack.Add(address))
             {
                 throw Error($"Zyklische Referenz in {address}.");
@@ -488,15 +581,34 @@ public sealed class FormulaEvaluator
                 if (cell.Status.HasFlag(CellStatusFlags.Text) &&
                     !cell.Status.HasFlag(CellStatusFlags.Constant))
                 {
+                    if (!cell.Status.HasFlag(CellStatusFlags.Formula))
+                    {
+                        _context.SetValue(address, 0);
+                    }
+
                     return 0;
                 }
 
                 if (cell.Status.HasFlag(CellStatusFlags.Constant) && !string.IsNullOrWhiteSpace(cell.Contents))
                 {
-                    var nested = new Parser(NormalizeCellExpression(cell.Contents), _sheet, _evaluationStack);
+                    var nested = new Parser(
+                        NormalizeCellExpression(cell.Contents),
+                        _sheet,
+                        _evaluationStack,
+                        _context);
                     var nestedValue = nested.ParseToEnd();
                     cell.Value = nestedValue;
+                    _context.SetValue(address, nestedValue);
                     return nestedValue;
+                }
+
+                // DE: Ein geladener Formula-Status ohne Constant bleibt ein eigener spaeterer
+                // Auswertungswurzelpunkt; sein alter Rohwert darf diese Auswertung nicht verdecken.
+                // EN: A loaded Formula status without Constant remains a later evaluation root;
+                // its stale raw value must not hide that evaluation.
+                if (!cell.Status.HasFlag(CellStatusFlags.Formula))
+                {
+                    _context.SetValue(address, cell.Value);
                 }
 
                 return cell.Value;

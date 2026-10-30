@@ -169,6 +169,7 @@ In der Palette: Q/L/S/R/P/F/A fuer die bisherigen Befehle.
 Ctrl-Q beendet im Raster; Clear und Help stehen im Menue.
 Tab/Shift-Tab wechselt Dialogaktionen; Enter bestaetigt OK.
 JSON ist das Dateiformat; kein .MCS-Import in diesem Port.
+Load: maximal 128 KiB JSON und 16 Verschachtelungsebenen.
 Print schreibt Text; Abbruch des Randprompts schreibt nichts.
 Lokale Implementierung: Plattform-/Produktabnahme noch offen.
 .PA
@@ -188,6 +189,7 @@ ROUND rundet Halbwerte weg von null.
 Praezision: Rohwert nichtnegativ, abschneiden, dann 0..15.
 15.9 wird 15; 16, -0.5 und -1 sind Fehler, kein Clamp.
 Fehlerhaftes Load ersetzt keine Teile des vorhandenen Blatts.
+Neuberechnung begrenzt uebermaessige Referenzarbeit sicher.
 .PA
 Current port: interaction (EN)
 Grid A1:G21; edge selection wraps within this grid.
@@ -203,6 +205,7 @@ Palette Q/L/S/R/P/F/A select the existing commands.
 Ctrl-Q quits from the grid; Clear and Help are in the menu.
 Tab/Shift-Tab moves between dialog actions; Enter accepts OK.
 Files use JSON; this port has no .MCS import.
+Load accepts at most 128 KiB of JSON and sixteen nesting levels.
 Print exports text; cancelling the margin prompt writes nothing.
 Local implementation: platform/product acceptance remains open.
 .PA
@@ -222,4 +225,5 @@ ROUND rounds midpoints away from zero.
 Precision: nonnegative raw value, truncate, then allow 0..15.
 15.9 becomes 15; 16, -0.5 and -1 are errors, never clamped.
 Invalid Load never partially replaces the existing worksheet.
+Recalculation safely bounds excessive reference work.
 

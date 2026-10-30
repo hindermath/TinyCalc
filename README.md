@@ -126,7 +126,10 @@ Die [lesbare Vertragsbeschreibung](docs/contracts/tui/README.md) und die
 - ROUND rundet Halbwerte weg von null. Nichtnegative Präzision wird abgeschnitten:
   0..15 sind zulässig, 15.9 wird 15; 16 und negative Rohwerte sind Fehler.
 - Numerische Ergebnisse müssen endlich sein. Fehlerhafte Load-Daten ersetzen kein Teilblatt.
-  Save/Load nutzen JSON, Print exportiert Text; `.MCS`-Import bleibt außerhalb des Umfangs.
+  Load akzeptiert höchstens 128 KiB JSON mit maximal 16 Verschachtelungsebenen.
+  Eine Neuberechnung speichert Zellwerte nur für diesen Lauf zwischen und beendet
+  übermäßige Referenzarbeit mit einem Fehler. Save/Load nutzen JSON, Print exportiert
+  Text; `.MCS`-Import bleibt außerhalb des Umfangs.
 
 English: Feature 006 is implemented locally and still awaits acceptance. Follow
 the linked readable contract and migrated help for individual interaction paths.
@@ -148,7 +151,10 @@ the linked readable contract and migrated help for individual interaction paths.
 - ROUND rounds midpoints away from zero. Truncate nonnegative precision to 0–15:
   15.9 becomes 15; 16 and negative raw precision are errors.
 - Numeric results must be finite. Invalid loads never partially replace a sheet.
-  Save/Load use JSON and Print exports text; `.MCS` import remains out of scope.
+  Load accepts at most 128 KiB of JSON with at most sixteen nesting levels.
+  Recalculation caches cell values only for that run and rejects excessive
+  reference work. Save/Load use JSON and Print exports text; `.MCS` import
+  remains out of scope.
 
 ### Commands (TUI)
 

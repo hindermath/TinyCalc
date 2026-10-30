@@ -52,6 +52,79 @@ public sealed class StorageContractTests
         Assert.Equal(before, Snapshot(engine));
     }
 
+    [Fact]
+    [Trait("Security", "ResourceLimit")]
+    public void OversizedLoad_IsRejectedBeforeReplacingTheWorksheet()
+    {
+        using var directory = new OwnedContractDirectory();
+        var path = Path.Combine(directory.Path, "oversized.json");
+        File.WriteAllText(path, $$"""
+            {"AutoCalc":true,"Cells":[],"Padding":"{{new string('x', 1024 * 1024)}}"}
+            """);
+        var engine = Seed();
+        var before = Snapshot(engine);
+
+        var exception = Assert.Throws<InvalidDataException>(() => SpreadsheetJsonStorage.Load(path, engine));
+
+        Assert.Contains("Dateigröße", exception.Message, StringComparison.OrdinalIgnoreCase);
+        Assert.Equal(before, Snapshot(engine));
+    }
+
+    [Fact]
+    [Trait("Security", "ResourceLimit")]
+    public void DeeplyNestedLoad_IsRejectedBeforeReplacingTheWorksheet()
+    {
+        using var directory = new OwnedContractDirectory();
+        var path = Path.Combine(directory.Path, "deep.json");
+        var nested = string.Concat(Enumerable.Repeat("[", 20)) + "0" + string.Concat(Enumerable.Repeat("]", 20));
+        File.WriteAllText(path, $"{{\"AutoCalc\":true,\"Cells\":[],\"Nested\":{nested}}}");
+        var engine = Seed();
+        var before = Snapshot(engine);
+
+        Assert.Throws<InvalidDataException>(() => SpreadsheetJsonStorage.Load(path, engine));
+
+        Assert.Equal(before, Snapshot(engine));
+    }
+
+    [Fact]
+    [Trait("Security", "ResourceLimit")]
+    public void MaximumWorksheetSavedByTheApplication_RemainsLoadable()
+    {
+        using var directory = new OwnedContractDirectory();
+        var path = Path.Combine(directory.Path, "maximum.json");
+        var engine = new MicroCalcEngine();
+        foreach (var address in engine.Sheet.AddressesRowMajor())
+        {
+            var cell = engine.Sheet.GetCell(address);
+            cell.Contents = new string('\u001f', SpreadsheetSpec.CellInputLimit);
+            cell.Status = CellStatusFlags.Text;
+        }
+
+        SpreadsheetJsonStorage.Save(path, engine);
+        var loaded = new MicroCalcEngine();
+        SpreadsheetJsonStorage.Load(path, loaded);
+
+        Assert.Equal(Snapshot(engine, includeSelection: false), Snapshot(loaded, includeSelection: false));
+    }
+
+    [Fact]
+    [Trait("Contract", "Storage")]
+    public void SmallUnknownProperty_RemainsForwardCompatible()
+    {
+        using var directory = new OwnedContractDirectory();
+        var path = Path.Combine(directory.Path, "forward-compatible.json");
+        File.WriteAllText(path, """
+            {"AutoCalc":false,"Cells":[],"FutureMetadata":{"Version":1}}
+            """);
+        var engine = Seed();
+
+        SpreadsheetJsonStorage.Load(path, engine);
+
+        Assert.False(engine.AutoCalc);
+        Assert.All(engine.Sheet.AddressesRowMajor(),
+            address => Assert.Equal(CellStatusFlags.Text, engine.Sheet.GetCell(address).Status));
+    }
+
     private static MicroCalcEngine Seed()
     {
         var engine = new MicroCalcEngine();
