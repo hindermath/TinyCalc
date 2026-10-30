@@ -1053,8 +1053,8 @@
       "sourceClass": "ProjectEvidence",
       "path": "docs/security/threat-model.md",
       "version": "Current",
-      "reviewedAt": "2026-10-10",
-      "normalizedSha256": "4ec34eae41ed654fa02f14a2412ad8667555c1f5d1b873da4059a1d70bcf8c48",
+      "reviewedAt": "2026-10-30",
+      "normalizedSha256": "a6cfafb7b15749c9051e5802cc6de4fbf4c0a5a27e6298ad7b90d3f87c3fa169",
       "scope": {
         "de": "Zeilenspezifischer aktueller Nachweis aus docs/security/threat-model.md; der Hash beweist Inhalt, nicht automatisch Erfuellung.",
         "en": "Current row-specific evidence from docs/security/threat-model.md; the hash proves content, not automatic fulfilment."
