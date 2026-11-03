@@ -77,7 +77,7 @@ $script:ExpectedPresets = [ordered]@{
     'intake-review-governance' = @{ Version = '0.2.7'; Priority = 'NotInStandardMatrix'; Standard = $false; Families = @('CL-08', 'CL-09', 'CL-12'); Gates = @('001', '028', '032') }
     'intake-sequencing-governance' = @{ Version = '0.2.11'; Priority = 'NotInStandardMatrix'; Standard = $false; Families = @('CL-09', 'CL-12'); Gates = @('001', '032', '033') }
     'isaqb-architecture-governance' = @{ Version = '0.2.5'; Priority = 30; Standard = $true; Families = @('CL-02', 'CL-04'); Gates = @('010') }
-    'model-routing-governance' = @{ Version = '0.1.7'; Priority = 'NotInStandardMatrix'; Standard = $false; Families = @('CL-09', 'CL-12'); Gates = @('001', '002') }
+    'model-routing-governance' = @{ Version = '0.2.3'; Priority = 'NotInStandardMatrix'; Standard = $false; Families = @('CL-09', 'CL-12'); Gates = @('001', '002') }
     'parallel-autonomous-run-governance' = @{ Version = '0.2.9'; Priority = 80; Standard = $true; Families = @('CL-09', 'CL-12'); Gates = @('033') }
     # DE: Statistik belegt Dokumentationspflege, nicht die Erfüllung von Sicherheitskontrollen.
     # EN: Statistics support documentation maintenance, not fulfilment of security controls.

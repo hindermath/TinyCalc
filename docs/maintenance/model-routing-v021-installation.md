@@ -44,6 +44,9 @@ Prüfungen: exakte projektgeführte 14er-Matrix, Release-/Ist-Payload-Bindung,
 Erhalt der übrigen Presets, Agentenflächen-Parität, Root-/Preset-Resolver-Parität,
 Bash-/PowerShell-Fixtures, vorhandene Skriptkataloge, Secrets und native PR-CI. Die 119
 Tests zur breiten Auswahl nutzen ausschließlich synthetische Inventare.
+Die bestehende GSDB-Prüfung bindet das neue Manifest und die Registry erneut;
+Negativtests lehnen die alten Hashes und Versionen weiterhin geschlossen ab.
+Kontrollzeilen, Findings, Pflichten und andere Preset-Bewertungen bleiben erhalten.
 Echte Konten, Quote, Inferenz sowie Produkt-/Plattform-/A11Y-Abnahmen bleiben
 getrennte Nachweise. CI-Ergebnisse und Merge-SHAs stehen im zugehörigen PR.
 
@@ -85,7 +88,10 @@ No formal sandbox or provider approval is implied.
 Checks cover the exact project matrix, source/installed payloads, preservation
 of unrelated presets, agent surfaces, top-level/preset resolver parity, both
 shell fixtures, existing script catalogs, secrets and native PR CI. The 119 broad-selection
-assertions use synthetic inventories only. Live accounts, quota, inference and
+assertions use synthetic inventories only. The existing GSDB validation
+rebinds the new manifest and registry; negative
+tests continue to reject the old hashes and versions. Control rows, findings,
+duties and all other preset assessments remain unchanged. Live accounts, quota, inference and
 product/platform/accessibility acceptance remain separate evidence. Actual CI
 results and merge SHAs are recorded in the PR.
 
