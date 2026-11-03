@@ -5,15 +5,13 @@
         "Maintainers",
         "AI agents"
       ],
-      "canonicalSource": ".github/workflows/ci.yml",
+      "canonicalSource": ".github/DEPENDENCY-MAINTENANCE.md",
       "changeId": "CHG001",
-      "criticality": "Usage",
-      "decision": "UpdateRequired",
+      "criticality": "Normal",
+      "decision": "NoUpdateRequired",
       "distributionClass": "sourceOnly",
       "documentClass": "ActiveSemantic",
-      "documents": [
-        ".github/DEPENDENCY-MAINTENANCE.md"
-      ],
+      "documents": [],
       "evidence": ".github/DEPENDENCY-MAINTENANCE.md",
       "homeSyncRequired": false,
       "languagePartners": [],
@@ -21,13 +19,13 @@
       "navigationImpact": "Existing maintenance and statistics entry points remain valid",
       "owner": "Repository Maintainer",
       "platformAndExampleProof": "macOS Bash renderer preview/update/check; exact staged validation, secret scan and exact-head hosted platform checks",
-      "rationale": "DE: Den Major-Wechsel des Coverage-Collectors im vorhandenen nativen Testlauf mit echten, nicht leeren Cobertura-Dateien nachweisen. EN: Verify the coverage-collector major update in the existing native test run using real, nonempty Cobertura reports.",
+      "rationale": "DE: Bestehende Versionspflege; keine neue Bedienung oder API. EN: Existing dependency maintenance; no new user workflow or API.",
       "readerPaths": [
         ".github/DEPENDENCY-MAINTENANCE.md -> dependency PR -> technical checks"
       ],
       "reevaluationTrigger": "Changed dependency paths, manifest, runtime or update policy",
       "risk": "Dependency compatibility requires technical checks; generated statistics are not product acceptance",
-      "scope": "Dependency maintenance PR hindermath/TinyCalc#126"
+      "scope": "Dependency maintenance PR hindermath/TinyCalc#127"
     },
     {
       "audiences": [
@@ -97,6 +95,6 @@
       "scope": "Current installed statistics context: project-statistics-pilot"
     }
   ],
-  "feature": "dependabot-pr-126-repair",
+  "feature": "dependabot-pr-127-repair",
   "schemaVersion": "1.1"
 }
