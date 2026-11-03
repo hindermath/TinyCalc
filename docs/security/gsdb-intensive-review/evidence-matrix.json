@@ -828,8 +828,8 @@
       "sourceClass": "Workflow",
       "path": ".github/workflows/gitleaks.yml",
       "version": "Unversioned",
-      "reviewedAt": "2026-09-06",
-      "normalizedSha256": "825705909c0a7c4f1b3844c73f30c46bc684a736adb959892add3f53897c8a8a",
+      "reviewedAt": "2026-11-03",
+      "normalizedSha256": "a649dedfddfbfaa769f5376746f91507317563c3234f21ca3ab9e64c68b9408f",
       "scope": {
         "de": "Diese Quelle wird nur für ihren benannten TinyCalc-Prüfumfang verwendet.",
         "en": "This source is used only for its named TinyCalc assessment scope."
