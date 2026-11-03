@@ -72,3 +72,13 @@ PR/issue workflows. This repository no longer starts Claude Code GitHub Actions.
 Local Claude tools and CLAUDE.md remain independent development tools.
 Technical checks and human reviews remain required; dependency PRs receive
 no auto-merge.
+
+## Coverage-Collector pruefen / Verify the coverage collector
+
+DE: Native CI aktiviert den Coverage-Collector im vorhandenen Testlauf. Beide
+Testprojekte muessen Cobertura-Nachweise mit instrumentierten Quellzeilen liefern.
+Eine feste Coverage-Quote oder Produktabnahme wird damit nicht eingefuehrt.
+
+EN: Native CI enables the coverage collector in the existing test run. Both test
+projects must produce Cobertura evidence with instrumented source lines. This
+does not introduce a coverage percentage threshold or product acceptance.
