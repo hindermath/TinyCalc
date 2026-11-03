@@ -1,0 +1,12 @@
+{
+  "schemaVersion": "1.0",
+  "priorReviewId": "0cb1a45b-9f8e-40a6-b102-1477e13b1332",
+  "priorResultPath": "requirements/intakes/series-archive/tinycalc-delivery/20261103-dependabot-readme-source-renewal/intake-review-result.json",
+  "priorResultNormalizedSha256": "bb20ceebca3d11e87078f0e9edac0b7102e02e3841a5215f552c139bad92851b",
+  "priorRequestPath": "requirements/intakes/series-archive/tinycalc-delivery/20261103-dependabot-readme-source-renewal/intake-review-request.json",
+  "status": "Superseded",
+  "reason": "Two intake provenance receipts renewed under explicit authority; target bytes, series manifest, order, roots, edges and lifecycle states are unchanged. No current Ready review is claimed.",
+  "replacementRequest": "requirements/intakes/series/tinycalc-delivery/intake-review-request.json",
+  "replacementReviewId": "d4536c4f-4113-4ec5-a996-41ace9efb428",
+  "operationId": "9376674f-1cd6-456b-9a5e-6ce515692a33"
+}

@@ -1,0 +1,28 @@
+{
+  "schemaVersion": "1.0",
+  "documentType": "IntakeSourceRenewalOperation",
+  "operationId": "9376674f-1cd6-456b-9a5e-6ce515692a33",
+  "type": "Update",
+  "status": "Published",
+  "authorityEvidence": "Thorsten explicitly approved on 2026-11-03 renewal of the README source bindings for the Rename MicroCalc/TinyCalc and TUI functional acceptance/regression intakes. Preserve target bytes, intake IDs, accepted scope and delivery authority. Archive predecessor receipts, create new provenance receipts, and renew or mark affected review/series evidence pending. This does not authorize a product run or product acceptance.",
+  "preparedPaths": [
+    "specs/intake-authoring-receipts/history/rename-microcalc-tinycalc.20261103-dependabot-readme-source-renewal.json",
+    "requirements/intakes/history/20261103-dependabot-readme-source-renewal/Lastenheft_Rename_MicroCalc_TinyCalc.md",
+    "specs/intake-authoring-receipts/rename-microcalc-tinycalc.json",
+    "specs/intake-authoring-receipts/history/tui-funktionsabnahme-und-regressionsvertrag.20261103-dependabot-readme-source-renewal.json",
+    "requirements/intakes/history/20261103-dependabot-readme-source-renewal/Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md",
+    "specs/intake-authoring-receipts/tui-funktionsabnahme-und-regressionsvertrag.json",
+    "requirements/intakes/series-archive/tinycalc-delivery/20261103-dependabot-readme-source-renewal/intake-review-request.json",
+    "requirements/intakes/series-archive/tinycalc-delivery/20261103-dependabot-readme-source-renewal/intake-review-result.json",
+    "requirements/intakes/series-archive/tinycalc-delivery/20261103-dependabot-readme-source-renewal/intake-review-report.md",
+    "requirements/intakes/series/tinycalc-delivery/intake-review-request.json",
+    "requirements/intakes/series/tinycalc-delivery/intake-review-result.json",
+    "requirements/intakes/series-archive/tinycalc-delivery/20261103-dependabot-readme-source-renewal/superseded-review.json",
+    "requirements/intakes/series/tinycalc-delivery/intake-review-report.md",
+    "specs/intake-authoring-operations/9376674f-1cd6-456b-9a5e-6ce515692a33/proposal.json",
+    "specs/intake-authoring-operations/9376674f-1cd6-456b-9a5e-6ce515692a33/lineage.json",
+    "specs/intake-authoring-operations/9376674f-1cd6-456b-9a5e-6ce515692a33/operation.json"
+  ],
+  "validation": "PASS: both Bash receipt validators; full PowerShell requirements, receipt, manifest and series validation; pending review branch; byte-identical predecessor archives and canonical targets",
+  "rollbackBoundary": "Restore original active receipts and review files byte-for-byte; remove only new operation-owned files."
+}

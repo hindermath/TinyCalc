@@ -813,8 +813,8 @@
       "sourceClass": "Workflow",
       "path": ".github/workflows/agent-secret-scan.yml",
       "version": "Unversioned",
-      "reviewedAt": "2026-09-06",
-      "normalizedSha256": "2e604000c7c18c64420c3553f0db35e18222bafd9324a90295126667e567ada2",
+      "reviewedAt": "2026-11-03",
+      "normalizedSha256": "bfe30d924af9ea89716c8e5a8ba6a563555f235eb3cf99603f66d45360a97687",
       "scope": {
         "de": "Diese Quelle wird nur für ihren benannten TinyCalc-Prüfumfang verwendet.",
         "en": "This source is used only for its named TinyCalc assessment scope."
@@ -829,7 +829,7 @@
       "path": ".github/workflows/gitleaks.yml",
       "version": "Unversioned",
       "reviewedAt": "2026-11-03",
-      "normalizedSha256": "a649dedfddfbfaa769f5376746f91507317563c3234f21ca3ab9e64c68b9408f",
+      "normalizedSha256": "b49533f5b3171a2aeeedbbe2b8c9283e3f4b50cbc3f8d2610b5a2d5dfe50c392",
       "scope": {
         "de": "Diese Quelle wird nur für ihren benannten TinyCalc-Prüfumfang verwendet.",
         "en": "This source is used only for its named TinyCalc assessment scope."
@@ -843,8 +843,8 @@
       "sourceClass": "Workflow",
       "path": ".github/workflows/homogeneity-check.yml",
       "version": "Unversioned",
-      "reviewedAt": "2026-09-06",
-      "normalizedSha256": "43913c7567bbaf941769d557381dbcb29f50778f96528abcf887dafe73db949e",
+      "reviewedAt": "2026-11-03",
+      "normalizedSha256": "a66efeff3ef3be212bb6fcddc2b1c7ca31088ecbcf7d0090c0dc4cea823e1f7e",
       "scope": {
         "de": "Diese Quelle wird nur für ihren benannten TinyCalc-Prüfumfang verwendet.",
         "en": "This source is used only for its named TinyCalc assessment scope."
@@ -888,8 +888,8 @@
       "sourceClass": "Workflow",
       "path": ".github/workflows/requirements-intake-governance.yml",
       "version": "Unversioned",
-      "reviewedAt": "2026-09-06",
-      "normalizedSha256": "b3c36af60db78839159b3a6dd714c090792b38e8c4a957f4ec8a38f47116a752",
+      "reviewedAt": "2026-11-03",
+      "normalizedSha256": "08e8fffce72aa7ada728759e818cd9dbba9f5a0f018686146257d815578cfd9a",
       "scope": {
         "de": "Diese Quelle wird nur für ihren benannten TinyCalc-Prüfumfang verwendet.",
         "en": "This source is used only for its named TinyCalc assessment scope."
