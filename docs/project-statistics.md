@@ -646,6 +646,8 @@ runtime evidence.*
 | 2026-10-24 | Serienreview nach Quellen-Lineage / Series review after source lineage | Branch `main`, Basis `8820342`; beobachtbares Arbeitsfenster: beauftragter Intake-Review, Hashvergleich, Quellen-/Serienprüfung und Ergebnisdokumentation, keine Stoppuhrmessung. `0` Produktionscode-, `0` Produkttest- und `442` Zeilen in den aktuellen Review-Ergebnisdateien vor Ledger-Selbstnachweis. Ergebnis `Ready` für 13 Intake-Dokumente, vier Wurzeln, neun harte Abhängigkeiten; null Befunde, Risiken und Fragen. Alle 13 Hashes stimmen mit dem archivierten unabhängigen Fachreview überein; dessen Semantikprüfung wird ausdrücklich weiterverwendet. Frische Quellenprüfung bestätigt fünf Receipt-Lineages und byteidentische Intake-Archive; heutiger Lauf ist kein neuer unabhängiger oder menschlicher Review. PowerShell-/Bash-Alignment einschließlich Authoring-, Serien- und Reviewvalidatoren bestehen mit Exit 0. UTF-8/LF, Secret-Scans und Diffprüfung bestanden. DocFX-HTML: Exit 0, 105 Warnungen; drei Seiten mit Snapshot/axe/lynx geprüft, null automatische Verstöße. Kontrast-/Textlinkbewertung unvollständig, zwei bestehende HTML-404-Links offen. Statistik-Check-only DRIFT und Homogenität Score 97/Exit 1 ausschließlich wegen Statistikdrift; Render bleibt bis genehmigter sauberer Commit-Grenze offen. Reihenfolge, Fortschrittsstatus und historische Abnahmen bleiben erhalten. Keine Feature-007-Implementierungsfreigabe. NIST SSDF/CWE Top 25 anwendbar; TDD/Coverage und Produkt-AI-SBOM mangels Produktänderung N/A, bei Code-/Runtimeänderung neu prüfen. Generierter Profil-2-Block bleibt der bestehende Commit-Nachweis; kein neuer Clean-Source-Render. Referenzen 80/125 Zeilen je Arbeitstag, 7.8 Stunden je Tag und 21.5 Tage je Monat unverändert, keine neue Beschleunigungsbehauptung. Kein Produkt-Build, Produkttest, Commit oder Push. / Review 13 unchanged targets using exact-hash prior independent semantic evidence and fresh provenance checks; Ready concerns document quality only. Preserve order, states and historical acceptance, with no product permission or fresh generated statistics claim. Both validator paths pass; HTML checks find no automatic axe violations but retain incomplete contrast/link assessments and two existing 404 links. Statistics/homogeneity remain open for clean-source rendering. |
 
 | 2026-10-25 | Review-/Analyze-Lieferung und separater Statistikabschluss / Review and analysis delivery with separate statistics closure | Branch `codex/intake-review-statistics-oct25`, Ausgangsbasis `8820342`; Arbeitsfenster: genehmigter Review-Commit, sauberer Statistik-Render und PR-Lieferung, keine Stoppuhrmessung. `0` Produktionscode- und `0` Produkttestzeilen; 545 netto Dokumentationszeilen (561 hinzugefügt, 16 entfernt, einschließlich Ledger und PR-Text), generierte Statistik getrennt. Beide Alignment-Wege samt 13 Receipts/Serienreview Exit 0; UTF-8/LF, Secrets, Diff und exakter Staging-Kandidat bestanden. DocFX Exit 0 mit 105 Warnungen; vier Seiten Snapshot/axe/lynx, null automatische Verstöße. Unvollständige Kontrast-/Textlinkbewertungen und zwei bestehende HTML-404-Links bleiben offen. Der lesende Feature-007-Analyze bestätigt geplante Abdeckung von 27 Anforderungskennungen und acht Abnahmen durch 60 offene Aufgaben, null neue Befunde; kein Produkt-Pass. Aktueller Serienreview Ready für 13 unveränderte Intakes, vier Wurzeln, neun Abhängigkeiten; alte unabhängige Fachprüfung nur bei identischem Zielhash weiterverwendet. Erst Quellen/Ledger/PR-Text committen, dann Profil 2 an sauberer Quellenbasis Vorschau → Render → Check, Statistik separat committen. Privatdatei ausgeschlossen; kein Produktbuild/-test/-restore, Paket-/Versions-/Lastenheft-/Serienstatuswechsel. NIST SSDF/CWE Top 25 gelten; TDD/Coverage mangels Codeänderung N/A mit Trigger Codeänderung. Referenzen 80/125 Zeilen/Tag, 7.8 Stunden/Tag und 21.5 Tage/Monat bleiben Modelle ohne neue Beschleunigungsbehauptung. MergeAndSync/Admin-Bypass nach grünen technischen Gates ausdrücklich genehmigt; Claude ausgenommen, kein behaupteter Pass. / Deliver document review and planned coverage only; preserve historical native/HTML proof limits and perform generated statistics at a separate clean source boundary. Product scope and execution remain unchanged. |
+| 2026-11-03 | Model Routing Governance 0.2.1 | UpdateRequired: hashgebundenes Release, ein Preset aktualisiert, andere 13 erhalten; vollständige Resolver-Ressourcen und Root-/Preset-Parität geprüft. Keine Modellaufrufe oder Profilmigration. / Hash-bound release, one preset updated, other 13 preserved; complete runtime closure and root/preset parity verified. No inference or profile migration. [Evidence](maintenance/model-routing-v021-installation.md). |
+| 2026-11-03 | Model Routing Governance 0.2.3 | UpdateRequired: hashgebundenes Release mit strukturiertem Harness-Rückkanal und kanonischem Adapterpfad, ein Preset aktualisiert, andere 13 erhalten; vollständige Resolver-Ressourcen und Root-/Preset-Parität geprüft. Keine Modellaufrufe oder Profilmigration. / Hash-bound release with structured harness result transport and canonical adapter path, one preset updated, other 13 preserved; complete runtime closure and root/preset parity verified. No inference or profile migration. [Evidence](maintenance/model-routing-v023-installation.md). |
 
 ## Statistikprofil-1-Archiv / Statistics Profile 1 Archive
 Basis dieses Schlussblocks sind die aktuell dokumentierten Snapshot- und
@@ -1047,27 +1049,27 @@ Profil 2 verwendet Git-getrackte Textdateien und sichtbare Git-Aktivitaet. Die W
 
 | Kennzahl / Metric | Wert / Value |
 |---|---:|
-| Textbasis / Text base | 357231 lines |
-| Textdateien / Text files | 2008 |
+| Textbasis / Text base | 360083 lines |
+| Textdateien / Text files | 2045 |
 | Beobachtbarer Zeitraum / Observable period | 2025-11-09..2026-11-03 |
 | Aktivtage / Active days | 103 |
-| Relevante Commits / Relevant commits | 341 |
-| Zeilen je Aktivtag / Lines per active day | 3468.3 |
+| Relevante Commits / Relevant commits | 344 |
+| Zeilen je Aktivtag / Lines per active day | 3496.0 |
 | Peak-Tag im Fenster / Peak day in window | 2026-10-24 / 58461 |
 | Peak-Woche im Fenster / Peak week in window | 2026-10-18 / 106574 |
 | Laengste Serie / Longest streak | 8 days |
-| Speedup vs. 80 lines/day | 43.4x |
-| Speedup vs. 125 lines/day | 27.7x |
-| Methodik / Methodology | v2; source `6b21b10ccb6f` |
+| Speedup vs. 80 lines/day | 43.7x |
+| Speedup vs. 125 lines/day | 28.0x |
+| Methodik / Methodology | v2; source `d0d0ec07a8fe` |
 
 ### Artefaktmix / Artifact Mix
 
 ```text
 Produktiv / Production          [#...................]   0.9% | 3275
-Tests                           [#...................]   4.4% | 15813
-Dokumentation / Documentation   [###############.....]  77.1% | 275315
-Skripte / Scripts               [##..................]   9.3% | 33354
-Konfiguration / Configuration   [#...................]   7.4% | 26381
+Tests                           [#...................]   4.4% | 15921
+Dokumentation / Documentation   [###############.....]  77.1% | 277607
+Skripte / Scripts               [##..................]   9.4% | 33777
+Konfiguration / Configuration   [#...................]   7.3% | 26410
 Daten und Medien / Data and media [....................]   0.0% | 0
 Sonstiger Text / Other text     [#...................]   0.9% | 3093
 ```
@@ -1215,8 +1217,8 @@ Die festen Slots halten den Phasenvergleich auch bei fehlenden oder spaeter erga
 
 ```text
 Scale: 0..50x
-80 lines/day       [#################...] 43.4x
-125 lines/day      [###########.........] 27.7x
+80 lines/day       [#################...] 43.7x
+125 lines/day      [###########.........] 28.0x
 ```
 
 Die Faktoren vergleichen sichtbare Lieferdichte mit den dokumentierten manuellen Referenzen. Sie messen keine Arbeitszeit.
@@ -1229,7 +1231,7 @@ Die Faktoren vergleichen sichtbare Lieferdichte mit den dokumentierten manuellen
 Scale: 0..5000 lines/day
 Experienced manual [#...................] 80
 Thorsten solo      [#...................] 125
-Visible repository [##############......] 3468.3
+Visible repository [##############......] 3496.0
 ```
 
 Die gemeinsame Skala vergleicht Referenzen und sichtbare Lieferdichte. Sie schreibt die Git-Aktivitaet keiner Person oder KI pauschal zu.
@@ -1255,6 +1257,6 @@ DE: Das Fenster beginnt am 2025-11-09 und endet am 2026-11-03. Es enthaelt 103 a
 | 2026-08 | 26210 |
 | 2026-09 | 70997 |
 | 2026-10 | 167479 |
-| 2026-11 | 3741 |
+| 2026-11 | 7097 |
 
 <!-- project-statistics-v2:end -->

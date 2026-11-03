@@ -274,6 +274,32 @@ try {
         Assert-GsdbFailure -Assessment $AuthoringVersionDrift -ExpectedCode 'GSDB008'
     }
 
+    # DE: Die Model-Routing-Aktualisierung erneuert genau Manifest und Registry.
+    # EN: The Model Routing update refreshes exactly the manifest and registry bindings.
+    foreach ($OldRoutingSource in @(
+        @{ Path = '.specify/presets/model-routing-governance/preset.yml'; Hash = '9e1165e8178d05fef4c989c991ce138ad0a202e1c3f830dc2d8e1b75c0579bbc' },
+        @{ Path = '.specify/presets/.registry'; Hash = '359189d3d3a98e7025eb6621c21f30ea9a30f31a45e4a9849cfbda1625bbc2be' },
+        @{ Path = '.specify/presets/model-routing-governance/preset.yml'; Hash = '76e85056a99d016ebf46dd55c429c2f62357682ea9036a0da9d69656a4d28a79' },
+        @{ Path = '.specify/presets/.registry'; Hash = '2d09ef81f8ccc904cbfde5ec113eb2f65db8991cff5617de99c1d9950d5cb4eb' },
+        @{ Path = '.specify/presets/model-routing-governance/preset.yml'; Hash = '547f47c5377f2eb7df32cbdc5099376d6a0342065572b280aaf330dd32fd10ba' },
+        @{ Path = '.specify/presets/.registry'; Hash = '0812b128211f98ca2c9bb0ec10c2dd288701efaa99add2b6ac8ba9e672848860' }
+    )) {
+        $StaleRoutingSource = Copy-GsdbProductionAssessment -Name ('model-routing-source-' + [guid]::NewGuid()) -Mutate {
+            param($Document)
+            $Source = $Document.sourceInventory | Where-Object path -CEQ $OldRoutingSource.Path
+            $Source.normalizedSha256 = $OldRoutingSource.Hash
+        }
+        Assert-GsdbFailure -Assessment $StaleRoutingSource -ExpectedCode 'GSDB002'
+    }
+    foreach ($WrongVersion in @('0.1.7', '0.2.0', '0.2.1', '0.2.2', '99.0.0')) {
+        $RoutingVersionDrift = Copy-GsdbProductionAssessment -Name "model-routing-version-$WrongVersion" -Mutate {
+            param($Document)
+            $Preset = $Document.presetAssessments | Where-Object presetId -CEQ 'model-routing-governance'
+            $Preset.version = $WrongVersion
+        }
+        Assert-GsdbFailure -Assessment $RoutingVersionDrift -ExpectedCode 'GSDB008'
+    }
+
     # DE: Alle vierzehn unmittelbar vorigen Pins und Hashes bleiben blockiert.
     # EN: Reject all fourteen immediately preceding package bindings independently.
     foreach ($PreviousReadmePatch in @(
