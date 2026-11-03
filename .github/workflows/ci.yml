@@ -89,7 +89,31 @@ jobs:
           exit $result
 
       - name: Test
-        run: dotnet test MicroCalc.sln --configuration Release --no-build --logger trx --results-directory tests/MicroCalc.Tui.Tests/TestResults/native-ci
+        run: dotnet test MicroCalc.sln --configuration Release --no-build --logger trx --results-directory tests/MicroCalc.Tui.Tests/TestResults/native-ci --collect:"XPlat Code Coverage"
+
+      - name: Verify coverage collector execution
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $files = @(Get-ChildItem 'tests/MicroCalc.Tui.Tests/TestResults/native-ci' -Recurse -File -Filter coverage.cobertura.xml)
+          if ($files.Count -lt 2) {
+              throw 'Both test projects must produce coverage evidence.'
+          }
+          $settings = [System.Xml.XmlReaderSettings]::new()
+          $settings.DtdProcessing = [System.Xml.DtdProcessing]::Prohibit
+          $settings.XmlResolver = $null
+          foreach ($file in $files) {
+              $reader = [System.Xml.XmlReader]::Create($file.FullName, $settings)
+              try {
+                  $document = [System.Xml.Linq.XDocument]::Load($reader)
+                  if ($document.Root.Name.LocalName -cne 'coverage' -or
+                      [long]$document.Root.Attribute('lines-valid').Value -le 0) {
+                      throw 'Coverage evidence must contain instrumented source lines.'
+                  }
+              }
+              finally { $reader.Dispose() }
+          }
+          Write-Output "COVERAGE_COLLECTOR_PROOF reports=$($files.Count)"
 
       - name: Bind full native TUI contract
         shell: pwsh
