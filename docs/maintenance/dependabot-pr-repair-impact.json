@@ -1,108 +1,111 @@
 {
+  "schemaVersion": "1.1",
+  "feature": "dependabot-pr-124-repair",
   "entries": [
     {
-      "risk": "Dependency compatibility requires technical checks; generated statistics are not product acceptance",
-      "rationale": "DE: Technisch gepruefte Action-Versionswechsel an ihre Quellhashes neu binden; Kontrollbewertungen und menschliche Freigaben bleiben unveraendert. EN: Rebind technically reviewed action version updates to their source hashes; control ratings and human approvals remain unchanged.",
-      "platformAndExampleProof": "macOS Bash renderer preview/update/check; exact staged validation, secret scan and exact-head hosted platform checks",
-      "audiences": [
-        "Maintainers",
-        "AI agents"
-      ],
-      "distributionClass": "sourceOnly",
-      "readerPaths": [
-        ".github/DEPENDENCY-MAINTENANCE.md -> dependency PR -> technical checks"
-      ],
       "affectedSources": [
         ".github/workflows/agent-secret-scan.yml",
         ".github/workflows/gitleaks.yml",
         ".github/workflows/homogeneity-check.yml",
         ".github/workflows/requirements-intake-governance.yml"
       ],
-      "reevaluationTrigger": "Changed dependency paths, manifest, runtime or update policy",
-      "documentClass": "ActiveSemantic",
-      "languagePartners": [],
-      "owner": "Repository Maintainer",
-      "homeSyncRequired": false,
-      "scope": "Dependency maintenance PR hindermath/TinyCalc#124",
-      "decision": "UpdateRequired",
-      "languageStrategy": "German first, equivalent English",
-      "navigationImpact": "Existing maintenance and statistics entry points remain valid",
-      "documents": [
-        "docs/security/gsdb-intensive-review/evidence-matrix.json"
+      "readerPaths": [
+        ".github/DEPENDENCY-MAINTENANCE.md -> dependency PR -> technical checks"
       ],
       "criticality": "Security",
-      "canonicalSource": "docs/security/gsdb-intensive-review/evidence-matrix.json",
-      "evidence": "docs/security/gsdb-intensive-review/evidence-matrix.json",
-      "changeId": "CHG001"
-    },
-    {
+      "languagePartners": [],
+      "reevaluationTrigger": "Changed dependency paths, manifest, runtime or update policy",
       "risk": "Dependency compatibility requires technical checks; generated statistics are not product acceptance",
-      "generatedSource": {
-        "renderer": "bash scripts/render-project-statistics.sh --repo .",
-        "path": "docs/project-statistics.config.json"
-      },
-      "rationale": "DE: Nachweise aus dem aktuellen committen Quellstand neu erzeugen. EN: Regenerate evidence from the current committed source.",
+      "documents": [
+        "docs/security/gsdb-intensive-review/evidence-matrix.json",
+        "specs/intake-authoring-receipts/rename-microcalc-tinycalc.json",
+        "specs/intake-authoring-receipts/tui-funktionsabnahme-und-regressionsvertrag.json",
+        "requirements/intakes/series/tinycalc-delivery/intake-review-report.md"
+      ],
+      "changeId": "CHG001",
+      "owner": "Repository Maintainer",
+      "navigationImpact": "Existing maintenance and statistics entry points remain valid",
       "platformAndExampleProof": "macOS Bash renderer preview/update/check; exact staged validation, secret scan and exact-head hosted platform checks",
+      "decision": "UpdateRequired",
+      "languageStrategy": "German first, equivalent English",
+      "distributionClass": "sourceOnly",
       "audiences": [
         "Maintainers",
         "AI agents"
       ],
-      "distributionClass": "sourceOnly",
+      "rationale": "DE: Technisch gepruefte Action-Versionswechsel an ihre Quellhashes neu binden; Kontrollbewertungen und menschliche Freigaben bleiben unveraendert. EN: Rebind technically reviewed action version updates to their source hashes; control ratings and human approvals remain unchanged. DE: Zwei README-Quellenbindungen nach ausdruecklicher Freigabe mit Archivierung und neuen Receipt-/Operations-IDs erneuern; Inhalte und fachliche Abnahme bleiben unveraendert, Serienreview ist erneut offen. EN: Renew two README source bindings under explicit approval with archived predecessors and new receipt/operation IDs; contents and product acceptance are unchanged and the series review is pending.",
+      "homeSyncRequired": false,
+      "canonicalSource": "docs/security/gsdb-intensive-review/evidence-matrix.json",
+      "evidence": "docs/security/gsdb-intensive-review/evidence-matrix.json",
+      "scope": "Dependency maintenance PR hindermath/TinyCalc#124",
+      "documentClass": "ActiveSemantic"
+    },
+    {
       "readerPaths": [
         ".github/DEPENDENCY-MAINTENANCE.md -> dependency PR -> technical checks"
       ],
-      "reevaluationTrigger": "Changed dependency paths, manifest, runtime or update policy",
-      "documentClass": "Generated",
+      "criticality": "Normal",
       "languagePartners": [],
-      "owner": "Repository Maintainer",
-      "homeSyncRequired": false,
-      "scope": "Restore current Profile 2 statistics after the dependency change",
-      "decision": "GeneratedUpdate",
-      "languageStrategy": "German first, equivalent English",
-      "navigationImpact": "Existing maintenance and statistics entry points remain valid",
+      "reevaluationTrigger": "Changed dependency paths, manifest, runtime or update policy",
+      "risk": "Dependency compatibility requires technical checks; generated statistics are not product acceptance",
       "documents": [
         "docs/project-statistics.md"
       ],
-      "criticality": "Normal",
-      "canonicalSource": "docs/project-statistics.config.json",
-      "evidence": "docs/project-statistics.md",
-      "changeId": "CHG002"
-    },
-    {
-      "risk": "Dependency compatibility requires technical checks; generated statistics are not product acceptance",
-      "generatedSource": {
-        "renderer": "bash .specify/presets/project-statistics-governance/scripts/project-statistics.sh update --repo . --config docs/project-statistics-pilot/config.json",
-        "path": "docs/project-statistics-pilot/config.json"
-      },
-      "rationale": "DE: Aktiven Messkontext aktuell und reproduzierbar halten; historische Receipts bleiben unveraendert. EN: Keep the active context current and reproducible; historical receipts are retained.",
+      "changeId": "CHG002",
+      "owner": "Repository Maintainer",
+      "navigationImpact": "Existing maintenance and statistics entry points remain valid",
       "platformAndExampleProof": "macOS Bash renderer preview/update/check; exact staged validation, secret scan and exact-head hosted platform checks",
+      "decision": "GeneratedUpdate",
+      "languageStrategy": "German first, equivalent English",
+      "distributionClass": "sourceOnly",
       "audiences": [
         "Maintainers",
         "AI agents"
       ],
-      "distributionClass": "sourceOnly",
+      "rationale": "DE: Nachweise aus dem aktuellen committen Quellstand neu erzeugen. EN: Regenerate evidence from the current committed source.",
+      "generatedSource": {
+        "path": "docs/project-statistics.config.json",
+        "renderer": "bash scripts/render-project-statistics.sh --repo ."
+      },
+      "homeSyncRequired": false,
+      "canonicalSource": "docs/project-statistics.config.json",
+      "evidence": "docs/project-statistics.md",
+      "scope": "Restore current Profile 2 statistics after the dependency change",
+      "documentClass": "Generated"
+    },
+    {
       "readerPaths": [
         ".github/DEPENDENCY-MAINTENANCE.md -> dependency PR -> technical checks"
       ],
-      "reevaluationTrigger": "Changed dependency paths, manifest, runtime or update policy",
-      "documentClass": "Generated",
+      "criticality": "Normal",
       "languagePartners": [],
-      "owner": "Repository Maintainer",
-      "homeSyncRequired": false,
-      "scope": "Current installed statistics context: project-statistics-pilot",
-      "decision": "GeneratedUpdate",
-      "languageStrategy": "Bilingual report; language-neutral JSON snapshot",
-      "navigationImpact": "Existing maintenance and statistics entry points remain valid",
+      "reevaluationTrigger": "Changed dependency paths, manifest, runtime or update policy",
+      "risk": "Dependency compatibility requires technical checks; generated statistics are not product acceptance",
       "documents": [
         "docs/project-statistics-pilot/report.md",
         "docs/project-statistics-pilot/snapshot.json"
       ],
-      "criticality": "Normal",
+      "changeId": "CHG003",
+      "owner": "Repository Maintainer",
+      "navigationImpact": "Existing maintenance and statistics entry points remain valid",
+      "platformAndExampleProof": "macOS Bash renderer preview/update/check; exact staged validation, secret scan and exact-head hosted platform checks",
+      "decision": "GeneratedUpdate",
+      "languageStrategy": "Bilingual report; language-neutral JSON snapshot",
+      "distributionClass": "sourceOnly",
+      "audiences": [
+        "Maintainers",
+        "AI agents"
+      ],
+      "rationale": "DE: Aktiven Messkontext aktuell und reproduzierbar halten; historische Receipts bleiben unveraendert. EN: Keep the active context current and reproducible; historical receipts are retained.",
+      "generatedSource": {
+        "path": "docs/project-statistics-pilot/config.json",
+        "renderer": "bash .specify/presets/project-statistics-governance/scripts/project-statistics.sh update --repo . --config docs/project-statistics-pilot/config.json"
+      },
+      "homeSyncRequired": false,
       "canonicalSource": "docs/project-statistics-pilot/config.json",
       "evidence": "docs/project-statistics-pilot/report.md",
-      "changeId": "CHG003"
+      "scope": "Current installed statistics context: project-statistics-pilot",
+      "documentClass": "Generated"
     }
-  ],
-  "schemaVersion": "1.1",
-  "feature": "dependabot-pr-124-repair"
+  ]
 }
