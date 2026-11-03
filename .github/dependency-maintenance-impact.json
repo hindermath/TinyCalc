@@ -25,7 +25,7 @@
       "documentClass": "ActiveSemantic",
       "languageStrategy": "German first, equivalent English in the same file",
       "languagePartners": [],
-      "platformAndExampleProof": "Local macOS YAML round-trip, SchemaStore Dependabot schema and manifest coverage checks; exact-head hosted checks on the PR.",
+      "platformAndExampleProof": "Local macOS YAML round-trip, SchemaStore Dependabot schema and manifest coverage checks; exact-head hosted checks on the PR. Statistics outputs are regenerated from the committed dependency-maintenance revision and checked for drift before delivery.",
       "distributionClass": "sourceOnly",
       "homeSyncRequired": false,
       "evidence": ".github/DEPENDENCY-MAINTENANCE.md",
