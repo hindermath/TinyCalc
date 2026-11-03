@@ -1,0 +1,201 @@
+{
+  "schemaVersion": "2.0",
+  "documentType": "IntakeReceipt",
+  "receiptId": "142f5024-a068-4dc5-b2b3-50be6e0c7667",
+  "intakeId": "40e85866-18d3-4cc8-b667-a1de8da44b10",
+  "generator": {
+    "preset": "intake-authoring-governance",
+    "version": "0.3.10"
+  },
+  "createdAt": "2026-10-24T17:44:42Z",
+  "operation": {
+    "authorityEvidence": "Thorsten explicitly authorized exactly five source-hash lineage corrections on 2026-10-24: PL0, Rename, sandbox-supported hardening, secure-development hardening and TUI acceptance/regression. Preserve target bytes, intake IDs, scope, DAG, order and lifecycle states. Archive predecessors, renew receipts and operation IDs, supersede old review evidence without claiming a current Ready result. No product run, product/risk/release approval, or validator weakening.",
+    "operationId": "363e883c-a20c-4a98-b4da-62a1a3b5a0f2",
+    "type": "Update"
+  },
+  "status": "ReadyForReview",
+  "target": {
+    "path": "requirements/intakes/active/Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md",
+    "normalizedSha256": "c07016800b9e02e56f123ed6af187d0b5fedd22c1689a1b8909fcc6e8f70c6ac"
+  },
+  "sources": [
+    {
+      "sourceId": "SRC001",
+      "order": 1,
+      "kind": "File",
+      "label": "First binding source: byte-identical predecessor intake",
+      "location": "Repository",
+      "path": "requirements/intakes/history/20261024-documentation-patch-lineage/Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md",
+      "requestedUrl": "N/A",
+      "finalUrl": "N/A",
+      "retrievedAt": "N/A",
+      "httpStatus": "N/A",
+      "contentType": "N/A",
+      "contentLength": "N/A",
+      "etag": "N/A",
+      "lastModified": "N/A",
+      "redirectChain": [],
+      "rawSha256": "N/A",
+      "normalizedSha256": "c07016800b9e02e56f123ed6af187d0b5fedd22c1689a1b8909fcc6e8f70c6ac",
+      "gitBlob": "N/A",
+      "proofBoundary": "Strict UTF-8 normalized SHA-256; source adoption is not product conformance / Quellenbindung ist keine Produktkonformitaet."
+    },
+    {
+      "sourceId": "SRC002",
+      "order": 2,
+      "kind": "File",
+      "label": "Byte-identical prior receipt preserves historical source order",
+      "location": "Repository",
+      "path": "specs/intake-authoring-receipts/history/tui-funktionsabnahme-und-regressionsvertrag.20261024-documentation-patch-lineage.json",
+      "requestedUrl": "N/A",
+      "finalUrl": "N/A",
+      "retrievedAt": "N/A",
+      "httpStatus": "N/A",
+      "contentType": "N/A",
+      "contentLength": "N/A",
+      "etag": "N/A",
+      "lastModified": "N/A",
+      "redirectChain": [],
+      "rawSha256": "N/A",
+      "normalizedSha256": "9c3424e2d6d39951088fa74f7c4c8ee824fc7e3399575115e0917542a43933dc",
+      "gitBlob": "N/A",
+      "proofBoundary": "Strict UTF-8 normalized SHA-256; source adoption is not product conformance / Quellenbindung ist keine Produktkonformitaet."
+    },
+    {
+      "sourceId": "SRC003",
+      "order": 3,
+      "kind": "File",
+      "label": "Approved governance change source; no product acceptance inferred",
+      "location": "Repository",
+      "path": "docs/maintenance/gsdb-344-control-delta.json",
+      "requestedUrl": "N/A",
+      "finalUrl": "N/A",
+      "retrievedAt": "N/A",
+      "httpStatus": "N/A",
+      "contentType": "N/A",
+      "contentLength": "N/A",
+      "etag": "N/A",
+      "lastModified": "N/A",
+      "redirectChain": [],
+      "rawSha256": "N/A",
+      "normalizedSha256": "e1b4355f6c383ee9b32abd9758d5504751a39d8840728da063bd1f1d74ca2d8f",
+      "gitBlob": "N/A",
+      "proofBoundary": "Strict UTF-8 normalized SHA-256; source adoption is not product conformance / Quellenbindung ist keine Produktkonformitaet."
+    },
+    {
+      "sourceId": "SRC004",
+      "order": 4,
+      "kind": "File",
+      "label": "Approved governance change source; no product acceptance inferred",
+      "location": "Repository",
+      "path": ".specify/presets/secure-development-assurance-governance/templates/secure-development-evidence-contract.md",
+      "requestedUrl": "N/A",
+      "finalUrl": "N/A",
+      "retrievedAt": "N/A",
+      "httpStatus": "N/A",
+      "contentType": "N/A",
+      "contentLength": "N/A",
+      "etag": "N/A",
+      "lastModified": "N/A",
+      "redirectChain": [],
+      "rawSha256": "N/A",
+      "normalizedSha256": "cd471d1c3b6d40717aee4d306e0b9e3d8a3627c39121c8114816411c411e171d",
+      "gitBlob": "N/A",
+      "proofBoundary": "Strict UTF-8 normalized SHA-256; source adoption is not product conformance / Quellenbindung ist keine Produktkonformitaet."
+    },
+    {
+      "sourceId": "SRC005",
+      "order": 5,
+      "kind": "File",
+      "label": "Approved governance change source; no product acceptance inferred",
+      "location": "Repository",
+      "path": "README.md",
+      "requestedUrl": "N/A",
+      "finalUrl": "N/A",
+      "retrievedAt": "N/A",
+      "httpStatus": "N/A",
+      "contentType": "N/A",
+      "contentLength": "N/A",
+      "etag": "N/A",
+      "lastModified": "N/A",
+      "redirectChain": [],
+      "rawSha256": "N/A",
+      "normalizedSha256": "5ec683e583c13020ec1cca89bb4598e9d9162c145edf931d901bd37733d2cae2",
+      "gitBlob": "N/A",
+      "proofBoundary": "Strict UTF-8 normalized SHA-256; source adoption is not product conformance / Quellenbindung ist keine Produktkonformitaet."
+    }
+  ],
+  "profile": "level2-lastenheft",
+  "languagePolicy": "GermanFirstEnglishSecond",
+  "decisions": [
+    {
+      "id": "IAD001",
+      "status": "Answered",
+      "question": "Which serial order governs functional acceptance, accessibility, and rename?",
+      "answer": "Functional acceptance follows migration; accessibility follows functional acceptance; rename follows accessibility.",
+      "evidence": "Prior intake plus explicit user decision."
+    },
+    {
+      "id": "IAD002",
+      "status": "Answered",
+      "question": "Which recurring regression policy is required?",
+      "answer": "Every pull request and push runs the full automated active contract; major, unclear, dependency, rename, and release impact runs the complete evidence matrix.",
+      "evidence": "Explicit user decision."
+    },
+    {
+      "id": "IAD003",
+      "status": "Answered",
+      "question": "How are dependency versions represented?",
+      "answer": "Requirements remain version-neutral while execution resolves and records the current approved repository pin.",
+      "evidence": "Explicit user decision."
+    },
+    {
+      "id": "IAD004",
+      "status": "Answered",
+      "question": "Where is the current-product baseline fixed?",
+      "answer": "The complete baseline is binding inside the intake and may only be extended during specification.",
+      "evidence": "Explicit user selection: baseline in the intake."
+    },
+    {
+      "id": "IAD005",
+      "status": "Answered",
+      "question": "How are documentation conflicts treated?",
+      "answer": "Substantive advertised behaviour remains contracted; clear syntax, typo, and grid mistakes are documentation defects.",
+      "evidence": "Approved consolidation plan."
+    }
+  ],
+  "openDecisionIds": [],
+  "questionCount": 5,
+  "agentSurface": {
+    "specifyCanonicalId": "speckit.specify",
+    "specifyInvocation": "$speckit-specify",
+    "autonomousCanonicalId": "speckit.autonomous",
+    "autonomousInvocation": "$speckit-autonomous"
+  },
+  "deliveryAuthority": "LocalImplementation",
+  "authorityEvidence": "The user explicitly requested implementation of the approved intake-only consolidation plan. No product implementation, commit, push, pull request, merge, bypass, provider, or follow-up-feature authority is granted.",
+  "promptState": "Enabled",
+  "provenanceMode": "Supersession",
+  "supersedes": {
+    "receiptPath": "specs/intake-authoring-receipts/history/tui-funktionsabnahme-und-regressionsvertrag.20261024-documentation-patch-lineage.json",
+    "receiptNormalizedSha256": "9c3424e2d6d39951088fa74f7c4c8ee824fc7e3399575115e0917542a43933dc",
+    "archiveReceiptPath": "specs/intake-authoring-receipts/history/tui-funktionsabnahme-und-regressionsvertrag.20261024-documentation-patch-lineage.json",
+    "targetNormalizedSha256": "c07016800b9e02e56f123ed6af187d0b5fedd22c1689a1b8909fcc6e8f70c6ac",
+    "archiveTargetPath": "requirements/intakes/history/20261024-documentation-patch-lineage/Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md"
+  },
+  "legacyAdoption": {
+    "priorTargetNormalizedSha256": "N/A",
+    "evidenceType": "N/A",
+    "priorGitBlob": "N/A"
+  },
+  "updateAuthorized": true,
+  "updateAuthorityEvidence": "Thorsten explicitly authorized exactly five source-hash lineage corrections on 2026-10-24: PL0, Rename, sandbox-supported hardening, secure-development hardening and TUI acceptance/regression. Preserve target bytes, intake IDs, scope, DAG, order and lifecycle states. Archive predecessors, renew receipts and operation IDs, supersede old review evidence without claiming a current Ready result. No product run, product/risk/release approval, or validator weakening.",
+  "series": {
+    "seriesId": "5b4523b4-d946-4091-9cbc-11825af94332",
+    "manifestPath": "requirements/intakes/series/tinycalc-delivery/manifest.json",
+    "order": 3,
+    "role": "OrderedMember",
+    "supersedesIntakeIds": []
+  },
+  "nextAction": "$speckit-intake-review requirements/intakes/active/Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md"
+}

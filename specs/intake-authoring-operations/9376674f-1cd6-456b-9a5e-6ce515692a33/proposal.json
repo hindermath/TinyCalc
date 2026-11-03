@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "1.0",
+  "documentType": "IntakeSourceRenewalProposal",
+  "operationId": "9376674f-1cd6-456b-9a5e-6ce515692a33",
+  "createdAt": "2026-11-03T15:44:48Z",
+  "authorityEvidence": "Thorsten explicitly approved on 2026-11-03 renewal of the README source bindings for the Rename MicroCalc/TinyCalc and TUI functional acceptance/regression intakes. Preserve target bytes, intake IDs, accepted scope and delivery authority. Archive predecessor receipts, create new provenance receipts, and renew or mark affected review/series evidence pending. This does not authorize a product run or product acceptance.",
+  "targets": [
+    {
+      "intakeId": "b4f18668-0276-45ee-8a6f-16a8bd8b833d",
+      "target": "requirements/intakes/active/Lastenheft_Rename_MicroCalc_TinyCalc.md",
+      "targetBytesUnchanged": true,
+      "oldReceipt": "specs/intake-authoring-receipts/history/rename-microcalc-tinycalc.20261103-dependabot-readme-source-renewal.json",
+      "oldReceiptId": "23f27946-06d3-41ac-a435-0b9c0cadcef3",
+      "newReceiptId": "2f6dbf67-91bb-471a-8b59-b5887760730e",
+      "newOperationId": "2ae5191b-5a98-48cc-96bd-75f86b41b23c",
+      "currentReceipt": "specs/intake-authoring-receipts/rename-microcalc-tinycalc.json",
+      "archiveTarget": "requirements/intakes/history/20261103-dependabot-readme-source-renewal/Lastenheft_Rename_MicroCalc_TinyCalc.md",
+      "targetSha256": "ed761c150526f18c0b1d98d8febac1def260b1890aca6d0a341279dec19985b9",
+      "readmeSha256": "832e7bbdd813f954baf01b50e7f42e28b53c4980709c8472ccfb7b6a3b938b24"
+    },
+    {
+      "intakeId": "40e85866-18d3-4cc8-b667-a1de8da44b10",
+      "target": "requirements/intakes/active/Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md",
+      "targetBytesUnchanged": true,
+      "oldReceipt": "specs/intake-authoring-receipts/history/tui-funktionsabnahme-und-regressionsvertrag.20261103-dependabot-readme-source-renewal.json",
+      "oldReceiptId": "142f5024-a068-4dc5-b2b3-50be6e0c7667",
+      "newReceiptId": "c3bee895-1933-490b-b01c-6b01850e9597",
+      "newOperationId": "11c1df2d-83ca-47ff-85a3-0b5265ba3eab",
+      "currentReceipt": "specs/intake-authoring-receipts/tui-funktionsabnahme-und-regressionsvertrag.json",
+      "archiveTarget": "requirements/intakes/history/20261103-dependabot-readme-source-renewal/Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md",
+      "targetSha256": "c07016800b9e02e56f123ed6af187d0b5fedd22c1689a1b8909fcc6e8f70c6ac",
+      "readmeSha256": "832e7bbdd813f954baf01b50e7f42e28b53c4980709c8472ccfb7b6a3b938b24"
+    }
+  ],
+  "scope": "Only two README source bindings and their provenance/review handoff. No target, product, validator, policy, manifest, dependency graph or delivery-authority change.",
+  "reviewStatus": "Pending",
+  "nextAction": "$speckit-intake-review requirements/intakes/series/tinycalc-delivery/manifest.json"
+}
