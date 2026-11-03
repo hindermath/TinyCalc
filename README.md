@@ -1,5 +1,10 @@
 # MicroCalc .NET 10 (Terminal.Gui)
 
+Model Routing Governance **0.2.1**: Diese Lieferung aktualisiert die lokale
+Preset-Integration und ihre Resolver. [Nachweis und Grenzen](docs/maintenance/model-routing-v021-installation.md).
+This delivery updates the local preset integration and its resolvers; see the
+linked evidence and verification limits.
+
 [Aktueller Dokumentationspatch-Pilot / Current documentation patch pilot](docs/maintenance/documentation-patch-pilot-2026-10-24.md).
 
 [GSDB 3.4.4: Pilotrollout / pilot rollout](docs/maintenance/gsdb-344-pilot-2026-10-20.md).
