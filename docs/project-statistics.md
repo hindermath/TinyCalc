@@ -979,6 +979,26 @@ with 226 Core and 461 TUI tests pass. DocFX built the documentation without a
 warning or error, and the changed pages remained usable in the text-oriented
 spot check.
 
+### 2026-11-03 - Dependabot-Wartung / Dependabot maintenance
+
+DE: Branch `codex/dependabot-maintenance-20261103`, beobachtbares Arbeitsfenster
+2026-11-03. Woechentliche Versionspruefungen, Minor-/Patch-Gruppen, einzelne
+Major-Updates und getrennte Sicherheitsgruppen sind konfiguriert. Umfang vor
+diesem Statistik-Selbstnachweis: 0 Produktionscode-, 0 Testcode-, 78
+Dokumentations- und 85 Konfigurations-/Evidence-Zeilen. YAML/Schema,
+Manifestabdeckung, Policy, Dokumentationsentscheidung und Liefermenge werden
+vor Commit geprueft; CI-Ergebnisse stehen am PR. Keine Pakete aktualisiert.
+Profil 2 behaelt die bestehenden Referenzwerte; keine gemessene KI-Zeitersparnis.
+
+EN: Branch `codex/dependabot-maintenance-20261103`, observable work window
+2026-11-03. Configures weekly version checks, minor/patch groups, separate major
+updates and independent security groups. Before this statistics self-record:
+0 production-code, 0 test-code, 78 documentation and 85
+configuration/evidence lines. YAML/schema, manifest coverage, policy,
+documentation decision and delivery scope are checked before commit;
+hosted results are recorded on the PR. No packages updated. Profile 2 keeps
+its existing references; this is not measured AI time savings.
+
 ## Gesamtstatistik / Overall Statistics
 
 Deutsch: Feature 006 ist in PR #104 vollständig implementiert, menschlich
