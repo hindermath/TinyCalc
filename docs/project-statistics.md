@@ -1026,6 +1026,8 @@ bestanden. UpdateRequired, zweisprachiger Wartungsnachweis, Source-only, kein
 Home-Sync. Referenzen 80/125 Zeilen je Arbeitstag bleiben unverändert; keine
 neue Beschleunigungsaussage. Keine Produktimplementierung oder native Abnahme.
 Profil 2 wird am sauberen Source-Commit regelkonform separat gerendert.
+Der Lieferreview korrigiert zusätzlich die Vorgänger-ID im Archivmarker;
+Vorgänger, Nachfolger und archivierter Ergebnis-Hash werden gemeinsam geprüft.
 
 EN: Branch `codex/tinycalc-readme-source-renewal`, observable work window
 4 November 2026 Europe/Berlin, not stopwatch time. Renew both explicitly
@@ -1039,7 +1041,9 @@ Complete Bash/PowerShell alignment, operation validators, preservation, secret
 and diff checks pass. UpdateRequired, bilingual maintenance evidence,
 source-only, no Home sync. Existing 80/125 lines/workday references stay unchanged;
 no new acceleration claim, implementation or native acceptance. Profile 2 is
-rendered separately from the clean source commit.
+rendered separately from the clean source commit. Delivery review also corrects
+the predecessor ID in the archive marker; predecessor, successor and archived
+result hash are checked together.
 
 ## Gesamtstatistik / Overall Statistics
 
