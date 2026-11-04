@@ -1,0 +1,172 @@
+{
+  "schemaVersion": "1.1",
+  "reviewId": "dce96041-569e-447b-814c-2d5e14103ef9",
+  "mode": "Series",
+  "status": "Ready",
+  "policy": "tinycalc-delivery-v1",
+  "reviewedAt": "2026-11-04T06:36:26Z",
+  "repository": {
+    "root": ".",
+    "head": "0351afd6cd46f121ae795550f09f90ac29e9d37d"
+  },
+  "requestEvidence": {
+    "path": "requirements/intakes/series/tinycalc-delivery/intake-review-request.json",
+    "normalizedSha256": "ed0fc26583c7ceddc24df3a413fa7cb0cfd04315c52a890ca91baddca5de4457"
+  },
+  "targets": [
+    {
+      "path": "requirements/intakes/archive/Lastenheft_Constitution_Change.002-constitution-change.md",
+      "role": "Primary",
+      "normalizedSha256": "04c4e1ba93d626463829a07f33b5591a6417b6aeaf89e805b637ab1bf5c26a0a",
+      "gitBlob": "e5baf4a877153692acdc9aed7035afe3999a4acc"
+    },
+    {
+      "path": "requirements/intakes/archive/Lastenheft_TerminalGui_Migration.003-terminalgui-migration.md",
+      "role": "OrderedMember",
+      "normalizedSha256": "01db3bd8f2dc375fe1400a91580ce1a906dfc446c12fb8ad011419fe50fee94d",
+      "gitBlob": "d960bf119005a5d3d09860da90be7d5bbfa22d5a"
+    },
+    {
+      "path": "requirements/intakes/archive/Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md",
+      "role": "OrderedMember",
+      "normalizedSha256": "c07016800b9e02e56f123ed6af187d0b5fedd22c1689a1b8909fcc6e8f70c6ac",
+      "gitBlob": "4ad418e77fe5bdd39fd05c087ee24aeb73e164ef"
+    },
+    {
+      "path": "requirements/intakes/active/Lastenheft_A11Y_TUI.md",
+      "role": "OrderedMember",
+      "normalizedSha256": "7fec8e9dea123fdeb0753119d06c18a8389a24645a541d3b60413166bbcbd6e2",
+      "gitBlob": "f8f2b83c12c20f67fedc9a22a22675b7d86349c1"
+    },
+    {
+      "path": "requirements/intakes/active/Lastenheft_Rename_MicroCalc_TinyCalc.md",
+      "role": "OrderedMember",
+      "normalizedSha256": "ed761c150526f18c0b1d98d8febac1def260b1890aca6d0a341279dec19985b9",
+      "gitBlob": "bb7999fed59d81aa9b449729321fb03b94868724"
+    },
+    {
+      "path": "requirements/intakes/active/Lastenheft_Didactic-Inline-Code-Comment-Hardening.md",
+      "role": "OrderedMember",
+      "normalizedSha256": "460abc8142179cc40e1d0cfe07928260456088205b3200e7ca6c6e10818e46da",
+      "gitBlob": "206acb40849eceac8d79e10f71464a5e533880c4"
+    },
+    {
+      "path": "requirements/intakes/active/Lastenheft_Secure-Development-Hardening.md",
+      "role": "OrderedMember",
+      "normalizedSha256": "8b52ca4953d74cc5e647b82ecbeea2adfcfbff3ebbc00f58196c8ee36143d402",
+      "gitBlob": "247b031b26538df4b626b9ecacc98fe9be5fb178"
+    },
+    {
+      "path": "requirements/intakes/active/Lastenheft_PL0-Zellfunktionen_V1.md",
+      "role": "OrderedMember",
+      "normalizedSha256": "72c67c9c4b20ee9e1e9ad89e76b0bd51284eda4f9772c05fa6c0ca92a162f7b0",
+      "gitBlob": "bc0b6621be4dbe27ba882fbc93f69d6eb084ef6b"
+    },
+    {
+      "path": "requirements/intakes/active/Lastenheft_Legacy-Kompatibilitaet_V1.md",
+      "role": "OrderedMember",
+      "normalizedSha256": "f24a7ff1c6d1bcde8bca45a57133de5b9f6386c4586a079d1ba743f99479863c",
+      "gitBlob": "f7f47ff2950c14423815e87f658208673718c232"
+    },
+    {
+      "path": "requirements/intakes/active/Lastenheft_Formelkopie-und-Tabellenoperationen_V1.md",
+      "role": "OrderedMember",
+      "normalizedSha256": "7890c8e1358e002044b352adc94fcbe2a104f38e5fc1504f6919830de03d2fb4",
+      "gitBlob": "0935e0d42877e19cc9b446ca71d34a512d666aff"
+    },
+    {
+      "path": "requirements/intakes/active/Lastenheft_Sandbox-gestuetzte-Secure-Development-Haertung.md",
+      "role": "OrderedMember",
+      "normalizedSha256": "b85f66e2d0fc1ce7d47ad4328e61a007821c1f19f9d1b291e9d4533271e079fa",
+      "gitBlob": "ef90813e64c2e62744999c2925c6d23ed91daf90"
+    },
+    {
+      "path": "requirements/intakes/archive/Lastenheft_RL-SE-Checklist-Selbstpruefung.004-rl-se-self-assessment.md",
+      "role": "OrderedMember",
+      "normalizedSha256": "96a5ef9c414d55c69ad117509d41f056f10d005824890bd5a2867eaf8ab948da",
+      "gitBlob": "0cd87941bb49e73b11aa15ec7b529bc36788b245"
+    },
+    {
+      "path": "requirements/intakes/archive/Lastenheft_GSDB-Spec-Kit-Intensivpruefung.005-gsdb-intensive-review.md",
+      "role": "OrderedMember",
+      "normalizedSha256": "f4dcb3fac6cb755faed296847ffd40170f0d008fa3640e5e5fa5bc38e4af5375",
+      "gitBlob": "1df4cd2af93098ab1bb0e95de9e10d2811273210"
+    }
+  ],
+  "findings": [],
+  "questions": [],
+  "acceptedRisks": [],
+  "operatorExceptions": [],
+  "coverage": {
+    "individual": [
+      "requirements/intakes/archive/Lastenheft_Constitution_Change.002-constitution-change.md",
+      "requirements/intakes/archive/Lastenheft_TerminalGui_Migration.003-terminalgui-migration.md",
+      "requirements/intakes/archive/Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md",
+      "requirements/intakes/active/Lastenheft_A11Y_TUI.md",
+      "requirements/intakes/active/Lastenheft_Rename_MicroCalc_TinyCalc.md",
+      "requirements/intakes/active/Lastenheft_Didactic-Inline-Code-Comment-Hardening.md",
+      "requirements/intakes/active/Lastenheft_Secure-Development-Hardening.md",
+      "requirements/intakes/active/Lastenheft_PL0-Zellfunktionen_V1.md",
+      "requirements/intakes/active/Lastenheft_Legacy-Kompatibilitaet_V1.md",
+      "requirements/intakes/active/Lastenheft_Formelkopie-und-Tabellenoperationen_V1.md",
+      "requirements/intakes/active/Lastenheft_Sandbox-gestuetzte-Secure-Development-Haertung.md",
+      "requirements/intakes/archive/Lastenheft_RL-SE-Checklist-Selbstpruefung.004-rl-se-self-assessment.md",
+      "requirements/intakes/archive/Lastenheft_GSDB-Spec-Kit-Intensivpruefung.005-gsdb-intensive-review.md"
+    ],
+    "series": [
+      "13 unchanged target contracts; prior accepted semantic assessment explicitly reused for identical normalized hashes. Current provenance, authority and context reviewed afresh.",
+      "Schema 2.0 language, naming, collections and inventory; four roots and nine unique ordered HardCompletionGate edges checked.",
+      "All 13 authoring receipts revalidated after authorized two-receipt renewal. Historical source drift IR002 resolved through archived supersession, not hash bypass.",
+      "Migration -> functional acceptance -> A11Y -> Rename preserved. A11Y remains declared Eligible; Sandbox independent Pending. No implementation authority or native acceptance granted."
+    ],
+    "workers": []
+  },
+  "summary": {
+    "critical": 0,
+    "high": 0,
+    "medium": 0,
+    "low": 0
+  },
+  "supersedes": "d4536c4f-4113-4ec5-a996-41ace9efb428",
+  "evidenceBoundary": {
+    "previousReview": "requirements/intakes/series-archive/tinycalc-delivery/20261104-model-routing-readme-source-renewal/intake-review-result.json",
+    "semanticReview": "requirements/intakes/series-archive/tinycalc-delivery/20261103-dependabot-readme-source-renewal/intake-review-result.json",
+    "reusedSemanticTargets": 13,
+    "newIndependentReviewer": false,
+    "implementationApproval": false,
+    "nativeAccessibilityAcceptance": false,
+    "resolvedFindings": [
+      {
+        "id": "IR002",
+        "disposition": "Resolved",
+        "evidence": "specs/intake-authoring-operations/c0149c9a-09c8-4108-b493-02e0daccd5b2/lineage.json",
+        "authority": "Thorsten Hindermann explicitly requested on 2026-11-04: Bitte die beiden README-Quellenbindungen regulaer erneuern und anschliessend den TinyCalc-Serienreview erneut durchfuehren. Inhalte und IDs unveraendert lassen. This authorizes source-provenance repair and Series re-review, without product implementation or acceptance.",
+        "reevaluationTrigger": "Any source, target, policy, or graph change"
+      }
+    ],
+    "provenanceOperation": "specs/intake-authoring-operations/c0149c9a-09c8-4108-b493-02e0daccd5b2/operation.json",
+    "readmeNormalizedSha256": "8c3b47ff92d562f1243f64e61864837e9e690ff250399add7d962bd3ebf419be",
+    "protectedInputHashes": {
+      "requirements/intakes/archive/Lastenheft_GSDB-Spec-Kit-Intensivpruefung.005-gsdb-intensive-review.md": "f4dcb3fac6cb755faed296847ffd40170f0d008fa3640e5e5fa5bc38e4af5375",
+      "requirements/intakes/active/Lastenheft_A11Y_TUI.md": "7fec8e9dea123fdeb0753119d06c18a8389a24645a541d3b60413166bbcbd6e2",
+      "requirements/intakes/active/Lastenheft_Formelkopie-und-Tabellenoperationen_V1.md": "7890c8e1358e002044b352adc94fcbe2a104f38e5fc1504f6919830de03d2fb4",
+      "requirements/intakes/archive/Lastenheft_Constitution_Change.002-constitution-change.md": "04c4e1ba93d626463829a07f33b5591a6417b6aeaf89e805b637ab1bf5c26a0a",
+      "requirements/intakes/active/Lastenheft_Didactic-Inline-Code-Comment-Hardening.md": "460abc8142179cc40e1d0cfe07928260456088205b3200e7ca6c6e10818e46da",
+      "requirements/intakes/series/tinycalc-delivery/manifest.json": "b8a6f7d21305766d8917dcfa567e01cbbe5195503d9b08f171de921a6a2305db",
+      "requirements/intakes/archive/Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md": "c07016800b9e02e56f123ed6af187d0b5fedd22c1689a1b8909fcc6e8f70c6ac",
+      "README.md": "8c3b47ff92d562f1243f64e61864837e9e690ff250399add7d962bd3ebf419be",
+      "Pflichtenheft.md": "74f8376c4c510a0cfdafe5b34353320f84250894ad177b78a5f2f3e8a1049964",
+      "requirements/intakes/active/Lastenheft_PL0-Zellfunktionen_V1.md": "72c67c9c4b20ee9e1e9ad89e76b0bd51284eda4f9772c05fa6c0ca92a162f7b0",
+      "Lastenheft_Abarbeitungsreihenfolge.md": "e37f394c64fa007a18f8f44404d707ea97942f22bb1ceb796a65df891aa92375",
+      "requirements/intake-governance-config.json": "2f88475fecdeb7e3ca03cbef5456a620f3c7c2627ae7541ca75960c7188ff4dd",
+      "requirements/intakes/active/Lastenheft_Secure-Development-Hardening.md": "8b52ca4953d74cc5e647b82ecbeea2adfcfbff3ebbc00f58196c8ee36143d402",
+      "requirements/intakes/archive/Lastenheft_RL-SE-Checklist-Selbstpruefung.004-rl-se-self-assessment.md": "96a5ef9c414d55c69ad117509d41f056f10d005824890bd5a2867eaf8ab948da",
+      "requirements/intakes/active/Lastenheft_Sandbox-gestuetzte-Secure-Development-Haertung.md": "b85f66e2d0fc1ce7d47ad4328e61a007821c1f19f9d1b291e9d4533271e079fa",
+      "requirements/intakes/series/tinycalc-delivery/receipt.json": "2c4eeb74a8e7831a939837ace78c61344f98147e06d40462580e44a3495f1473",
+      "requirements/intakes/archive/Lastenheft_TerminalGui_Migration.003-terminalgui-migration.md": "01db3bd8f2dc375fe1400a91580ce1a906dfc446c12fb8ad011419fe50fee94d",
+      "requirements/intakes/active/Lastenheft_Rename_MicroCalc_TinyCalc.md": "ed761c150526f18c0b1d98d8febac1def260b1890aca6d0a341279dec19985b9",
+      "requirements/intakes/active/Lastenheft_Legacy-Kompatibilitaet_V1.md": "f24a7ff1c6d1bcde8bca45a57133de5b9f6386c4586a079d1ba743f99479863c"
+    },
+    "documentationImpact": "UpdateRequired; bilingual report, operation lineage and machine result. Source-only, no Home sync; owner Thorsten Hindermann."
+  }
+}

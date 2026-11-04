@@ -1009,6 +1009,42 @@ Technische Checks und manuelle Review-Grenzen bleiben verbindlich. Source-only.
 EN: Removes two Claude PR/issue workflows at the owner's request and revokes the app.
 Technical checks and manual review boundaries remain binding. Source-only.
 
+### 2026-11-04 - README-Quellen-Erneuerung und Serienreview / README source renewal and Series review
+
+DE: Branch `codex/tinycalc-readme-source-renewal`, sichtbares Arbeitsfenster
+04.11.2026 Europe/Berlin, keine Stoppuhrmessung. Beide ausdrücklich genehmigten
+README-Bindungen nach #133 erneuert, Vorgänger bytegleich archiviert und IR002
+behoben. Serienreview `Ready`: 13 unveränderte Intake-Inhalte und IDs, vier
+Wurzeln und neun harte Abhängigkeiten. Vor diesem Ledger-Selbstnachweis umfasst
+der Kandidat 21 Dateien: 0 Produktionscode-, 0 Testcode-, 1257 hinzugefügte und
+11 entfernte Dokumentationszeilen sowie 1240 hinzugefügte und 31 entfernte
+Konfigurations-/Evidence-Zeilen. Ein erheblicher Anteil sind unveränderte
+Archivkopien; das Volumen ist keine neue Funktionalität oder Produktivitätsmessung.
+Bash-/PowerShell-Alignment mit allen 13 Receipts, Review und Serienartefakten,
+beide Operationsvalidatoren, Byte-/Hash-Erhaltung, Secret- und Diffprüfung
+bestanden. UpdateRequired, zweisprachiger Wartungsnachweis, Source-only, kein
+Home-Sync. Referenzen 80/125 Zeilen je Arbeitstag bleiben unverändert; keine
+neue Beschleunigungsaussage. Keine Produktimplementierung oder native Abnahme.
+Profil 2 wird am sauberen Source-Commit regelkonform separat gerendert.
+Der Lieferreview korrigiert zusätzlich die Vorgänger-ID im Archivmarker;
+Vorgänger, Nachfolger und archivierter Ergebnis-Hash werden gemeinsam geprüft.
+
+EN: Branch `codex/tinycalc-readme-source-renewal`, observable work window
+4 November 2026 Europe/Berlin, not stopwatch time. Renew both explicitly
+approved README bindings after #133, archive predecessors byte for byte and
+resolve IR002. Series review Ready: 13 unchanged intake contents and IDs, four
+roots and nine hard dependencies. Before this ledger self-record, the candidate
+has 21 files: zero production/test code, 1257 added/11 removed documentation
+lines and 1240 added/31 removed configuration/evidence lines. Many are unchanged
+archive copies; this is neither new functionality nor a productivity measure.
+Complete Bash/PowerShell alignment, operation validators, preservation, secret
+and diff checks pass. UpdateRequired, bilingual maintenance evidence,
+source-only, no Home sync. Existing 80/125 lines/workday references stay unchanged;
+no new acceleration claim, implementation or native acceptance. Profile 2 is
+rendered separately from the clean source commit. Delivery review also corrects
+the predecessor ID in the archive marker; predecessor, successor and archived
+result hash are checked together.
+
 ## Gesamtstatistik / Overall Statistics
 
 Deutsch: Feature 006 ist in PR #104 vollständig implementiert, menschlich
@@ -1049,27 +1085,27 @@ Profil 2 verwendet Git-getrackte Textdateien und sichtbare Git-Aktivitaet. Die W
 
 | Kennzahl / Metric | Wert / Value |
 |---|---:|
-| Textbasis / Text base | 360083 lines |
-| Textdateien / Text files | 2045 |
-| Beobachtbarer Zeitraum / Observable period | 2025-11-09..2026-11-03 |
-| Aktivtage / Active days | 103 |
-| Relevante Commits / Relevant commits | 344 |
-| Zeilen je Aktivtag / Lines per active day | 3496.0 |
+| Textbasis / Text base | 362366 lines |
+| Textdateien / Text files | 2061 |
+| Beobachtbarer Zeitraum / Observable period | 2025-11-09..2026-11-04 |
+| Aktivtage / Active days | 104 |
+| Relevante Commits / Relevant commits | 346 |
+| Zeilen je Aktivtag / Lines per active day | 3484.3 |
 | Peak-Tag im Fenster / Peak day in window | 2026-10-24 / 58461 |
 | Peak-Woche im Fenster / Peak week in window | 2026-10-18 / 106574 |
 | Laengste Serie / Longest streak | 8 days |
-| Speedup vs. 80 lines/day | 43.7x |
-| Speedup vs. 125 lines/day | 28.0x |
-| Methodik / Methodology | v2; source `d0d0ec07a8fe` |
+| Speedup vs. 80 lines/day | 43.6x |
+| Speedup vs. 125 lines/day | 27.9x |
+| Methodik / Methodology | v2; source `014fc3ebc7f5` |
 
 ### Artefaktmix / Artifact Mix
 
 ```text
 Produktiv / Production          [#...................]   0.9% | 3275
 Tests                           [#...................]   4.4% | 15921
-Dokumentation / Documentation   [###############.....]  77.1% | 277607
-Skripte / Scripts               [##..................]   9.4% | 33777
-Konfiguration / Configuration   [#...................]   7.3% | 26410
+Dokumentation / Documentation   [###############.....]  77.0% | 278853
+Skripte / Scripts               [##..................]   9.3% | 33777
+Konfiguration / Configuration   [##..................]   7.6% | 27447
 Daten und Medien / Data and media [....................]   0.0% | 0
 Sonstiger Text / Other text     [#...................]   0.9% | 3093
 ```
@@ -1096,7 +1132,7 @@ Wochen / Weeks 27..52 | 2026-05-10..2026-11-07
 So/Su  0 0 0 1 0 4 0 0 0 1 4 4 1 4 4 0 4 4 4 4 0 4 4 4 2 0
 Mo/Mo  0 0 0 0 0 0 0 3 1 4 4 0 0 0 2 0 0 0 0 0 3 3 3 0 0 0
 Di/Tu  0 0 3 0 0 0 0 2 0 3 4 4 0 0 0 0 4 3 4 0 0 4 0 4 0 4
-Mi/We  0 0 0 2 0 4 0 2 0 0 2 4 0 0 0 0 0 0 0 0 0 3 0 4 0 -
+Mi/We  0 0 0 2 0 4 0 2 0 0 2 4 0 0 0 0 0 0 0 0 0 3 0 4 0 4
 Do/Th  0 0 1 0 4 1 0 0 0 1 4 0 0 4 0 0 3 0 0 0 0 3 0 0 2 -
 Fr/Fr  0 4 2 2 0 3 2 3 4 4 4 1 0 0 0 0 4 3 2 0 0 0 0 0 3 -
 Sa/Sa  0 0 0 0 0 4 0 4 4 0 4 2 0 2 0 3 4 4 0 2 4 4 0 4 0 -
@@ -1217,8 +1253,8 @@ Die festen Slots halten den Phasenvergleich auch bei fehlenden oder spaeter erga
 
 ```text
 Scale: 0..50x
-80 lines/day       [#################...] 43.7x
-125 lines/day      [###########.........] 28.0x
+80 lines/day       [#################...] 43.6x
+125 lines/day      [###########.........] 27.9x
 ```
 
 Die Faktoren vergleichen sichtbare Lieferdichte mit den dokumentierten manuellen Referenzen. Sie messen keine Arbeitszeit.
@@ -1231,7 +1267,7 @@ Die Faktoren vergleichen sichtbare Lieferdichte mit den dokumentierten manuellen
 Scale: 0..5000 lines/day
 Experienced manual [#...................] 80
 Thorsten solo      [#...................] 125
-Visible repository [##############......] 3496.0
+Visible repository [##############......] 3484.3
 ```
 
 Die gemeinsame Skala vergleicht Referenzen und sichtbare Lieferdichte. Sie schreibt die Git-Aktivitaet keiner Person oder KI pauschal zu.
@@ -1240,9 +1276,9 @@ Die gemeinsame Skala vergleicht Referenzen und sichtbare Lieferdichte. Sie schre
 
 ### Textalternative / Text Alternative
 
-DE: Das Fenster beginnt am 2025-11-09 und endet am 2026-11-03. Es enthaelt 103 aktive und 257 inaktive vergangene Tage. Peak-Tag: 2026-10-24 / 58461. Peak-Woche: 2026-10-18 / 106574. Laengste Serie: 8 Tage (2026-07-19..2026-07-26).
+DE: Das Fenster beginnt am 2025-11-09 und endet am 2026-11-04. Es enthaelt 104 aktive und 257 inaktive vergangene Tage. Peak-Tag: 2026-10-24 / 58461. Peak-Woche: 2026-10-18 / 106574. Laengste Serie: 8 Tage (2026-07-19..2026-07-26).
 
-*EN: The window starts on 2025-11-09 and ends on 2026-11-03. It contains 103 active and 257 inactive elapsed days. Peak day: 2026-10-24 / 58461. Peak week: 2026-10-18 / 106574. Longest streak: 8 days (2026-07-19..2026-07-26).*
+*EN: The window starts on 2025-11-09 and ends on 2026-11-04. It contains 104 active and 257 inactive elapsed days. Peak day: 2026-10-24 / 58461. Peak week: 2026-10-18 / 106574. Longest streak: 8 days (2026-07-19..2026-07-26).*
 
 | Monat / Month | Geaenderte Textzeilen / Changed text lines |
 |---|---:|
@@ -1257,6 +1293,6 @@ DE: Das Fenster beginnt am 2025-11-09 und endet am 2026-11-03. Es enthaelt 103 a
 | 2026-08 | 26210 |
 | 2026-09 | 70997 |
 | 2026-10 | 167479 |
-| 2026-11 | 7097 |
+| 2026-11 | 9434 |
 
 <!-- project-statistics-v2:end -->

@@ -1,0 +1,43 @@
+{
+  "operationId": "c0149c9a-09c8-4108-b493-02e0daccd5b2",
+  "authorityEvidence": "Thorsten Hindermann explicitly requested on 2026-11-04: Bitte die beiden README-Quellenbindungen regulaer erneuern und anschliessend den TinyCalc-Serienreview erneut durchfuehren. Inhalte und IDs unveraendert lassen. This authorizes source-provenance repair and Series re-review, without product implementation or acceptance.",
+  "finding": "IR002",
+  "scope": "Renew two README source bindings only; preserve all intake bytes and identities, graph, lifecycle and delivery limits.",
+  "readmeNormalizedSha256": "8c3b47ff92d562f1243f64e61864837e9e690ff250399add7d962bd3ebf419be",
+  "targets": [
+    {
+      "intakeId": "b4f18668-0276-45ee-8a6f-16a8bd8b833d",
+      "physicalTarget": "requirements/intakes/active/Lastenheft_Rename_MicroCalc_TinyCalc.md",
+      "receiptTargetAlias": "requirements/intakes/active/Lastenheft_Rename_MicroCalc_TinyCalc.md",
+      "targetNormalizedSha256": "ed761c150526f18c0b1d98d8febac1def260b1890aca6d0a341279dec19985b9",
+      "targetBytesUnchanged": true,
+      "oldReceiptId": "2f6dbf67-91bb-471a-8b59-b5887760730e",
+      "newReceiptId": "5d1e4213-1197-469d-a76d-a6b65e171816",
+      "archiveReceiptPath": "specs/intake-authoring-receipts/history/rename-microcalc-tinycalc.20261104-model-routing-readme-source-renewal.json",
+      "oldReceiptNormalizedSha256": "38f7e4622e6e928fc879004720b2e2ba11cf9347ed25f48c81741dfdb8af6f0f",
+      "newReceiptNormalizedSha256": "c82c71883d598b20e673e386f3e5d8ec2f767c15cd53ec181107ff2ce241d25c",
+      "archiveTargetPath": "requirements/intakes/history/20261104-model-routing-readme-source-renewal/Lastenheft_Rename_MicroCalc_TinyCalc.md",
+      "currentReceiptPath": "specs/intake-authoring-receipts/rename-microcalc-tinycalc.json",
+      "previousReadmeNormalizedSha256": "832e7bbdd813f954baf01b50e7f42e28b53c4980709c8472ccfb7b6a3b938b24",
+      "currentReadmeNormalizedSha256": "8c3b47ff92d562f1243f64e61864837e9e690ff250399add7d962bd3ebf419be"
+    },
+    {
+      "intakeId": "40e85866-18d3-4cc8-b667-a1de8da44b10",
+      "physicalTarget": "requirements/intakes/archive/Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md",
+      "receiptTargetAlias": "requirements/intakes/active/Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md",
+      "targetNormalizedSha256": "c07016800b9e02e56f123ed6af187d0b5fedd22c1689a1b8909fcc6e8f70c6ac",
+      "targetBytesUnchanged": true,
+      "oldReceiptId": "c3bee895-1933-490b-b01c-6b01850e9597",
+      "newReceiptId": "cbb0dfc3-8ce7-4bff-ba76-6f56c04b93c1",
+      "archiveReceiptPath": "specs/intake-authoring-receipts/history/tui-funktionsabnahme-und-regressionsvertrag.20261104-model-routing-readme-source-renewal.json",
+      "oldReceiptNormalizedSha256": "b64e1a98a4bef81112c6cb9a41068e847678f22848871663f41decbd89507131",
+      "newReceiptNormalizedSha256": "3e97b80460dc39071b7742a2f1ed9066f78b81cd35948dbb218449c3ead92b6f",
+      "archiveTargetPath": "requirements/intakes/history/20261104-model-routing-readme-source-renewal/Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md",
+      "currentReceiptPath": "specs/intake-authoring-receipts/tui-funktionsabnahme-und-regressionsvertrag.json",
+      "previousReadmeNormalizedSha256": "832e7bbdd813f954baf01b50e7f42e28b53c4980709c8472ccfb7b6a3b938b24",
+      "currentReadmeNormalizedSha256": "8c3b47ff92d562f1243f64e61864837e9e690ff250399add7d962bd3ebf419be"
+    }
+  ],
+  "previousReview": "d4536c4f-4113-4ec5-a996-41ace9efb428",
+  "rollback": "Discard the isolated preparation on failure. Source clone and prior review worktree remain untouched."
+}

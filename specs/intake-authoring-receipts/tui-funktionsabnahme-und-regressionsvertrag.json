@@ -1,17 +1,17 @@
 {
   "schemaVersion": "2.0",
   "documentType": "IntakeReceipt",
-  "receiptId": "c3bee895-1933-490b-b01c-6b01850e9597",
+  "receiptId": "cbb0dfc3-8ce7-4bff-ba76-6f56c04b93c1",
   "intakeId": "40e85866-18d3-4cc8-b667-a1de8da44b10",
   "generator": {
     "preset": "intake-authoring-governance",
     "version": "0.3.10"
   },
-  "createdAt": "2026-11-03T15:44:48Z",
+  "createdAt": "2026-11-04T06:36:26Z",
   "operation": {
-    "authorityEvidence": "Thorsten explicitly approved on 2026-11-03 renewal of the README source bindings for the Rename MicroCalc/TinyCalc and TUI functional acceptance/regression intakes. Preserve target bytes, intake IDs, accepted scope and delivery authority. Archive predecessor receipts, create new provenance receipts, and renew or mark affected review/series evidence pending. This does not authorize a product run or product acceptance.",
-    "operationId": "11c1df2d-83ca-47ff-85a3-0b5265ba3eab",
-    "type": "Update"
+    "operationId": "c0149c9a-09c8-4108-b493-02e0daccd5b2",
+    "type": "Update",
+    "authorityEvidence": "Thorsten Hindermann explicitly requested on 2026-11-04: Bitte die beiden README-Quellenbindungen regulaer erneuern und anschliessend den TinyCalc-Serienreview erneut durchfuehren. Inhalte und IDs unveraendert lassen. This authorizes source-provenance repair and Series re-review, without product implementation or acceptance."
   },
   "status": "ReadyForReview",
   "target": {
@@ -25,7 +25,7 @@
       "kind": "File",
       "label": "First binding source: byte-identical predecessor intake",
       "location": "Repository",
-      "path": "requirements/intakes/history/20261103-dependabot-readme-source-renewal/Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md",
+      "path": "requirements/intakes/history/20261104-model-routing-readme-source-renewal/Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md",
       "requestedUrl": "N/A",
       "finalUrl": "N/A",
       "retrievedAt": "N/A",
@@ -46,7 +46,7 @@
       "kind": "File",
       "label": "Byte-identical prior receipt preserves historical source context",
       "location": "Repository",
-      "path": "specs/intake-authoring-receipts/history/tui-funktionsabnahme-und-regressionsvertrag.20261103-dependabot-readme-source-renewal.json",
+      "path": "specs/intake-authoring-receipts/history/tui-funktionsabnahme-und-regressionsvertrag.20261104-model-routing-readme-source-renewal.json",
       "requestedUrl": "N/A",
       "finalUrl": "N/A",
       "retrievedAt": "N/A",
@@ -57,7 +57,7 @@
       "lastModified": "N/A",
       "redirectChain": [],
       "rawSha256": "N/A",
-      "normalizedSha256": "0fe2c2707d6f7a7ceadaa97a1236f44586387ca2a682f36a930f84a276d247d8",
+      "normalizedSha256": "b64e1a98a4bef81112c6cb9a41068e847678f22848871663f41decbd89507131",
       "gitBlob": "N/A",
       "proofBoundary": "Strict UTF-8 normalized SHA-256; source adoption is not product conformance / Quellenbindung ist keine Produktkonformitaet."
     },
@@ -65,7 +65,7 @@
       "sourceId": "SRC003",
       "order": 3,
       "kind": "File",
-      "label": "Approved README source renewal; JSON bounds and bounded recalculation documentation only",
+      "label": "Explicitly approved README renewal after Model Routing Governance 0.2.3 documentation change; no intake requirement change",
       "location": "Repository",
       "path": "README.md",
       "requestedUrl": "N/A",
@@ -78,7 +78,7 @@
       "lastModified": "N/A",
       "redirectChain": [],
       "rawSha256": "N/A",
-      "normalizedSha256": "832e7bbdd813f954baf01b50e7f42e28b53c4980709c8472ccfb7b6a3b938b24",
+      "normalizedSha256": "8c3b47ff92d562f1243f64e61864837e9e690ff250399add7d962bd3ebf419be",
       "gitBlob": "N/A",
       "proofBoundary": "Strict UTF-8 normalized SHA-256; source adoption is not product conformance / Quellenbindung ist keine Produktkonformitaet."
     }
@@ -135,11 +135,11 @@
   "promptState": "Enabled",
   "provenanceMode": "Supersession",
   "supersedes": {
-    "receiptPath": "specs/intake-authoring-receipts/history/tui-funktionsabnahme-und-regressionsvertrag.20261103-dependabot-readme-source-renewal.json",
-    "receiptNormalizedSha256": "0fe2c2707d6f7a7ceadaa97a1236f44586387ca2a682f36a930f84a276d247d8",
-    "archiveReceiptPath": "specs/intake-authoring-receipts/history/tui-funktionsabnahme-und-regressionsvertrag.20261103-dependabot-readme-source-renewal.json",
+    "receiptPath": "specs/intake-authoring-receipts/history/tui-funktionsabnahme-und-regressionsvertrag.20261104-model-routing-readme-source-renewal.json",
+    "receiptNormalizedSha256": "b64e1a98a4bef81112c6cb9a41068e847678f22848871663f41decbd89507131",
+    "archiveReceiptPath": "specs/intake-authoring-receipts/history/tui-funktionsabnahme-und-regressionsvertrag.20261104-model-routing-readme-source-renewal.json",
     "targetNormalizedSha256": "c07016800b9e02e56f123ed6af187d0b5fedd22c1689a1b8909fcc6e8f70c6ac",
-    "archiveTargetPath": "requirements/intakes/history/20261103-dependabot-readme-source-renewal/Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md"
+    "archiveTargetPath": "requirements/intakes/history/20261104-model-routing-readme-source-renewal/Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md"
   },
   "legacyAdoption": {
     "priorTargetNormalizedSha256": "N/A",
@@ -147,7 +147,7 @@
     "priorGitBlob": "N/A"
   },
   "updateAuthorized": true,
-  "updateAuthorityEvidence": "Thorsten explicitly approved on 2026-11-03 renewal of the README source bindings for the Rename MicroCalc/TinyCalc and TUI functional acceptance/regression intakes. Preserve target bytes, intake IDs, accepted scope and delivery authority. Archive predecessor receipts, create new provenance receipts, and renew or mark affected review/series evidence pending. This does not authorize a product run or product acceptance.",
+  "updateAuthorityEvidence": "Thorsten Hindermann explicitly requested on 2026-11-04: Bitte die beiden README-Quellenbindungen regulaer erneuern und anschliessend den TinyCalc-Serienreview erneut durchfuehren. Inhalte und IDs unveraendert lassen. This authorizes source-provenance repair and Series re-review, without product implementation or acceptance.",
   "series": {
     "seriesId": "5b4523b4-d946-4091-9cbc-11825af94332",
     "manifestPath": "requirements/intakes/series/tinycalc-delivery/manifest.json",
