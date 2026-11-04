@@ -1,0 +1,219 @@
+{
+  "schemaVersion": "1.1",
+  "reviewId": "d4536c4f-4113-4ec5-a996-41ace9efb428",
+  "mode": "Series",
+  "status": "NeedsRemediation",
+  "policy": "tinycalc-delivery-v1",
+  "reviewedAt": "2026-11-03T22:38:12Z",
+  "repository": {
+    "root": ".",
+    "head": "0351afd6cd46f121ae795550f09f90ac29e9d37d"
+  },
+  "requestEvidence": {
+    "path": "requirements/intakes/series/tinycalc-delivery/intake-review-request.json",
+    "normalizedSha256": "24ec7b8907d189c8ecd3da85d46b1d2e12586061cc1f3374323f7b14f49810a1"
+  },
+  "targets": [
+    {
+      "path": "requirements/intakes/archive/Lastenheft_Constitution_Change.002-constitution-change.md",
+      "role": "Primary",
+      "normalizedSha256": "04c4e1ba93d626463829a07f33b5591a6417b6aeaf89e805b637ab1bf5c26a0a",
+      "gitBlob": "e5baf4a877153692acdc9aed7035afe3999a4acc"
+    },
+    {
+      "path": "requirements/intakes/archive/Lastenheft_TerminalGui_Migration.003-terminalgui-migration.md",
+      "role": "OrderedMember",
+      "normalizedSha256": "01db3bd8f2dc375fe1400a91580ce1a906dfc446c12fb8ad011419fe50fee94d",
+      "gitBlob": "d960bf119005a5d3d09860da90be7d5bbfa22d5a"
+    },
+    {
+      "path": "requirements/intakes/archive/Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md",
+      "role": "OrderedMember",
+      "normalizedSha256": "c07016800b9e02e56f123ed6af187d0b5fedd22c1689a1b8909fcc6e8f70c6ac",
+      "gitBlob": "4ad418e77fe5bdd39fd05c087ee24aeb73e164ef"
+    },
+    {
+      "path": "requirements/intakes/active/Lastenheft_A11Y_TUI.md",
+      "role": "OrderedMember",
+      "normalizedSha256": "7fec8e9dea123fdeb0753119d06c18a8389a24645a541d3b60413166bbcbd6e2",
+      "gitBlob": "f8f2b83c12c20f67fedc9a22a22675b7d86349c1"
+    },
+    {
+      "path": "requirements/intakes/active/Lastenheft_Rename_MicroCalc_TinyCalc.md",
+      "role": "OrderedMember",
+      "normalizedSha256": "ed761c150526f18c0b1d98d8febac1def260b1890aca6d0a341279dec19985b9",
+      "gitBlob": "bb7999fed59d81aa9b449729321fb03b94868724"
+    },
+    {
+      "path": "requirements/intakes/active/Lastenheft_Didactic-Inline-Code-Comment-Hardening.md",
+      "role": "OrderedMember",
+      "normalizedSha256": "460abc8142179cc40e1d0cfe07928260456088205b3200e7ca6c6e10818e46da",
+      "gitBlob": "206acb40849eceac8d79e10f71464a5e533880c4"
+    },
+    {
+      "path": "requirements/intakes/active/Lastenheft_Secure-Development-Hardening.md",
+      "role": "OrderedMember",
+      "normalizedSha256": "8b52ca4953d74cc5e647b82ecbeea2adfcfbff3ebbc00f58196c8ee36143d402",
+      "gitBlob": "247b031b26538df4b626b9ecacc98fe9be5fb178"
+    },
+    {
+      "path": "requirements/intakes/active/Lastenheft_PL0-Zellfunktionen_V1.md",
+      "role": "OrderedMember",
+      "normalizedSha256": "72c67c9c4b20ee9e1e9ad89e76b0bd51284eda4f9772c05fa6c0ca92a162f7b0",
+      "gitBlob": "bc0b6621be4dbe27ba882fbc93f69d6eb084ef6b"
+    },
+    {
+      "path": "requirements/intakes/active/Lastenheft_Legacy-Kompatibilitaet_V1.md",
+      "role": "OrderedMember",
+      "normalizedSha256": "f24a7ff1c6d1bcde8bca45a57133de5b9f6386c4586a079d1ba743f99479863c",
+      "gitBlob": "f7f47ff2950c14423815e87f658208673718c232"
+    },
+    {
+      "path": "requirements/intakes/active/Lastenheft_Formelkopie-und-Tabellenoperationen_V1.md",
+      "role": "OrderedMember",
+      "normalizedSha256": "7890c8e1358e002044b352adc94fcbe2a104f38e5fc1504f6919830de03d2fb4",
+      "gitBlob": "0935e0d42877e19cc9b446ca71d34a512d666aff"
+    },
+    {
+      "path": "requirements/intakes/active/Lastenheft_Sandbox-gestuetzte-Secure-Development-Haertung.md",
+      "role": "OrderedMember",
+      "normalizedSha256": "b85f66e2d0fc1ce7d47ad4328e61a007821c1f19f9d1b291e9d4533271e079fa",
+      "gitBlob": "ef90813e64c2e62744999c2925c6d23ed91daf90"
+    },
+    {
+      "path": "requirements/intakes/archive/Lastenheft_RL-SE-Checklist-Selbstpruefung.004-rl-se-self-assessment.md",
+      "role": "OrderedMember",
+      "normalizedSha256": "96a5ef9c414d55c69ad117509d41f056f10d005824890bd5a2867eaf8ab948da",
+      "gitBlob": "0cd87941bb49e73b11aa15ec7b529bc36788b245"
+    },
+    {
+      "path": "requirements/intakes/archive/Lastenheft_GSDB-Spec-Kit-Intensivpruefung.005-gsdb-intensive-review.md",
+      "role": "OrderedMember",
+      "normalizedSha256": "f4dcb3fac6cb755faed296847ffd40170f0d008fa3640e5e5fa5bc38e4af5375",
+      "gitBlob": "1df4cd2af93098ab1bb0e95de9e10d2811273210"
+    }
+  ],
+  "findings": [
+    {
+      "id": "IR002",
+      "severity": "High",
+      "category": "SourceProvenance",
+      "target": "README.md -> Rename and TUI functional acceptance authoring receipts",
+      "owner": "Thorsten Hindermann (source adoption approval); authorized intake-authoring repair",
+      "evidence": "Both current receipts bind README.md SHA256 832e7bbdd813f954baf01b50e7f42e28b53c4980709c8472ccfb7b6a3b938b24; current SHA256 8c3b47ff92d562f1243f64e61864837e9e690ff250399add7d962bd3ebf419be. Each installed receipt validator exits 2: source hash drift: README.md. README gained Model Routing Governance 0.2.3 delivery notes after the approved renewal; compare 71a9adbe6ee780baf6df3f1fdabb3ed2c6485eab with reviewed HEAD.",
+      "disposition": "Open: renew only these two README bindings through an explicitly authorized provenance operation; preserve intake bytes/IDs, archive predecessor receipts, then rerun the Series review. Do not bypass source hashes or inherit historical Ready.",
+      "reevaluationTrigger": "Authorized renewal completed and all 13 authoring validators pass on the exact review basis; re-evaluate again on source, target, policy or series drift."
+    }
+  ],
+  "questions": [],
+  "acceptedRisks": [],
+  "operatorExceptions": [],
+  "coverage": {
+    "individual": [
+      "requirements/intakes/archive/Lastenheft_Constitution_Change.002-constitution-change.md",
+      "requirements/intakes/archive/Lastenheft_TerminalGui_Migration.003-terminalgui-migration.md",
+      "requirements/intakes/archive/Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md",
+      "requirements/intakes/active/Lastenheft_A11Y_TUI.md",
+      "requirements/intakes/active/Lastenheft_Rename_MicroCalc_TinyCalc.md",
+      "requirements/intakes/active/Lastenheft_Didactic-Inline-Code-Comment-Hardening.md",
+      "requirements/intakes/active/Lastenheft_Secure-Development-Hardening.md",
+      "requirements/intakes/active/Lastenheft_PL0-Zellfunktionen_V1.md",
+      "requirements/intakes/active/Lastenheft_Legacy-Kompatibilitaet_V1.md",
+      "requirements/intakes/active/Lastenheft_Formelkopie-und-Tabellenoperationen_V1.md",
+      "requirements/intakes/active/Lastenheft_Sandbox-gestuetzte-Secure-Development-Haertung.md",
+      "requirements/intakes/archive/Lastenheft_RL-SE-Checklist-Selbstpruefung.004-rl-se-self-assessment.md",
+      "requirements/intakes/archive/Lastenheft_GSDB-Spec-Kit-Intensivpruefung.005-gsdb-intensive-review.md"
+    ],
+    "series": [
+      "13 strict UTF-8 target hashes match the prior accepted review exactly; prior semantic assessment reused, not a fresh independent semantic review.",
+      "Schema 2.0 inventory and naming validated; 4 roots, 9 HardCompletionGate edges and every ordered target checked by installed validators.",
+      "All 13 authoring receipts checked individually: 11 pass; two README source bindings fail. Historical Ready is superseded, not carried forward.",
+      "Migration -> functional acceptance -> A11Y -> rename remains binding. A11Y is the declared Eligible candidate, Sandbox an independent Pending root. Eligibility grants no implementation authority."
+    ],
+    "workers": []
+  },
+  "summary": {
+    "critical": 0,
+    "high": 1,
+    "medium": 0,
+    "low": 0
+  },
+  "supersedes": "0cb1a45b-9f8e-40a6-b102-1477e13b1332",
+  "evidenceBoundary": {
+    "previousReview": "requirements/intakes/series-archive/tinycalc-delivery/20261103-dependabot-readme-source-renewal/intake-review-result.json",
+    "reusedSemanticTargets": 13,
+    "newIndependentReviewer": false,
+    "implementationApproval": false,
+    "nativeAccessibilityAcceptance": false,
+    "receiptChecks": [
+      {
+        "path": "specs/intake-authoring-receipts/a11y-tui.json",
+        "exitCode": 0,
+        "output": "PASS: intake authoring 3f215855-e5df-4062-9ed4-d7b6f8eae911 is current (ReadyForReview, 4 sources, requirements/intakes/active/Lastenheft_A11Y_TUI.md)"
+      },
+      {
+        "path": "specs/intake-authoring-receipts/constitution-change.json",
+        "exitCode": 0,
+        "output": "PASS: intake authoring b00956e5-e42b-48c4-b63d-ee748cad27f3 is current (ReadyForReview, 1 sources, requirements/intakes/active/Lastenheft_Constitution_Change.002-constitution-change.md)"
+      },
+      {
+        "path": "specs/intake-authoring-receipts/didactic-inline-code-comment-hardening.json",
+        "exitCode": 0,
+        "output": "PASS: intake authoring fd3667ea-9958-48c6-864f-0c0753007535 is current (ReadyForReview, 3 sources, requirements/intakes/active/Lastenheft_Didactic-Inline-Code-Comment-Hardening.md)"
+      },
+      {
+        "path": "specs/intake-authoring-receipts/formelkopie-und-tabellenoperationen-v1.json",
+        "exitCode": 0,
+        "output": "PASS: intake authoring e8dc933c-8a2c-4aef-bb82-2c81ee06b186 is current (ReadyForReview, 4 sources, requirements/intakes/active/Lastenheft_Formelkopie-und-Tabellenoperationen_V1.md)"
+      },
+      {
+        "path": "specs/intake-authoring-receipts/gsdb-spec-kit-intensivpruefung.json",
+        "exitCode": 0,
+        "output": "PASS: intake authoring 704cea09-a869-49a5-baf9-70f24aa8d67b is current (ReadyForReview, 1 sources, requirements/intakes/active/Lastenheft_GSDB-Spec-Kit-Intensivpruefung.005-gsdb-intensive-review.md)"
+      },
+      {
+        "path": "specs/intake-authoring-receipts/legacy-kompatibilitaet-v1.json",
+        "exitCode": 0,
+        "output": "PASS: intake authoring 8852efb7-1a9f-4e86-acd9-b6ae30c4c78c is current (ReadyForReview, 4 sources, requirements/intakes/active/Lastenheft_Legacy-Kompatibilitaet_V1.md)"
+      },
+      {
+        "path": "specs/intake-authoring-receipts/pl0-zellfunktionen-v1.json",
+        "exitCode": 0,
+        "output": "PASS: intake authoring dac09359-3363-4118-b692-e4a03ff1748b is current (ReadyForReview, 5 sources, requirements/intakes/active/Lastenheft_PL0-Zellfunktionen_V1.md)"
+      },
+      {
+        "path": "specs/intake-authoring-receipts/rename-microcalc-tinycalc.json",
+        "exitCode": 2,
+        "output": "ERROR: source hash drift: README.md"
+      },
+      {
+        "path": "specs/intake-authoring-receipts/rl-se-checklist-selbstpruefung.json",
+        "exitCode": 0,
+        "output": "PASS: intake authoring 2093b09a-e0bf-4b03-9df9-b81594d23d2d is current (ReadyForReview, 1 sources, requirements/intakes/active/Lastenheft_RL-SE-Checklist-Selbstpruefung.004-rl-se-self-assessment.md)"
+      },
+      {
+        "path": "specs/intake-authoring-receipts/sandbox-gestuetzte-secure-development-haertung.json",
+        "exitCode": 0,
+        "output": "PASS: intake authoring c941279d-a91f-423d-ba42-de381961b90f is current (ReadyForReview, 4 sources, requirements/intakes/active/Lastenheft_Sandbox-gestuetzte-Secure-Development-Haertung.md)"
+      },
+      {
+        "path": "specs/intake-authoring-receipts/secure-development-hardening.json",
+        "exitCode": 0,
+        "output": "PASS: intake authoring 5dee00ec-a6ce-425e-9e3e-5fddc1850e01 is current (ReadyForReview, 4 sources, requirements/intakes/active/Lastenheft_Secure-Development-Hardening.md)"
+      },
+      {
+        "path": "specs/intake-authoring-receipts/terminalgui-migration.json",
+        "exitCode": 0,
+        "output": "PASS: intake authoring 098464e1-cbf6-4812-8b42-c88a55d3c192 is current (ReadyForReview, 1 sources, requirements/intakes/active/Lastenheft_TerminalGui_Migration.003-terminalgui-migration.md)"
+      },
+      {
+        "path": "specs/intake-authoring-receipts/tui-funktionsabnahme-und-regressionsvertrag.json",
+        "exitCode": 2,
+        "output": "ERROR: source hash drift: README.md"
+      }
+    ],
+    "readmeNormalizedSha256": "8c3b47ff92d562f1243f64e61864837e9e690ff250399add7d962bd3ebf419be",
+    "pendingReportArchive": "requirements/intakes/series-archive/tinycalc-delivery/20261103-model-routing-drift-review/pending-intake-review-report.md",
+    "documentationImpact": "UpdateRequired: DE/EN review report and machine result; source-only, no Home sync; owner Thorsten Hindermann. Re-evaluate after source renewal or reviewed-input drift."
+  }
+}

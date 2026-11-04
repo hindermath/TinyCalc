@@ -1,0 +1,54 @@
+{
+  "schemaVersion": "1.0",
+  "documentType": "IntakeOperation",
+  "operationId": "c0149c9a-09c8-4108-b493-02e0daccd5b2",
+  "type": "Update",
+  "status": "Completed",
+  "createdAt": "2026-11-04T06:36:26Z",
+  "authorityEvidence": "Thorsten Hindermann explicitly requested on 2026-11-04: Bitte die beiden README-Quellenbindungen regulaer erneuern und anschliessend den TinyCalc-Serienreview erneut durchfuehren. Inhalte und IDs unveraendert lassen. This authorizes source-provenance repair and Series re-review, without product implementation or acceptance.",
+  "proposalPath": "specs/intake-authoring-operations/c0149c9a-09c8-4108-b493-02e0daccd5b2/proposal.json",
+  "proposalNormalizedSha256": "93f9a260b75c159b8977bced6053ffa432695733646cf3dfb464e04b15bae433",
+  "approval": {
+    "approved": true,
+    "approvedBy": "Thorsten Hindermann",
+    "approvedAt": "2026-11-04T06:36:26Z",
+    "evidence": "Thorsten Hindermann explicitly requested on 2026-11-04: Bitte die beiden README-Quellenbindungen regulaer erneuern und anschliessend den TinyCalc-Serienreview erneut durchfuehren. Inhalte und IDs unveraendert lassen. This authorizes source-provenance repair and Series re-review, without product implementation or acceptance."
+  },
+  "stagingDirectory": ".",
+  "intendedTargets": [
+    "specs/intake-authoring-receipts/rename-microcalc-tinycalc.json",
+    "specs/intake-authoring-receipts/history/rename-microcalc-tinycalc.20261104-model-routing-readme-source-renewal.json",
+    "requirements/intakes/history/20261104-model-routing-readme-source-renewal/Lastenheft_Rename_MicroCalc_TinyCalc.md",
+    "specs/intake-authoring-receipts/tui-funktionsabnahme-und-regressionsvertrag.json",
+    "specs/intake-authoring-receipts/history/tui-funktionsabnahme-und-regressionsvertrag.20261104-model-routing-readme-source-renewal.json",
+    "requirements/intakes/history/20261104-model-routing-readme-source-renewal/Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md",
+    "specs/intake-authoring-operations/c0149c9a-09c8-4108-b493-02e0daccd5b2/proposal.json",
+    "specs/intake-authoring-operations/c0149c9a-09c8-4108-b493-02e0daccd5b2/lineage.json"
+  ],
+  "validatedTargets": [
+    "specs/intake-authoring-receipts/rename-microcalc-tinycalc.json",
+    "specs/intake-authoring-receipts/history/rename-microcalc-tinycalc.20261104-model-routing-readme-source-renewal.json",
+    "requirements/intakes/history/20261104-model-routing-readme-source-renewal/Lastenheft_Rename_MicroCalc_TinyCalc.md",
+    "specs/intake-authoring-receipts/tui-funktionsabnahme-und-regressionsvertrag.json",
+    "specs/intake-authoring-receipts/history/tui-funktionsabnahme-und-regressionsvertrag.20261104-model-routing-readme-source-renewal.json",
+    "requirements/intakes/history/20261104-model-routing-readme-source-renewal/Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md",
+    "specs/intake-authoring-operations/c0149c9a-09c8-4108-b493-02e0daccd5b2/proposal.json",
+    "specs/intake-authoring-operations/c0149c9a-09c8-4108-b493-02e0daccd5b2/lineage.json"
+  ],
+  "publishedTargets": [
+    "specs/intake-authoring-receipts/rename-microcalc-tinycalc.json",
+    "specs/intake-authoring-receipts/history/rename-microcalc-tinycalc.20261104-model-routing-readme-source-renewal.json",
+    "requirements/intakes/history/20261104-model-routing-readme-source-renewal/Lastenheft_Rename_MicroCalc_TinyCalc.md",
+    "specs/intake-authoring-receipts/tui-funktionsabnahme-und-regressionsvertrag.json",
+    "specs/intake-authoring-receipts/history/tui-funktionsabnahme-und-regressionsvertrag.20261104-model-routing-readme-source-renewal.json",
+    "requirements/intakes/history/20261104-model-routing-readme-source-renewal/Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md",
+    "specs/intake-authoring-operations/c0149c9a-09c8-4108-b493-02e0daccd5b2/proposal.json",
+    "specs/intake-authoring-operations/c0149c9a-09c8-4108-b493-02e0daccd5b2/lineage.json"
+  ],
+  "rollbackBoundary": "Isolated worktree; retain predecessor target and receipt bytes. Discard preparation if validation fails; no changes to the source clone.",
+  "failure": {
+    "message": "N/A",
+    "class": "N/A"
+  },
+  "nextAction": "$speckit-intake-review requirements/intakes/series/tinycalc-delivery/manifest.json"
+}

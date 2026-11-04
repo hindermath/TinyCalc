@@ -1009,6 +1009,38 @@ Technische Checks und manuelle Review-Grenzen bleiben verbindlich. Source-only.
 EN: Removes two Claude PR/issue workflows at the owner's request and revokes the app.
 Technical checks and manual review boundaries remain binding. Source-only.
 
+### 2026-11-04 - README-Quellen-Erneuerung und Serienreview / README source renewal and Series review
+
+DE: Branch `codex/tinycalc-readme-source-renewal`, sichtbares Arbeitsfenster
+04.11.2026 Europe/Berlin, keine Stoppuhrmessung. Beide ausdrücklich genehmigten
+README-Bindungen nach #133 erneuert, Vorgänger bytegleich archiviert und IR002
+behoben. Serienreview `Ready`: 13 unveränderte Intake-Inhalte und IDs, vier
+Wurzeln und neun harte Abhängigkeiten. Vor diesem Ledger-Selbstnachweis umfasst
+der Kandidat 21 Dateien: 0 Produktionscode-, 0 Testcode-, 1257 hinzugefügte und
+11 entfernte Dokumentationszeilen sowie 1240 hinzugefügte und 31 entfernte
+Konfigurations-/Evidence-Zeilen. Ein erheblicher Anteil sind unveränderte
+Archivkopien; das Volumen ist keine neue Funktionalität oder Produktivitätsmessung.
+Bash-/PowerShell-Alignment mit allen 13 Receipts, Review und Serienartefakten,
+beide Operationsvalidatoren, Byte-/Hash-Erhaltung, Secret- und Diffprüfung
+bestanden. UpdateRequired, zweisprachiger Wartungsnachweis, Source-only, kein
+Home-Sync. Referenzen 80/125 Zeilen je Arbeitstag bleiben unverändert; keine
+neue Beschleunigungsaussage. Keine Produktimplementierung oder native Abnahme.
+Profil 2 wird am sauberen Source-Commit regelkonform separat gerendert.
+
+EN: Branch `codex/tinycalc-readme-source-renewal`, observable work window
+4 November 2026 Europe/Berlin, not stopwatch time. Renew both explicitly
+approved README bindings after #133, archive predecessors byte for byte and
+resolve IR002. Series review Ready: 13 unchanged intake contents and IDs, four
+roots and nine hard dependencies. Before this ledger self-record, the candidate
+has 21 files: zero production/test code, 1257 added/11 removed documentation
+lines and 1240 added/31 removed configuration/evidence lines. Many are unchanged
+archive copies; this is neither new functionality nor a productivity measure.
+Complete Bash/PowerShell alignment, operation validators, preservation, secret
+and diff checks pass. UpdateRequired, bilingual maintenance evidence,
+source-only, no Home sync. Existing 80/125 lines/workday references stay unchanged;
+no new acceleration claim, implementation or native acceptance. Profile 2 is
+rendered separately from the clean source commit.
+
 ## Gesamtstatistik / Overall Statistics
 
 Deutsch: Feature 006 ist in PR #104 vollständig implementiert, menschlich

@@ -1,0 +1,46 @@
+{
+  "reviewedHead": "0351afd6cd46f121ae795550f09f90ac29e9d37d",
+  "performedAt": "2026-11-03T22:39:17Z",
+  "checks": [
+    {
+      "name": "governance-config-bash",
+      "exitCode": 0,
+      "output": "{\"collections\": {\"active\": \"requirements/intakes/active\", \"archive\": \"requirements/intakes/archive\", \"backlog\": \"requirements/intakes/backlog\", \"baseline\": \"requirements/baseline\", \"history\": \"requirements/intakes/history\", \"seriesManifest\": \"requirements/intakes/series/tinycalc-delivery/manifest.json\"}, \"documentationLanguage\": \"de-DE\", \"inventory\": {\"activeIntakeCount\": 8, \"activeSeriesTargetCount\": 8, \"archiveIntakeCount\": 25, \"backlogIntakeCount\": 0, \"baselineCount\": 1, \"dependencyCount\": 9, \"eligibleCandidate\": \"requirements/intakes/active/Lastenheft_A11Y_TUI.md\", \"historyIntakeCount\": 31, \"seriesTargetCount\": 13}, \"inventoryMode\": \"DirectoryStrict\", \"legacyArtifactNames\": [], \"missingPaths\": [], \"nextAction\": \"N/A\", \"outcome\": \"Aligned\", \"profile\": \"de\", \"resolvedNaming\": {\"canonicalIndex\": \"Pflichtenheft.md\", \"intakePattern\": \"Lastenheft_<slug>.md\", \"orderView\": \"Lastenheft_Abarbeitungsreihenfolge.md\"}, \"roles\": {\"intake-order\": \"Lastenheft_Abarbeitungsreihenfolge.md\", \"requirements-baseline\": \"requirements/baseline\", \"requirements-index\": \"Pflichtenheft.md\", \"requirements-intake\": \"requirements/intakes/active\"}, \"schemaVersion\": \"2.0\"}"
+    },
+    {
+      "name": "series-manifest-bash",
+      "exitCode": 0,
+      "output": "{\"blockers\": {\"requirements/intakes/active/Lastenheft_Didactic-Inline-Code-Comment-Hardening.md\": [\"requirements/intakes/active/Lastenheft_Rename_MicroCalc_TinyCalc.md\"], \"requirements/intakes/active/Lastenheft_Formelkopie-und-Tabellenoperationen_V1.md\": [\"requirements/intakes/active/Lastenheft_Legacy-Kompatibilitaet_V1.md\"], \"requirements/intakes/active/Lastenheft_Legacy-Kompatibilitaet_V1.md\": [\"requirements/intakes/active/Lastenheft_PL0-Zellfunktionen_V1.md\"], \"requirements/intakes/active/Lastenheft_PL0-Zellfunktionen_V1.md\": [\"requirements/intakes/active/Lastenheft_Secure-Development-Hardening.md\"], \"requirements/intakes/active/Lastenheft_Rename_MicroCalc_TinyCalc.md\": [\"requirements/intakes/active/Lastenheft_A11Y_TUI.md\"], \"requirements/intakes/active/Lastenheft_Secure-Development-Hardening.md\": [\"requirements/intakes/active/Lastenheft_Didactic-Inline-Code-Comment-Hardening.md\"]}, \"declaredEligible\": [\"requirements/intakes/active/Lastenheft_A11Y_TUI.md\"], \"dependencies\": 9, \"eligible\": [\"requirements/intakes/active/Lastenheft_A11Y_TUI.md\", \"requirements/intakes/active/Lastenheft_Sandbox-gestuetzte-Secure-Development-Haertung.md\"], \"roots\": 4, \"seriesId\": \"5b4523b4-d946-4091-9cbc-11825af94332\", \"status\": \"Active\", \"targets\": 13}"
+    },
+    {
+      "name": "series-receipt-bash",
+      "exitCode": 0,
+      "output": "{\"blockers\": {\"requirements/intakes/active/Lastenheft_Didactic-Inline-Code-Comment-Hardening.md\": [\"requirements/intakes/active/Lastenheft_Rename_MicroCalc_TinyCalc.md\"], \"requirements/intakes/active/Lastenheft_Formelkopie-und-Tabellenoperationen_V1.md\": [\"requirements/intakes/active/Lastenheft_Legacy-Kompatibilitaet_V1.md\"], \"requirements/intakes/active/Lastenheft_Legacy-Kompatibilitaet_V1.md\": [\"requirements/intakes/active/Lastenheft_PL0-Zellfunktionen_V1.md\"], \"requirements/intakes/active/Lastenheft_PL0-Zellfunktionen_V1.md\": [\"requirements/intakes/active/Lastenheft_Secure-Development-Hardening.md\"], \"requirements/intakes/active/Lastenheft_Rename_MicroCalc_TinyCalc.md\": [\"requirements/intakes/active/Lastenheft_A11Y_TUI.md\"], \"requirements/intakes/active/Lastenheft_Secure-Development-Hardening.md\": [\"requirements/intakes/active/Lastenheft_Didactic-Inline-Code-Comment-Hardening.md\"]}, \"declaredEligible\": [\"requirements/intakes/active/Lastenheft_A11Y_TUI.md\"], \"dependencies\": 9, \"eligible\": [\"requirements/intakes/active/Lastenheft_A11Y_TUI.md\", \"requirements/intakes/active/Lastenheft_Sandbox-gestuetzte-Secure-Development-Haertung.md\"], \"receiptId\": \"4a14246f-7c68-4701-b01d-1d978a71632a\", \"roots\": 4, \"seriesId\": \"5b4523b4-d946-4091-9cbc-11825af94332\", \"status\": \"Active\", \"targets\": 13}"
+    },
+    {
+      "name": "review-result-bash",
+      "exitCode": 0,
+      "output": "PASS: intake review d4536c4f-4113-4ec5-a996-41ace9efb428 is current (Series, NeedsRemediation, 13 targets)"
+    },
+    {
+      "name": "review-result-powershell",
+      "exitCode": 0,
+      "output": "PASS: intake review d4536c4f-4113-4ec5-a996-41ace9efb428 is current (Series, NeedsRemediation, 13 targets)"
+    },
+    {
+      "name": "overall-alignment-bash",
+      "exitCode": 2,
+      "output": "TinyCalc linked intake views PASS; canonical artifacts preserved\nrequirements/intake alignment PASS\nPASS: intake authoring 3f215855-e5df-4062-9ed4-d7b6f8eae911 is current (ReadyForReview, 4 sources, requirements/intakes/active/Lastenheft_A11Y_TUI.md)\nPASS: intake authoring b00956e5-e42b-48c4-b63d-ee748cad27f3 is current (ReadyForReview, 1 sources, requirements/intakes/active/Lastenheft_Constitution_Change.002-constitution-change.md)\nPASS: intake authoring fd3667ea-9958-48c6-864f-0c0753007535 is current (ReadyForReview, 3 sources, requirements/intakes/active/Lastenheft_Didactic-Inline-Code-Comment-Hardening.md)\nPASS: intake authoring e8dc933c-8a2c-4aef-bb82-2c81ee06b186 is current (ReadyForReview, 4 sources, requirements/intakes/active/Lastenheft_Formelkopie-und-Tabellenoperationen_V1.md)\nPASS: intake authoring 704cea09-a869-49a5-baf9-70f24aa8d67b is current (ReadyForReview, 1 sources, requirements/intakes/active/Lastenheft_GSDB-Spec-Kit-Intensivpruefung.005-gsdb-intensive-review.md)\nPASS: intake authoring 8852efb7-1a9f-4e86-acd9-b6ae30c4c78c is current (ReadyForReview, 4 sources, requirements/intakes/active/Lastenheft_Legacy-Kompatibilitaet_V1.md)\nPASS: intake authoring dac09359-3363-4118-b692-e4a03ff1748b is current (ReadyForReview, 5 sources, requirements/intakes/active/Lastenheft_PL0-Zellfunktionen_V1.md)\nERROR: source hash drift: README.md"
+    },
+    {
+      "name": "git-diff-check",
+      "exitCode": 0,
+      "output": ""
+    }
+  ],
+  "authoringReceiptChecks": "All 13 individual outcomes are recorded in intake-review-result.json evidenceBoundary.receiptChecks.",
+  "allTrackedReviewInputsUnchanged": true,
+  "pendingReportArchiveByteIdentical": true,
+  "resultAcceptance": "NeedsRemediation; schema pass is not source-provenance acceptance.",
+  "delivery": "Local isolated worktree only; no commit, push, merge or Home sync performed."
+}

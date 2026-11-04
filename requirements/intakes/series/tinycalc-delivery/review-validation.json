@@ -1,0 +1,156 @@
+{
+  "reviewedHead": "0351afd6cd46f121ae795550f09f90ac29e9d37d",
+  "reviewedAt": "2026-11-04T06:40:44Z",
+  "alignment": [
+    {
+      "command": "bash scripts/validate-requirements-intake-alignment.sh",
+      "exitCode": 0,
+      "scope": "All 13 authoring receipts, current sources, generated alignment, manifest, series receipt and Ready review",
+      "evidence": "Executed in this isolated worktree before finalization."
+    },
+    {
+      "command": "pwsh -NoProfile -File scripts/validate-requirements-intake-alignment.ps1 -RepositoryRoot .",
+      "exitCode": 0,
+      "scope": "All 13 authoring receipts, current sources, generated alignment, manifest, series receipt and Ready review",
+      "evidence": "Executed in this isolated worktree before finalization."
+    }
+  ],
+  "checks": [
+    {
+      "name": "operation-bash",
+      "exitCode": 0,
+      "output": "PASS: IntakeOperation artifact is valid (specs/intake-authoring-operations/c0149c9a-09c8-4108-b493-02e0daccd5b2/operation.json)"
+    },
+    {
+      "name": "operation-powershell",
+      "exitCode": 0,
+      "output": "PASS: IntakeOperation artifact is valid (specs/intake-authoring-operations/c0149c9a-09c8-4108-b493-02e0daccd5b2/operation.json)"
+    },
+    {
+      "name": "review-bash",
+      "exitCode": 0,
+      "output": "PASS: intake review dce96041-569e-447b-814c-2d5e14103ef9 is current (Series, Ready, 13 targets)"
+    },
+    {
+      "name": "review-powershell",
+      "exitCode": 0,
+      "output": "PASS: intake review dce96041-569e-447b-814c-2d5e14103ef9 is current (Series, Ready, 13 targets)"
+    },
+    {
+      "name": "secret-scan",
+      "exitCode": 0,
+      "output": "OK     | gitleaks | no secrets in current git diff\nlow    | .claude | prompt, command, or template files only\nlow    | .codex | prompt, command, or template files only\nlow    | .github/agents | prompt, command, or template files only\nlow    | .github/prompts | prompt, command, or template files only\nlow    | .opencode | prompt, command, or template files only\n\nSummary: high=0 medium=0 low=5 total_agent_dirs=5 gitleaks_high=0"
+    },
+    {
+      "name": "diff-check",
+      "exitCode": 0,
+      "output": ""
+    }
+  ],
+  "preservedInputs": [
+    {
+      "path": "requirements/intakes/archive/Lastenheft_GSDB-Spec-Kit-Intensivpruefung.005-gsdb-intensive-review.md",
+      "gitBlob": "1df4cd2af93098ab1bb0e95de9e10d2811273210",
+      "byteIdenticalToReviewedBase": true
+    },
+    {
+      "path": "requirements/intakes/active/Lastenheft_A11Y_TUI.md",
+      "gitBlob": "f8f2b83c12c20f67fedc9a22a22675b7d86349c1",
+      "byteIdenticalToReviewedBase": true
+    },
+    {
+      "path": "requirements/intakes/active/Lastenheft_Formelkopie-und-Tabellenoperationen_V1.md",
+      "gitBlob": "0935e0d42877e19cc9b446ca71d34a512d666aff",
+      "byteIdenticalToReviewedBase": true
+    },
+    {
+      "path": "requirements/intakes/archive/Lastenheft_Constitution_Change.002-constitution-change.md",
+      "gitBlob": "e5baf4a877153692acdc9aed7035afe3999a4acc",
+      "byteIdenticalToReviewedBase": true
+    },
+    {
+      "path": "requirements/intakes/active/Lastenheft_Didactic-Inline-Code-Comment-Hardening.md",
+      "gitBlob": "206acb40849eceac8d79e10f71464a5e533880c4",
+      "byteIdenticalToReviewedBase": true
+    },
+    {
+      "path": "requirements/intakes/series/tinycalc-delivery/manifest.json",
+      "gitBlob": "8ed6372b83cb2b6784c1ae0b4771a2a5a75c569e",
+      "byteIdenticalToReviewedBase": true
+    },
+    {
+      "path": "requirements/intakes/archive/Lastenheft_TUI-Funktionsabnahme-und-Regressionsvertrag.md",
+      "gitBlob": "4ad418e77fe5bdd39fd05c087ee24aeb73e164ef",
+      "byteIdenticalToReviewedBase": true
+    },
+    {
+      "path": "README.md",
+      "gitBlob": "9b8203d5a4f19e8c74447cf33647ce0bc72ab333",
+      "byteIdenticalToReviewedBase": true
+    },
+    {
+      "path": "Pflichtenheft.md",
+      "gitBlob": "75002ca9515fd0292b741d5dffb3020d41cf9a3f",
+      "byteIdenticalToReviewedBase": true
+    },
+    {
+      "path": "requirements/intakes/active/Lastenheft_PL0-Zellfunktionen_V1.md",
+      "gitBlob": "bc0b6621be4dbe27ba882fbc93f69d6eb084ef6b",
+      "byteIdenticalToReviewedBase": true
+    },
+    {
+      "path": "Lastenheft_Abarbeitungsreihenfolge.md",
+      "gitBlob": "7c79532d79c6d4b397f8b000c0a1877f3b67ef03",
+      "byteIdenticalToReviewedBase": true
+    },
+    {
+      "path": "requirements/intake-governance-config.json",
+      "gitBlob": "00c3e56ee3d6bed4dffba22cc14ea2af8e37d304",
+      "byteIdenticalToReviewedBase": true
+    },
+    {
+      "path": "requirements/intakes/active/Lastenheft_Secure-Development-Hardening.md",
+      "gitBlob": "247b031b26538df4b626b9ecacc98fe9be5fb178",
+      "byteIdenticalToReviewedBase": true
+    },
+    {
+      "path": "requirements/intakes/archive/Lastenheft_RL-SE-Checklist-Selbstpruefung.004-rl-se-self-assessment.md",
+      "gitBlob": "0cd87941bb49e73b11aa15ec7b529bc36788b245",
+      "byteIdenticalToReviewedBase": true
+    },
+    {
+      "path": "requirements/intakes/active/Lastenheft_Sandbox-gestuetzte-Secure-Development-Haertung.md",
+      "gitBlob": "ef90813e64c2e62744999c2925c6d23ed91daf90",
+      "byteIdenticalToReviewedBase": true
+    },
+    {
+      "path": "requirements/intakes/series/tinycalc-delivery/receipt.json",
+      "gitBlob": "dc9fa89851f7610c110e49eab924a98e195fc3bb",
+      "byteIdenticalToReviewedBase": true
+    },
+    {
+      "path": "requirements/intakes/archive/Lastenheft_TerminalGui_Migration.003-terminalgui-migration.md",
+      "gitBlob": "d960bf119005a5d3d09860da90be7d5bbfa22d5a",
+      "byteIdenticalToReviewedBase": true
+    },
+    {
+      "path": "requirements/intakes/active/Lastenheft_Rename_MicroCalc_TinyCalc.md",
+      "gitBlob": "bb7999fed59d81aa9b449729321fb03b94868724",
+      "byteIdenticalToReviewedBase": true
+    },
+    {
+      "path": "requirements/intakes/active/Lastenheft_Legacy-Kompatibilitaet_V1.md",
+      "gitBlob": "f7f47ff2950c14423815e87f658208673718c232",
+      "byteIdenticalToReviewedBase": true
+    }
+  ],
+  "predecessorArchivesByteIdentical": true,
+  "resolvedFindings": [
+    "IR002"
+  ],
+  "remainingFindings": [],
+  "newIndependentReviewer": false,
+  "productBuildOrRestoreExecuted": false,
+  "nativeAcceptanceGranted": false,
+  "homeSyncRequired": false
+}
