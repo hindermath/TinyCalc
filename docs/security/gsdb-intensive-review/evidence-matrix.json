@@ -62,9 +62,9 @@
       "sourceId": "PRESET-autonomous-run-governance",
       "sourceClass": "Preset",
       "path": ".specify/presets/autonomous-run-governance/preset.yml",
-      "version": "0.4.9",
+      "version": "0.4.10",
       "reviewedAt": "2026-11-05",
-      "normalizedSha256": "00c8714b76572a5a67e1db46dc9755d9094cdd2376046b5b5df5417acf872327",
+      "normalizedSha256": "6f9fdbfe309fbed551b7b72c5a2098ffd80797da2c3e64e077d4d3e752ddf97b",
       "scope": {
         "de": "Diese Quelle wird nur für ihren benannten TinyCalc-Prüfumfang verwendet.",
         "en": "This source is used only for its named TinyCalc assessment scope."
@@ -152,9 +152,9 @@
       "sourceId": "PRESET-model-routing-governance",
       "sourceClass": "Preset",
       "path": ".specify/presets/model-routing-governance/preset.yml",
-      "version": "0.2.5",
+      "version": "0.2.6",
       "reviewedAt": "2026-11-05",
-      "normalizedSha256": "08dfe8be0ed1864d90810369010c1a76ae01819b7c633e459c74001a1f204c53",
+      "normalizedSha256": "9a2d7db1f148dbf58b3405a164cee07ae89cc6834cdc056b1be27d2ab1d85e07",
       "scope": {
         "de": "Diese Quelle wird nur für ihren benannten TinyCalc-Prüfumfang verwendet.",
         "en": "This source is used only for its named TinyCalc assessment scope."
@@ -1264,7 +1264,7 @@
       "path": "AGENTS.md",
       "version": "Current",
       "reviewedAt": "2026-11-05",
-      "normalizedSha256": "ec8c68c1b81102d0aba93e979b8c35d9323bb892b23c40380fca12feee386478",
+      "normalizedSha256": "9688ab8cc5b535227974727d47e49928f2e0e9eb683b5b63838f7e41119e4809",
       "scope": {
         "de": "Zeilenspezifischer aktueller Nachweis aus AGENTS.md; der Hash beweist Inhalt, nicht automatisch Erfuellung.",
         "en": "Current row-specific evidence from AGENTS.md; the hash proves content, not automatic fulfilment."
@@ -1279,7 +1279,7 @@
       "path": ".specify/presets/.registry",
       "version": "Current",
       "reviewedAt": "2026-11-05",
-      "normalizedSha256": "89b720869700f65c0c3c1dfeaa2e6e3d0b9b1b92f5ec3f9b8806e3c431ad0560",
+      "normalizedSha256": "579867ace090c9362de76c89b09a7bc6a29d67b7de804990c65d8dff6eae8d20",
       "scope": {
         "de": "Zeilenspezifischer aktueller Nachweis aus .specify/presets/.registry; der Hash beweist Inhalt, nicht automatisch Erfuellung.",
         "en": "Current row-specific evidence from .specify/presets/.registry; the hash proves content, not automatic fulfilment."
@@ -12746,8 +12746,8 @@
         }
       ],
       "rationale": {
-        "de": "autonomous-run-governance 0.4.9 ist am exakten Preset-Locator inventarisiert und unverändert auf 42 Checklistenzeilen sowie 9 Feature-Gates abgebildet; physische Rename-Pfade, reguläre Indexmodi und Indexbytes stärken GSDB-GATE-027.",
-        "en": "autonomous-run-governance 0.4.9 is inventoried at its exact preset locator and remains mapped to 42 checklist rows and 9 feature gates; physical rename paths, regular index modes, and index bytes strengthen GSDB-GATE-027."
+        "de": "autonomous-run-governance 0.4.10 ist am exakten Preset-Locator inventarisiert und unverändert auf 42 Checklistenzeilen sowie 9 Feature-Gates abgebildet; physische Rename-Pfade, reguläre Indexmodi und Indexbytes stärken GSDB-GATE-027.",
+        "en": "autonomous-run-governance 0.4.10 is inventoried at its exact preset locator and remains mapped to 42 checklist rows and 9 feature gates; physical rename paths, regular index modes, and index bytes strengthen GSDB-GATE-027."
       },
       "owner": "Spec Kit governance role",
       "reviewer": "Independent technical review role",
@@ -13195,8 +13195,8 @@
         }
       ],
       "rationale": {
-        "de": "model-routing-governance 0.2.5 ist am exakten Preset-Locator inventarisiert und auf 29 Checklistenzeilen sowie 2 Feature-Gates abgebildet.",
-        "en": "model-routing-governance 0.2.5 is inventoried at its exact preset locator and mapped to 29 checklist rows and 2 feature gates."
+        "de": "model-routing-governance 0.2.6 ist am exakten Preset-Locator inventarisiert und auf 29 Checklistenzeilen sowie 2 Feature-Gates abgebildet.",
+        "en": "model-routing-governance 0.2.6 is inventoried at its exact preset locator and mapped to 29 checklist rows and 2 feature gates."
       },
       "owner": "Spec Kit governance role",
       "reviewer": "Independent technical review role",
