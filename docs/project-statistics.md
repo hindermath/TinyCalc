@@ -1086,18 +1086,18 @@ Profil 2 verwendet Git-getrackte Textdateien und sichtbare Git-Aktivitaet. Die W
 
 | Kennzahl / Metric | Wert / Value |
 |---|---:|
-| Textbasis / Text base | 366841 lines |
+| Textbasis / Text base | 367051 lines |
 | Textdateien / Text files | 2109 |
 | Beobachtbarer Zeitraum / Observable period | 2025-11-09..2026-11-05 |
 | Aktivtage / Active days | 105 |
-| Relevante Commits / Relevant commits | 347 |
-| Zeilen je Aktivtag / Lines per active day | 3493.7 |
+| Relevante Commits / Relevant commits | 348 |
+| Zeilen je Aktivtag / Lines per active day | 3495.7 |
 | Peak-Tag im Fenster / Peak day in window | 2026-10-24 / 58461 |
 | Peak-Woche im Fenster / Peak week in window | 2026-10-18 / 106574 |
 | Laengste Serie / Longest streak | 8 days |
 | Speedup vs. 80 lines/day | 43.7x |
-| Speedup vs. 125 lines/day | 27.9x |
-| Methodik / Methodology | v2; source `9e975c35bf88` |
+| Speedup vs. 125 lines/day | 28.0x |
+| Methodik / Methodology | v2; source `d47fcff7e232` |
 
 ### Artefaktmix / Artifact Mix
 
@@ -1105,7 +1105,7 @@ Profil 2 verwendet Git-getrackte Textdateien und sichtbare Git-Aktivitaet. Die W
 Produktiv / Production          [#...................]   0.9% | 3275
 Tests                           [#...................]   4.3% | 15921
 Dokumentation / Documentation   [###############.....]  77.2% | 283328
-Skripte / Scripts               [##..................]   9.2% | 33777
+Skripte / Scripts               [##..................]   9.3% | 33987
 Konfiguration / Configuration   [#...................]   7.5% | 27447
 Daten und Medien / Data and media [....................]   0.0% | 0
 Sonstiger Text / Other text     [#...................]   0.8% | 3093
@@ -1255,7 +1255,7 @@ Die festen Slots halten den Phasenvergleich auch bei fehlenden oder spaeter erga
 ```text
 Scale: 0..50x
 80 lines/day       [#################...] 43.7x
-125 lines/day      [###########.........] 27.9x
+125 lines/day      [###########.........] 28.0x
 ```
 
 Die Faktoren vergleichen sichtbare Lieferdichte mit den dokumentierten manuellen Referenzen. Sie messen keine Arbeitszeit.
@@ -1268,7 +1268,7 @@ Die Faktoren vergleichen sichtbare Lieferdichte mit den dokumentierten manuellen
 Scale: 0..5000 lines/day
 Experienced manual [#...................] 80
 Thorsten solo      [#...................] 125
-Visible repository [##############......] 3493.7
+Visible repository [##############......] 3495.7
 ```
 
 Die gemeinsame Skala vergleicht Referenzen und sichtbare Lieferdichte. Sie schreibt die Git-Aktivitaet keiner Person oder KI pauschal zu.
@@ -1294,6 +1294,6 @@ DE: Das Fenster beginnt am 2025-11-09 und endet am 2026-11-05. Es enthaelt 105 a
 | 2026-08 | 26210 |
 | 2026-09 | 70997 |
 | 2026-10 | 167479 |
-| 2026-11 | 14361 |
+| 2026-11 | 14693 |
 
 <!-- project-statistics-v2:end -->
