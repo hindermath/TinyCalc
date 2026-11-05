@@ -648,6 +648,7 @@ runtime evidence.*
 | 2026-10-25 | Review-/Analyze-Lieferung und separater Statistikabschluss / Review and analysis delivery with separate statistics closure | Branch `codex/intake-review-statistics-oct25`, Ausgangsbasis `8820342`; Arbeitsfenster: genehmigter Review-Commit, sauberer Statistik-Render und PR-Lieferung, keine Stoppuhrmessung. `0` Produktionscode- und `0` Produkttestzeilen; 545 netto Dokumentationszeilen (561 hinzugefügt, 16 entfernt, einschließlich Ledger und PR-Text), generierte Statistik getrennt. Beide Alignment-Wege samt 13 Receipts/Serienreview Exit 0; UTF-8/LF, Secrets, Diff und exakter Staging-Kandidat bestanden. DocFX Exit 0 mit 105 Warnungen; vier Seiten Snapshot/axe/lynx, null automatische Verstöße. Unvollständige Kontrast-/Textlinkbewertungen und zwei bestehende HTML-404-Links bleiben offen. Der lesende Feature-007-Analyze bestätigt geplante Abdeckung von 27 Anforderungskennungen und acht Abnahmen durch 60 offene Aufgaben, null neue Befunde; kein Produkt-Pass. Aktueller Serienreview Ready für 13 unveränderte Intakes, vier Wurzeln, neun Abhängigkeiten; alte unabhängige Fachprüfung nur bei identischem Zielhash weiterverwendet. Erst Quellen/Ledger/PR-Text committen, dann Profil 2 an sauberer Quellenbasis Vorschau → Render → Check, Statistik separat committen. Privatdatei ausgeschlossen; kein Produktbuild/-test/-restore, Paket-/Versions-/Lastenheft-/Serienstatuswechsel. NIST SSDF/CWE Top 25 gelten; TDD/Coverage mangels Codeänderung N/A mit Trigger Codeänderung. Referenzen 80/125 Zeilen/Tag, 7.8 Stunden/Tag und 21.5 Tage/Monat bleiben Modelle ohne neue Beschleunigungsbehauptung. MergeAndSync/Admin-Bypass nach grünen technischen Gates ausdrücklich genehmigt; Claude ausgenommen, kein behaupteter Pass. / Deliver document review and planned coverage only; preserve historical native/HTML proof limits and perform generated statistics at a separate clean source boundary. Product scope and execution remain unchanged. |
 | 2026-11-03 | Model Routing Governance 0.2.1 | UpdateRequired: hashgebundenes Release, ein Preset aktualisiert, andere 13 erhalten; vollständige Resolver-Ressourcen und Root-/Preset-Parität geprüft. Keine Modellaufrufe oder Profilmigration. / Hash-bound release, one preset updated, other 13 preserved; complete runtime closure and root/preset parity verified. No inference or profile migration. [Evidence](maintenance/model-routing-v021-installation.md). |
 | 2026-11-03 | Model Routing Governance 0.2.3 | UpdateRequired: hashgebundenes Release mit strukturiertem Harness-Rückkanal und kanonischem Adapterpfad, ein Preset aktualisiert, andere 13 erhalten; vollständige Resolver-Ressourcen und Root-/Preset-Parität geprüft. Keine Modellaufrufe oder Profilmigration. / Hash-bound release with structured harness result transport and canonical adapter path, one preset updated, other 13 preserved; complete runtime closure and root/preset parity verified. No inference or profile migration. [Evidence](maintenance/model-routing-v023-installation.md). |
+| 2026-11-05 | Model Routing 0.2.6 und Autonomous Run 0.4.10 | N/A | N/A | N/A | UpdateRequired: zwei hashgebundene Presets installiert, andere zwölf erhalten; Matrix, Payloads und lokale Verträge grün. Keine Modellaufrufe oder Profilmigration. / Two hash-bound presets installed, other twelve preserved; matrix, payload and local contracts passed. No model calls or profile migration. [Evidence](maintenance/model-routing-v026-installation.md). |
 
 ## Statistikprofil-1-Archiv / Statistics Profile 1 Archive
 Basis dieses Schlussblocks sind die aktuell dokumentierten Snapshot- und
@@ -1085,29 +1086,29 @@ Profil 2 verwendet Git-getrackte Textdateien und sichtbare Git-Aktivitaet. Die W
 
 | Kennzahl / Metric | Wert / Value |
 |---|---:|
-| Textbasis / Text base | 362366 lines |
-| Textdateien / Text files | 2061 |
-| Beobachtbarer Zeitraum / Observable period | 2025-11-09..2026-11-04 |
-| Aktivtage / Active days | 104 |
-| Relevante Commits / Relevant commits | 346 |
-| Zeilen je Aktivtag / Lines per active day | 3484.3 |
+| Textbasis / Text base | 367422 lines |
+| Textdateien / Text files | 2116 |
+| Beobachtbarer Zeitraum / Observable period | 2025-11-09..2026-11-05 |
+| Aktivtage / Active days | 105 |
+| Relevante Commits / Relevant commits | 350 |
+| Zeilen je Aktivtag / Lines per active day | 3499.3 |
 | Peak-Tag im Fenster / Peak day in window | 2026-10-24 / 58461 |
 | Peak-Woche im Fenster / Peak week in window | 2026-10-18 / 106574 |
 | Laengste Serie / Longest streak | 8 days |
-| Speedup vs. 80 lines/day | 43.6x |
-| Speedup vs. 125 lines/day | 27.9x |
-| Methodik / Methodology | v2; source `014fc3ebc7f5` |
+| Speedup vs. 80 lines/day | 43.7x |
+| Speedup vs. 125 lines/day | 28.0x |
+| Methodik / Methodology | v2; source `1902bf445a56` |
 
 ### Artefaktmix / Artifact Mix
 
 ```text
 Produktiv / Production          [#...................]   0.9% | 3275
-Tests                           [#...................]   4.4% | 15921
-Dokumentation / Documentation   [###############.....]  77.0% | 278853
-Skripte / Scripts               [##..................]   9.3% | 33777
-Konfiguration / Configuration   [##..................]   7.6% | 27447
+Tests                           [#...................]   4.3% | 15921
+Dokumentation / Documentation   [###############.....]  77.2% | 283699
+Skripte / Scripts               [##..................]   9.3% | 33987
+Konfiguration / Configuration   [#...................]   7.5% | 27447
 Daten und Medien / Data and media [....................]   0.0% | 0
-Sonstiger Text / Other text     [#...................]   0.9% | 3093
+Sonstiger Text / Other text     [#...................]   0.8% | 3093
 ```
 
 Die Balken teilen die aktuelle getrackte Textbasis in stabile Kategorien. Prozent und Zeilenwert sind die genaue, textorientierte Aussage.
@@ -1133,7 +1134,7 @@ So/Su  0 0 0 1 0 4 0 0 0 1 4 4 1 4 4 0 4 4 4 4 0 4 4 4 2 0
 Mo/Mo  0 0 0 0 0 0 0 3 1 4 4 0 0 0 2 0 0 0 0 0 3 3 3 0 0 0
 Di/Tu  0 0 3 0 0 0 0 2 0 3 4 4 0 0 0 0 4 3 4 0 0 4 0 4 0 4
 Mi/We  0 0 0 2 0 4 0 2 0 0 2 4 0 0 0 0 0 0 0 0 0 3 0 4 0 4
-Do/Th  0 0 1 0 4 1 0 0 0 1 4 0 0 4 0 0 3 0 0 0 0 3 0 0 2 -
+Do/Th  0 0 1 0 4 1 0 0 0 1 4 0 0 4 0 0 3 0 0 0 0 3 0 0 2 4
 Fr/Fr  0 4 2 2 0 3 2 3 4 4 4 1 0 0 0 0 4 3 2 0 0 0 0 0 3 -
 Sa/Sa  0 0 0 0 0 4 0 4 4 0 4 2 0 2 0 3 4 4 0 2 4 4 0 4 0 -
 ```
@@ -1253,8 +1254,8 @@ Die festen Slots halten den Phasenvergleich auch bei fehlenden oder spaeter erga
 
 ```text
 Scale: 0..50x
-80 lines/day       [#################...] 43.6x
-125 lines/day      [###########.........] 27.9x
+80 lines/day       [#################...] 43.7x
+125 lines/day      [###########.........] 28.0x
 ```
 
 Die Faktoren vergleichen sichtbare Lieferdichte mit den dokumentierten manuellen Referenzen. Sie messen keine Arbeitszeit.
@@ -1267,7 +1268,7 @@ Die Faktoren vergleichen sichtbare Lieferdichte mit den dokumentierten manuellen
 Scale: 0..5000 lines/day
 Experienced manual [#...................] 80
 Thorsten solo      [#...................] 125
-Visible repository [##############......] 3484.3
+Visible repository [##############......] 3499.3
 ```
 
 Die gemeinsame Skala vergleicht Referenzen und sichtbare Lieferdichte. Sie schreibt die Git-Aktivitaet keiner Person oder KI pauschal zu.
@@ -1276,9 +1277,9 @@ Die gemeinsame Skala vergleicht Referenzen und sichtbare Lieferdichte. Sie schre
 
 ### Textalternative / Text Alternative
 
-DE: Das Fenster beginnt am 2025-11-09 und endet am 2026-11-04. Es enthaelt 104 aktive und 257 inaktive vergangene Tage. Peak-Tag: 2026-10-24 / 58461. Peak-Woche: 2026-10-18 / 106574. Laengste Serie: 8 Tage (2026-07-19..2026-07-26).
+DE: Das Fenster beginnt am 2025-11-09 und endet am 2026-11-05. Es enthaelt 105 aktive und 257 inaktive vergangene Tage. Peak-Tag: 2026-10-24 / 58461. Peak-Woche: 2026-10-18 / 106574. Laengste Serie: 8 Tage (2026-07-19..2026-07-26).
 
-*EN: The window starts on 2025-11-09 and ends on 2026-11-04. It contains 104 active and 257 inactive elapsed days. Peak day: 2026-10-24 / 58461. Peak week: 2026-10-18 / 106574. Longest streak: 8 days (2026-07-19..2026-07-26).*
+*EN: The window starts on 2025-11-09 and ends on 2026-11-05. It contains 105 active and 257 inactive elapsed days. Peak day: 2026-10-24 / 58461. Peak week: 2026-10-18 / 106574. Longest streak: 8 days (2026-07-19..2026-07-26).*
 
 | Monat / Month | Geaenderte Textzeilen / Changed text lines |
 |---|---:|
@@ -1293,6 +1294,6 @@ DE: Das Fenster beginnt am 2025-11-09 und endet am 2026-11-04. Es enthaelt 104 a
 | 2026-08 | 26210 |
 | 2026-09 | 70997 |
 | 2026-10 | 167479 |
-| 2026-11 | 9434 |
+| 2026-11 | 15516 |
 
 <!-- project-statistics-v2:end -->

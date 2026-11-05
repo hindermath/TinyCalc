@@ -53,6 +53,7 @@ try {
     & git -C $Repo init --quiet
     & git -C $Repo config user.name Fixture
     & git -C $Repo config user.email fixture@example.invalid
+    & git -C $Repo config core.autocrlf false
     [IO.File]::WriteAllText((Join-Path $Repo 'tracked.txt'), "baseline`n", [Text.UTF8Encoding]::new($false))
     & git -C $Repo add tracked.txt
     & git -C $Repo commit --quiet -m baseline
@@ -112,6 +113,42 @@ try {
     [void](Invoke-Expected { & pwsh -NoProfile -File $DeliveryPs -Repo $Repo -Staged -Intended tracked.txt } 2 'Other staged whitespace rejection')
     [IO.File]::WriteAllText((Join-Path $Repo 'tracked.txt'), "changed`n", [Text.UTF8Encoding]::new($false))
     & git -C $Repo reset --quiet
+
+    # Preserve historical EOF bytes, but require an exact path/raw index hash.
+    $EofPath = Join-Path $Repo 'historical-eof.txt'
+    foreach ($EofText in @("history`n`n", "history`r`n`r`n")) {
+        [IO.File]::WriteAllText($EofPath, $EofText, [Text.UTF8Encoding]::new($false))
+        $EofHash = Get-RawHash $EofPath
+        $EofAllowance = "historical-eof.txt=${EofHash}"
+        [void](Invoke-Expected { & pwsh -NoProfile -File $DeliveryPs -Repo $Repo -Intended historical-eof.txt -AllowHistoricalWhitespace $EofAllowance } 0 'PowerShell historical EOF worktree pass')
+        & git -C $Repo add historical-eof.txt
+        $EofBefore = (& git -C $Repo status --porcelain=v1 --untracked-files=all --ignored) -join "`n"
+        [void](Invoke-Expected { & pwsh -NoProfile -File $DeliveryPs -Repo $Repo -Staged -Intended historical-eof.txt -AllowHistoricalWhitespace $EofAllowance } 0 'PowerShell exact historical EOF staged pass')
+        [void](Invoke-Expected { & pwsh -NoProfile -File $DeliveryPs -Repo $Repo -Staged -Intended historical-eof.txt } 2 'PowerShell unapproved EOF rejection')
+        [void](Invoke-Expected { & pwsh -NoProfile -File $DeliveryPs -Repo $Repo -Staged -Intended historical-eof.txt -AllowHistoricalWhitespace "historical-eof.txt=$('0' * 64)" } 2 'PowerShell EOF hash mismatch rejection')
+        if ($HasBash) {
+            [void](Invoke-Expected { & bash $DeliverySh --repo $Repo --staged --intended historical-eof.txt --allow-historical-whitespace $EofAllowance } 0 'Bash exact historical EOF staged pass')
+            [void](Invoke-Expected { & bash $DeliverySh --repo $Repo --staged --intended historical-eof.txt } 2 'Bash unapproved EOF rejection')
+            [void](Invoke-Expected { & bash $DeliverySh --repo $Repo --staged --intended historical-eof.txt --allow-historical-whitespace "historical-eof.txt=$('0' * 64)" } 2 'Bash EOF hash mismatch rejection')
+        }
+        $EofAfter = (& git -C $Repo status --porcelain=v1 --untracked-files=all --ignored) -join "`n"
+        Assert-EvidenceTest ($EofBefore -ceq $EofAfter) 'EOF checks changed index/worktree'
+        [IO.File]::WriteAllText($EofPath, "unreviewed`n`n", [Text.UTF8Encoding]::new($false))
+        [void](Invoke-Expected { & pwsh -NoProfile -File $DeliveryPs -Repo $Repo -Staged -Intended historical-eof.txt -AllowHistoricalWhitespace $EofAllowance } 0 'EOF staged proof ignores changed worktree bytes')
+        & git -C $Repo add historical-eof.txt
+        [void](Invoke-Expected { & pwsh -NoProfile -File $DeliveryPs -Repo $Repo -Staged -Intended historical-eof.txt -AllowHistoricalWhitespace $EofAllowance } 2 'EOF changed index bytes rejected')
+        & git -C $Repo reset --quiet
+    }
+    [IO.File]::WriteAllText($EofPath, "history`n`n", [Text.UTF8Encoding]::new($false))
+    $EofAllowance = 'historical-eof.txt=' + (Get-RawHash $EofPath)
+    [IO.File]::WriteAllText((Join-Path $Repo 'other-eof.txt'), "other`n`n", [Text.UTF8Encoding]::new($false))
+    & git -C $Repo add historical-eof.txt other-eof.txt
+    if ($HasBash) {
+        [void](Invoke-Expected { & bash $DeliverySh --repo $Repo --staged --intended historical-eof.txt --intended other-eof.txt --allow-historical-whitespace $EofAllowance } 2 'Unrelated EOF not hidden by historical allowance')
+    }
+    & git -C $Repo reset --quiet
+    [IO.File]::WriteAllText($EofPath, "history`n", [Text.UTF8Encoding]::new($false))
+    [void](Invoke-Expected { & pwsh -NoProfile -File $DeliveryPs -Repo $Repo -Intended historical-eof.txt -AllowHistoricalWhitespace $EofAllowance } 2 'EOF allowance not needed rejection')
 
     [IO.File]::WriteAllText((Join-Path $Repo 'conflict.txt'), "<<<<<<< HEAD`nvalue`n=======`nother`n>>>>>>> branch`n", [Text.UTF8Encoding]::new($false))
     & git -C $Repo add conflict.txt
@@ -237,6 +274,52 @@ try {
     $HistoryOutput = Invoke-Expected { & pwsh -NoProfile -File $GatePs -Requirements $Requirements -Evidence $HistoricalPath -Head $Head -Historical } 0 'Historical audit pass'
     Assert-EvidenceTest (($HistoryOutput -join "`n") -match 'HistoricalOnly') 'Historical evidence appeared merge-authorizing'
 
+    # Real Git inventories must preserve names before any content check.
+    # Windows forbids control characters/quotes; Unicode remains native there.
+    $Names = @('ordinary.md', 'space name.md', "unicode-$([char]0x00fc).md")
+    if (-not $IsWindows) { $Names += @("tab`tname.md", "line`nbreak.md", "carriage`rreturn.md", 'quote"name.md') }
+    $CaseNumber = 0
+    foreach ($Name in $Names) {
+        $CaseNumber++
+        $PathRepo = Join-Path $Root "path-case-$CaseNumber"
+        [void](New-Item -ItemType Directory -Path $PathRepo)
+        & git -C $PathRepo init --quiet
+        & git -C $PathRepo config user.name Fixture
+        & git -C $PathRepo config user.email fixture@example.invalid
+        & git -C $PathRepo config core.autocrlf false
+        & git -C $PathRepo config core.quotePath true
+        $NamedFile = Join-Path $PathRepo $Name
+        [IO.File]::WriteAllText($NamedFile, "clean`n")
+        & git -C $PathRepo add -- $Name
+        & git -C $PathRepo commit --quiet -m baseline
+        [IO.File]::WriteAllText($NamedFile, "bad trailing space `n")
+        $BadOutput = Invoke-Expected { & pwsh -NoProfile -File $DeliveryPs -Repo $PathRepo } 2 "Worktree path content: case $CaseNumber"
+        Assert-EvidenceTest (($BadOutput -join ' ') -match 'AEI007') 'Unusual name must reach content validation'
+        if ($HasBash) { [void](Invoke-Expected { & bash $DeliverySh --repo $PathRepo } 2 "Bash Worktree path content: case $CaseNumber") }
+        & git -C $PathRepo add -- $Name
+        [void](Invoke-Expected { & pwsh -NoProfile -File $DeliveryPs -Repo $PathRepo -Staged -Intended $Name } 2 "Staged path content: case $CaseNumber")
+        if ($HasBash) { [void](Invoke-Expected { & bash $DeliverySh --repo $PathRepo --staged --intended $Name } 2 "Bash Staged path content: case $CaseNumber") }
+        [IO.File]::WriteAllText($NamedFile, "clean changed`n")
+        & git -C $PathRepo add -- $Name
+        $CleanOutput = Invoke-Expected { & pwsh -NoProfile -File $DeliveryPs -Repo $PathRepo -Staged -Intended $Name } 0 "Clean staged unusual name: case $CaseNumber"
+        $CleanReport = ($CleanOutput -join "`n") | ConvertFrom-Json
+        Assert-EvidenceTest ($CleanReport.checkedPaths -ccontains $Name) 'Staged inventory must retain the exact filename'
+        & git -C $PathRepo reset --quiet HEAD -- $Name
+        $CleanOutput = Invoke-Expected { & pwsh -NoProfile -File $DeliveryPs -Repo $PathRepo } 0 "Clean worktree unusual name: case $CaseNumber"
+        $CleanReport = ($CleanOutput -join "`n") | ConvertFrom-Json
+        Assert-EvidenceTest ($CleanReport.checkedPaths -ccontains $Name) 'Worktree inventory must retain the exact filename'
+        & git -C $PathRepo checkout -- $Name
+        & git -C $PathRepo rm --quiet -- $Name
+        & git -C $PathRepo commit --quiet -m remove
+        [IO.File]::WriteAllText($NamedFile, "bad untracked space `n")
+        [void](Invoke-Expected { & pwsh -NoProfile -File $DeliveryPs -Repo $PathRepo -Intended $Name } 2 "Untracked path content: case $CaseNumber")
+        if ($HasBash) { [void](Invoke-Expected { & bash $DeliverySh --repo $PathRepo --intended $Name } 2 "Bash untracked path content: case $CaseNumber") }
+        [IO.File]::WriteAllText($NamedFile, "clean untracked`n")
+        $CleanOutput = Invoke-Expected { & pwsh -NoProfile -File $DeliveryPs -Repo $PathRepo -Intended $Name } 0 "Clean untracked unusual name: case $CaseNumber"
+        $CleanReport = ($CleanOutput -join "`n") | ConvertFrom-Json
+        Assert-EvidenceTest ($CleanReport.intendedUntrackedPaths -ccontains $Name) 'Untracked inventory must retain the exact filename'
+    }
+    Write-Output "PASS: $CaseNumber native Git-filename cases across Worktree, Staged and intended untracked content checks"
     Write-Output 'PASS: delivery-set, semantic phase-result, lifecycle evidence, historical mode, and cross-shell parity'
 } finally {
     Remove-Item -LiteralPath $Root -Recurse -Force -ErrorAction SilentlyContinue
