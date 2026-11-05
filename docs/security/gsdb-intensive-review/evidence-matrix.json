@@ -62,9 +62,9 @@
       "sourceId": "PRESET-autonomous-run-governance",
       "sourceClass": "Preset",
       "path": ".specify/presets/autonomous-run-governance/preset.yml",
-      "version": "0.4.7",
-      "reviewedAt": "2026-10-24",
-      "normalizedSha256": "0034c2dc7da5c64be3e2bceb10fbea435bc0de921def37b4ec5e7203b9719367",
+      "version": "0.4.9",
+      "reviewedAt": "2026-11-05",
+      "normalizedSha256": "00c8714b76572a5a67e1db46dc9755d9094cdd2376046b5b5df5417acf872327",
       "scope": {
         "de": "Diese Quelle wird nur für ihren benannten TinyCalc-Prüfumfang verwendet.",
         "en": "This source is used only for its named TinyCalc assessment scope."
@@ -152,9 +152,9 @@
       "sourceId": "PRESET-model-routing-governance",
       "sourceClass": "Preset",
       "path": ".specify/presets/model-routing-governance/preset.yml",
-      "version": "0.2.3",
-      "reviewedAt": "2026-11-03",
-      "normalizedSha256": "2fe75f9246a92dcacc19b8dfac66adc69421cb9623922cf844bc752d4c46646c",
+      "version": "0.2.5",
+      "reviewedAt": "2026-11-05",
+      "normalizedSha256": "08dfe8be0ed1864d90810369010c1a76ae01819b7c633e459c74001a1f204c53",
       "scope": {
         "de": "Diese Quelle wird nur für ihren benannten TinyCalc-Prüfumfang verwendet.",
         "en": "This source is used only for its named TinyCalc assessment scope."
@@ -1263,8 +1263,8 @@
       "sourceClass": "ProjectEvidence",
       "path": "AGENTS.md",
       "version": "Current",
-      "reviewedAt": "2026-10-24",
-      "normalizedSha256": "81ff1c0eede7c3e0a200ba91786e96740f624f9517b65867e3208a4982f014dc",
+      "reviewedAt": "2026-11-05",
+      "normalizedSha256": "ec8c68c1b81102d0aba93e979b8c35d9323bb892b23c40380fca12feee386478",
       "scope": {
         "de": "Zeilenspezifischer aktueller Nachweis aus AGENTS.md; der Hash beweist Inhalt, nicht automatisch Erfuellung.",
         "en": "Current row-specific evidence from AGENTS.md; the hash proves content, not automatic fulfilment."
@@ -1278,8 +1278,8 @@
       "sourceClass": "ProjectEvidence",
       "path": ".specify/presets/.registry",
       "version": "Current",
-      "reviewedAt": "2026-11-03",
-      "normalizedSha256": "fc08070fefe6983be4acdefa0c817e2537825a7ee5d1dfef14c33921996fb9ec",
+      "reviewedAt": "2026-11-05",
+      "normalizedSha256": "89b720869700f65c0c3c1dfeaa2e6e3d0b9b1b92f5ec3f9b8806e3c431ad0560",
       "scope": {
         "de": "Zeilenspezifischer aktueller Nachweis aus .specify/presets/.registry; der Hash beweist Inhalt, nicht automatisch Erfuellung.",
         "en": "Current row-specific evidence from .specify/presets/.registry; the hash proves content, not automatic fulfilment."
@@ -12740,14 +12740,14 @@
           "freshness": "Revalidated",
           "availability": "Existing",
           "supports": {
-            "de": "autonomous-run-governance ist durch .specify/presets/autonomous-run-governance/preset.yml am exakten Locator 'id: \"autonomous-run-governance\"' belegt. Der am 2026-10-24 als Revalidated geprüfte Inhalt stützt ausschließlich die Einstufung Applicable.",
-            "en": "autonomous-run-governance is bound to .specify/presets/autonomous-run-governance/preset.yml at the exact locator 'id: \"autonomous-run-governance\"'. The content observed on 2026-10-24 as Revalidated supports only the Applicable disposition."
+            "de": "autonomous-run-governance ist durch .specify/presets/autonomous-run-governance/preset.yml am exakten Locator 'id: \"autonomous-run-governance\"' belegt. Der am 2026-11-05 als Revalidated geprüfte Inhalt stützt ausschließlich die Einstufung Applicable.",
+            "en": "autonomous-run-governance is bound to .specify/presets/autonomous-run-governance/preset.yml at the exact locator 'id: \"autonomous-run-governance\"'. The content observed on 2026-11-05 as Revalidated supports only the Applicable disposition."
           }
         }
       ],
       "rationale": {
-        "de": "autonomous-run-governance 0.4.7 ist am exakten Preset-Locator inventarisiert und unverändert auf 42 Checklistenzeilen sowie 9 Feature-Gates abgebildet; physische Rename-Pfade, reguläre Indexmodi und Indexbytes stärken GSDB-GATE-027.",
-        "en": "autonomous-run-governance 0.4.7 is inventoried at its exact preset locator and remains mapped to 42 checklist rows and 9 feature gates; physical rename paths, regular index modes, and index bytes strengthen GSDB-GATE-027."
+        "de": "autonomous-run-governance 0.4.9 ist am exakten Preset-Locator inventarisiert und unverändert auf 42 Checklistenzeilen sowie 9 Feature-Gates abgebildet; physische Rename-Pfade, reguläre Indexmodi und Indexbytes stärken GSDB-GATE-027.",
+        "en": "autonomous-run-governance 0.4.9 is inventoried at its exact preset locator and remains mapped to 42 checklist rows and 9 feature gates; physical rename paths, regular index modes, and index bytes strengthen GSDB-GATE-027."
       },
       "owner": "Spec Kit governance role",
       "reviewer": "Independent technical review role",
@@ -13189,14 +13189,14 @@
           "freshness": "Revalidated",
           "availability": "Existing",
           "supports": {
-            "de": "model-routing-governance ist durch .specify/presets/model-routing-governance/preset.yml am exakten Locator 'id: \"model-routing-governance\"' belegt. Der am 2026-11-03 als Revalidated geprüfte Inhalt stützt ausschließlich die Einstufung Applicable.",
-            "en": "model-routing-governance is bound to .specify/presets/model-routing-governance/preset.yml at the exact locator 'id: \"model-routing-governance\"'. The content observed on 2026-11-03 as Revalidated supports only the Applicable disposition."
+            "de": "model-routing-governance ist durch .specify/presets/model-routing-governance/preset.yml am exakten Locator 'id: \"model-routing-governance\"' belegt. Der am 2026-11-05 als Revalidated geprüfte Inhalt stützt ausschließlich die Einstufung Applicable.",
+            "en": "model-routing-governance is bound to .specify/presets/model-routing-governance/preset.yml at the exact locator 'id: \"model-routing-governance\"'. The content observed on 2026-11-05 as Revalidated supports only the Applicable disposition."
           }
         }
       ],
       "rationale": {
-        "de": "model-routing-governance 0.2.3 ist am exakten Preset-Locator inventarisiert und auf 29 Checklistenzeilen sowie 2 Feature-Gates abgebildet.",
-        "en": "model-routing-governance 0.2.3 is inventoried at its exact preset locator and mapped to 29 checklist rows and 2 feature gates."
+        "de": "model-routing-governance 0.2.5 ist am exakten Preset-Locator inventarisiert und auf 29 Checklistenzeilen sowie 2 Feature-Gates abgebildet.",
+        "en": "model-routing-governance 0.2.5 is inventoried at its exact preset locator and mapped to 29 checklist rows and 2 feature gates."
       },
       "owner": "Spec Kit governance role",
       "reviewer": "Independent technical review role",
