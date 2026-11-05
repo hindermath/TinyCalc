@@ -1,9 +1,8 @@
 # MicroCalc .NET 10 (Terminal.Gui)
 
-Model Routing Governance **0.2.3**: Diese Lieferung aktualisiert die lokale
-Preset-Integration und ihre Resolver. [Nachweis und Grenzen](docs/maintenance/model-routing-v023-installation.md).
-This delivery updates the local preset integration and its resolvers; see the
-linked evidence and verification limits.
+Model Routing Governance **0.2.5** und Autonomous Run Governance **0.4.9**:
+Diese Lieferung aktualisiert die lokale Preset-Integration und den geprüften
+normalen Ausführungspfad. [Nachweis und Grenzen](docs/maintenance/model-routing-v025-installation.md).
 
 [Aktueller Dokumentationspatch-Pilot / Current documentation patch pilot](docs/maintenance/documentation-patch-pilot-2026-10-24.md).
 
@@ -328,7 +327,7 @@ Standard-Preset-Set:
 - `a11y-governance` v0.4.6, Priority 40
 - `cross-platform-governance` v0.2.5, Priority 50
 - `agent-parity-governance` v0.4.5, Priority 60
-- `autonomous-run-governance` v0.4.7, Priority 70
+- `autonomous-run-governance` v0.4.9, Priority 70
 - `parallel-autonomous-run-governance` v0.2.9, Priority 80
 
 Die Katalog- und Einreichungshinweise der früheren Pilotberichte sind

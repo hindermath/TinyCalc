@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "hashContract": "sha256-utf8-lf-bom-or-raw-v1",
-  "baselineCommit": "71a9adbe6ee780baf6df3f1fdabb3ed2c6485eab",
-  "registrySha256": "fc08070fefe6983be4acdefa0c817e2537825a7ee5d1dfef14c33921996fb9ec",
+  "baselineCommit": "391d4eba32e847049cb5f31c2e71e80717153659",
+  "registrySha256": "89b720869700f65c0c3c1dfeaa2e6e3d0b9b1b92f5ec3f9b8806e3c431ad0560",
   "presets": [
     {
       "id": "a11y-governance",
@@ -33,12 +33,12 @@
     },
     {
       "id": "autonomous-run-governance",
-      "version": "0.4.7",
+      "version": "0.4.9",
       "priority": 70,
       "enabled": true,
-      "manifest_hash": "sha256:0034c2dc7da5c64be3e2bceb10fbea435bc0de921def37b4ec5e7203b9719367",
-      "fileCount": 67,
-      "contentSha256": "f80590747555adfbc38238f3040a499bdec98a32005b6a0287c79bd9bcde0b37"
+      "manifest_hash": "sha256:00c8714b76572a5a67e1db46dc9755d9094cdd2376046b5b5df5417acf872327",
+      "fileCount": 77,
+      "contentSha256": "3cd195b512983e7778f0d23cb11f2d4bf0011d148bbbf6c57eb34004c1724eb7"
     },
     {
       "id": "cross-platform-governance",
@@ -87,12 +87,12 @@
     },
     {
       "id": "model-routing-governance",
-      "version": "0.2.3",
+      "version": "0.2.5",
       "priority": 61,
       "enabled": true,
-      "manifest_hash": "sha256:2fe75f9246a92dcacc19b8dfac66adc69421cb9623922cf844bc752d4c46646c",
-      "fileCount": 55,
-      "contentSha256": "915c6a9dbd6501235e635e52ee121c17a54403953303d2d5e8c012b375ec1391"
+      "manifest_hash": "sha256:08dfe8be0ed1864d90810369010c1a76ae01819b7c633e459c74001a1f204c53",
+      "fileCount": 91,
+      "contentSha256": "bd815e009d80a2ed00de6ad6f38e01d88e64544e9e3e00fbccadd708f73cbf64"
     },
     {
       "id": "parallel-autonomous-run-governance",
@@ -131,5 +131,5 @@
       "contentSha256": "d25ddb8c7628d1a0179877e14a9c1a9dfaa3c884e4f5c1257d210b4bedb7878f"
     }
   ],
-  "purpose": "Bounded Model Routing 0.2.3 installation; other preset payloads and registry entries byte/semantically preserved. No model call or personal-profile migration."
+  "purpose": "Bounded Model Routing 0.2.5 and Autonomous Run 0.4.9 installation; other preset payloads and registry entries byte/semantically preserved. No model call or personal-profile migration."
 }
