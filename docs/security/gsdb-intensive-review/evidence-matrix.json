@@ -152,9 +152,9 @@
       "sourceId": "PRESET-model-routing-governance",
       "sourceClass": "Preset",
       "path": ".specify/presets/model-routing-governance/preset.yml",
-      "version": "0.2.7",
+      "version": "0.2.8",
       "reviewedAt": "2026-11-08",
-      "normalizedSha256": "cce5e0178d40e633df8465ac5fd9494d102ae2f0dd195aed1e98c50ba56b00e4",
+      "normalizedSha256": "32605362dc5ab22e8d48a77a04497d7c8c346e113101b2a45ab550ea8d9b5c13",
       "scope": {
         "de": "Diese Quelle wird nur für ihren benannten TinyCalc-Prüfumfang verwendet.",
         "en": "This source is used only for its named TinyCalc assessment scope."
@@ -1279,7 +1279,7 @@
       "path": ".specify/presets/.registry",
       "version": "Current",
       "reviewedAt": "2026-11-08",
-      "normalizedSha256": "c01b23533969affced36c8ca3d028d1b49cfe6f26fc1f1504c0057612a617d2e",
+      "normalizedSha256": "6428ed764af211ffa111ae689aed7075b92b37e9963b391d612aed7cd6385a89",
       "scope": {
         "de": "Zeilenspezifischer aktueller Nachweis aus .specify/presets/.registry; der Hash beweist Inhalt, nicht automatisch Erfuellung.",
         "en": "Current row-specific evidence from .specify/presets/.registry; the hash proves content, not automatic fulfilment."
@@ -13142,7 +13142,7 @@
     },
     {
       "presetId": "model-routing-governance",
-      "version": "0.2.7",
+      "version": "0.2.8",
       "priority": "NotInStandardMatrix",
       "standardMatrixMember": false,
       "applicability": "Applicable",
@@ -13195,8 +13195,8 @@
         }
       ],
       "rationale": {
-        "de": "model-routing-governance 0.2.6 ist am exakten Preset-Locator inventarisiert und auf 29 Checklistenzeilen sowie 2 Feature-Gates abgebildet.",
-        "en": "model-routing-governance 0.2.6 is inventoried at its exact preset locator and mapped to 29 checklist rows and 2 feature gates."
+        "de": "model-routing-governance 0.2.8 ist am exakten Preset-Locator inventarisiert und auf 29 Checklistenzeilen sowie 2 Feature-Gates abgebildet.",
+        "en": "model-routing-governance 0.2.8 is inventoried at its exact preset locator and mapped to 29 checklist rows and 2 feature gates."
       },
       "owner": "Spec Kit governance role",
       "reviewer": "Independent technical review role",
