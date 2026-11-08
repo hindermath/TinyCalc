@@ -28,6 +28,17 @@ function Copy-GsdbFixture {
     return $Target
 }
 
+function Get-GsdbFixtureHash {
+    param([Parameter(Mandatory)][string]$Path, [switch]$Binary)
+    $Bytes = [IO.File]::ReadAllBytes($Path)
+    if (-not $Binary) {
+        $Utf8 = [Text.UTF8Encoding]::new($false, $true)
+        $Text = $Utf8.GetString($Bytes).Replace("`r`n", "`n").Replace("`r", "`n")
+        $Bytes = [Text.UTF8Encoding]::new($false).GetBytes($Text)
+    }
+    return [Convert]::ToHexString([Security.Cryptography.SHA256]::HashData($Bytes)).ToLowerInvariant()
+}
+
 function Copy-GsdbProductionAssessment {
     param(
         [Parameter(Mandatory)][string]$Name,
@@ -36,6 +47,17 @@ function Copy-GsdbProductionAssessment {
 
     $Document = Get-Content -LiteralPath $ProductionAssessment -Raw |
         ConvertFrom-Json -AsHashtable -Depth 100
+    # DE/EN: Rebind only the synthetic negative-test copy to the currently installed
+    # payload. The dated production assessment remains immutable historical evidence.
+    foreach ($Source in $Document.sourceInventory) {
+        $BoundPath = Join-Path $RepositoryRoot ([string]$Source.path)
+        $Source.normalizedSha256 = Get-GsdbFixtureHash -Path $BoundPath -Binary:($Source.sourceClass -eq 'ManagedBinary')
+    }
+    $Installed = Get-Content -LiteralPath (Join-Path $RepositoryRoot '.specify/presets/.registry') -Raw |
+        ConvertFrom-Json -AsHashtable -Depth 100
+    foreach ($Preset in $Document.presetAssessments) {
+        $Preset.version = [string]$Installed.presets[$Preset.presetId].version
+    }
     & $Mutate $Document
     $Target = Join-Path $FixtureRoot "production-${Name}.json"
     $Json = ($Document | ConvertTo-Json -Depth 100).Replace("`r`n", "`n").Replace("`r", "`n")

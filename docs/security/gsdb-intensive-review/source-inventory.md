@@ -1,5 +1,13 @@
 # Quelleninventar der GSDB-Intensivprüfung / GSDB Intensive Review Source Inventory
 
+## Preset-Rollout 2026-11-08 / Preset rollout 2026-11-08
+
+DE: Die aktive JSON-Matrix bindet elf geänderte Preset-Quellen erneut an Version und SHA-256. Der [unveränderte Vorgänger](history/evidence-matrix-af869421.json) bewahrt die historischen Werte. Kontrollbewertungen, Findings und menschliche Freigaben wurden nicht aufgewertet.
+
+EN: The active JSON matrix rebinds eleven changed preset sources to their current versions and SHA-256 values. The [unchanged predecessor](history/evidence-matrix-af869421.json) preserves historical values. Control dispositions, findings and human approvals are not upgraded.
+
+Documentation Impact: UpdateRequired. Source and owner: TinyCalc GSDB evidence, Thorsten Hindermann. Reader paths: this page, current JSON, historical snapshot. Distribution: pilot only; no Home sync. Re-evaluate on the next preset update.
+
 ## Aktuelle Nachpruefung 2026-10-05 / Current follow-up 2026-10-05
 
 DE: Aktuelle Authoring-Version v0.3.7 und Hashbindungen stehen im
