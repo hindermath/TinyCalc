@@ -1046,6 +1046,22 @@ rendered separately from the clean source commit. Delivery review also corrects
 the predecessor ID in the archive marker; predecessor, successor and archived
 result hash are checked together.
 
+### 2026-11-09 - Dependabot PR #138 / Dependabot maintenance
+
+DE: Branch codex/dependabot-repair-20261109-tinycalc--138; sichtbares Wartungsfenster 09.11.2026, keine
+Stoppuhrmessung. chore(deps): bump actions/setup-dotnet from 5 to 6. Dokumentationsentscheidung: NoUpdateRequired
+fuer die technische Aenderung; GeneratedUpdate fuer beide vorhandenen
+Statistikprofile. Bestehende Referenzwerte bleiben erhalten. Die beobachtete
+Liefermenge ist keine Messung von Lernleistung oder KI-Zeitersparnis.
+Aktuelle Head-/Plattform-Pruefungen sind vor dem Merge erforderlich.
+Owner: Repository-Maintainer; Source-only, kein Home-Sync.
+
+EN: Branch codex/dependabot-repair-20261109-tinycalc--138; observable maintenance window 9 November 2026,
+not stopwatch time. chore(deps): bump actions/setup-dotnet from 5 to 6. Documentation impact: NoUpdateRequired for
+the technical change; GeneratedUpdate for the existing statistics profiles.
+Existing references remain unchanged. Delivery volume is not a measurement
+of learning outcomes or AI time savings. Current head/platform checks are
+required before merge. Owner: repository maintainer; source-only, no Home sync.
 ## Gesamtstatistik / Overall Statistics
 
 Deutsch: Feature 006 ist in PR #104 vollständig implementiert, menschlich
