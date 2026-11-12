@@ -75,7 +75,7 @@ $script:ExpectedPresets = [ordered]@{
     'cross-platform-governance' = @{ Version = '0.2.5'; Priority = 50; Standard = $true; Families = @('CL-05', 'CL-10'); Gates = @('021', '023', '026') }
     'intake-authoring-governance' = @{ Version = '0.3.12'; Priority = 'NotInStandardMatrix'; Standard = $false; Families = @('CL-09', 'CL-12'); Gates = @('001', '032', '033') }
     'intake-review-governance' = @{ Version = '0.2.8'; Priority = 'NotInStandardMatrix'; Standard = $false; Families = @('CL-08', 'CL-09', 'CL-12'); Gates = @('001', '028', '032') }
-    'intake-sequencing-governance' = @{ Version = '0.2.12'; Priority = 'NotInStandardMatrix'; Standard = $false; Families = @('CL-09', 'CL-12'); Gates = @('001', '032', '033') }
+    'intake-sequencing-governance' = @{ Version = '0.2.13'; Priority = 'NotInStandardMatrix'; Standard = $false; Families = @('CL-09', 'CL-12'); Gates = @('001', '032', '033') }
     'isaqb-architecture-governance' = @{ Version = '0.2.5'; Priority = 30; Standard = $true; Families = @('CL-02', 'CL-04'); Gates = @('010') }
     'model-routing-governance' = @{ Version = '0.2.8'; Priority = 'NotInStandardMatrix'; Standard = $false; Families = @('CL-09', 'CL-12'); Gates = @('001', '002') }
     'parallel-autonomous-run-governance' = @{ Version = '0.2.12'; Priority = 80; Standard = $true; Families = @('CL-09', 'CL-12'); Gates = @('033') }

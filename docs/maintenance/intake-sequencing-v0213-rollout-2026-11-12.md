@@ -40,3 +40,13 @@ Distribution: installed package/source evidence plus homeRuntime profile
 matrices where assigned by the distribution manifest. Home sync is checked
 after Level-0 merge; consumer repositories receive no Home sync.
 Re-evaluate on source, matrix, installed payload or review drift.
+
+## TinyCalc GSDB binding
+
+DE: Die aktuelle GSDB-Matrix und die strikte Validator-Konstante binden Sequencing 0.2.13. Der unveraenderte JSON-Vorgaenger liegt im History-Verzeichnis. Neue Negativfaelle verwerfen das Manifest-Hash und die Version 0.2.12. Alle Kontrollzeilen, Findings und externen Pflichten wurden strukturgleich erhalten.
+
+EN: Updated the current GSDB version/manifest binding and strict validator constant; preserved the previous JSON snapshot. Added stale-0.2.12 hash/version negatives. Control rows, findings and external duties remain structurally identical.
+
+Technischer Nachpruefer / technical reviewer: OpenAI Codex. Dies ist keine unabhaengige menschliche Nachpruefung / this is not independent human review. Die Registry-Bindung wurde ebenfalls aktualisiert, nachdem die Unveraendertheit der anderen 13 Eintraege geprueft wurde / the registry binding was refreshed after verifying the other thirteen entries are unchanged.
+
+Pruefung / verification: Productive Validate, Bash/PowerShell parity fixtures and the separate PowerShell GSDB001-GSDB010 suite passed. Structural comparison preserves all 157 checklist rows, 14 findings and 16 external duties; only two source bindings and the Sequencing assessment differ.

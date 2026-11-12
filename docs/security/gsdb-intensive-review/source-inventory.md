@@ -1,5 +1,11 @@
 # Quelleninventar der GSDB-Intensivprüfung / GSDB Intensive Review Source Inventory
 
+## Sequencing v0.2.13: 2026-11-12
+
+DE: Nur die Sequencing-Versions-/Manifestbindung wurde nachgeprueft. [Unveraenderter Vorgaenger](history/evidence-matrix-88f10e7b.json); [aktueller Rollout-Nachweis](../../maintenance/intake-sequencing-v0213-rollout-2026-11-12.md). Kontrollbewertungen, Findings und menschliche Freigaben bleiben unveraendert.
+
+EN: Revalidated only the Sequencing version/manifest binding. The linked predecessor preserves history; control dispositions, findings and human approvals are unchanged.
+
 ## Preset-Rollout 2026-11-08 / Preset rollout 2026-11-08
 
 DE: Die aktive JSON-Matrix bindet elf geänderte Preset-Quellen erneut an Version und SHA-256. Der [unveränderte Vorgänger](history/evidence-matrix-af869421.json) bewahrt die historischen Werte. Kontrollbewertungen, Findings und menschliche Freigaben wurden nicht aufgewertet.

@@ -413,6 +413,7 @@ try {
         @{ Id = 'architecture-governance'; Version = '0.5.2'; Hash = 'e2dc16bd0a566424dadbdb14a32cae5805d23d5f72e57a3bb3b5e47821882293' },
         @{ Id = 'intake-authoring-governance'; Version = '0.3.5'; Hash = '74a5bd0afc28ab4b3a997b2831278dcd215171552cac9877095fd08176a4591f' },
         @{ Id = 'intake-review-governance'; Version = '0.2.3'; Hash = '0fe3aedc8ed9b27a9874eabe28b2f457e2de68610e80e72007871249d62327ce' },
+        @{ Id = 'intake-sequencing-governance'; Version = '0.2.12'; Hash = '984f4f9157d8a3601f30853f876a38ca1a2b3a33a70d03962337423a5fd1158b' },
         @{ Id = 'intake-sequencing-governance'; Version = '0.2.6'; Hash = '8b517455df03fcb23f5e05e4a569a751fe72bedaa6932e669bbe368d00353e48' },
         @{ Id = 'security-governance'; Version = '0.6.2'; Hash = '356daaedfb3b0275c093d7e522b3e616091c1249a2622e071ae4ff690b5a239d' }
     )) {
