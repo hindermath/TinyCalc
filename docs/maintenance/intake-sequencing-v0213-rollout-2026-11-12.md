@@ -50,3 +50,5 @@ EN: Updated the current GSDB version/manifest binding and strict validator const
 Technischer Nachpruefer / technical reviewer: OpenAI Codex. Dies ist keine unabhaengige menschliche Nachpruefung / this is not independent human review. Die Registry-Bindung wurde ebenfalls aktualisiert, nachdem die Unveraendertheit der anderen 13 Eintraege geprueft wurde / the registry binding was refreshed after verifying the other thirteen entries are unchanged.
 
 Pruefung / verification: Productive Validate, Bash/PowerShell parity fixtures and the separate PowerShell GSDB001-GSDB010 suite passed. Structural comparison preserves all 157 checklist rows, 14 findings and 16 external duties; only two source bindings and the Sequencing assessment differ.
+
+DE/EN: Die aktuellen Sequencing-Versionsverweise in gemeinsamer Guidance und beiden Constitutions wurden auf 0.2.13 angeglichen; die drei davon in der GSDB gebundenen Quellen wurden erneut gehasht / aligned current Sequencing references in shared guidance and both constitutions, rehashing the three GSDB-bound sources. Datierte historische Paketnachweise bleiben erhalten / dated historical package evidence is preserved.

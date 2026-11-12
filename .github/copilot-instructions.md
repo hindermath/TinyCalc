@@ -492,7 +492,7 @@ reviewed delivery.
 ## Governance-Pilot und Liefergrenzen / Governance pilot and delivery boundaries
 
 DE: Das 14er-Profil bindet Security 0.7.4, Architecture 0.6.5 und Intake
-Authoring 0.3.10 / Review 0.2.7 / Sequencing 0.2.11. Produkt, Werkzeuge und
+Authoring 0.3.10 / Review 0.2.7 / Sequencing 0.2.13. Produkt, Werkzeuge und
 Organisation werden regulatorisch getrennt bewertet; Ausbildungszweck und
 AI-SBOM N/A ersetzen keine DS-GVO-/KI-VO-Anwendbarkeitspruefung.
 Unbekannte Rollen, Jurisdiktionen oder direkte/vertragliche Pflichten bleiben Open.
