@@ -1,5 +1,11 @@
 # Preset-Zuordnung / Preset Mapping
 
+## Sequencing v0.2.13: 2026-11-12
+
+DE: Nur die Sequencing-Versions-/Manifestbindung wurde nachgeprueft. [Unveraenderter Vorgaenger](history/evidence-matrix-88f10e7b.json); [aktueller Rollout-Nachweis](../../maintenance/intake-sequencing-v0213-rollout-2026-11-12.md). Kontrollbewertungen, Findings und menschliche Freigaben bleiben unveraendert.
+
+EN: Revalidated only the Sequencing version/manifest binding. The linked predecessor preserves history; control dispositions, findings and human approvals are unchanged.
+
 ## Aktuelle Nachpruefung 2026-10-05 / Current follow-up 2026-10-05
 
 DE: Aktuelle Authoring-Version v0.3.7 und Hashbindungen stehen im
