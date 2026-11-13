@@ -4,6 +4,8 @@
 from __future__ import annotations
 
 import hashlib
+import importlib.util
+import io
 import json
 import os
 from pathlib import Path
@@ -17,6 +19,7 @@ import tarfile
 import tempfile
 import time
 import unittest
+from unittest import mock
 
 
 REPOSITORY = Path(__file__).resolve().parents[2]
@@ -24,6 +27,9 @@ BREW_MAINTAINER = REPOSITORY / "scripts" / "maintain-agentic-brew-apps.sh"
 WORKSPACE_MAINTAINER = REPOSITORY / "scripts" / "maintain-agentic-workspace.sh"
 HELPER = REPOSITORY / "scripts" / "lib" / "linux-maintenance-hardening.py"
 FLEET_ENGINE = REPOSITORY / "scripts" / "lib" / "agentic_workspace_fleet.py"
+HELPER_SPEC = importlib.util.spec_from_file_location("linux_maintenance_hardening_test", HELPER)
+HELPER_MODULE = importlib.util.module_from_spec(HELPER_SPEC)
+HELPER_SPEC.loader.exec_module(HELPER_MODULE)
 
 
 def write_json(path: Path, value: object) -> None:
@@ -60,6 +66,9 @@ def empty_registries(root: Path) -> dict[str, Path]:
 def install_fake_brew(root: Path) -> tuple[Path, Path, Path]:
     bin_dir = root / "bin"
     bin_dir.mkdir()
+    # Resolve Python directly: host PATH launchers add a shell startup to each
+    # of the many JSON probes and can exhaust the fixture's process budget.
+    (bin_dir / "python3").symlink_to(sys.executable)
     state = root / "brew-state"
     log = root / "brew-install-log"
     state.write_text("", encoding="utf-8")
@@ -295,6 +304,45 @@ def base_report(run_id: str) -> dict:
 
 @unittest.skipIf(os.name == "nt", "Linux maintenance fixtures require a POSIX host.")
 class LinuxMaintenanceHardeningTests(unittest.TestCase):
+    def test_swiftly_extraction_enforces_member_and_expanded_size_limits(self) -> None:
+        def archive(path: Path, members: list[tuple[str, bytes]]) -> None:
+            with tarfile.open(path, "w:gz") as bundle:
+                for name, content in members:
+                    info = tarfile.TarInfo(name)
+                    info.size = len(content)
+                    bundle.addfile(info, io.BytesIO(content))
+
+        with tempfile.TemporaryDirectory() as directory:
+            root = Path(directory)
+            output = root / "swiftly"
+            output.write_bytes(b"previous")
+
+            many = root / "many.tar.gz"
+            archive(many, [("a", b""), ("b", b""), ("swiftly", b"ok")])
+            with mock.patch.object(HELPER_MODULE, "MAX_SWIFTLY_ARCHIVE_MEMBERS", 2), self.assertRaises(HELPER_MODULE.ContractError):
+                HELPER_MODULE.extract_swiftly(many, output)
+            self.assertEqual(output.read_bytes(), b"previous")
+
+            expanded = root / "expanded.tar.gz"
+            archive(expanded, [("unrelated", b"123456"), ("swiftly", b"ok")])
+            with mock.patch.object(HELPER_MODULE, "MAX_SWIFTLY_ARCHIVE_EXPANDED_BYTES", 7), self.assertRaises(HELPER_MODULE.ContractError):
+                HELPER_MODULE.extract_swiftly(expanded, output)
+            self.assertEqual(output.read_bytes(), b"previous")
+
+            oversized = root / "oversized.tar.gz"
+            archive(oversized, [("swiftly", b"0123456789")])
+            with mock.patch.object(HELPER_MODULE, "MAX_SWIFTLY_BINARY_BYTES", 9), self.assertRaises(HELPER_MODULE.ContractError):
+                HELPER_MODULE.extract_swiftly(oversized, output)
+            self.assertEqual(output.read_bytes(), b"previous")
+            self.assertFalse(list(root.glob(".swiftly.*.tmp")))
+
+            normal = root / "normal.tar.gz"
+            archive(normal, [("bin/swiftly", b"valid")])
+            result, status = HELPER_MODULE.extract_swiftly(normal, output)
+            self.assertEqual(status, 0)
+            self.assertEqual(result["status"], "Extracted")
+            self.assertEqual(output.read_bytes(), b"valid")
+
     def test_empty_optional_module_probe_still_publishes_one_valid_result(self) -> None:
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
@@ -487,6 +535,67 @@ class LinuxMaintenanceHardeningTests(unittest.TestCase):
             self.assertEqual(optional.returncode, 0, optional.stdout)
             self.assertIn("optional-missing", optional.stdout)
 
+    def test_executable_cli_installers_require_code_owned_authorization(self) -> None:
+        cases = (
+            (
+                "specify",
+                {
+                    "id": "specify", "scope": "required", "platforms": ["Linux"],
+                    "command": "missing-specify", "args": ["--version"],
+                    "install": {"manager": "uv", "arguments": [
+                        "tool", "install", "specify-cli", "--from",
+                        "git+https://github.com/github/spec-kit.git",
+                    ]},
+                },
+                "uv",
+                "Spec-Kit-Quelle ist nicht commitgebunden",
+            ),
+            (
+                "antigravity",
+                {
+                    "id": "antigravity", "scope": "required", "platforms": ["Linux"],
+                    "command": "missing-agy", "args": ["--version"],
+                    "install": {
+                        "manager": "vendor-script", "url": "https://attacker.invalid/install.sh",
+                        "sha256": "a" * 64, "interpreter": "bash",
+                    },
+                },
+                "curl",
+                "vendor-script nicht durch Code-Policy autorisiert",
+            ),
+        )
+        for name, tool, blocked_binary, expected_message in cases:
+            with self.subTest(name=name), tempfile.TemporaryDirectory() as directory:
+                root = Path(directory)
+                paths = empty_registries(root)
+                bin_dir, _, _ = install_fake_brew(root)
+                (bin_dir / "brew").unlink()
+                write_executable(bin_dir / "uname", "#!/bin/sh\nprintf 'Linux\\n'\n")
+                write_executable(bin_dir / "apt", "#!/bin/sh\nexit 0\n")
+                marker = root / "installer-invoked"
+                write_executable(
+                    bin_dir / blocked_binary,
+                    f"#!/bin/sh\nprintf invoked > '{marker}'\nexit 99\n",
+                )
+                if name == "specify":
+                    tool = dict(tool)
+                    tool["command"] = str(bin_dir / "registry-probe")
+                    write_executable(
+                        Path(tool["command"]),
+                        f"#!/bin/sh\nprintf probed > '{marker}'\nexit 0\n",
+                    )
+                write_json(paths["cli"], {"schemaVersion": 1, "tools": [tool]})
+
+                completed = run_brew_maintainer(root, paths)
+
+                self.assertEqual(completed.returncode, 1, completed.stdout)
+                self.assertTrue(
+                    expected_message in completed.stdout or
+                    "nicht durch Code-Policy autorisiert" in completed.stdout,
+                    completed.stdout,
+                )
+                self.assertFalse(marker.exists(), completed.stdout)
+
     def test_document_cargo_fallback_modes_and_failure_status(self) -> None:
         # Exercise the real maintainer with isolated Linux tools. No host package
         # manager, Cargo cache, editor, or user installation participates.
@@ -508,7 +617,6 @@ class LinuxMaintenanceHardeningTests(unittest.TestCase):
                 bin_dir, _, _ = install_fake_brew(root)
                 (bin_dir / "brew").unlink()
                 # Avoid Homebrew inherited through PATH even on macOS test hosts.
-                (bin_dir / "python3").symlink_to(sys.executable)
                 write_executable(bin_dir / "uname", "#!/bin/sh\nprintf 'Linux\\n'\n")
                 write_executable(bin_dir / "apt", "#!/bin/sh\nexit 0\n")
                 cargo_root = root / "cargo"
@@ -1024,6 +1132,10 @@ exit 2
         finalization_functions = source[start:end]
         with tempfile.TemporaryDirectory() as directory:
             root = Path(directory)
+            bin_dir = root / "bin"
+            bin_dir.mkdir()
+            (bin_dir / "python3").symlink_to(sys.executable)
+            environment = dict(os.environ, PATH=str(bin_dir) + os.pathsep + os.environ["PATH"])
             cases = (
                 ("TERM", signal.SIGTERM, 143, "INTERRUPTED"),
                 ("late-error", None, 1, "FAILED"),
@@ -1059,6 +1171,7 @@ exit 2
                     process = subprocess.Popen(
                         ["bash", str(harness)],
                         cwd=REPOSITORY,
+                        env=environment,
                         text=True,
                         stdout=subprocess.PIPE,
                         stderr=subprocess.STDOUT,
