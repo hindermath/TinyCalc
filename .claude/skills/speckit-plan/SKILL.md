@@ -4,7 +4,7 @@ description: 'Spec-kit workflow command: speckit-plan'
 compatibility: Requires spec-kit project structure with .specify/ directory
 metadata:
   author: github-spec-kit
-  source: security-governance:.composed/speckit.plan.md
+  source: security-governance v0.7.5:speckit.plan.md
 ---
 
 Before continuing, apply the Security Governance preset:

@@ -1,5 +1,8 @@
 # GSDB-Evidenzmatrix / GSDB Evidence Matrix
 
+> DE: Historische Lesesicht; aktuelle technische Versions- und Hashbindungen: [Rollout-Nachweis](../../maintenance/gsdb-security-rollout-bindings-2026-11-13.md). Fachliche Dispositionen bleiben bestehen.
+> EN: Historical reader view; current technical version and hash bindings: [rollout evidence](../../maintenance/gsdb-security-rollout-bindings-2026-11-13.md). Domain decisions remain.
+
 ## Sequencing v0.2.13: 2026-11-12
 
 DE: Nur die Sequencing-Versions-/Manifestbindung wurde nachgeprueft. [Unveraenderter Vorgaenger](history/evidence-matrix-88f10e7b.json); [aktueller Rollout-Nachweis](../../maintenance/intake-sequencing-v0213-rollout-2026-11-12.md). Kontrollbewertungen, Findings und menschliche Freigaben bleiben unveraendert.

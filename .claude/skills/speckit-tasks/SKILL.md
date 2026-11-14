@@ -4,7 +4,7 @@ description: 'Spec-kit workflow command: speckit-tasks'
 compatibility: Requires spec-kit project structure with .specify/ directory
 metadata:
   author: github-spec-kit
-  source: security-governance:.composed/speckit.tasks.md
+  source: security-governance v0.7.5:speckit.tasks.md
 ---
 
 Before continuing, apply the Security Governance preset:
