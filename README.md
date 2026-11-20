@@ -230,6 +230,13 @@ In `tests/MicroCalc.Tui.Tests` (in erweiterten PR-Branches):
 
 ## Lokales Starten
 
+Zum Bauen das in `global.json` angegebene .NET SDK 11 verwenden. Für Tests
+und die Ausführung wird .NET 10 (`net10.0`) benötigt.
+
+Build with the .NET 11 SDK specified in `global.json`. Tests and execution
+require .NET 10 (`net10.0`).
+
+
 ```bash
 dotnet run --project src/MicroCalc.Tui/MicroCalc.Tui.csproj
 ```
