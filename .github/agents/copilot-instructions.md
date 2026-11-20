@@ -1,5 +1,29 @@
 # MicroCalc – Copilot Instructions
 
+## Verbindlicher Einstieg / Required starting point
+
+DE: Arbeite im Repository TinyCalc. Prüfe die Projektkonstitution und die nachstehenden
+Build-, Test- und Freigaberegeln. Verwende `MicroCalc.sln` für die projektweiten Prüfungen.
+Halte gemeinsame Regeln in allen fünf Agenten-Dateien synchron und dokumentiere Abweichungen.
+Bei Level-2-Arbeit die anwendbaren Sicherheitsstandards nennen, `N/A` begründen und die
+Nachweise im Plan und in den Aufgaben festhalten. Sichere Eingabegrenzen, minimale
+Berechtigungen und geschützte Zugangsdaten sind verbindlich. Prüfe anwendbare WCAG 2.2 AA
+Kriterien und dokumentiere offene Nachweise. Pflege die Projektstatistik nach den markierten Regeln.
+
+EN: Work in the TinyCalc repository. Read the project constitution and the build,
+test and delivery rules below. Use `MicroCalc.sln` for solution-wide checks.
+Keep shared rules in sync across all five agent files and document differences.
+Name the applicable security standards for Level 2 work, justify `N/A`, and record
+evidence in plans and tasks. Validate trust boundaries, apply least privilege and
+protect credentials. Check applicable WCAG 2.2 AA criteria and record gaps in evidence.
+Maintain project statistics according to the marked rules.
+
+[Verbindliche Detailregeln / Required detailed rules](../../docs/agent-guidance.md):
+Lies vor der Arbeit die Abschnitte zu deiner Aufgabe, insbesondere vor Änderungen an Code,
+Architektur, Agentenwerkzeugen oder Spec-Kit-Presets.
+Read the sections relevant to your task before work, especially before changing code,
+architecture, agent tooling or Spec Kit presets.
+
 ## Build & Test
 
 ```bash
@@ -32,101 +56,6 @@ CI runs on `main` and all `codex/**` branches using the Release configuration.
 
 On numbered Spec-Kit branches, align those three version fields before pushing.
 
-## Architecture
-
-Two production projects plus two test projects, strict dependency direction:
-`MicroCalc.Core` has no UI dependency; `MicroCalc.Tui` references Core.
-
-**`MicroCalc.Core`** – all spreadsheet logic:
-- `Engine/MicroCalcEngine` – single façade for all operations (`EditCell`, `Recalculate`, `FormatRange`, `Move`, `Clear`). Call `EditCell` to store a value; it triggers `Recalculate` automatically when `AutoCalc` is on.
-- `Formula/FormulaEvaluator` – evaluates an expression string against a `Spreadsheet`. Internally delegates to a private `Parser` (recursive-descent). Cyclic reference detection uses a `HashSet<CellAddress>` per evaluation call.
-- `Model/Spreadsheet` + `Model/Cell` – the data grid. Grid bounds are fixed constants in `SpreadsheetSpec` (columns A–G, 21 rows).
-- `IO/SpreadsheetJsonStorage` – save/load to `.mcalc.json`. No legacy `.MCS` format.
-
-**`MicroCalc.Tui`** – Terminal.Gui front end. `Program.cs` is the entry point; it checks for `--smoke` and delegates to `TuiSmokeRunner` before touching Terminal.Gui.
-
-**Legacy reference files** at repo root (`CALC.PAS`, `CALC.INC`, `CALC.HLP`) are Pascal source and help content kept for behavior parity; they are not compiled.
-
-## Key Conventions
-
-### Formula syntax (non-obvious)
-- Range sum uses `>` as the operator: `A1>B5` means "sum A1 through B5", not a comparison.
-- No `SUM()` function — use the `A1>B5` syntax instead.
-- Supported functions: `ABS`, `SQRT`, `SQR`, `SIN`, `COS`, `ARCTAN`, `LN`, `LOG`, `EXP`, `FACT`, `MIN`, `MAX`, `AVERAGE`, `COUNT`, `ROUND`, `IF`. Function names are case-insensitive.
-- `IF(condition,trueVal,falseVal)` — conditions use `>` as greater-than comparison inside `IF`. Outside `IF`, `A1>B5` is a range sum, not a comparison.
-- `ROUND(value,decimals)` — rounds to the given number of decimal places.
-- Error messages from the parser are in German (the codebase language for user-facing strings).
-
-### `CellStatusFlags` is a `[Flags]` enum — check with `HasFlag`
-- `Text` = plain string cell
-- `Constant` = numeric or expression cell (stored value)
-- `Formula` = contains a cell reference or range (recalculated on `Recalculate`)
-- `Calculated` = formula has been evaluated and has a current value
-- `OverWritten` = cell is visually occupied by text overflow from the cell to its left
-- `Locked` = cell blocked because the preceding cell uses an expanded field width
-
-A cell can simultaneously be `Constant | Formula` (a formula that has been evaluated).
-
-### Text overflow
-When a text cell's content exceeds `DefaultFieldWidth` (10), `MicroCalcEngine.ApplyTextOverflow` marks adjacent right-hand cells as `OverWritten`. `ClearOverwrittenTrail` reverses this when the source cell is edited. Always call through `EditCell`, not by mutating `Cell` directly.
-
-### `SpreadsheetSpec` constants
-Fixed grid: columns `A`–`G` (7 columns), 21 rows, 147 total cells. Cell input capped at 70 characters. Default field width 10, default decimals 2. All bounds checks go through `SpreadsheetSpec.IsColumnInRange` / `IsRowInRange`.
-
-### Testing pattern
-- `FormulaGoldenTests` — `[Theory]`/`[MemberData]` table of expression → expected value. Add new cases here for any formula behaviour change.
-- `MicroCalcEngineTests` — integration-style tests through the engine façade.
-- `TuiSmokeTests` — calls `TuiSmokeRunner.Run(...)` which exercises help loading and basic rendering without a Terminal.Gui window.
-
-### Branching & PRs
-- Work branches: `codex/<short-topic>` or numbered Spec-Kit branches `NNN-short-description`
-- When a dedicated feature branch has implemented the requirements of a Lastenheft, rename that file to `Lastenheft_<topic>.<feature-branch>.md` so the delivered scope stays traceable.
-- Add a PR description file: `docs/PR_TEXT_<TOPIC>.md`
-- Commits follow Conventional Commit prefixes: `feat:`, `fix:`, `test:`, `docs:`, `chore:`
-
-### Documentation & language
-- All code comments and documentation must be **bilingual: German block first, English block second**, both at CEFR B2 readability.
-- Large normative documents such as `Pflichtenheft*.md` and `Lastenheft*.md` may use a synchronized English sidecar with suffix `.EN.md` instead of an oversized inline-bilingual file; the German version remains canonical unless explicitly marked otherwise.
-- Public APIs require complete XML docs (`<summary>`, `<param>`, `<returns>`, `<exception>` where applicable). Do not suppress CS1591 globally — missing XML docs are treated as build errors.
-- When API signatures or XML comments change, regenerate DocFX output in the same PR.
-- New or changed non-trivial logic must be reviewed for didactic inline-comment value when it affects learner understanding or maintainability.
-- Inline comments explain why a decision, trade-off, constraint, historical deviation, or proof boundary exists; do not add comments that merely restate obvious code.
-- Keep inline-comment intensity moderate: normally 1-3 lines before a non-trivial block, with German-first/English-second CEFR-B2 text for didactic explanation blocks.
-
-### TDD expectation
-- For behavior changes, write tests first and make them fail (RED) before implementation.
-- Implement against failing tests, then verify GREEN in `Release` configuration.
-
-### Code style (`.editorconfig`)
-- `*.cs`: 4-space indent; `*.csproj`, `*.sln`, `*.md`, `*.yml`, `*.json`: 2-space indent
-- UTF-8, LF line endings, final newline, no trailing whitespace
-- `PascalCase` for types and public members; `_camelCase` for private readonly fields
-- Nullable reference types enabled — do not suppress without reason
-
-## Agentische Skriptausfuehrung / Agentic Script Execution
-
-- Vor jeder Automationsaufgabe zuerst das Betriebssystem pruefen. Wenn ein passendes PowerShell-7-Skript oder Cmdlet vorhanden ist und `pwsh` verfuegbar ist, diese Variante bevorzugen. Fuer strukturierte lokale Automationen ist C# ueber `.NET` oder `mono` ein zulaessiger zweiter Weg, wenn Typisierung, Dateiformate oder Wiederverwendbarkeit dadurch klar besser werden. Erst wenn PowerShell oder C# nicht sinnvoll passen, die OS-nahe vorhandene Repo-Variante nutzen, auf macOS/Linux typischerweise Bash. Keine neue Sprache nur aus Bequemlichkeit einfuehren, wenn ein bestehendes Repo-Skript denselben Zweck erfuellt.
-- Detect the operating system before each automation task. If a matching PowerShell 7 script or cmdlet exists and `pwsh` is available, prefer that variant. For structured local automation, C# via `.NET` or `mono` is an acceptable second option when type safety, file formats, or reuse clearly benefit from it. Only when PowerShell or C# is not a good fit, use the existing OS-native repository variant, typically Bash on macOS/Linux. Do not introduce a new language merely for convenience when an existing repository script already solves the task.
-
-## Project Statistics
-
-- When shared AI-agent guidance, workflow conventions, or statistics methodology changes, review and update `AGENTS.md`, `CLAUDE.md`, `GEMINI.md`, `.github/copilot-instructions.md`, and `.github/agents/copilot-instructions.md` together when they are affected.
-- Shared guidance must not be updated in only one of these files; any intentional agent-specific divergence must be documented in the same change.
-- Maintain `docs/project-statistics.md` as the living statistics ledger for the repository.
-- Update the file after each completed Spec-Kit implementation phase, after each agent-driven repository change, or when a refresh is explicitly requested.
-- Within the `## Fortschreibungsprotokoll` table, keep entries in strict chronological order: oldest entry at the top, newest and most recently added entry at the bottom; entries with the same date keep their insertion order.
-- Keep a final top-level `## Gesamtstatistik` block as the last section of `docs/project-statistics.md`; do not append later top-level sections after it.
-- Inside that final `## Gesamtstatistik` block, maintain compact ASCII-only trend diagrams directly below the textual overall summary and refresh them with every statistics update; cover at least the artifact mix, the documented branch/phase curves, the documented acceleration factors from agentic AI plus Spec-Kit/SDD support, and a direct comparison between experienced-developer effort, Thorsten-solo effort, and the visible AI-assisted delivery window.
-- Keep each short CEFR-B2 explanatory text directly adjacent to its matching ASCII diagram group.
-- When the data benefits from progression across an X-axis, add simple ASCII X/Y charts as a second visualization layer; keep them approximate, readable in plain Markdown, and explained in CEFR-B2 language.
-- Keep the statistics section plain-text friendly for Braille displays, screen readers, and text browsers; diagrams and explanations must stay understandable without relying on color or visual layout alone.
-- When DocFX content, documentation navigation, or API presentation changes, validate representative `_site/` pages through a text-oriented review path, preferably with a local Playwright accessibility snapshot.
-- Treat every successful `docfx` regeneration as requiring the matching text-oriented A11y smoke check in the same work item.
-- Each update must capture branch or phase, observable work window, production/test/documentation line counts, main work packages, the conservative manual baseline of 80 manually created lines per workday across code, tests, and documentation, and the repo-specific Thorsten-Solo comparison baseline of 125 lines per workday for this Pascal-derived port.
-- When effort is converted into months, use explicit assumptions such as 21.5 workdays per month and, if applicable, 30 vacation days per year through calendar year 2026 and 31 vacation days per year from calendar year 2027 onward under a TVoeD-style 5-day-week calendar.
-- When reporting acceleration, compare both manual references against visible Git active days and label the result as a blended repository speedup rather than a stopwatch measurement.
-- When hour values are shown, convert the day-based estimates with the TVoeD working-day baseline of `7.8 hours` (`7h 48m`) per day.
-
 ## Inclusion & Accessibility
 
 - Follow `Programmierung #include<everyone>`: Diese Lernbeispiele richten sich an Azubis (Fachinformatiker AE/SI), die auf Deutsch und Englisch arbeiten, **sowie** an sehbehinderte Lernende, die Braille-Displays, Screen-Reader oder Textbrowser nutzen. Barrierefreiheit ist Pflichtanforderung, kein Nice-to-have. / *These learning examples target apprentices working in German and English, **and** visually impaired learners using Braille displays, screen readers, or text browsers. Accessibility is mandatory.*
@@ -136,48 +65,6 @@ Fixed grid: columns `A`–`G` (7 columns), 21 rows, 147 total cells. Cell input 
 - Recommended A11y toolchain for DocFX-based repos: Node 24 LTS, `npm`, Playwright, `@axe-core/playwright`, and `lynx`.
 - Treat bilingual CEFR-B2 delivery and the documented A11Y proof path as formal completion criteria for learner-facing documentation and active requirement artifacts.
 
-## Workspace Baseline (vollständig aus `RiderProjects/.github/copilot-instructions.md`)
-
-Diese Regeln gelten für alle Repositories in diesem Workspace. Projektspezifische Regeln in dieser Datei haben Vorrang, wenn sie konkreter sind. GitHub Copilot liest keine übergeordneten `copilot-instructions.md`-Dateien automatisch; daher sind die Workspace-Regeln hier vollständig eingebettet.
-
-### Dokumentation
-- Leitprinzip: `Programmierung #include<everyone>` — Diese Lernbeispiele richten sich an Azubis (Fachinformatiker AE/SI), die auf Deutsch und Englisch arbeiten, **sowie** an sehbehinderte Lernende, die Braille-Displays, Screen-Reader oder Textbrowser nutzen. Barrierefreiheit ist Pflichtanforderung, kein Nice-to-have. / *These learning examples target apprentices working in German and English, **and** visually impaired learners using Braille displays, screen readers, or text browsers. Accessibility is mandatory.*
-- Deutsch und Englisch zielen beide auf CEFR-B2-Lesbarkeit; Reihenfolge: **Deutsch zuerst, Englisch danach**.
-- **Die deutsche Fassung ist kanonisch**, außer dieses Repository markiert eine andere Sprache explizit als primär.
-- Große normative Dokumente (`Pflichtenheft*.md`, `Lastenheft*.md`) verwenden eine synchronisierte `.EN.md`-Sidecar-Datei statt einer überlangen Inline-Zweisprachigkeit.
-- Bilinguales CEFR-B2-Deliverable ist ein **formales Abnahmekriterium** für learner-facing Dokumentation und aktive Anforderungsartefakte.
-
-### Barrierefreiheit (Accessibility)
-- Generiertes HTML-Dokumentation muss **WCAG 2.2 Level AA** erfüllen.
-- Semantische Überschriften, Listen, Tabellen und ASCII/Text-First-Diagramme bevorzugen.
-- **Wesentliche Bedeutung NICHT nur durch Farbe, Layout oder Maus-only-Affordances kodieren.**
-- Guides, Statistiken, Beispiele und generierte API-Dokumentation müssen in text-first Assistive-Setups lesbar bleiben.
-- Der dokumentierte **A11Y-Nachweispfad ist ein formales Abnahmekriterium** für learner-facing Dokumentation und aktive Anforderungsartefakte.
-
-### DocFX-Review-Regel
-- Wenn ein Repository Dokumentation mit `docfx` neu generiert, muss **dasselbe Work-Item** auch den passenden A11Y-Review ausführen.
-- Bevorzugtes Toolchain: **Node 24 LTS**, **`npm`**, **`@axe-core/playwright`**, **`lynx`**.
-- Playwright + axe für automatisierte Smoke-Checks verwenden; `lynx` als zusätzlichen Textbrowser-Prüfpfad.
-
-### Statistik-Ledger
-- `docs/project-statistics.md` als lebendes Ledger pflegen, wenn diese Datei im Repository existiert.
-- Den abschließenden Top-Level-Block `## Gesamtstatistik` als letzten Abschnitt halten.
-- ASCII-Diagramme textbrowserfreundlich halten und **kurze CEFR-B2-Erklärungen direkt neben** das jeweilige Diagramm platzieren.
-- Dokumentierte **Beschleunigungsfaktoren aus Agentic AI plus Spec-Kit/SDD** einschließen sowie einen Vergleich zwischen experienced-developer-Aufwand, Thorsten-solo-Aufwand und dem sichtbaren AI-assisted-Delivery-Fenster (sofern dieses Repository diese Metriken führt).
-
-### Änderungsdisziplin
-- **Nicht davon ausgehen**, dass eine Cross-Repository-Regel projekt-spezifische Build-, Test- oder Release-Anforderungen ersetzt.
-- Wenn eine gemeinsame Regel sich ändert und mehrere Repositories betroffen sind, lokale Projektguidance **und** das jeweilige Statistik-Ledger gemeinsam aktualisieren.
-- `CODEX_CROSS_REPO_PROMPTS.md` synchron halten, wenn sich übergreifende Prompting-Guidance ändert, damit der wiederverwendbare Prompt mit der aktuellen Baseline übereinstimmt.
-
-## Gemeinsame Governance-Ergaenzung / Shared Governance Addendum
-
-- Alle nutzerseitigen Artefakte muessen barrierefrei gedacht und geprueft werden: CLI-Ausgaben, Dokumentation, HTML, UI und generierte Templates; WCAG 2.2 Level AA ist die Standard-Basis, sobald die Kriterien auf das Artefakt anwendbar sind.
-- All user-facing artefacts must be designed and reviewed for accessibility: CLI output, documentation, HTML, UI, and generated templates; WCAG 2.2 Level AA is the default baseline wherever the criteria apply.
-
-- Fuer C#/.NET-Repositories gilt standardmaessig eine Thorsten-Solo-Basis von `125` Zeilen/Arbeitstag, sofern das Repo keinen abweichenden, begruendeten Wert dokumentiert.
-- The default Thorsten-solo baseline for C#/.NET repositories is `125` lines/workday unless the repository documents a justified deviation.
-
 ## Level-2-Umgebungsregister / Level-2 Environment Registry
 
 - Die zentrale `constitution.md` enthält das verbindliche Level-2 Project Environment Registry.
@@ -185,56 +72,7 @@ Diese Regeln gelten für alle Repositories in diesem Workspace. Projektspezifisc
 - Änderungen an einer Level-2-Runtime, Toolchain oder Statistik-Basis müssen `constitution.md`, `.specify/memory/constitution.md` und betroffene KI-Agenten-Dateien gemeinsam prüfen.
 
 *The central `constitution.md` contains the binding Level-2 Project Environment Registry. Spec-Kit plans and Copilot work in Level-2 projects must use the matching registry row as binding context for runtime, build/test, A11Y, statistics, and agent surfaces. Changes to Level-2 runtime, toolchain, or statistics baselines require a joint review of `constitution.md`, `.specify/memory/constitution.md`, and affected AI-agent files.*
-## Memory-Safe Languages (MSL) / Speichersichere Sprachen
 
-- Level-2-Projekte SOLLEN eine speichersichere Sprache (Memory-Safe Language, MSL) als primäre Laufzeit verwenden, wenn die Zielplattform es erlaubt.
-- Verbindliche MSL-Erlaubnisliste, Regeln und Begründungspflicht: siehe `constitution.md`, Prinzip XI.
-- MSL-Kurzliste: Rust, Swift, C#, F#, Java, Kotlin, Scala, Go, Dart, Python, Ruby, JavaScript, TypeScript, Haskell, OCaml, Erlang, Elixir, Ada, SPARK.
-- **Nicht** MSL (Begründung im Level-2-`constitution.md` erforderlich): C, C++, klassisches Objective-C, Assembly, `cc65`-C89, Zig (pre-1.0), Nim (manual), D ohne GC.
-- In Nicht-MSL-Repositories (z. B. `C64Projects/cc65`) die im Level-2-`constitution.md` hinterlegte Begründung im Plan- und Task-Kontext erwähnen.
-- `speckit.constitution` und `speckit.specify` SOLLEN bei Nicht-MSL-Primärsprache einen **nicht blockierenden** Hinweis ausgeben (Tooling-Aufgabe, separate Umsetzung).
-- Änderungen an dieser Empfehlung erfordern ein gemeinsames Update in `constitution.md`, `.specify/memory/constitution.md`, `AGENTS.md`, `CLAUDE.md`, `GEMINI.md`, `.github/copilot-instructions.md` und `.github/agents/copilot-instructions.md`.
-
-*Level-2 projects SHOULD use a memory-safe language (MSL) as their primary runtime when the target platform allows. Authoritative rules: `constitution.md`, Principle XI. MSL short list: Rust, Swift, C#/F#, Java/Kotlin/Scala, Go, Dart, Python, Ruby, JavaScript/TypeScript, Haskell, OCaml, Erlang/Elixir, Ada/SPARK. Non-MSL languages (C, C++, Assembly, `cc65`, Zig pre-1.0, …) require a documented justification in the Level-2 `constitution.md`. In non-MSL repositories (e.g. `C64Projects/cc65`), surface the documented justification in plans and tasks. `speckit.constitution` and `speckit.specify` SHOULD emit a non-blocking advisory warning when the primary language is not an MSL — tracked as a separate tooling task. Changes to this recommendation require a joint update across `constitution.md`, `.specify/memory/constitution.md`, and all four agent guidance files.*
-## Sichere Code-Erzeugung / Secure Code Generation (ISO 27001/27002 A.8.28)
-
-- KI-generierter und menschlich geschriebener Code MUSS den etablierten Secure-Coding-Best-Practices der Zielsprache und des Frameworks folgen. LLMs erzeugen nicht zuverlässig sicheren Code; explizite Durchsetzung ist erforderlich.
-- Verbindliche Regeln und sprachspezifische Anforderungen: siehe `constitution.md`, Prinzip XII.
-- Sprachspezifische Kurzregeln (Detailprofil: `.specify/templates/secure-coding-language-rules-template.md`):
-  - **C / C89**: Bounds-Checking, kein `gets()`, kein ungeprueftes `sprintf()`/`strcpy()`, CERT C.
-  - **C# / .NET**: parametrisierte Queries, Output-Encoding gegen XSS, Anti-Forgery-Tokens, sichere Deserialisierung, Microsoft Secure Coding Guidelines.
-  - **Rust**: `unsafe` isolieren und begruenden, keine Panic-Pfade aus nicht vertrauenswuerdigem Input, Deserialisierung validieren, `cargo audit` oder gleichwertig verwenden.
-  - **Go**: HTTP-/Client-Timeouts setzen, `context` propagieren, SSRF pruefen, `crypto/rand` nutzen, `govulncheck` oder gleichwertig verwenden.
-  - **Swift**: keine Force-Unwraps auf nicht vertrauenswuerdigen Daten, dekodierte Eingaben validieren, Keychain/CryptoKit/TLS-Defaults nutzen, Datei-URLs einschraenken.
-  - **Java / Kotlin**: DTOs validieren, Persistence-Zugriffe parametrisieren, Deserialisierung beschraenken, Auth/CSRF/CORS/Session-Defaults pruefen.
-  - **Python**: Boundary-Input validieren, keine unsichere Deserialisierung oder dynamische Ausfuehrung, `subprocess`/Dateipfade einschraenken, Dependency-Audit nutzen.
-  - **TypeScript / JavaScript**: Runtime-Input validieren, XSS/Prototype-Pollution/SSRF pruefen, keine dynamische Code-Ausfuehrung, Lockfiles auditieren.
-  - **SQL**: nur parametrisierte Statements, kein dynamisches SQL aus nicht vertrauenswuerdigem Input.
-  - **Bash**: Variable in Anfuehrungszeichen (`"$var"`), kein `eval` auf nicht vertrauenswuerdigem Input, `--` End-of-Options.
-  - **PowerShell**: `Set-StrictMode -Version Latest`, validierte Parameter, kein `Invoke-Expression` auf nicht vertrauenswuerdigem Input.
-- Kryptografie: aktuelle Algorithmen (AES-256, RSA >= 3072, SHA-256+, Ed25519); veraltete (MD5, SHA-1 für Signaturen, DES, RC4) nur mit expliziter Risikobegründung.
-- Fehlerbehandlung darf keine internen Zustände, Stack-Traces oder Verbindungszeichenketten an Endbenutzer preisgeben.
-- Hinzugefügte Abhängigkeiten müssen aktiv gepflegt sein und dürfen keine bekannten kritischen CVEs aufweisen.
-- Code-Reviews MÜSSEN eine Sicherheitsperspektive für Eingabeverarbeitung, Authentifizierung, Autorisierung, Kryptografie und Datei-/Netzwerk-I/O enthalten.
-- Änderungen an dieser Regel erfordern ein gemeinsames Update in `constitution.md`, `.specify/memory/constitution.md`, `AGENTS.md`, `CLAUDE.md`, `GEMINI.md`, `.github/copilot-instructions.md` und `.github/agents/copilot-instructions.md`.
-
-*AI-generated and human-written code MUST follow the secure-coding best practices of the target language and framework. Authoritative rules: `constitution.md`, Principle XII, and `.specify/templates/secure-coding-language-rules-template.md`. Language-specific short rules cover C/C89, C#/.NET, Rust, Go, Swift, Java/Kotlin, Python, TypeScript/JavaScript, SQL, Bash, and PowerShell. MSL status does not replace secure API, I/O, auth, SQL, crypto, logging, or dependency review. Cryptography: use current algorithms (AES-256, SHA-256+, Ed25519); deprecated (MD5, SHA-1 for signatures, DES, RC4) only with explicit risk acknowledgement. Error handling must not expose internals. Dependencies must have no known critical CVEs. Code reviews must include a security perspective for input handling, auth, crypto, and I/O. Changes require a joint update across `constitution.md`, `.specify/memory/constitution.md`, and all four agent guidance files.*
-## Sichere Software-Architektur / Secure Software Architecture (ISO 27001/27002 A.8.27)
-
-- KI-generierte und menschlich geschriebene Software-Architektur MUSS etablierten sicheren Architekturprinzipien folgen. Sicherer Code (Prinzip XII) ohne sichere Architektur reicht nicht aus — beide Ebenen müssen zusammenwirken.
-- Verbindliche Regeln und sprachspezifische Architekturvorgaben: siehe `constitution.md`, Prinzip XIII.
-- Verbindliche Architekturprinzipien:
-  - **Trust Boundaries**: Explizite Vertrauensgrenzen definieren; alle Eingaben an Vertrauensgrenzen validieren und bereinigen.
-  - **Defense in Depth**: Mindestens zwei unabhängige Sicherheitsschichten für kritische Assets.
-  - **Least Privilege**: Jede Komponente, jeder Dienst und Prozess arbeitet mit minimalen Berechtigungen.
-  - **Fail-Safe Defaults**: Zugriff standardmäßig verweigern, explizit gewähren; Fehlerpfade fallen in sicheren Zustand zurück.
-  - **Angriffsfläche reduzieren**: Ungenutzte Endpunkte, Dienste und Debug-Funktionen deaktivieren oder entfernen.
-  - **Separation of Concerns**: Authentifizierung, Autorisierung, Logging und Eingabevalidierung als Cross-Cutting Concerns implementieren, nicht ad-hoc verstreuen.
-  - **Sichere Konfiguration**: Secrets in plattformgeeigneten Secret-Stores (z. B. Azure Key Vault, macOS Keychain), nie im Quellcode oder in Git-tracked Config-Dateien.
-  - **Supply-Chain-Sicherheit**: Abhängigkeiten aus verifizierten Registries; Lock-Files committen; verwundbare Abhängigkeiten vor Release ersetzen.
-- Änderungen an dieser Regel erfordern ein gemeinsames Update in `constitution.md`, `.specify/memory/constitution.md`, `AGENTS.md`, `CLAUDE.md`, `GEMINI.md`, `.github/copilot-instructions.md` und `.github/agents/copilot-instructions.md`.
-
-*AI-generated and human-written software architecture MUST follow secure-architecture principles. Authoritative rules: `constitution.md`, Principle XIII. Core principles: trust boundaries (validate all input at system boundaries), defense in depth (at least two independent security layers), least privilege (minimum required permissions), fail-safe defaults (deny by default), attack surface reduction (disable unused features), separation of concerns (auth/logging/validation as cross-cutting concerns), secure configuration (secrets in secret stores, never in code or Git), supply-chain security (verified registries, lock files, no known-vulnerable dependencies). Principles XII + XIII together form the complete secure-development approach: XII = tactical code-level security, XIII = strategic architecture-level security. Changes require a joint update across `constitution.md`, `.specify/memory/constitution.md`, and all four agent guidance files.*
 ## Sicherheitsdokumentation / Security Documentation (XII–XVIII Extensions)
 
 - Jedes Level-2-Projekt MUSS die folgenden Sicherheitsdokumente pflegen, basierend auf den Templates in `.specify/templates/`:
@@ -252,15 +90,6 @@ Diese Regeln gelten für alle Repositories in diesem Workspace. Projektspezifisc
 
 *Every Level-2 project MUST maintain security documents based on templates in `.specify/templates/`: threat model (STRIDE+CAPEC), S-ADRs, arc42 Section 8 security concepts, security checklist, dependency audit, security quality scenarios (SHOULD), ASVS verification (web/API MUST), supply-chain evidence (release-capable MUST; AI-SBOM when AI runtime/product components apply), Zero Trust applicability note (distributed systems SHOULD), and SAMM assessment (long-lived projects SHOULD). Project-specific instances live in `docs/security/`; S-ADRs in `docs/security/adr/`. See `constitution.md`, Principles XII–XVIII for authoritative requirements.*
 
-## Allgemeine Architekturdokumentation / General Architecture Documentation
-
-- Bei architekturrelevanten Änderungen MUSS iSAQB/arc42-Evidenz geprüft werden: Architekturziele, Kontextsicht, Bausteinsicht, Laufzeitsicht, Deployment-Sicht, Qualitätszenarien, ADRs, Architekturrisiken und technische Schulden.
-- Standardpfad: `docs/architecture/`; ADRs als einzelne Dateien in `docs/architecture/adr/`.
-- Verwende die installierten Templates `architecture-vision-template.md`, `context-view-template.md`, `building-block-view-template.md`, `runtime-view-template.md`, `deployment-view-template.md`, `quality-scenarios-template.md`, `architecture-decision-template.md` und `architecture-risks-template.md`, sofern anwendbar.
-- Nichtanwendbarkeit immer als `N/A` mit kurzer Begründung dokumentieren; keine stillschweigende Auslassung.
-
-*Architecture-relevant changes MUST check iSAQB/arc42 evidence: architecture goals, context view, building-block view, runtime view, deployment view, quality scenarios, ADRs, architecture risks, and technical debt. Default path: `docs/architecture/`; ADRs live in `docs/architecture/adr/`. Use the installed architecture templates where applicable. Record non-applicability as `N/A` with justification rather than omitting it silently.*
-
 ## Sicherheitsstandards & Anwendbarkeit / Security Standards & Applicability
 
 - Vor jeder Level-2-Aufgabe die anwendbaren Sicherheitsstandards aus `constitution.md`, Prinzipien XIV-XX bestimmen und explizit benennen.
@@ -274,17 +103,6 @@ Diese Regeln gelten für alle Repositories in diesem Workspace. Projektspezifisc
 - Nichtanwendbarkeit immer als `N/A` mit kurzer Begründung dokumentieren; keine stillschweigende Auslassung.
 
 *At the start of every Level-2 task, determine and name the applicable security standards from `constitution.md`, Principles XIV-XX. `NIST SSDF` and `CWE Top 25` always apply. `OWASP ASVS` applies to web/API/HTTP/auth-bearing services; `SBOM` applies to releasable or distributable artefacts; `AI-SBOM` applies when AI models, AI services, datasets, inference infrastructure, or AI runtime components are part of the released or operated system; `VEX` applies when known vulnerabilities in shipped/evaluated components need a disposition statement. `SLSA` is the target model for CI/CD and published artefacts; `Zero Trust` must be explicitly evaluated for distributed, service-based, cloud, or remotely managed systems. `CAPEC`, `OWASP SAMM`, `OWASP Cheat Sheet Series`, `OWASP Proactive Controls`, and `OpenSSF Scorecard` are supporting references where relevant. Record non-applicability as `N/A` with justification rather than omitting it silently.*
-## Agentischer Security-Workflow / Agentic Security Workflow
-
-- In `spec.md`, `plan.md` und `tasks.md` die anwendbaren Standards samt Evidenzpfad festhalten.
-- Bei Bedrohungsmodellen `STRIDE` als Basis und bei risikoreichen Flows zusätzlich relevante `CAPEC`-Patterns verwenden.
-- Bei Web/API-Features den `ASVS`-Level und den Verifikationsumfang in `docs/security/` oder gleichwertiger Projektdokumentation ablegen.
-- KI-Nutzung explizit klassifizieren: Entwicklungswerkzeug, keine KI im ausgelieferten/betriebenen System, oder KI-Runtime-/Produktkomponente; `AI-SBOM` entsprechend als `N/A` begründen oder in der Supply-Chain-Evidenz dokumentieren.
-- Bei Release-/Artefakt-Arbeit `SBOM`, `AI-SBOM`, `VEX`, Provenance/SLSA-Nachweise und gegebenenfalls `OpenSSF Scorecard` in Release- oder Sicherheitsdokumentation einplanen.
-- Bei Architekturänderungen `Zero Trust`-Anwendbarkeit und bei langlebigen Projekten `SAMM`-Folgeaktionen prüfen.
-- Default-Evidenzpfad: `docs/security/asvs-verification.md`, `docs/security/supply-chain-evidence.md`, `docs/security/zero-trust-applicability.md`, `docs/security/samm-assessment.md`; Abweichungen nur mit lokal dokumentierter Begründung.
-
-*Capture the applicable standards and the evidence path in `spec.md`, `plan.md`, and `tasks.md`. Use `STRIDE` as the base for threat modeling and add relevant `CAPEC` patterns for the highest-risk flows. For web/API work, record the chosen `ASVS` level and verification scope in `docs/security/` or equivalent project documentation. Classify AI usage as development tooling, absent from the released/operated system, or AI runtime/product component; document `AI-SBOM` as `N/A` or as supply-chain evidence accordingly. For release and artefact work, plan `SBOM`, `AI-SBOM`, `VEX`, provenance/SLSA evidence, and `OpenSSF Scorecard` review where applicable. For architectural changes, evaluate `Zero Trust`; for long-lived projects, consider `OWASP SAMM` follow-up actions. The default evidence path is `docs/security/asvs-verification.md`, `docs/security/supply-chain-evidence.md`, `docs/security/zero-trust-applicability.md`, and `docs/security/samm-assessment.md`, unless the repository documents a justified equivalent location.*
 
 ## GitHub/GitLab CLI First / GitHub/GitLab CLI zuerst
 
@@ -296,56 +114,55 @@ For GitHub repositories, use the authenticated `gh` CLI first for feasible write
 
 For GitLab repositories, use the authenticated `glab` CLI first for equivalent actions. Do not repeatedly try connector write paths that are known to fail when `gh`/`glab` can perform the task directly.
 
+## Secure Development Assurance – freigegebenes Projektprofil / Approved Project Profile
 
-## Spec-Kit-Modell-Routing / Spec Kit Model Routing
+- Die unveraenderte Basis des optionalen 14er-Statistik-Piloten ist `secure-development-assurance-thirteen-governance-presets`: die bisherigen zwölf Presets plus `secure-development-assurance-governance` v0.1.10, aktiviert mit Priorität 15. Andere Profile und globale Defaults bleiben unverändert.
+- Maßgebliche Produktquellen sind ausschließlich die veröffentlichten eigenständigen GitHub-Preset-Repositories. Lokale Installationen sind Integrationskopien, keine zusätzlichen Produktquellen; Änderungen entstehen im jeweiligen Preset-Repository, nicht in einem Home-Baseline-Scaffold.
+- `speckit.secure-development-status` prüft Evidence strikt lesend. `speckit.secure-development-review` benötigt einen ausdrücklich beauftragten Gate-/Kontext-Review; die Installation startet keine Reviews und erteilt keine menschlichen Freigaben.
+- Keine C5-Testat-, Zertifizierungs- oder vollständige Readiness-Prüfung; `Ready` gilt nur für den gebundenen Evidence-Kontext. Projektgeführte Baseline-Versionen werden nicht durch die Preset-Version ersetzt.
+- Bedienung, Paketbindung, Erhaltungsnachweis und Grenzen: [Integrationsnachweis](../../docs/maintenance/secure-development-assurance-integration.md), relativ zur Repository-Wurzel.
 
-- Modellwahl ist operative Agenten-Routing-Guidance, keine Feature-Anforderung. Modellnamen nicht in `spec.md`, `plan.md`, `tasks.md` oder einzelne Feature-Specs schreiben; diese Artefakte muessen reproduzierbar bleiben, auch wenn Modellnamen wechseln oder ein anderer KI-Agent verwendet wird.
-- Der jeweilige Agent soll diese Empfehlungen auf seine aktuell verfuegbaren Modelle abbilden; keine feste Anbieter- oder Modellbindung ableiten.
-- Fuer Spec-Kit-Spezifikation, Klaerung, Planung, Tasks und Analyse (`/speckit-specify`, `/speckit-clarify`, `/speckit-plan`, `/speckit-tasks`, `/speckit-analyze`; je nach Agent auch `/speckit.specify` usw.) das staerkste verfuegbare Frontier-Reasoning-/Coding-Modell bevorzugen.
-- Fuer vollstaendige, lang laufende `/speckit-implement`-Laeufe das staerkste verfuegbare Long-Running-Agent-Modell bevorzugen; das Frontier-Modell nutzen, wenn maximale Urteilsguete wichtiger ist als Laufzeitstabilitaet.
-- Fuer fokussierte Reviews oder CI-Fixes ein coding-optimiertes Modell bevorzugen.
-- Fuer triviale Bereinigung, Formatierung oder risikoarme mechanische Edits ist ein schnelles kleines Coding-Modell akzeptabel.
+*The optional fourteen-preset statistics pilot retains this thirteen-preset base: its existing twelve presets plus Secure Development Assurance v0.1.8, enabled at priority 15. Other profiles and global defaults stay unchanged. Published standalone GitHub repositories are the only product sources; installed copies are integrations, not competing sources. Status is read-only; a gate review requires explicit context-specific authority. Installation starts no reviews and grants no human approvals. This is not a C5 attestation, certification, or full readiness check; `Ready` is evidence-context-specific. The project baseline retains its own version. See the integration record relative to the repository root.*
 
-*Model choice is operational agent-routing guidance, not a feature requirement. Do not pin model names in `spec.md`, `plan.md`, `tasks.md`, or individual feature specs; those artifacts must stay reproducible even when model names change or another AI agent is used. Each agent should map these recommendations to its currently available models; do not derive a fixed vendor or model requirement. For Spec-Kit specification, clarification, planning, task generation, and analysis (`/speckit-specify`, `/speckit-clarify`, `/speckit-plan`, `/speckit-tasks`, `/speckit-analyze`; or `/speckit.specify` etc. depending on the agent surface), prefer the strongest available frontier reasoning/coding model. For complete long-running `/speckit-implement` runs, prefer the strongest available long-running agent model; use the frontier model when maximum judgment quality is more important than runtime stability. For focused review or CI fixes, prefer a coding-optimized model. For trivial cleanup, formatting, or low-risk mechanical edits, a fast small coding model is acceptable.*
+## Governance-Pilot und Liefergrenzen / Governance pilot and delivery boundaries
 
-## Spec-Kit-Preset-Pflege / Spec Kit Preset Maintenance
+DE: Das 14er-Profil bindet Security 0.7.4, Architecture 0.6.5 und Intake
+Authoring 0.3.10 / Review 0.2.7 / Sequencing 0.2.13. Produkt, Werkzeuge und
+Organisation werden regulatorisch getrennt bewertet; Ausbildungszweck und
+AI-SBOM N/A ersetzen keine DS-GVO-/KI-VO-Anwendbarkeitspruefung.
+Unbekannte Rollen, Jurisdiktionen oder direkte/vertragliche Pflichten bleiben Open.
+Die urspruenglichen sechs Presets plus Secure Development Assurance werden
+jaehrlich am 3. Oktober geprueft, naechster Termin 2027-10-03 um 10:00
+Europe/Berlin. Anlassreviews verschieben den Termin nicht; Automation liest nur.
+Stufe A ist Home Baseline/betroffene Home Runtime; B umfasst zwei benannte
+public Level-2-Piloten. C (restliche public Level-2-Verbraucher) und D
+(restliche Flotte) brauchen jeweils einen separaten Auftrag. Admin-Bypass
+ersetzt keine technische Pruefung. Installation startet keine Implementierung.
 
-- Standard-Preset-Set: `security-governance` v0.7.5 prio 10, `architecture-governance` v0.6.6 prio 20, `isaqb-architecture-governance` v0.2.6 prio 30, `a11y-governance` v0.4.7 prio 40, `cross-platform-governance` v0.2.6 prio 50, `agent-parity-governance` v0.4.6 prio 60, `autonomous-run-governance` v0.4.12 prio 70, `parallel-autonomous-run-governance` v0.2.13 prio 80.
-- `autonomous-run-governance` v0.4.12 prio 70 ist Teil der Standard-Achtermatrix. Ein vollständiger autonomer Lauf bleibt ausdrücklich delegationspflichtig; die Installation allein erteilt weder Ausführungsberechtigung noch Remote-, Merge-, Bypass- oder Provider-Rechte und `LocalImplementation` bleibt Default. Dokumentations-, Status-, Schema- oder Evidence-Änderungen gelten erst dann als testfrei, wenn keine ausführbaren Validatoren die geänderten Pfade, Marker, Schemas oder Zustandswerte konsumieren. Vor autorisierten Commits wird der exakt beabsichtigte Kandidat mit dem Delivery-Set-Validator im Staged-Modus einschließlich exakter Pfad- und Index-Hash-Bindung geprüft; fremde Änderungen bleiben unberührt. Vor einem Merge wird jeder Acceptance-Gate dem tatsächlich ausgeführten Workflow, Job, Runner beziehungsweise der Plattform und dem Befehl zugeordnet; grüne Namen oder ein Bypass ersetzen keinen technischen Nachweis. Bewusst pausierte Läufe werden als `PausedByUser` gespeichert und nur über `speckit.autonomous-resume` fortgesetzt; `speckit.autonomous-stop` wirkt kooperativ am nächsten sicheren Grenzpunkt, und ein gespeicherter Delivery-Modus ist keine aktuelle Berechtigung. Nach Preset- oder Governance-Drift werden neue zwingende Korrektheits-, Sicherheits-, Berechtigungs- und Evidenzregeln minimal mit akzeptierten Plan-, Task- und Checklist-Artefakten abgeglichen; reine Effizienzpräferenzen lösen keine rückwirkende Neugenerierung aus. Die lesbare Skill-Überschrift `Deliver` ist kein Run-State-Wert; für Remote-Closeout gelten ausschließlich `Publish`, `Review` oder `MergeAndSync`.
-- `parallel-autonomous-run-governance` v0.2.13 prio 80 ist Teil der Standard-Achtermatrix. Die Installation startet keine Kampagne und erteilt keine zusaetzlichen Remote-, Merge-, Bypass-, Abbruch-, Secret- oder Provider-Rechte. Kampagnen bleiben ausdruecklich delegationspflichtig, verwenden getrennte Worktrees und maximal drei gleichzeitig aktive Worker. Schema 1.1 erlaubt ein `runnerProfile` je Worker mit Kampagnen-Fallback; Modell und Reasoning-Stufe sind optionale, nicht geheime Metadaten und werden ohne Deklaration nicht erraten. Konsolidierung verlangt exakten Head, aktuelle Review- und Check-Evidenz, ist nach Teilmerges fortsetzbar und setzt `Completed` erst nach Synchronisation, manifestdeklarierten idempotenten Post-Merge-Aktionen und Abschlussvalidierung.
-- `a11y-governance` v0.4.7 ergänzt didaktische Inline-Code-Kommentar-Governance für neue oder geaenderte nicht-triviale Logik.
-- `security-governance` v0.7.5 fuehrt `AI-SBOM` weiter als bedingt anwendbare Supply-Chain-Evidenz, ergänzt sprachspezifische Secure-Coding-Profile und ergänzt regulatorische Anwendbarkeit für NIS2, CRA, EU AI Act und DORA. Reine Entwicklungswerkzeug-Nutzung bleibt `N/A`; KI-Runtime-/Produktkomponenten benoetigen Evidenz nach G7/BSI AI-SBOM-Clustern; Beispielprodukt, Entwicklungswerkzeuge und Organisation werden getrennt auf DS-GVO, KI-VO, CRA, NIS2 und DORA geprueft; Ausbildungszweck ist keine pauschale Ausnahme, unbekannte Anwendbarkeit bleibt Open.
-- `architecture-governance` v0.6.6 ergänzt `BSI C3A` als bedingte Cloud-Autonomie-Evidenz und `BSI C5` als bedingte Cloud-Compliance-Assurance-Evidenz für Cloud-Service-Auswahl, Provider-Abhängigkeiten, Audit-/Nachweisstand, Shared Responsibility und Betriebsnachweise.
-- Alle acht Presets enthalten ab diesem Release-Block audit-ready Spec-Kit-Run-Evidenz: `Applicable` / `N/A` / `Open`, Begründung, Evidenzpfad, Reviewer, Restrisiko und Follow-up muessen im aktuellen Spec-Kit-Lauf dokumentiert werden.
-- Die ursprünglichen sechs Presets sind seit 2026-05-04 und `autonomous-run-governance` v0.4.12 ist seit 2026-07-17 im `github/spec-kit` Community-Katalog enthalten und liegen zusätzlich als veröffentlichte Repos unter `https://github.com/hindermath/spec-kit-preset-*`.
-- `parallel-autonomous-run-governance` v0.2.13 ist eigenstaendig veroeffentlicht und wurde mit `github/spec-kit#3591` fuer den Community-Katalog eingereicht.
-- Registrierte Level-0-, Level-1- und Level-2-Repositories installieren bei vorhandener Spec-Kit-Integration standardmäßig alle acht Presets aus `scripts/config/spec-kit-governance-presets.json`, sofern keine begründete Ausnahme dokumentiert ist.
-- Referenz-Rollout für alle acht Presets: `RiderProjects/TinyPl0`, `RiderProjects/TinyCalc`, `RiderProjects/TuiVision`, `RiderProjects/InventarWorkerService`.
-- Installation erfolgt bevorzugt mit `install-spec-kit-governance-presets.*` aus der zentralen Matrix; die Skriptlogik enthaelt keine fest eingebauten Versionen. Bei neuen Preset-Releases zuerst die Matrix aktualisieren, dann bestehende Repos bewusst mit `--force` / `-Force` nachziehen.
-- Flotten-Rollouts erfassen Level-0, Level-1 und Level-2 explizit. Eine reine Level-2-Registry beweist keine vollstaendige Abdeckung; jeder Zielstatus wird bis Installation, exakter Matrixvalidierung, Commit, Push und Remote-Synchronisation verfolgt.
-- Vor dem Staging werden generierte Preset-/Agentenpfade mit dem gesamten Arbeitsbaum abgeglichen. Fremde Aenderungen bleiben unberuehrt; bei Konflikten wird ein sauberer Worktree statt eines erzwungenen Misch-Commits verwendet.
-- Aktuelle normative Sechs-/Siebenerangaben werden auf die Achtermatrix migriert. Historische Statistik-, Changelog-, Feldnachweis- und Kompatibilitaetsangaben bleiben erhalten und werden durch einen dokumentierten Allowlist-Scan unterschieden.
-- Provider-/Billing-Ablehnung, technischer Gate-Fehler und bestandener Gate sind getrennte Ergebnisse. Bypass oder gruene Sammelnamen ersetzen keinen exakten technischen Nachweis.
-- `.specify/presets/` und generierte Agenten-/Command-Dateien committen, wenn Presets Projekt-Policy sind; `.specify/presets/.cache/` nie committen.
-- Nach Installation oder Update prüfen: `specify preset list`, mindestens ein `specify preset info <id>`, bei Template-Fragen zusätzlich `specify preset resolve <template>`.
-- Die lokalen Arbeitskopien unter `~/SpecKitPresetProjects/` gehören zu den eigenständigen GitHub-Produktquellen; Home Baseline verwaltet Profile und Release-Bezüge, keine kanonischen Preset-Scaffolds.
-- Verbesserungen im jeweiligen eigenständigen GitHub-Preset-Repository entwickeln, testen und veröffentlichen; Installationen nur mit ausdrücklichem Rollout-Auftrag nachziehen.
-- Bei Änderungen an Preset-Regeln immer prüfen, ob `constitution.md`, `.specify/memory/constitution.md`, `AGENTS.md`, `CLAUDE.md`, `GEMINI.md`, `.github/copilot-instructions.md` und `scripts/templates/*` ebenfalls aktualisiert werden müssen.
-- Bei jeder Preset-Version oder Prioritätsänderung zuerst `scripts/config/spec-kit-governance-presets.json` aktualisieren und danach README-Tabellen, Constitution, Agenten-Dateien, `scripts/templates/speckit-workflow-section.md` und Agenten-Templates gemeinsam prüfen.
+EN: The fourteen-preset profile binds the five released versions above.
+Assess product, tooling and organisation separately; unknown regulatory
+scope remains Open. Education and AI-SBOM N/A are not blanket exemptions.
+Review the original six presets plus Assurance every 3 October, next
+2027-10-03 at 10:00 Europe/Berlin; event reviews do not reset this date.
+Automation only reads. Deliver central/runtime first, then two named public
+Level-2 pilots. Further public Level-2 consumers and the remaining fleet each
+need a separate request. Installation grants no product execution authority.
 
-*Fleet rollouts explicitly cover level 0, level 1, and level 2 and track each
-target through installation, exact matrix validation, commit, push, and remote
-synchronization. Separate generated paths from unrelated work before staging.
-Migrate current normative six/seven references while preserving allowlisted
-history and compatibility aliases. Provider refusal, technical gate failure,
-and passing evidence are distinct; bypass is not technical proof.*
-- Community-/Katalog-Abstimmung läuft über `github/spec-kit#2362`.
+Evidence: [pilot integration](docs/maintenance/coordinated-governance-oct03.md).
+Policy: `docs/maintenance/governance-review-and-rollout.md` in the Level-0 source.
 
-*Standard preset set: `security-governance` v0.7.5 prio 10, `architecture-governance` v0.6.6 prio 20, `isaqb-architecture-governance` v0.2.6 prio 30, `a11y-governance` v0.4.7 prio 40, `cross-platform-governance` v0.2.6 prio 50, `agent-parity-governance` v0.4.6 prio 60, `autonomous-run-governance` v0.4.12 prio 70, and `parallel-autonomous-run-governance` v0.2.13 prio 80. `a11y-governance` v0.4.7 adds didactic inline-code-comment governance for new or changed non-trivial logic. `architecture-governance` v0.6.6 adds conditional `BSI C3A` cloud-autonomy evidence and `BSI C5` cloud-compliance assurance evidence for cloud-service selection, provider dependencies, audit/assurance status, shared responsibility, and operational evidence. `security-governance` v0.7.5 keeps conditional `AI-SBOM` evidence, language-specific secure-coding profiles, and regulatory applicability screening for NIS2, CRA, EU AI Act, and DORA: development-tool-only AI usage is `N/A`, AI runtime/product components require G7/BSI AI-SBOM cluster evidence, and training projects assess product, development tooling and organisation separately, including GDPR; unknown applicability remains Open, without blanket educational exemptions. All eight presets now include audit-ready Spec-Kit run evidence: `Applicable` / `N/A` / `Open`, rationale, evidence path, reviewer, residual risk, and follow-up must be documented for the current Spec-Kit run. The original six presets have been in the `github/spec-kit` community catalog since 2026-05-04, and `autonomous-run-governance` v0.4.12 was verified there on 2026-07-17. All eight are also published under `https://github.com/hindermath/spec-kit-preset-*`. `parallel-autonomous-run-governance` v0.2.13 was submitted to the community catalog as `github/spec-kit#3591`. Registered level-0, level-1, and level-2 repositories with Spec Kit default to all eight presets from `scripts/config/spec-kit-governance-presets.json` unless a justified exception is documented. Use `install-spec-kit-governance-presets.*` so preset versions stay centralized in the matrix. Commit `.specify/presets/` and generated agent command updates when presets are project policy, but never commit `.specify/presets/.cache/`. Verify installs with `specify preset list`, `specify preset info`, and where relevant `specify preset resolve`. Develop and release presets in their standalone GitHub repositories; update installed integrations only under explicit rollout authority. Preset-rule changes and preset version/priority changes require reviewing the central matrix, constitution, README tables/install snippets, all agent guidance files, and relevant templates together. Community/catalog coordination happens in `github/spec-kit#2362`.*
+## macOS-CI-Runner / macOS CI runners
 
-<!-- EN: AGENTS.md placeholder
-[DE-Zusammenfassung: AGENTS.md enthält Anweisungen für den Codex Agenten im home-baseline Repository.]
--->
+Bisherige macOS-14-Jobs verwenden explizit `macos-15`. Die bestehende
+Repository-Auswahl fuer Linux-only-Wartungsjobs bleibt erhalten. Ein gruener
+CI-Lauf beweist nur die ausgefuehrten Checks, keine Produkt-Plattformabnahme.
+Bei Runnerwechseln auch verpflichtende Checknamen und Migrationsvorlagen
+pruefen. Betrieb und Pruefgrenzen: `docs/maintenance/macos-runner-migration.md`.
+
+Existing macOS 14 jobs explicitly use `macos-15`. Keep the existing repository
+selection for Linux-only maintenance jobs. Successful CI proves the executed
+checks, not product platform acceptance. Review required check names and
+migration templates whenever runner labels change. See the linked guide.
 
 <!-- learner-a11y-baseline:start -->
 ## Didaktische und sprachliche Klarheit / Pedagogical and Linguistic Clarity
@@ -418,16 +235,6 @@ shell commands, and other important information, read the current plan
 *`Pflichtenheft.md` is the slim entry point; binding order and states live in the series manifest. Active, completed, superseded, and optional intakes remain separated. `Eligible` only identifies the preferred next intake and grants no execution, remote, or merge authority.*
 <!-- requirements-intake-governance:end -->
 
-## Secure Development Assurance – freigegebenes Projektprofil / Approved Project Profile
-
-- Die unveraenderte Basis des optionalen 14er-Statistik-Piloten ist `secure-development-assurance-thirteen-governance-presets`: die bisherigen zwölf Presets plus `secure-development-assurance-governance` v0.1.10, aktiviert mit Priorität 15. Andere Profile und globale Defaults bleiben unverändert.
-- Maßgebliche Produktquellen sind ausschließlich die veröffentlichten eigenständigen GitHub-Preset-Repositories. Lokale Installationen sind Integrationskopien, keine zusätzlichen Produktquellen; Änderungen entstehen im jeweiligen Preset-Repository, nicht in einem Home-Baseline-Scaffold.
-- `speckit.secure-development-status` prüft Evidence strikt lesend. `speckit.secure-development-review` benötigt einen ausdrücklich beauftragten Gate-/Kontext-Review; die Installation startet keine Reviews und erteilt keine menschlichen Freigaben.
-- Keine C5-Testat-, Zertifizierungs- oder vollständige Readiness-Prüfung; `Ready` gilt nur für den gebundenen Evidence-Kontext. Projektgeführte Baseline-Versionen werden nicht durch die Preset-Version ersetzt.
-- Bedienung, Paketbindung, Erhaltungsnachweis und Grenzen: [Integrationsnachweis](../../docs/maintenance/secure-development-assurance-integration.md), relativ zur Repository-Wurzel.
-
-*The optional fourteen-preset statistics pilot retains this thirteen-preset base: its existing twelve presets plus Secure Development Assurance v0.1.8, enabled at priority 15. Other profiles and global defaults stay unchanged. Published standalone GitHub repositories are the only product sources; installed copies are integrations, not competing sources. Status is read-only; a gate review requires explicit context-specific authority. Installation starts no reviews and grants no human approvals. This is not a C5 attestation, certification, or full readiness check; `Ready` is evidence-context-specific. The project baseline retains its own version. See the integration record relative to the repository root.*
-
 <!-- BEGIN spec-kit-diagrams-completion -->
 ## Mermaid und Spec-Kit-Abschlussbericht / Mermaid and Spec Kit completion report
 
@@ -487,44 +294,3 @@ authority. See the integration record relative to the repository root.
 No Home Runtime sync or global default change; operational assignment follows
 reviewed delivery.
 <!-- project-statistics-pilot:end -->
-
-
-## Governance-Pilot und Liefergrenzen / Governance pilot and delivery boundaries
-
-DE: Das 14er-Profil bindet Security 0.7.4, Architecture 0.6.5 und Intake
-Authoring 0.3.10 / Review 0.2.7 / Sequencing 0.2.13. Produkt, Werkzeuge und
-Organisation werden regulatorisch getrennt bewertet; Ausbildungszweck und
-AI-SBOM N/A ersetzen keine DS-GVO-/KI-VO-Anwendbarkeitspruefung.
-Unbekannte Rollen, Jurisdiktionen oder direkte/vertragliche Pflichten bleiben Open.
-Die urspruenglichen sechs Presets plus Secure Development Assurance werden
-jaehrlich am 3. Oktober geprueft, naechster Termin 2027-10-03 um 10:00
-Europe/Berlin. Anlassreviews verschieben den Termin nicht; Automation liest nur.
-Stufe A ist Home Baseline/betroffene Home Runtime; B umfasst zwei benannte
-public Level-2-Piloten. C (restliche public Level-2-Verbraucher) und D
-(restliche Flotte) brauchen jeweils einen separaten Auftrag. Admin-Bypass
-ersetzt keine technische Pruefung. Installation startet keine Implementierung.
-
-EN: The fourteen-preset profile binds the five released versions above.
-Assess product, tooling and organisation separately; unknown regulatory
-scope remains Open. Education and AI-SBOM N/A are not blanket exemptions.
-Review the original six presets plus Assurance every 3 October, next
-2027-10-03 at 10:00 Europe/Berlin; event reviews do not reset this date.
-Automation only reads. Deliver central/runtime first, then two named public
-Level-2 pilots. Further public Level-2 consumers and the remaining fleet each
-need a separate request. Installation grants no product execution authority.
-
-Evidence: [pilot integration](docs/maintenance/coordinated-governance-oct03.md).
-Policy: `docs/maintenance/governance-review-and-rollout.md` in the Level-0 source.
-
-## macOS-CI-Runner / macOS CI runners
-
-Bisherige macOS-14-Jobs verwenden explizit `macos-15`. Die bestehende
-Repository-Auswahl fuer Linux-only-Wartungsjobs bleibt erhalten. Ein gruener
-CI-Lauf beweist nur die ausgefuehrten Checks, keine Produkt-Plattformabnahme.
-Bei Runnerwechseln auch verpflichtende Checknamen und Migrationsvorlagen
-pruefen. Betrieb und Pruefgrenzen: `docs/maintenance/macos-runner-migration.md`.
-
-Existing macOS 14 jobs explicitly use `macos-15`. Keep the existing repository
-selection for Linux-only maintenance jobs. Successful CI proves the executed
-checks, not product platform acceptance. Review required check names and
-migration templates whenever runner labels change. See the linked guide.

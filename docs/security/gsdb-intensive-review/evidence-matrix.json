@@ -1264,7 +1264,7 @@
       "path": "AGENTS.md",
       "version": "Current",
       "reviewedAt": "2026-11-13",
-      "normalizedSha256": "b9e3f8484e9c5febf9b5f6bf792f3acde3628e7d3d2fe3cbf411e3815ad41985",
+      "normalizedSha256": "478928576218704efef52eae28f1398fb0371e6f46b18315dfe106a9f90a928b",
       "scope": {
         "de": "Zeilenspezifischer aktueller Nachweis aus AGENTS.md; der Hash beweist Inhalt, nicht automatisch Erfuellung.",
         "en": "Current row-specific evidence from AGENTS.md; the hash proves content, not automatic fulfilment."
