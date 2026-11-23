@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.5.1](https://github.com/hindermath/TinyCalc/compare/v0.5.0...v0.5.1) (2026-11-23)
+
+
+### Documentation / Dokumentation
+
+* refresh statistics for dependency update ([ddf70d2](https://github.com/hindermath/TinyCalc/commit/ddf70d2d6cff53ebc90564930ec4432617d86597))
+
 ## [0.5.0](https://github.com/hindermath/TinyCalc/compare/v0.4.0...v0.5.0) (2026-11-20)
 
 
